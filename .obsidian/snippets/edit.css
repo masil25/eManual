@@ -1,0 +1,29 @@
+
+.HyperMD-header-1 {
+  padding-Top: 15px!important;;
+  padding-bottom: 10px!important;;
+
+}
+.HyperMD-header-2 {
+  padding-Top: 15px!important;;
+  padding-bottom: 8px!important;;
+
+}
+
+.HyperMD-header-3 {
+  padding-Top: 10px!important;;
+  padding-bottom: 6px!important;;
+}
+
+.cm-line {
+  padding-bottom: 3px!important;
+  line-height:30px;
+}
+
+.HyperMD-quote {
+  background-color : #ffecf7!important;
+}
+.HyperMD-codeblock-bg {
+  background-color : #e8ecef!important;
+}
+

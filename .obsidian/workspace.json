@@ -1,0 +1,230 @@
+{
+  "main": {
+    "id": "661aadaf33ea925a",
+    "type": "split",
+    "children": [
+      {
+        "id": "1ac5b78d4ee0f9f6",
+        "type": "tabs",
+        "dimension": 65.85545722713864,
+        "children": [
+          {
+            "id": "fb14ab34d4b2d69a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "stacked": true
+      },
+      {
+        "id": "b3cb6d4b6f961590",
+        "type": "tabs",
+        "dimension": 34.14454277286136,
+        "children": [
+          {
+            "id": "3061601a877174dc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown-table-editor-view",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8bfff24ae85d6f6e",
+    "type": "split",
+    "children": [
+      {
+        "id": "6cf0dbd2df639247",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3c8f0a42222ab22e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c54a1b1d79cb9574",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#Actuator의",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "013e4a34060c9d9f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "7ccabca408164915",
+    "type": "split",
+    "children": [
+      {
+        "id": "009da568a0c782c7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7ae30d3e08fde53d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "collapseAll": false,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": true,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "79c010c5ac10f3e5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8f4c923ba4880f16",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "8326d637edc67dcf",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Mini 17Lf/Mini 17Lf User Manual_kor.md"
+              }
+            }
+          },
+          {
+            "id": "719f7c1e9e32f8c6",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "0b4b89dc5d6f6ed9",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 319.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:퀵 스위처 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "markdown-table-editor:Open Markdown Table Editor": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "fb14ab34d4b2d69a",
+  "lastOpenFiles": [
+    "Mini 17Lf/img/minmaxCalibration.gif",
+    "Mini 17Lf/img/minmaxPostion.png",
+    "Mini 17Lf/Mini 17Lf User Manual_kor.md",
+    "스크린샷 2023-09-26 18-46-52.png",
+    "스크린샷 2023-09-26 17-14-28.png",
+    "Mini 17Lf/img/PID_Compensation_Animated.gif",
+    "Pasted image 20230919114224.png",
+    "Pasted image 20230919113922.png",
+    "Pasted image 20230919113841.png",
+    "Mini 17Lf/img/shortStroke.png",
+    "Motor의 특성도 이해.md",
+    "Protocl/Modbus RTU.md",
+    "Protocl/IR Protocol.md",
+    "Protocl",
+    "menuList.json",
+    "스크린샷 2023-08-10 18-04-36.png",
+    "Pasted image 20230809113927.png",
+    "Technical Note",
+    "IRROBOT DATASHEET_17Lfe 양식.md",
+    "feature1.txt",
+    "Control Table.md",
+    "UAV.md",
+    "README.md",
+    "feature2.txt",
+    "1..md",
+    "2023-07-11.md",
+    "[[.md",
+    "test.txt",
+    "Mini 17Lf User Manual_kor.md",
+    "무제 파일 1.canvas",
+    "흡입시키지.md",
+    "무제 파일.canvas",
+    "Untitled Diagram.drawio",
+    "edit.css",
+    "e Manual Review.md",
+    "17FC BlockDioagram.drawio",
+    "Mini 17Lf/img/test.tif",
+    "Total Manager/Total Manager User Manual_kor.md",
+    "Total Manager/Total Manager User Manual_eng.md",
+    "Total Manager/Parameter.md",
+    "[.md",
+    "().md",
+    "conflict-files-obsidian-git.md"
+  ]
+}
