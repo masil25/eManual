@@ -32,6 +32,11 @@ Modbus는 1970년대 후반에 PLC와 통신하도로기 설계되어서 데이�
 ### Function code
 ### Illigal code
 
-Modbus Frame Description 프레임 설명
+### Modbus Frame Structure // 프레임 구조
+Modbus 프로토콜은 기본 통신 계층과 독립적인 PDU(프로토콜 데이터 단위)를 정의합니다. 사용되는 버스나 네트워크 유형에 따라 ADU(Application Data Unit)에 추가 필드가 도입될 수 있습니다.
+##### PDU(Protocol Data Unit)
+- Fucntion Code :   수행할 작업 종류를 나타내는 Code
+- Data Field : Fucntion code에 의해 정의된 동작에 대한 추가 정보를 포함하는 데이터 필드입니다. 여기에는 레지스터 주소 및 처리할 항목 수 및 필드의 실체 데이터 byte 수 등이 포함될 수 있습니다.
 Modbus 애플리케이션 프로토콜은 기본 통신 계층과 관계없이 간단한 PDU(프로토콜 데이터 단위)를 정의합니다.
-![[modbus_pdu.png]]
+![[modbus_pdu.png]]  
+특정 버스 또는 네트워크에서 MODBUS 프로토콜을 매핑하면 프로토콜 데이터 단위에 몇 가지 필드가 추가됩니다. Modbus 전송을 시작하는 클라이언트는 modbus pdu를 구축한 다음 적절한 통신 pdu를 구축합니다.
