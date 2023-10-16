@@ -1,6 +1,6 @@
 
 General description
-- protocol description
+- protocol description - 
 - data encoding
 - modbus data model
 - modbus addressing model
@@ -10,7 +10,7 @@ function code descriptions
 - coil read/wirte
 - read input resgisters
 - read/wirte single register
-- 
+Exception responses
 
 본 문서는 MightyZap에서 사용하는 Modbus RTU를 중심으로하여 설명하고 있습니다. Modbus에 대한 자세한 설명은 아래의 사이트를 참조하여 주시기 바랍니다.
 ### Modbus thro
