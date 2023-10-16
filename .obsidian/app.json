@@ -2,5 +2,6 @@
   "foldHeading": false,
   "foldIndent": false,
   "readableLineLength": true,
-  "legacyEditor": false
+  "legacyEditor": false,
+  "alwaysUpdateLinks": true
 }

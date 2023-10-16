@@ -4,7 +4,6 @@ Mini 17Lf Model은 다양한 기능을 내장한 Actuator로 효율적이고 유
 ### <font color="#ff0000">주의 사항</font>
 MightyZap Actuator를 안정적으로 사용하기 위해서는 몇 가지 주의 사항이 있습니다. 다음의 링크를 클릭하시여 주의 사항을 확인하여 주시기 바랍니다.
 
-
 ## 1.2 사양
 ### 17Lf 시리즈 주요사양
 <table>
@@ -33,13 +32,13 @@ MightyZap Actuator를 안정적으로 사용하기 위해서는 몇 가지 주�
 |  Connector          |  Molex 0510650400     |  
 
 ### Motor 성능 곡선
-![[스크린샷 2023-08-10 18-04-36.png]]  
-- 모터 성능 곡선에 대한 자세한 설명은 다음의 문서를 통해 확인해 주시기 바랍니다. 
+![[MotorSpecification.png]]  
+- ~~모터 성능 곡선에 대한 자세한 설명은 다음의 문서를 통해 확인해 주시기 바랍니다.~~ 
 # 2 Control Table
 Control Table은 Actuator를 구동 및 제어하기 위한 Parameter와 현재 상태를 나타내는 Parameter로 이루어져 있습니다.   
 사용자는 통신 Packet을 이용하여 특정 Parameter의 Data를  읽어 Actuator의 상태를 확인하거나, Paramter의 Data를 변경하여 Actuator를 제어할 수 있습니다.  
-통신 Packet에 대한 자세한 내용은 Modbus-RTU를 참고하여 주시기 바랍니다.  
-(Mini 17Lf Model은 Modbus-RTU 통신 만을 제공합니다)
+<span style="background:rgba(136, 49, 204, 0.2)">*통신 Packet에 대한 자세한 내용은 Modbus-RTU를 참고하여 주시기 바랍니다.  </span>
+<span style="background:rgba(136, 49, 204, 0.2)">(Mini 17Lf Model은 Modbus-RTU 통신 만을 제공합니다)</span>*
 ## 2.1 Description  
 ### 2.1.1 Memory Type (Non-Volatile, Volatile)  
 Control Table은 2개의 영역으로 구분됩니다. Data를 변경한 후 전원을 꺼도 그 Data가 유지가 되는  Non-volatile Memory(ROM)와 전원이 꺼지면 Data가 초기화 되는 Volatile Memory(RAM)가 있습니다.    
