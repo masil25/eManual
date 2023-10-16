@@ -3,8 +3,6 @@ General description
 - protocol description - 
 - data encoding
 - modbus data model
-- modbus addressing model
-- define modbus transaction
 function code categories
 function code descriptions
 - coil read/wirte
@@ -53,6 +51,10 @@ MODBUS는 독특한 특성을 지닌  테이블을 기반으로 데이터 모델
 | Discription Input | Read Only  |   1 bit | 10001 ~ 19999 |
 | Input Register    | Read Only  | 16 bits | 30001 ~ 39999 |
 | Holding register  | Read/Write | 16 bits | 40001 ~ 49999 |  
+
+### 4 Function Code
+#### 4.1 Public Function Code Definition
+
 
 
 
