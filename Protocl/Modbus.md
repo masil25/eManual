@@ -62,8 +62,8 @@ Function code는 MightyZap 에서 제공하는 Function만 표기합니다. 자�
 | Write Single Register | 0x06 | Register의 메모리 쓰기 |   
 
 #### 4.3 Read Holding Registers
-이 Function code는 원격 장치에 있는 연속된 보유 레지스터 블록의 내용을 읽는 데 사용됩니다.
-요청 PDU는 시작 레지스터 주소와 레지스터 수를 지정합니다. PDU에서 레지스터는 0부터 시작하여 주소가 지정됩니다. 따라서 1-16번 레지스터는 0-15로 주소가 지정됩니다.
+이 Function code는 MightyZap에 있는 연속된 레지스터의 내용을 읽는 데 사용됩니다.
+Request PDU는 시작 레지스터 주소와 레지스터 수를 지정합니다. PDU에서 레지스터는 0부터 시작하여 주소가 지정됩니다. 따라서 1-16번 레지스터는 0-15로 주소가 지정됩니다.
 
 
 Modbus 직렬 연결에는 Modbus RTU와 Modbus ASCII의 두 가지 유형이 있습니다. 편의상 Modbus RTU 및 Modbus ASCII는 일반적으로 Modbus RTU라고 하며 직렬 케이블을 사용하는 변형으로 그룹화됩니다.
