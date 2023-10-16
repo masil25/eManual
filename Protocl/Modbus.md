@@ -53,7 +53,8 @@ MODBUS는 독특한 특성을 지닌  테이블을 기반으로 데이터 모델
 | Holding register  | Read/Write | 16 bits | 40001 ~ 49999 |  
 
 ### 4 Function Code
-#### 4.1 Public Function Code Definition
+#### 4.1 제공 Function Code
+
 
 
 
