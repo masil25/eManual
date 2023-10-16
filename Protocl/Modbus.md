@@ -1,11 +1,28 @@
+
+General description
+- protocol description
+- data encoding
+- modbus data model
+- modbus addressing model
+- define modbus transaction
+function code categories
+function code descriptions
+- coil read/wirte
+- read input resgisters
+- read/wirte single register
+- 
+
 본 문서는 MightyZap에서 사용하는 Modbus RTU를 중심으로하여 설명하고 있습니다. Modbus에 대한 자세한 설명은 아래의 사이트를 참조하여 주시기 바랍니다.
 ### Modbus thro
 최초 의 Modbus 프로토콜인 Modbus RTU (원격 터미널 장치)는 원래 1979년 Modicon(현재 Schneider Electric) 시스템에서 PLC와 함께 사용하기 위한 프로그래밍 프로토콜로 게시되었습니다. Modbus는 개방형 프로토콜이지만 "Modbus"라는 단어는 Schneider Electric의 등록 상표입니다.
 Modbus RTU는 간단한 직렬 통신 프로토콜입니다. 시간이 지나면서 TCP/IP(전송 제어 프로토콜/인터넷 프로토콜) 및 UDP(사용자 데이터그램 프로토콜)와 같은 널리 사용되는 전송 프로토콜을 사용하여 보다 복잡한 구현을 허용하는 표준에 대한 필요성이 커졌습니다 . 1999년에 개발된 Modbus 변형은 이러한 요구를 해결했습니다.
 
-### Modbus RTU
-Modbus에는 여러 가지 변형이 있습니다. 동일한 네트워크 세그먼트에서 상호 운용이 불가능하고 용도가 다르기 때문에 버전이 아닌 변형입니다
-Modbus RTU는 가장 일반적인 변형이며 직렬 연결에 사용됩니다.
+| 객체 유형             | Access     | Size    | 주소 공간         | Commentes                       |
+|:------------------|:-----------|:--------|:--------------|:--------------------------------|
+| Coil              | Read/Write |   1 bit |  0001 ~ 09999 | Discrete Output Coils           |
+| Discription Input | Read Only  |   1 bit | 10001 ~ 19999 | Discrete Input Contacts         |
+| Input Register    | Read Only  | 16 bits | 30001 ~ 39999 | Analog Input Registers          |
+| Holding register  | Read/Write | 16 bits | 40001 ~ 49999 | Analog Output Holding Registers |  
 
 Modbus 직렬 연결에는 Modbus RTU와 Modbus ASCII의 두 가지 유형이 있습니다. 편의상 Modbus RTU 및 Modbus ASCII는 일반적으로 Modbus RTU라고 하며 직렬 케이블을 사용하는 변형으로 그룹화됩니다.
 

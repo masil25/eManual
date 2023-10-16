@@ -6,7 +6,7 @@
       {
         "id": "1ac5b78d4ee0f9f6",
         "type": "tabs",
-        "dimension": 82.31173380035027,
+        "dimension": 48.51138353765324,
         "children": [
           {
             "id": "fb14ab34d4b2d69a",
@@ -26,7 +26,7 @@
       {
         "id": "8b773c6b0c405731",
         "type": "tabs",
-        "dimension": 17.68826619964974,
+        "dimension": 51.48861646234676,
         "children": [
           {
             "id": "819e240f8f711509",
@@ -86,7 +86,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 414.5
+    "width": 200
   },
   "right": {
     "id": "7ccabca408164915",
@@ -167,7 +167,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 319.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -181,7 +181,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fb14ab34d4b2d69a",
+  "active": "0b4b89dc5d6f6ed9",
   "lastOpenFiles": [
     "Protocl/IR Protocol.md",
     "Protocl/img/modbusRTUFrame.png",
