@@ -4,6 +4,11 @@ MODBUS는 공개적으로 배포되고 로열티가 없기 때문에 산업 환�
 
 ### 1 제한 사항
 Modbus는 1970년대 후반에 PLC와 통신하도로기 설계되어서 데이터 유형의 수는 당시 PLC에서 해석 가능한 유형으로 제한한다.  
-#### MODBUS는 프로객체 유형
-
+#### 2. MODBUS는 프로객체 유형
+| 객체 유형             | Access     | Size    | 주소 공간         |
+|:------------------|:-----------|:--------|:--------------|
+| Coil              | Read/Write |   1 bit |  0001 ~ 09999 |
+| Discription Input | Read Only  |   1 bit | 10001 ~ 19999 |
+| Input Register    | Read Only  | 16 bits | 30001 ~ 39999 |
+| Holding register  | Read/Write | 16 bits | 40001 ~ 49999 |  
 

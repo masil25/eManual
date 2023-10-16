@@ -6,7 +6,7 @@
       {
         "id": "1ac5b78d4ee0f9f6",
         "type": "tabs",
-        "dimension": 85.25073746312685,
+        "dimension": 82.31173380035027,
         "children": [
           {
             "id": "fb14ab34d4b2d69a",
@@ -24,12 +24,12 @@
         "stacked": true
       },
       {
-        "id": "b3cb6d4b6f961590",
+        "id": "8b773c6b0c405731",
         "type": "tabs",
-        "dimension": 14.749262536873156,
+        "dimension": 17.68826619964974,
         "children": [
           {
-            "id": "3061601a877174dc",
+            "id": "819e240f8f711509",
             "type": "leaf",
             "state": {
               "type": "markdown-table-editor-view",
@@ -163,7 +163,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
