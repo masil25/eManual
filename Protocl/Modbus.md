@@ -17,7 +17,8 @@ Modbus RTU는 간단한 직렬 통신 프로토콜입니다. 시간이 지나�
 
 ### 2. Context
 Modbus Protocol을 사용하면 모든 유형의 네트워크 아키텍처에서 쉽게 통신 할 수 있습니다.
-![[Pasted image 20231016164954.png]]
+![[Pasted image 20231016164954.png]]  
+![[Pasted image 20231016185937.png]]
 Gateway는 Modbus Protocol을 사용하여 모든 버스 도는 네트워크 간의 통신이 가능합니다.(Gateways allow a communication between several types of buses or network using the MODBUS protocol.)
 <font color="#ff0000">MightyZap에서는 RS485 통신을 이용한 MODBUS RTU를 사용합니다.</font>
 
@@ -60,7 +61,7 @@ Function code는 MightyZap 에서 제공하는 Function만 표기합니다. 자�
 |:----------------------|:-----|:-----------------|
 | Read Holding Register | 0x03 | Register의 메모리 읽기 |
 | Write Single Register | 0x06 | Register의 메모리 쓰기 |   
-
+![[Pasted image 20231016190107.png]]
 #### 4.3 Read Holding Registers
 이 Function code는 MightyZap에 있는 연속된 레지스터의 내용을 읽는 데 사용됩니다.
 Request PDU는 시작 레지스터 주소와 레지스터 수를 지정합니다. PDU에서 레지스터는 0부터 시작하여 주소가 지정됩니다. 따라서 1-16번 레지스터는 0-15로 주소가 지정됩니다.
