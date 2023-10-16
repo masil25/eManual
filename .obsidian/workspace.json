@@ -6,7 +6,7 @@
       {
         "id": "1ac5b78d4ee0f9f6",
         "type": "tabs",
-        "dimension": 48.51138353765324,
+        "dimension": 50,
         "children": [
           {
             "id": "fb14ab34d4b2d69a",
@@ -24,12 +24,12 @@
         "stacked": true
       },
       {
-        "id": "8b773c6b0c405731",
+        "id": "840f5d9df7346544",
         "type": "tabs",
-        "dimension": 51.48861646234676,
+        "dimension": 50,
         "children": [
           {
-            "id": "819e240f8f711509",
+            "id": "2cdd6df8a411f7b5",
             "type": "leaf",
             "state": {
               "type": "markdown-table-editor-view",
@@ -181,7 +181,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fb14ab34d4b2d69a",
+  "active": "2cdd6df8a411f7b5",
   "lastOpenFiles": [
     "Pasted image 20231016164954.png",
     "Protocl/IR Protocol.md",

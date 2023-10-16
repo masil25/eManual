@@ -13,15 +13,33 @@ function code descriptions
 Exception responses
 
 본 문서는 Modbus.org의 문서를 참고하여 MightyZap에서 사용하는 Modbus RTU를 중심으로하여 설명하고 있습니다. Modbus에 대한 자세한 설명은 Modbus.org 사이트를 참조하여 주시기 바랍니다.
-### Modbus Introduction
+### 1. Modbus Introduction
 최초 의 Modbus 프로토콜인 Modbus RTU (원격 터미널 장치)는 원래 1979년 Modicon(현재 Schneider Electric) 시스템에서 PLC와 함께 사용하기 위한 프로그래밍 프로토콜로 게시되었습니다. Modbus는 개방형 프로토콜이지만 "Modbus"라는 단어는 Schneider Electric의 등록 상표입니다.
 Modbus RTU는 간단한 직렬 통신 프로토콜입니다. 시간이 지나면서 TCP/IP(전송 제어 프로토콜/인터넷 프로토콜) 및 UDP(사용자 데이터그램 프로토콜)와 같은 널리 사용되는 전송 프로토콜을 사용하여 보다 복잡한 구현을 허용하는 표준에 대한 필요성이 커졌습니다 . 1999년에 개발된 Modbus 변형은 이러한 요구를 해결했습니다.
 
-### Context
+### 2. Context
 Modbus Protocol을 사용하면 모든 유형의 네트워크 아키텍처에서 쉽게 통신 할 수 있습니다.
 ![[Pasted image 20231016164954.png]]
 Gateway는 Modbus Protocol을 사용하여 모든 버스 도는 네트워크 간의 통신이 가능합니다.(Gateways allow a communication between several types of buses or network using the MODBUS protocol.)
-MightyZap에서는 RS485 통신을 이용한 MODBUS RTU를 사용ㅎ
+<font color="#ff0000">MightyZap에서는 RS485 통신을 이용한 MODBUS RTU를 사용합니다.</font>
+
+### 3. General Description
+#### 3.1  Protocol Description  
+MODBUS 프로토콜은 기본 통신 계층과 관계없이 간단한 PDU(프로토콜 데이터 단위)를 정의합니다. 특정 버스나 네트워크에서 MODBUS 프로토콜을 매핑하면 ADU(응용 프로그램 데이터 단위)에 몇 가지 추가 필드가 추가될 수 있습니다.  
+![[modbusRTUFrame.png]]
+##### PDU(Protocol Data Unit)
+- Fucntion Code :   수행할 작업 종류를 나타내는 Code
+- Data Field : Fucntion code에 의해 정의된 동작에 대한 추가 정보를 포함하는 데이터 필드입니다. 여기에는 레지스터 주소 및 처리할 항목 수 및 필드의 실체 데이터 byte 수 등이 포함될 수 있습니다.
+  특정 Fucntion에서는 데이터 필드가 존재하지 않을 수도 있습니다.
+##### ADU(Application data Unit)
+- Protocol Data Unit
+- Salve ID
+- CRC Error Check
+
+#### 4.2 Code Encoding 
+MODBUS는 주소와 데이터 항목에 '빅 엔디안' 표현을 사용합니다. 이는 다음을 의미합니다.
+For Example
+
 
 | 객체 유형             | Access     | Size    | 주소 공간         | Commentes                       |
 |:------------------|:-----------|:--------|:--------------|:--------------------------------|
@@ -65,14 +83,7 @@ Modbus의 Fucntion code는 3가지의 번주가 있습니다.
 
 ### Modbus Frame Structure // 프레임 구조
 Modbus 프로토콜은 기본 통신 계층과 독립적인 PDU(프로토콜 데이터 단위)를 정의합니다. 사용되는 버스나 네트워크 유형에 따라 ADU(Application Data Unit)에 추가 필드가 도입될 수 있습니다.  
-**![[modbusRTUFrame.png]]  
-##### PDU(Protocol Data Unit)
-- Fucntion Code :   수행할 작업 종류를 나타내는 Code
-- Data Field : Fucntion code에 의해 정의된 동작에 대한 추가 정보를 포함하는 데이터 필드입니다. 여기에는 레지스터 주소 및 처리할 항목 수 및 필드의 실체 데이터 byte 수 등이 포함될 수 있습니다.
-  특정 Fucntion에서는 데이터 필드가 존재하지 않을 수도 있습니다.
-##### ADU(Application data Unit)
-- Protocol Data Unit
-- Salve ID
-- CRC Error Check
+  
+
 Error Code
 서버가 클라이언트에 응답할 때 함수 코드 필드를 사용하여 정상적인(오류 없는) 응답이나 예외 응답이라고 하는 일종의 오류가 발생했음을 나타냅니다. 정상적인 응답의 경우 서버는 원래 함수 코드를 에코하고 요청된 데이터를 반환합니다.
