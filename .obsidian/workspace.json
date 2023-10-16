@@ -6,7 +6,7 @@
       {
         "id": "1ac5b78d4ee0f9f6",
         "type": "tabs",
-        "dimension": 52.94985250737463,
+        "dimension": 85.25073746312685,
         "children": [
           {
             "id": "fb14ab34d4b2d69a",
@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Mini 17Lf/Mini 17Lf User Manual_kor.md",
                 "mode": "source",
                 "source": false
               }
@@ -26,7 +26,7 @@
       {
         "id": "b3cb6d4b6f961590",
         "type": "tabs",
-        "dimension": 47.050147492625364,
+        "dimension": 14.749262536873156,
         "children": [
           {
             "id": "3061601a877174dc",
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Mini 17Lf/Mini 17Lf User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Mini 17Lf/Mini 17Lf User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Mini 17Lf/Mini 17Lf User Manual_kor.md"
               }
             }
           },
@@ -183,6 +183,7 @@
   },
   "active": "fb14ab34d4b2d69a",
   "lastOpenFiles": [
+    "README.md",
     "Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Mini 17Lf/img/minmaxCalibration.gif",
     "Mini 17Lf/img/minmaxPostion.png",
@@ -204,7 +205,6 @@
     "feature1.txt",
     "Control Table.md",
     "UAV.md",
-    "README.md",
     "feature2.txt",
     "1..md",
     "2023-07-11.md",
