@@ -18,6 +18,10 @@ Exception responses
 Modbus RTU는 간단한 직렬 통신 프로토콜입니다. 시간이 지나면서 TCP/IP(전송 제어 프로토콜/인터넷 프로토콜) 및 UDP(사용자 데이터그램 프로토콜)와 같은 널리 사용되는 전송 프로토콜을 사용하여 보다 복잡한 구현을 허용하는 표준에 대한 필요성이 커졌습니다 . 1999년에 개발된 Modbus 변형은 이러한 요구를 해결했습니다.
 
 ### Context
+Modbus Protocol을 사용하면 모든 유형의 네트워크 아키텍처에서 쉽게 통신 할 수 있습니다.
+![[Pasted image 20231016164954.png]]
+Gateway는 Modbus Protocol을 사용하여 모든 버스 도는 네트워크 간의 통신이 가능합니다.(Gateways allow a communication between several types of buses or network using the MODBUS protocol.)
+MightyZap에서는 RS485 통신을 이용한 MODBUS RTU를 사용ㅎ
 
 | 객체 유형             | Access     | Size    | 주소 공간         | Commentes                       |
 |:------------------|:-----------|:--------|:--------------|:--------------------------------|
