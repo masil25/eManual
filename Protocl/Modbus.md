@@ -32,7 +32,7 @@ MODBUS 프로토콜은 기본 통신 계층과 관계없이 간단한 PDU(프로
   
 **ADU(Application data Unit)**
 - Protocol Data Unit
-- Salve ID
+- Salve ID 
 - CRC Error Check
 #### 3.2 Data Encoding  
 MODBUS는 주소와 데이터 항목에 'big-Endian 표현을 사용합니다. 단일 바이트(255) 보다 큰 숫자가 전송되면 최상위 바이트가 먼저 전송됩니다. 
@@ -53,10 +53,17 @@ MODBUS는 독특한 특성을 지닌  테이블을 기반으로 데이터 모델
 | Holding register  | Read/Write | 16 bits | 40001 ~ 49999 |  
 
 ### 4 Function Code
-#### 4.1 제공 Function Code
+#### 4.1 Function Code  
+Function code는 MightyZap 에서 제공하는 Function만 표기합니다. 자세한 Function code를 원하실 경우 Modbus.org 를 참조하여 주시기 바랍니다.   
 
+| Funtion               | Code | Description      |
+|:----------------------|:-----|:-----------------|
+| Read Holding Register | 0x03 | Register의 메모리 읽기 |
+| Write Single Register | 0x06 | Register의 메모리 쓰기 |   
 
-
+#### 4.3 Read Holding Registers
+이 Function code는 원격 장치에 있는 연속된 보유 레지스터 블록의 내용을 읽는 데 사용됩니다.
+요청 PDU는 시작 레지스터 주소와 레지스터 수를 지정합니다. PDU에서 레지스터는 0부터 시작하여 주소가 지정됩니다. 따라서 1-16번 레지스터는 0-15로 주소가 지정됩니다.
 
 
 Modbus 직렬 연결에는 Modbus RTU와 Modbus ASCII의 두 가지 유형이 있습니다. 편의상 Modbus RTU 및 Modbus ASCII는 일반적으로 Modbus RTU라고 하며 직렬 케이블을 사용하는 변형으로 그룹화됩니다.

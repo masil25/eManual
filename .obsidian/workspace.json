@@ -6,7 +6,7 @@
       {
         "id": "1ac5b78d4ee0f9f6",
         "type": "tabs",
-        "dimension": 79.90126939351198,
+        "dimension": 53.31452750352609,
         "children": [
           {
             "id": "fb14ab34d4b2d69a",
@@ -26,7 +26,7 @@
       {
         "id": "702fbbd2454c6c8c",
         "type": "tabs",
-        "dimension": 20.09873060648801,
+        "dimension": 46.685472496473906,
         "children": [
           {
             "id": "8bf2f1d0bec48401",
@@ -181,7 +181,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fb14ab34d4b2d69a",
+  "active": "8bf2f1d0bec48401",
   "lastOpenFiles": [
     "README.md",
     "Protocl/Modbus.md",
