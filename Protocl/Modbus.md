@@ -21,6 +21,8 @@ modbus는 master/slave 기반 프로토콜이다. 시리얼 통신에서는 mast
 ### 제한 사항
 Modbus는 1970년대 후반에 PLC와 통신하도로기 설계되어서 데이터 유형의 수는 당시 PLC에서 해석 가능한 유형으로 제한한다.  
 #### 2. MODBUS는 프로객체 유형
+Data 는 4개의 서로 다른 Table 에 있는 슬레이브 장치에 저장됩니다. 그 중 두 개는 Coil 및 discrete Inputs 이라고 하는 On-off(1bit) 값을 저장하고, 두 개는 Register라고하는 16bit word 로 값을 저장합니다.
+
 | 객체 유형             | Access     | Size    | 주소 공간         |
 |:------------------|:-----------|:--------|:--------------|
 | Coil              | Read/Write |   1 bit |  0001 ~ 09999 |
@@ -29,14 +31,25 @@ Modbus는 1970년대 후반에 PLC와 통신하도로기 설계되어서 데이�
 | Holding register  | Read/Write | 16 bits | 40001 ~ 49999 |  
 
 
-### Function code
+### Function code  
+Modbus의 Fucntion code는 3가지의 번주가 있습니다.
+ - Public Function Codes :  사용자 정의 코드를 제외한 1부터 127까지,  Modbus.org 커뮤니티에서 검증되었으며 공개적으로 문서화되고 고유성이 보장됩니다.
+ - User-Define Function Codes : 65~72, 100~110의 두 가지 범위로 제공됩니다.
+ - Reserved Function codes : 일부 회사에서 레거시 제품에 사용하며 공개적으로 사용할 수 없습니다.
+ 일반적으로 사용되는 기능 코드의 예가 아래의 표에 나왕있습니다.
+ 
 ### Illigal code
 
 ### Modbus Frame Structure // 프레임 구조
-Modbus 프로토콜은 기본 통신 계층과 독립적인 PDU(프로토콜 데이터 단위)를 정의합니다. 사용되는 버스나 네트워크 유형에 따라 ADU(Application Data Unit)에 추가 필드가 도입될 수 있습니다.
+Modbus 프로토콜은 기본 통신 계층과 독립적인 PDU(프로토콜 데이터 단위)를 정의합니다. 사용되는 버스나 네트워크 유형에 따라 ADU(Application Data Unit)에 추가 필드가 도입될 수 있습니다.  
+**![[modbusRTUFrame.png]]  
 ##### PDU(Protocol Data Unit)
 - Fucntion Code :   수행할 작업 종류를 나타내는 Code
 - Data Field : Fucntion code에 의해 정의된 동작에 대한 추가 정보를 포함하는 데이터 필드입니다. 여기에는 레지스터 주소 및 처리할 항목 수 및 필드의 실체 데이터 byte 수 등이 포함될 수 있습니다.
-Modbus 애플리케이션 프로토콜은 기본 통신 계층과 관계없이 간단한 PDU(프로토콜 데이터 단위)를 정의합니다.
-![[modbus_pdu.png]]  
-특정 버스 또는 네트워크에서 MODBUS 프로토콜을 매핑하면 프로토콜 데이터 단위에 몇 가지 필드가 추가됩니다. Modbus 전송을 시작하는 클라이언트는 modbus pdu를 구축한 다음 적절한 통신 pdu를 구축합니다.
+  특정 Fucntion에서는 데이터 필드가 존재하지 않을 수도 있습니다.
+##### ADU(Application data Unit)
+- Protocol Data Unit
+- Salve ID
+- CRC Error Check
+Error Code
+서버가 클라이언트에 응답할 때 함수 코드 필드를 사용하여 정상적인(오류 없는) 응답이나 예외 응답이라고 하는 일종의 오류가 발생했음을 나타냅니다. 정상적인 응답의 경우 서버는 원래 함수 코드를 에코하고 요청된 데이터를 반환합니다.
