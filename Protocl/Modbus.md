@@ -35,18 +35,25 @@ MODBUS 프로토콜은 기본 통신 계층과 관계없이 간단한 PDU(프로
 - Protocol Data Unit
 - Salve ID
 - CRC Error Check
+#### 3.2 Data Encoding  
+MODBUS는 주소와 데이터 항목에 'big-Endian 표현을 사용합니다. 단일 바이트(255) 보다 큰 숫자가 전송되면 최상위 바이트가 먼저 전송됩니다. 
 
-#### 4.2 Code Encoding 
-MODBUS는 주소와 데이터 항목에 '빅 엔디안' 표현을 사용합니다. 이는 다음을 의미합니다.
-For Example
+| Registger Size | value  | note                     |
+|:---------------|:-------|:-------------------------|
+|         16 bit | 0x1234 | 0x12를 먼저 보내고 0x34를 보냅니다. |  
+
+#### 3.3 MODBUS Data model
+MODBUS는 독특한 특성을 지닌  테이블을 기반으로 데이터 모델을 나눕니다으로 합니다.
+4개의 기본 테이블은 다음과 같습니다.
+
+| 객체 유형             | Access     | Size    | 주소 공간         |
+|:------------------|:-----------|:--------|:--------------|
+| Coil              | Read/Write |   1 bit |  0001 ~ 09999 |
+| Discription Input | Read Only  |   1 bit | 10001 ~ 19999 |
+| Input Register    | Read Only  | 16 bits | 30001 ~ 39999 |
+| Holding register  | Read/Write | 16 bits | 40001 ~ 49999 |  
 
 
-| 객체 유형             | Access     | Size    | 주소 공간         | Commentes                       |
-|:------------------|:-----------|:--------|:--------------|:--------------------------------|
-| Coil              | Read/Write |   1 bit |  0001 ~ 09999 | Discrete Output Coils           |
-| Discription Input | Read Only  |   1 bit | 10001 ~ 19999 | Discrete Input Contacts         |
-| Input Register    | Read Only  | 16 bits | 30001 ~ 39999 | Analog Input Registers          |
-| Holding register  | Read/Write | 16 bits | 40001 ~ 49999 | Analog Output Holding Registers |  
 
 Modbus 직렬 연결에는 Modbus RTU와 Modbus ASCII의 두 가지 유형이 있습니다. 편의상 Modbus RTU 및 Modbus ASCII는 일반적으로 Modbus RTU라고 하며 직렬 케이블을 사용하는 변형으로 그룹화됩니다.
 
@@ -61,16 +68,6 @@ modbus는 master/slave 기반 프로토콜이다. 시리얼 통신에서는 mast
 일반적으로 Master는 하나만 존재한다.
 ### 제한 사항
 Modbus는 1970년대 후반에 PLC와 통신하도로기 설계되어서 데이터 유형의 수는 당시 PLC에서 해석 가능한 유형으로 제한한다.  
-#### 2. MODBUS는 프로객체 유형
-Data 는 4개의 서로 다른 Table 에 있는 슬레이브 장치에 저장됩니다. 그 중 두 개는 Coil 및 discrete Inputs 이라고 하는 On-off(1bit) 값을 저장하고, 두 개는 Register라고하는 16bit word 로 값을 저장합니다.
-
-| 객체 유형             | Access     | Size    | 주소 공간         |
-|:------------------|:-----------|:--------|:--------------|
-| Coil              | Read/Write |   1 bit |  0001 ~ 09999 |
-| Discription Input | Read Only  |   1 bit | 10001 ~ 19999 |
-| Input Register    | Read Only  | 16 bits | 30001 ~ 39999 |
-| Holding register  | Read/Write | 16 bits | 40001 ~ 49999 |  
-
 
 ### Function code  
 Modbus의 Fucntion code는 3가지의 번주가 있습니다.
