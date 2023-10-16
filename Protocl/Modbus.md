@@ -1,5 +1,5 @@
 본 문서는 MightyZap에서 사용하는 Modbus RTU를 중심으로하여 설명하고 있습니다. Modbus에 대한 자세한 설명은 아래의 사이트를 참조하여 주시기 바랍니다.
-### Whit is Miodbus
+### Modbus thro
 최초 의 Modbus 프로토콜인 Modbus RTU (원격 터미널 장치)는 원래 1979년 Modicon(현재 Schneider Electric) 시스템에서 PLC와 함께 사용하기 위한 프로그래밍 프로토콜로 게시되었습니다. Modbus는 개방형 프로토콜이지만 "Modbus"라는 단어는 Schneider Electric의 등록 상표입니다.
 Modbus RTU는 간단한 직렬 통신 프로토콜입니다. 시간이 지나면서 TCP/IP(전송 제어 프로토콜/인터넷 프로토콜) 및 UDP(사용자 데이터그램 프로토콜)와 같은 널리 사용되는 전송 프로토콜을 사용하여 보다 복잡한 구현을 허용하는 표준에 대한 필요성이 커졌습니다 . 1999년에 개발된 Modbus 변형은 이러한 요구를 해결했습니다.
 
@@ -18,7 +18,7 @@ MODBUS는 공개적으로 배포되고 로열티가 없기 때문에 산업 환�
 통신과 장비
 modbus는 master/slave 기반 프로토콜이다. 시리얼 통신에서는 master로 설정된 장비만이 salve로 정보를 요청할 수 있으며, 요청된 정보는 읽기와 쓰기가 가능하다.
 일반적으로 Master는 하나만 존재한다.
-### 1 제한 사항
+### 제한 사항
 Modbus는 1970년대 후반에 PLC와 통신하도로기 설계되어서 데이터 유형의 수는 당시 PLC에서 해석 가능한 유형으로 제한한다.  
 #### 2. MODBUS는 프로객체 유형
 | 객체 유형             | Access     | Size    | 주소 공간         |
@@ -28,3 +28,8 @@ Modbus는 1970년대 후반에 PLC와 통신하도로기 설계되어서 데이�
 | Input Register    | Read Only  | 16 bits | 30001 ~ 39999 |
 | Holding register  | Read/Write | 16 bits | 40001 ~ 49999 |  
 
+
+### Function code
+### Illigal code
+
+### packet description
