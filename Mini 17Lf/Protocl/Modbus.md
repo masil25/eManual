@@ -32,4 +32,6 @@ Modbus는 1970년대 후반에 PLC와 통신하도로기 설계되어서 데이�
 ### Function code
 ### Illigal code
 
-### packet description
+Modbus Frame Description 프레임 설명
+Modbus 애플리케이션 프로토콜은 기본 통신 계층과 관계없이 간단한 PDU(프로토콜 데이터 단위)를 정의합니다.
+![[modbus_pdu.png]]
