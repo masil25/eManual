@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Protocl/Modbus.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Protocl/Modbus.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Protocl/Modbus.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Protocl/Modbus.md"
+                "file": "README.md"
               }
             }
           },
@@ -179,12 +179,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "8bf2f1d0bec48401",
+  "active": "fb14ab34d4b2d69a",
   "lastOpenFiles": [
+    "Protocl/Modbus.md",
     "Pasted image 20231016164954.png",
     "Protocl/IR Protocol.md",
     "Protocl/img/modbusRTUFrame.png",
-    "Protocl/Modbus.md",
     "Protocl/img/modbus_pdu.png",
     "Protocl/img",
     "Mini 17Lf/img/minmaxCalibration.gif",
@@ -196,7 +196,6 @@
     "README.md",
     "Mini 17Lf/img/minmaxPostion.png",
     "스크린샷 2023-09-26 18-46-52.png",
-    "스크린샷 2023-09-26 17-14-28.png",
     "Motor의 특성도 이해.md",
     "Protocl",
     "menuList.json",
