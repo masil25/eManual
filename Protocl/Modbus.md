@@ -69,8 +69,7 @@ N* =  Quantity of Registers
 | Error Code     | 1 Byte | 0x83                 |
 |:-------------- |:------ |:-------------------- |
 | Exception code | 1 Byte | 01 or 02 or 03 or 04 |                        |
-
-Exception code에 대한 자세한 자료는 5.Exception 을 참조하여 주시기 바랍니다.
+`- Exception code에 대한 자세한 자료는 5.Exception 을 참조하여 주시기 바랍니다.
 
 다음은 Register 108 ~ 110을 읽어오는 요청 예제 입니다.
 ###### Request (PDU)
@@ -91,46 +90,55 @@ Exception code에 대한 자세한 자료는 5.Exception 을 참조하여 주시
 이 Function code는 MightyZap의 하나의 레지스터의 내용을 쓰는데 사용됩니다.  
 Request PDU는 기록할 레지스터의 주소를 지정합니다. 레지스터는 0부터 시작하여 주소가 지정됩니다. 다라서 1번 레지스터는 0으로 주소가 지정됩니다.  
 정상적인 응답은 요청의 Echo이며, 레지스터 내용을 저장한 후에 응답합니다.
-
-**Request**  (PDU)
-
+###### Request (PDU)
 |  Function Code               |  1 Byte  |               0x06 |
 |:-----------------------------|:---------|:-------------------|
 |  Starting Address            |  2 byte  |  0x0000 to 0xFFFF  |
 |  Quantity of Register&nbsp;  |  2 Byte  |   0x0000 to 0xFFFF |  
-
-**Response** (PDU) 
-
+###### Response (PDU) 
 |Function Code|1 Byte|0x06|
 |:--|:--|:--|
 |Starting Address|2 byte|0x0000 to 0xFFFF|
 |Quantity of Register|2 Byte|0x0000 to 0xFF|
-
-
-**Error**  (PDU)
-
+###### Error (PDU)
 | Error Code     | 1 Byte | 0x86             |
 |:-------------- |:------ |:-------------------- |
 | Exception code | 1 Byte | 01 or 02 or 03 or 04 |                        |
 * Exception code에 대한 자세한 자료는 5.Exception 을 참조하여 주시기 바랍니다.
 
 다음은 Register 2dp 0x0003을 저장하는 요청 예제 입니다.
-**Request**  (PDU)
-
+###### Request (PDU)
 | Function | Starting Address Hi | Starting Address Lo | No of Register&nbsp; Hi | No of Register Lo |
 |:---------|:--------------------|:--------------------|:------------------------|:------------------|
 |     0x03 |                0x00 |                0x6b |                    0x00 |              0x03 |  
 - starting Address : 108(0x006b)
 - No of Register : 3(0x0003)
+###### Response (PDU)
+| Function | Starting Address Hi | Starting Address Lo | No of Register&nbsp; Hi | No of Register Lo |
+|:---------|:--------------------|:--------------------|:------------------------|:------------------|
+|     0x03 |                0x00 |                0x6b |                    0x00 |              0x03 |  
 
-**Response** (PDU)
+|   Function Code                |     1 Byte   |                 0x10 |
+|:-------------------------------|:-------------|:---------------------|
+|   Starting Address             |     2 byte   |   0x0000 to 0xFFFF   |
+|   Quantity of Register&nbsp;   |     2 Byte   |     0x0000 to 0x007B |
+| Byte count                     |       1 Byte |               2 x N* |
+| Registers value                | N* x 2 Bytes | value                |  
 
+다음은 Register 2dp 0x0003을 저장하는 요청 예제 입니다.
+###### Request (PDU)
+| Function | Starting Address Hi | Starting Address Lo | No of Register&nbsp; Hi | No of Register Lo |
+|:---------|:--------------------|:--------------------|:------------------------|:------------------|
+|     0x03 |                0x00 |                0x6b |                    0x00 |              0x03 |  
+- starting Address : 108(0x006b)
+- No of Register : 3(0x0003)
+###### Response (PDU)
 | Function | Starting Address Hi | Starting Address Lo | No of Register&nbsp; Hi | No of Register Lo |
 |:---------|:--------------------|:--------------------|:------------------------|:------------------|
 |     0x03 |                0x00 |                0x6b |                    0x00 |              0x03 |  
 
 
-
+/////
 
  
 Modbus 직렬 연결에는 Modbus RTU와 Modbus ASCII의 두 가지 유형이 있습니다. 편의상 Modbus RTU 및 Modbus ASCII는 일반적으로 Modbus RTU라고 하며 직렬 케이블을 사용하는 변형으로 그룹화됩니다.
