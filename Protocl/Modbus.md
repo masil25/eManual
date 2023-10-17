@@ -50,15 +50,15 @@ Function code는 MightyZap 에서 제공하는 Function만 표기합니다. 자�
 |  Read Holding Register  |  0x03  |  Register의 메모리 읽기  |
 |  Write Single Register  |  0x06  |  Register의 메모리 쓰기  |
 | Diagnostics             |   0x08 | 시스템 진단             |  
-##### 4.1 Write Single Register (0x03)
+
+##### 4.1 Read Single Register (0x03)  
+
 ###### **Request**  (PDU)
 | Function Code              | 1 Byte | 0x03             |
 |:-------------------------- |:------ |:---------------- |
 | Starting Address           | 2 byte | 0x0000 to 0xFFFF |
 | Quantity of Register&nbsp; | 2 Byte | 1 to 125(0x7d)   |
-
-**Response** (PDU) 
-
+###### Response (PDU)   
 | Function code  |      1 Byte |   0x03 |
 |:---------------|:------------|:-------|
 | Byte ount      |      1 Byte | 2 X N* |
