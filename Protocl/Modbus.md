@@ -138,6 +138,8 @@ Request PDU는 기록할 레지스터의 주소를 지정합니다. 레지스터
 #### 4.5 Diagnostics | 시스템 진단 (0x08)
 Modbus에서 Function code 08은 클라이언트 장치와 서버 사이의 통신 시스템을 확인하거나 서버 내의 다양한 내부 오류 상태를 확인하기 위한 일련의 테스트를 제공합니다.
 
+###### 4.5.1 Sub 
+
 
  
 Modbus 직렬 연결에는 Modbus RTU와 Modbus ASCII의 두 가지 유형이 있습니다. 편의상 Modbus RTU 및 Modbus ASCII는 일반적으로 Modbus RTU라고 하며 직렬 케이블을 사용하는 변형으로 그룹화됩니다.
