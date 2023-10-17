@@ -23,11 +23,11 @@
         "stacked": true
       },
       {
-        "id": "db9463942da0f825",
+        "id": "bbcad2da3f6bafb5",
         "type": "tabs",
         "children": [
           {
-            "id": "07ddad39b341f593",
+            "id": "0b9125c554f7f4e2",
             "type": "leaf",
             "state": {
               "type": "markdown-table-editor-view",
@@ -179,7 +179,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "07ddad39b341f593",
+  "active": "0b9125c554f7f4e2",
   "lastOpenFiles": [
     "Pasted image 20231016190107.png",
     "Pasted image 20231016185937.png",
