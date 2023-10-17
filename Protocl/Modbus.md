@@ -46,14 +46,11 @@ MODBUS는 독특한 특성을 지닌  테이블을 기반으로 데이터 모델
 #### 4.1 Function Code  
 Function code는 MightyZap 에서 제공하는 Function만 표기합니다. 자세한 Function code를 원하실 경우 Modbus.org 를 참조하여 주시기 바랍니다.   
 
-| Funtion               | Code | Description      |
-|:----------------------|:-----|:-----------------|
-| Read Holding Register | 0x03 | Register의 메모리 읽기 |
-| Write Single Register | 0x06 | Register의 메모리 쓰기 |   
-![[Pasted image 20231016190107.png]]
-#### 4.3 Read Holding Registers (0x03)
-이 Function code는 MightyZap의 연속된 레지스터의 내용을 읽는 데 사용됩니다.
-Request PDU는 시작 레지스터 주소와 레지스터 수를 지정합니다. PDU에서 레지스터는 0부터 시작하여 주소가 지정됩니다. 따라서 1-16번 레지스터는 0-15로 주소가 지정됩니다.  
+|  Funtion                |  Code  |  Description       |
+|:------------------------|:-------|:-------------------|
+|  Read Holding Register  |  0x03  |  Register의 메모리 읽기  |
+|  Write Single Register  |  0x06  |  Register의 메모리 쓰기  |
+| Diagnostics             |   0x08 | 시스템 진단             |  
 
 **Request**  (PDU)
 
@@ -98,31 +95,32 @@ Request PDU는 시작 레지스터 주소와 레지스터 수를 지정합니다
 
 ##### 4.4 Write Single Register (0x06)
 이 Function code는 MightyZap의 하나의 레지스터의 내용을 쓰는데 사용됩니다.  
-Request PDU는 기록할 레
+Request PDU는 기록할 레지스터의 주소를 지정합니다. 레지스터는 0부터 시작하여 주소가 지정됩니다. 다라서 1번 레지스터는 0으로 주소가 지정됩니다.  
+정상적인 응답은 요청의 Echo이며, 레지스터 내용을 저장한 후에 응답합니다.
 
 **Request**  (PDU)
 
-| Function Code              | 1 Byte | 0x03             |
-|:-------------------------- |:------ |:---------------- |
-| Starting Address           | 2 byte | 0x0000 to 0xFFFF |
-| Quantity of Register&nbsp; | 2 Byte | 1 to 125(0x7d)   |
+|  Function Code               |  1 Byte  |               0x06 |
+|:-----------------------------|:---------|:-------------------|
+|  Starting Address            |  2 byte  |  0x0000 to 0xFFFF  |
+|  Quantity of Register&nbsp;  |  2 Byte  |   0x0000 to 0xFFFF |  
 
 **Response** (PDU) 
 
-| Function code  |      1 Byte |   0x03 |
-|:---------------|:------------|:-------|
-| Byte ount      |      1 Byte | 2 X N* |
-| Register value | N * 2 Bytes |        |  
-*N =  Quantity of Registers
+|Function Code|1 Byte|0x06|
+|:--|:--|:--|
+|Starting Address|2 byte|0x0000 to 0xFFFF|
+|Quantity of Register|2 Byte|0x0000 to 0xFF|
+
 
 **Error**  (PDU)
 
-| Error Code     | 1 Byte | 0x83                 |
+| Error Code     | 1 Byte | 0x86             |
 |:-------------- |:------ |:-------------------- |
 | Exception code | 1 Byte | 01 or 02 or 03 or 04 |                        |
 * Exception code에 대한 자세한 자료는 5.Exception 을 참조하여 주시기 바랍니다.
 
-다음은 Register 108 ~ 110을 읽어오는 요청 예제 입니다.
+다음은 Register 2dp 0x0003을 저장하는 요청 예제 입니다.
 **Request**  (PDU)
 
 | Function | Starting Address Hi | Starting Address Lo | No of Register&nbsp; Hi | No of Register Lo |
@@ -133,15 +131,15 @@ Request PDU는 기록할 레
 
 **Response** (PDU)
 
-| Function | Byte Count | Register value Hi(108) | Register value Lo(108) | Register value Hi(109) | Register value Lo(109) | Register value Hi(110) | Register value Lo(110) |
-|:---------|:-----------|:-----------------------|:-----------------------|:-----------------------|:-----------------------|:-----------------------|:-----------------------|
-|     0x03 |       0x06 |                   0x02 |                   0x2b |                   0x00 |                   0x00 |                   0x00 |                   0x64 |  
-- Byte Count : Register value 의 총 곗수
-- Register 108 Value : 0x022b(555)
-- Register 109 Value : 0x0000(0)
-- Register 110 Value : 0x0064(100)
+| Function | Starting Address Hi | Starting Address Lo | No of Register&nbsp; Hi | No of Register Lo |
+|:---------|:--------------------|:--------------------|:------------------------|:------------------|
+|     0x03 |                0x00 |                0x6b |                    0x00 |              0x03 |  
+
+#### 4.5 Diagnostics | 시스템 진단 (0x08)
+Modbus에서 Function code 08은 클라이언트 장치와 서버 사이의 통신 시스템을 확인하거나 서버 내의 다양한 내부 오류 상태를 확인하기 위한 일련의 테스트를 제공합니다.
 
 
+ 
 Modbus 직렬 연결에는 Modbus RTU와 Modbus ASCII의 두 가지 유형이 있습니다. 편의상 Modbus RTU 및 Modbus ASCII는 일반적으로 Modbus RTU라고 하며 직렬 케이블을 사용하는 변형으로 그룹화됩니다.
 
 Modbus RTU를 사용하면 데이터가 바이너리로 전송됩니다. Modbus ASCII를 사용하면 데이터가 읽을 수 있는 ASCII로 표시됩니다. 바이너리 메시지는 ASCII보다 짧고 이론적으로 전송 및 수신 속도가 빠른 반면, ASCII 메시지는 관리자가 쉽게 모니터링할 수 있다는 장점이 있습니다.
