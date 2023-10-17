@@ -15,12 +15,11 @@ Gateway는 Modbus Protocol을 사용하여 모든 버스 도는 네트워크 간
 #### 3.1  Protocol Description  
 MODBUS 프로토콜은 기본 통신 계층과 관계없이 간단한 PDU(프로토콜 데이터 단위)를 정의합니다. 특정 버스나 네트워크에서 MODBUS 프로토콜을 매핑하면 ADU(응용 프로그램 데이터 단위)에 몇 가지 추가 필드가 추가될 수 있습니다.  
 ![[modbusRTUFrame.png]]
-**PDU(Protocol Data Unit)**
+###### PDU(Protocol Data Unit)
 - Fucntion Code :   수행할 작업 종류를 나타내는 Code
 - Data Field : Fucntion code에 의해 정의된 동작에 대한 추가 정보를 포함하는 데이터 필드입니다. 여기에는 레지스터 주소 및 처리할 항목 수 및 필드의 실체 데이터 byte 수 등이 포함될 수 있습니다.
-  특정 Fucntion에서는 데이터 필드가 존재하지 않을 수도 있습니다.
-  
-**ADU(Application data Unit)**
+  특정 Fucntion에서는 데이터 필드가 존재하지 않을 수도 있습니다.  
+###### ADU(Application data Unit)
 - Protocol Data Unit
 - Salve ID 
 - CRC Error Check
@@ -32,8 +31,8 @@ MODBUS는 주소와 데이터 항목에 'big-Endian 표현을 사용합니다. �
 |         16 bit | 0x1234 | 0x12를 먼저 보내고 0x34를 보냅니다. |  
 
 #### 3.3 MODBUS Data model
-MODBUS는 독특한 특성을 지닌  테이블을 기반으로 데이터 모델을 나눕니다으로 합니다.
-4개의 기본 테이블은 다음과 같습니다.
+MODBUS는 독특한 특성을 지닌  테이블을 기반으로 데이터 모델을 나눕니다.  
+4개의 기본 테이블은 다음과 같습니다.  
 
 | 객체 유형             | Access     | Size    | 주소 공간         |
 |:------------------|:-----------|:--------|:--------------|
@@ -42,7 +41,7 @@ MODBUS는 독특한 특성을 지닌  테이블을 기반으로 데이터 모델
 | Input Register    | Read Only  | 16 bits | 30001 ~ 39999 |
 | Holding register  | Read/Write | 16 bits | 40001 ~ 49999 |  
 
-### 4 Function Code
+### 4. Function Code
 Function code는 MightyZap 에서 제공하는 Function만 표기합니다. 자세한 Function code를 원하실 경우 Modbus.org 를 참조하여 주시기 바랍니다.   
 
 |  Funtion                |  Code  |  Description       |
@@ -52,8 +51,10 @@ Function code는 MightyZap 에서 제공하는 Function만 표기합니다. 자�
 | Diagnostics             |   0x08 | 시스템 진단             |  
 
 ##### 4.1 Read Single Register (0x03)  
-
-###### **Request**  (PDU)
+이 기능 코드는 원격 장치에서 1~125개의 연속 입력 레지스터를 읽는 데 사용됩니다.  
+Request PDU는 시작 레지스터 주소와 레지스터 수를 지정합니다. PDU에서 레지스터는 0부터 시작하여 주소가 지정됩니다.
+따라서 1-16번 입력 레지스터는 0-15로 주소가 지정됩니다.
+###### Request (PDU)
 | Function Code              | 1 Byte | 0x03             |
 |:-------------------------- |:------ |:---------------- |
 | Starting Address           | 2 byte | 0x0000 to 0xFFFF |
@@ -63,26 +64,22 @@ Function code는 MightyZap 에서 제공하는 Function만 표기합니다. 자�
 |:---------------|:------------|:-------|
 | Byte ount      |      1 Byte | 2 X N* |
 | Register value | N * 2 Bytes |        |  
-*N =  Quantity of Registers
-
-**Error**  (PDU)
-
+N* =  Quantity of Registers
+###### Error (PDU)    
 | Error Code     | 1 Byte | 0x83                 |
 |:-------------- |:------ |:-------------------- |
 | Exception code | 1 Byte | 01 or 02 or 03 or 04 |                        |
-* Exception code에 대한 자세한 자료는 5.Exception 을 참조하여 주시기 바랍니다.
+
+Exception code에 대한 자세한 자료는 5.Exception 을 참조하여 주시기 바랍니다.
 
 다음은 Register 108 ~ 110을 읽어오는 요청 예제 입니다.
-**Request**  (PDU)
-
+###### Request (PDU)
 | Function | Starting Address Hi | Starting Address Lo | No of Register&nbsp; Hi | No of Register Lo |
 |:---------|:--------------------|:--------------------|:------------------------|:------------------|
 |     0x03 |                0x00 |                0x6b |                    0x00 |              0x03 |  
 - starting Address : 108(0x006b)
 - No of Register : 3(0x0003)
-
-**Response** (PDU)
-
+###### Response (PDU)
 | Function | Byte Count | Register value Hi(108) | Register value Lo(108) | Register value Hi(109) | Register value Lo(109) | Register value Hi(110) | Register value Lo(110) |
 |:---------|:-----------|:-----------------------|:-----------------------|:-----------------------|:-----------------------|:-----------------------|:-----------------------|
 |     0x03 |       0x06 |                   0x02 |                   0x2b |                   0x00 |                   0x00 |                   0x00 |                   0x64 |  
