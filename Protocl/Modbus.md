@@ -1,15 +1,4 @@
 
-General description
-- protocol description - 
-- data encoding
-- modbus data model
-function code categories
-function code descriptions
-- coil read/wirte
-- read input resgisters
-- read/wirte single register
-Exception responses
-
 본 문서는 Modbus.org의 문서를 참고하여 MightyZap에서 사용하는 Modbus RTU를 중심으로하여 설명하고 있습니다. Modbus에 대한 자세한 설명은 Modbus.org 사이트를 참조하여 주시기 바랍니다.
 ### 1. Modbus Introduction
 최초 의 Modbus 프로토콜인 Modbus RTU (원격 터미널 장치)는 원래 1979년 Modicon(현재 Schneider Electric) 시스템에서 PLC와 함께 사용하기 위한 프로그래밍 프로토콜로 게시되었습니다. Modbus는 개방형 프로토콜이지만 "Modbus"라는 단어는 Schneider Electric의 등록 상표입니다.
@@ -65,7 +54,8 @@ Function code는 MightyZap 에서 제공하는 Function만 표기합니다. 자�
 #### 4.3 Read Holding Registers
 이 Function code는 MightyZap에 있는 연속된 레지스터의 내용을 읽는 데 사용됩니다.
 Request PDU는 시작 레지스터 주소와 레지스터 수를 지정합니다. PDU에서 레지스터는 0부터 시작하여 주소가 지정됩니다. 따라서 1-16번 레지스터는 0-15로 주소가 지정됩니다.
-
+- Register Address :  일반적으로 생각하는 주소
+- Protocol Address: 
 
 Modbus 직렬 연결에는 Modbus RTU와 Modbus ASCII의 두 가지 유형이 있습니다. 편의상 Modbus RTU 및 Modbus ASCII는 일반적으로 Modbus RTU라고 하며 직렬 케이블을 사용하는 변형으로 그룹화됩니다.
 
