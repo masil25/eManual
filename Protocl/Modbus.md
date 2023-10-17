@@ -118,24 +118,25 @@ Request PDU는 기록할 레지스터의 주소를 지정합니다. 레지스터
 |:---------|:--------------------|:--------------------|:------------------------|:------------------|
 |     0x03 |                0x00 |                0x6b |                    0x00 |              0x03 |  
 
+#### 4.3 Write Mulitple registers (0x10)
+이 기능 코드는 원격 장치에 연속 레지스터 블록(1~123개 레지스터)을 쓰는 데 사용됩니다.
+요청된 기록 값은 요청 데이터 필드에 지정됩니다. 데이터는 레지스터 당 2바이트로 압축됩니다.
+정상적인 응답은 기능 코드, 시작 주소 및 기록된 레지스터의 수량을 반환합니다.
+###### Request (PDU)  
 |   Function Code                |     1 Byte   |                 0x10 |
 |:-------------------------------|:-------------|:---------------------|
 |   Starting Address             |     2 byte   |   0x0000 to 0xFFFF   |
-|   Quantity of Register&nbsp;   |     2 Byte   |     0x0000 to 0x007B |
-| Byte count                     |       1 Byte |               2 x N* |
-| Registers value                | N* x 2 Bytes | value                |  
-
-다음은 Register 2dp 0x0003을 저장하는 요청 예제 입니다.
+|   Quantity of Register&nbsp;   |     2 Byte   |       0x0000 to 007B |
+| Byte Count                     |       1 Byte |               2 x N* |
+| Registers Value                | N* x 2 Bytes | value                |  
 ###### Request (PDU)
-| Function | Starting Address Hi | Starting Address Lo | No of Register&nbsp; Hi | No of Register Lo |
-|:---------|:--------------------|:--------------------|:------------------------|:------------------|
-|     0x03 |                0x00 |                0x6b |                    0x00 |              0x03 |  
-- starting Address : 108(0x006b)
-- No of Register : 3(0x0003)
+| Function code         | 1 Bytes |             0x10 |
+|:----------------------|:--------|:-----------------|
+| Starting Address      | 2 Bytes | 0x0000 to 0xFFFF |
+| Quantity of Registers | 2 bytes |   1 to 123(0x7B) |  
+
 ###### Response (PDU)
-| Function | Starting Address Hi | Starting Address Lo | No of Register&nbsp; Hi | No of Register Lo |
-|:---------|:--------------------|:--------------------|:------------------------|:------------------|
-|     0x03 |                0x00 |                0x6b |                    0x00 |              0x03 |  
+
 
 
 /////
