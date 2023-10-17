@@ -51,18 +51,18 @@ Function code는 MightyZap 에서 제공하는 Function만 표기합니다. 자�
 | Read Holding Register | 0x03 | Register의 메모리 읽기 |
 | Write Single Register | 0x06 | Register의 메모리 쓰기 |   
 ![[Pasted image 20231016190107.png]]
-#### 4.3 Read Holding Registers
-이 Function code는 MightyZap에 있는 연속된 레지스터의 내용을 읽는 데 사용됩니다.
+#### 4.3 Read Holding Registers (0x03)
+이 Function code는 MightyZap의 연속된 레지스터의 내용을 읽는 데 사용됩니다.
 Request PDU는 시작 레지스터 주소와 레지스터 수를 지정합니다. PDU에서 레지스터는 0부터 시작하여 주소가 지정됩니다. 따라서 1-16번 레지스터는 0-15로 주소가 지정됩니다.  
 
-**Request**   
+**Request**  (PDU)
 
 | Function Code              | 1 Byte | 0x03             |
 |:-------------------------- |:------ |:---------------- |
 | Starting Address           | 2 byte | 0x0000 to 0xFFFF |
 | Quantity of Register&nbsp; | 2 Byte | 1 to 125(0x7d)   |
 
-**Response
+**Response** (PDU) 
 
 | Function code  |      1 Byte |   0x03 |
 |:---------------|:------------|:-------|
@@ -70,7 +70,7 @@ Request PDU는 시작 레지스터 주소와 레지스터 수를 지정합니다
 | Register value | N * 2 Bytes |        |  
 *N =  Quantity of Registers
 
-**Error  
+**Error**  (PDU)
 
 | Error Code     | 1 Byte | 0x83                 |
 |:-------------- |:------ |:-------------------- |
@@ -78,7 +78,7 @@ Request PDU는 시작 레지스터 주소와 레지스터 수를 지정합니다
 * Exception code에 대한 자세한 자료는 5.Exception 을 참조하여 주시기 바랍니다.
 
 다음은 Register 108 ~ 110을 읽어오는 요청 예제 입니다.
-**Request**  
+**Request**  (PDU)
 
 | Function | Starting Address Hi | Starting Address Lo | No of Register&nbsp; Hi | No of Register Lo |
 |:---------|:--------------------|:--------------------|:------------------------|:------------------|
@@ -86,7 +86,52 @@ Request PDU는 시작 레지스터 주소와 레지스터 수를 지정합니다
 - starting Address : 108(0x006b)
 - No of Register : 3(0x0003)
 
-**Response**
+**Response** (PDU)
+
+| Function | Byte Count | Register value Hi(108) | Register value Lo(108) | Register value Hi(109) | Register value Lo(109) | Register value Hi(110) | Register value Lo(110) |
+|:---------|:-----------|:-----------------------|:-----------------------|:-----------------------|:-----------------------|:-----------------------|:-----------------------|
+|     0x03 |       0x06 |                   0x02 |                   0x2b |                   0x00 |                   0x00 |                   0x00 |                   0x64 |  
+- Byte Count : Register value 의 총 곗수
+- Register 108 Value : 0x022b(555)
+- Register 109 Value : 0x0000(0)
+- Register 110 Value : 0x0064(100)
+
+##### 4.4 Write Single Register (0x06)
+이 Function code는 MightyZap의 하나의 레지스터의 내용을 쓰는데 사용됩니다.  
+Request PDU는 기록할 레
+
+**Request**  (PDU)
+
+| Function Code              | 1 Byte | 0x03             |
+|:-------------------------- |:------ |:---------------- |
+| Starting Address           | 2 byte | 0x0000 to 0xFFFF |
+| Quantity of Register&nbsp; | 2 Byte | 1 to 125(0x7d)   |
+
+**Response** (PDU) 
+
+| Function code  |      1 Byte |   0x03 |
+|:---------------|:------------|:-------|
+| Byte ount      |      1 Byte | 2 X N* |
+| Register value | N * 2 Bytes |        |  
+*N =  Quantity of Registers
+
+**Error**  (PDU)
+
+| Error Code     | 1 Byte | 0x83                 |
+|:-------------- |:------ |:-------------------- |
+| Exception code | 1 Byte | 01 or 02 or 03 or 04 |                        |
+* Exception code에 대한 자세한 자료는 5.Exception 을 참조하여 주시기 바랍니다.
+
+다음은 Register 108 ~ 110을 읽어오는 요청 예제 입니다.
+**Request**  (PDU)
+
+| Function | Starting Address Hi | Starting Address Lo | No of Register&nbsp; Hi | No of Register Lo |
+|:---------|:--------------------|:--------------------|:------------------------|:------------------|
+|     0x03 |                0x00 |                0x6b |                    0x00 |              0x03 |  
+- starting Address : 108(0x006b)
+- No of Register : 3(0x0003)
+
+**Response** (PDU)
 
 | Function | Byte Count | Register value Hi(108) | Register value Lo(108) | Register value Hi(109) | Register value Lo(109) | Register value Hi(110) | Register value Lo(110) |
 |:---------|:-----------|:-----------------------|:-----------------------|:-----------------------|:-----------------------|:-----------------------|:-----------------------|
