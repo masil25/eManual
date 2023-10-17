@@ -43,7 +43,6 @@ MODBUS는 독특한 특성을 지닌  테이블을 기반으로 데이터 모델
 | Holding register  | Read/Write | 16 bits | 40001 ~ 49999 |  
 
 ### 4 Function Code
-#### 4.1 Function Code  
 Function code는 MightyZap 에서 제공하는 Function만 표기합니다. 자세한 Function code를 원하실 경우 Modbus.org 를 참조하여 주시기 바랍니다.   
 
 |  Funtion                |  Code  |  Description       |
@@ -51,9 +50,8 @@ Function code는 MightyZap 에서 제공하는 Function만 표기합니다. 자�
 |  Read Holding Register  |  0x03  |  Register의 메모리 읽기  |
 |  Write Single Register  |  0x06  |  Register의 메모리 쓰기  |
 | Diagnostics             |   0x08 | 시스템 진단             |  
-
-**Request**  (PDU)
-
+##### 4.1 Write Single Register (0x03)
+###### **Request**  (PDU)
 | Function Code              | 1 Byte | 0x03             |
 |:-------------------------- |:------ |:---------------- |
 | Starting Address           | 2 byte | 0x0000 to 0xFFFF |
@@ -92,8 +90,7 @@ Function code는 MightyZap 에서 제공하는 Function만 표기합니다. 자�
 - Register 108 Value : 0x022b(555)
 - Register 109 Value : 0x0000(0)
 - Register 110 Value : 0x0064(100)
-
-##### 4.4 Write Single Register (0x06)
+##### 4.2 Write Single Register (0x06)
 이 Function code는 MightyZap의 하나의 레지스터의 내용을 쓰는데 사용됩니다.  
 Request PDU는 기록할 레지스터의 주소를 지정합니다. 레지스터는 0부터 시작하여 주소가 지정됩니다. 다라서 1번 레지스터는 0으로 주소가 지정됩니다.  
 정상적인 응답은 요청의 Echo이며, 레지스터 내용을 저장한 후에 응답합니다.
@@ -135,10 +132,7 @@ Request PDU는 기록할 레지스터의 주소를 지정합니다. 레지스터
 |:---------|:--------------------|:--------------------|:------------------------|:------------------|
 |     0x03 |                0x00 |                0x6b |                    0x00 |              0x03 |  
 
-#### 4.5 Diagnostics | 시스템 진단 (0x08)
-Modbus에서 Function code 08은 클라이언트 장치와 서버 사이의 통신 시스템을 확인하거나 서버 내의 다양한 내부 오류 상태를 확인하기 위한 일련의 테스트를 제공합니다.
 
-###### 4.5.1 Sub 
 
 
  
