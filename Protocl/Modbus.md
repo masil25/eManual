@@ -35,6 +35,7 @@ MODBUS 프로토콜은 기본 통신 계층과 관계없이 간단한 PDU(프로
 ###### ADU(Application data Unit)
 - Protocol Data Unit
 - Salve ID   
+  `- ID는 1~247까지 가능하며, ID 0은 Broadcast용으로 사용된다.
 - CRC Error Check   
 #### 3.2 Data Encoding  
 MODBUS는 주소와 데이터 항목에 'big-Endian 표현을 사용합니다. 단일 바이트(255) 보다 큰 숫자가 전송되면 최상위 바이트가 먼저 전송됩니다. 
@@ -186,21 +187,5 @@ Exception 응답 메세지에는 정상적인 응답과 구별되는 두 가지 
 | 0X06 | SLAVE DEVICE BUSY    | Server가 다른 처리 중이어서 응답을 할 수 없을 때              |  
  
 
-### 제한 사항
-Modbus는 1970년대 후반에 PLC와 통신하도로기 설계되어서 데이터 유형의 수는 당시 PLC에서 해석 가능한 유형으로 제한한다.  
-
-### Function code  
-Modbus의 Fucntion code는 3가지의 번주가 있습니다.
- - Public Function Codes :  사용자 정의 코드를 제외한 1부터 127까지,  Modbus.org 커뮤니티에서 검증되었으며 공개적으로 문서화되고 고유성이 보장됩니다.
- - User-Define Function Codes : 65~72, 100~110의 두 가지 범위로 제공됩니다.
- - Reserved Function codes : 일부 회사에서 레거시 제품에 사용하며 공개적으로 사용할 수 없습니다.
- 일반적으로 사용되는 기능 코드의 예가 아래의 표에 나왕있습니다.
- 
-### Illigal code
-
-### Modbus Frame Structure // 프레임 구조
-Modbus 프로토콜은 기본 통신 계층과 독립적인 PDU(프로토콜 데이터 단위)를 정의합니다. 사용되는 버스나 네트워크 유형에 따라 ADU(Application Data Unit)에 추가 필드가 도입될 수 있습니다.  
-  
-
-Error Code
-서버가 클라이언트에 응답할 때 함수 코드 필드를 사용하여 정상적인(오류 없는) 응답이나 예외 응답이라고 하는 일종의 오류가 발생했음을 나타냅니다. 정상적인 응답의 경우 서버는 원래 함수 코드를 에코하고 요청된 데이터를 반환합니다.
+### 5. libmodbus
+modbus의 대표적인 라이브러리는 libmodbus를 들 수 있다.  C로 구현된 라이브러리로 Windows, Mac, Linux등 대부분의 OS에서 사용 가능하며 꾸준히 업데이트가 되고 있다.
