@@ -189,3 +189,7 @@ Exception 응답 메세지에는 정상적인 응답과 구별되는 두 가지 
 
 ### 5. libmodbus
 modbus의 대표적인 라이브러리는 libmodbus를 들 수 있다.  C로 구현된 라이브러리로 Windows, Mac, Linux등 대부분의 OS에서 사용 가능하며 꾸준히 업데이트가 되고 있다.
+
+MightyZap을 제어하기 위해 libmodbus 라이브러리의 Modbus RTU를  이용하여 예제를 살펴 보겠습니다.  
+
+#### 5.1 libmodbus 설치  
