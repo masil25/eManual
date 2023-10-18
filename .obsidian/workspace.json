@@ -6,7 +6,6 @@
       {
         "id": "1ac5b78d4ee0f9f6",
         "type": "tabs",
-        "dimension": 56.646971935007386,
         "children": [
           {
             "id": "fb14ab34d4b2d69a",
@@ -24,12 +23,11 @@
         "stacked": true
       },
       {
-        "id": "fcf2bceafeb44cf2",
+        "id": "051f15a8e4b0269a",
         "type": "tabs",
-        "dimension": 43.353028064992614,
         "children": [
           {
-            "id": "6c5de6da794187d6",
+            "id": "7ea4fcadfea6182f",
             "type": "leaf",
             "state": {
               "type": "markdown-table-editor-view",
@@ -181,7 +179,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fb14ab34d4b2d69a",
+  "active": "7ea4fcadfea6182f",
   "lastOpenFiles": [
     "Color.md",
     "Protocl/Modbus.md",
