@@ -4,36 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "1ac5b78d4ee0f9f6",
+        "id": "765d8524d0a7107e",
         "type": "tabs",
-        "dimension": 78.50812407680945,
         "children": [
           {
-            "id": "fb14ab34d4b2d69a",
+            "id": "f7234f7bfbe02dd4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Protocl/Modbus.md",
-                "mode": "source",
-                "source": false
+                "file": "Protocl/img/modbusRTUFrame.png"
               }
-            }
-          }
-        ],
-        "stacked": true
-      },
-      {
-        "id": "051f15a8e4b0269a",
-        "type": "tabs",
-        "dimension": 21.491875923190545,
-        "children": [
-          {
-            "id": "7ea4fcadfea6182f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown-table-editor-view",
-              "state": {}
             }
           }
         ]
@@ -86,7 +67,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 512.5
   },
   "right": {
     "id": "7ccabca408164915",
@@ -102,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Protocl/Modbus.md",
+                "file": "Protocl/img/modbusRTUFrame.png",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -119,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Protocl/Modbus.md",
+                "file": "Protocl/img/modbusRTUFrame.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Protocl/Modbus.md"
+                "file": "Protocl/img/modbusRTUFrame.png"
               }
             }
           },
@@ -181,23 +162,23 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fb14ab34d4b2d69a",
+  "active": "f7234f7bfbe02dd4",
   "lastOpenFiles": [
+    "Protocl/Modbus.md",
+    "Protocl/img/Pasted image 20231018171006.png",
+    "Pasted image 20231018170942.png",
+    "Protocl/img/ModbusNetworkArchitecture.png",
     "Protocl/img/ModbusCommunication.png",
     "Protocl/img/Pasted image 20231018161942.png",
     "Protocl/img/modbusRTUFrame.png",
     "Protocl/img/modbus_pdu.png",
-    "Protocl/Modbus.md",
     "Blank diagram.png",
     "Pasted image 20231018143138.png",
     "Color.md",
     "Pasted image 20231016190107.png",
-    "Pasted image 20231016185937.png",
     "README.md",
-    "Pasted image 20231016164954.png",
     "Protocl/IR Protocol.md",
     "Protocl/img",
-    "Mini 17Lf/img/minmaxCalibration.gif",
     "Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Motor의 특성도 이해.md",
     "Protocl",
