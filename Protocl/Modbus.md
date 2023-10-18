@@ -13,11 +13,22 @@ Modbus Protocol을 사용하면 모든 유형의 네트워크 아키텍처에서
 Gateway는 Modbus Protocol을 사용하여 모든 버스 도는 네트워크 간의 통신이 가능합니다.(Gateways allow a communication between several types of buses or network using the MODBUS protocol.)
 <font color="#ff0000">MightyZap에서는 RS485 통신을 이용한 MODBUS RTU를 사용합니다.</font>
 
+데이지 체인
+
+
 ### 3. General Description
 #### 3.1  Protocol Description  
 MODBUS 프로토콜은 기본 통신 계층과 관계없이 간단한 PDU(프로토콜 데이터 단위)를 정의합니다. 특정 버스나 네트워크에서 MODBUS 프로토콜을 매핑하면 ADU(응용 프로그램 데이터 단위)에 몇 가지 추가 필드가 추가될 수 있습니다.  
 ![[modbusRTUFrame.png]]
 
+| Name                  | Lenth(bits) | Function                                                                                                                                                                                           |
+|:----------------------|:------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Start                 |          28 | 최소 3 1/2 character time 간격(mark condition)                                                                                                                                                         |
+| Server ID             |           8 | MightyZap ID                                                                                                                                                                                       |
+| Function Code         |           8 | Function Code를 나타냅니다.                                                                                                                                                                              |
+| Data                  | N * 8       | Message type에 따라 다르게 채워집니다.                                                                                                                                                                        |
+| CRC&nbsp; Error check |          16 | <span style="color: rgb(64, 64, 64); font-family: Lato, proxima-nova, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-size: 14.4px; background-color: rgb(243, 246, 246);">Error checks</span> |
+| stop                  |          28 | 최소 3 1/2 character time 간격(mark condition)<br>                                                                                                                                                     |  
 ###### PDU(Protocol Data Unit)
 - Fucntion Code :   수행할 작업 종류를 나타내는 Code
 - Data Field : Fucntion code에 의해 정의된 동작에 대한 추가 정보를 포함하는 데이터 필드입니다. 여기에는 레지스터 주소 및 처리할 항목 수 및 필드의 실체 데이터 byte 수 등이 포함될 수 있습니다.
