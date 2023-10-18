@@ -11,9 +11,11 @@
             "id": "f7234f7bfbe02dd4",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Protocl/img/modbusRTUFrame.png"
+                "file": "Protocl/Modbus.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Protocl/img/modbusRTUFrame.png",
+                "file": "Protocl/Modbus.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Protocl/img/modbusRTUFrame.png",
+                "file": "Protocl/Modbus.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Protocl/img/modbusRTUFrame.png"
+                "file": "Protocl/Modbus.md"
               }
             }
           },
@@ -164,18 +166,17 @@
   },
   "active": "f7234f7bfbe02dd4",
   "lastOpenFiles": [
-    "Protocl/Modbus.md",
-    "Protocl/img/Pasted image 20231018171006.png",
-    "Pasted image 20231018170942.png",
+    "Protocl/img/MightyzapConnect.png",
+    "Protocl/img/modbusRTUFrame.png",
     "Protocl/img/ModbusNetworkArchitecture.png",
     "Protocl/img/ModbusCommunication.png",
-    "Protocl/img/Pasted image 20231018161942.png",
-    "Protocl/img/modbusRTUFrame.png",
     "Protocl/img/modbus_pdu.png",
+    "Protocl/img/Pasted image 20231018161942.png",
+    "Protocl/Modbus.md",
+    "Pasted image 20231018170942.png",
     "Blank diagram.png",
     "Pasted image 20231018143138.png",
     "Color.md",
-    "Pasted image 20231016190107.png",
     "README.md",
     "Protocl/IR Protocol.md",
     "Protocl/img",

@@ -9,18 +9,16 @@ Modbus 는 client/server 기반 프로토콜입니다. 시리얼 통신에서는
 ### 2. Context
 Modbus Protocol을 사용하면 모든 유형의 네트워크 아키텍처에서 쉽게 통신 할 수 있습니다.
   ![[ModbusNetworkArchitecture.png]]
-![[Pasted image 20231018170942.png]]
-
 Gateway는 Modbus Protocol을 사용하여 모든 버스 도는 네트워크 간의 통신이 가능합니다.(Gateways allow a communication between several types of buses or network using the MODBUS protocol.)
 <font color="#ff0000">MightyZap에서는 RS485 통신을 이용한 MODBUS RTU를 사용합니다.</font>
+![[MightyzapConnect.png]]
 
-데이지 체인
 
 
 ### 3. General Description
 #### 3.1  Protocol Description  
 MODBUS 프로토콜은 기본 통신 계층과 관계없이 간단한 PDU(프로토콜 데이터 단위)를 정의합니다. 특정 버스나 네트워크에서 MODBUS 프로토콜을 매핑하면 ADU(응용 프로그램 데이터 단위)에 몇 가지 추가 필드가 추가될 수 있습니다.  
-![[Pasted image 20231018171006.png]]
+![[modbusRTUFrame.png]]
 
 | Name                  | Lenth(bits) | Function                                                                                                                                                                                           |
 |:----------------------|:------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
