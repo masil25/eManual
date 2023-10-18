@@ -134,11 +134,20 @@ Request PDU는 기록할 레지스터의 주소를 지정합니다. 레지스터
 |:----------------------|:--------|:-----------------|
 | Starting Address      | 2 Bytes | 0x0000 to 0xFFFF |
 | Quantity of Registers | 2 bytes |   1 to 123(0x7B) |  
+###### Error (PDU)
+| Error code    | 1 Byte |                 0x90 |
+|:--------------|:-------|:---------------------|
+| Eception code | 1 Byte | 01 or 02 or 03 or 04 |  
 
-###### Response (PDU)
-
-
-
+다음은 시작 Register가 2번이고 0x000A 와 0x0101을 쓸 경우 입니다.
+###### Request  
+| Function | Starting Address Hi | Starting Address Lo | Quantity of Registers Hi | Quantity of Registers Lo | Byte Count | Registers Value Hi | Regitsters Value Hi | Registers Value Hi | Registers Value Lo |
+|:---------|:--------------------|:--------------------|:-------------------------|:-------------------------|:-----------|:-------------------|:--------------------|:-------------------|:-------------------|
+|     0x10 |                0x00 |                0x01 |                     0x00 |                     0x02 |       0x04 |               0x00 |                0x0A |               0x01 |               0x01 |  
+###### Response
+| Function | Starting Address Hi | Starting Address Lo | Quantity of Registers Hi | Quantity of Registers Lo |
+|:---------|:--------------------|:--------------------|:-------------------------|:-------------------------|
+|     0x10 |                0x00 |                0x01 |                     0x00 |                     0x02 |  
 /////
 
  
