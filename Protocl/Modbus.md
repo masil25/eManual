@@ -8,7 +8,7 @@ Modbus 는 client/server 기반 프로토콜입니다. 시리얼 통신에서는
 
 ### 2. Context
 Modbus Protocol을 사용하면 모든 유형의 네트워크 아키텍처에서 쉽게 통신 할 수 있습니다.
-![[Pasted image 20231016164954.png]]  
+![[ModbusCommunication.png]]  
 ![[Pasted image 20231018161942.png]]
 
 
