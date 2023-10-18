@@ -160,7 +160,10 @@ Request PDU는 기록할 레지스터의 주소를 지정합니다. 레지스터
 
 Exception 응답 메세지에는 정상적인 응답과 구별되는 두 가지 필드가 있습니다.
  -  **Function code** : 정상 응답에서는 Fucntion Code 를 Request 의 Function code를 그대로 표시합니다., 그러나 Exception Code에서는 Request 의 Function Code에 0x80을 더하여 반환합니다.
- - **Data Field** : 
+ - **Data Field** : 정상적인 응답에서 서버는 데이터 필드에 데이터를 반환할 수 있습니다. Exception 응답에서 서버는 데이터 필드에 Exception code를 반환합니다.
+
+아래는 Exception code를 표로 정리한것입니다.
+
  
 Modbus 직렬 연결에는 Modbus RTU와 Modbus ASCII의 두 가지 유형이 있습니다. 편의상 Modbus RTU 및 Modbus ASCII는 일반적으로 Modbus RTU라고 하며 직렬 케이블을 사용하는 변형으로 그룹화됩니다.
 
