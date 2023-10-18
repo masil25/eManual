@@ -21,8 +21,10 @@ MODBUS 프로토콜은 기본 통신 계층과 관계없이 간단한 PDU(프로
   특정 Fucntion에서는 데이터 필드가 존재하지 않을 수도 있습니다.  
 ###### ADU(Application data Unit)
 - Protocol Data Unit
-- Salve ID 
-- CRC Error Check
+- Salve ID   
+  설명 쓰기
+- CRC Error Check   
+  설명 쓰기
 #### 3.2 Data Encoding  
 MODBUS는 주소와 데이터 항목에 'big-Endian 표현을 사용합니다. 단일 바이트(255) 보다 큰 숫자가 전송되면 최상위 바이트가 먼저 전송됩니다. 
 
@@ -164,18 +166,15 @@ Exception 응답 메세지에는 정상적인 응답과 구별되는 두 가지 
 
 아래는 Exception code를 표로 정리한것입니다.
 
+| Code | Name                 | Meaning                                      |
+|:-----|:---------------------|:---------------------------------------------|
+| 0X01 | ILLEGAL FUNCTION     | 지원하지 않는 Function에 대해서 요구가 있을 경우              |
+| 0X02 | ILLEGA DATA ADDRESS  | 사용하지 않는 Address의 Data를 요구하거나 수정하려는 경우        |
+| 0X03 | ILLEDGA DATA VALUE   | Data 수정을 할 때 Data 허용 범위 밖에 값으로 수정하려는 경우      |
+| 0X04 | SLAVE DEVICE FAILURE | Server가 요청된 작업을 수행하는 동안 복구할 수 없는 오류가 발생했을 경우 |
+| 0X06 | SLAVE DEVICE BUSY    | Server가 다른 처리 중이어서 응답을 할 수 없을 때              |  
  
-Modbus 직렬 연결에는 Modbus RTU와 Modbus ASCII의 두 가지 유형이 있습니다. 편의상 Modbus RTU 및 Modbus ASCII는 일반적으로 Modbus RTU라고 하며 직렬 케이블을 사용하는 변형으로 그룹화됩니다.
 
-Modbus RTU를 사용하면 데이터가 바이너리로 전송됩니다. Modbus ASCII를 사용하면 데이터가 읽을 수 있는 ASCII로 표시됩니다. 바이너리 메시지는 ASCII보다 짧고 이론적으로 전송 및 수신 속도가 빠른 반면, ASCII 메시지는 관리자가 쉽게 모니터링할 수 있다는 장점이 있습니다.
-
-Modbus TCP와 달리 Modbus RTU는 사용되는 물리적 신호 표준에 따라 하나의 클라이언트 장치와 최대 247개의 서버 장치만 가질 수 있으며 각 장치마다 별도의 포트가 필요합니다.
-
-MODBUS는 공개적으로 배포되고 로열티가 없기 때문에 산업 환경에서 인기가 많습니다. 산업용으로 개발되어서 다른 표준에 비해 비표 및 유지 관리가 비교가 쉽고 전송할 데이터에 대한 제한도 거의 없습니다.
-
-통신과 장비
-modbus는 master/slave 기반 프로토콜이다. 시리얼 통신에서는 master로 설정된 장비만이 salve로 정보를 요청할 수 있으며, 요청된 정보는 읽기와 쓰기가 가능하다.
-일반적으로 Master는 하나만 존재한다.
 ### 제한 사항
 Modbus는 1970년대 후반에 PLC와 통신하도로기 설계되어서 데이터 유형의 수는 당시 PLC에서 해석 가능한 유형으로 제한한다.  
 

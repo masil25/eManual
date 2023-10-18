@@ -6,6 +6,7 @@
       {
         "id": "1ac5b78d4ee0f9f6",
         "type": "tabs",
+        "dimension": 68.83308714918759,
         "children": [
           {
             "id": "fb14ab34d4b2d69a",
@@ -25,6 +26,7 @@
       {
         "id": "051f15a8e4b0269a",
         "type": "tabs",
+        "dimension": 31.166912850812405,
         "children": [
           {
             "id": "7ea4fcadfea6182f",
@@ -179,7 +181,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7ea4fcadfea6182f",
+  "active": "fb14ab34d4b2d69a",
   "lastOpenFiles": [
     "Color.md",
     "Protocl/Modbus.md",
