@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Total Manager/Total Manager User Manual_kor.md",
+                "file": "Protocl/Modbus.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Total Manager/Total Manager User Manual_kor.md",
+                "file": "Protocl/Modbus.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Total Manager/Total Manager User Manual_kor.md",
+                "file": "Protocl/Modbus.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Total Manager/Total Manager User Manual_kor.md"
+                "file": "Protocl/Modbus.md"
               }
             }
           },
@@ -166,6 +166,7 @@
   },
   "active": "f7234f7bfbe02dd4",
   "lastOpenFiles": [
+    "Total Manager/Total Manager User Manual_kor.md",
     "Protocl/Modbus.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/Mini 17lf User Manual_eng.md",
@@ -181,7 +182,6 @@
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Actuator/Mini 12Lb/Mini 12Lb User Manual_eng.md",
     "Actuator/Mini 12Lb/Mini 12Lb User Manual_kor.md",
-    "Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 12Lb/img",
     "Actuator/Mini 12Lb",
     "Actuator/Mini L12/img",
