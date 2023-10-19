@@ -1,4 +1,4 @@
- 
+Ill 
 본 문서는 Modbus.org의 문서를 참고하여 MightyZap에서 사용하는 Modbus RTU를 중심으로하여 설명하고 있습니다. Modbus에 대한 자세한 설명은 Modbus.org 사이트를 참조하여 주시기 바랍니다.
 ### 1. Modbus Introduction
 최초 의 Modbus 프로토콜인 Modbus RTU (원격 터미널 장치)는 원래 1979년 Modicon(현재 Schneider Electric) 시스템에서 PLC와 함께 사용하기 위한 프로그래밍 프로토콜로 게시되었습니다. Modbus는 개방형 프로토콜이지만 "Modbus"라는 단어는 Schneider Electric의 등록 상표입니다.

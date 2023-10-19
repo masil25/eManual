@@ -11,8 +11,12 @@
             "id": "f7234f7bfbe02dd4",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Protocl/Modbus.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Protocl/Modbus.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Protocl/Modbus.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Protocl/Modbus.md"
+              }
             }
           },
           {
@@ -158,6 +166,7 @@
   },
   "active": "f7234f7bfbe02dd4",
   "lastOpenFiles": [
+    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "스크린샷 2023-09-26 17-14-28.png.md",
     "Actuator/Mini L12/Mini L12 User Manual_eng.md",
     "Library",
@@ -172,7 +181,6 @@
     "Actuator/Mini 12Lb/Mini 12Lb User Manual_eng.md",
     "Actuator/Mini 12Lb/Mini 12Lb User Manual_kor.md",
     "Total Manager/Total Manager User Manual_kor.md",
-    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Protocl/Modbus.md",
     "Actuator/Mini 12Lb/img",
     "Actuator/Mini 12Lb",
