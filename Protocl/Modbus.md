@@ -1,4 +1,4 @@
-
+ 
 본 문서는 Modbus.org의 문서를 참고하여 MightyZap에서 사용하는 Modbus RTU를 중심으로하여 설명하고 있습니다. Modbus에 대한 자세한 설명은 Modbus.org 사이트를 참조하여 주시기 바랍니다.
 ### 1. Modbus Introduction
 최초 의 Modbus 프로토콜인 Modbus RTU (원격 터미널 장치)는 원래 1979년 Modicon(현재 Schneider Electric) 시스템에서 PLC와 함께 사용하기 위한 프로그래밍 프로토콜로 게시되었습니다. Modbus는 개방형 프로토콜이지만 "Modbus"라는 단어는 Schneider Electric의 등록 상표입니다.
@@ -162,7 +162,7 @@ Request PDU는 기록할 레지스터의 주소를 지정합니다. 레지스터
 | Function | Starting Address Hi | Starting Address Lo | Quantity of Registers Hi | Quantity of Registers Lo |
 |:---------|:--------------------|:--------------------|:-------------------------|:-------------------------|
 |     0x10 |                0x00 |                0x01 |                     0x00 |                     0x02 |  
-/////
+
 #### 4.4 Exception Code
 클라이언트 장치가 서버 장치에 요청을 보낼 때 정상적인 응답을 기대합니다.
 클라이언트의 쿼리에서 네 가지 가능한 이벤트 중 하나가 발생할 수 있습니다.
@@ -186,10 +186,3 @@ Exception 응답 메세지에는 정상적인 응답과 구별되는 두 가지 
 | 0X04 | SLAVE DEVICE FAILURE | Server가 요청된 작업을 수행하는 동안 복구할 수 없는 오류가 발생했을 경우 |
 | 0X06 | SLAVE DEVICE BUSY    | Server가 다른 처리 중이어서 응답을 할 수 없을 때              |  
  
-
-### 5. libmodbus
-modbus의 대표적인 라이브러리는 libmodbus를 들 수 있다.  C로 구현된 라이브러리로 Windows, Mac, Linux등 대부분의 OS에서 사용 가능하며 꾸준히 업데이트가 되고 있다.
-
-MightyZap을 제어하기 위해 libmodbus 라이브러리의 Modbus RTU를  이용하여 예제를 살펴 보겠습니다.  
-
-#### 5.1 libmodbus 설치  
