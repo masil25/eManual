@@ -6,6 +6,7 @@
       {
         "id": "765d8524d0a7107e",
         "type": "tabs",
+        "dimension": 84.02555910543131,
         "children": [
           {
             "id": "f7234f7bfbe02dd4",
@@ -24,6 +25,7 @@
       {
         "id": "bc08a072be877319",
         "type": "tabs",
+        "dimension": 15.974440894568689,
         "children": [
           {
             "id": "61096c628dd55ba5",
@@ -178,7 +180,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "61096c628dd55ba5",
+  "active": "f7234f7bfbe02dd4",
   "lastOpenFiles": [
     "Actuator/Main.md",
     "Protocl/Modbus.md",
