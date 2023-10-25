@@ -11,7 +11,25 @@
             "id": "f7234f7bfbe02dd4",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "markdown",
+              "state": {
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "bc08a072be877319",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "61096c628dd55ba5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown-table-editor-view",
               "state": {}
             }
           }
@@ -81,6 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -97,6 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +138,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md"
+              }
             }
           },
           {
@@ -156,7 +178,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f7234f7bfbe02dd4",
+  "active": "61096c628dd55ba5",
   "lastOpenFiles": [
     "Actuator/Main.md",
     "Protocl/Modbus.md",
