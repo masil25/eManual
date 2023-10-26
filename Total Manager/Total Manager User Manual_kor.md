@@ -21,7 +21,7 @@ MightyZap Actuator는 Half Duplex TTL, RS485, CAN 통신을 사용합니다. PC�
 당사에서는 MightyZap Actuator를 위한 USB Interface Board를 판매하고 있습니다. 당사의 Interface Board를 사용할 경우 손쉽게 MightyZap을 PC와 연결할 수 있습니다.  
 시중의 Convertor를 구매하여 사용하실 수 있지만, 안전성을 위하여 가급적 당사의 Interface Board를 사용하여 주시기 바랍나다.
 
-> <font color="#ff0000">주의 사항</font><br>
+> <font color="#ff0000">주의 사항</font>   
 > PC와 Interface Board와의 연결에 사용하는 Cable중 통신이 되지않는 충전 전용 Cable을 사용하여 통신이 연결되지 않는 경우가 있습니다. 반드시 확인하시고 사용하여 주시기 바랍니다.
 
 ## 1.3 Feature
@@ -75,24 +75,24 @@ Ubnuntu (>=22.04)
 ## 2.3 화면 구성
 화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Fotter로 구성되어있다.  
 ![[mainView-description.jpg]]
-- **Main Toolbar**    
+1. **Main Toolbar**    
   Actuator의 Reset, Restart, Data Undo/Redo 등을 수행하는 매뉴
-- **SCAN**  
+2. **SCAN**  
   Software의 통신을 연결하고 mightyZap을 검색하는 창을 불러 옵니다.
-- **Main Menu**  
+3. **Main Menu**  
   Information, control, Update, Manager Setting 등 Manager에서 제공하는 기능을 선택하는 메뉴
-- **Actuator List**  
+4. **Actuator List**  
   검색된 MightyZap의 이름이 통신 속도와 Protocol에 따라 분류되어 표시
-- **Main contents**  
+5. **Main contents**  
   매니저에 제공하는 Main 기능을 표시합니다.
-- **Actuator Information**  
+6. **Actuator Information**  
   선택된 Actuator의 모델명, Firmware Version, 통신 방식 등이 표기 됩니다.
-- **통신 상태**  
+7. **통신 상태**  
   통신 Protocol 및 송수신 Error 등 통신 상태를 나타냅니다.
-- **Manager Status**  
+8. **Manager Status**  
   Manager 의 버전 및 Language 를 표시합니다.
 ## 2.4 USB Interface Board 
-Total Manager와 MightyZap Actuator와의 통신을 위하여 Serail convertor 가 필요합니다.  
+Total Manager와 MightyZap Actuator와의 통신을 위하여 Serial Convertor 가 필요합니다.  
 해당 설명은 당사의 USB Interface Board를 기준으로 설명이 되어있습니다.  
 먼저 USB Cable을 이용하여 PC와 연결하여 주시기 바랍니다.   
 > <font color="#ff0000">주의사항 </font>     
@@ -139,10 +139,10 @@ USB Interface Board를 PC와 연결합니다.
 
 # 3 Total Manager Description
 ## 3.1 통신 연결 및 검색
-아래의 이미지와같이 프로그램을 실행 한 후 상단 매뉴바에서 Scan 버튼을 누르면 Actuator Scan을 위한 팝업창이 활성화 됩니다.   
+아래의 이미지와 같이 프로그램을 실행 한 후 상단 Scan 버튼을 누르면 Actuator Scan을 위한 팝업 창이 활성화 됩니다.   
 ![[scanbutton.png]]
 ### 3.1.1 화면 구성
-Actuaotor Scan 팝업창이 나오면  위의 OS별 Serial Port 확인을 참조하여 연결된 Comport를 확인한 후 Open 버튼을 클릭합니다.    
+Actuaotor Scan 팝업창이 나오면 COM PORT를 확인 하신 후  Open 버튼을 클릭합니다. (위의 OS별 Serial Port 확인을 참조 합니다.)
 정상적으로 comport 연결 되었을 경우 오른쪽 그림과 같이 비활성화 되었던 창이 활성화가 되며 Actutor를 검색 할 준비가 됩니다.
 ![[scanning.png]]
 Scan Actuator 창은 아래와 같이 구성되어있습니다.

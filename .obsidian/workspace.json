@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "mode": "source",
                 "source": false
               }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md"
+                "file": "Total Manager/Total Manager User Manual_kor.md"
               }
             }
           },
@@ -182,11 +182,11 @@
   },
   "active": "f7234f7bfbe02dd4",
   "lastOpenFiles": [
+    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/img/스패너채결.png",
     "Actuator/Mini 17Lf/img/doubleUse.png",
     "Actuator/Mini 17Lf/Mini 17lf User Manual_eng.md",
     "Actuator/Mini 17Lf/img/RodBroken.png",
-    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Actuator/Main.md",
     "Protocl/Modbus.md",
     "Total Manager/Total Manager User Manual_kor.md",
@@ -215,7 +215,6 @@
     "Protocl/img/modbus_pdu.png",
     "Protocl/img/Pasted image 20231018161942.png",
     "Pasted image 20231018170942.png",
-    "Blank diagram.png",
     "Color.md",
     "README.md",
     "Protocl/IR Protocol.md",
