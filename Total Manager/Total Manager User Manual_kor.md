@@ -195,22 +195,23 @@ Parameter 페이지의 구성은 Non-Volatile Memory 영역과 Volatile Memory �
 Non-volatile Meomory는 비휘발성 메모리 영역의 Parameter로 수정 및 저장된 Data가 전원 off 되도 지워지지 않고 저장되어있습니다.  
 Volatile Memory는 휘발성 메모리 영역으로 전원이 꺼지기 전까지는 해당 Data를 저장하고 있지만, 전원이 꺼지게 되면 해당 Data는 초기화 됩니다.  
 Parameter 영역은 매니저의 크기를 줄일 경우, 주로 사용되어지는 Volatile-Memeory 영역이 상단으로 이동합니다.
-<gif 이미지>  
+<gif 이미지>  ![[스크린샷 2023-10-26 19-01-07.png]]
 
 **Tooltip 기능**
 각 Paremater 이름의 옆에는 (?)를 한 아이콘이 있습니다. 해당 아이콘에  mouse를 가져가 대면 해당 파라메터에 대한 간단한 설명이 표시됩니다.
+![[Pasted image 20231026190210.png]]
 ### 3.3.2 Parameter Control
 - **Slide Control** : <font color="#4f81bd">Non-volatile Memory</font>  
   Non-Volatile Memeory의 가장 일반적인 Data 변경 방식으로 Slide bar의 Drag 또는 TextBox에 직접 Data를 입력하는 방법으로 Data를 변경 합니다.  
   값을 변경할 경우 오른쪽의 TextBox의 값이 푸른색으로 변경되며, 변경한 data를 저장하기 위해서는 S  버튼을 클릭해야 합니다. 
-  ![[sliding_control_in_NOnvolatile.png]]
-  <마우스로 값을 바꾸고 저장하는 이미지로>  
+  ![[스크린샷 2023-10-26 19-04-00.png]]
+
   S 버튼을 클릭하지 않고 다른 Parameter를 변경하려 할 경우 Data는 원래 상태로 복구 되며 TextBox의 font가 다시 흰색으로 변경됩니다.  
 - **Slide Control** : <font color="#4f81bd">Volatile Memory</font>  
   Volatile Memory에서의 Slide Control 방식은 Non-Volatile Memory 방식과 유사하지만, S 버튼이 없으며, Slide bar를 Drag할 경우 변경된 Data가 즉시 적용됩니다.  
   또한 TextBox를 통해 Data를 입력할 경우 Data를 변경한 후 Enter key를 입력하면 변경된 Data가 즉시 적용됩니다.
   또한 Data가 변경되도 TextBoxd의 Font는 푸른색으로 변경되지 않습니다.
-  ![[sliding_control_in_NOnvolatile.png]]  
+  ![[스크린샷 2023-10-26 19-03-02.png]]
   ><font color="#4f81bd">Tip</font>  
   >Goal Position TextBox를 클릭한 후 다음과 같이 키보드 키로 제어가 가능합니다.  
   > 	'a' : 최소 stroke로 이동
