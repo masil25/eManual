@@ -213,7 +213,7 @@ Scan Actuator 창은 아래와 같이 구성되어있습니다.
 ### 3.1.3 Actuator 검색
  SCAN 버튼을 누르게 되면 선택한 옵션에 따라 차례로 검색을 시작하여 해당 결과를 표시합니다.
  원하는 Actuator 가 모두 검색 되었을 경우, 완료를 기다리지 않고 STOP 버튼을 click하면 검색을 종료하면 됩니다.  
-![[스크린샷 2023-10-26 18-14-59.png]]
+![[scan.gif]]
  검색이 완료되었으면 Close 버튼을 click하여 팝업창을 닫습니다.
 ## 3.2 Information
 MightyZap Actuator의 Model명, Rated Load, Stroke, firmware Version등 관련된 정보를 표시하는 페이지 입니다.  
