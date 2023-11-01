@@ -124,8 +124,10 @@ USB Interface Board를 PC와 연결합니다.
 [이미지]  
 
 ### 2.4.3 Linux[ubuntu/Demian]
-USB 02
-**FTDI Driver**
+##### CH341 Driver
+CH341 driver는 USB-02 Model에서 만 사용됩니다.
+##### FTDI Driver
+FTDI Driver는 USB-02를 제외한 모든 모델에서 사용됩니다.
 FTDI VCP 드라이버는 Linux  커널에 내장되어 있으므로 이 드라이버는 있습니다. 모든 FTDI 장치에 VCP 드라이버 지원이 있는지 홗인하기 위해 FTDI는 Linux  시스템에 최신 커널 릴리즈를 설치할 것을 권장합니다. Linux 에서는 VCP 드라이버가 /dev/ttyUSBx로 표시됩니다.
 Comport를 확인하는 방법 :
 - USB Interface board를 PC와 Cable로 연결한다.
@@ -135,16 +137,29 @@ Comport를 확인하는 방법 :
   
 **Serial Port 권한 얻기**
 우분투는 기본적으로  root 사용자가 아닌 일반 사용자로 로그인하도록 하기 때문에 Serial Port와 같은 시스템 장치를 다루기 위해서는 권한 설정을 해야 합니다.   
+먼저 연결된 Port 명을 확인하기 위해 아래의 명령을 입력합니다.
 >$ dmesg|grep tty
 >[    0.123409] printk: console [tty0] enabled
   [    6.605644] usb 1-6.1.4: FTDI USB Serial Device converter now attached to ttyUSB0
   [ 8462.582354] ftdi_sio ttyUSB0: FTDI USB Serial Device converter now disconnected from ttyUSB0
   [ 8506.427732] usb 1-6.1.4: FTDI USB Serial Device converter now attached to ttyUSB0
 
+"ls -l" 명령을 이용하여 확인된 Serial Port를 이용하여 사용 그룹을 확인합니다.
+>$ ls -l /dev/ttyUSB0
+>   crw-rw---- 1 root dialout 188,  0 11월  1 10:49 /dev/ttyUSB0
 
-터미널 창을 열고 아래와 같이 port 권한 설정을 사용자 계정에 추가해 주어야  Serial Port의 사용이 가능하게 됩니다.     
-- USB Interface Board 03 - FTDI Install Guide  
-   - [FTDI Install Fuide Link](https://ftdichip.com/document/installation-guides/https://ftdichip.com/document/installation-guides/)  
+"id Gn" 명령을 통해 현재 로그인 중인 사용자가 속한 그룹을 확인합니다.
+>$ id -Gn
+>user adm cdrom sudo dip plugdev
+
+현재 로그인한 사용자에서 dialout 그룹이 포함되어 있지 않기 때문에, 현재 사용자에게 dialout 그룹을 추가해 줍니다.
+>$ sudo adduser $USER dialout
+>[sudo] password for user.
+>Adding user 'user' to group 'dialout' ...
+>Adding user user to group dialout
+>Done
+
+그룹에 추가 한 후에는 반드시 로그아웃 후 로그인 해야 변경 사항이 적용 됩니다.
 
 # 3 Total Manager Description
 ## 3.1 통신 연결 및 검색
