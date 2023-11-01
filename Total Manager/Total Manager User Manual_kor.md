@@ -40,10 +40,10 @@ MightyZap Actuator의 Firmware를 Update할 때 사용합니다. 당사의 Webpa
 ![[update-view.jpg]]
 # 2 Total Manager 다운로드 및 설치
 이 튜토리얼에서는 Windows. Mac 또는 Linux 컴퓨터에서 Total Manager를 다운로드하고 설치하는 방법을 보여줍니다.
-## 2.1 요구사항
+## 2.1 OS 환경
 - Windows : windows x64 
 - Mac OS : Universal
-- Linux x64: .deb
+- Linux x64: Ubuntu, Debian(.deb)
 
 ## 2.2 Install
 ### 2.2.1 Windows
@@ -56,7 +56,8 @@ OS 버전을 확인하신 후 버전에 맞게 다운로드하여 주시기 바�
 설치에는 몇 분 정도 걸릴 수 있습니다.
 ![[window_install.jpg]]
 이제 Window에서 MightyZap Total Manager를 사용하실 수 있습니다.  
-
+**32Bit Version**
+32bit 버전의 Total Manager를 실행해야 하는 경우 32bit 
 ### 2.2.2 Mac OS
 Mac OS 전용 패키지를 다운도르 합니다.  
 [MAC OS Software 다운로드](https://github.com/mightyZap25/Total-Manager/releases/download/v0.8.1/latest.yml)
@@ -66,9 +67,11 @@ macOS에서 MightyZap Total Manager를 설치하려면 다운로드한 파일을
 ### 2.2.3 Linux
 Linux 전용 패키지를 다운로드 합니다.
 	- [Linux Software 다운로드](https://github.com/mightyZap25/Total-Manager/releases/download/v0.8.1/latest.yml)
-terminal  창을 열고 다음과 같이 설치를 합니다.
-Ubnuntu (>=22.04)
->sudo dpkg total-manager
+Debian,/Ubuntu 기반 배포용 Total Manager를 설치하기 위해서는 다음과 같은 Command Line을 통해 .deb 패키지(64bit)를 다운로드하고 설치하는 것입니다.
+>sudo apt install ./[file].deb
+> # If you're on an older Linux distribution, you will need to run this instead:
+> # sudo dpkg -i [file].deb
+> # sudo apt-get install -f # Install dependencies
 
 ## 2.3 화면 구성
 화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Fotter로 구성되어있다.  
