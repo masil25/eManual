@@ -134,7 +134,13 @@ Comport를 확인하는 방법 :
   >  [10170.987708] USB Serial support registered for FTDI USB Serial Device [10170.987915] ftdi_sio 9-1:1.0: FTDI USB Serial Device converter detected [10170.991172] usb 9-1: FTDI USB Serial Device converter now attached to ttyUSB0 [10170.991219] ftdi_sio: v1.6.0:USB FTDI Serial Converters Driver
   
 **Serial Port 권한 얻기**
-우분두는 기본적으로  root 사용자가 아닌 일반 사용자로 로그인하도록 하기 때문에 Serial Port와 같은 시스템 장치를 다루기 위해서는 권한 설정을 해야 합니다.
+우분투는 기본적으로  root 사용자가 아닌 일반 사용자로 로그인하도록 하기 때문에 Serial Port와 같은 시스템 장치를 다루기 위해서는 권한 설정을 해야 합니다.   
+>$ dmesg|grep tty
+>[    0.123409] printk: console [tty0] enabled
+  [    6.605644] usb 1-6.1.4: FTDI USB Serial Device converter now attached to ttyUSB0
+  [ 8462.582354] ftdi_sio ttyUSB0: FTDI USB Serial Device converter now disconnected from ttyUSB0
+  [ 8506.427732] usb 1-6.1.4: FTDI USB Serial Device converter now attached to ttyUSB0
+
 
 터미널 창을 열고 아래와 같이 port 권한 설정을 사용자 계정에 추가해 주어야  Serial Port의 사용이 가능하게 됩니다.     
 - USB Interface Board 03 - FTDI Install Guide  
