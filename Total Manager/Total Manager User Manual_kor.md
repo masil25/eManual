@@ -218,7 +218,7 @@ Scan Actuator 창은 아래와 같이 구성되어있습니다.
 ## 3.2 Information
 MightyZap Actuator의 Model명, Rated Load, Stroke, firmware Version등 관련된 정보를 표시하는 페이지 입니다.  
 매니저가 실행이 되면 처음 표시하는 창이  창이며, 아래의 이미지와 같이 사이드 바 매뉴의 첫번째 아이콘을 클릭하면 해당 페이지로 이동합니다.
-![[informationMenu.png]]
+![[scan2-2023-11-01_16.09.11.gif]]
 ### 3.2.1 서보모터 List 확인
 아래의 그림과 같이 매니저에 왼쪽에는 검색된 서보모터가 Display 됩니다.  
 Actuator List는 Baudrate와 Protocol에 따라 분류되어 표시 되며,  Baudrate 별로 접거나 펼 수 있다.  
