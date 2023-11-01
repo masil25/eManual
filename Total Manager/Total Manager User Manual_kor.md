@@ -124,9 +124,12 @@ USB Interface Board를 PC와 연결합니다.
 [이미지]  
 
 ### 2.4.3 Linux[ubuntu/Demian]
-##### CH341 Driver
-CH341 driver는 USB-02 Model에서 만 사용됩니다.
-##### FTDI Driver
+#### Driver 설치
+##### 1) CH341 Driver 
+CH341 driver는 USB-02 Model에서 만 사용됩니다. 
+CH340, CH341 의 시리얼 드라이버는 Linux 커널 버전 2.6.24부터 내장되어 있으며, 해당 위치는 drivers/usb/serial/ch341.c입니다. 다만 드라이버를 최신 상태로 유지 하기 원하실 경우 아래의 방법을 사용하기 바랍니다.
+ - 아래의 
+##### 2) FTDI Driver
 FTDI Driver는 USB-02를 제외한 모든 모델에서 사용됩니다.
 FTDI VCP 드라이버는 Linux  커널에 내장되어 있으므로 이 드라이버는 있습니다. 모든 FTDI 장치에 VCP 드라이버 지원이 있는지 홗인하기 위해 FTDI는 Linux  시스템에 최신 커널 릴리즈를 설치할 것을 권장합니다. Linux 에서는 VCP 드라이버가 /dev/ttyUSBx로 표시됩니다.
 Comport를 확인하는 방법 :
@@ -135,7 +138,7 @@ Comport를 확인하는 방법 :
   >$ dmesg|grep FTDI
   >  [10170.987708] USB Serial support registered for FTDI USB Serial Device [10170.987915] ftdi_sio 9-1:1.0: FTDI USB Serial Device converter detected [10170.991172] usb 9-1: FTDI USB Serial Device converter now attached to ttyUSB0 [10170.991219] ftdi_sio: v1.6.0:USB FTDI Serial Converters Driver
   
-**Serial Port 권한 얻기**
+#### Serial Port 권한 얻기
 우분투는 기본적으로  root 사용자가 아닌 일반 사용자로 로그인하도록 하기 때문에 Serial Port와 같은 시스템 장치를 다루기 위해서는 권한 설정을 해야 합니다.   
 먼저 연결된 Port 명을 확인하기 위해 아래의 명령을 입력합니다.
 >$ dmesg|grep tty
