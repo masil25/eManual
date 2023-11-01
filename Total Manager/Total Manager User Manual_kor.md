@@ -57,7 +57,7 @@ OS 버전을 확인하신 후 버전에 맞게 다운로드하여 주시기 바�
 ![[window_install.jpg]]
 이제 Window에서 MightyZap Total Manager를 사용하실 수 있습니다.  
 **32Bit Version**
-32bit 버전의 Total Manager를 실행해야 하는 경우 32bit 
+32bit 버전의 Total Manager를 실행해야 하는 경우 32bit 설치 프로그램을 다운로드 받아 사용하시면 됩니다.  
 ### 2.2.2 Mac OS
 Mac OS 전용 패키지를 다운도르 합니다.  
 [MAC OS Software 다운로드](https://github.com/mightyZap25/Total-Manager/releases/download/v0.8.1/latest.yml)
@@ -123,7 +123,7 @@ USB Interface Board를 PC와 연결합니다.
 정장적으로 연결되어 있을 경우 이미지에서와 같이 새로운 com port가 추가되는것을 확인할 수 있습니다.  
 [이미지]  
 
-### 2.4.3 Linux[ubuntu 22.04]
+### 2.4.3 Linux[ubuntu/Demian]
 Manual installation is not necessary, all FTDI devices are now supported in Ubuntu 11.10, kernel 3.0.0-19.  
 만양ㄱ
 USB Interface Board Driver를 다운로드 합니다.    
