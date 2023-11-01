@@ -129,18 +129,13 @@ USB 02
 FTDI VCP 드라이버는 Linux  커널에 내장되어 있으므로 이 드라이버는 있습니다. 모든 FTDI 장치에 VCP 드라이버 지원이 있는지 홗인하기 위해 FTDI는 Linux  시스템에 최신 커널 릴리즈를 설치할 것을 권장합니다. Linux 에서는 VCP 드라이버가 /dev/ttyUSBx로 표시됩니다.
 Comport를 확인하는 방법 :
 - USB Interface board를 PC와 Cable로 연결한다.
-- 터미널 창을 열고 다음을 입력하면 다음과같인 출력이 나타나
+- 터미널 창을 열고 다음을 입력하면 다음과 같이 출력이 나타납니다.
   >$ dmesg|grep FTDI
   >  [10170.987708] USB Serial support registered for FTDI USB Serial Device [10170.987915] ftdi_sio 9-1:1.0: FTDI USB Serial Device converter detected [10170.991172] usb 9-1: FTDI USB Serial Device converter now attached to ttyUSB0 [10170.991219] ftdi_sio: v1.6.0:USB FTDI Serial Converters Driver
   
-USB Interface Board Driver를 다운로드 합니다.    
-  [USB Interface Board Window Driver]   
-다운로드한 파일을 실행하고 가이드에 따라 드라이버를 설치합니다.    
-  [이미지 ]  
-USB Interface Board를 PC와 연결합니다.    
-[시스템 정보]-[Hardware]-[USB]에서 Serial Port가 정상적으로 연결되었는지 확인합니다.  
-정장적으로 연결되어 있을 경우 이미지에서와 같이 새로운 com port가 추가되는것을 확인할 수 있습니다.    
-[이미지]  
+**Serial Port 권한 얻기**
+우분두는 기본적으로  root 사용자가 아닌 일반 사용자로 로그인하도록 하기 때문에 Serial Port와 같은 시스템 장치를 다루기 위해서는 권한 설정을 해야 합니다.
+
 터미널 창을 열고 아래와 같이 port 권한 설정을 사용자 계정에 추가해 주어야  Serial Port의 사용이 가능하게 됩니다.     
 - USB Interface Board 03 - FTDI Install Guide  
    - [FTDI Install Fuide Link](https://ftdichip.com/document/installation-guides/https://ftdichip.com/document/installation-guides/)  
