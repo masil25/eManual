@@ -37,13 +37,13 @@ MightyZap Actuator를  제어하거나 Paramter를 변경 및  Monitoring을 할
 ### 1.3.3 update
 MightyZap Actuator의 Firmware를 Update할 때 사용합니다. 당사의 Webpage에서 해당 모델에 맞는 업데이트 파일을 다운로드 받으신 후 업데이트를 진행 하실 수 있습니다.  
 또한, Update Fail 및 사용자의 실수로 인해 서보모터가 검색이 되지 않을 경우 Firmware를 검사 및 복구 하실 수도 있습니다.  
-![[update-view.jpg]]*caption*
+![[update-view.jpg]]
 # 2 Total Manager 다운로드 및 설치
 이 튜토리얼에서는 Windows. Mac 또는 Linux 컴퓨터에서 Total Manager를 다운로드하고 설치하는 방법을 보여줍니다.
 ## 2.1 요구사항
-- Windows : windows 7(32bit) 이상  
-- Mac OS : Big Sur 이상 64bit
-- Linux : Ubuntu LTD 20.04 64bit
+- Windows : windows x64 
+- Mac OS : Universal
+- Linux x64: .deb
 
 ## 2.2 Install
 ### 2.2.1 Windows
@@ -52,12 +52,10 @@ OS 버전을 확인하신 후 버전에 맞게 다운로드하여 주시기 바�
 <font color="#4f81bd">OS Version 확인 방법</font>
 ![[windows_version_check.jpg]]
 
-
 다운로드한 파일을 실행하여, 설치 가이드의 지침에 따라 설치하시면 됩니다.  
 설치에는 몇 분 정도 걸릴 수 있습니다.
 ![[window_install.jpg]]
 이제 Window에서 MightyZap Total Manager를 사용하실 수 있습니다.  
-
 
 ### 2.2.2 Mac OS
 Mac OS 전용 패키지를 다운도르 합니다.  
@@ -66,7 +64,7 @@ macOS에서 MightyZap Total Manager를 설치하려면 다운로드한 파일을
 ![[Pasted image 20230721150751.png]]
 이제 macOS에서 MightyZap Total Manager를 사용하실 수 있습니다.  
 ### 2.2.3 Linux
-Linux 전용 패키지를 다운도르 합니다.
+Linux 전용 패키지를 다운로드 합니다.
 	- [Linux Software 다운로드](https://github.com/mightyZap25/Total-Manager/releases/download/v0.8.1/latest.yml)
 terminal  창을 열고 다음과 같이 설치를 합니다.
 Ubnuntu (>=22.04)

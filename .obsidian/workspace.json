@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "mode": "source",
                 "source": false
               }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md"
+                "file": "Total Manager/Total Manager User Manual_kor.md"
               }
             }
           },
@@ -182,10 +182,10 @@
   },
   "active": "f7234f7bfbe02dd4",
   "lastOpenFiles": [
-    "Actuator/Mini 17Lf/Mini 17lf User Manual_eng.md",
-    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
-    "Pasted image 20231030144719.png",
     "Protocl/Modbus.md",
+    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+    "Actuator/Mini 17Lf/Mini 17lf User Manual_eng.md",
+    "Pasted image 20231030144719.png",
     "Total Manager/Total Manager User Manual_kor.md",
     "스크린샷 2023-10-26 19-04-00.png",
     "스크린샷 2023-10-26 19-03-02.png",
