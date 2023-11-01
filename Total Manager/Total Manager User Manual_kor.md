@@ -124,8 +124,15 @@ USB Interface Board를 PC와 연결합니다.
 [이미지]  
 
 ### 2.4.3 Linux[ubuntu/Demian]
-Manual installation is not necessary, all FTDI devices are now supported in Ubuntu 11.10, kernel 3.0.0-19.  
-만양ㄱ
+USB 02
+**FTDI Driver**
+FTDI VCP 드라이버는 Linux  커널에 내장되어 있으므로 이 드라이버는 있습니다. 모든 FTDI 장치에 VCP 드라이버 지원이 있는지 홗인하기 위해 FTDI는 Linux  시스템에 최신 커널 릴리즈를 설치할 것을 권장합니다. Linux 에서는 VCP 드라이버가 /dev/ttyUSBx로 표시됩니다.
+Comport를 확인하는 방법 :
+- USB Interface board를 PC와 Cable로 연결한다.
+- 터미널 창을 열고 다음을 입력하면 다음과같인 출력이 나타나
+  >$ dmesg|grep FTDI
+  >  [10170.987708] USB Serial support registered for FTDI USB Serial Device [10170.987915] ftdi_sio 9-1:1.0: FTDI USB Serial Device converter detected [10170.991172] usb 9-1: FTDI USB Serial Device converter now attached to ttyUSB0 [10170.991219] ftdi_sio: v1.6.0:USB FTDI Serial Converters Driver
+  
 USB Interface Board Driver를 다운로드 합니다.    
   [USB Interface Board Window Driver]   
 다운로드한 파일을 실행하고 가이드에 따라 드라이버를 설치합니다.    
