@@ -135,11 +135,15 @@ CH340, CH341 의 시리얼 드라이버는 Linux 커널 버전 2.6.24부터 내�
  - 다음의 명령들을 입력합니다
    >$ make clean
    >$ make
-   >$ sudo make load  >
+   >$ sudo make load  
    
  - 설치된 드라이버를 확인하기 위해 USB-02를 PC와 연결한 후 다음의 명령을 입력합니다.  
-   >$ lsmod | grep ch34
-   >	c
+   정상적으로 설치가 되었다면 "ch34x"로 표시되어야 합니다.
+   >$ sudo dmesg | grep ch34  
+   >[   xxx] usbcore: registered new interface driver ch341
+   >[   xxx] usbserial: USB Serial support registered for ch341-uart
+   >[   xxx] ch341 1-6.4.3:1.0: ch341-uart converter detected
+   >[   xxx] usb 1-6.4.3: ch341-uart converter now attached to ttyUSB1
 ##### 2) FTDI Driver
 FTDI Driver는 USB-02를 제외한 모든 모델에서 사용됩니다.
 FTDI VCP 드라이버는 Linux  커널에 내장되어 있으므로 이 드라이버는 있습니다. 모든 FTDI 장치에 VCP 드라이버 지원이 있는지 홗인하기 위해 FTDI는 Linux  시스템에 최신 커널 릴리즈를 설치할 것을 권장합니다. Linux 에서는 VCP 드라이버가 /dev/ttyUSBx로 표시됩니다.
@@ -147,16 +151,19 @@ Comport를 확인하는 방법 :
 - USB Interface board를 PC와 Cable로 연결한다.
 - 터미널 창을 열고 다음을 입력하면 다음과 같이 출력이 나타납니다.
   >$ dmesg|grep FTDI
-  >  [10170.987708] USB Serial support registered for FTDI USB Serial Device [10170.987915] ftdi_sio 9-1:1.0: FTDI USB Serial Device converter detected [10170.991172] usb 9-1: FTDI USB Serial Device converter now attached to ttyUSB0 [10170.991219] ftdi_sio: v1.6.0:USB FTDI Serial Converters Driver
+  >  [   xxx] USB Serial support registered for FTDI USB Serial Device 
+  >  [   xxx] ftdi_sio 9-1:1.0: FTDI USB Serial Device converter detected 
+  >  [   xxx] usb 9-1: FTDI USB Serial Device converter now attached to ttyUSB0 
+  >  [   xxx] ftdi_sio: v1.6.0:USB FTDI Serial Converters Driver
   
 #### Serial Port 권한 얻기
 우분투는 기본적으로  root 사용자가 아닌 일반 사용자로 로그인하도록 하기 때문에 Serial Port와 같은 시스템 장치를 다루기 위해서는 권한 설정을 해야 합니다.   
 먼저 연결된 Port 명을 확인하기 위해 아래의 명령을 입력합니다.
 >$ dmesg|grep tty
->[    0.123409] printk: console [tty0] enabled
-  [    6.605644] usb 1-6.1.4: FTDI USB Serial Device converter now attached to ttyUSB0
-  [ 8462.582354] ftdi_sio ttyUSB0: FTDI USB Serial Device converter now disconnected from ttyUSB0
-  [ 8506.427732] usb 1-6.1.4: FTDI USB Serial Device converter now attached to ttyUSB0
+>[   xxx] printk: console [tty0] enabled
+>[   xxx] usb 1-6.1.4: FTDI USB Serial Device converter now attached to ttyUSB0
+>[   xxx] ftdi_sio ttyUSB0: FTDI USB Serial Device converter now disconnected from ttyUSB0
+>[   xxx] usb 1-6.1.4: FTDI USB Serial Device converter now attached to ttyUSB0
 
 "ls -l" 명령을 이용하여 확인된 Serial Port를 이용하여 사용 그룹을 확인합니다.
 >$ ls -l /dev/ttyUSB0
