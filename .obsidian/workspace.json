@@ -13,7 +13,7 @@
             "state": {
               "type": "image",
               "state": {
-                "file": "tooltip.png"
+                "file": "Pasted image 20231027125822.png"
               }
             }
           }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "tooltip.png",
+                "file": "Pasted image 20231027125822.png",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "tooltip.png",
+                "file": "Pasted image 20231027125822.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "tooltip.png"
+                "file": "Pasted image 20231027125822.png"
               }
             }
           },
@@ -183,17 +183,17 @@
   },
   "active": "7e691baab2325a8f",
   "lastOpenFiles": [
-    "Tooltip.png",
-    "tooltip.png",
-    "Pasted image 20231027105218.png",
-    "Pasted image 20231027104157.png",
-    "Total Manager/img/DynamicSize.png",
-    "Total Manager/img/DynamicSize.png",
-    "Total Manager/img/Parameter.png",
-    "Total Manager/img/FooterDiscription.png",
-    "Total Manager/img/ActuatorList.png",
-    "Pasted image 20231027102100.png",
-    "Total Manager/img/AcuatorList.png",
+    "Update-Reconnect.png",
+    "UpdateComplete.png",
+    "Pasted image 20231027125520.png",
+    "Pasted image 20231027125246.png",
+    "Update-Button.png",
+    "Pasted image 20231027114314.png",
+    "UpdateSelect-Button.png",
+    "UpdateFileSelectButton.png",
+    "Total Manager/img/Information.png",
+    "Total Manager/img/Monitoring-Data.png",
+    "Total Manager/img/Monitoring-Data.png",
     "IRROBOT DATASHEET_17Lfe 양식.md",
     "Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",

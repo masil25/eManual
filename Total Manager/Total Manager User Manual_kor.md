@@ -250,16 +250,16 @@ Parameter 영역은 매니저의 크기를 줄일 경우, 주로 사용되어지
 ### 3.3.2 Parameter Control
 - **Slide Control** : <font color="#4f81bd">Non-volatile Memory</font>  
   Non-Volatile Memeory의 가장 일반적인 Data 변경 방식으로 Slide bar의 Drag 또는 TextBox에 직접 Data를 입력하는 방법으로 Data를 변경 합니다.   
-  ![[Pasted image 20231027105414.png]]
-  값을 변경할 경우 오른쪽의 TextBox의 값이 푸른색으로 변경되며, 변경한 data를 저장하기 위해서는 S  버튼을 클릭해야 합니다.   ![[Pasted image 20231027105306.png]]
+  ![[SlidebarVolatile.png]]
+  값을 변경할 경우 오른쪽의 TextBox의 값이 푸른색으로 변경되며, 변경한 data를 저장하기 위해서는 S  버튼을 클릭해야 합니다.   ![[SlidebarActive.png]]
   S 버튼을 클릭하지 않고 다른 Parameter를 변경하려 할 경우 Data는 원래 상태로 복구 되며 TextBox의 font가 다시 흰색으로 변경됩니다.  
   
 - **Slide Control** : <font color="#4f81bd">Volatile Memory</font>  
   Volatile Memory에서의 Slide Control 방식은 Non-Volatile Memory 방식과 유사하지만, S 버튼이 없으며, Slide bar를 Drag할 경우 변경된 Data가 즉시 적용됩니다.  
-  ![[Pasted image 20231027110327.png]]
+  ![[Slidebar-Volatile.png]]
   또한 TextBox를 통해 Data를 입력할 경우 Data를 변경한 후 Enter key를 입력하면 변경된 Data가 즉시 적용됩니다.
   또한 Data가 변경되도 TextBoxd의 Font는 푸른색으로 변경되지 않습니다.
-  ![[Pasted image 20231027110455.png]]  
+  ![[SildebarActive.png]]  
   ><font color="#4f81bd">Tip</font>  
   >Goal Position TextBox를 클릭한 후 다음과 같이 키보드 키로 제어가 가능합니다.  
   > 	'a' : 최소 stroke로 이동
@@ -267,7 +267,7 @@ Parameter 영역은 매니저의 크기를 줄일 경우, 주로 사용되어지
   > 	'd' : 최대 Stroke로 이동  
 - **Check Control Box** : <font color="#4f81bd">Non-volatile Memory</font>   
   Check Control은 check 기능을 이용하여 Data를 변경 가능하며, 이때 Textbox는 Read Only 상태로 Data값과 상태만을 확인할 수 있습니다.  
-  ![[Pasted image 20231027110812.png]]
+  ![[checkbox-Volatile.png]]
   checkbox는 모두 선택, 모두 해제, 부분 선택 모두 가능하며,선택 값이 변경되었을 경우 TestBox의 font가 푸른색으로 변경됩니다.  
   수정한 값을 적용하기 위해서는 S 버튼을 눌러 수정된 값을 저장해야 합니다.  
   버튼을 클릭하지 않고 다른 Parameter를 변경하려 할 경우 Data는 원래 상태로 복구 되며 TextBox의 font가 다시 흰색으로 변경됩니다.   
@@ -275,20 +275,20 @@ Parameter 영역은 매니저의 크기를 줄일 경우, 주로 사용되어지
    Select Control box는 Select 기능을 이용하여 Data를 변경 가능하며, 이때 Textbox는 Read Only 상태로 Data값과 상태만을 확인할 수 있습니다.
   select 값이 변경되었을 경우 TestBox의 font가 푸른색으로 변경되며, 
   수정한 값을 적용하기 위해서는 S 버튼을 눌러 수정된 값을 저장해야 합니다.
-  ![[Pasted image 20231027111059.png]]  
+  ![[SelectBox-NonVolatile-Disc.png]]  
   버튼을 클릭하지 않고 다른 Parameter를 변경하려 할 경우 Data는 원래 상태로 복구 되며 TextBox의 font가 다시 흰색으로 변경됩니다.  
 - **Select box** : <font color="#4f81bd">Volatile Memory</font>   
   Volatile Memory 의 Select Control Box에는 TextBox가 존재하지 않습니다.
   Select 기능을 이용하여 선택된 Data를 즉시 적용합니다.
-  ![[Pasted image 20231027111510.png]]
+  ![[Selectbox-Volatile.png]]
 - **Button Control Box** : <font color="#4f81bd">Volatile Memory</font>   
    Button control Box 기능은 Volatilte Memory에 만 있는 기능으로 Motor의 동작을 정지하기 위해 사용됩니다.
    아래의 그림과 같이 Button은 활성화 비활성화에 따라 2가지의 이미지를 가지고 있으며, 해당 Parameter에 대한 자세한 설명은 해당 제품의 사용자 매뉴얼을 참조하여 주시기 바랍니다.
-   ![[Pasted image 20231027111843.png]]
+   ![[Button-Volatile.png]]
 ### 3.3.3 Monitoring
 Monitoring 기능은 MightyZap Actuator의 현재 위치, 모터 입력 값, 전류 등을 실시간으로 확인하는 기능을 가지고 있습니다.  
 Parameter 항목은 Model에 따라 다르게 표시되며, Check box를 통해 하나의 Paramter만 선택하실 수 있습니다.  
-![[Pasted image 20231027113502.png]]
+![[Monitoring-Data.png]]
 Monitoring 기능은 아래와 같이 구성 되어있습니다.
 - **Data 범위**
   Data 표현 범위는 선택된 Paramter의 표현 범위에 맞게 변경이 됩니다.
@@ -304,7 +304,7 @@ Monitoring 기능은 아래와 같이 구성 되어있습니다.
 www.mightyzap.com  
 ### 3.4.1 화면 구성    
 Update Page는 이미지와 같이 펌웨어 업데이트, Actuator Recovery 영역으로 되어있으며, 각각의 실행은 상단 header의 메뉴에서 해당 아이콘을 선택하여 실행할 수 있습니다.  
-![[Pasted image 20231027113746.png]]
+![[Information.png]]
 ### 3.4.2 Firmware Update   
 **Actuator 연결**  
 업데이트를 진행할 서보 모터를 연결하고 SCAN 을 합니다.  
@@ -313,17 +313,17 @@ Update Page는 이미지와 같이 펌웨어 업데이트, Actuator Recovery 영
   
 **업데이트 파일 선택**  
 firmware update를 진행 할 경우 그림과 같이 Select file 버튼을 눌러 다운로드 받은 업데이트 파일을 선택해야 합니다.    
-![[Pasted image 20231027114211.png]]
+![[UpdateSelect-Button.png]]
 ><font color="#ff0000">주의 사항  </font>
 >이때 다른 모델의 firmware file 을 선택하지 않게 조심해야 합니다. Actuator List에 나와있는 Model 명과 uipdate file의 이름이 동일한지 확인해야 합니다.
 
 **업데이트**  
 모든 사항이 준비가 다 되었으면 상단 메뉴바에서 Update 아이콘을 클릭합니다.   
-![[Pasted image 20231027114323.png]]
+![[Update-Button.png]]
 이때 둘 이상의 actuator 가 연결되었을 경우 다음과 같은 경고창이 나타나고 SCAN  작업을 다시 합니다.  
 ![[Pasted image 20231027125842.png]]
 업데이트를 위해서는 서보모터가 재 시작 해야하는데 정상적으로 통신이 이루어지지 않는 경우 아래의 그림과 같이 서보모터의 커넥터를 다시 연결하라는 메세지가 나타납니다.
-![[Pasted image 20231027125533.png]]
+![[Update-Reconnect.png]]
 
 **업데이트 완료**
 업데이트가 진행되면 그림과 같이 prograss bar가 진행이 됩니다. 100%까지 완료되면 update 완료 메세지가 나타납니다.    
