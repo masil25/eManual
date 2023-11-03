@@ -72,14 +72,14 @@ $ sudo apt install ./[file].deb
 ## 2.3 화면 구성
 화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Fotter로 구성되어있다.  
 ![[mainView-description.jpg]]
-① <font color="#548dd4">Main Toolbar</font> : Actuator의 Reset, Restart, Data Undo/Redo 등을 수행  
+① <font color="#0070c0"><font color="#548dd4">Main Toolbar</font></font> : Actuator의 Reset, Restart, Data Undo/Redo 등을 수행  
 ② <font color="#548dd4">SCAN</font> : Software의 통신을 연결하고 mightyZap 검색  
-③ <font color="#0070c0">Main Menu</font> : Information, control, Update, Manager Setting 등 Manager에서 제공하는 기능 선택 Side bar Menu  
-④ Actuator List : 검색된 MightyZap의 이름이 통신 속도와 Protocol에 따라 분류되어 표시  
-⑤ Main contents : 매니저에 제공하는 Main 기능 표시  
-⑥ Actuator Information : 선택된 Actuator의 모델명, Firmware Version, 통신 방식 등이 표기    
-⑦ 통신 상태 : 통신 Protocol 및 송수신 Error 등 통신 상태 표시  
-⑧ Manager Status :  Manager 의 버전 및 Language 등 표시  
+③ <font color="#548dd4">Main Menu</font> : Information, control, Update, Manager Setting 등 Manager에서 제공하는 기능 선택 Side bar Menu  
+④ <font color="#0070c0">Actuator List</font> : 검색된 MightyZap의 이름이 통신 속도와 Protocol에 따라 분류되어 표시  
+⑤ <font color="#0070c0">Main contents</font> : 매니저에 제공하는 Main 기능 표시  
+⑥ <font color="#0070c0">Actuator Information</font> : 선택된 Actuator의 모델명, Firmware Version, 통신 방식 등이 표기    
+⑦ <font color="#0070c0">통신 상태</font> : 통신 Protocol 및 송수신 Error 등 통신 상태 표시  
+⑧ <font color="#0070c0">Manager Status</font> :  Manager 의 버전 및 Language 등 표시  
 ## 2.4 USB Interface Board 
 Total Manager와 MightyZap Actuator와의 통신을 위하여 Serail convertor 가 필요합니다.  
 해당 설명은 당사의 USB Interface Board를 기준으로 설명이 되어있습니다.  
@@ -111,29 +111,34 @@ CH340, CH341 의 시리얼 드라이버는 Linux 커널 버전 2.6.24부터 내�
  - 다운로드한 파일의 압축을 풉니다.
  - 터미널 창을 열고 다운로드한 디렉토리로 이동을 합니다.
  - 다음의 명령들을 입력합니다
-   >$ make clean
-   >$ make
-   >$ sudo make load  
-   
+```
+$ make clean  
+$ make  
+$ sudo make load    
+```
  - 설치된 드라이버를 확인하기 위해 USB-02를 PC와 연결한 후 다음의 명령을 입력합니다.  
    정상적으로 설치가 되었다면 "ch34x"로 표시되어야 합니다.
-   >$ sudo dmesg | grep ch34  
-   >[   xxx] usbcore: registered new interface driver ch341
-   >[   xxx] usbserial: USB Serial support registered for ch341-uart
-   >[   xxx] ch341 1-6.4.3:1.0: ch341-uart converter detected
-   >[   xxx] usb 1-6.4.3: ch341-uart converter now attached to ttyUSB1
+```
+$ sudo dmesg | grep ch34    
+[   xxx] usbcore: registered new interface driver ch341  
+[   xxx] usbserial: USB Serial support registered for ch341-uart  
+[   xxx] ch341 1-6.4.3:1.0: ch341-uart converter detected  
+[   xxx] usb 1-6.4.3: ch341-uart converter now attached to ttyUSB1  
+```
 ##### 2) FTDI Driver
-FTDI Driver는 USB-02를 제외한 모든 모델에서 사용됩니다.
-FTDI VCP 드라이버는 Linux  커널에 내장되어 있으므로 이 드라이버는 있습니다. 모든 FTDI 장치에 VCP 드라이버 지원이 있는지 홗인하기 위해 FTDI는 Linux  시스템에 최신 커널 릴리즈를 설치할 것을 권장합니다. Linux 에서는 VCP 드라이버가 /dev/ttyUSBx로 표시됩니다.
-Comport를 확인하는 방법 :
+FTDI Driver는 USB-02를 제외한 모든 모델에서 사용됩니다.  
+FTDI VCP 드라이버는 Linux  커널에 내장되어 있으므로 이 드라이버는 있습니다. 모든 FTDI 장치에 VCP 드라이버 지원이 있는지 홗인하기 위해 FTDI는 Linux  시스템에 최신 커널 릴리즈를 설치할 것을 권장합니다. Linux 에서는 VCP 드라이버가 /dev/ttyUSBx로 표시됩니다.  
+Comport를 확인하는 방법 :  
 - USB Interface board를 PC와 Cable로 연결한다.
 - 터미널 창을 열고 다음을 입력하면 다음과 같이 출력이 나타납니다.
-  >$ dmesg|grep FTDI
-  >  [   xxx] USB Serial support registered for FTDI USB Serial Device 
-  >  [   xxx] ftdi_sio 9-1:1.0: FTDI USB Serial Device converter detected 
-  >  [   xxx] usb 9-1: FTDI USB Serial Device converter now attached to ttyUSB0 
-  >  [   xxx] ftdi_sio: v1.6.0:USB FTDI Serial Converters Driver
-  
+```
+$ dmesg|grep FTDI  
+[   xxx] USB Serial support registered for FTDI USB Serial Device  
+[   xxx] ftdi_sio 9-1:1.0: FTDI USB Serial Device converter detected  
+[   xxx] usb 9-1: FTDI USB Serial Device converter now attached to ttyUSB0  
+[   xxx] ftdi_sio: v1.6.0:USB FTDI Serial Converters Driver  
+```
+
 #### Serial Port 권한 얻기
 우분투는 기본적으로  root 사용자가 아닌 일반 사용자로 로그인하도록 하기 때문에 Serial Port와 같은 시스템 장치를 다루기 위해서는 권한 설정을 해야 합니다.   
 먼저 연결된 Port 명을 확인하기 위해 아래의 명령을 입력합니다.
