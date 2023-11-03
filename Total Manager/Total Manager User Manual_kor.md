@@ -192,7 +192,7 @@ USB Interface Board를 PC와 연결합니다.
 ![[ConnectAndSCAN.png]]
 ### 3.1.1 SCAN 화면 구성
 Actuaotor Scan 팝업 창의 화면 구성은 아래와 같습니다.  
-![[ScanActuator-Disc.png]]
+![[ScanActuator-Desc.png]]
 - **Serial Port**  : USB Interface Board의 Serial Port
 - **Protocol** : 통신 프로토콜 설정, Actutator Model에 따라 다르며 Scan시 중복 선택 가능
 - **Baudrate Select** :  통신 속도 설정 (default 57600bps) Scan시 중복 선택 가능

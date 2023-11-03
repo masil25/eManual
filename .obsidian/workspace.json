@@ -6,6 +6,7 @@
       {
         "id": "5a3961df8b459848",
         "type": "tabs",
+        "dimension": 54.174067495559505,
         "children": [
           {
             "id": "a28c8ffb140e9436",
@@ -17,6 +18,21 @@
                 "mode": "source",
                 "source": false
               }
+            }
+          }
+        ]
+      },
+      {
+        "id": "b3510c4850d5b6d6",
+        "type": "tabs",
+        "dimension": 45.825932504440495,
+        "children": [
+          {
+            "id": "f82f8d0c98614b27",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -166,12 +182,13 @@
   },
   "active": "a28c8ffb140e9436",
   "lastOpenFiles": [
+    "Total Manager/Total Manager User Manual_kor.md",
+    "Total Manager/img/ScanActuator-Desc.png",
     "README.md",
     "IRROBOT DATASHEET_17Lfe 양식.md",
     "Motor의 특성도 이해.md",
     "Potentiometer-B curve.png",
     "Total Manager/img/Recovery-Button.png",
-    "Total Manager/img/ScanActuator-Disc.png",
     "Total Manager/img/SelectBox-NonVolatile-Disc.png",
     "Total Manager/img/ScanActuator-PortSelect.png",
     "Total Manager/img/FactoryRest-Syq.png",
@@ -179,7 +196,6 @@
     "Total Manager/img/FactoryReset-Popup.png",
     "Pasted image 20231027135700.png",
     "Total Manager/img/FactoryReset-Disc.png",
-    "Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "parameter_control_checkbox.png.md",
     "27mm 코어레스버전(FC버전)-inch.dwg.md",
