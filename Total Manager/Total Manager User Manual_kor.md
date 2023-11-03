@@ -142,7 +142,7 @@ $ dmesg|grep FTDI
 #### Serial Port 권한 얻기
 우분투는 기본적으로  root 사용자가 아닌 일반 사용자로 로그인하도록 하기 때문에 Serial Port와 같은 시스템 장치를 다루기 위해서는 권한 설정을 해야 합니다.   
 먼저 연결된 Port 명을 확인하기 위해 아래의 명령을 입력합니다.
-```bash
+```
 $ dmesg|grep tty  
 [   xxx] printk: console [tty0] enabled  
 [   xxx] usb 1-6.1.4: FTDI USB Serial Device converter now attached to ttyUSB0  
