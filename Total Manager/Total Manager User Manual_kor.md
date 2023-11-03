@@ -72,9 +72,9 @@ $ sudo apt install ./[file].deb
 ## 2.3 화면 구성
 화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Fotter로 구성되어있다.  
 ![[mainView-description.jpg]]
-①Main Toolbar** : Actuator의 Reset, Restart, Data Undo/Redo 등을 수행  
-② SCAN** : Software의 통신을 연결하고 mightyZap 검색  
-③ Main Menu : Information, control, Update, Manager Setting 등 Manager에서 제공하는 기능 선택 Side bar Menu  
+① <font color="#548dd4">Main Toolbar</font> : Actuator의 Reset, Restart, Data Undo/Redo 등을 수행  
+② <font color="#548dd4">SCAN</font> : Software의 통신을 연결하고 mightyZap 검색  
+③ <font color="#0070c0">Main Menu</font> : Information, control, Update, Manager Setting 등 Manager에서 제공하는 기능 선택 Side bar Menu  
 ④ Actuator List : 검색된 MightyZap의 이름이 통신 속도와 Protocol에 따라 분류되어 표시  
 ⑤ Main contents : 매니저에 제공하는 Main 기능 표시  
 ⑥ Actuator Information : 선택된 Actuator의 모델명, Firmware Version, 통신 방식 등이 표기    
