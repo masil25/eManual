@@ -152,8 +152,11 @@ $ dmesg|grep tty
 
 
 "ls -l" 명령을 이용하여 확인된 Serial Port를 이용하여 사용 그룹을 확인합니다.
->$ ls -l /dev/ttyUSB0
->   crw-rw---- 1 root dialout 188,  0 11월  1 10:49 /dev/ttyUSB0
+```bash
+$ ls -l /dev/ttyUSB0
+crw-rw---- 1 root dialout 188,  0 11월  1 10:49 /dev/ttyUSB0
+```
+
 
 "id Gn" 명령을 통해 현재 로그인 중인 사용자가 속한 그룹을 확인합니다.
 >$ id -Gn
