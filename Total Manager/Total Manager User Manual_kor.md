@@ -259,7 +259,7 @@ Parameter 영역은 매니저의 크기를 줄일 경우, 주로 사용되어지
   ![[Slide_volatile_desc.png]]  
   또한 TextBox를 통해 Data를 입력할 경우 Data를 변경한 후 Enter key를 입력하면 변경된 Data가 즉시 적용됩니다.
   또한 Data가 변경되도 TextBoxd의 Font는 푸른색으로 변경되지 않습니다.
-  ![[SildebarActive.png]]  
+  ![[SlideVolatile_active.png]]  
   ><font color="#4f81bd">Tip</font>  
   >Goal Position TextBox를 클릭한 후 다음과 같이 키보드 키로 제어가 가능합니다.  
   > 	'a' : 최소 stroke로 이동
