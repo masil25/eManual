@@ -192,7 +192,7 @@ USB Interface Board를 PC와 연결합니다.
 ![[ConnectAndSCAN.png]]
 ### 3.1.1 SCAN 화면 구성
 Actuaotor Scan 팝업 창의 화면 구성은 아래와 같습니다.  
-![[Pasted image 20231102175315.png]]
+![[ScanActuator-Disc.png]]
 - **Serial Port**  : USB Interface Board의 Serial Port
 - **Protocol** : 통신 프로토콜 설정, Actutator Model에 따라 다르며 Scan시 중복 선택 가능
 - **Baudrate Select** :  통신 속도 설정 (default 57600bps) Scan시 중복 선택 가능
@@ -200,7 +200,7 @@ Actuaotor Scan 팝업 창의 화면 구성은 아래와 같습니다.
 - **SCAN, CLOSE** : SCAN 실행 및 창 닫기 버튼
 ### 3.1.2 통신 설정
 ##### 1. Port 선택
-위 [[#2.4 USB Interface Board]] 의 설명을 참조하시어 Serial Port 명을 확인 하신 후 진행하시기 바랍니다.  연결된 Serial Port와 동일한 Port를 선택한 후 OPEN 버튼을 클릭하여 Serial Port를 연결합니다.  ![[Pasted image 20231102174400.png]]
+위 [[#2.4 USB Interface Board]] 의 설명을 참조하시어 Serial Port 명을 확인 하신 후 진행하시기 바랍니다.  연결된 Serial Port와 동일한 Port를 선택한 후 OPEN 버튼을 클릭하여 Serial Port를 연결합니다.  ![[ScanActuator-PortSelect.png]]
 Serial Port 를 Open하면 Option 항목이 활성화 됩니다.  
 모든 옵션은 중복으로 선택할 수 있으며 검색 시 순차적으로 진행이 됩니다.  
 All 버튼을 누르게 되면 모든 선택하거나 모두 선택 해지를 하게 됩니다.
@@ -321,37 +321,37 @@ firmware update를 진행 할 경우 그림과 같이 Select file 버튼을 눌�
 모든 사항이 준비가 다 되었으면 상단 메뉴바에서 Update 아이콘을 클릭합니다.   
 ![[Update-Button.png]]
 이때 둘 이상의 actuator 가 연결되었을 경우 다음과 같은 경고창이 나타나고 SCAN  작업을 다시 합니다.  
-![[Pasted image 20231027125842.png]]
+![[OneServo-kor.png]]
 업데이트를 위해서는 서보모터가 재 시작 해야하는데 정상적으로 통신이 이루어지지 않는 경우 아래의 그림과 같이 서보모터의 커넥터를 다시 연결하라는 메세지가 나타납니다.
 ![[Update-Reconnect.png]]
 
 **업데이트 완료**
 업데이트가 진행되면 그림과 같이 prograss bar가 진행이 됩니다. 100%까지 완료되면 update 완료 메세지가 나타납니다.    
-![[Pasted image 20231027134349.png]]
+![[Update-Complete.png]]
 필요에 따라 reset이나 Factory Rest을 추가적으로 진행하시면 됩니다.  
   
 **펌웨어 업데이트 실패**  
 ### 3.4.3 Recovery  
 Firmware 가 업데이트 실패 또는 SCAN을 통해 서보 모터를 검색하지 못할 경우 Recovery를 진행합니다. 문제가 발생한 Actuator 만을 연결한 후 상단 매뉴의 Recovery 아이콘을 클릭합니다.  
-![[Pasted image 20231027130532.png]]
+![[Recovery-Button.png]]
 
 Recovery 진행 사항은 각 단계마다 이미지 또는  Text로 그 단계를 표시합니다.
-![[Pasted image 20231027130612.png]]
+![[Recovery-StateWindow.png]]
  - **Actuator Search**  
    검색 단계에서는 각 모든 Baudrate와 Protocol로 서보모터를 검색합니다. 이때 서보모터가 검색이 될 경우 Recovery를 완료하고 서보머터를 Servo List에 자동으로 추가합니다,.
-   ![[Pasted image 20231027131044.png]]
+   ![[REcovery-Complete.png]]
 
 - **Restart**   
    검색이 되지 않았을 경우 아래의 팝업 창이 나타나면서 커넥터를 다시 연결하라는 문구가 나타납니다. Close 버튼을 누르면 업데이트 창에 "Reconnect Actuator" 문구가 나타납니다. 이때 서보모터의 연결된 커넥터를 재거 한 후 다시 연결하여 주시기 바랍니다.
-  ![[Pasted image 20231027133454.png]]
+  ![[Update-Reconnect2.png]]
 - **Check Bootloader &&Update Firmware**  
   커넥터를 다시 연결하면 Bootloader를 확인 한 후 복구할 Actuator의 Update 파일을 선택하라는 팝업 창이 나타납니다. Select 버튼을 누른 후 Update대와 같이 업데이트 파일을 선택하시면  업데이트가 진행이 됩니다.
-  ![[Pasted image 20231027133800.png]]
+  ![[Recovery-FileSelect.png]]
 - **Calibration**  
   Recovery는 Update와는 다르게 Update 후 Calibration 작업을 진행합니다. Calibration 단계에서는 서보모터의 Stroke가 수축 및 확장 작업을 진행하며 완료 될 때 까지 기다라시면 됩니다.  
 - **Done**
   완료가 되면 업데이트 완료 팝업이 나타나고, SCAN 창이 활성화 됩니다. 
-  ![[Pasted image 20231027134732.png]]
+  ![[UpdateComplete-SCAN.png]]
 ### 3.4.4 Factory Reset   
 Actuator의  상태를 공장 출하 시의 초기 상태로 돌리고, 위치 값을 결정하는 Potentiometer의 Calibration을 진행합니다.  
 ><font color="#ff0000">주의사항</font>  
@@ -360,20 +360,20 @@ Actuator의  상태를 공장 출하 시의 초기 상태로 돌리고, 위치 �
 ##### 1. ICON
 Factory Reset은 Update Page에 들어오면 상단 매뉴바에 추가 되어있는 것을 확인할 수 있습니다.   
 해당 아이콘을 클릭하면 Factory Reset 을 하기 위한 팝업 창이 활성화 됩니다.
-![[Pasted image 20231027134845.png]]
+![[FactoryReset-Button.png]]
 ##### 2. 화면 구성
 Factory Reset을 선택하면 팝업 창이 나타납니다. 팜업창에는 Factory Reset 관련 Option 선택창과 Text Area가 나타나고 하단에 Factory Reset 을 위한 버튼이 존재합니다.  
-![[Pasted image 20231027135429.png]]
+![[FactoryReset-Disc.png]]
 ##### 3. Options
 Factory Reset에 대한 Option은 2가지로 ID Remind와 Baudrate Reminde 입니다. 그 외의 다른 Parameter들은 모두 초기화 됩니다.  
 일반적인 Reset 에서는 초기화 되지 않는 Protocol, Min/Max Position Calibration이 초기화 되고, Potentiometer의 Calibration을 실행하면서 해당 내부 Parameter도 수정이 됩니다.  
 Factopry Reset 후에도 유지하고 싶은 Option을 선택하시면 됩니다.  
 ##### 4. Factory Reset 
 하단의 Factory Reset 버튼을 클릭하면, Factory Reset을 실행합니다. 실행 중 진행되는 사항을 Option 선택 아래의 Text Area 창에 표시합니다. 
-![[Pasted image 20231027135548.png]]
+![[FactoryReset-Popup.png]]
 Factory Reset 진행이 되면서 Actuator가 몇 번의 시스템 재 시작을 하면서 LED가 깜빡입니다. 또한 Potenmtiometer Calibration 시에는 Actuator가 최대로 확장 및 수축 행동을 하면서 Calibration 을 진행합니다.  
 최종적으로 Factory Reset이 완료되면 하단의 Close 버튼이 활성화 되면서 Parameter 창으로 이동하여 reset된 Data를 보여줍니다.
-![[Pasted image 20231027135707.png]]
+![[FActoryRest-Complete.png]]
 
 > <font color="#ff0000">주의 사항</font>  
 > Calibration 을 하기 앞서, 정확한 Calibration 작업을 위해 Actuator 에 연결되어있는 모든 기구물을 제거하여, 무 부하 상태에서 Full Stroke 구간에 걸쳐 기구 간섭이 없도록 합니다.

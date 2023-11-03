@@ -4,22 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "765d8524d0a7107e",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "7e691baab2325a8f",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Pasted image 20231027125822.png"
-              }
-            }
-          }
-        ]
-      },
-      {
         "id": "5a3961df8b459848",
         "type": "tabs",
         "children": [
@@ -101,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pasted image 20231027125822.png",
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -118,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pasted image 20231027125822.png",
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pasted image 20231027125822.png"
+                "file": "Total Manager/Total Manager User Manual_kor.md"
               }
             }
           },
@@ -166,8 +150,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 446.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -181,26 +164,25 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7e691baab2325a8f",
+  "active": "a28c8ffb140e9436",
   "lastOpenFiles": [
-    "Update-Reconnect.png",
-    "UpdateComplete.png",
-    "Pasted image 20231027125520.png",
-    "Pasted image 20231027125246.png",
-    "Update-Button.png",
-    "Pasted image 20231027114314.png",
-    "UpdateSelect-Button.png",
-    "UpdateFileSelectButton.png",
-    "Total Manager/img/Information.png",
-    "Total Manager/img/Monitoring-Data.png",
-    "Total Manager/img/Monitoring-Data.png",
+    "README.md",
     "IRROBOT DATASHEET_17Lfe 양식.md",
+    "Motor의 특성도 이해.md",
+    "Potentiometer-B curve.png",
+    "Total Manager/img/Recovery-Button.png",
+    "Total Manager/img/ScanActuator-Disc.png",
+    "Total Manager/img/SelectBox-NonVolatile-Disc.png",
+    "Total Manager/img/ScanActuator-PortSelect.png",
+    "Total Manager/img/FactoryRest-Syq.png",
+    "Total Manager/img/FActoryRest-Complete.png",
+    "Total Manager/img/FactoryReset-Popup.png",
+    "Pasted image 20231027135700.png",
+    "Total Manager/img/FactoryReset-Disc.png",
     "Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
-    "Motor의 특성도 이해.md",
     "parameter_control_checkbox.png.md",
     "27mm 코어레스버전(FC버전)-inch.dwg.md",
-    "README.md",
     "Total Manager/Total Manager User Manual_eng.md",
     "Protocl/Modbus.md",
     "Actuator/Mini 17Lf/Mini 17lf User Manual_eng.md",
