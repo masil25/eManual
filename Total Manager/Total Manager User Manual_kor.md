@@ -153,21 +153,28 @@ $ dmesg|grep tty
 
 "ls -l" 명령을 이용하여 확인된 Serial Port를 이용하여 사용 그룹을 확인합니다.
 ```bash
-$ ls -l /dev/ttyUSB0
-crw-rw---- 1 root dialout 188,  0 11월  1 10:49 /dev/ttyUSB0
+$ ls -l /dev/ttyUSB0  
+crw-rw---- 1 root dialout 188,  0 11월  1 10:49 /dev/ttyUSB0  
 ```
 
 
 "id Gn" 명령을 통해 현재 로그인 중인 사용자가 속한 그룹을 확인합니다.
->$ id -Gn
->user adm cdrom sudo dip plugdev
+
+```baSH
+$ id -Gn  
+user adm cdrom sudo dip plugdev  
+```
+
 
 현재 로그인한 사용자에서 dialout 그룹이 포함되어 있지 않기 때문에, 현재 사용자에게 dialout 그룹을 추가해 줍니다.
->$ sudo adduser $USER dialout
->[sudo] password for user.
->Adding user 'user' to group 'dialout' ...
->Adding user user to group dialout
->Done
+```bash
+$ sudo adduser $USER dialout
+[sudo] password for user.
+Adding user 'user' to group 'dialout' ...
+Adding user user to group dialout
+Done
+```
+
 
 그룹에 추가 한 후에는 반드시 로그아웃 후 로그인 해야 변경 사항이 적용 됩니다.
 ### 2.4.3 Mac OS
