@@ -61,22 +61,23 @@ OS 버전을 확인하신 후 버전에 맞게 다운로드하여 주시기 바�
 Linux 전용 패키지를 다운로드 합니다.
 	- [Linux Software 다운로드](https://github.com/mightyZap25/Total-Manager/releases/download/v0.8.1/latest.yml)
 Debian,/Ubuntu 기반 배포용 Total Manager를 설치하기 위해서는 다음과 같은 Command Line을 통해 .deb 패키지(64bit)를 다운로드하고 설치하는 것입니다.
->sudo apt install ./[file].deb
-> - If you're on an older Linux distribution, you will need to run this instead:
-> - sudo dpkg -i [file].deb
-> - sudo apt-get install -f # Install dependencies
-
+```
+$ sudo apt install ./[file].deb
+# If you're on an older Linux distribution, you will need to run this instead:
+# sudo dpkg -i [file].deb
+# sudo apt-get install -f # Install dependencies
+```
 ### 2.2.3 Mac OS
 
 ## 2.3 화면 구성
 화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Fotter로 구성되어있다.  
 ![[mainView-description.jpg]]
-**1)uMain Toolbar**    
-  Actuator의 Reset, Restart, Data Undo/Redo 등을 수행하는 매뉴
+**1)Main Toolbar**    
+  Actuator의 Reset, Restart, Data Undo/Redo 등을 수행하는 매뉴  
 **2) SCAN**  
-  Software의 통신을 연결하고 mightyZap을 검색하는 창을 불러 옵니다.
+  Software의 통신을 연결하고 mightyZap을 검색하는 창을 불러 옵니다.  
 **3) Main Menu**  
-  Information, control, Update, Manager Setting 등 Manager에서 제공하는 기능을 선택하는 메뉴
+  Information, control, Update, Manager Setting 등 Manager에서 제공하는 기능을 선택하는 메뉴  
 **4) Actuator List**  
   검색된 MightyZap의 이름이 통신 속도와 Protocol에 따라 분류되어 표시
 **5) Main contents**  

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md"
+                "file": "Total Manager/Total Manager User Manual_kor.md"
               }
             }
           },
@@ -166,6 +166,8 @@
   },
   "active": "f7234f7bfbe02dd4",
   "lastOpenFiles": [
+    "README.md",
+    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Total Manager/Total Manager User Manual_kor.md",
     "스크린샷 2023-09-26 18-46-52.png",
     "스크린샷 2023-09-26 17-14-28.png",
@@ -183,7 +185,6 @@
     "27mm 코어레스버전(FC버전)-inch.dwg.md",
     "Total Manager/Total Manager User Manual_eng.md",
     "Protocl/Modbus.md",
-    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/Mini 17lf User Manual_eng.md",
     "Actuator/Main.md",
     "스크린샷 2023-09-26 17-14-28.png.md",
@@ -204,7 +205,6 @@
     "Actuator/Mini 12Lf/img",
     "Actuator/Mini L12",
     "Color.md",
-    "README.md",
     "Protocl/IR Protocol.md",
     "Control Table.md",
     "UAV.md",
