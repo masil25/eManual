@@ -72,22 +72,14 @@ $ sudo apt install ./[file].deb
 ## 2.3 화면 구성
 화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Fotter로 구성되어있다.  
 ![[mainView-description.jpg]]
-**1)Main Toolbar**    
-  Actuator의 Reset, Restart, Data Undo/Redo 등을 수행 
-**2) SCAN**  
-  Software의 통신을 연결하고 mightyZap을 검색
-**3) Main Menu**  
-  Information, control, Update, Manager Setting 등 Manager에서 제공하는 기능 선택 Side bar Menu  
-**4) Actuator List**  
-  검색된 MightyZap의 이름이 통신 속도와 Protocol에 따라 분류되어 표시  
-**5) Main contents**  
-  매니저에 제공하는 Main 기능 표시  
-**6) Actuator Information**  
-  선택된 Actuator의 모델명, Firmware Version, 통신 방식 등이 표기    
-**7) 통신 상태**  
-  통신 Protocol 및 송수신 Error 등 통신 상태 표시  
-**8) Manager Status**  
-  Manager 의 버전 및 Language 등 표시  
+①Main Toolbar** : Actuator의 Reset, Restart, Data Undo/Redo 등을 수행  
+② SCAN** : Software의 통신을 연결하고 mightyZap 검색  
+③ Main Menu : Information, control, Update, Manager Setting 등 Manager에서 제공하는 기능 선택 Side bar Menu  
+④ Actuator List : 검색된 MightyZap의 이름이 통신 속도와 Protocol에 따라 분류되어 표시  
+⑤ Main contents : 매니저에 제공하는 Main 기능 표시  
+⑥ Actuator Information : 선택된 Actuator의 모델명, Firmware Version, 통신 방식 등이 표기    
+⑦ 통신 상태 : 통신 Protocol 및 송수신 Error 등 통신 상태 표시  
+⑧ Manager Status :  Manager 의 버전 및 Language 등 표시  
 ## 2.4 USB Interface Board 
 Total Manager와 MightyZap Actuator와의 통신을 위하여 Serail convertor 가 필요합니다.  
 해당 설명은 당사의 USB Interface Board를 기준으로 설명이 되어있습니다.  
