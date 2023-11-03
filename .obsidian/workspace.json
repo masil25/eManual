@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Total Manager/Total Manager User Manual_kor.md",
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Total Manager/Total Manager User Manual_kor.md",
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Total Manager/Total Manager User Manual_kor.md",
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Total Manager/Total Manager User Manual_kor.md"
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md"
               }
             }
           },
@@ -159,27 +159,32 @@
       "canvas:새 캔버스 만들기": false,
       "daily-notes:오늘의 데일리 노트 열기": false,
       "templates:템플릿 삽입": false,
-      "command-palette:명령어 팔레트 열기": false
+      "command-palette:명령어 팔레트 열기": false,
+      "markdown-table-editor:Open Markdown Table Editor": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
   "active": "f7234f7bfbe02dd4",
   "lastOpenFiles": [
-    "scan2-2023-11-01_16.09.11.gif",
-    "Total Manager/Total Manager User Manual_eng.md",
-    "Total Manager/img/scan.gif",
     "Total Manager/Total Manager User Manual_kor.md",
+    "스크린샷 2023-09-26 18-46-52.png",
+    "스크린샷 2023-09-26 17-14-28.png",
+    "스크린샷 2023-08-10 18-04-36.png",
+    "스크린샷 2023-08-08 13-57-39.png",
+    "스크린샷 2023-08-08 13-16-16.png",
+    "parameter_control_checkbox.png.md",
+    "Pasted image 20231102175315.png",
+    "Pasted image 20231102175244.png",
+    "Pasted image 20231102175127.png",
+    "Pasted image 20231102174400.png",
+    "Pasted image 20231027135707.png",
+    "Motor의 특성도 이해.md",
+    "IRROBOT DATASHEET_17Lfe 양식.md",
+    "27mm 코어레스버전(FC버전)-inch.dwg.md",
+    "Total Manager/Total Manager User Manual_eng.md",
     "Protocl/Modbus.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/Mini 17lf User Manual_eng.md",
-    "Pasted image 20231030144719.png",
-    "스크린샷 2023-10-26 19-04-00.png",
-    "스크린샷 2023-10-26 19-03-02.png",
-    "Pasted image 20231026190210.png",
-    "스크린샷 2023-10-26 19-01-07.png",
-    "Total Manager/img/updateMenu.png",
-    "Total Manager/img/informationMenu.png",
-    "Total Manager/img/parameterMenu.png",
-    "스크린샷 2023-10-26 18-17-32.png",
     "Actuator/Main.md",
     "스크린샷 2023-09-26 17-14-28.png.md",
     "Actuator/Mini L12/Mini L12 User Manual_eng.md",
@@ -198,19 +203,15 @@
     "Actuator/Mini L12/img",
     "Actuator/Mini 12Lf/img",
     "Actuator/Mini L12",
-    "Motor의 특성도 이해.md",
     "Color.md",
     "README.md",
     "Protocl/IR Protocol.md",
-    "IRROBOT DATASHEET_17Lfe 양식.md",
     "Control Table.md",
     "UAV.md",
     "1..md",
     "2023-07-11.md",
     "[[.md",
-    "Mini 17Lf User Manual_kor.md",
     "무제 파일 1.canvas",
-    "흡입시키지.md",
     "무제 파일.canvas"
   ]
 }
