@@ -6,7 +6,6 @@
       {
         "id": "c3bba1635e2050c2",
         "type": "tabs",
-        "dimension": 81.77842565597668,
         "children": [
           {
             "id": "72aba2646a6e64f6",
@@ -34,23 +33,6 @@
           }
         ],
         "currentTab": 1
-      },
-      {
-        "id": "4e3de5538e9f59c3",
-        "type": "tabs",
-        "dimension": 18.221574344023324,
-        "children": [
-          {
-            "id": "c27b711d41440d21",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Total Manager/img/to.png"
-              }
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -195,11 +177,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3c8f0a42222ab22e",
+  "active": "60e91b0706359444",
   "lastOpenFiles": [
+    "Total Manager/img/to.png",
+    "Actuator/Mini 12Ls/Mini 12Ls User Manual_eng.md",
     "Actuator/Mini 12Ls/img",
     "Actuator/Mini 12Ls/Mini 12Ls User Manual_kor.md",
-    "Actuator/Mini 12Ls/Mini 12Ls User Manual_eng.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
     "Actuator/Mini 12Lb/Mini 12Lb User Manual_eng.md",
@@ -210,7 +193,6 @@
     "Pasted image 20231103112117.png",
     "Total Manager/img/Slide_volatile_desc.png",
     "Total Manager/img/Silde_volatile_desc.png",
-    "Total Manager/img/to.png",
     "Total Manager/img/SCAN_Desc.png",
     "Pasted image 20231103110313.png",
     "Total Manager/img/ScanActuator-Desc.png",
@@ -237,7 +219,6 @@
     "Actuator/Mini 12Lb/img",
     "Actuator/Mini 12Lb",
     "Actuator/Mini L12/img",
-    "Actuator/Mini 12Lf/img",
     "Color.md",
     "Protocl/IR Protocol.md",
     "Control Table.md",
