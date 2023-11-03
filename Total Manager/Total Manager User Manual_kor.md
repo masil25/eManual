@@ -246,7 +246,7 @@ Parameter 영역은 매니저의 크기를 줄일 경우, 주로 사용되어지
 
 **Tooltip 기능**
 각 Paremater 이름의 옆에는 (?)를 한 아이콘이 있습니다. 해당 아이콘에  mouse를 가져가 대면 해당 파라메터에 대한 간단한 설명이 표시됩니다.  
-![[tooltip.png]]
+![[tolltip.png]]
 ### 3.3.2 Parameter Control
 - **Slide Control** : <font color="#4f81bd">Non-volatile Memory</font>  
   Non-Volatile Memeory의 가장 일반적인 Data 변경 방식으로 Slide bar의 Drag 또는 TextBox에 직접 Data를 입력하는 방법으로 Data를 변경 합니다.   

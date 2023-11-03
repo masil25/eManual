@@ -4,11 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "b3510c4850d5b6d6",
+        "id": "c3bba1635e2050c2",
         "type": "tabs",
+        "dimension": 81.77842565597668,
         "children": [
           {
-            "id": "f82f8d0c98614b27",
+            "id": "72aba2646a6e64f6",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,16 +23,17 @@
         ]
       },
       {
-        "id": "c3bba1635e2050c2",
+        "id": "4e3de5538e9f59c3",
         "type": "tabs",
+        "dimension": 18.221574344023324,
         "children": [
           {
-            "id": "72aba2646a6e64f6",
+            "id": "c27b711d41440d21",
             "type": "leaf",
             "state": {
               "type": "image",
               "state": {
-                "file": "Total Manager/img/SCAN_Desc.png"
+                "file": "Total Manager/img/to.png"
               }
             }
           }
@@ -101,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Total Manager/img/SCAN_Desc.png",
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -118,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Total Manager/img/SCAN_Desc.png",
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Total Manager/img/SCAN_Desc.png"
+                "file": "Total Manager/Total Manager User Manual_kor.md"
               }
             }
           },
@@ -180,9 +182,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3c8f0a42222ab22e",
+  "active": "72aba2646a6e64f6",
   "lastOpenFiles": [
+    "Total Manager/img/to.png",
     "Total Manager/Total Manager User Manual_kor.md",
+    "Pasted image 20231103112117.png",
     "Total Manager/img/SCAN_Desc.png",
     "Pasted image 20231103110313.png",
     "Total Manager/img/ScanActuator-Desc.png",
@@ -194,8 +198,6 @@
     "Potentiometer-B curve.png",
     "Total Manager/img/Recovery-Button.png",
     "Total Manager/img/SelectBox-NonVolatile-Disc.png",
-    "Total Manager/img/ScanActuator-PortSelect.png",
-    "Total Manager/img/FactoryRest-Syq.png",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "parameter_control_checkbox.png.md",
     "27mm 코어레스버전(FC버전)-inch.dwg.md",
