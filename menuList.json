@@ -3,30 +3,32 @@
   {
     "name": "Mini L12",
     "value": "Mini L12",
-    "manualURL": "/Actutator/Mini_L12_UserManual",
-    "imageURL": "/Actutator"
+    "manualURL": "/Actuator/Mini%20L12"Mini_L12_UserManual",
+    "imageURL": "/ActuatorMini%20L12""
   },
   {
     "name": "Mini 12Lf",
     "value": "Mini 12Lf",
-    "manualURL": "/Actuator/Mini%20L12%20UserManual",
-    "imageURL": "/Actuator"
+    "manualURL": "/Actuator/MMini%2012Lf"ini%20L12%20UserManual",
+    "imageURL": "/ActuatorMini%2012Lf""
   },
   {
     "name": "Mini 17Lf",
     "value": "Mini 17Lf",
     "manualURL": "/Actuator/Mini%2017Lf/Mini%2017Lf%20User%20Manual",
-    "imageURL": "Mini%2017Lf"
+    "imageURL": "Actuator/Mini%2017Lf"
   },
   {
     "name": "Mini 12Ls",
     "value": "Mini 12Ls",
-    "url": "/Mini_12Ls_Usermanual.md"
+    "manualURL": "/Actuator/Mini%2012Ls/Mini%2012Ls%20User%20Manual",
+    "imageURL": "Actuator/Mini%2012Ls"
   },
   {
     "name": "Mini 12Lb",
     "value": "Mini 12Lb",
-    "url": "/Mini_12Lb_Usermanual.md"
+    ""manualURL": "/Actuator/Mini%2012Lb/Mini%2012Lb%20User%20Manual",
+    "imageURL": "Actuator/Mini%2012Lb"
   }
 ],
 "Software": [
