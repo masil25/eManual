@@ -14,13 +14,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Total Manager/Total Manager User Manual_kor.md",
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "60e91b0706359444",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Actuator/Mini 12Ls/Mini 12Ls User Manual_eng.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "4e3de5538e9f59c3",
@@ -103,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Total Manager/Total Manager User Manual_kor.md",
+                "file": "Actuator/Mini 12Ls/Mini 12Ls User Manual_eng.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -120,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Total Manager/Total Manager User Manual_kor.md",
+                "file": "Actuator/Mini 12Ls/Mini 12Ls User Manual_eng.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Total Manager/Total Manager User Manual_kor.md"
+                "file": "Actuator/Mini 12Ls/Mini 12Ls User Manual_eng.md"
               }
             }
           },
@@ -182,10 +195,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "72aba2646a6e64f6",
+  "active": "3c8f0a42222ab22e",
   "lastOpenFiles": [
-    "Total Manager/img/SlideVolatile_active.png",
+    "Actuator/Mini 12Ls/img",
+    "Actuator/Mini 12Ls/Mini 12Ls User Manual_kor.md",
+    "Actuator/Mini 12Ls/Mini 12Ls User Manual_eng.md",
+    "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+    "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
+    "Actuator/Mini 12Lb/Mini 12Lb User Manual_eng.md",
+    "Actuator/Mini 12Lb/Mini 12Lb User Manual_kor.md",
     "Total Manager/Total Manager User Manual_kor.md",
+    "Actuator/Mini 12Ls",
+    "Total Manager/img/SlideVolatile_active.png",
     "Pasted image 20231103112117.png",
     "Total Manager/img/Slide_volatile_desc.png",
     "Total Manager/img/Silde_volatile_desc.png",
@@ -213,22 +234,15 @@
     "Boards/Interface Board",
     "Boards/CT-01",
     "Actuator/Mini L12/Mini L12 User Manual_kor.md",
-    "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
-    "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
-    "Actuator/Mini 12Lb/Mini 12Lb User Manual_eng.md",
-    "Actuator/Mini 12Lb/Mini 12Lb User Manual_kor.md",
     "Actuator/Mini 12Lb/img",
     "Actuator/Mini 12Lb",
     "Actuator/Mini L12/img",
     "Actuator/Mini 12Lf/img",
-    "Actuator/Mini L12",
     "Color.md",
     "Protocl/IR Protocol.md",
     "Control Table.md",
     "UAV.md",
     "1..md",
-    "2023-07-11.md",
-    "[[.md",
     "무제 파일 1.canvas",
     "무제 파일.canvas"
   ]
