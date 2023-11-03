@@ -469,7 +469,7 @@ Actuator를 이동 시키고자 하는 위치 값입니다. Goal Position은 Sho
 액츄에이터의 동작 속도를 변경할 때 사용합니다. [범위 : 0~ 1000]  
 각 actuator의 최대 속도에 대해 비율로 제어하며 약 10%의 오차가 있습니다.
 value : 0 ~ 1000 [+-10%]
-![[Pasted image 20230807184527.png]]
+![[17lf_TargetSpeedCalc.png]]
 초기 전원 인가시 비휘발성 Speed Limit에서 값을 불러와 Goal Speed에 저장합니다.
 Speed Limit 명령보다 빠르게 반응하며, 가동 중 실시간으로 속도를 변경하는 데 사용할 수 있습니다.
 0일 때 기동력 OFF 상태이고 1023일 때 최대 속도를 냅니다.
@@ -487,7 +487,7 @@ Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
 >Goal Current 800  이상 또는 1600- 설정일 경우 모터에 무리가 발생한다. 지속적으로 사용하는 구간이 아닌 특정상황 잠시 사용하는 구간이다.  지속 적으로 사용할 경우 overload Error가 발생하거나 모터의 수명이 짧아지게 됩니다.
 ### 2.4.26 Present Postion
 현재 stroke의 위치 값을 나타냅니다. 사용하고 계신 Stoke 의 최대 길이를 참조하시여 위치 값을 계산하시기 바랍니다.   
-![[Pasted image 20230809113927.png]]  
+![[17lfCurrentPositionCalc.png]]  
 정지한 이후에도 미세한 위치 변동은 나타날 수 있으며 이는 정상 동작입니다. 
 ### 2.4.27 Present Current
 모터의 현재 전류 사용 값입니다.

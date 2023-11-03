@@ -189,7 +189,7 @@ USB Interface Board를 PC와 연결합니다.
 # 3 Total Manager Description
 ## 3.1 통신 연결 및 검색
 아래의 이미지와 같이 프로그램을 실행 한 후 상단 매뉴바에서 Scan 버튼을 누르면 Actuator Scan을 위한 팝업 창이 활성화 됩니다.   
-![[Pasted image 20231027100657.png]]
+![[ConnectAndSCAN.png]]
 ### 3.1.1 SCAN 화면 구성
 Actuaotor Scan 팝업 창의 화면 구성은 아래와 같습니다.  
 ![[Pasted image 20231102175315.png]]
@@ -216,7 +216,7 @@ All 버튼을 누르게 되면 모든 선택하거나 모두 선택 해지를 �
 ### 3.1.3 Actuator 검색
  SCAN 버튼을 누르게 되면 선택한 옵션에 따라 차례로 검색을 시작하여 해당 결과를 표시합니다.
  원하는 Actuator 가 모두 검색 되었을 경우, 완료를 기다리지 않고 STOP 버튼을 click하면 검색을 종료하면 됩니다.  
-![[Pasted image 20231027100637.png]]
+![[SCAN_Textarea.png]]
  검색이 완료되었으면 Close 버튼을 click하여 Popup 창을 닫습니다.
 ## 3.2 Information
 MightyZap Actuator의 Model명, Rated Load, Stroke, firmware Version등 관련된 정보를 표시하는 페이지 입니다.  
@@ -225,16 +225,16 @@ Manager가 실행이 되면 처음 표시하는 창이  창이며, 아래의 이
 ### 3.2.1 서보모터 List 확인
 아래의 그림과 같이 매니저에 왼쪽에는 검색된 서보모터가 Display 됩니다.  
 Actuator List는 Baudrate와 Protocol에 따라 분류되어 표시 되며,  Baudrate 별로 접거나 펼 수 있다.  
-![[Pasted image 20231027102021.png]]
+![[ActuatorList.png]]
 
 ### 3.2.2 정보 확인
 Actuator List를 선택하면 해당 Actuator의 정보가 표시되며, 이중 중요한 일부 정보가 Manager의 하단 Footer에 표시됩니다.
-![[Pasted image 20231027103448.png]]
+![[FooterDiscription.png]]
 Footer에 표시된 정보는 information Page가 아닌 다른 Page에서도 볼 수 있습니다. 
 ## 3.3 Parameter
 MightyZap Actuator를 설정 및 간단한 동작 테스트를 하고, 동작 상태를 모니터링하는 페이지 입니다.  
 Menu 선택 창에서 아래의 그림과 같은 아이콘을 클릭하면 해당 페이지로 이동합니다.
-![[Pasted image 20231027103618.png]]
+![[Parameter.png]]
 사용자 환경에 맞게 Stroke, ID, Baudrate 등을 설정하고 간단한 동작 테스트를 진행할 수 있습니다.  
 각 Parameter에 대한 설명은 해당 모델의 사용자 매뉴얼에서 Parameter 설명을 참조하시기 바랍니다.
 ### 3.3.1 화면 구성
@@ -242,11 +242,11 @@ Parameter 페이지의 구성은 Non-Volatile Memory 영역과 Volatile Memory �
 Non-volatile Meomory는 비 휘발성 메모리 영역의 Parameter로 수정 및 저장된 Data가 내부 Falsh Memeory에 저장이 되며, 모터의 전원이 꺼지게 되어도 지워지지 않고 저장되어있습니다.  
 Volatile Memory는 휘발성 메모리 영역으로 내부 Ram에 저장이 되며, 전원이 꺼지기 전까지는 해당 Data를 저장하고 있지만, 전원이 꺼지게 되면 해당 Data는 초기화 됩니다.  
 Parameter 영역은 매니저의 크기를 줄일 경우, 주로 사용되어지는 Volatile-Memeory 영역이 상단으로 이동합니다.   
-![[Pasted image 20231027104017.png]]
+![[DynamicSize.png]]
 
 **Tooltip 기능**
 각 Paremater 이름의 옆에는 (?)를 한 아이콘이 있습니다. 해당 아이콘에  mouse를 가져가 대면 해당 파라메터에 대한 간단한 설명이 표시됩니다.  
-![[Pasted image 20231027104205.png]]
+![[tooltip.png]]
 ### 3.3.2 Parameter Control
 - **Slide Control** : <font color="#4f81bd">Non-volatile Memory</font>  
   Non-Volatile Memeory의 가장 일반적인 Data 변경 방식으로 Slide bar의 Drag 또는 TextBox에 직접 Data를 입력하는 방법으로 Data를 변경 합니다.   
