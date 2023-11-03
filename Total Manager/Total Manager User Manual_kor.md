@@ -256,7 +256,7 @@ Parameter 영역은 매니저의 크기를 줄일 경우, 주로 사용되어지
   
 - **Slide Control** : <font color="#4f81bd">Volatile Memory</font>  
   Volatile Memory에서의 Slide Control 방식은 Non-Volatile Memory 방식과 유사하지만, S 버튼이 없으며, Slide bar를 Drag할 경우 변경된 Data가 즉시 적용됩니다.  
-  ![[Slidebar-Volatile.png]]
+  ![[Pasted image 20231103112422.png]]
   또한 TextBox를 통해 Data를 입력할 경우 Data를 변경한 후 Enter key를 입력하면 변경된 Data가 즉시 적용됩니다.
   또한 Data가 변경되도 TextBoxd의 Font는 푸른색으로 변경되지 않습니다.
   ![[SildebarActive.png]]  
