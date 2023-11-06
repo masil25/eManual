@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "60e91b0706359444",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Actuator/Mini 12Ls/Mini 12Ls User Manual_eng.md",
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 12Ls/Mini 12Ls User Manual_eng.md",
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 12Ls/Mini 12Ls User Manual_eng.md",
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 12Ls/Mini 12Ls User Manual_eng.md"
+                "file": "Total Manager/Total Manager User Manual_kor.md"
               }
             }
           },
@@ -163,7 +150,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 346.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -177,17 +164,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "60e91b0706359444",
+  "active": "72aba2646a6e64f6",
   "lastOpenFiles": [
-    "Total Manager/img/to.png",
+    "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+    "Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 12Ls/Mini 12Ls User Manual_eng.md",
+    "Total Manager/img/to.png",
     "Actuator/Mini 12Ls/img",
     "Actuator/Mini 12Ls/Mini 12Ls User Manual_kor.md",
-    "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
     "Actuator/Mini 12Lb/Mini 12Lb User Manual_eng.md",
     "Actuator/Mini 12Lb/Mini 12Lb User Manual_kor.md",
-    "Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 12Ls",
     "Total Manager/img/SlideVolatile_active.png",
     "Pasted image 20231103112117.png",
