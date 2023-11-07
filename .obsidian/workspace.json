@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Total Manager/Total Manager User Manual_kor.md",
+                "file": "Actuator/Main.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Total Manager/Total Manager User Manual_kor.md",
+                "file": "Actuator/Main.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Total Manager/Total Manager User Manual_kor.md",
+                "file": "Actuator/Main.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Total Manager/Total Manager User Manual_kor.md"
+                "file": "Actuator/Main.md"
               }
             }
           },
@@ -166,9 +166,13 @@
   },
   "active": "72aba2646a6e64f6",
   "lastOpenFiles": [
-    "Total Manager/Total Manager User Manual_eng.md",
-    "Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+    "Actuator/Mini L12/img",
+    "Actuator/Mini 12Ls/img",
+    "Actuator/Mini 12Lb/img",
+    "Actuator/Mini 12Lf/img",
+    "Total Manager/Total Manager User Manual_kor.md",
+    "Total Manager/Total Manager User Manual_eng.md",
     "Actuator/Mini 12Ls/Mini 12Ls User Manual_eng.md",
     "Total Manager/img/to.png",
     "Actuator/Mini 12Ls/img",
@@ -201,11 +205,7 @@
     "Boards",
     "Actuator",
     "Boards/Interface Board",
-    "Boards/CT-01",
     "Actuator/Mini L12/Mini L12 User Manual_kor.md",
-    "Actuator/Mini 12Lb/img",
-    "Actuator/Mini 12Lb",
-    "Actuator/Mini L12/img",
     "Color.md",
     "Protocl/IR Protocol.md",
     "Control Table.md",
