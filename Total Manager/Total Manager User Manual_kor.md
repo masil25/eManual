@@ -5,13 +5,13 @@ MightyZap Total Manager 사용자 가이드
 mightyZap Total Manager는 다양한 운영체제에서 MightyZap Actuator를 쉽게 관리 및 제어할 수 있는 Software입니다.
 Total Manager에서는 다양한 OS를 제공하고, 사용자 인터페이스를 개선하고 신규 MightyZap 모델을 추가로 지원하는 신규MightyZap Manager 입니다.
 
-이 가이드에서는 Total Manager의 설치와 각 기능의 사용법에 대한 기본 사항을 다룹니다  
+이 가이드에서는 Total Manager의 설치와 각 기능의 사용법에 대한 기본 사항을 다룹니다.  
 >[Total Manager Software Download](https://mightyzap.com/ko/digitalarchive6/?uid=211&mod=document&pageid=1) 페이지에서 다운로드 할 수 있습니다.
 
 ## 1.1 개요
 mightyZap Total Manager는 다양한 기능을 가진 다목적 Software입니다. MightyZap Actuator의 동작 Test와 Parameter 설정 및 동작 상태 Monitoring과 Firmware Update를 기본적으로 제공합니다.  
 또한 모델에 따른 특수 기능을 설정 및 테스트 할 수도 있습니다. 
->특수 기능 설정 및 테스트 내용은 각 모델의 매뉴얼을 참조하시기 바랍니다.
+>특수 기능 설정 및 테스트 내용은 각 모델의 메뉴얼을 참조하시기 바랍니다.
 
 ![[total_image.png]]
 
@@ -29,8 +29,8 @@ MightyZap Actuator는 Half Duplex TTL, RS485, CAN 통신을 사용합니다. PC�
 Software를 실행하였을 경우 제일 처음에 나타나는 화면입니다.
 ![[Information.jpg]]
 ### 1.3.2 Parameter
-MightyZap Actuator를  제어하거나 Paramter를 변경 및  Monitoring을 할 수 있습니다.   
-연결된 여러개의 서보모터 중 선택하여 개별적으로 제어할 수 있으며, Paramter의 Type에 따라 Non-voltatile Memory와 Volatile Memoty 화면으로 나누어져 있습니다.    
+MightyZap Actuator를  제어하거나 Parameter를 변경 및  Monitoring을 할 수 있습니다.   
+연결된 여러개의 서보모터 중 선택하여 개별적으로 제어할 수 있으며, Parameter의 Type에 따라 Non-voltatile Memory와 Volatile Memoty 화면으로 나누어져 있습니다.    
 사용 모델에 따라 Parameter의 구성이 달라지며, 화면의 크기에 따라 화면 구성이 다이나믹하게 변하게 됩니다.   
 ![[control-view.jpg]]
 ### 1.3.3 update
@@ -127,7 +127,7 @@ $ sudo dmesg | grep ch34
 ```
 ##### 2) FTDI Driver
 FTDI Driver는 USB-02를 제외한 모든 모델에서 사용됩니다.  
-FTDI VCP 드라이버는 Linux  커널에 내장되어 있으므로 이 드라이버는 있습니다. 모든 FTDI 장치에 VCP 드라이버 지원이 있는지 홗인하기 위해 FTDI는 Linux  시스템에 최신 커널 릴리즈를 설치할 것을 권장합니다. Linux 에서는 VCP 드라이버가 /dev/ttyUSBx로 표시됩니다.  
+FTDI VCP 드라이버는 Linux  커널에 내장되어 있으므로 이 드라이버는 있습니다. 모든 FTDI 장치에 VCP 드라이버 지원이 있는지 확인하기 위해 FTDI는 Linux  시스템에 최신 커널 릴리즈를 설치할 것을 권장합니다. Linux 에서는 VCP 드라이버가 /dev/ttyUSBx로 표시됩니다.  
 Comport를 확인하는 방법 :  
 - USB Interface board를 PC와 Cable로 연결한다.
 - 터미널 창을 열고 다음을 입력하면 다음과 같이 출력이 나타납니다.
@@ -188,7 +188,7 @@ USB Interface Board를 PC와 연결합니다.
 [이미지]  
 # 3 Total Manager Description
 ## 3.1 통신 연결 및 검색
-아래의 이미지와 같이 프로그램을 실행 한 후 상단 매뉴바에서 Scan 버튼을 누르면 Actuator Scan을 위한 팝업 창이 활성화 됩니다.   
+아래의 이미지와 같이 프로그램을 실행 한 후 상단 메뉴바에서 Scan 버튼을 누르면 Actuator Scan을 위한 팝업 창이 활성화 됩니다.   
 ![[ConnectAndSCAN.png]]
 ### 3.1.1 SCAN 화면 구성
 Actuaotor Scan 팝업 창의 화면 구성은 아래와 같습니다.  
@@ -220,11 +220,11 @@ All 버튼을 누르게 되면 모든 선택하거나 모두 선택 해지를 �
  검색이 완료되었으면 Close 버튼을 click하여 Popup 창을 닫습니다.
 ## 3.2 Information
 MightyZap Actuator의 Model명, Rated Load, Stroke, firmware Version등 관련된 정보를 표시하는 페이지 입니다.  
-Manager가 실행이 되면 처음 표시하는 창이  창이며, 아래의 이미지와 같이 사이드 바 매뉴의 첫번째 아이콘을 클릭하면 해당 페이지로 이동합니다.
+Manager가 실행이 되면 처음 표시하는 창이  창이며, 아래의 이미지와 같이 사이드 바 메뉴의 첫번째 아이콘을 클릭하여 해당 페이지로 이동합니다. -> <font color="#ff0000">아래 이미지 , information 으로 수정</font>
 ![[InformationMenu.png]]
 ### 3.2.1 서보모터 List 확인
 아래의 그림과 같이 매니저에 왼쪽에는 검색된 서보모터가 Display 됩니다.  
-Actuator List는 Baudrate와 Protocol에 따라 분류되어 표시 되며,  Baudrate 별로 접거나 펼 수 있다.  
+Actuator List는 Baudrate와 Protocol에 따라 분류되어 표시 되며,  Baudrate 별로 접거나 펼 수 습니다
 ![[ActuatorList.png]]
 
 ### 3.2.2 정보 확인
@@ -236,7 +236,7 @@ MightyZap Actuator를 설정 및 간단한 동작 테스트를 하고, 동작 �
 Menu 선택 창에서 아래의 그림과 같은 아이콘을 클릭하면 해당 페이지로 이동합니다.
 ![[Parameter.png]]
 사용자 환경에 맞게 Stroke, ID, Baudrate 등을 설정하고 간단한 동작 테스트를 진행할 수 있습니다.  
-각 Parameter에 대한 설명은 해당 모델의 사용자 매뉴얼에서 Parameter 설명을 참조하시기 바랍니다.
+각 Parameter에 대한 설명은 해당 모델의 사용자 메뉴얼에서 Parameter 설명을 참조하시기 바랍니다.
 ### 3.3.1 화면 구성
 Parameter 페이지의 구성은 Non-Volatile Memory 영역과 Volatile Memory 영역으로 나뉩니다.
 Non-volatile Meomory는 비 휘발성 메모리 영역의 Parameter로 수정 및 저장된 Data가 내부 Falsh Memeory에 저장이 되며, 모터의 전원이 꺼지게 되어도 지워지지 않고 저장되어있습니다.  
@@ -277,21 +277,21 @@ Parameter 영역은 매니저의 크기를 줄일 경우, 주로 사용되어지
   수정한 값을 적용하기 위해서는 S 버튼을 눌러 수정된 값을 저장해야 합니다.
   ![[SelectBox-NonVolatile-Disc.png]]  
   버튼을 클릭하지 않고 다른 Parameter를 변경하려 할 경우 Data는 원래 상태로 복구 되며 TextBox의 font가 다시 흰색으로 변경됩니다.  
-- **Select box** : <font color="#4f81bd">Volatile Memory</font>   
+- **Select Control box** : <font color="#4f81bd">Volatile Memory</font>   
   Volatile Memory 의 Select Control Box에는 TextBox가 존재하지 않습니다.
   Select 기능을 이용하여 선택된 Data를 즉시 적용합니다.
   ![[Selectbox-Volatile.png]]
 - **Button Control Box** : <font color="#4f81bd">Volatile Memory</font>   
    Button control Box 기능은 Volatilte Memory에 만 있는 기능으로 Motor의 동작을 정지하기 위해 사용됩니다.
-   아래의 그림과 같이 Button은 활성화 비활성화에 따라 2가지의 이미지를 가지고 있으며, 해당 Parameter에 대한 자세한 설명은 해당 제품의 사용자 매뉴얼을 참조하여 주시기 바랍니다.
+   아래의 그림과 같이 Button은 활성화 비활성화에 따라 2가지의 이미지를 가지고 있으며, 해당 Parameter에 대한 자세한 설명은 해당 제품의 사용자 메뉴얼을 참조하여 주시기 바랍니다.
    ![[Button-Volatile.png]]
 ### 3.3.3 Monitoring
 Monitoring 기능은 MightyZap Actuator의 현재 위치, 모터 입력 값, 전류 등을 실시간으로 확인하는 기능을 가지고 있습니다.  
-Parameter 항목은 Model에 따라 다르게 표시되며, Check box를 통해 하나의 Paramter만 선택하실 수 있습니다.  
+Parameter 항목은 Model에 따라 다르게 표시되며, Check box를 통해 하나의 Parameter만 선택하실 수 있습니다.  
 ![[Monitoring-Data.png]]
 Monitoring 기능은 아래와 같이 구성 되어있습니다.
 - **Data 범위**
-  Data 표현 범위는 선택된 Paramter의 표현 범위에 맞게 변경이 됩니다.
+  Data 표현 범위는 선택된 Parameter의 표현 범위에 맞게 변경이 됩니다.
 - **Sample 표현 갯 수**
   최대 Display되는 Sample 갯 수는 200개이며 이전 Data는 확인할 수 없습니다. Sample Counter의 최대 표현 수는 899이며 이보다 클 경우 0으로 리셋이 됩니다.
 - **Interval**  
@@ -326,13 +326,13 @@ firmware update를 진행 할 경우 그림과 같이 Select file 버튼을 눌�
 ![[Update-Reconnect.png]]
 
 **업데이트 완료**
-업데이트가 진행되면 그림과 같이 prograss bar가 진행이 됩니다. 100%까지 완료되면 update 완료 메세지가 나타납니다.    
+업데이트가 진행되면 그림과 같이 progress bar가 진행이 됩니다. 100%까지 완료되면 update 완료 메세지가 나타납니다.    
 ![[Update-Complete.png]]
-필요에 따라 reset이나 Factory Rest을 추가적으로 진행하시면 됩니다.  
+필요에 따라 reset이나 Factory Reset을 추가적으로 진행하시면 됩니다.  
   
 **펌웨어 업데이트 실패**  
 ### 3.4.3 Recovery  
-Firmware 가 업데이트 실패 또는 SCAN을 통해 서보 모터를 검색하지 못할 경우 Recovery를 진행합니다. 문제가 발생한 Actuator 만을 연결한 후 상단 매뉴의 Recovery 아이콘을 클릭합니다.  
+Firmware 가 업데이트 실패 또는 SCAN을 통해 서보 모터를 검색하지 못할 경우 Recovery를 진행합니다. 문제가 발생한 Actuator 만을 연결한 후 상단 메뉴의 Recovery 아이콘을 클릭합니다.  
 ![[Recovery-Button.png]]
 
 Recovery 진행 사항은 각 단계마다 이미지 또는  Text로 그 단계를 표시합니다.
@@ -342,30 +342,30 @@ Recovery 진행 사항은 각 단계마다 이미지 또는  Text로 그 단계�
    ![[REcovery-Complete.png]]
 
 - **Restart**   
-   검색이 되지 않았을 경우 아래의 팝업 창이 나타나면서 커넥터를 다시 연결하라는 문구가 나타납니다. Close 버튼을 누르면 업데이트 창에 "Reconnect Actuator" 문구가 나타납니다. 이때 서보모터의 연결된 커넥터를 재거 한 후 다시 연결하여 주시기 바랍니다.
+   검색이 되지 않았을 경우 아래의 팝업 창이 나타나면서 커넥터를 다시 연결하라는 문구가 나타납니다. Close 버튼을 누르면 업데이트 창에 "Reconnect Actuator" 문구가 나타납니다. 이때 서보모터의 연결된 커넥터를 제거 한 후 다시 연결하여 주시기 바랍니다.
   ![[Update-Reconnect2.png]]
-- **Check Bootloader &&Update Firmware**  
-  커넥터를 다시 연결하면 Bootloader를 확인 한 후 복구할 Actuator의 Update 파일을 선택하라는 팝업 창이 나타납니다. Select 버튼을 누른 후 Update대와 같이 업데이트 파일을 선택하시면  업데이트가 진행이 됩니다.
+- **Check Bootloader &Update Firmware**  
+  커넥터를 다시 연결하면 Bootloader를 확인 한 후 복구할 Actuator의 Update 파일을 선택하라는 팝업 창이 나타납니다. Select 버튼을 누른 후 Update때와 같이 업데이트 파일을 선택하시면  업데이트가 진행이 됩니다.
   ![[Recovery-FileSelect.png]]
 - **Calibration**  
-  Recovery는 Update와는 다르게 Update 후 Calibration 작업을 진행합니다. Calibration 단계에서는 서보모터의 Stroke가 수축 및 확장 작업을 진행하며 완료 될 때 까지 기다라시면 됩니다.  
+  Recovery는 Update와는 다르게 Update 후 Calibration 작업을 진행합니다. Calibration 단계에서는 서보모터의 Stroke가 수축 및 확장 작업을 진행하며 완료 될 때 까지 기다리시면 됩니다.  
 - **Done**
   완료가 되면 업데이트 완료 팝업이 나타나고, SCAN 창이 활성화 됩니다. 
   ![[UpdateComplete-SCAN.png]]
 ### 3.4.4 Factory Reset   
 Actuator의  상태를 공장 출하 시의 초기 상태로 돌리고, 위치 값을 결정하는 Potentiometer의 Calibration을 진행합니다.  
 ><font color="#ff0000">주의사항</font>  
->Factroy Reset 중에 Actuator가 Calibration을 위해 최대./최소로 위치이동을 합니다. 정상적인 Calibration을 위해 장치에 연결하지 않고 무부하에 최대 동작거리를 유지할 수 있는 공간에서 진행해 주시기 바랍니다.
+>Factroy Reset 중에 Actuator가 Calibration을 위해 최대/최소로 위치이동을 합니다. 정상적인 Calibration을 위해 장치에 연결하지 않고 무부하에 최대 동작거리를 유지할 수 있는 공간에서 진행해 주시기 바랍니다.
 
 ##### 1. ICON
-Factory Reset은 Update Page에 들어오면 상단 매뉴바에 추가 되어있는 것을 확인할 수 있습니다.   
+Factory Reset은 Update Page에 들어오면 상단 메뉴바에 추가 되어있는 것을 확인할 수 있습니다.   
 해당 아이콘을 클릭하면 Factory Reset 을 하기 위한 팝업 창이 활성화 됩니다.
 ![[FactoryReset-Button.png]]
 ##### 2. 화면 구성
-Factory Reset을 선택하면 팝업 창이 나타납니다. 팜업창에는 Factory Reset 관련 Option 선택창과 Text Area가 나타나고 하단에 Factory Reset 을 위한 버튼이 존재합니다.  
+Factory Reset을 선택하면 팝업 창이 나타납니다. 팝업창에는 Factory Reset 관련 Option 선택창과 Text Area가 나타나고 하단에 Factory Reset 을 위한 버튼이 존재합니다.  
 ![[FactoryReset-Disc.png]]
 ##### 3. Options
-Factory Reset에 대한 Option은 2가지로 ID Remind와 Baudrate Reminde 입니다. 그 외의 다른 Parameter들은 모두 초기화 됩니다.  
+Factory Reset에 대한 Option은 2가지로 ID Remind와 Baudrate Remind 입니다. 그 외의 다른 Parameter들은 모두 초기화 됩니다.  
 일반적인 Reset 에서는 초기화 되지 않는 Protocol, Min/Max Position Calibration이 초기화 되고, Potentiometer의 Calibration을 실행하면서 해당 내부 Parameter도 수정이 됩니다.  
 Factopry Reset 후에도 유지하고 싶은 Option을 선택하시면 됩니다.  
 ##### 4. Factory Reset 

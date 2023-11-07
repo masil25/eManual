@@ -6,7 +6,6 @@
       {
         "id": "c3bba1635e2050c2",
         "type": "tabs",
-        "dimension": 61.953352769679306,
         "children": [
           {
             "id": "72aba2646a6e64f6",
@@ -31,24 +30,69 @@
                 "source": false
               }
             }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "b342b763909f04dd",
-        "type": "tabs",
-        "dimension": 38.0466472303207,
-        "children": [
+          },
           {
-            "id": "5c58cfa4e01a972a",
+            "id": "a62f83fbcac1d924",
             "type": "leaf",
             "state": {
-              "type": "markdown-table-editor-view",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9ab4d9281ac19ebd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Total Manager/Total Manager User Manual_kor.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "25218599c575903a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Total Manager/Total Manager User Manual_kor.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "316107ae126660b9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Total Manager/Total Manager User Manual_kor.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "47b6aaf8abc5122b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_eng.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -77,7 +121,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Actuator의",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -114,7 +158,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_eng.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -131,7 +175,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_eng.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +198,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md"
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_eng.md"
               }
             }
           },
@@ -175,11 +219,11 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 514.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -193,8 +237,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "60e91b0706359444",
+  "active": "47b6aaf8abc5122b",
   "lastOpenFiles": [
+    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+    "Actuator/Mini 17Lf/Mini 17Lf User Manual_eng.md",
+    "conflict-files-obsidian-git.md",
+    "Total Manager/Total Manager User Manual_kor.md",
+    "IRROBOT DATASHEET_17Lfe 양식.md",
     "Actuator/Mini 12Ls/Mini 12Ls User Manual_eng.md",
     "Total Manager/img/to.png",
     "Actuator/Mini 12Ls/img",
@@ -203,7 +252,6 @@
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
     "Actuator/Mini 12Lb/Mini 12Lb User Manual_eng.md",
     "Actuator/Mini 12Lb/Mini 12Lb User Manual_kor.md",
-    "Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 12Ls",
     "Total Manager/img/SlideVolatile_active.png",
     "Pasted image 20231103112117.png",
@@ -215,14 +263,11 @@
     "Pasted image 20231103104527.png",
     "Pasted image 20231103104458.png",
     "README.md",
-    "IRROBOT DATASHEET_17Lfe 양식.md",
     "Motor의 특성도 이해.md",
-    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "parameter_control_checkbox.png.md",
     "27mm 코어레스버전(FC버전)-inch.dwg.md",
     "Total Manager/Total Manager User Manual_eng.md",
     "Protocl/Modbus.md",
-    "Actuator/Mini 17Lf/Mini 17lf User Manual_eng.md",
     "Actuator/Main.md",
     "스크린샷 2023-09-26 17-14-28.png.md",
     "Actuator/Mini L12/Mini L12 User Manual_eng.md",
