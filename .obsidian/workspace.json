@@ -169,6 +169,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -185,6 +186,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -206,7 +208,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md"
+              }
             }
           },
           {
