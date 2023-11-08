@@ -529,7 +529,7 @@ Action Parameter로 작성된 Action을 실행할 때 사용합니다. Action Pa
 ### 2.4.32 Restart
 ### 2.4.33 Indirect Data
 indirect Address로 설정된 Paramter들의 Data를 읽고 쓸 수 있는 Parameter입니다.
-### 2.5 Packet Example
+## 2.5 Packet Example
 17Lf 시리즈는 Modbus-RTU를 제공하는 모델입니다. Modbus-RTU에 관한 자세한 설명은 Modub-RTU 메뉴얼을 참조하기 바랍니다.  
 
 # 3. 유의사항  
