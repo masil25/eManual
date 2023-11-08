@@ -87,27 +87,24 @@ Map.
 
 ### Load / 부하
 
-| Parameter                                      | Limit Values / 한계값 |        | <div>Unit</div><div>단위</div> | Remarks / 비고                          |
-|:-----------------------------------------------|:-------------------|:-------|:-----------------------------|:--------------------------------------|
-|                                                | Rated/정격           | Max/최대 |                              |                                       |
-| <div>Load at 12.0V</div><div>부하 at 12.0V</div> |               12.0 |     24 | N                            | <div>12Lf-12F-27</div><div><br></div> |
-|                                                |               2.69 |   5.39 | lbf                          |                                       |
-|                                                |               1.22 |   2.44 | kgf                          |                                       |
-|                                                |               20.0 |     40 | N                            |                           12Lf-20F-27 |
-|                                                |               4.49 |   8.98 | lbf                          |                                       |
-|                                                |               2.04 |   4.08 | kgf                          |                                       |
-|                                                |               35.0 |     70 | N                            |                           12Lf-35F-27 |
-|                                                |               7.87 |  15.73 | lbf                          |                                       |
-|                                                |               3.57 |   7.14 | kgf                          |                                       |
-|                                                |               55.0 |    110 | N                            |                           12Lf-55F-27 |
-|                                                |              12.37 |  24.72 | lbf                          |                                       |
-|                                                |               5.61 |  11.22 | kgf                          |                                       |
-|                                                |              100.0 |    200 | N                            | <div>12Lf-100F-27</div>               |
-|                                                |              22.48 |  44.94 | lbf                          |                                       |
-|                                                |              10.19 |  20.40 | kgf                          |                                       |  
-<p align="right"> ⁕ 1 kgf = 9.8N , 1lbf = 4.45N</p>
-※ It is highly recommended to apply rated load under 50% duty cycle. When max applicable load (2times the rated load) is applied, goal current setting should be 1600 and duty cycle should be less than 20%. See Figure2-2 below.
-※ 가급적 정격 부하 조건에서 사용하되, 최대 허용 부하 (정격부하의 2배) 적용시에는 Goal current설정을 1600(1.6A)으로, Duty cycle을 20% 이하로 낮추어야 합니다. 하단의 Figure2-2 그래프를 참고하십시오.
+|  Parameter                                       |  Limit Values / 한계값  |          |  <div>Unit</div><div>단위</div>  |  Remarks / 비고                            |
+|:-------------------------------------------------|:---------------------|:---------|:-------------------------------|:-----------------------------------------|
+|                                                  |  Rated/정격            |  Max/최대  |                                |                                          |
+|  <div>Load at 12.0V</div><div>부하 at 12.0V</div>  |                12.0  |      24  |  N                             |  <div>12Lf-12F-27</div><div><br></div>   |
+|                                                  |                2.69  |    5.39  |  lbf                           | ^                                        |
+|                                                  |                1.22  |    2.44  |  kgf                           | ^                                        |
+|                                                  |                20.0  |      40  |  N                             |                             12Lf-20F-27  |
+|                                                  |                4.49  |    8.98  |  lbf                           | ^                                        |
+|                                                  |                2.04  |    4.08  |  kgf                           | ^                                        |
+|                                                  |                35.0  |      70  |  N                             |                             12Lf-35F-27  |
+|                                                  |                7.87  |   15.73  |  lbf                           | ^                                        |
+|                                                  |                3.57  |    7.14  |  kgf                           | ^                                        |
+|                                                  |                55.0  |     110  |  N                             |                             12Lf-55F-27  |
+|                                                  |               12.37  |   24.72  |  lbf                           | ^                                        |
+|                                                  |                5.61  |   11.22  |  kgf                           | ^                                        |
+|                                                  |               100.0  |     200  |  N                             |  <div>12Lf-100F-27</div>                 |
+|                                                  |               22.48  |   44.94  |  lbf                           | ^                                        |
+|                                                  |               10.19  |   20.40  |  kgf                           | ^                                        |  
 
 ### Self Lock Feature / 셀프-락기능
 
