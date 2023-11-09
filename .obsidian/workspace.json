@@ -6,7 +6,7 @@
       {
         "id": "fc8acab4ff86b93b",
         "type": "tabs",
-        "dimension": 50,
+        "dimension": 84.66921119592875,
         "children": [
           {
             "id": "32cd9778ce68ac67",
@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/Test temp.md",
+                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
                 "mode": "source",
                 "source": false
               },
@@ -40,7 +40,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Templates/DATASHEET.md",
+                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
                 "mode": "source",
                 "source": false
               }
@@ -52,7 +52,7 @@
       {
         "id": "b12b95cc5dce7b44",
         "type": "tabs",
-        "dimension": 50,
+        "dimension": 15.330788804071247,
         "children": [
           {
             "id": "18d66789d70f8e8e",
@@ -128,7 +128,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Templates/DATASHEET.md",
+                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -145,7 +145,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Templates/DATASHEET.md",
+                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -168,7 +168,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Templates/DATASHEET.md"
+                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md"
               }
             }
           },
@@ -210,12 +210,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "18d66789d70f8e8e",
+  "active": "3c66c73df10de822",
   "lastOpenFiles": [
+    "Templates/DATASHEET.md",
     "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
     "Templates/{{title}}.md",
-    "Actuator/Mini 17Lf/Datasheet/Test temp.md",
-    "Templates/DATASHEET.md",
+    "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
     "Templates",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Total Manager/Total Manager User Manual_kor.md",
