@@ -1,11 +1,9 @@
 
 # 1. Introduction
-Mini 17Lf Model은 다양한 기능을 내장한 Actuator로 효율적이고 유연한 모션 제어 어플리케이션을 위한 완벽한 솔루션입니다. Mightyzap Mini Linear Actuator는 협소한 공간에서 효율적인 선형 운동이 필요한 어플리케이션에 활용 가능한 제품이며, 산업, 의료, 로봇연구, UAV 분양 등 다양한 방면에서 활용이 가능한 제품입니다. 
- ### <font size = "5" color="#ff0000" >주의 사항</font>
-mightyZap Actuator를 안정적으로 사용하기 test 위해서는 몇 가지 주의 사항이 있습니다. 
+Mini 17Lf Model은 다양한 기능을 내장한 Actuator로 효율적이고 유연한 모션 제어 어플리케이션을 위한 완벽한 솔루션입니다. mightyZAP Mini Linear Actuator는 협소한 공간에서 효율적인 선형 운동이 필요한 어플리케이션에 활용 가능한 제품이며, 산업, 의료, 로봇연구, UAV 분양 등 다양한 방면에서 활용이 가능한 제품입니다. 
+ ### <font size = "12:"color="#ff0000" >주의 사항</font>
+mightyZAP Actuator를 안정적으로 사용하기 test 위해서는 몇 가지 주의 사항이 있습니다.   
 
-
-test 
 ## 1.2 사양
 ### 17Lf 시리즈 주요사양
 <table>
@@ -52,7 +50,7 @@ Control Table은 2개의 영역으로 구분됩니다. Data를 변경한 후 전
 Mini 17Lf Model의 모든 Parameter의 Data Size 2byte 로 되어있습니다.
 ### 2.1.4 Access  (접근 권한)
 Control Table Data는 'R', 'RW'로 표기됩니다. 'R'은 읽기 전용(Read Only) 의미하고, 'RW'는  읽기와 쓰기가 모두 가능합니다.  
-읽기 전용 권한은 주로 서보 모터의 기본 정보 또는 모니터링 용으로 사용됩니다. 읽기 쓰기 권한은 MightyZap 제어 용도로 사용됩니다.  
+읽기 전용 권한은 주로 서보 모터의 기본 정보 또는 모니터링 용으로 사용됩니다. 읽기 쓰기 권한은 mightyZAP 제어 용도로 사용됩니다.  
 ### 2.1.5 Default  
 기본 값은 초기 설정 값(공장 출하 설정 값)입니다. Non-Volatile Memory 영역의 값은 사용자가 수정할 경우 변경한 값으로 적용되며, Volatile Memory 영역은 전원이 인가 되었을 때의 값을 의미합니다.  
 ## 2.2 Non-volatile Memory (ROM)  
@@ -178,7 +176,7 @@ Control Table Data는 'R', 'RW'로 표기됩니다. 'R'은 읽기 전용(Read On
 
 ## 2.4 Control Table Discription
 ### 2.4.1  Model Serial Number
-MightyZap Model을 식별하기 위한 번호입니다.
+mightyZAP Model을 식별하기 위한 번호입니다.
 ### 2.4.2 Firmware Version  
 해당 제품의 펌웨어 버전이 표기되며, Semantic Versioning 방식으로 표기합니다. 
 **Semantic Versioning**
