@@ -4,22 +4,49 @@
     "type": "split",
     "children": [
       {
-        "id": "c3bba1635e2050c2",
+        "id": "fc8acab4ff86b93b",
         "type": "tabs",
         "children": [
           {
-            "id": "a62f83fbcac1d924",
+            "id": "32cd9778ce68ac67",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
+                "file": "Templates/{{title}}.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "571cb0a54facc881",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Actuator/Mini 17Lf/Datasheet/Test temp.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "3c66c73df10de822",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Templates/DATASHEET.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -48,7 +75,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "템플릿",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
+                "file": "Templates/DATASHEET.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -102,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
+                "file": "Templates/DATASHEET.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md"
+                "file": "Templates/DATASHEET.md"
               }
             }
           },
@@ -150,7 +177,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 477.5
+    "width": 403.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -160,18 +187,24 @@
       "daily-notes:오늘의 데일리 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
-      "markdown-table-editor:Open Markdown Table Editor": false
+      "markdown-table-editor:Open Markdown Table Editor": false,
+      "markdown-importer:마크다운 형식 가져오기 열기": false,
+      "publish:변경사항 출판": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "a62f83fbcac1d924",
+  "active": "3c66c73df10de822",
   "lastOpenFiles": [
+    "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
+    "Templates/{{title}}.md",
+    "Actuator/Mini 17Lf/Datasheet/Test temp.md",
+    "Templates/DATASHEET.md",
     "Templates",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_eng.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
-    "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
     "conflict-files-obsidian-git.md",
     "Technical/Motor의 특성도 이해.md",
     "Technical",
@@ -208,9 +241,6 @@
     "Boards/Interface Board",
     "Boards/CT-01",
     "Actuator/Mini L12/Mini L12 User Manual_kor.md",
-    "Actuator/Mini 12Lb/img",
-    "Color.md",
-    "Protocl/IR Protocol.md",
     "무제 파일 1.canvas",
     "무제 파일.canvas"
   ]
