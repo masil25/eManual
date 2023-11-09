@@ -1,28 +1,18 @@
 {
   "choices": [
     {
-      "id": "959137ee-a7e2-43f5-8235-503abdbbe571",
-      "name": "My  Folder",
-      "type": "Multi",
-      "command": true,
-      "choices": [],
-      "collapsed": false
-    },
-    {
-      "id": "15ecdd81-408d-4531-bb47-c5c13c8ee26f",
-      "name": "Datasheet",
+      "id": "2e145c51-b46c-438b-b8b5-5d09106d4e6f",
+      "name": "test",
       "type": "Template",
-      "command": true,
-      "templatePath": "Templates/DATASHEET.md",
+      "command": false,
+      "templatePath": "Templates/{{title}}.md",
       "fileNameFormat": {
         "enabled": true,
-        "format": "Datasheet{{value}}"
+        "format": ""
       },
       "folder": {
-        "enabled": false,
-        "folders": [
-          ""
-        ],
+        "enabled": true,
+        "folders": [],
         "chooseWhenCreatingNote": false,
         "createInSameFolderAsActiveFile": false,
         "chooseFromSubfolders": false
@@ -36,13 +26,13 @@
       "openFile": true,
       "openFileInMode": "default",
       "fileExistsMode": "Increment the file name",
-      "setFileExistsBehavior": false
+      "setFileExistsBehavior": true
     }
   ],
   "macros": [],
-  "inputPrompt": "single-line",
+  "inputPrompt": "multi-line",
   "devMode": false,
-  "templateFolderPath": "",
+  "templateFolderPath": "Templates",
   "announceUpdates": true,
   "version": "1.6.0",
   "disableOnlineFeatures": true,
