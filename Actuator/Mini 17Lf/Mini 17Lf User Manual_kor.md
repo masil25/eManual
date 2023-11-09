@@ -4,7 +4,7 @@ Mini 17Lf Model은 다양한 기능을 내장한 Actuator로 효율적이고 유
  ### <font size = "5" color="#ff0000" >주의 사항</font>
 MightyZap Actuator를 안정적으로 사용하기 위해서는 몇 가지 주의 사항이 있습니다. 다음의 링크를 클릭하시여 주의 사항을 확인하여 주시기 바랍니다. 
 
-new test 
+## new test 
 
 ## 1.2 사양
 ### 17Lf 시리즈 주요사양
