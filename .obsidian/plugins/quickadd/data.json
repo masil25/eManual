@@ -1,42 +1,45 @@
 {
   "choices": [
     {
-      "id": "d64d5d5f-054c-4a68-9f43-a24a75ed2719",
+      "id": "959137ee-a7e2-43f5-8235-503abdbbe571",
+      "name": "My  Folder",
+      "type": "Multi",
+      "command": true,
+      "choices": [],
+      "collapsed": false
+    },
+    {
+      "id": "15ecdd81-408d-4531-bb47-c5c13c8ee26f",
       "name": "Datasheet",
       "type": "Template",
-      "command": false,
-      "templatePath": "",
+      "command": true,
+      "templatePath": "Templates/DATASHEET.md",
       "fileNameFormat": {
-        "enabled": false,
-        "format": ""
+        "enabled": true,
+        "format": "Datasheet{{value}}"
       },
       "folder": {
         "enabled": false,
-        "folders": [],
+        "folders": [
+          ""
+        ],
         "chooseWhenCreatingNote": false,
         "createInSameFolderAsActiveFile": false,
         "chooseFromSubfolders": false
       },
       "appendLink": false,
       "openFileInNewTab": {
-        "enabled": false,
+        "enabled": true,
         "direction": "vertical",
         "focus": true
       },
-      "openFile": false,
+      "openFile": true,
       "openFileInMode": "default",
       "fileExistsMode": "Increment the file name",
       "setFileExistsBehavior": false
     }
   ],
-  "macros": [
-    {
-      "name": "Datasheet",
-      "id": "f0b92928-ab27-4989-94d1-b8035ebe2086",
-      "commands": [],
-      "runOnStartup": false
-    }
-  ],
+  "macros": [],
   "inputPrompt": "single-line",
   "devMode": false,
   "templateFolderPath": "",
