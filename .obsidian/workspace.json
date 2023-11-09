@@ -59,6 +59,20 @@
           }
         ],
         "currentTab": 3
+      },
+      {
+        "id": "76351da3f0d8ecb9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2b005d8d9afbbdb4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown-table-editor-view",
+              "state": {}
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -205,7 +219,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "07bf8704d81c0ca9",
+  "active": "2b005d8d9afbbdb4",
   "lastOpenFiles": [
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "conflict-files-obsidian-git.md",
