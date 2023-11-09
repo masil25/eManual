@@ -176,8 +176,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 349.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -187,9 +186,9 @@
       "daily-notes:오늘의 데일리 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
-      "markdown-table-editor:Open Markdown Table Editor": false,
       "markdown-importer:마크다운 형식 가져오기 열기": false,
       "publish:변경사항 출판": false,
+      "markdown-table-editor:Open Markdown Table Editor": false,
       "templater-obsidian:Templater": false
     }
   },
