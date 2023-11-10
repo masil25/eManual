@@ -20,6 +20,18 @@
             }
           },
           {
+            "id": "a5f51f8b0ce274ca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Total Manager/Total Manager User Manual_kor.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "571cb0a54facc881",
             "type": "leaf",
             "pinned": true,
@@ -45,7 +57,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -111,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -128,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +164,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md"
+                "file": "Total Manager/Total Manager User Manual_kor.md"
               }
             }
           },
@@ -176,8 +189,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 469.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -193,10 +205,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7fcb9bfabacc4e40",
+  "active": "a5f51f8b0ce274ca",
   "lastOpenFiles": [
-    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+    "Total Manager/Total Manager User Manual_kor.md",
+    "conflict-files-obsidian-git.md",
     "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
+    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Datasheet17Lf-xx-27.md",
     "Templates/DATASHEET.md",
     "무제 파일.md",
@@ -204,11 +218,9 @@
     "Templates/{{title}}.md",
     "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
     "Templates",
-    "Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_eng.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
-    "conflict-files-obsidian-git.md",
     "Technical/Motor의 특성도 이해.md",
     "Technical",
     "Actuator/Mini 17Lf/Datasheet",
