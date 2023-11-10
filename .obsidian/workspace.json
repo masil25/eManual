@@ -6,7 +6,7 @@
       {
         "id": "cc512a16ae5eb60f",
         "type": "tabs",
-        "dimension": 50,
+        "dimension": 70.48346055979644,
         "children": [
           {
             "id": "3c66c73df10de822",
@@ -25,7 +25,7 @@
       {
         "id": "73f636f23d10de69",
         "type": "tabs",
-        "dimension": 50,
+        "dimension": 29.51653944020356,
         "children": [
           {
             "id": "f58bf1ea7debd725",
@@ -183,7 +183,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f58bf1ea7debd725",
+  "active": "3c66c73df10de822",
   "lastOpenFiles": [
     "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
     "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
