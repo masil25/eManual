@@ -25,19 +25,18 @@
 -  **Size, Weight /크기,무게**: {xx.x}(L)x {xx.x}(W)x {xx.x}(H)mm / {xx ~ xx} (to be varied according to gear ratio)
 -  **Communication/ 통신** : RS-485
 -  **Protocol** :  IR Protocl, Modbus RTU
--  **Operating Temperatures / 동작온도** : {}℃ ~ {}℃
--  **Ingress protection / 방수방진** : 
--  **Mechanical Backlash / 기구백래쉬**: {x.xx}mm({xx}um)
--  **Audible Noise / 가청소음** : Max. {xx}db at 1m
--  **Gear ratio / 기어비** : 
--  **Gear type / 기어타입**: 
-- **Rod type / Rod 타입** :
-- **Standard Accessory / 표준악세서리** :
-- **Connector Type (Male) in the Actuator / 액츄에이터 커넥터** : 
-- **Wire Harness** : 
+-  **Operating Temperatures / 동작온도** : -10℃ ~ 60℃
+-  **Ingress protection / 방수방진** :  IP-54
+-  **Mechanical Backlash / 기구백래쉬**: 0.03mm(30um)
+-  **Audible Noise / 가청소음** : Max. 50db at 1m
+-  **Gear ratio / 기어비** : 9.6 : 1
+-  **Gear type / 기어 타입**: Engineering Plastic
+- **Rod type / Rod 타입** : Staniless Steel Rod / 스테인레스 스틸
+- **Standard Accessory / 표준 악세서리** : <font color="#ff0000">{}</font>
+- **Connector Type (Male) in the Actuator / 액츄에이터 커넥터** : <font color="#ff0000">{}</font>
+- **Wire Harness** : <font color="#ff0000">{}</font>
 
 ### Volatges / 전압
-
 |   Parameter                                    |       Min                    |       Norm         |       Max          |     Unit         |   Note&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   |
 |:-----------------------------------------------|:----------------------------:|:------------------:|:------------------:|:----------------:|:---------------------------------------------------------|
 |  **Supply voltage/ 공급전압**                      |                              |                    |                    |                  |                                                          |

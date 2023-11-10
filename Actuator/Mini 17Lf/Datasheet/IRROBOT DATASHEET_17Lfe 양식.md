@@ -10,31 +10,30 @@
   / 매니져 소프트웨어를 통한 파라메터 셋팅가능
 
 ### Common Specifications / 공통 사양
--  **Stroke / 스트로크** :27mm
--  **Rated Load / 정격 부하** : 12N~100N according to gear ratio(See appendix.) / 기어비에 따라 12~100N(별첨 참조)
-   **Recommended duty cycle at rated load / 정격부하 시 권장 듀티사이클** :under 50% (50% 이하)
--  **Max applicable Load / 최대 허용 부하** : 2times rated load / 정격 부하의 2배
-   **Recommended duty cycle at max applicable load / 최대 허용 부하시 권장 듀티사이클** :
-   under 20% (20% 이하)
--  **Micro controller** : 32 bit ARM Core, 4096 resolution (A/D converter)
--  **Input Voltage / 입력전압**: 12.0V(Rated/정격),7V~13V(Operating)
--  **Motor Type / Watt**: coreless DC Motor / 26W
--  **Current consumption / 소모전류** : 30mA(Idle), 380mA(Rated), 1.6A(Stall)
+-  **Stroke / 스트로크** :27mm  
+-  **Rated Load / 정격 부하** : 12N~100N according to gear ratio(See appendix.) / 기어비에 따라 12~100N(별첨 참조)  
+   **Recommended duty cycle at rated load / 정격부하 시 권장 듀티사이클** :under 50% (50% 이하)  
+-  **Max applicable Load / 최대 허용 부하** : 2times rated load / 정격 부하의 2배  
+   **Recommended duty cycle at max applicable load / 최대 허용 부하시 권장 듀티사이클** :  under 20% (20% 이하)  
+-  **Micro controller** : 32 bit ARM Core, 4096 resolution (A/D converter)  
+-  **Input Voltage / 입력전압**: 12.0V(Rated/정격),7V~13V(Operating)  
+-  **Motor Type / Watt**: coreless DC Motor / 26W  
+-  **Current consumption / 소모전류** : 30mA(Idle), 380mA(Rated), 1.6A(Stall)  
 -  **Position repeatability / 반복정밀도** :
-  ⇨ Unidirectional less than 0.03mm(30um) / 단방향 0.03mm(30um)
-  ⇨ Bydirectional less than +/-0.06mm(60um) / 양방향 +/-0.06mm(60um)
--  **전류값 오차 / Current Tolerance** : ±15% at Over 50mA
--  **Position sensor / 위치센서** : 10kΩ linearity potentiometer
--  **Size, Weight /크기,무게**: 57.4(L)x29.9(W)x15(H)mm / 49~52g (to be varied according to gear ratio)
--  **Communication/ 통신** : RS-485
--  **Protocol** : IR Robot Open Protocol (switchable to MODBUS RTU protocol/ MODBUS 프로토콜 전환 가능) 
--  **Operating Temperatures / 동작온도** :-10℃ ~ 60℃
--  **Ingress protection / 방수방진** : IP-54
--  **Mechanical Backlash / 기구백래쉬**: 0.03mm(30um)
--  **Audible Noise / 가청소음** : Max. 50db at 1m
--  **Gear ratio / 기어비** :10:1(12F,20F,35F) /20:1(55F) /50:1(100F)
--  **Gear type / 기어타입**: Engineering plastic gears(12F,20F,35F)
-	4metal & 2engineering plastic gears(55F,100F) (Aluminum and stainless steel combination)
+  ⇨ Unidirectional less than 0.03mm(30um) / 단방향 0.03mm(30um)  
+  ⇨ Bydirectional less than +/-0.06mm(60um) / 양방향 +/-0.06mm(60um)  
+-  **전류값 오차 / Current Tolerance** : ±15% at Over 50mA  
+-  **Position sensor / 위치센서** : 10kΩ linearity potentiometer  
+-  **Size, Weight /크기,무게**: 57.4(L)x29.9(W)x15(H)mm / 49~52g (to be varied according to gear ratio)  
+-  **Communication/ 통신** : RS-485  
+-  **Protocol** : IR Robot Open Protocol (switchable to MODBUS RTU protocol/ MODBUS 프로토콜 전환 가능)   
+-  **Operating Temperatures / 동작온도** :-10℃ ~ 60℃  
+-  **Ingress protection / 방수방진** : IP-54  
+-  **Mechanical Backlash / 기구백래쉬**: 0.03mm(30um)  
+-  **Audible Noise / 가청소음** : Max. 50db at 1m  
+-  **Gear ratio / 기어비** :10:1(12F,20F,35F) /20:1(55F) /50:1(100F)  
+-  **Gear type / 기어타입**: Engineering plastic gears(12F,20F,35F)  
+	4metal & 2engineering plastic gears(55F,100F) (Aluminum and stainless steel combination)  
 - **Rod type / Rod 타입** :Stainless steel rod / 스테인레스스틸
 - **Standard Accessory / 표준악세서리** :1 x Hinge base, 1 x Hinge, 1 x Hinge shaft, 1 x Rod end tip, 2 x M3 NUT, 3 x M2.5x6 screws, 1 x Molex wire harness (200mm), 1 x M3 spanner, 1 x Socket set screw
 - **Connector Type (Male) in the Actuator / 액츄에이터 커넥터** : MOLEX 53253-0470
