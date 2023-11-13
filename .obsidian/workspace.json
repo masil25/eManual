@@ -6,20 +6,7 @@
       {
         "id": "cc512a16ae5eb60f",
         "type": "tabs",
-        "dimension": 84.35114503816794,
         "children": [
-          {
-            "id": "3c66c73df10de822",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
           {
             "id": "a88d904d66dd0dbb",
             "type": "leaf",
@@ -30,21 +17,6 @@
                 "mode": "source",
                 "source": false
               }
-            }
-          }
-        ]
-      },
-      {
-        "id": "421fbc46776e4af2",
-        "type": "tabs",
-        "dimension": 15.648854961832063,
-        "children": [
-          {
-            "id": "1ccb43b0118381e6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown-table-editor-view",
-              "state": {}
             }
           }
         ]
@@ -113,7 +85,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -130,7 +101,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,9 +122,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md"
-              }
+              "state": {}
             }
           },
           {
@@ -178,8 +146,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 469.5,
-    "collapsed": true
+    "width": 469.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -195,13 +162,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "3c66c73df10de822",
+  "active": "719f7c1e9e32f8c6",
   "lastOpenFiles": [
+    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
     "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
     "Total Manager/Total Manager User Manual_kor.md",
     "conflict-files-obsidian-git.md",
-    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Datasheet17Lf-xx-27.md",
     "Templates/DATASHEET.md",
     "무제 파일.md",
