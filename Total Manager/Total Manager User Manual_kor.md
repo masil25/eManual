@@ -72,14 +72,14 @@ $ sudo apt install ./[file].deb
 ## 2.3 화면 구성
 화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Fotter로 구성되어있다.  
 ![[mainView-description.jpg]]
-① <font color="#0070c0"><font color="#548dd4">Main Toolbar</font></font> : Actuator의 Reset, Restart, Data Undo/Redo 등을 수행  
-② <font color="#548dd4">SCAN</font> : Software의 통신을 연결하고 mightyZap 검색  
-③ <font color="#548dd4">Main Menu</font> : Information, control, Update, Manager Setting 등 Manager에서 제공하는 기능 선택 Side bar Menu  
-④ <font color="#0070c0">Actuator List</font> : 검색된 MightyZap의 이름이 통신 속도와 Protocol에 따라 분류되어 표시  
-⑤ <font color="#0070c0">Main contents</font> : 매니저에 제공하는 Main 기능 표시  
-⑥ <font color="#0070c0">Actuator Information</font> : 선택된 Actuator의 모델명, Firmware Version, 통신 방식 등이 표기    
-⑦ <font color="#0070c0">통신 상태</font> : 통신 Protocol 및 송수신 Error 등 통신 상태 표시  
-⑧ <font color="#0070c0">Manager Status</font> :  Manager 의 버전 및 Language 등 표시  
+<font color="#0070c0"><font color="#548dd4">① Main Toolbar</font></font> : Actuator의 Reset, Restart, Data Undo/Redo 등을 수행  
+<font color="#548dd4">② SCAN</font> : Software의 통신을 연결하고 mightyZap 검색  
+<font color="#548dd4">③ Main Menu</font> : Information, control, Update, Manager Setting 등 Manager에서 제공하는 기능 선택 Side bar Menu  
+<font color="#0070c0">④ Actuator List</font> : 검색된 MightyZap의 이름이 통신 속도와 Protocol에 따라 분류되어 표시  
+<font color="#0070c0">⑤ Main contents</font> : 매니저에 제공하는 Main 기능 표시  
+<font color="#0070c0">⑥ Actuator Information</font> : 선택된 Actuator의 모델명, Firmware Version, 통신 방식 등이 표기    
+<font color="#0070c0">⑦ 통신 상태</font> : 통신 Protocol 및 송수신 Error 등 통신 상태 표시  
+<font color="#0070c0">⑧ Manager Status</font> :  Manager 의 버전 및 Language 등 표시  
 ## 2.4 USB Interface Board 
 Total Manager와 MightyZap Actuator와의 통신을 위하여 Serail convertor 가 필요합니다.  
 해당 설명은 당사의 USB Interface Board를 기준으로 설명이 되어있습니다.  

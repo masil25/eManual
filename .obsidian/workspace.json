@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -101,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Total Manager/Total Manager User Manual_kor.md"
+              }
             }
           },
           {
@@ -162,11 +166,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "719f7c1e9e32f8c6",
+  "active": "a88d904d66dd0dbb",
   "lastOpenFiles": [
+    "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
-    "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
     "Total Manager/Total Manager User Manual_kor.md",
     "conflict-files-obsidian-git.md",
     "Datasheet17Lf-xx-27.md",
