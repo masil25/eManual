@@ -102,7 +102,7 @@ USB Interface Board를 PC와 연결합니다.
 정장적으로 연결되어 있을 경우 이미지에서와 같이 새로운 com port가 추가되는것을 확인할 수 있습니다.
 ![[serialPort_check_win.jpg]]
 ### 2.4.2 Linux[ubuntu/Demian]
-#### Driver 설치
+<font size="5"> Driver 설치</font>
 ##### 1) CH341 Driver 
 CH341 driver는 USB-02 Model에서 만 사용됩니다. 
 CH340, CH341 의 시리얼 드라이버는 Linux 커널 버전 2.6.24부터 내장되어 있으며, 해당 위치는 drivers/usb/serial/ch341.c입니다. 다만 드라이버를 최신 상태로 유지 하기 원하실 경우 아래의 방법을 사용하기 바랍니다.
