@@ -11,9 +11,11 @@
             "id": "a88d904d66dd0dbb",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 12Lf/img/UseSpanner.png"
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 12Lf/img/UseSpanner.png",
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 12Lf/img/UseSpanner.png",
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 12Lf/img/UseSpanner.png"
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md"
               }
             }
           },
@@ -144,7 +146,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -166,11 +168,11 @@
   },
   "active": "a88d904d66dd0dbb",
   "lastOpenFiles": [
+    "Actuator/Mini 12Lf/img/UseSpanner.png",
+    "Actuator/Mini 12Lf/img/CautionMotionSync.png",
+    "Actuator/Mini 12Lf/img/BrokenRod.png",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
-    "Actuator/Mini 12Lf/img/UseSpanner.png",
-    "Actuator/Mini 12Lf/img/BrokenRod.png",
-    "Actuator/Mini 12Lf/img/CautionMotionSync.png",
     "Total Manager/Total Manager User Manual_kor.md",
     "무제 파일.canvas",
     "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
