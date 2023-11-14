@@ -46,7 +46,7 @@
             }
           },
           {
-            "id": "07bf8704d81c0ca9",
+            "id": "8c038e71a4c1f964",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -87,7 +87,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#3리니어",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -104,8 +104,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -206,13 +205,22 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "07bf8704d81c0ca9",
+  "active": "8c038e71a4c1f964",
   "lastOpenFiles": [
-    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
-    "Actuator/Mini 17Lf/Mini 17Lf User Manual_eng.md",
+    "Pasted image 20231114160751.png",
+    "Pasted image 20231114160735.png",
+    "Pasted image 20231114160712.png",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
-    "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
+    "Actuator/Mini 12Lf/img/Pasted image 20231114160528.png",
     "conflict-files-obsidian-git.md",
+    "Actuator/Mini 12Ls/Mini 12Ls User Manual_kor.md",
+    "Actuator/Mini 12Lf/img",
+    "Actuator/Mini 12Ls/Mini 12Ls User Manual_eng.md",
+    "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
+    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+    "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
+    "무제 파일.canvas",
+    "Actuator/Mini 17Lf/Mini 17Lf User Manual_eng.md",
     "Datasheet17Lf-xx-27.md",
     "Templates/DATASHEET.md",
     "무제 파일.md",
@@ -221,15 +229,12 @@
     "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
     "Templates",
     "Total Manager/Total Manager User Manual_kor.md",
-    "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
     "Technical/Motor의 특성도 이해.md",
     "Technical",
     "Actuator/Mini 17Lf/Datasheet",
     "IRROBOT DATASHEET_17Lfe 양식.md",
-    "Actuator/Mini 12Ls/Mini 12Ls User Manual_eng.md",
     "Total Manager/img/to.png",
     "Actuator/Mini 12Ls/img",
-    "Actuator/Mini 12Ls/Mini 12Ls User Manual_kor.md",
     "Actuator/Mini 12Lb/Mini 12Lb User Manual_eng.md",
     "Actuator/Mini 12Lb/Mini 12Lb User Manual_kor.md",
     "Actuator/Mini 12Ls",
@@ -239,22 +244,16 @@
     "Total Manager/img/Silde_volatile_desc.png",
     "Total Manager/img/SCAN_Desc.png",
     "Pasted image 20231103110313.png",
-    "Total Manager/img/ScanActuator-Desc.png",
-    "Pasted image 20231103104527.png",
-    "Pasted image 20231103104458.png",
     "README.md",
     "Motor의 특성도 이해.md",
     "parameter_control_checkbox.png.md",
     "27mm 코어레스버전(FC버전)-inch.dwg.md",
     "Total Manager/Total Manager User Manual_eng.md",
     "Protocl/Modbus.md",
-    "Actuator/Main.md",
     "Library",
     "Boards",
     "Actuator",
     "Boards/Interface Board",
-    "Boards/CT-01",
-    "무제 파일 1.canvas",
-    "무제 파일.canvas"
+    "무제 파일 1.canvas"
   ]
 }

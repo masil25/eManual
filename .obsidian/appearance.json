@@ -1,7 +1,7 @@
 {
   "accentColor": "",
   "theme": "moonstone",
-  "textFontFamily": "맑은 고딕,DejaVu Sans",
+  "textFontFamily": "Noto Sans CJK KR",
   "baseFontSize": 16,
   "enabledCssSnippets": [
     "edit"
