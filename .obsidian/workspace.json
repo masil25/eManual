@@ -4,49 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "fc8acab4ff86b93b",
+        "id": "b29c3eb1293e84b7",
         "type": "tabs",
         "children": [
           {
-            "id": "571cb0a54facc881",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "3c66c73df10de822",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "55ea3a80978f8c50",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8c038e71a4c1f964",
+            "id": "3dcf6e979f02474b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -57,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -205,21 +166,24 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8c038e71a4c1f964",
+  "active": "3c8f0a42222ab22e",
   "lastOpenFiles": [
-    "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
-    "무제 파일.canvas",
+    "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
+    "Actuator/Mini 12Lf/img/CautionMotionSync.png",
+    "Actuator/Mini 12Lf/img/UseSpanner.png",
+    "Actuator/Mini 12Lf/img/BrokenRod.png",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+    "conflict-files-obsidian-git.md",
+    "무제 파일.canvas",
     "Actuator/Mini 12Lf/img/Pasted image 20231114160751.png",
+    "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
+    "Actuator/Mini 12Lf/img/Pasted image 20231114160528.png",
     "Actuator/Mini 12Lf/img/Pasted image 20231114160735.png",
     "Pasted image 20231114160712.png",
-    "Actuator/Mini 12Lf/img/Pasted image 20231114160528.png",
-    "conflict-files-obsidian-git.md",
     "Actuator/Mini 12Ls/Mini 12Ls User Manual_kor.md",
     "Actuator/Mini 12Lf/img",
     "Actuator/Mini 12Ls/Mini 12Ls User Manual_eng.md",
-    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
-    "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_eng.md",
     "Datasheet17Lf-xx-27.md",
     "Templates/DATASHEET.md",
@@ -240,9 +204,6 @@
     "Actuator/Mini 12Ls",
     "Total Manager/img/SlideVolatile_active.png",
     "Pasted image 20231103112117.png",
-    "Total Manager/img/Slide_volatile_desc.png",
-    "Total Manager/img/Silde_volatile_desc.png",
-    "Total Manager/img/SCAN_Desc.png",
     "README.md",
     "Motor의 특성도 이해.md",
     "parameter_control_checkbox.png.md",
