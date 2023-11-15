@@ -27,7 +27,7 @@ MightyZap Actuator는 Half Duplex TTL, RS485, CAN 통신을 사용합니다. PC�
 ### 1.3.1 Information
 연결된 MightyZap Actuator의 Model명, Stroke, Rate Load, Firmware Version 등 Actuator와 관련된 기본 정보를 표시합니다.   
 Software를 실행하였을 경우 제일 처음에 나타나는 화면입니다.
-![[Information.jpg]]
+![[Information.jpg|700]]
 ### 1.3.2 Parameter
 MightyZap Actuator를  제어하거나 Parameter를 변경 및  Monitoring을 할 수 있습니다.   
 연결된 여러개의 서보모터 중 선택하여 개별적으로 제어할 수 있으며, Parameter의 Type에 따라 Non-voltatile Memory와 Volatile Memoty 화면으로 나누어져 있습니다.    
