@@ -14,7 +14,6 @@ mightyZap Total Manager는 다양한 기능을 가진 다목적 Software입니�
 >특수 기능 설정 및 테스트 내용은 각 모델의 메뉴얼을 참조하시기 바랍니다.
 
 ![[total_image.png|200]]
-![etst](https://raw.githubusercontent.com/masil25/eManual/main/Total%20Manager/img/Information.jpg)
 
 ## 1.2 사용 환경
 MightyZap Actuator는 Half Duplex TTL, RS485, CAN 통신을 사용합니다. PC와의 통신을 위한 컨버터를 사용해야 Actuator와의 통신이 가능합니다.  
