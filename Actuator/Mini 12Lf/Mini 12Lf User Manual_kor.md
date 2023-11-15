@@ -1,6 +1,6 @@
 
-제품군을 확인하세요!  
-모델번호가 12Lf-로 시작하나요?  
+**<font color="#ff0000">제품군을 확인하세요!  </font>
+<font color="#ff0000">모델번호가 12Lf-로 시작하나요?  </font>**
 
 > - 본 매뉴얼은 기존의 Position control 뿐만이 아니라, Force 및 Speed control이 자유롭게 가능한 12Lf Force Control 버전 mightyZAP 액츄에이터 전용 매뉴얼입니다. 
 > - 모델명이 12Lf로 시작하는 제품 사용자중 IR오픈 프로토콜 사용자분들만 본 매뉴얼을 참고하시기 바랍니다. 
