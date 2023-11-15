@@ -38,7 +38,8 @@
    
    ![[CautionMotionSync.png]]
 
-![|200](CautionMotionSync.png)
+<img src="Actuator/Mini 12Lf/img/CautionMotionSync.png"  />
+
 1. 두 개의 액츄에이터로 하나의 대상체를 동기 제어하지 마십시오. 동일 모델이라할지라도 두개 액츄에이터 사이에는 미세한 속도 차이가 존재하며, 동일한 대상체에 대해 모션 동기화를 시켰을 때 도달하는 위치값은 동일하더라도 속도 차이로 인해 한쪽 액츄에이터가 과부하될 수 있습니다. 
    
 ![[BrokenRod.png]]  
