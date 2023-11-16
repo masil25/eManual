@@ -167,7 +167,7 @@ Command Packet
 ## 4.2. Control Table
 ### 4.2.1. Specification
 ### 4.2.2. Data Map (기존 : 4.2.3.Data Map)
-#### 4.2.2.1. IR 프로토콜
+#### 4.2.2.1. IR 프로토콜  
 #### 4.2.2.2. MODBUS RTU (해당부분만 MODBUS 매뉴얼에서)
 ### 4.2.3. Data Description (기존 : 4.2.4. Data Description)
 
