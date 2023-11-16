@@ -46,8 +46,9 @@ Total Manager는 Window , Mac OS, Linux 에서 모두 설치가 가능합니다.
 Windows 컴퓨터에서 mightyZap Total Manager를 설치하려면 사용 중인 Windows의 
 OS 버전을 확인하신 후 버전에 맞게 다운로드하여 주시기 바랍니다.  
 
-windows  7 : 제어판 -> 시스템 확인
-windows 10 이상 : 설정 -> 시스템 -> 정보
+**Windosw Version 확인 방법**
+- windows  7 : 제어판 -> 시스템 확인
+- windows 10 이상 : 설정 -> 시스템 -> 정보
 <font color="#4f81bd">OS Version 확인 방법</font>
 ![[windows_version_check.jpg]]
 
