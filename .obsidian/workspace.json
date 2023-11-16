@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+                "file": "Protocl/IR Protocol.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+                "file": "Protocl/IR Protocol.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+                "file": "Protocl/IR Protocol.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md"
+                "file": "Protocl/IR Protocol.md"
               }
             }
           },
@@ -166,8 +166,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8326d637edc67dcf",
+  "active": "3dcf6e979f02474b",
   "lastOpenFiles": [
+    "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "total.md",
     "img/myImg.png.md",
     "img/CautionMotionSync.png.md",
@@ -177,7 +178,6 @@
     "Actuator/Mini 12Lf/img/CautionMotionSync.png",
     "Actuator/Mini 12Lf/img/UseSpanner.png",
     "Actuator/Mini 12Lf/img/BrokenRod.png",
-    "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "conflict-files-obsidian-git.md",
     "무제 파일.canvas",
