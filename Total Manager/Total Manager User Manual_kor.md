@@ -90,10 +90,10 @@ Total Manager와 mightyZap과의 통신을 위하여 Serial Convertor 가 필요
 USB Interface Board Driver를 다운로드 합니다.  
 	-  [USB Interface Board Window Driver]
 다운로드한 파일을 실행하고 가이드에 따라 드라이버를 설치합니다.
-**- USB Interface board - 02** (CH340x)
+**IR-USB02 Driver 설치** (CH340x)
 ![[ch340x_win_install.jpg]]
   
-**- USB Interface Board - 03** (FTDI)
+**- IR-USB03 Driver 설치
 	-  [USB Interface Board Window Driver]
 ![[ftdi_win_install.png]]
 
