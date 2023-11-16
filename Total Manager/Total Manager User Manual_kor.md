@@ -1,40 +1,39 @@
 
 # 1 Total Manager 시작하기
-MightyZap Total Manager 사용자 가이드  ??
+mightyZap Total Manager 사용자 가이드  ??
 
-mightyZap Total Manager는 다양한 운영체제에서 MightyZap Actuator를 쉽게 관리 및 제어할 수 있는 Software입니다.
-Total Manager에서는 다양한 OS를 제공하고, 사용자 인터페이스를 개선하고 신규 MightyZap 모델을 추가로 지원하는 신규MightyZap Manager 입니다.
+mightyZap Total Manager는 다양한 운영체제에서 mightyZap Actuator를 쉽게 관리 및 제어할 수 있는 Software입니다.
+Total Manager에서는 다양한 OS를 제공하고, 사용자 인터페이스를 개선하고 신규 mightyZap 모델을 추가로 지원하는 신규mightyZap Manager 입니다.
 
 이 가이드에서는 Total Manager의 설치와 각 기능의 사용법에 대한 기본 사항을 다룹니다.  
->[Total Manager Software Download](https://mightyzap.com/ko/digitalarchive6/?uid=211&mod=document&pageid=1) 페이지에서 다운로드 할 수 있습니다.
+>[Total Manager Software Download](https://mightyZap.com/ko/digitalarchive6/?uid=211&mod=document&pageid=1) 페이지에서 다운로드 할 수 있습니다.
 
 ## 1.1 개요
-mightyZap Total Manager는 다양한 기능을 가진 다목적 Software입니다. MightyZap Actuator의 동작 Test와 Parameter 설정 및 동작 상태 Monitoring과 Firmware Update를 기본적으로 제공합니다.  
+mightyZap Total Manager는 다양한 기능을 가진 다목적 Software입니다. mightyZap Actuator의 동작 Test와 Parameter 설정 및 동작 상태 Monitoring과 Firmware Update를 기본적으로 제공합니다.  
 또한 모델에 따른 특수 기능을 설정 및 테스트 할 수도 있습니다. 
 >특수 기능 설정 및 테스트 내용은 각 모델의 메뉴얼을 참조하시기 바랍니다.
 
 ![[total_image.png|500]]
 
 ## 1.2 사용 환경
-MightyZap Actuator는 Half Duplex TTL, RS485, CAN 통신을 사용합니다. PC와의 통신을 위한 컨버터를 사용해야 Actuator와의 통신이 가능합니다.  
-당사에서는 MightyZap Actuator를 위한 USB Interface Board를 판매하고 있습니다. 당사의 Interface Board를 사용할 경우 손쉽게 MightyZap을 PC와 연결할 수 있습니다.  
-시중의 Convertor를 구매하여 사용하실 수 있지만, 안전성을 위하여 가급적 당사의 Interface Board를 사용하여 주시기 바랍나다.
+mightyZap Actuator는 Half Duplex TTL, RS485, CAN 통신을 사용합니다. PC와의 통신을 위한 컨버터를 사용해야 Actuator와의 통신이 가능합니다.  
+당사에서는 mightyZap Actuator를 위한 USB Interface Board를 판매하고 있습니다. 당사의 Interface Board를 사용할 경우 손쉽게 mightyZap을 PC와 연결할 수 있습니다.  
+시중의 Convertor를 구매하여 사용하실 수 있지만, 안전성을 위하여 가급적 당사의 Interface Board를 사용하여 주시기 바랍니다.
 
-> <font color="#ff0000">주의 사항</font><br>
-> PC와 Interface Board와의 연결에 사용하는 Cable중 통신이 되지않는 충전 전용 Cable을 사용하여 통신이 연결되지 않는 경우가 있습니다. 반드시 확인하시고 사용하여 주시기 바랍니다.
+> <font color="#ff0000">주의 사항</font><br
+> PC와 Interface Board 연결에 충전 전용 Cable을 사용하여 통신이 연결되지 않는 경우가 있습니다. 반드시 Data통신이 가능한 Cable인지 확인하시고 사용하여 주시기 바랍니다.
 
 ## 1.3 Feature
 ### 1.3.1 Information
-연결된 MightyZap Actuator의 Model명, Stroke, Rate Load, Firmware Version 등 Actuator와 관련된 기본 정보를 표시합니다.   
-Software를 실행하였을 경우 제일 처음에 나타나는 화면입니다.
+mightyZap의 Model 명, Stroke, Rate Load, Firmware Version 등 Actuator와 관련된 기본 정보를 표시합니다. Software를 실행하였을 경우 제일 처음에 나타나는 화면입니다.  
 ![[Information.jpg|700]]
 ### 1.3.2 Parameter
-MightyZap Actuator를  제어하거나 Parameter를 변경 및  Monitoring을 할 수 있습니다.   
-연결된 여러개의 서보모터 중 선택하여 개별적으로 제어할 수 있으며, Parameter의 Type에 따라 Non-voltatile Memory와 Volatile Memoty 화면으로 나누어져 있습니다.    
+mightyZap을  제어하거나 Parameter를 변경 및 Monitoring을 할 수 있습니다.   
+연결된 여러 개의 mightyZap 중 선택하여 하나의 mightyZap을 개별 제어할 수 있으며, Parameter의 Type에 따라 Non-voltatile Memory와 Volatile Memoty 화면으로 나누어져 있습니다.    
 사용 모델에 따라 Parameter의 구성이 달라지며, 화면의 크기에 따라 화면 구성이 다이나믹하게 변하게 됩니다.   
 ![[control-view.jpg]]
 ### 1.3.3 update
-MightyZap Actuator의 Firmware를 Update할 때 사용합니다. 당사의 Webpage에서 해당 모델에 맞는 업데이트 파일을 다운로드 받으신 후 업데이트를 진행 하실 수 있습니다.  
+mightyZap Actuator의 Firmware를 Update할 때 사용합니다. 당사의 Webpage에서 해당 모델에 맞는 업데이트 파일을 다운로드 받으신 후 업데이트를 진행 하실 수 있습니다.  
 또한, Update Fail 및 사용자의 실수로 인해 서보모터가 검색이 되지 않을 경우 Firmware를 검사 및 복구 하실 수도 있습니다.  
 ![[update-view.jpg]]*caption*
 # 2 Total Manager 다운로드 및 설치
@@ -46,7 +45,7 @@ MightyZap Actuator의 Firmware를 Update할 때 사용합니다. 당사의 Webpa
 
 ## 2.2 Install
 ### 2.2.1 Windows
-Windows 컴퓨터에서 MightyZap Total Manager를 설치하려면 사용중인 Windows의 
+Windows 컴퓨터에서 mightyZap Total Manager를 설치하려면 사용중인 Windows의 
 OS 버전을 확인하신 후 버전에 맞게 다운로드하여 주시기 바랍니다.  
 <font color="#4f81bd">OS Version 확인 방법</font>
 ![[windows_version_check.jpg]]
@@ -55,7 +54,7 @@ OS 버전을 확인하신 후 버전에 맞게 다운로드하여 주시기 바�
 다운로드한 파일을 실행하여, 설치 가이드의 지침에 따라 설치하시면 됩니다.  
 설치에는 몇 분 정도 걸릴 수 있습니다.
 ![[window_install.jpg]]
-이제 Window에서 MightyZap Total Manager를 사용하실 수 있습니다.  
+이제 Window에서 mightyZap Total Manager를 사용하실 수 있습니다.  
 
 ### 2.2.2 Linux
 Linux 전용 패키지를 다운로드 합니다.
@@ -75,13 +74,13 @@ $ sudo apt install ./[file].deb
 <font color="#0070c0"><font color="#548dd4">① Main Toolbar</font></font> : Actuator의 Reset, Restart, Data Undo/Redo 등을 수행  
 <font color="#548dd4">② SCAN</font> : Software의 통신을 연결하고 mightyZap 검색  
 <font color="#548dd4">③ Main Menu</font> : Information, control, Update, Manager Setting 등 Manager에서 제공하는 기능 선택 Side bar Menu  
-<font color="#0070c0">④ Actuator List</font> : 검색된 MightyZap의 이름이 통신 속도와 Protocol에 따라 분류되어 표시  
+<font color="#0070c0">④ Actuator List</font> : 검색된 mightyZap의 이름이 통신 속도와 Protocol에 따라 분류되어 표시  
 <font color="#0070c0">⑤ Main contents</font> : 매니저에 제공하는 Main 기능 표시  
 <font color="#0070c0">⑥ Actuator Information</font> : 선택된 Actuator의 모델명, Firmware Version, 통신 방식 등이 표기    
 <font color="#0070c0">⑦ 통신 상태</font> : 통신 Protocol 및 송수신 Error 등 통신 상태 표시  
 <font color="#0070c0">⑧ Manager Status</font> :  Manager 의 버전 및 Language 등 표시  
 ## 2.4 USB Interface Board 
-Total Manager와 MightyZap Actuator와의 통신을 위하여 Serail convertor 가 필요합니다.  
+Total Manager와 mightyZap Actuator와의 통신을 위하여 Serail convertor 가 필요합니다.  
 해당 설명은 당사의 USB Interface Board를 기준으로 설명이 되어있습니다.  
 먼저 USB Cable을 이용하여 PC와 연결하여 주시기 바랍니다.   
 > <font color="#ff0000">주의사항 </font>     
@@ -219,7 +218,7 @@ All 버튼을 누르게 되면 모든 선택하거나 모두 선택 해지를 �
 ![[SCAN_Desc.png]]
  검색이 완료되었으면 Close 버튼을 click하여 Popup 창을 닫습니다.
 ## 3.2 Information
-MightyZap Actuator의 Model명, Rated Load, Stroke, firmware Version등 관련된 정보를 표시하는 페이지 입니다.  
+mightyZap Actuator의 Model명, Rated Load, Stroke, firmware Version등 관련된 정보를 표시하는 페이지 입니다.  
 Manager가 실행이 되면 처음 표시하는 창이  창이며, 아래의 이미지와 같이 사이드 바 메뉴의 첫번째 아이콘을 클릭하여 해당 페이지로 이동합니다. -> <font color="#ff0000">아래 이미지 , information 으로 수정</font>
 ![[InformationMenu.png]]
 ### 3.2.1 서보모터 List 확인
@@ -232,7 +231,7 @@ Actuator List를 선택하면 해당 Actuator의 정보가 표시되며, 이중 
 ![[FooterDiscription.png]]
 Footer에 표시된 정보는 information Page가 아닌 다른 Page에서도 볼 수 있습니다. 
 ## 3.3 Parameter
-MightyZap Actuator를 설정 및 간단한 동작 테스트를 하고, 동작 상태를 모니터링하는 페이지 입니다.  
+mightyZap Actuator를 설정 및 간단한 동작 테스트를 하고, 동작 상태를 모니터링하는 페이지 입니다.  
 Menu 선택 창에서 아래의 그림과 같은 아이콘을 클릭하면 해당 페이지로 이동합니다.
 ![[Parameter.png]]
 사용자 환경에 맞게 Stroke, ID, Baudrate 등을 설정하고 간단한 동작 테스트를 진행할 수 있습니다.  
@@ -286,7 +285,7 @@ Parameter 영역은 매니저의 크기를 줄일 경우, 주로 사용되어지
    아래의 그림과 같이 Button은 활성화 비활성화에 따라 2가지의 이미지를 가지고 있으며, 해당 Parameter에 대한 자세한 설명은 해당 제품의 사용자 메뉴얼을 참조하여 주시기 바랍니다.
    ![[Button-Volatile.png]]
 ### 3.3.3 Monitoring
-Monitoring 기능은 MightyZap Actuator의 현재 위치, 모터 입력 값, 전류 등을 실시간으로 확인하는 기능을 가지고 있습니다.  
+Monitoring 기능은 mightyZap Actuator의 현재 위치, 모터 입력 값, 전류 등을 실시간으로 확인하는 기능을 가지고 있습니다.  
 Parameter 항목은 Model에 따라 다르게 표시되며, Check box를 통해 하나의 Parameter만 선택하실 수 있습니다.  
 ![[Monitoring-Data.png]]
 Monitoring 기능은 아래와 같이 구성 되어있습니다.
@@ -301,7 +300,7 @@ Monitoring 기능은 아래와 같이 구성 되어있습니다.
 ## 3.4 Update    
 펌웨어를 업데이트 하는 페이지 입니다.  Firmware의 버전은 최신 버전을 유지하는 것을 추천 드립니다. 다만 수정된 펌웨어를 적용하기 전에  변경 사항이 사용자의 Apllication과 적합한지 테스트 하신 후에 적용하시기 바랍니다.   
 펌웨어 파일은 당사의 homepage에서 다운로드 받으시기 바랍니다.  
-www.mightyzap.com  
+www.mightyZap.com  
 ### 3.4.1 화면 구성    
 Update Page는 이미지와 같이 펌웨어 업데이트, Actuator Recovery 영역으로 되어있으며, 각각의 실행은 상단 header의 메뉴에서 해당 아이콘을 선택하여 실행할 수 있습니다.  
 ![[Information.png]]

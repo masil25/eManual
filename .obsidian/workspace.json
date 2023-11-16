@@ -13,13 +13,36 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "7739f073fb872f59",
+            "type": "leaf",
+            "state": {
+              "type": "diff-view",
+              "state": {
+                "file": ".obsidian/plugins/editing-toolbar/data.json",
+                "staged": true
+              }
+            }
+          },
+          {
+            "id": "1ad332a29a76f100",
+            "type": "leaf",
+            "state": {
+              "type": "diff-view",
+              "state": {
+                "file": ".obsidian/workspace.json",
+                "staged": true
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +108,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -102,7 +124,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +145,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md"
-              }
+              "state": {}
             }
           },
           {
@@ -166,14 +185,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "d97bef8ca52b1146",
+  "active": "1ad332a29a76f100",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+    "Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+    "total.md",
     "Protocl/Modbus.md",
     "Protocl/IR Protocol.md",
-    "Total Manager/Total Manager User Manual_kor.md",
-    "total.md",
     "Actuator/Mini 12Lf/img/UseSpanner.png",
     "BrokenRod.png{width=50%}.md",
     "BrokenRod.png{width=50%.md",
@@ -187,7 +207,6 @@
     "무제 파일.canvas",
     "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
     "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
-    "conflict-files-obsidian-git.md",
     "Datasheet17Lf-xx-27.md",
     "Templates/DATASHEET.md",
     "무제 파일.md",
