@@ -40,6 +40,7 @@ Total Manager는 Window , Mac OS, Linux 에서 모두 설치가 가능합니다.
 - Windows : windows 7(32bit) / windows 10 64bit 이상
 - Mac OS : Big Sur 이상 64bit
 - Linux : Ubuntu LTD 20.04 64bit
+Donwload Link : ----------
 
 ## 2.2 Install
 ### 2.2.1 Windows
@@ -60,12 +61,9 @@ OS 버전을 확인하신 후 버전에 맞게 다운로드하여 주시기 바�
 ### 2.2.2 Linux
 Linux 전용 패키지를 다운로드 합니다.
 	- [Linux Software 다운로드](https://github.com/mightyZap25/Total-Manager/releases/download/v0.8.1/latest.yml)
-Debian,/Ubuntu 기반 배포용 Total Manager를 설치하기 위해서는 다음과 같은 Command Line을 통해 .deb 패키지(64bit)를 다운로드하고 설치하는 것입니다.
+Debian/Ubuntu 기반 배포용 Total Manager를 설치하기 위해서는 다음과 같은 Command Line을 통해 .deb 패키지(64bit)를 다운로드하고 설치하는 것입니다.
 ```
-$ sudo apt install ./[file].deb
-# If you're on an older Linux distribution, you will need to run this instead:
-# sudo dpkg -i [file].deb
-# sudo apt-get install -f # Install dependencies
+$ sudo dpkg -i [file].debls 
 ```
 ### 2.2.3 Mac OS
 
