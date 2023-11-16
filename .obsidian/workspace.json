@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Protocl/IR Protocol.md",
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Protocl/IR Protocol.md",
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Protocl/IR Protocol.md",
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Protocl/IR Protocol.md"
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md"
               }
             }
           },
@@ -150,7 +150,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 349.5
+    "width": 539.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -168,6 +168,7 @@
   },
   "active": "3dcf6e979f02474b",
   "lastOpenFiles": [
+    "Protocl/IR Protocol.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "total.md",
     "img/myImg.png.md",
@@ -211,7 +212,6 @@
     "Pasted image 20231103112117.png",
     "README.md",
     "Motor의 특성도 이해.md",
-    "parameter_control_checkbox.png.md",
     "Library",
     "Boards",
     "Actuator",
