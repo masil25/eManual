@@ -9,12 +9,12 @@ Total Manager에서는 다양한 OS를 제공하고, 사용자 인터페이스�
 ## 1.1 개요
 mightyZap Total Manager는 다양한 기능을 가진 다목적 Software입니다. mightyZap Actuator의 동작 Test와 Parameter 설정 및 동작 상태 Monitoring과 Firmware Update를 기본적으로 제공합니다.  
 또한 모델에 따른 특수 기능을 설정 및 테스트 할 수도 있습니다. 
->특수 기능 설정 및 테스트 내용은 각 모델의 메뉴얼을 참조하시기 바랍니다.
+>특수 기능 설정 및 테스트 내용은 각 모델의 매뉴얼을 참조하시기 바랍니다.
 
 ![[total_image.png|500]]
 
 ## 1.2 사용 환경
-mightyZap은 Half Duplex TTL, RS485, CAN 통신을 사용합니다. PC와의 통신을 위한 컨버터를 사용해야 mightyZap과의 통신이 가능합니다.  
+mightyZap은 Half Duplex TTL, RS485, CAN 통신을 사용합니다. PC와의 통신을 위한 Converter를 사용해야 mightyZap과의 통신이 가능합니다.  
 mightyZap을 위한 USB Interface Board를 당사의 웹사이트에서 판매하고 있습니다. 해당  Interface Board를 사용할 경우 손쉽게 mightyZap을 PC와 연결할 수 있습니다.  
 시중의 Convertor를 구매하여 사용하실 수 있지만, 안전성을 위하여 가급적 당사의 Interface Board를 사용하여 주시기 바랍니다.
 
@@ -52,6 +52,7 @@ OS 버전을 확인하신 후 버전에 맞게 다운로드하여 주시기 바�
 - windows 10 이상 : 설정 -> 시스템 -> 정보
 <font color="#4f81bd">OS Version 확인 방법</font>
 ![[windows_version_check.jpg]]
+**mightyZap Total Manager Download Link**
 
 다운로드한 파일을 실행하여, 설치 가이드의 지침에 따라 설치하시면 됩니다.  
 설치에는 몇 분 정도 걸릴 수 있습니다.
@@ -60,7 +61,7 @@ OS 버전을 확인하신 후 버전에 맞게 다운로드하여 주시기 바�
 
 ### 2.2.2 Linux
 Linux 전용 패키지를 다운로드 합니다.
-	- [Linux Software 다운로드](https://github.com/mightyZap25/Total-Manager/releases/download/v0.8.1/latest.yml)
+	- [Linux Software 다운로드](https://github.com/mightyZap25/Total-Manager/releases/download/v0.8.1/latest.yml) 
 Debian/Ubuntu 기반 배포용 Total Manager를 설치하기 위해서는 다음과 같은 Command Line을 통해 .deb 패키지(64bit)를 다운로드하고 설치하는 것입니다.
 ```
 $ sudo dpkg -i [file].deb
@@ -68,7 +69,7 @@ $ sudo dpkg -i [file].deb
 ### 2.2.3 Mac OS
 
 ## 2.3 화면 구성
-화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Fotter로 구성되어있다.  
+화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Footer로 구성되어있다.  
 ![[mainView-description.jpg]]
 <font color="#0070c0"><font color="#548dd4">① Main Toolbar</font></font> : Actuator의 Reset, Restart, Data Undo/Redo 등을 수행  
 <font color="#548dd4">② SCAN</font> : Software의 통신을 연결하고 mightyZap 검색  
@@ -79,14 +80,14 @@ $ sudo dpkg -i [file].deb
 <font color="#0070c0">⑦ 통신 상태</font> : 통신 Protocol 및 송수신 Error 등 통신 상태 표시  
 <font color="#0070c0">⑧ Manager Status</font> :  Manager 의 버전 및 Language 등 표시  
 ## 2.4 USB Interface Board 
-Total Manager와 mightyZap Actuator와의 통신을 위하여 Serail convertor 가 필요합니다.  
+Total Manager와 mightyZap과의 통신을 위하여 Serial Convertor 가 필요합니다.  
 해당 설명은 당사의 USB Interface Board를 기준으로 설명이 되어있습니다.  
 먼저 USB Cable을 이용하여 PC와 연결하여 주시기 바랍니다.   
 > <font color="#ff0000">⛔ 주의사항 </font>     
 > <font color="#ff0000">충전 전용 케이블이 아닌 통신이 가능한 케이블을 사용하여 주셔야합니다.</font>
 
 ### 2.4.1 Windows
-USB Interface Board Driver를 다운로드 합니다.
+USB Interface Board Driver를 다운로드 합니다.  
 	-  [USB Interface Board Window Driver]
 다운로드한 파일을 실행하고 가이드에 따라 드라이버를 설치합니다.
 **- USB Interface board - 02** (CH340x)
