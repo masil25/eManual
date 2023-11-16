@@ -94,6 +94,7 @@ USB Interface Board Driver를 다운로드 합니다.
 ![[ch340x_win_install.jpg]]
   
 **- USB Interface Board - 03** (FTDI)
+	-  [USB Interface Board Window Driver]
 ![[ftdi_win_install.png]]
 
 USB Interface Board를 PC와 연결합니다.
