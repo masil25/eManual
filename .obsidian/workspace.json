@@ -40,20 +40,9 @@
                 "staged": false
               }
             }
-          },
-          {
-            "id": "54635ddf8c310efe",
-            "type": "leaf",
-            "state": {
-              "type": "diff-view",
-              "state": {
-                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
-                "staged": true
-              }
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -196,11 +185,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "54635ddf8c310efe",
+  "active": "1ad332a29a76f100",
   "lastOpenFiles": [
+    "Total Manager/Total Manager User Manual_kor.md",
     "conflict-files-obsidian-git.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
-    "Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "total.md",
     "Protocl/Modbus.md",
