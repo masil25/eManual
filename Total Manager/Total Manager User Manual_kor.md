@@ -33,21 +33,20 @@ mightyZap을  제어하거나 Parameter를 변경 및 Monitoring을 할 수 있�
 ### 1.3.3 update
 mightyZap의 Firmware를 Update할 때 사용합니다. 당사의 Webpage에서 해당 모델에 맞는 업데이트 파일을 다운로드 받으신 후 업데이트를 진행 하실 수 있습니다.  
 또한, Update Fail 및 사용자의 실수로 인해 서보모터가 검색이 되지 않을 경우 Firmware를 검사 및 복구 하실 수도 있습니다.  
-![[update-view.jpg]]*caption*
+![[update-view.jpg]]
 # 2 Total Manager 다운로드 및 설치
-이 튜토리얼에서는 Windows. Mac 또는 Linux 컴퓨터에서 Total Manager를 다운로드하고 설치하는 방법을 보여줍니다.
-## 2.1 요구사항
-- Windows : windows 7(32bit) 이상  
+Total Manager는 Window , Mac OS, Linux 에서 모두 설치가 가능합니다.
+## 2.1 요구 사항
+- Windows : windows 7(32bit) / windows 10 64bit 이상
 - Mac OS : Big Sur 이상 64bit
 - Linux : Ubuntu LTD 20.04 64bit
 
 ## 2.2 Install
 ### 2.2.1 Windows
-Windows 컴퓨터에서 mightyZap Total Manager를 설치하려면 사용중인 Windows의 
+Windows 컴퓨터에서 mightyZap Total Manager를 설치하려면 사용 중인 Windows의 
 OS 버전을 확인하신 후 버전에 맞게 다운로드하여 주시기 바랍니다.  
 <font color="#4f81bd">OS Version 확인 방법</font>
 ![[windows_version_check.jpg]]
-
 
 다운로드한 파일을 실행하여, 설치 가이드의 지침에 따라 설치하시면 됩니다.  
 설치에는 몇 분 정도 걸릴 수 있습니다.
