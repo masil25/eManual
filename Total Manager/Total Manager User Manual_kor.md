@@ -205,7 +205,8 @@ Serial Port 를 Open하면 Option 항목이 활성화 됩니다.
 All 버튼을 누르게 되면 모든 선택하거나 모두 선택 해지를 하게 됩니다.
    ![[yrdy-2023-07-25_10.39.gif]]
   
-다음은 모델에 따른 기본 설정 값에 대한 예시 입니다.  
+다음은 모델에 따른 기본 설정 값에 대한 예시 입니다.   
+
 |   예시 모델         |   Protocol(dafault)                 |   Baudrate (dafault)          |
 |:------------------|:----------------------------|:---------------------|
 |   **Mini L12/12Lf**   | Own Protocol                |             57600pbs |
@@ -227,6 +228,7 @@ Actuator List는 Baudrate와 Protocol에 따라 분류되어 표시 되며,  Bau
 
 ### 3.2.2 정보 확인
 Actuator List를 선택하면 해당 Actuator의 정보가 표시되며, 이중 중요한 일부 정보가 Manager의 하단 Footer에 표시됩니다.
+<font color="#ff0000">!!! Dash board 설명 필요함 이미지 포함하여</font>
 ![[FooterDiscription.png]]
 Footer에 표시된 정보는 information Page가 아닌 다른 Page에서도 볼 수 있습니다. 
 ## 3.3 Parameter
@@ -234,7 +236,8 @@ mightyZap Actuator를 설정 및 간단한 동작 테스트를 하고, 동작 �
 Menu 선택 창에서 아래의 그림과 같은 아이콘을 클릭하면 해당 페이지로 이동합니다.
 ![[Parameter.png]]
 사용자 환경에 맞게 Stroke, ID, Baudrate 등을 설정하고 간단한 동작 테스트를 진행할 수 있습니다.  
-각 Parameter에 대한 설명은 해당 모델의 사용자 메뉴얼에서 Parameter 설명을 참조하시기 바랍니다.
+각 Parameter에 대한 설명은 해당 모델의 사용자 매뉴얼에서 Parameter 설명을 참조하시기 바랍니다.  
+
 ### 3.3.1 화면 구성
 Parameter 페이지의 구성은 Non-Volatile Memory 영역과 Volatile Memory 영역으로 나뉩니다.
 Non-volatile Meomory는 비 휘발성 메모리 영역의 Parameter로 수정 및 저장된 Data가 내부 Falsh Memeory에 저장이 되며, 모터의 전원이 꺼지게 되어도 지워지지 않고 저장되어있습니다.  
