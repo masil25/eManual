@@ -36,13 +36,24 @@
             "state": {
               "type": "diff-view",
               "state": {
-                "file": ".obsidian/workspace.json",
+                "file": "total.md",
+                "staged": false
+              }
+            }
+          },
+          {
+            "id": "54635ddf8c310efe",
+            "type": "leaf",
+            "state": {
+              "type": "diff-view",
+              "state": {
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
                 "staged": true
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -185,7 +196,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1ad332a29a76f100",
+  "active": "54635ddf8c310efe",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
