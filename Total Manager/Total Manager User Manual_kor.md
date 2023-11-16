@@ -82,7 +82,7 @@ $ sudo dpkg -i [file].deb
 Total Manager와 mightyZap Actuator와의 통신을 위하여 Serail convertor 가 필요합니다.  
 해당 설명은 당사의 USB Interface Board를 기준으로 설명이 되어있습니다.  
 먼저 USB Cable을 이용하여 PC와 연결하여 주시기 바랍니다.   
-> <font color="#ff0000">주의사항 </font>     
+> <font color="#ff0000">⛔ 주의사항 </font>     
 > <font color="#ff0000">충전 전용 케이블이 아닌 통신이 가능한 케이블을 사용하여 주셔야합니다.</font>
 
 ### 2.4.1 Windows
