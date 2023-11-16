@@ -24,6 +24,10 @@
   background-color : #ffecf7!important;
 }
 .HyperMD-codeblock-bg {
-  background-color : #e8ecef!important;
+  color : #fff!important;
+  background-color : #0e2f48!important;
+}
+.HyperMD-quote:before {
+  border: none!important;
 }
 
