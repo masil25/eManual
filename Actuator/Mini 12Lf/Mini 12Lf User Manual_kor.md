@@ -469,19 +469,72 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
    Short Stroke(A)또는 Long Stroke(C)상태의 한계 위치 값으로 Goal Position의 최대/최소 값이 됩니다. Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Stroke Limit 값보다 클 경우  Stroke Limit값으로 치환됩니다.  
    (범위 : 0 ~ 4095 )
    ![[StrokeLimit.png]]
-> 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.  운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
+> 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.  운영 중 빈번한 값의 변경은 주의하시기 바랍니다.   
 
 6. Protocol type (Default : IR Protocol)
-통신 Protocol 방식을 선택합니다. 
+통신 Protocol 방식을 선택합니다.  
 
+|설정값|Protocol|설명|
+|---|---|---|
+|0 (0x00)|Modbus RTU|산업용 RS485 표준 통신 Protocol<br><font color="#ff0000">※별도의 Modbus Protocol 사용자 매뉴얼을 참조하세요</font>|
+|1(0x01)|IR Protocol|IRROBOT 자체 통신  Protocol|
 
+> 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.  운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
+> Firmware Version 1.5 에서는 IR Protocol만 지원 하며, 해당 항목이 존재하지 않습니다.   (MODBUS RTU는 펌웨어 V2.0 이상에서 지원)  
 
+7. The Highest / Lowest Limit Voltage
+   입력 전원의 전압에 상한 / 하한 (단위 : 0.1V).  
+   입력 전압에 따라 Actuator의 속도, Force가 변경될 수 있습니다. 자세한 사항은 해당 모델 Datasheet참조.  
+   
+|항목|Default 값|
+|---|---|
+|Lowest voltage [하한 전압]|7.0[V]|
+|Hightest Voltage [상한 전압]|13[V]|
 
+8. Motor Operating Rate (0~1023 / Default : 1023)
+   모터의 최대 가동률을 값으로, 모터의 공급되는 최대 PWM 값을 나타냅니다.  
+   400 이하로 설정할 경우, 모터가 동작 하지 않을 수도 있습니다. Motor Operating Rate를 변경하면 속도와 Stall Force가 변경됩니다.  
+>    비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
+9. Feedback Return Mode
+   COMMAND Packet이 전송된 이후 Feedback Packet을 회신 결정 모드  
 
+|Mode|Feedback Packet Return 여부|
+|---|---|
+|0|모든 COMMAND에 대해 Feedback Packet을 전송하지 않음.<br>(단, Echo명령 패킷은 제외)|
+|1|Load Data명령에만 Feedback Packet을 전송|
+|2|모든 COMMAND에 대해 Feedback Packet을 전송|
+Broadcast ID(0xFE)일 때, Feedback Return Mode와 상관없이 Feedback Packet을 전송하지 않음.    
+> 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
+> Broadcast ID(0xFE) mode에서, feedback packet 은 Feedback Return Mode 값에 상관없이 보내지지 않습니다.   
 
+10. Alarm LED  (Default : 33)  
+    Error가 발생 했을 때,해당 bit가 1로 설정되어 있으면 LED표시를 수행한다. (1=활성 / 0=비활성)  
+
+|Error|bit|LED Indicate|
+|---|---|---|
+|Overload Error|5|Red 점멸|
+|Input Voltage Error|0|Red 지속점등|
+Input voltage Alarm의 경우 원인이 해결 되면 LED 알람이 사라집니다.   
+> 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.  운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
+
+Overload Error의 경우 원인이 해결되어도, LED 알람이 곧바로 해지 되지 않으며, 전원 재시작(Restart) 또는 전원 재부팅 명령을 내려야 Alarm이 해제됩니다.
+
+11. Alarm Shutdown (Default : 33)
+    Error가 발생 했을 때,해당 bit가 1로 설정되어 있으면 Force를 OFF (1=활성 / 0=비활성)
+
+|   |   |
+|---|---|
+|NONE|7|
+|NONE|6|
+|Overload Error|5|
+|NONE|4|
+|NONE|3|
+|NONE|2|
+|NONE|1|
+|Input Voltage Error|0|
 
 
 
