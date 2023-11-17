@@ -571,28 +571,54 @@ highest voltage 및 Overload Error의 경우 Force Off (shutdown) 되며, 전원
 	- 전류설정에 따른 stall force값의 차이는 데이터 시트의 그래프를 참고하여 주십시오.   
 > 	  비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 휘발성 파라메터인 Goal Current를 사용하시기 바랍니다.  
 
-14. Speed Limit (0~1023 / Default : 1023)
-	- 모터의 평균 이동속도 제한 값입니다(0~1023). 0일 때 기동력 OFF 상태이고 1023일 때 최대 속도를 냅니다.
-	- Speed Limit 를 변경해도 Force에 영향을 주지 않습니다.
-	- 다만, 너무 낮은 Speed Limit 설정 시 모터의 반응이 늦어지거나 움직이지 못할 수 있습니다. 
-	- Speed Limit 값을 변경할 경우 Goal Speed도 같이 변경됩니다.
-> 	  비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.
+14. Speed Limit (0~1023 / Default : 1023)  
+	- 모터의 평균 이동속도 제한 값입니다(0~1023). 0일 때 기동력 OFF 상태이고 1023일 때 최대 속도를 냅니다.  
+	- Speed Limit 를 변경해도 Force에 영향을 주지 않습니다.  
+	- 다만, 너무 낮은 Speed Limit 설정 시 모터의 반응이 늦어지거나 움직이지 못할 수 있습니다.   
+	- Speed Limit 값을 변경할 경우 Goal Speed도 같이 변경됩니다.  
+> 	  비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
-> 	Firmware Version 1.5 에서의 Goal Speed와 같습니다.
+> 	Firmware Version 1.5 에서의 Goal Speed와 같습니다.  
 
-15. Calibration Stroke
-	- Calibration Short Stroke : Short Stroke위치 보정 값, 공장에서 설정된 Short Stroke Calibration 값을 저장
-	- Calibration Long Stroke : Long Stroke위치 보정 값,공장에서 설정된 Long Stroke Calibration 값을 저장
+15. Calibration Stroke  
+	- Calibration Short Stroke : Short Stroke위치 보정 값, 공장에서 설정된 Short Stroke Calibration 값을 저장  
+	- Calibration Long Stroke : Long Stroke위치 보정 값,공장에서 설정된 Long Stroke Calibration 값을 저장  
 
-16. Acceleration / Deceleration (0~255 / Default : 개별 사양)
-	- 모터의 가감속률을 나타냅니다.
-	- Acceleration : 모터의 이동 시작 시의 가속도 값으로 값이 클 경우 모터가 급 가속을 하게 됩니다. 반대로 값이 낮을 경우 부드러운 가속을 하지만, 너무 낮을 경우 모터가 움직이지 않을 수도 있습니다.
-	- Deceleration : 모터의 위치 도달 시의 감속도 값으로 값이 클 경우 목표위치에서 급 감속을 하게 되어 목표 위치 값을 벗어나 정지하게 되고, 다시 벗어난 위치에서 목표위치로의 이동을 하게 되는 바운딩 현상이 나타나 정상적인 제동이 이루어지지 않을 수 있습니다. 너무 낮은 감속은 서보모터가 지나치게 느려지는 동작을 하게 되어 목표위치까지 도달하는 시간이 늦어질 수 있습니다.
-> 	  Acceleration / Deceleration 수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.
+16. Acceleration / Deceleration (0~255 / Default : 개별 사양)  
+    ![[DataDescription_AccelerationDeceleration.png]]
+	- 모터의 가감속률을 나타냅니다.  
+	- Acceleration : 모터의 이동 시작 시의 가속도 값으로 값이 클 경우 모터가 급 가속을 하게 됩니다. 반대로 값이 낮을 경우 부드러운 가속을 하지만, 너무 낮을 경우 모터가 움직이지 않을 수도 있습니다.  
+	- Deceleration : 모터의 위치 도달 시의 감속도 값으로 값이 클 경우 목표위치에서 급 감속을 하게 되어 목표 위치 값을 벗어나 정지하게 되고, 다시 벗어난 위치에서 목표위치로의 이동을 하게 되는 바운딩 현상이 나타나 정상적인 제동이 이루어지지 않을 수 있습니다. 너무 낮은 감속은 서보모터가 지나치게 느려지는 동작을 하게 되어 목표위치까지 도달하는 시간이 늦어질 수 있습니다.  
+> 	  Acceleration / Deceleration 수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.  
 
-비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 
-운영 중 빈번한 값의 변경은 주의하시기 바랍니다.
+> 	비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. > 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
+17. Current PI (0~255 / Default : 개별 사양)
+	- 모터의 전류제어를 위한 PI 값  
+	- 정해진 값이 보다 큰 PI값을 적용할 경우 Goal Current와의 오차에 대해 거칠게 동작할 수 있습니다.  
+	- 정해진 값보다 작은 PI값을 적용할 경우 Goal Current와의 오차에 부드럽게 동작하나 Goal Current 값과의 오차가 크게 나타날 수 있습니다.  
+> 	  수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.    
+> 	  비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
+
+18. Speed PID (0~255 / Default : 개별 사양)
+	- 모터의 속도제어를 위한 PID 값
+	- 정해진 값이 보다 큰 PID값을 적용할 경우 Goal Speed와의 오차에 대해 거칠게 동작하여 Overshoot 또는 과도 응답상태로 정해진 위치 값에 정지하지 못하고 모터가 진동할 수 있습니다.
+	- 정해진 값보다 작은 PI값을 적용할 경우 Goal Speed 와의 오차에 부드럽게 동작하나 Goal speed 값과의 오차가 크게 나타날 수 있습니다.
+> 	  수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.  
+> 	  비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.  운영 중 빈번한 값의 변경은 주의하시기 바랍니다.
+
+19. Min/Max Position Calibration (0~255 / Default : 개별 사양)
+	- Min Position : Goal Position의 값이 ‘0’일경우 최소 Stroke의 위치
+	- Max Position : Goal Position의 값이 ‘4095’일경우 최대 Stroke의 위치
+	  ![[Min.MaxPositionCalibration.png]]
+	  - Stroke Limit 명령과는 달리 Goal Position의 범위[0~4095]가 제한되지 않고 실제 사용 Stroke의 길이의 변화가 생깁니다.
+	- 각 서보모터의 출하 시 Min/Max Position 값은 ±0.5mm의 오차를 가지고 있습니다. 해서, Position Calibration 명령은 각 오차의 값을 보정하여, 동일한 Goal Position 값에 대한 약간씩 다른 서보들의 시작위치와 종료위치를 동기화 시킬 때 사용합니다.
+
+
+
+
+
+	  
 
 
 

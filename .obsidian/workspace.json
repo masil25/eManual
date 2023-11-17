@@ -159,7 +159,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -181,12 +181,13 @@
   },
   "active": "f7ac58792c286228",
   "lastOpenFiles": [
-    "Actuator/Mini 12Lf/img/UseSpanner.png",
-    "StrokeLimit.png",
-    "StrokeLimit.png.md",
+    "Actuator/Mini 12Lf/img/Min.MaxPositionCalibration.png",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
-    "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
     "Actuator/Mini 12Lf/img/StrokeLimit.png",
+    "StrokeLimit.png.md",
+    "Actuator/Mini 12Lf/img/DataDescription_AccelerationDeceleration.png",
+    "Actuator/Mini 12Lf/img/UseSpanner.png",
+    "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
     "무제 파일.md",
     "Actuator/Mini 12Lf/img/DaisyChainConnection.png",
     "Actuator/Mini 12Lf/img/Commu_spec_PWMPulseMode.png",
@@ -194,8 +195,6 @@
     "Actuator/Mini 12Lf/img/Communication_MainController.png",
     "Actuator/Mini 12Lf/img/CircuitConnection_TTL.png",
     "Actuator/Mini 12Lf/img/Dimension_12Lf-xx-53.png",
-    "Actuator/Mini 12Lf/img/Dimension_12Lf-xx-40.png",
-    "Actuator/Mini 12Lf/img/12Lf_Standard_Accessories.png",
     "Pasted image 20231117110531.png.md",
     "UseSpanner.  png.md",
     "BrokenRod.  png.md",
