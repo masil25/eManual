@@ -234,14 +234,34 @@ Command Packet
 ### 4.1.1. TTL/PWM (3핀 커넥터-모델명 12Lfxx-xx<font color="#ff0000">PT</font>-xx 계열)
 마이티잽(12Lf-xxPT-xx)을 TTL레벨로 제어 하기 위해서 제어기의 UART 신호를 Half Duplex type로 변환 시켜야 합니다. 이때 변환 회로는 아래 그림과 같습니다.  
 
-![[Circuit Connection_TTL.png]]
-위의 회로도에서 TTL Level의 Tx와 Rx는 DIRECTION_PORT의 Level에 따라 다음과 같이 Data 신호의 방향이 결정됩니다.
-	- DIRECTION_PORT의 신호 Level이 LOW인 경우 :Data의 신호가 Rx로 입력
-	- DIRECTION_PORT의 신호 Level이 HIGH인 경우 :Tx 의 신호가 Data로 출력
-	※ 위 다이어그램과 같이 통신 제어기와 액츄에이터의 GND는 서로 연결이 되어야 합니다.
-> 
+![[CircuitConnection_TTL.png]]
+위의 회로도에서 TTL Level의 Tx와 Rx는 DIRECTION_PORT의 Level에 따라 다음과 같이 Data 신호의 방향이 결정됩니다.  
+	- DIRECTION_PORT의 신호 Level이 LOW인 경우 :Data의 신호가 Rx로 입력  
+	- DIRECTION_PORT의 신호 Level이 HIGH인 경우 :Tx 의 신호가 Data로 출력  
+	※ 위 다이어그램과 같이 통신 제어기와 액츄에이터의 GND는 서로 연결이 되어야 합니다.  
+> ※ PWM통신의 경우, 위 청색 Data핀에 3~5V의 PWM 시그널선을 연결해 주면 됩니다 (전원 연결도 위 그림과 동일).  
+※ PWM통신을 이용하는 경우, 데이터 통신 지원이 안되므로, 위치 명령은 가능하지만 현재 위치값 등의 Feedback data를 받을 수 없으며, 시리얼 Daisy chain 연결을 지원하지 않습니다.  
+※ Feedback data 수신과 Daisy chain연결은 TTL 또는 RS-485통신을 통해 가능합니다.  
+
 
 ### 4.1.2. RS-485 (4핀 커넥터- 모델명 12Lf-xx<font color="#ff0000">F</font>-xx 계열)
+mightyZAP (12Lf-xxF-xx)을 제어하기 위해 RS485 통신방식을 사용합니다.  
+이때 핀맵과 변환회로는 다음 페이지의 그림과 같습니다.  
+
+|PIN NUMBER(COLOR)|PIN NAME|FUNCTION(RS485)|
+|---|---|---|
+|1(황색)|D-|RS485 –|
+|2(백색)|D+|RS485 +|
+|3(적색)|VCC|전원 +|
+|4(흑색)|GND|전원 -|
+※ 전원이 별도로 외부에서 공급되는 경우에는, 485 D+, 485 D-만 연결해도 동작에 문제가 없습니다.
+![[CircuitConnection_RS485.png]]
+위의 회로도에서DIRECTION_PORT핀을 제어하여 RS485의 TX및 RX 모드를 변환할 수 있습니다.  
+	- DIRECTION_PORT의 신호 Level이 LOW인 경우 :Data의 신호가 Rx로 입력
+	- DIRECTION_PORT의 신호 Level이 HIGH인 경우 :Tx의 신호가 Data로 출력
+	※ 위 다이어그램과 같이 통신 제어기와 액츄에이터의 GND는 서로 연결이 되어야 합니다.
+
+
 ## 4.2. 통신
 ### 4.2.1. Specification
 ### 4.2.2. Data Map

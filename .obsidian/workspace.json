@@ -146,7 +146,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -168,7 +168,8 @@
   },
   "active": "7739f073fb872f59",
   "lastOpenFiles": [
-    "Actuator/Mini 12Lf/img/Circuit Connection_TTL.png",
+    "Actuator/Mini 12Lf/img/CircuitConnection_TTL.png",
+    "Actuator/Mini 12Lf/img/CircuitConnection_RS485.png",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Actuator/Mini 12Lf/img/Dimension_12Lf-xx-53.png",
     "Actuator/Mini 12Lf/img/Dimension_12Lf-xx-40.png",
@@ -178,7 +179,6 @@
     "Actuator/Mini 12Lf/img/Dimension_12Lf-xx-27.png",
     "Actuator/Mini 12Lf/img/UseSpanner.png",
     "Actuator/Mini 12Lf/img/Dimension_12Lf-xx-90 (mm).png",
-    "Actuator/Mini 12Lf/img/Dimension_12Lf-xx-40 (mm).png",
     "Pasted image 20231117110531.png.md",
     "UseSpanner.  png.md",
     "BrokenRod.  png.md",
