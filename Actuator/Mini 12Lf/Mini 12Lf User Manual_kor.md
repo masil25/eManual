@@ -187,7 +187,7 @@ Command Packet
 - 실시간 자동 폭 조정 장치
 - 실시간 자동 얼라인먼트 시스템 (상/하 또는 좌/우)
 - 자동 밸브 컨트롤 
-- 자동 디스펜싱 시스템
+- 자동 디스펜싱 시스템 
 - 클램핑 구동부
 - 고정 또는 거리 조정
 - Pick & Place
@@ -254,12 +254,14 @@ mightyZAP (12Lf-xxF-xx)을 제어하기 위해 RS485 통신방식을 사용합�
 |2(백색)|D+|RS485 +|
 |3(적색)|VCC|전원 +|
 |4(흑색)|GND|전원 -|
-※ 전원이 별도로 외부에서 공급되는 경우에는, 485 D+, 485 D-만 연결해도 동작에 문제가 없습니다.
+
+※ 전원이 별도로 외부에서 공급되는 경우에는, 485 D+, 485 D-만 연결해도 동작에 문제가 없습니다.  
+
 ![[CircuitConnection_RS485.png]]
 위의 회로도에서DIRECTION_PORT핀을 제어하여 RS485의 TX및 RX 모드를 변환할 수 있습니다.  
-	- DIRECTION_PORT의 신호 Level이 LOW인 경우 :Data의 신호가 Rx로 입력
-	- DIRECTION_PORT의 신호 Level이 HIGH인 경우 :Tx의 신호가 Data로 출력
-	※ 위 다이어그램과 같이 통신 제어기와 액츄에이터의 GND는 서로 연결이 되어야 합니다.
+	- DIRECTION_PORT의 신호 Level이 LOW인 경우 :Data의 신호가 Rx로 입력  
+	- DIRECTION_PORT의 신호 Level이 HIGH인 경우 :Tx의 신호가 Data로 출력  
+	※ 위 다이어그램과 같이 통신 제어기와 액츄에이터의 GND는 서로 연결이 되어야 합니다.  
 
 
 ## 4.2. 통신
