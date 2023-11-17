@@ -11,11 +11,9 @@
             "id": "7739f073fb872f59",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
-                "mode": "source",
-                "source": false
+                "file": "Actuator/Mini 12Lf/img/ACC_IR_GT01.png"
               }
             }
           },
@@ -23,13 +21,16 @@
             "id": "f7ac58792c286228",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 12Lf/img/ACC_IR-MB02.png"
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -176,19 +177,19 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7739f073fb872f59",
+  "active": "f7ac58792c286228",
   "lastOpenFiles": [
-    "Actuator/Mini 12Lf/img/ACC_IR-USB02.png",
+    "Actuator/Mini 12Lf/img/ACC_IR-MB02.png",
+    "Actuator/Mini 12Lf/img/ACC_IR_GT01.png",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+    "Actuator/Mini 12Lf/img/ACC_IR-CT01.png",
+    "Actuator/Mini 12Lf/img/ACC_IR-EW00.png",
+    "Actuator/Mini 12Lf/img/ACC_IR-STS02.png",
+    "Actuator/Mini 12Lf/img/ACC_IR-EB01.png",
+    "Actuator/Mini 12Lf/img/mightyZAPManager.png",
+    "Actuator/Mini 12Lf/img/ACC_IR-USB02.png",
     "Actuator/Mini 12Lf/img/ACC_IR-MB04.png",
     "Actuator/Mini 12Lf/img/ACC_IR-MB03.png",
-    "Actuator/Mini 12Lf/img/ACC_IR-MB02.png",
-    "IR-MB03(640x640) 복사.png",
-    "Pasted image 20231117145258.png",
-    "Pasted image 20231117145250.png",
-    "IR-MB02-2.png",
-    "Actuator/Mini 12Lf/img/Min.MaxPositionCalibration.png",
-    "Actuator/Mini 12Lf/img/StrokeLimit.png",
     "StrokeLimit.png.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
     "무제 파일.md",
