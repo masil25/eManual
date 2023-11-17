@@ -270,7 +270,7 @@ Controller와 마이티잽은 packet을 주고 받으며 통신합니다. Packet
 
 ### 4.2.1. Specification
 
-1. Communication specification  
+#### 4.2.1.1. Communication specification  
 - 2 Mode in One (Pulse / Data Mode Auto-Switching)  
   입력 신호에 따라 자동적으로 데이터 모드와 펄스 모드의 전환이 이루어집니다.  
 - Data Mode (TTL / RS-485)  
@@ -283,6 +283,24 @@ Controller와 마이티잽은 packet을 주고 받으며 통신합니다. Packet
 |Data Size|8bit|
 |Parity|non-parity|
 |Stop Bit|One bit|
+
+⚠ <font color="#ff0000">주의</font> 안정적인 통신을 위한 지연시간
+> MightyZap은 반이중 통신 방식으로, 데이터 읽고 쓰기 중 데이터 충돌이 나지 않도록, 데이터 쓰기 중에는 5msec, 데이터 읽어오기 중에는 10msec 정도의 지연 시간을 주어야 안정적으로 통신을 할 수 있습니다.  해당 지연시간을 지키지 않을 경우 통신 충돌로 인한 서보액츄에이터의 이상동작이 발생할 수 있습니다. 위의 지연시간은 최소 지연시간이 아닌 안전을 고려한 적정 지연 시간입니다
+
+- PWM Pulse Mode 
+  PPM(Pulse Position Modulation) Compatible (Radio-Control Servo Pulse Mode) 
+  흔히,RC용 서보에 사용하는 Pulse 규격을 사용합니다. 위치명령이 가능하지만, 여타 피드백 데이터는 없습니다.
+  ![[Pasted image 20231117120111.png]]
+
+
+
+
+
+
+
+
+
+
 
 ### 4.2.2. Data Map
 #### 4.2.2.1. IR 프로토콜
