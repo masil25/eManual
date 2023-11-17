@@ -265,7 +265,25 @@ mightyZAP (12Lf-xxF-xx)을 제어하기 위해 RS485 통신방식을 사용합�
 
 
 ## 4.2. 통신
+![[Communication_MainController.png]]
+Controller와 마이티잽은 packet을 주고 받으며 통신합니다. Packet의 종류로는 Main controller에서 마이티잽으로 전송되는Command Packet과 마이티잽에서 제어기로 전송되는 Feedback Packet이 있습니다.  
+
 ### 4.2.1. Specification
+
+1. Communication specification  
+- 2 Mode in One (Pulse / Data Mode Auto-Switching)  
+  입력 신호에 따라 자동적으로 데이터 모드와 펄스 모드의 전환이 이루어집니다.  
+- Data Mode (TTL / RS-485)  
+   마이티잽은8 bit, 1 Stop bit, None Parity의 Asynchronous Serial 통신을 합니다.  
+
+|Item|Spec|
+|---|---|
+|Structure|Half-duplex UART|
+|Baud Rate|57600bps(default)|
+|Data Size|8bit|
+|Parity|non-parity|
+|Stop Bit|One bit|
+
 ### 4.2.2. Data Map
 #### 4.2.2.1. IR 프로토콜
 #### 4.2.2.2 MODBUS RTU (이 부분만 모드버스 매뉴얼에서)
