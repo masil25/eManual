@@ -365,20 +365,56 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 |53 (0x35)|Current Limit (H)|전류 값 한계치 상위 바이트|RW|3 (0x03)|
 
 ##### 4.2.2.1.2. Parameter Map
-**Parameter 사용 데이터(Volatile)**
-	- 전원인가 시 매번 Default값으로 초기화합니다.
+**Parameter 사용 데이터(Volatile)  **
+	- 전원인가 시 매번 Default값으로 초기화합니다.  
 
+|Address|Name|Description|Access|Default|
+|---|---|---|---|---|
+|128 (0x80)|Force ON/OFF|기동력 켜기|RW|1 (0x01)|
+|129 (0x81)|LED|LED On/Off|RW|0 (0x00)|
+|134 (0x86)|Goal Position(L)|목표 위치 값의 하위 바이트|RW|-|
+|135 (0x87)|Goal Position(H)|목표 위치 값의 상위 바이트|RW|-|
+|136 (0x88)|Goal Speed(L)|목표 속도 값의 하위 바이트|RW|Speed Limit|
+|137 (0x89)|Goal Speed(H)|목표 속도 값의 상위 바이트|RW|Speed Limit|
+|138 (0x8a)|Goal Current(L)|목표 전류 값의 하위 바이트|RW|Current Limit|
+|139 (0x8b)|Goal Current(H)”|목표 전류 값의 상위 바이트|RW|Current Limit|
+|140 (0x8C)|Present Position(L)|현재 위치 값의 하위 바이트|R|-|
+|141 (0x8D)|Present Position(H)|현재 위치 값의 상위 바이트|R|-|
+|142 (0x8e)|Present Current(L)|현재 전류 값의 하위 바이트|R|-|
+|143 (0x8f)|Present Current (H)|현재 전류 값의 상위 바이트|R|-|
+|144 (0x90)|Present Motor Operating Rate (L)|현재 모터가동률의 하위 바이트|R|-|
+|145 (0x91)|Present Motor Operating Rate(H)|현재 모터가동률의 상위 바이트|R|-|
+|146 (0x92)|Present Voltage|현재 전압|R|-|
+|150 (0x96)|Moving|움직임 유무|R|0 (0x00)|
 
-
-
-
-
-
-
-
-
+<font color="#ff0000">** 펌웨어 V2.0이상부터 적용  </font>  
 
 #### 4.2.2.2 MODBUS RTU (이 부분만 모드버스 매뉴얼에서)
+##### 4.2.2.2.1 Data Memory Map
+multi write 기능은 지원하지 않습니다.  
+Reset명령 수행 시 모든 데이터는 Default값으로 설정되게 됩니다.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### 4.2.3. Data Description
 
 

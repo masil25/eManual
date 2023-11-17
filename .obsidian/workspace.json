@@ -6,6 +6,7 @@
       {
         "id": "8e185326cee59db9",
         "type": "tabs",
+        "dimension": 17.825311942959,
         "children": [
           {
             "id": "7739f073fb872f59",
@@ -33,6 +34,21 @@
           }
         ],
         "currentTab": 1
+      },
+      {
+        "id": "0896fd22479757d0",
+        "type": "tabs",
+        "dimension": 82.174688057041,
+        "children": [
+          {
+            "id": "5e391da207b03de1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown-table-editor-view",
+              "state": {}
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -163,7 +179,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 469.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -179,7 +195,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "3c8f0a42222ab22e",
+  "active": "5e391da207b03de1",
   "lastOpenFiles": [
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "무제 파일.md",
