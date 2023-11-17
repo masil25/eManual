@@ -87,15 +87,19 @@ Total Manager와 mightyZap과의 통신을 위하여 Serial Convertor 가 필요
 > <font color="#ff0000">충전 전용 케이블이 아닌 통신이 가능한 케이블을 사용하여 주셔야합니다.</font>
 
 ### 2.4.1 Windows
-USB Interface Board Driver를 다운로드 합니다.  
-	-  [USB Interface Board Window Driver]
-다운로드한 파일을 실행하고 가이드에 따라 드라이버를 설치합니다.
-**- USB Interface board - 02** (CH340x)
-![[ch340x_win_install.jpg]]
-  
-**- USB Interface Board - 03** (FTDI)
-![[ftdi_win_install.png]]
+당사의 Interface Board 는 2가지 Type으로 되어있으며, 각 버전에 따라 드라이버를 다르게 설치해야 합니다. 아래의 설명을 참조하여 드라이버를 설치 합니다.
 
+- **IR-USB02 Driver 설치** (CH340x)
+	아래의 링크에서 IR-USB03의 Driver를 다운로드 합니다.
+	다운로드 받은 파일을 실행한 후 INSTALL 버튼을 클릭하여 드라이버를 설치합니다
+	![[ch340x_win_install.jpg]]
+- **IR-USB03 Driver 설치**  
+	아래의 링크에서 IR-USB03의 Driver를 다운로드 합니다.  
+	-  [USB Interface Board Window Driver]  
+	다운로드 받은 파일을 실행하여 드라이버를 설치합니다.  
+	![[ftdi_win_install.png|650]]
+
+- **Interface Board 연결 확인**
 USB Interface Board를 PC와 연결합니다.
 [시스템]-[장치관리자]-[port]에서 Serial Port가 정상적으로 연결되었는지 확인합니다.  
 정장적으로 연결되어 있을 경우 이미지에서와 같이 새로운 com port가 추가되는것을 확인할 수 있습니다.
@@ -126,7 +130,7 @@ $ sudo dmesg | grep ch34
 ```
 ##### 2) FTDI Driver
 FTDI Driver는 USB-02를 제외한 모든 모델에서 사용됩니다.  
-FTDI VCP 드라이버는 Linux  커널에 내장되어 있으므로 이 드라이버는 있습니다. 모든 FTDI 장치에 VCP 드라이버 지원이 있는지 확인하기 위해 FTDI는 Linux  시스템에 최신 커널 릴리즈를 설치할 것을 권장합니다. Linux 에서는 VCP 드라이버가 /dev/ttyUSBx로 표시됩니다.  
+FTDI VCP 드라이버는 Linux  커널에 내장되어 있습니다. 모든 FTDI 장치에 VCP 드라이버 지원이 있는지 확인하기 위해 FTDI는 Linux  시스템에 최신 커널 릴리즈를 설치할 것을 권장합니다. Linux 에서는 VCP 드라이버가 /dev/ttyUSBx로 표시됩니다.  
 Comport를 확인하는 방법 :  
 - USB Interface board를 PC와 Cable로 연결한다.
 - 터미널 창을 열고 다음을 입력하면 다음과 같이 출력이 나타납니다.
@@ -156,14 +160,11 @@ $ ls -l /dev/ttyUSB0
 crw-rw---- 1 root dialout 188,  0 11월  1 10:49 /dev/ttyUSB0  
 ```
 
-
 "id Gn" 명령을 통해 현재 로그인 중인 사용자가 속한 그룹을 확인합니다.
-
 ```baSH
 $ id -Gn  
 user adm cdrom sudo dip plugdev  
 ```
-
 
 현재 로그인한 사용자에서 dialout 그룹이 포함되어 있지 않기 때문에, 현재 사용자에게 dialout 그룹을 추가해 줍니다.
 ```bash
@@ -173,7 +174,6 @@ Adding user 'user' to group 'dialout' ...
 Adding user user to group dialout
 Done
 ```
-
 
 그룹에 추가 한 후에는 반드시 로그아웃 후 로그인 해야 변경 사항이 적용 됩니다.
 ### 2.4.3 Mac OS
@@ -187,7 +187,7 @@ USB Interface Board를 PC와 연결합니다.
 [이미지]  
 # 3 Total Manager Description
 ## 3.1 통신 연결 및 검색
-아래의 이미지와 같이 프로그램을 실행 한 후 상단 메뉴바에서 Scan 버튼을 누르면 Actuator Scan을 위한 팝업 창이 활성화 됩니다.   
+아래의 이미지와 같이 프로그램을 실행 한 후 상단 매뉴바에서 Scan 버튼을 누르면 Actuator Scan을 위한 팝업 창이 활성화 됩니다.   
 ![[ConnectAndSCAN.png]]
 ### 3.1.1 SCAN 화면 구성
 Actuaotor Scan 팝업 창의 화면 구성은 아래와 같습니다.  
@@ -205,8 +205,8 @@ Serial Port 를 Open하면 Option 항목이 활성화 됩니다.
 All 버튼을 누르게 되면 모든 선택하거나 모두 선택 해지를 하게 됩니다.
    ![[yrdy-2023-07-25_10.39.gif]]
   
-다음은 모델에 따른 기본 설정 값에 대한 예시 입니다.  
- 
+다음은 모델에 따른 기본 설정 값에 대한 예시 입니다.   
+
 |   예시 모델         |   Protocol(dafault)                 |   Baudrate (dafault)          |
 |:------------------|:----------------------------|:---------------------|
 |   **Mini L12/12Lf**   | Own Protocol                |             57600pbs |
@@ -228,6 +228,7 @@ Actuator List는 Baudrate와 Protocol에 따라 분류되어 표시 되며,  Bau
 
 ### 3.2.2 정보 확인
 Actuator List를 선택하면 해당 Actuator의 정보가 표시되며, 이중 중요한 일부 정보가 Manager의 하단 Footer에 표시됩니다.
+<font color="#ff0000">!!! Dash board 설명 필요함 이미지 포함하여</font>
 ![[FooterDiscription.png]]
 Footer에 표시된 정보는 information Page가 아닌 다른 Page에서도 볼 수 있습니다. 
 ## 3.3 Parameter
@@ -235,7 +236,8 @@ mightyZap Actuator를 설정 및 간단한 동작 테스트를 하고, 동작 �
 Menu 선택 창에서 아래의 그림과 같은 아이콘을 클릭하면 해당 페이지로 이동합니다.
 ![[Parameter.png]]
 사용자 환경에 맞게 Stroke, ID, Baudrate 등을 설정하고 간단한 동작 테스트를 진행할 수 있습니다.  
-각 Parameter에 대한 설명은 해당 모델의 사용자 메뉴얼에서 Parameter 설명을 참조하시기 바랍니다.
+각 Parameter에 대한 설명은 해당 모델의 사용자 매뉴얼에서 Parameter 설명을 참조하시기 바랍니다.  
+
 ### 3.3.1 화면 구성
 Parameter 페이지의 구성은 Non-Volatile Memory 영역과 Volatile Memory 영역으로 나뉩니다.
 Non-volatile Meomory는 비 휘발성 메모리 영역의 Parameter로 수정 및 저장된 Data가 내부 Falsh Memeory에 저장이 되며, 모터의 전원이 꺼지게 되어도 지워지지 않고 저장되어있습니다.  
