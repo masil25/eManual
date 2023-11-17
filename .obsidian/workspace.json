@@ -6,6 +6,7 @@
       {
         "id": "8e185326cee59db9",
         "type": "tabs",
+        "dimension": 16.64572864321608,
         "children": [
           {
             "id": "7739f073fb872f59",
@@ -17,6 +18,21 @@
                 "mode": "source",
                 "source": false
               }
+            }
+          }
+        ]
+      },
+      {
+        "id": "e8ca284bb3c55830",
+        "type": "tabs",
+        "dimension": 83.35427135678391,
+        "children": [
+          {
+            "id": "107b2c1dea60ea20",
+            "type": "leaf",
+            "state": {
+              "type": "markdown-table-editor-view",
+              "state": {}
             }
           }
         ]
@@ -150,7 +166,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 469.5
+    "width": 469.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
