@@ -438,6 +438,7 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 <font color="#ff0000">** 펌웨어 버전 2.0이상부터 적용 (이전 버전에는 default 0)</font>
 
 ### 4.2.3. Data Description
+#### 4.2.3.1. 비휘발성 메모리 영역
 
 1. Model Number   
    MightyZAP의 모델 번호입니다.  
@@ -598,28 +599,49 @@ highest voltage 및 Overload Error의 경우 Force Off (shutdown) 되며, 전원
 	- 정해진 값이 보다 큰 PI값을 적용할 경우 Goal Current와의 오차에 대해 거칠게 동작할 수 있습니다.  
 	- 정해진 값보다 작은 PI값을 적용할 경우 Goal Current와의 오차에 부드럽게 동작하나 Goal Current 값과의 오차가 크게 나타날 수 있습니다.  
 > 	  수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.    
-> 	  비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
+> 	  비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.   
 
-18. Speed PID (0~255 / Default : 개별 사양)
-	- 모터의 속도제어를 위한 PID 값
-	- 정해진 값이 보다 큰 PID값을 적용할 경우 Goal Speed와의 오차에 대해 거칠게 동작하여 Overshoot 또는 과도 응답상태로 정해진 위치 값에 정지하지 못하고 모터가 진동할 수 있습니다.
-	- 정해진 값보다 작은 PI값을 적용할 경우 Goal Speed 와의 오차에 부드럽게 동작하나 Goal speed 값과의 오차가 크게 나타날 수 있습니다.
-> 	  수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.  
-> 	  비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.  운영 중 빈번한 값의 변경은 주의하시기 바랍니다.
+18. Speed PID (0~255 / Default : 개별 사양)  
+	- 모터의 속도제어를 위한 PID 값  
+	- 정해진 값이 보다 큰 PID값을 적용할 경우 Goal Speed와의 오차에 대해 거칠게 동작하여 Overshoot 또는 과도 응답상태로 정해진 위치 값에 정지하지 못하고 모터가 진동할 수 있습니다.  
+	- 정해진 값보다 작은 PI값을 적용할 경우 Goal Speed 와의 오차에 부드럽게 동작하나 Goal speed 값과의 오차가 크게 나타날 수 있습니다.  
+> 	  수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.    
+> 	  비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.  운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
-19. Min/Max Position Calibration (0~255 / Default : 개별 사양)
-	- Min Position : Goal Position의 값이 ‘0’일경우 최소 Stroke의 위치
-	- Max Position : Goal Position의 값이 ‘4095’일경우 최대 Stroke의 위치
+19. Min/Max Position Calibration (0~255 / Default : 개별 사양)  
+	- Min Position : Goal Position의 값이 ‘0’일경우 최소 Stroke의 위치  
+	- Max Position : Goal Position의 값이 ‘4095’일경우 최대 Stroke의 위치  
 	  ![[Min.MaxPositionCalibration.png]]
-	  - Stroke Limit 명령과는 달리 Goal Position의 범위[0~4095]가 제한되지 않고 실제 사용 Stroke의 길이의 변화가 생깁니다.
-	- 각 서보모터의 출하 시 Min/Max Position 값은 ±0.5mm의 오차를 가지고 있습니다. 해서, Position Calibration 명령은 각 오차의 값을 보정하여, 동일한 Goal Position 값에 대한 약간씩 다른 서보들의 시작위치와 종료위치를 동기화 시킬 때 사용합니다.
+	  - Stroke Limit 명령과는 달리 Goal Position의 범위[0~4095]가 제한되지 않고 실제 사용 Stroke의 길이의 변화가 생깁니다.  
+	- 각 서보모터의 출하 시 Min/Max Position 값은 ±0.5mm의 오차를 가지고 있습니다. 해서, Position Calibration 명령은 각 오차의 값을 보정하여, 동일한 Goal Position 값에 대한 약간씩 다른 서보들의 시작위치와 종료위치를 동기화 시킬 때 사용합니다.  
+
+| Parameter| Goal Position 범위| 비고|
+|---|---|---|
+| Stroke Limit| Short Stroke Limit ~ Long Stroke Limit | 가용 스트로크 범위 제한 없이,입력범위(0~4095)만 제한            |
+| Position Calibration |0~4095(최대사용) | 입력범위 (0~4095) 제한은 없으나, 가용 스트로크 범위가 변동될 수 있음. |  
+	(예, 12Lf-20F-27의 Min Position 3.8mm/ Min Position Calibration값이 5 일 경우, Min Position Calibration 값을 높이면 Min Position 값이 늘어나고 전체 Stroke 구간은 Min Position이 늘어남만큼 줄어들게 됩니다.)   
+> 	비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
 
+#### 4.2.3.2. 휘발성 메모리 영역
+20. Force ON/OFF (Default : 1 / Force ON)
+    - 기동력 활성화 여부 설정 ( 0일 때 OFF, 1일 때 ON)
+    
+|value|동작상태|
+|---|---|
+|0|모터의 전원을 차단하여서 기동력이 발생 되지 않도록 합니다.|
+|1|모터의 전원을 인가하여서 기동력이 발생하도록 합니다.|
+> <font color="#245bdb">> **TIP**</font>
+> <font color="#245bdb">> 당사 리니어 서보는 모터의 전원이 해제되어도 기구적인 설계 특성상 위치를 고수하려는 특성이 있습니다. 27N이상 정격부하 사양의 제품은 전원 차단 시에도 기구적인 마찰력으로 위치를 고수합니다. 따라서, 설비에서 서보 모터가 특정 위치를 지속적으로 고수하고 있어야 하는 경우 Force Off 명령으로 모터 전원을 차단하여 모터의 수명을 연장시킬 수 있습니다. 이 경우 통신은 여전히 유지되며, 모터의 전원만 차단됩니다. 다시 위치 이동 명령을 내리게 되면 자동으로 Force ON되어 다음 명령을 수행하게 됩니다.</font>
 
+21. LED
+	- Error 표시가 되지 않을 때 사용자가 임의로 LED 제어하여 디스플레이 효과를 낼 수 있음. (LED에러표시가 우선)
 
-
-	  
-
+|bit|동작상태|
+|---|---|
+|0|LED Disable (1일 때 모두 꺼짐)|
+|1|RED LED 제어|
+|2|GREEN LED 제어|
 
 
 
