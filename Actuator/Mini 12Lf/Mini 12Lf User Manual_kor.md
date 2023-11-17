@@ -290,10 +290,13 @@ Controller와 마이티잽은 packet을 주고 받으며 통신합니다. Packet
 - PWM Pulse Mode 
   PPM(Pulse Position Modulation) Compatible (Radio-Control Servo Pulse Mode) 
   흔히,RC용 서보에 사용하는 Pulse 규격을 사용합니다. 위치명령이 가능하지만, 여타 피드백 데이터는 없습니다.
-  ![[Pasted image 20231117120111.png]]
+  ![[Commu_spec_PWMPulseMode.png]]
+<font color="#ff0000">※ Period (8ms~23ms) 20ms 추천  </font>  
 
-
-
+> ※ PWM 제어는 노이즈에 취약함으로 한번의 PWM 신호로 제어하지 않고, 특정 주파수로 끊어지지않게  연속적으로 포화방식의 신호를 보내줘야 합니다. 추천 frequency는 50Hz(20ms) 입니다.  
+>※ PWM통신을 이용하는 경우, 데이터 통신 지원이 안되므로, 위치 명령은 가능하지만 현재 위치값 등의 Feedback data를 받을 수 없으며, 시리얼 Daisy chain 연결을 지원하지 않습니다.   
+>※ Feedback data 수신과 Daisy chain연결은 TTL 또는 RS-485통신을 통해 가능합니다.  
+>※ 아래와 같은 방식으로도 PWM제어가 가능합니다.  Frequency 50Hz / Duty rate 4.5% ~ 10.5%. (0.05% 단위로 제어)추천 frequency는 50Hz(20ms)  
 
 
 
