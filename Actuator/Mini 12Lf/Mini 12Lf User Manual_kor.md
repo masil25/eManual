@@ -298,7 +298,25 @@ Controller와 마이티잽은 packet을 주고 받으며 통신합니다. Packet
 >※ Feedback data 수신과 Daisy chain연결은 TTL 또는 RS-485통신을 통해 가능합니다.  
 >※ 아래와 같은 방식으로도 PWM제어가 가능합니다.  Frequency 50Hz / Duty rate 4.5% ~ 10.5%. (0.05% 단위로 제어)추천 frequency는 50Hz(20ms)  
 
+#### 4.2.1.2. Data specification  
+데이터 모드와 펄스 모드에서 아래와 같은 데이터 범위로 기본지정 되어있습니다.   
 
+|Rod Stroke|Data Mode|Pulse Mode|
+|---|---|---|
+|Short (수축) Stroke|0|900us|
+|Half Stroke|2047|1500us|
+|Long (확장) Stroke**|4095**|2100us|
+
+> <font color="#245bdb">TIP </font>
+> 27mm스트로크 제품은 공장 출하 시 27mm로 셋팅 되어 출하되나, 30mm를 모두 사용해야 하는 경우 사용자가 설정 가능.  27mm의 데이터 값은 3686입니다.  (횡부하 관련 기구적인 안정성을 위해 가급적 27mm사용을 권장합니다.)  
+
+#### 4.2.1.3. Daisy-Chain Connection  
+ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 개의 MIGHTY ZAP중 ID가 N인 서보만이 Feedback Packet을 return하고, 그 Command를 수행합니다.  
+![[DaisyChainConnection.png]]
+⚠ <font color="#ff0000">주의</font>  Unique ID  
+> 여러 개의 마이티잽이 동시에 Packet을 전송하면 Packet충돌이 일어나서 통신에 문제를 일으킵니다. 그러므로 Network Node안에 ID가 같은 마이티잽이 존재하지 않도록 ID설정을 해야 합니다.
+TTL통신의 경우 이론적으로 253개의 ID를 설정하고 연결할 수 있으며, RS-485 통신의 경우 253개의 ID설정은 가능하지만 표준 규정상 노드 제한으로 인해 연결가능 한 서보액츄에이터는 32개입니다. 
+출하 시 ID가 0으로 되어 있으므로, 여러개의 액츄에이터로 Daisy chain 구성시 0~253까지의 ID가 겹치지 않도록 각 액츄에이터 ID를 설정해주시면 됩니다.
 
 
 
