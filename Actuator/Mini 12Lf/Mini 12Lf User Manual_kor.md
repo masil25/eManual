@@ -391,31 +391,97 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 
 #### 4.2.2.2 MODBUS RTU (이 부분만 모드버스 매뉴얼에서)
 ##### 4.2.2.2.1 Data Memory Map
-multi write 기능은 지원하지 않습니다.  
-Reset명령 수행 시 모든 데이터는 Default값으로 설정되게 됩니다.  
+- multi write 기능은 지원하지 않습니다.  
+- Reset명령 수행 시 모든 데이터는 Default값으로 설정되게 됩니다.  
 
+| Address | addr   | Name                                 | Access | Default       | MIN | MAX  | Type                |
+|:--------|:-------|:-------------------------------------|:-------|:--------------|:----|:-----|:--------------------|
+|   40001 | 0x0000 | Model Number                         | R      | -             |     |      |                     |
+|   40002 | 0x0001 | Version of Firmware                  | R      | -             |     |      |                     |
+|   40003 | 0x0002 | ID                                   | RW     |             1 |   1 |  247 |                     |
+|   40004 | 0x0003 | Baud Rate                            | RW     |      32(0x20) |  16 |  128 |                     |
+|   40005 | 0x0004 | Protocol Type (MODBUS RTU / IRROBOT) | RW     |             0 |   0 |    1 |                     |
+|   40006 | 0x0005 | Short Stroke Limit                   | RW     |     0(0x0000) |   0 | 4095 |                     |
+|   40007 | 0x0006 | Long Stroke Limit                    | RW     | 개별Spec        |   0 | 4095 |                     |
+|   40008 | 0x0007 | Lowest Limit Voltage                 | R      |            70 | -   | -    |                     |
+|   40009 | 0x0008 | Highest Limit Voltage                | R      |           130 | -   | -    |                     |
+|   40010 | 0x0009 | Alarm LED                            | RW     |            33 | -   | -    |                     |
+|   40011 | 0x000a | Alarm Shutdown                       | RW     |            33 | -   | -    |                     |
+|   40012 | 0x000b | Start Compliance Margin              | RW     |             7 |   0 |  255 |                     |
+|   40013 | 0x000c | End Compliance Margin                | RW     |             2 |   0 |  255 |                     |
+|   40014 | 0x000d | Speed Limit                          | RW     |          1023 |   0 | 1023 |                     |
+|   40015 | 0x000e | Current Limit                        | RW     |           800 |   0 | 1600 |                     |
+|   40016 | 0x000f | Calibration Short Stroke             | R      | 개별Spec        |   0 | 4095 |                     |
+|   40017 | 0x0010 | Calibration Long Stroke              | R      | 개별Spec        |   0 | 4095 |                     |
+|   40018 | 0x0011 | Acceleration Ratio                   | RW     | 개별Spec        |   0 |  255 |                     |
+|   40019 | 0x0012 | Deceleration Ratio                   | RW     | 개별Spec        |   0 |  255 |                     |
+|   40020 | 0x0013 | Current I Gain                       | RW     | 개별Spec        |   0 |  255 |                     |
+|   40021 | 0x0014 | Current P Gain                       | RW     | 개별Spec        |   0 |  255 |                     |
+|   40022 | 0x0015 | Speed D Gain                         | RW     | 개별Spec        |   0 |  255 |                     |
+|   40023 | 0x0016 | Speed I Gain                         | RW     | 개별Spec        |   0 |  255 |                     |
+|   40024 | 0x0017 | Speed P Gain                         | RW     | 개별Spec        |   0 |  255 |                     |
+|   40025 | 0x0018 | Min Stroke Position                  | RW     | 개별Spec        |   0 |  255 |                     |
+|   40026 | 0x0019 | Max Stroke Position                  | RW     | 개별Spec        |   0 |  255 | ^비휘발성(Non-Volatile) |
+|         |        |                                      |        |               |     |      |                     |
+|   40051 | 0x0032 | Force ON/OFF                         | RW     |           1** |   0 |    1 |                     |
+|   40052 | 0x0033 | LED                                  | RW     |             0 |   0 |  255 |                     |
+|   40053 | 0x0034 | Goal Position                        | RW     | -             |   0 | 4095 |                     |
+|   40054 | 0x0035 | Goal Speed                           | RW     | Speed Limit   |   0 | 1023 |                     |
+|   40055 | 0x0036 | Goal Current                         | RW     | Current Limit |   0 | 1600 |                     |
+|   40056 | 0x0037 | Present Position                     | R      | -             |   0 | 4095 |                     |
+|   40057 | 0x0038 | Present Current                      | R      | -             |   0 | 1600 |                     |
+|   40058 | 0x0039 | Present Motor Operating Rate         | R      | -             |   0 | 2048 |                     |
+|   40059 | 0x003a | Present Voltage                      | R      | -             |   0 |  255 |                     |
+|   40060 | 0x003b | Moving                               | R      | -             |   0 |    1 |                     |
+|   40061 | 0x003c | Hardware Error State                 | R      |             0 |   0 |  255 | ^휘발성 (Volatile)     |  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<font color="#ff0000">** 펌웨어 버전 2.0이상부터 적용 (이전 버전에는 default 0)</font>
 
 ### 4.2.3. Data Description
+
+1. Model Number   
+   MightyZAP의 모델 번호입니다.  
+   모델을 구별하고 인지하기 위하여 읽기 전용으로 사용합니다.  
+2. Version of Firmware  
+   펌웨어 버전 정보가 저장되어 현재 마이티잽의 펌웨어 버전이 최신인지 확인하여 최신 펌웨어로 유지하도록 합니다.  
+3. ID (0~254 / Default : 0)  
+   서보를 식별 하기 위한 고유 번호,Daisy-Chain방식으로 연결된 서보들은 서로 다른 ID가 할당되어야 합니다.  
+   - ID = 0 ~253 일 때, 미리 저장된 ID와 비교하여 선별적으로 동작함  
+   - ID = 254 (0xFE) 일 때, Broadcasting Mode로 동작하며 Feedback Packet은 동작하지 않음  
+4. Baud Rate  
+   통신 속도를 결정, Default 통신속도는 57600bps  
+   설정값으로 통신 속도 변경하고자 할 때는 서보 액츄에이터의 시스템을 재시작 하여야 합니다.
+
+|설정값|통신속도(bps)|
+|---|---|
+|16 (0x10)|115200|
+|32 (0x20)|57600|
+|48(0x30)|38400|
+|64 (0x40)|19200|
+|128 (0x80)|9600|
+**설정값 변환표**
+
+> 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.
+
+> Firmware Version 1.5이하 에서는 Baudrate 38400bps는 지원하지 않습니다.
+
+5. Stroke Limit (0~4095)
+   Short Stroke(A)또는 Long Stroke(C)상태의 한계 위치 값으로 Goal Position의 최대/최소 값이 됩니다. Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Stroke Limit 값보다 클 경우  Stroke Limit값으로 치환됩니다.
+   ![[StrokeLimit.png]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 '''## 4.2. 통신
