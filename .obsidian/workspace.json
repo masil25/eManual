@@ -43,6 +43,18 @@
             }
           },
           {
+            "id": "be50cbe475b06d17",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "15feaff32582734a",
             "type": "leaf",
             "state": {
@@ -55,7 +67,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -121,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Total Manager/Total Manager User Manual_kor.md",
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -138,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Total Manager/Total Manager User Manual_kor.md",
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Total Manager/Total Manager User Manual_kor.md"
+                "file": "conflict-files-obsidian-git.md"
               }
             }
           },
@@ -202,23 +214,23 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1ad332a29a76f100",
+  "active": "be50cbe475b06d17",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
     "Total Manager/Total Manager User Manual_kor.md",
+    "conflict-files-obsidian-git.md",
+    "Actuator/Mini 12Lf/img/mightyZAPManager.png",
+    "Actuator/Mini 12Lf/img/ACC_IR_GT01.png",
+    "Actuator/Mini 12Lf/img/ACC_IR-USB02.png",
+    "Actuator/Mini 12Lf/img/ACC_IR-STS02.png",
+    "Actuator/Mini 12Lf/img/ACC_IR-MB04.png",
+    "Actuator/Mini 12Lf/img/ACC_IR-MB03.png",
+    "Actuator/Mini 12Lf/img/ACC_IR-MB02.png",
+    "Actuator/Mini 12Lf/img/ACC_IR-EW00.png",
+    "Actuator/Mini 12Lf/img/ACC_IR-EB01.png",
+    "Actuator/Mini 12Lf/img/ACC_IR-CT01.png",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
-    "Total Manager/img/macOS_install.png",
-    "Actuator/Mini 17Lf/img/macOS_install.png",
-    "Actuator/Mini 12Lf/img/StrokeLimit.png",
-    "Actuator/Mini 12Lf/img/Min.MaxPositionCalibration.png",
-    "Actuator/Mini 12Lf/img/DataDescription_AccelerationDeceleration.png",
     "무제 파일.md",
     "StrokeLimit.png.md",
-    "StrokeLimit.png",
-    "Actuator/Mini 12Lf/img/Rod_end_tip_M3Nut.png",
-    "Actuator/Mini 12Lf/img/Dimension_12Lf-xx-90.png",
-    "Actuator/Mini 12Lf/img/Dimension_12Lf-xx-53.png",
-    "Actuator/Mini 12Lf/img/Dimension_12Lf-xx-40.png",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "total.md",
     "Protocl/Modbus.md",

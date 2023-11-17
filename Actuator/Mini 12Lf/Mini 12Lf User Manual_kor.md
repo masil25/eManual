@@ -438,6 +438,7 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 <font color="#ff0000">** 펌웨어 버전 2.0이상부터 적용 (이전 버전에는 default 0)</font>
 
 ### 4.2.3. Data Description
+#### 4.2.3.1. 비휘발성 메모리 영역
 
 1. Model Number   
    MightyZAP의 모델 번호입니다.  
@@ -598,43 +599,101 @@ highest voltage 및 Overload Error의 경우 Force Off (shutdown) 되며, 전원
 	- 정해진 값이 보다 큰 PI값을 적용할 경우 Goal Current와의 오차에 대해 거칠게 동작할 수 있습니다.  
 	- 정해진 값보다 작은 PI값을 적용할 경우 Goal Current와의 오차에 부드럽게 동작하나 Goal Current 값과의 오차가 크게 나타날 수 있습니다.  
 > 	  수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.    
-> 	  비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
+> 	  비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.   
 
-18. Speed PID (0~255 / Default : 개별 사양)
-	- 모터의 속도제어를 위한 PID 값
-	- 정해진 값이 보다 큰 PID값을 적용할 경우 Goal Speed와의 오차에 대해 거칠게 동작하여 Overshoot 또는 과도 응답상태로 정해진 위치 값에 정지하지 못하고 모터가 진동할 수 있습니다.
-	- 정해진 값보다 작은 PI값을 적용할 경우 Goal Speed 와의 오차에 부드럽게 동작하나 Goal speed 값과의 오차가 크게 나타날 수 있습니다.
-> 	  수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.  
-> 	  비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.  운영 중 빈번한 값의 변경은 주의하시기 바랍니다.
+18. Speed PID (0~255 / Default : 개별 사양)  
+	- 모터의 속도제어를 위한 PID 값  
+	- 정해진 값이 보다 큰 PID값을 적용할 경우 Goal Speed와의 오차에 대해 거칠게 동작하여 Overshoot 또는 과도 응답상태로 정해진 위치 값에 정지하지 못하고 모터가 진동할 수 있습니다.  
+	- 정해진 값보다 작은 PI값을 적용할 경우 Goal Speed 와의 오차에 부드럽게 동작하나 Goal speed 값과의 오차가 크게 나타날 수 있습니다.  
+> 	  수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.    
+> 	  비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.  운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
-19. Min/Max Position Calibration (0~255 / Default : 개별 사양)
-	- Min Position : Goal Position의 값이 ‘0’일경우 최소 Stroke의 위치
-	- Max Position : Goal Position의 값이 ‘4095’일경우 최대 Stroke의 위치
+19. Min/Max Position Calibration (0~255 / Default : 개별 사양)  
+	- Min Position : Goal Position의 값이 ‘0’일경우 최소 Stroke의 위치  
+	- Max Position : Goal Position의 값이 ‘4095’일경우 최대 Stroke의 위치  
 	  ![[Min.MaxPositionCalibration.png]]
-	  - Stroke Limit 명령과는 달리 Goal Position의 범위[0~4095]가 제한되지 않고 실제 사용 Stroke의 길이의 변화가 생깁니다.
-	- 각 서보모터의 출하 시 Min/Max Position 값은 ±0.5mm의 오차를 가지고 있습니다. 해서, Position Calibration 명령은 각 오차의 값을 보정하여, 동일한 Goal Position 값에 대한 약간씩 다른 서보들의 시작위치와 종료위치를 동기화 시킬 때 사용합니다.
+	  - Stroke Limit 명령과는 달리 Goal Position의 범위[0~4095]가 제한되지 않고 실제 사용 Stroke의 길이의 변화가 생깁니다.  
+	- 각 서보모터의 출하 시 Min/Max Position 값은 ±0.5mm의 오차를 가지고 있습니다. 해서, Position Calibration 명령은 각 오차의 값을 보정하여, 동일한 Goal Position 값에 대한 약간씩 다른 서보들의 시작위치와 종료위치를 동기화 시킬 때 사용합니다.  
+
+| Parameter| Goal Position 범위| 비고|
+|---|---|---|
+| Stroke Limit| Short Stroke Limit ~ Long Stroke Limit | 가용 스트로크 범위 제한 없이,입력범위(0~4095)만 제한            |
+| Position Calibration |0~4095(최대사용) | 입력범위 (0~4095) 제한은 없으나, 가용 스트로크 범위가 변동될 수 있음. |  
+	(예, 12Lf-20F-27의 Min Position 3.8mm/ Min Position Calibration값이 5 일 경우, Min Position Calibration 값을 높이면 Min Position 값이 늘어나고 전체 Stroke 구간은 Min Position이 늘어남만큼 줄어들게 됩니다.)   
+> 	비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
 
+#### 4.2.3.2. 휘발성 메모리 영역
+20. Force ON/OFF (Default : 1 / Force ON)
+    - 기동력 활성화 여부 설정 ( 0일 때 OFF, 1일 때 ON)  
+    
+|value|동작상태|
+|---|---|
+|0|모터의 전원을 차단하여서 기동력이 발생 되지 않도록 합니다.|
+|1|모터의 전원을 인가하여서 기동력이 발생하도록 합니다.|
+> <font color="#245bdb">> **TIP**</font>
+> <font color="#245bdb">> 당사 리니어 서보는 모터의 전원이 해제되어도 기구적인 설계 특성상 위치를 고수하려는 특성이 있습니다. 27N이상 정격부하 사양의 제품은 전원 차단 시에도 기구적인 마찰력으로 위치를 고수합니다. 따라서, 설비에서 서보 모터가 특정 위치를 지속적으로 고수하고 있어야 하는 경우 Force Off 명령으로 모터 전원을 차단하여 모터의 수명을 연장시킬 수 있습니다. 이 경우 통신은 여전히 유지되며, 모터의 전원만 차단됩니다. 다시 위치 이동 명령을 내리게 되면 자동으로 Force ON되어 다음 명령을 수행하게 됩니다.</font>
 
+21. LED
+	- Error 표시가 되지 않을 때 사용자가 임의로 LED 제어하여 디스플레이 효과를 낼 수 있음.   (LED에러표시가 우선) 
 
+|bit|동작상태|
+|---|---|
+|0|LED Disable (1일 때 모두 꺼짐)|
+|1|RED LED 제어|
+|2|GREEN LED 제어|
 
-	  
+22. Goal Position (0~4095)
+	- 목표 위치의 값. 이동 시키고자 하는 위치 값입니다. 목표위치 값은 Short/Long stroke limit 설정치에 영향을 받습니다. (즉, stroke limit 범위 밖으로는 위치 명령을 내려도 stroke limit위치까지만 움직임)  
+	- 27mm stroke제품의 경우, Long stroke limit설정으로 인해 27mm에서의 Goal position 값은 3686입니다. 원할 경우 30mm(4095)로 늘려 사용할 수 있습니다.   
 
+23. Goal Speed (0~1023 / Default : 1023)
+	- 모터의 평균 이동속도 목표값(0~1023). 액츄에이터의 동작 중 속도변경을 원하는 경우 사용합니다.   
+	- 초기 전원 인가시 비휘발성 Speed Limit에서 값을 불러와 Goal Speed에 저장합니다.  
+	- Speed Limit 명령보다 빠르게 반응하며, 가동 중 실시간으로 속도를 변경하는 데 사용할 수 있습니다.  
+	- 0일 때 기동력 OFF 상태이고 1023일 때 최대 속도를 냅니다.  
+	- Goal Speed를 변경해도 Force에 영향을 주지 않습니다.  
+	- 다만, 너무 낮은 값을 설정 시 모터의 반응이 늦어지거나 움직이지 못할 수 있습니다.   
 
+24. Goal Current (0~1600 / Default : 800)
+	- 모터의 최대 전류 제한 값입니다(0~1600). 즉, 모터의 최대힘인 stall 전류를 제어하여 stall force를 조정합니다.  
+	- 기능적으로는 비휘발성 파라메터인 Current Limit과 동일하지만, 동작중의 빈번한 전류설정 변경은, 응답이 빠른 휘발성 파라메터인 Goal Current 명령을 사용하시기 바랍니다.   
+	- 제어값은 0~1600으로 설정하며, 제어값 1600은 최대 stall 전류값 1600mA를 나타냅니다. (오차범위 :+/-15%)  
+	- 공장 출하시에는 800(mA)으로 셋팅되어 유사시 불필요한 최대 stall 전류사용을 방지하되, 최대속도를 보장합니다.   
+	- Stall force에 가깝게 Goal Current를 설정할수록 과부하 상황에서 모터가 낼 수 있는 최대 force도 올라가지만, 모터 수명단축의 원인이 될 수도 있습니다.  
+	- 메모리에 저장되는 비휘발성 파라메터인 Current Limit 값은 초기설정에서만 설정하시기를 권장하며, 동작 중 빈번한 전류 변경은 휘발성 파라메터인 Goal Current명령을 사용하시기를 추천드립니다.                    
+	- 비휘발성 Current Limit 값을 변경할 경우, 전원재인가시 휘발성 파라메터인 Goal Current 도 같이 변경됩니다.  
+	- 제품마다의 내부 기구저항 편차에 따라 저전류(200mA이하) 설정에서는 액츄에이터의 동작이 불규칙하거나 움직이지 않을 수도 있으니, 가급적 200mA이상의 전류설정을 해 주시기 바랍니다.   
+	- 전류설정에 따른 stall force값의 차이는 데이터 시트의 그래프를 참고하여 주십시오.   
 
+25. Present Position [0~4095]
+	- 현재 Stroke 위치 값을 나타냅니다.  
+	- 0~4095의 범위로 표시되며 모터가 정지한 후에도 margin 값 이내의 미세한 위치 변동이 나타날 수 있으며 이는 정상동작입니다.  
 
+26. Present Motor Operating Rate [0~2047]
+	- Motor의 현재 가동률의 값 입니다.   
+	- Goal current와 Goal speed, 가감속 조정등에 따라 달리 표시됩니다.   
+	- 0~2047의 범위로 표시 됩니다.  
+	- 0은 모터가 정지한 상태를 나타냅니다.  
+	- 1~1023 범위의 값은 Short Stroke(수축) 방향으로의 모터 가동률 상태이고,  
+	- 1024~2047 범위의 값은 Long Stroke(확장) 방향으로의 모터 가동률 상태입니다.  
 
+27. Present Current [0~1600]
+	- Motor의 현재 전류 사용 값 입니다.  
+	- 0~1600의 범위로 표시 됩니다.  
+	- 전류 값은 실제 전류값의 오차를 포함한 값으로, 참고 용도로 사용하시기 바랍니다.  
 
+28. Present Voltage
+	- 현재 입력 전압 값이며 단위는 0.1V입니다.  
+	- 예를 들어, 74이면 7.4V입니다.  
 
+29. Moving
+	- 움직임 유무  
 
-
-
-
-
-
-
-
-
+|Value|Description|
+|---|---|
+|0|Motor 정지 상태|
+|1|Motor 가동 중|
 
 
 '''## 4.2. 통신
@@ -644,8 +703,70 @@ highest voltage 및 Overload Error의 경우 Force Off (shutdown) 되며, 전원
 ''### 4.2.4. Data Description
 <font color="#ff0000">''### 4.2.5. Command 예제 Packet (삭제)</font>
 # 5. 별매 악세서리
+## 5.1. 메탈 브라켓 (IR-MB02/IR-MB03/IR-MB04) 
+
+![[ACC_IR-MB02.png]]
+ - IR-MB02  
+![[ACC_IR-MB03.png]]
+- IR-MB03  
+![[ACC_IR-MB04.png]]
+- IR-MB04  
+IR-MB02는 27mm 스트로크 제품 전용 가로 고정 브라켓입니다. 수직/전면 고정을 위해 IR-MB04를 사용하시기 바랍니다. 41/56/96mm 스트로크 제품은 케이스에 내부 장착된 마운팅 홀을 통해 취부가능하지만, 전용 IR-MB03을 통해 보다 유연한 설치가 가능합니다.  도면을 공개하고 있어, 고객사에서 직접 제작도 가능합니다.    
+## 5.2. PC USB Interface (IR-USB02)
+![[ACC_IR-USB02.png]]
+IR-USB02을 사용하면 PC를 통하여 아래와 같은 제어를 할 수 있습니다.   
+전용 PC 소프트웨어 mightyZAP Manager가 제공됩니다.  
+![[mightyZAPManager.png]]
+- 운용 파라메터 및 저장 메모리 셋팅
+- 모션 테스트
+- 전압, 온도, 현재 위치, 전류, 전압, 모터 가동률 모니터링
+- 시스템 초기화 및 펌웨어 업데이트
+
+## 5.3. 엔드베어링 (IR-EB01)
+![[ACC_IR-EB01.png]]
+브라켓을 통한 고정이 아닌, 로드엔드와힌지부에 베어링을 장착하여 최적의 설치 및 운용이 가능하도록 합니다. M2.5와 M3규격의 엔드베어링 1셋트를 구성합니다.  
+
+## 5.4. 아두이노 기반 EZ Controlller (IR-CT01)
+![[ACC_IR-CT01.png]]
+제어기가 없는 고객사를 위한 mightyZAP전용 컨트롤러/테스터
+간단한 조작의 아두이노 기반 컨트롤러
+기본 제어 프로그램 내장, 사용자 프로그래밍 가능 (아두이노 예제 제공)
+위치 지정 다이얼, 위치명령 버튼스위치, 위치명령 슬라이드 내장
+외부 스위치 또는 전압레벨 신호를 통한 제어 가능
+아날로그/디지털 센서 연결을 위한 별도 3개씩의 I/O 핀 제공
+블루투스 또는 지그비(Zigbee) 통신을 위한 외부통신 단자
+
+## 5.5. 라즈베리파이 HAT (IR-STS02)
+![[ACC_IR-STS02.png]]
+Raspberry Pi B3 또는 Raspberry Pi Zero에 호환되는 HAT(Hardware Attached on Top) 보드입니다. mightyZAP Raspberry Pi HAT 제품은 40 GPIO 핀을 통해서 라즈베리파이의 위에 바로 결합할 수 있는 제품입니다. TTL, RS-485, PWM 통신 인터페이스와 GPIO핀을 내장하고 있어 Raspberry Pi를 통한 mightyZAP 제어가 가능합니다. 
+
+## 5.6. 별매 익스텐션 와이어 (IR-EW01~10)
+![[ACC_IR-EW00.png]]
+산업현장에서 필요에 따라 사용할 수 있는 확장된 길이의 익스텐션 와이어입니다. 
+- IR-EW01 :Extension wire - 3pin TTL 1000mm
+- IR-EW02 :Extension wire - 3pin TTL 2000mm
+- IR-EW03 :Extension wire - 4pin RS-485 2000mm
+- IR-EW04 :Extension wire - 4pin RS-485 4000mm
+- IR-EW08 :Extension wire - 3pin TTL 500mm
+- IR-EW09 :Extension wire - 4pin RS-485 500mm
+- IR-EW10 :Extension wire - 4pin RS-485 1000mm
+쉴드 처리가 되어 있지 않으므로 노이즈 환경이 많은 설비에서는, 별도의 쉴드 와이어를 사용하시기 바랍니다. 배선을 위한 커넥터와 커넥터 터미널은 당사에서 별도로 구매가 가능합니다.
+
+## 5.7. 로드앤드 팁 (IR-GT01) 
+![[ACC_IR_GT01.png]]
+Rod-End Grip Tip은 mightyZAP의 rod end에 연질의 패드가 부착된 팁을 장착하여, 어플리케이션 대상체에 물리적인 손상을 주지 않도록 하는 제품입니다. 예를 들어, Flat grip tip에 고무/실리콘 패드를 부착하여, 상처나기 쉬운 물체를 밀거나 접촉하여 제어할 때, 또는 실리콘의 마찰력을 이용해서 물체를 잡거나 들어올릴 때 사용할 수 있습니다.
+
+
+> 추가적인 악세서리 정보는 당사 웹사이트의 악세서리 메뉴를 참고하시기 바랍니다. 
+ 
+
 # 6. 보증 및 수리
 ## 6.1. 보증 및 수리
+마이티잽의 보증기간은 구매일로부터 1년입니다. 보증 수리를 받기 위해서는 제품 구매일을 증명할 수 있는 영수증 등을 지참하시어 구매처 또는 본사 고객만족실로 문의를 하여 주시기 바랍니다.  단, 정상적인 기어의 마모, 와이어 피복의 벗겨짐, 모터의 소손 등 사용자의 오용과 과실에 따르는 문제는 보증에서 제외됩니다. 또한, 임의 분해 및 임의 수리에 따르는 고장 또한 보증 대상에서 제외되오니, 모든 수리는 지정된 업체에 의해 진행되어야 함을 양지하여 주시기 바랍니다.  
+
+
+
+> (주) 아이알로봇 고객만족실 070-7600-9466 / 경기도 부천시 원미구 평천로 655 부천테크노파크 401동 1303호 /   이메일 :cs@irrobot.com
 
 
 
