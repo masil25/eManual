@@ -69,10 +69,8 @@ $ sudo dpkg -i [file].deb
 ### 2.2.3 Mac OS
 Mac OS 전용 패키지를 다운로드 합니다.
 	- [Mac OS Software 다운로드](https://github.com/mightyZap25/Total-Manager/releases/download/v0.8.1/latest.yml) 
-Debian/Ubuntu 기반 배포용 Total Manager를 설치하기 위해서는 다음과 같은 Command Line을 통해 .deb 패키지(64bit)를 다운로드하고 설치하는 것입니다.
-```
-$ sudo dpkg -i [file].deb
-
+다운로드 파일을 더블 클릭하면 아래와 같이 설치 화면이 나타납니다. mightyZap Total Manager 아이콘을 드래그 하여 Applications에 놓으면 설치가 완료됩니다. 
+![[Total Manager/img/macOS_install.png|500]]
 ## 2.3 화면 구성
 화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Footer로 구성되어있다.  
 ![[mainView-description.jpg]]
