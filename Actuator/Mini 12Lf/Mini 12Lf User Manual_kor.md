@@ -231,8 +231,17 @@ Command Packet
 
 # 4. 서보제어
 ## 4.1. 서보 회로 연결
-### 4.1.1. 
-### 4.1.1. 
+### 4.1.1. TTL/PWM (3핀 커넥터-모델명 12Lfxx-xx<font color="#ff0000">PT</font>-xx 계열)
+마이티잽(12Lf-xxPT-xx)을 TTL레벨로 제어 하기 위해서 제어기의 UART 신호를 Half Duplex type로 변환 시켜야 합니다. 이때 변환 회로는 아래 그림과 같습니다.  
+
+![[Circuit Connection_TTL.png]]
+위의 회로도에서 TTL Level의 Tx와 Rx는 DIRECTION_PORT의 Level에 따라 다음과 같이 Data 신호의 방향이 결정됩니다.
+	- DIRECTION_PORT의 신호 Level이 LOW인 경우 :Data의 신호가 Rx로 입력
+	- DIRECTION_PORT의 신호 Level이 HIGH인 경우 :Tx 의 신호가 Data로 출력
+	※ 위 다이어그램과 같이 통신 제어기와 액츄에이터의 GND는 서로 연결이 되어야 합니다.
+> 
+
+### 4.1.2. RS-485 (4핀 커넥터- 모델명 12Lf-xx<font color="#ff0000">F</font>-xx 계열)
 ## 4.2. 통신
 ### 4.2.1. Specification
 ### 4.2.2. Data Map
