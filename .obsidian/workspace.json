@@ -23,16 +23,13 @@
             "id": "f7ac58792c286228",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
-                "mode": "source",
-                "source": false
+                "file": "Actuator/Mini 12Lf/img/ACC_IR-MB02.png"
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -179,22 +176,22 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f7ac58792c286228",
+  "active": "7739f073fb872f59",
   "lastOpenFiles": [
-    "Actuator/Mini 12Lf/img/Min.MaxPositionCalibration.png",
+    "Actuator/Mini 12Lf/img/ACC_IR-USB02.png",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+    "Actuator/Mini 12Lf/img/ACC_IR-MB04.png",
+    "Actuator/Mini 12Lf/img/ACC_IR-MB03.png",
+    "Actuator/Mini 12Lf/img/ACC_IR-MB02.png",
+    "IR-MB03(640x640) 복사.png",
+    "Pasted image 20231117145258.png",
+    "Pasted image 20231117145250.png",
+    "IR-MB02-2.png",
+    "Actuator/Mini 12Lf/img/Min.MaxPositionCalibration.png",
     "Actuator/Mini 12Lf/img/StrokeLimit.png",
     "StrokeLimit.png.md",
-    "Actuator/Mini 12Lf/img/DataDescription_AccelerationDeceleration.png",
-    "Actuator/Mini 12Lf/img/UseSpanner.png",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
     "무제 파일.md",
-    "Actuator/Mini 12Lf/img/DaisyChainConnection.png",
-    "Actuator/Mini 12Lf/img/Commu_spec_PWMPulseMode.png",
-    "Actuator/Mini 12Lf/img/CircuitConnection_RS485.png",
-    "Actuator/Mini 12Lf/img/Communication_MainController.png",
-    "Actuator/Mini 12Lf/img/CircuitConnection_TTL.png",
-    "Actuator/Mini 12Lf/img/Dimension_12Lf-xx-53.png",
     "Pasted image 20231117110531.png.md",
     "UseSpanner.  png.md",
     "BrokenRod.  png.md",

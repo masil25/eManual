@@ -704,8 +704,16 @@ highest voltage 및 Overload Error의 경우 Force Off (shutdown) 되며, 전원
 <font color="#ff0000">''### 4.2.5. Command 예제 Packet (삭제)</font>
 # 5. 별매 악세서리
 ## 5.1. 메탈 브라켓 (IR-MB02/IR-MB03/IR-MB04) 
-IR-MB02는 27mm 스트로크 제품 전용 가로 고정 브라켓입니다. 수직/전면 고정을 위해 IR-MB04를 사용하시기 바랍니다. 41/56/96mm 스트로크 제품은 케이스에 내부 장착된 마운팅 홀을 통해 취부가능하지만, 전용 IR-MB03을 통해 보다 유연한 설치가 가능합니다.  도면을 공개하고 있어, 고객사에서 직접 제작도 가능합니다.
+
+![[ACC_IR-MB02.png]]
+ - IR-MB02  
+![[ACC_IR-MB03.png]]
+- IR-MB03  
+![[ACC_IR-MB04.png]]
+- IR-MB04  
+IR-MB02는 27mm 스트로크 제품 전용 가로 고정 브라켓입니다. 수직/전면 고정을 위해 IR-MB04를 사용하시기 바랍니다. 41/56/96mm 스트로크 제품은 케이스에 내부 장착된 마운팅 홀을 통해 취부가능하지만, 전용 IR-MB03을 통해 보다 유연한 설치가 가능합니다.  도면을 공개하고 있어, 고객사에서 직접 제작도 가능합니다.  
 ## 5.2. PC USB Interface (IR-USB02)
+![[ACC_IR-USB02.png]]
 IR-USB02을 사용하면 PC를 통하여 아래와 같은 제어를 할 수 있습니다. 
 전용 PC 소프트웨어 mightyZAP Manager가 제공됩니다.
 - 운용 파라메터 및 저장 메모리 셋팅
