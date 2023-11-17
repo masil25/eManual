@@ -67,6 +67,11 @@ Debian/Ubuntu 기반 배포용 Total Manager를 설치하기 위해서는 다음
 $ sudo dpkg -i [file].deb
 ```
 ### 2.2.3 Mac OS
+Mac OS 전용 패키지를 다운로드 합니다.
+	- [Mac OS Software 다운로드](https://github.com/mightyZap25/Total-Manager/releases/download/v0.8.1/latest.yml) 
+Debian/Ubuntu 기반 배포용 Total Manager를 설치하기 위해서는 다음과 같은 Command Line을 통해 .deb 패키지(64bit)를 다운로드하고 설치하는 것입니다.
+```
+$ sudo dpkg -i [file].deb
 
 ## 2.3 화면 구성
 화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Footer로 구성되어있다.  
