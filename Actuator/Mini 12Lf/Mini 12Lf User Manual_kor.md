@@ -160,14 +160,14 @@ Command Packet
 
 ### 2.2.1. 27mm Stroke 제품군  
 <font color="#245bdb">공장 출하 시 27mm stroke제품은 27mm로 셋팅 되어 출하되며, 필요에 따라 사용자가 서보 매니져 프로그램을 통해 30mm까지 확장 가능 (기구안정성을 위해 27mm사용 권장)</font>
-![[Dimension_12Lf-xx-27 (mm).png]]
+![[Dimension_12Lf-xx-27.png]]
 
 ### 2.2.2. 40mm Stroke 제품군
-![[Dimension_12Lf-xx-40 (mm).png]]
+![[Dimension_12Lf-xx-40.png]]
 ### 2.2.3. 53mm Stroke 제품군
-![[Dimension_12Lf-xx-53 (mm).png]]
+![[Dimension_12Lf-xx-53.png]]
 ### 2.2.4. 90mm Stroke 제품군
-![[Dimension_12Lf-xx-90 (mm).png]]
+![[Dimension_12Lf-xx-90.png]]
 ## 2.3. 사양
 ### 2.3.1. 상세스펙표
 
