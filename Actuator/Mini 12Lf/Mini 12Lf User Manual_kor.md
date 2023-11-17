@@ -315,26 +315,79 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 ![[DaisyChainConnection.png]]
 ⚠ <font color="#ff0000">주의</font>  Unique ID  
 > 여러 개의 마이티잽이 동시에 Packet을 전송하면 Packet충돌이 일어나서 통신에 문제를 일으킵니다. 그러므로 Network Node안에 ID가 같은 마이티잽이 존재하지 않도록 ID설정을 해야 합니다.
-TTL통신의 경우 이론적으로 253개의 ID를 설정하고 연결할 수 있으며, RS-485 통신의 경우 253개의 ID설정은 가능하지만 표준 규정상 노드 제한으로 인해 연결가능 한 서보액츄에이터는 32개입니다. 
-출하 시 ID가 0으로 되어 있으므로, 여러개의 액츄에이터로 Daisy chain 구성시 0~253까지의 ID가 겹치지 않도록 각 액츄에이터 ID를 설정해주시면 됩니다.
-
-
-
-
-
+> TTL통신의 경우 이론적으로 253개의 ID를 설정하고 연결할 수 있으며, RS-485 통신의 경우 253개의 ID설정은 가능하지만 표준 규정상 노드 제한으로 인해 연결가능 한 서보액츄에이터는 32개입니다. 
+> 출하 시 ID가 0으로 되어 있으므로, 여러개의 액츄에이터로 Daisy chain 구성시 0~253까지의 ID가 겹치지 않도록 각 액츄에이터 ID를 설정해주시면 됩니다.
 
 ### 4.2.2. Data Map
 #### 4.2.2.1. IR 프로토콜
+##### 4.2.2.1.1. Data Memory Map
+ **Memory 사용 데이터 (Non-volatile)**
+	- 전원OFF시에도 데이터를 유지하는 메모리 영역에 저장합니다.  
+	- Factory Reset명령 수행 시 모든 데이터는 Default값으로 설정되게 됩니다.  
+
+|Address|Name|Description|Access|Default|
+|---|---|---|---|---|
+|0 (0x00)|Model Number(L)|모델 번호의 하위 바이트|R||
+|1 (0x01)|Model Number(H)|모델 번호의 상위 바이트|R||
+|2 (0x02)|Version of Firmware|펌웨어 버전 정보|R|-|
+|3 (0x03)|ID|액츄에이터ID|RW|0 (0x00)|
+|4 (0x04)|Baud Rate|서보 통신 속도|RW|32 (0x20)|
+|6 (0x06)|Short Stroke Limit(L)|수축 방향 한계 위치 값의 하위 바이트|RW|0 (0x00)|
+|7 (0x07)|Short Stroke Limit(H)|수축 방향 한계 위치 값의 상위 바이트|RW|0 (0x00)|
+|8 (0x08)|Long Stroke Limit(L)|확장 방향 한계 위치 값의 하위 바이트|RW|102 (0x66)|
+|9 (0x09)|Long Stroke Limit(H)|확장 방향 한계 위치 값의 상위 바이트|RW|14 (0x0E)|
+|10 (00x0A)|Protocol Type|통신 Protocol (MODBUS RTU or IR Open)|RW|0x01 (IRPROTOCOL)|
+|12 (0x0C)|the Lowest Limit Voltage|입력 하한 전압|R|개별 SPEC|
+|13 (0x0D)|the Highest Limit Voltage|입력 상한 전압|R|개별 SPEC|
+|14(0x0E)|Motor Operating Rate(L)|모터 가동률 한계값 하위 바이트|RW|255 (0xFF)|
+|15(0x0F)|Motor Operating Rate(H)|모터 가동률 한계값 상위 바이트|RW|3 (0x03)|
+|16 (0x10)|Feedback Return Mode|응답 회신 모드|RW|1 (0x01)|
+|17 (0x11)|Alarm LED|알람용 LED 기능|RW|33 (0x21)|
+|18 (0x12)|Alarm Shutdown|알람용 셧 다운 기능|RW|33(0x21)|
+|19 (0x13)|Start Compliance Margin|시작 Compliance Margin|RW|개별 SPEC|
+|20 (0x14)|End Compliance Margin|종료 Compliance Margin|RW|개별 SPEC|
+|21 (0x15)|Speed Limit(L)|모터의 평균이동속도 한계 하위 바이트|RW|255(0xFF)|
+|22 (0x16)|Speed Limit(H)|모터의 평균이동속도 한계 상위 바이트|RW|3(0x03)|
+|24 (0x18)|Calibration Short Stroke (L)|최단 조정 값의 하위 바이트|R|0 (0x00)|
+|25 (0x19)|Calibration Short Stroke (H)|최단 조정 값의 상위 바이트|R|0 (0x00)|
+|26 (0x1A)|Calibration Long Stroke (L)|최장 조정 값의 하위 바이트|R|255 (0xFF)|
+|27 (0x1B)|Calibration Long Stroke (H)|최장 조정 값의 상위 바이트|R|15 (0x0F)|
+|33 (0x21)|Acceleration Ratio|이동 가속도 율|RW|개별 SPEC|
+|34 (0x22)|Deceleration Ratio|이동 감속도 율|RW|개별 SPEC|
+|35 (0x23)|Current I Gain|전류 Integral Gain|RW|개별 SPEC|
+|36 (0x24)|Current P Gain|전류 Proportional Gain|RW|개별 SPEC|
+|37 (0x25)|Speed D Gain|Derivative Gain|RW|개별 SPEC|
+|38 (0x26)|Speed I Gain|Integral Gain|RW|개별 SPEC|
+|39 (0x27)|Speed P Gain|Proportional Gain|RW|개별 SPEC|
+|46 (0x2E)|Min Position Calibration|Min Position 값 Trim|RW|개별 SPEC|
+|47 (0x2F)|Max Position Calibration|Max Position 값 Trim|RW|개별 SPEC|
+|52 (0x34)|Current Limit (L)|전류 값 한계치 하위 바이트|RW|32 (0x20)|
+|53 (0x35)|Current Limit (H)|전류 값 한계치 상위 바이트|RW|3 (0x03)|
+
+##### 4.2.2.1.2. Parameter Map
+**Parameter 사용 데이터(Volatile)**
+	- 전원인가 시 매번 Default값으로 초기화합니다.
+
+
+
+
+
+
+
+
+
+
+
 #### 4.2.2.2 MODBUS RTU (이 부분만 모드버스 매뉴얼에서)
 ### 4.2.3. Data Description
 
 
 '''## 4.2. 통신
 ''### 4.2.1. Specification
-''### 4.2.2. Packet Description
+<font color="#ff0000">''### 4.2.2. Packet Description (삭제) </font>
 ''### 4.2.3. Data Map
 ''### 4.2.4. Data Description
-''### 4.2.5. Command 예제 Packet
+<font color="#ff0000">''### 4.2.5. Command 예제 Packet (삭제)</font>
 # 5. 별매 악세서리
 # 6. 보증 및 수리
 ## 6.1. 보증 및 수리
