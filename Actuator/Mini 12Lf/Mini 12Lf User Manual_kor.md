@@ -166,13 +166,21 @@ Command Packet
 ## 4.1. 서보 회로 연결
 ## 4.2. 통신
 ### 4.2.1. Specification
-### 4.2.2. Packet Description
-### 4.  2.  3.  Data Map
-### 4.  2.  4.  Data Description
-### 4.  2.  5.  Command 예제 Packet
-# 5.   별매 악세서리
-# 6.   보증 및 수리
-## 6.  1.   보증 및 수리
+### 4.2.2. Data Map
+#### 4.2.2.1. IR 프로토콜
+#### 4.2.2.2 MODBUS RTU (이 부분만 모드버스 매뉴얼에서)
+### 4.2.3. Data Description
+
+
+'''## 4.2. 통신
+''### 4.2.1. Specification
+''### 4.2.2. Packet Description
+''### 4.2.3. Data Map
+''### 4.2.4. Data Description
+''### 4.2.5. Command 예제 Packet
+# 5. 별매 악세서리
+# 6. 보증 및 수리
+## 6.1. 보증 및 수리
 
 
 
