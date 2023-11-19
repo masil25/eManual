@@ -231,7 +231,7 @@ Command Packet
 
 # 4. 서보제어
 ## 4.1. 서보 회로 연결
-### 4.1.1. TTL/PWM (3핀 커넥터-모델명 12Lfxx-xx<font color="#ff0000">PT</font>-xx 계열)
+### 4.1.1. TTL/PWM (3핀 커넥터-모델명 12Lf-xxPT-xx 계열)
 마이티잽(12Lf-xxPT-xx)을 TTL레벨로 제어 하기 위해서 제어기의 UART 신호를 Half Duplex type로 변환 시켜야 합니다. 이때 변환 회로는 아래 그림과 같습니다.  
 
 ![[CircuitConnection_TTL.png]]
@@ -244,7 +244,7 @@ Command Packet
 ※ Feedback data 수신과 Daisy chain연결은 TTL 또는 RS-485통신을 통해 가능합니다.  
 
 
-### 4.1.2. RS-485 (4핀 커넥터- 모델명 12Lf-xx<font color="#ff0000">F</font>-xx 계열)
+### 4.1.2. RS-485 (4핀 커넥터- 모델명 12Lf-xxF-xx 계열)
 mightyZAP (12Lf-xxF-xx)을 제어하기 위해 RS485 통신방식을 사용합니다.  
 이때 핀맵과 변환회로는 다음 페이지의 그림과 같습니다.  
 
