@@ -182,7 +182,7 @@ Command Packet
 
 # 3. 리니어 서보의 활용처
 ## 3.1. 공장자동화
-![[Applications_Factory Automation.png]]
+![[Applications_FactoryAutomation.png]]
 - 위치제어가 쉽지 않은 공압실린더의 훌륭한 대체품 
 - 실시간 자동 폭 조정 장치
 - 실시간 자동 얼라인먼트 시스템 (상/하 또는 좌/우)
@@ -197,7 +197,7 @@ Command Packet
 - 방향 전환
 - Hexapod /Tripod 운동
 ## 3.2. 생산 및 검사 지그
-![[Applications_General Usage.png]]
+![[Applications_GeneralUsage.png]]
 - 생산 및 검사 지그
 - 홀 펀칭 지그
 - 홀 검사 지그
@@ -224,7 +224,7 @@ Command Packet
 - 카메라 또는 레이저 장비의 포커스 조절
 - 실험분석 장비
 ## 3.6. 교육 / 취미
-![[Applications_Other Usage.png]]
+![[Applications_OtherUsage.png]]
 - 3D 프린터
 - 아두이노나 라즈베리 파이 제어 / Maker’s DIY
 

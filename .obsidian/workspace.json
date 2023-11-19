@@ -8,54 +8,27 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d97bef8ca52b1146",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Total Manager/Total Manager User Manual_kor.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "7739f073fb872f59",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "image",
               "state": {
-                "file": ".obsidian/plugins/editing-toolbar/data.json",
-                "staged": true
+                "file": "Actuator/Mini 12Lf/img/ACC_IR_GT01.png"
               }
             }
           },
           {
-            "id": "1ad332a29a76f100",
+            "id": "f7ac58792c286228",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Total Manager/Total Manager User Manual_kor.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "15feaff32582734a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
-                "mode": "source",
-                "source": false
+                "file": "Actuator/Mini 12Lf/img/Applications_UAV,Drone.png"
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -105,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 459.5
+    "width": 284.5
   },
   "right": {
     "id": "7ccabca408164915",
@@ -121,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Actuator/Mini 12Lf/img/Applications_UAV,Drone.png",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -137,6 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Actuator/Mini 12Lf/img/Applications_UAV,Drone.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -159,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "conflict-files-obsidian-git.md"
+                "file": "Actuator/Mini 12Lf/img/Applications_UAV,Drone.png"
               }
             }
           },
@@ -184,7 +159,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 469.5
+    "width": 500.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -200,24 +175,31 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "719f7c1e9e32f8c6",
+  "active": "f7ac58792c286228",
   "lastOpenFiles": [
-    "Total Manager/Total Manager User Manual_kor.md",
-    "conflict-files-obsidian-git.md",
-    "Actuator/Mini 12Lf/img/mightyZAPManager.png",
-    "Actuator/Mini 12Lf/img/ACC_IR_GT01.png",
-    "Actuator/Mini 12Lf/img/ACC_IR-USB02.png",
-    "Actuator/Mini 12Lf/img/ACC_IR-STS02.png",
-    "Actuator/Mini 12Lf/img/ACC_IR-MB04.png",
-    "Actuator/Mini 12Lf/img/ACC_IR-MB03.png",
-    "Actuator/Mini 12Lf/img/ACC_IR-MB02.png",
-    "Actuator/Mini 12Lf/img/ACC_IR-EW00.png",
-    "Actuator/Mini 12Lf/img/ACC_IR-EB01.png",
-    "Actuator/Mini 12Lf/img/ACC_IR-CT01.png",
-    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
-    "무제 파일.md",
-    "StrokeLimit.png.md",
+    "Actuator/Mini 12Lf/img/Applications_Robotics.png",
+    "Actuator/Mini 12Lf/img/Applications_OtherUsage.png",
+    "Actuator/Mini 12Lf/img/Applications_Medical.png",
+    "Actuator/Mini 12Lf/img/Applications_GeneralUsage.png",
+    "Actuator/Mini 12Lf/img/Applications_FactoryAutomation.png",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+    "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
+    "Total Manager/img/macOS_install.png",
+    "Actuator/Mini 17Lf/img/macOS_install.png",
+    "Actuator/Mini 12Lf/img/ACC_IR-MB02.png",
+    "Actuator/Mini 12Lf/img/ACC_IR_GT01.png",
+    "Actuator/Mini 12Lf/img/ACC_IR-CT01.png",
+    "Actuator/Mini 12Lf/img/ACC_IR-EW00.png",
+    "StrokeLimit.png.md",
+    "무제 파일.md",
+    "Pasted image 20231117110531.png.md",
+    "UseSpanner.  png.md",
+    "BrokenRod.  png.md",
+    "Actuator/Mini 12Lf/img/CautionMotionSync.  png.md",
+    "Total Manager/Total Manager User Manual_kor.md",
+    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+    "Actuator/Mini 17Lf/Mini 17Lf User Manual_eng.md",
+    "conflict-files-obsidian-git.md",
     "total.md",
     "Protocl/Modbus.md",
     "Protocl/IR Protocol.md",
@@ -227,21 +209,15 @@
     "img/CautionMotionSy.md",
     "img/myImg.png.md",
     "img",
-    "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
     "무제 파일.canvas",
     "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
     "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
     "Datasheet17Lf-xx-27.md",
     "Templates/DATASHEET.md",
     "Templates/datasheet.md",
-    "Templates/{{title}}.md",
     "Templates",
-    "Actuator/Mini 17Lf/Mini 17Lf User Manual_eng.md",
-    "Technical/Motor의 특성도 이해.md",
     "Technical",
     "Actuator/Mini 17Lf/Datasheet",
-    "IRROBOT DATASHEET_17Lfe 양식.md",
-    "Actuator/Mini 12Ls/Mini 12Ls User Manual_eng.md",
     "Actuator/Mini 12Ls/img",
     "Actuator/Mini 12Ls",
     "Library",
