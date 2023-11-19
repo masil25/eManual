@@ -21,9 +21,11 @@
             "id": "f7ac58792c286228",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 12Lf/img/Applications_UAV,Drone.png"
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -94,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 12Lf/img/Applications_UAV,Drone.png",
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -111,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 12Lf/img/Applications_UAV,Drone.png",
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 12Lf/img/Applications_UAV,Drone.png"
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md"
               }
             }
           },
@@ -177,6 +179,7 @@
   },
   "active": "f7ac58792c286228",
   "lastOpenFiles": [
+    "Actuator/Mini 12Lf/img/Applications_UAV,Drone.png",
     "Actuator/Mini 12Lf/img/Applications_Robotics.png",
     "Actuator/Mini 12Lf/img/Applications_OtherUsage.png",
     "Actuator/Mini 12Lf/img/Applications_Medical.png",
@@ -189,7 +192,6 @@
     "Actuator/Mini 12Lf/img/ACC_IR-MB02.png",
     "Actuator/Mini 12Lf/img/ACC_IR_GT01.png",
     "Actuator/Mini 12Lf/img/ACC_IR-CT01.png",
-    "Actuator/Mini 12Lf/img/ACC_IR-EW00.png",
     "StrokeLimit.png.md",
     "무제 파일.md",
     "Pasted image 20231117110531.png.md",
