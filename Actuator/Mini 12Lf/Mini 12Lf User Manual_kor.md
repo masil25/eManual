@@ -536,7 +536,8 @@ Overload Error의 경우 원인이 해결되어도, LED 알람이 곧바로 해�
 |NONE|2|
 |NONE|1|
 |Input Voltage Error|0|
-Lowest input voltage의 경우 모터가 Force Off(shutdown) 되지는 않습니다.  
+
+Lowest input voltage의 경우 모터가 Force Off(shutdown) 되지는 않습니다.   
 highest voltage 및 Overload Error의 경우 Force Off (shutdown) 되며, 전원 재 부팅 또는 System Restart 명령을 내려야 shutdown이 해제됩니다.  
 
 > <font color="#245bdb">> **TIP  ** </font>
