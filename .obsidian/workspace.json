@@ -23,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "무제 파일.md",
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "무제 파일.md",
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "무제 파일.md",
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "무제 파일.md"
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md"
               }
             }
           },
@@ -179,8 +179,8 @@
   },
   "active": "f7ac58792c286228",
   "lastOpenFiles": [
-    "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "무제 파일.md",
+    "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Actuator/Mini 12Lf/img/Applications_UAV,Drone.png",
     "Actuator/Mini 12Lf/img/Applications_Robotics.png",
     "Actuator/Mini 12Lf/img/Applications_OtherUsage.png",
