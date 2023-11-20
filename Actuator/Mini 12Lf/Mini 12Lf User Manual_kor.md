@@ -328,7 +328,7 @@ Controller와 마이티잽은 packet을 주고 받으며 통신합니다. Packet
 
 ### 4.2.1. Specification
 
-#### 4.2.1.1. Communication specification  
+#### 4.2.1.1. Communication specification    
 - 2 Mode in One (Pulse / Data Mode Auto-Switching)  
   입력 신호에 따라 자동적으로 데이터 모드와 펄스 모드의 전환이 이루어집니다.  
 - Data Mode (TTL / RS-485)  
@@ -356,7 +356,7 @@ Controller와 마이티잽은 packet을 주고 받으며 통신합니다. Packet
 >※ Feedback data 수신과 Daisy chain연결은 TTL 또는 RS-485통신을 통해 가능합니다.  
 >※ 아래와 같은 방식으로도 PWM제어가 가능합니다.  Frequency 50Hz / Duty rate 4.5% ~ 10.5%. (0.05% 단위로 제어)추천 frequency는 50Hz(20ms)  
 
-#### 4.2.1.2. Data specification  
+#### 4.2.1.2. Data specification    
 데이터 모드와 펄스 모드에서 아래와 같은 데이터 범위로 기본지정 되어있습니다.   
 
 |Rod Stroke|Data Mode|Pulse Mode|
@@ -368,7 +368,7 @@ Controller와 마이티잽은 packet을 주고 받으며 통신합니다. Packet
 > <font color="#245bdb">TIP </font>
 > 27mm스트로크 제품은 공장 출하 시 27mm로 셋팅 되어 출하되나, 30mm를 모두 사용해야 하는 경우 사용자가 설정 가능.  27mm의 데이터 값은 3686입니다.  (횡부하 관련 기구적인 안정성을 위해 가급적 27mm사용을 권장합니다.)  
 
-#### 4.2.1.3. Daisy-Chain Connection  
+#### 4.2.1.3. Daisy-Chain Connection    
 ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 개의 MIGHTY ZAP중 ID가 N인 서보만이 Feedback Packet을 return하고, 그 Command를 수행합니다.  
 ![[DaisyChainConnection.png]]
 ⚠ <font color="#ff0000">주의</font>  Unique ID  
@@ -378,7 +378,7 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 
 ### 4.2.2. Data Map
 #### 4.2.2.1. IR 프로토콜
-##### 4.2.2.1.1. Data Memory Map
+##### 4.2.2.1.1. Data Memory Map    
  **Memory 사용 데이터 (Non-volatile)**
 	- 전원OFF시에도 데이터를 유지하는 메모리 영역에 저장합니다.  
 	- Factory Reset명령 수행 시 모든 데이터는 Default값으로 설정되게 됩니다.  
@@ -422,7 +422,7 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 |52 (0x34)|Current Limit (L)|전류 값 한계치 하위 바이트|RW|32 (0x20)|
 |53 (0x35)|Current Limit (H)|전류 값 한계치 상위 바이트|RW|3 (0x03)|
 
-##### 4.2.2.1.2. Parameter Map
+##### 4.2.2.1.2. Parameter Map    
 **Parameter 사용 데이터(Volatile)  **
 	- 전원인가 시 매번 Default값으로 초기화합니다.  
 
@@ -447,8 +447,8 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 
 <font color="#ff0000">** 펌웨어 V2.0이상부터 적용  </font>  
 
-#### 4.2.2.2 MODBUS RTU (이 부분만 모드버스 매뉴얼에서)
-##### 4.2.2.2.1 Data Memory Map
+#### 4.2.2.2 MODBUS RTU (이 부분만 모드버스 매뉴얼에서)    
+##### 4.2.2.2.1 Data Memory Map    
 - multi write 기능은 지원하지 않습니다.  
 - Reset명령 수행 시 모든 데이터는 Default값으로 설정되게 됩니다.  
 
@@ -496,7 +496,7 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 <font color="#ff0000">** 펌웨어 버전 2.0이상부터 적용 (이전 버전에는 default 0)</font>
 
 ### 4.2.3. Data Description
-#### 4.2.3.1. 비휘발성 메모리 영역
+#### 4.2.3.1. 비휘발성 메모리 영역    
 
 1. Model Number   
    MightyZAP의 모델 번호입니다.  
@@ -682,7 +682,7 @@ highest voltage 및 Overload Error의 경우 Force Off (shutdown) 되며, 전원
 > 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
 
-#### 4.2.3.2. 휘발성 메모리 영역
+#### 4.2.3.2. 휘발성 메모리 영역    
 20. Force ON/OFF (Default : 1 / Force ON)
     - 기동력 활성화 여부 설정 ( 0일 때 OFF, 1일 때 ON)  
     
