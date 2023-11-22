@@ -203,36 +203,36 @@ Command Packet
 
 ### 2.3.2. 공통사양서
 
-|위치정밀도|스트로크|<|단방향|<|
-|---|---|---|---|---|
-|위치정밀도|27mm / 40mm|<|30μm (0.03mm)|<|
-|^|53mm|<|40μm (0.04mm)|<|
-|^|90mm|<|50μm (0.05mm)|<|
-|기구 백래쉬|0.03mm (30μm)|<|<|<|
-|Rod 타입|Metal Alloy Rod|<|<|<|
-|모터타입|Coreless Motor|<|<|<|
-|전압|12V|<|<|<|
-|Watt|26W|<|<|<|
-|권장 Duty Cycle|정격 부하 시|<|최대 허용 부하 시|<|
-|^|최대 50%|<|최대 20%|<|
-|전류값 오차|±15% at Over 50mA|<|<|<|
-|위치인식센서|10KΩ linear Potentiometer|<|<|<|
-|인가 전압범위|7 ~ 13V|<|<|<|
-|소모전류|Idle|Rated|Stall|<|
-|^|^|^|Default|MAX|
-|^|20mA|380mA|800mA|1.6A|
-|가청 소음|약 50db at 1m|<|<|<|
-|LED 표시|2가지 에러표시 (Input voltage, Overload)|<|<|<|
-|펄스방식 / 펄스범위|PWM (PT version, RC모형 송수신용 신호) / 900μs(수축)-1500 μs(센터)-2100μs (확장)|<|<|<|
-|데이타 통신방식 / 프로토콜|RS-485 또는 TTL(PT version) / IR Robot open protocol|<|<|<|
-|Ingress Protection|IP-54 (Dust & Water Tight)|<|<|<| 
-|스크로크별 크기/무게|(크기는 로드엔드 / 힌지 제외)|<|<|<|
-|27mm|57.5(L)x29.9(W)x15(H)mm / 49~52g|<|<|<|
-|40mm|86.9(L)x36(W)x18(H)mm / 96~99g|<|<|<|
-|53mm|111.5(L)x36(W)x18(H)mm / 124~127g|<|<|<|
-|90mm|151.5(L)x36(W)x18(H)mm / 약177g|<|<|<|
-|동작온도 조건|-10℃ ~ 60℃|<|<|<|
-|와이어 하네스|TTL(PT version) :  Molex to Molex Type (Molex 50-37-5033, 3pins) / 200mm length, 0.08×60(22AWG) 또는 RS485(F version) : Molex to Molex Type (Molex 0510650400, 4pins) / 200mm length, 0.08×60(22AWG) |<|<|<|
+| 위치정밀도              | 스트로크                                                                                                                                                                                                                     | <     | 단방향           | <    |
+|:-------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------|:--------------|:-----|
+| 위치정밀도              |                                                                                                                                                                                                              27mm / 40mm | <     | 30μm (0.03mm) | <    |
+| ^                  |                                                                                                                                                                                                                     53mm | <     | 40μm (0.04mm) | <    |
+| ^                  |                                                                                                                                                                                                                     90mm | <     | 50μm (0.05mm) | <    |
+| 기구 백래쉬             |                                                                                                                                                                                                            0.03mm (30μm) | <     | <             | <    |
+| Rod 타입             | Metal Alloy Rod                                                                                                                                                                                                          | <     | <             | <    |
+| 모터타입               | Coreless Motor                                                                                                                                                                                                           | <     | <             | <    |
+| 전압                 |                                                                                                                                                                                                                      12V | <     | <             | <    |
+| Watt               |                                                                                                                                                                                                                      26W | <     | <             | <    |
+| 권장 Duty Cycle      | 정격 부하 시                                                                                                                                                                                                                  | <     | 최대 허용 부하 시    | <    |
+| ^                  | 최대 50%                                                                                                                                                                                                                   | <     | 최대 20%        | <    |
+| 전류값 오차             | ±15% at Over 50mA                                                                                                                                                                                                        | <     | <             | <    |
+| 위치인식센서             |                                                                                                                                                                                                10KΩ linear Potentiometer | <     | <             | <    |
+| 인가 전압범위            |                                                                                                                                                                                                                  7 ~ 13V | <     | <             | <    |
+| 소모전류               | Idle                                                                                                                                                                                                                     | Rated | Stall         | <    |
+| ^                  | ^                                                                                                                                                                                                                        | ^     | Default       | MAX  |
+| ^                  |                                                                                                                                                                                                                     20mA | 380mA |         800mA | 1.6A |
+| 가청 소음              | 약 50db at 1m                                                                                                                                                                                                             | <     | <             | <    |
+| LED 표시             |                                                                                                                                                                                       2가지 에러표시 (Input voltage, Overload) | <     | <             | <    |
+| 펄스방식 / 펄스범위        | PWM (PT version, RC모형 송수신용 신호) / 900μs(수축)-1500 μs(센터)-2100μs (확장)                                                                                                                                                       | <     | <             | <    |
+| 데이타 통신방식 / 프로토콜    | RS-485 또는 TTL(PT version) / IR Robot open protocol                                                                                                                                                                       | <     | <             | <    |
+| Ingress Protection | IP-54 (Dust & Water Tight)                                                                                                                                                                                               | <     | <             | <    |
+| 스크로크별 크기/무게        | (크기는 로드엔드 / 힌지 제외)                                                                                                                                                                                                       | <     | <             | <    |
+|               27mm |                                                                                                                                                                                         57.5(L)x29.9(W)x15(H)mm / 49~52g | <     | <             | <    |
+|               40mm |                                                                                                                                                                                           86.9(L)x36(W)x18(H)mm / 96~99g | <     | <             | <    |
+|               53mm |                                                                                                                                                                                        111.5(L)x36(W)x18(H)mm / 124~127g | <     | <             | <    |
+|               90mm |                                                                                                                                                                                           151.5(L)x36(W)x18(H)mm / 약177g | <     | <             | <    |
+| 동작온도 조건            |                                                                                                                                                                                                               -10℃ ~ 60℃ | <     | <             | <    |
+| 와이어 하네스            | TTL(PT version) :&nbsp; Molex to Molex Type&nbsp;(Molex 50-37-5033, 3pins) / 200mm length, 0.08×60(22AWG) &lt;br&gt; 또는 RS485(F version) : Molex to Molex Type (Molex 0510650400, 4pins) / 200mm length, 0.08×60(22AWG)  | <     | <             | <    |  
 
 * 디자인과 사양은 성능 및 품질 개량을 위해 사전고지 없이 변경될 수 있습니다.
 
@@ -453,46 +453,46 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 - multi write 기능은 지원하지 않습니다.  
 - Reset명령 수행 시 모든 데이터는 Default값으로 설정되게 됩니다.  
 
-| Address | addr   | Name                                 | Access | Default       | MIN | MAX  | Type                |
-|:--------|:-------|:-------------------------------------|:-------|:--------------|:----|:-----|:--------------------|
-|   40001 | 0x0000 | Model Number                         | R      | -             |     |      |                     |
-|   40002 | 0x0001 | Version of Firmware                  | R      | -             |     |      |                     |
-|   40003 | 0x0002 | ID                                   | RW     |             1 |   1 |  247 |                     |
-|   40004 | 0x0003 | Baud Rate                            | RW     |      32(0x20) |  16 |  128 |                     |
-|   40005 | 0x0004 | Protocol Type (MODBUS RTU / IRROBOT) | RW     |             0 |   0 |    1 |                     |
-|   40006 | 0x0005 | Short Stroke Limit                   | RW     |     0(0x0000) |   0 | 4095 |                     |
-|   40007 | 0x0006 | Long Stroke Limit                    | RW     | 개별Spec        |   0 | 4095 |                     |
-|   40008 | 0x0007 | Lowest Limit Voltage                 | R      |            70 | -   | -    |                     |
-|   40009 | 0x0008 | Highest Limit Voltage                | R      |           130 | -   | -    |                     |
-|   40010 | 0x0009 | Alarm LED                            | RW     |            33 | -   | -    |                     |
-|   40011 | 0x000a | Alarm Shutdown                       | RW     |            33 | -   | -    |                     |
-|   40012 | 0x000b | Start Compliance Margin              | RW     |             7 |   0 |  255 |                     |
-|   40013 | 0x000c | End Compliance Margin                | RW     |             2 |   0 |  255 |                     |
-|   40014 | 0x000d | Speed Limit                          | RW     |          1023 |   0 | 1023 |                     |
-|   40015 | 0x000e | Current Limit                        | RW     |           800 |   0 | 1600 |                     |
-|   40016 | 0x000f | Calibration Short Stroke             | R      | 개별Spec        |   0 | 4095 |                     |
-|   40017 | 0x0010 | Calibration Long Stroke              | R      | 개별Spec        |   0 | 4095 |                     |
-|   40018 | 0x0011 | Acceleration Ratio                   | RW     | 개별Spec        |   0 |  255 |                     |
-|   40019 | 0x0012 | Deceleration Ratio                   | RW     | 개별Spec        |   0 |  255 |                     |
-|   40020 | 0x0013 | Current I Gain                       | RW     | 개별Spec        |   0 |  255 |                     |
-|   40021 | 0x0014 | Current P Gain                       | RW     | 개별Spec        |   0 |  255 |                     |
-|   40022 | 0x0015 | Speed D Gain                         | RW     | 개별Spec        |   0 |  255 |                     |
-|   40023 | 0x0016 | Speed I Gain                         | RW     | 개별Spec        |   0 |  255 |                     |
-|   40024 | 0x0017 | Speed P Gain                         | RW     | 개별Spec        |   0 |  255 |                     |
-|   40025 | 0x0018 | Min Stroke Position                  | RW     | 개별Spec        |   0 |  255 |                     |
-|   40026 | 0x0019 | Max Stroke Position                  | RW     | 개별Spec        |   0 |  255 | ^비휘발성(Non-Volatile) |
-|         |        |                                      |        |               |     |      |                     |
-|   40051 | 0x0032 | Force ON/OFF                         | RW     |           1** |   0 |    1 |                     |
-|   40052 | 0x0033 | LED                                  | RW     |             0 |   0 |  255 |                     |
-|   40053 | 0x0034 | Goal Position                        | RW     | -             |   0 | 4095 |                     |
-|   40054 | 0x0035 | Goal Speed                           | RW     | Speed Limit   |   0 | 1023 |                     |
-|   40055 | 0x0036 | Goal Current                         | RW     | Current Limit |   0 | 1600 |                     |
-|   40056 | 0x0037 | Present Position                     | R      | -             |   0 | 4095 |                     |
-|   40057 | 0x0038 | Present Current                      | R      | -             |   0 | 1600 |                     |
-|   40058 | 0x0039 | Present Motor Operating Rate         | R      | -             |   0 | 2048 |                     |
-|   40059 | 0x003a | Present Voltage                      | R      | -             |   0 |  255 |                     |
-|   40060 | 0x003b | Moving                               | R      | -             |   0 |    1 |                     |
-|   40061 | 0x003c | Hardware Error State                 | R      |             0 |   0 |  255 | ^휘발성 (Volatile)     |  
+|    Address    |    addr      |    Name                                    |    Access    |    Default          |    MIN    |    MAX     |    Type                     |
+|:--------------|:-------------|:-------------------------------------------|:-------------|:--------------------|:----------|:-----------|:----------------------------|
+|      40001    |    0x0000    |    Model Number                            |    R         |    -                |           |            |                             |
+|      40002    |    0x0001    |    Version of Firmware                     |    R         |    -                |           |            |   ^                         |
+|      40003    |    0x0002    |    ID                                      |    RW        |                1    |      1    |     247    |   ^                         |
+|      40004    |    0x0003    |    Baud Rate                               |    RW        |         32(0x20)    |     16    |     128    |   ^                         |
+|      40005    |    0x0004    |    Protocol Type (MODBUS RTU / IRROBOT)    |    RW        |                0    |      0    |       1    |   ^                         |
+|      40006    |    0x0005    |    Short Stroke Limit                      |    RW        |        0(0x0000)    |      0    |    4095    |   ^                         |
+|      40007    |    0x0006    |    Long Stroke Limit                       |    RW        |    개별Spec           |      0    |    4095    |   ^                         |
+|      40008    |    0x0007    |    Lowest Limit Voltage                    |    R         |               70    |    -      |    -       |   ^                         |
+|      40009    |    0x0008    |    Highest Limit Voltage                   |    R         |              130    |    -      |    -       |   ^                         |
+|      40010    |    0x0009    |    Alarm LED                               |    RW        |               33    |    -      |    -       |   ^                         |
+|      40011    |    0x000a    |    Alarm Shutdown                          |    RW        |               33    |    -      |    -       |   ^                         |
+|      40012    |    0x000b    |    Start Compliance Margin                 |    RW        |                7    |      0    |     255    |   ^                         |
+|      40013    |    0x000c    |    End Compliance Margin                   |    RW        |                2    |      0    |     255    |   ^                         |
+|      40014    |    0x000d    |    Speed Limit                             |    RW        |             1023    |      0    |    1023    |   ^                         |
+|      40015    |    0x000e    |    Current Limit                           |    RW        |              800    |      0    |    1600    |   ^                         |
+|      40016    |    0x000f    |    Calibration Short Stroke                |    R         |    개별Spec           |      0    |    4095    |   ^                         |
+|      40017    |    0x0010    |    Calibration Long Stroke                 |    R         |    개별Spec           |      0    |    4095    |   ^                         |
+|      40018    |    0x0011    |    Acceleration Ratio                      |    RW        |    개별Spec           |      0    |     255    |   ^                         |
+|      40019    |    0x0012    |    Deceleration Ratio                      |    RW        |    개별Spec           |      0    |     255    |   ^                         |
+|      40020    |    0x0013    |    Current I Gain                          |    RW        |    개별Spec           |      0    |     255    |   ^                         |
+|      40021    |    0x0014    |    Current P Gain                          |    RW        |    개별Spec           |      0    |     255    |   ^                         |
+|      40022    |    0x0015    |    Speed D Gain                            |    RW        |    개별Spec           |      0    |     255    |   ^                         |
+|      40023    |    0x0016    |    Speed I Gain                            |    RW        |    개별Spec           |      0    |     255    |   ^                         |
+|      40024    |    0x0017    |    Speed P Gain                            |    RW        |    개별Spec           |      0    |     255    |   ^                         |
+|      40025    |    0x0018    |    Min Stroke Position                     |    RW        |    개별Spec           |      0    |     255    |   ^                         |
+|      40026    |    0x0019    |    Max Stroke Position                     |    RW        |    개별Spec           |      0    |     255    | 비휘발성(Non-Volatile)          |
+|               |              |                                            |              |                     |           |            |                             |
+|      40051    |    0x0032    |    Force ON/OFF                            |    RW        |              1**    |      0    |       1    |                             |
+|      40052    |    0x0033    |    LED                                     |    RW        |                0    |      0    |     255    |  ^                          |
+|      40053    |    0x0034    |    Goal Position                           |    RW        |    -                |      0    |    4095    |  ^                          |
+|      40054    |    0x0035    |    Goal Speed                              |    RW        |    Speed Limit      |      0    |    1023    |  ^                          |
+|      40055    |    0x0036    |    Goal Current                            |    RW        |    Current Limit    |      0    |    1600    |  ^                          |
+|      40056    |    0x0037    |    Present Position                        |    R         |    -                |      0    |    4095    |  ^                          |
+|      40057    |    0x0038    |    Present Current                         |    R         |    -                |      0    |    1600    |  ^                          |
+|      40058    |    0x0039    |    Present Motor Operating Rate            |    R         |    -                |      0    |    2048    |  ^                          |
+|      40059    |    0x003a    |    Present Voltage                         |    R         |    -                |      0    |     255    |  ^                          |
+|      40060    |    0x003b    |    Moving                                  |    R         |    -                |      0    |       1    |  ^                          |
+|      40061    |    0x003c    |    Hardware Error State                    |    R         |                0    |      0    |     255    | 휘발성 (Volatile)              |  
 
 <font color="#ff0000">** 펌웨어 버전 2.0이상부터 적용 (이전 버전에는 default 0)</font>
 

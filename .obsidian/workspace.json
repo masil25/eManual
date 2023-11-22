@@ -6,7 +6,6 @@
       {
         "id": "8e185326cee59db9",
         "type": "tabs",
-        "dimension": 14.992503748125937,
         "children": [
           {
             "id": "7739f073fb872f59",
@@ -34,12 +33,11 @@
         "currentTab": 1
       },
       {
-        "id": "d341d7fe7888e454",
+        "id": "4d11f05b3aace888",
         "type": "tabs",
-        "dimension": 85.00749625187406,
         "children": [
           {
-            "id": "3a7d05ad933e556c",
+            "id": "95e3522f9291ff2e",
             "type": "leaf",
             "state": {
               "type": "markdown-table-editor-view",
@@ -173,11 +171,11 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 258.5
+    "width": 393.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -193,7 +191,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "3a7d05ad933e556c",
+  "active": "95e3522f9291ff2e",
   "lastOpenFiles": [
     "Actuator/Mini 12Lf/img/Broken_Rod 1.png",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
