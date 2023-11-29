@@ -369,7 +369,9 @@ mightyZAP의 Parameter를 초기화하는 명령입니다. 이때 ID, Baudrate, 
 Reset 아이콘을 클릭하면 다음과 같은 Popup창이 나타납니다.  OK 버튼을 누르면 Parameter가 리셋이 되며 화면이 깜빡이며 Parameter 창으로 이동하며 Data를 다시 불러옵니다.  
 ![[simplescreenrecorder-2023-11-29_17.11.32 [MConverter.eu] (1).gif]]
 ### 3.4.5 Restart  
-mightyuZAP의 시스템을 재 시작 할 때 사용합니다. Overload Shutdown 또는 변경된 
+mightyuZAP의 시스템을 재 시작 할 때 사용합니다. Overload Shutdown 초기화 또는 변경된 Non Volatile Parameter의 Data를 확인하기 위해 사용합니다.  
+![[Pasted image 20231129173351.png]]  
+해당 버튼을 누르면 화면이 한번 깜빡이고 Parameter창으로 이동하여 Data를 다시 읽어옵니다.
 ### 3.4.6 Factory Reset   
 Actuator의  상태를 공장 출하 시의 초기 상태로 돌리고, 위치 값을 결정하는 Potentiometer의 Calibration을 진행합니다.  
 ><font color="#ff0000">주의사항</font>  
