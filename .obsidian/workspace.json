@@ -24,16 +24,13 @@
             "id": "44a9a1fca59bd2d7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Total Manager/Total Manager User Manual_kor.md",
-                "mode": "source",
-                "source": false
+                "file": "Total Manager/img/reset_selcect.png"
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "4d11f05b3aace888",
@@ -175,7 +172,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -195,8 +192,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "44a9a1fca59bd2d7",
+  "active": "7739f073fb872f59",
   "lastOpenFiles": [
+    "Total Manager/img/reset_selcect.png",
+    "Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 12Lf/img/ACC_IR_GT01.png",
     "Protocl/Modbus.md",
     "Protocl/IR Protocol.md",
@@ -212,14 +211,11 @@
     "Actuator/Mini 12Lf/img/Applications_OtherUsage.png",
     "Actuator/Mini 12Lf/img/Applications_Medical.png",
     "Actuator/Mini 12Lf/img/Applications_GeneralUsage.png",
-    "Actuator/Mini 12Lf/img/Applications_FactoryAutomation.png",
-    "Total Manager/img/macOS_install.png",
     "StrokeLimit.png.md",
     "Pasted image 20231117110531.png.md",
     "UseSpanner.  png.md",
     "BrokenRod.  png.md",
     "Actuator/Mini 12Lf/img/CautionMotionSync.  png.md",
-    "Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_eng.md",
     "conflict-files-obsidian-git.md",
