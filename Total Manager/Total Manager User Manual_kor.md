@@ -365,10 +365,11 @@ Recovery 진행 사항은 각 단계마다 이미지 또는  Text로 그 단계�
 ### 3.4.4 Reset
 mightyZAP의 Parameter를 초기화하는 명령입니다. 이때 ID, Baudrate, Protocol 및 Calibration Parameter는 초기화 되지 않습니다.  
 ![[reset_selcect.png]]  
-Reset 아이콘을 클릭하면 다음과 같은 Popup창이 나타납니다.  [OK] 버튼을 누르면 Parameter가 리셋이 되며 화면이 깜빡이며 Parameter 창으로 이동하며 Data를 다시 불러옵니다.
 ![[resetPopup.png|300]]
-
-### 3.4.5 Restart
+Reset 아이콘을 클릭하면 다음과 같은 Popup창이 나타납니다.  OK 버튼을 누르면 Parameter가 리셋이 되며 화면이 깜빡이며 Parameter 창으로 이동하며 Data를 다시 불러옵니다.  
+![[simplescreenrecorder-2023-11-29_17.11.32 [MConverter.eu] (1).gif]]
+### 3.4.5 Restart  
+mightyuZAP의 시스템을 재 시작 할 때 사용합니다. Overload Shutdown 또는 변경된 
 ### 3.4.6 Factory Reset   
 Actuator의  상태를 공장 출하 시의 초기 상태로 돌리고, 위치 값을 결정하는 Potentiometer의 Calibration을 진행합니다.  
 ><font color="#ff0000">주의사항</font>  
