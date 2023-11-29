@@ -365,7 +365,8 @@ Recovery 진행 사항은 각 단계마다 이미지 또는  Text로 그 단계�
 ### 3.4.4 Reset
 mightyZAP의 Parameter를 초기화하는 명령입니다. 이때 ID, Baudrate, Protocol 및 Calibration Parameter는 초기화 되지 않습니다.  
 ![[reset_selcect.png]]  
-Reset 아이콘을 클릭하면 다음과 같은 Popup창이 나타납니다.  
+Reset 아이콘을 클릭하면 다음과 같은 Popup창이 나타납니다.  [OK] 버튼을 누르면 Parameter가 리셋이 되며 화면이 깜빡이며 Parameter 창으로 이동하며 Data를 다시 불러옵니다.
+![[resetPopup.png|300]]
 
 ### 3.4.5 Restart
 ### 3.4.6 Factory Reset   
