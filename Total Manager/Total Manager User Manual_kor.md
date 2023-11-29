@@ -361,7 +361,11 @@ Recovery 진행 사항은 각 단계마다 이미지 또는  Text로 그 단계�
 - **Done**
   완료가 되면 업데이트 완료 팝업이 나타나고, SCAN 창이 활성화 됩니다. 
   ![[UpdateComplete-SCAN.png]]
-### 3.4.4 Factory Reset   
+
+### 3.4.4 Reset
+mightyZAP의 Parameter를 초기화하는 명령입니다. 이때 ID, Baudrate, Protocol 및 Calibration Parameter는 초기화 되지 않습니다.
+### 3.4.5 Restart
+### 3.4.6 Factory Reset   
 Actuator의  상태를 공장 출하 시의 초기 상태로 돌리고, 위치 값을 결정하는 Potentiometer의 Calibration을 진행합니다.  
 ><font color="#ff0000">주의사항</font>  
 >Factroy Reset 중에 Actuator가 Calibration을 위해 최대/최소로 위치이동을 합니다. 정상적인 Calibration을 위해 장치에 연결하지 않고 무부하에 최대 동작거리를 유지할 수 있는 공간에서 진행해 주시기 바랍니다.
@@ -385,6 +389,7 @@ Factory Reset 진행이 되면서 Actuator가 몇 번의 시스템 재 시작을
 
 > <font color="#ff0000">주의 사항</font>  
 > Calibration 을 하기 앞서, 정확한 Calibration 작업을 위해 Actuator 에 연결되어있는 모든 기구물을 제거하여, 무 부하 상태에서 Full Stroke 구간에 걸쳐 기구 간섭이 없도록 합니다.
+
 
 
 
