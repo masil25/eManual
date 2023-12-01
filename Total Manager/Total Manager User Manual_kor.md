@@ -35,7 +35,6 @@ mightyZAP을  제어하거나 Parameter를 변경 및 Monitoring을 할 수 있�
 mightyZAP의 Firmware를 Update할 때 사용합니다. 당사의 Webpage에서 해당 모델에 맞는 업데이트 파일을 다운로드 받으신 후 업데이트를 진행 하실 수 있습니다.  
 또한, Update Fail 및 사용자의 실수로 인해 서보모터가 검색이 되지 않을 경우 Firmware를 검사 및 복구 하실 수도 있습니다.  
 ![[update-view.png|700]]
-![[update-view.jpg]]
 # 2 Total Manager 다운로드 및 설치
 Total Manager는 Window , Mac OS, Linux 에서 모두 설치가 가능합니다.
 ## 2.1 요구 사항
