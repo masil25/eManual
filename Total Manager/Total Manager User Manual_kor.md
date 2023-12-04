@@ -325,12 +325,12 @@ firmware update를 진행 할 경우 그림과 같이 Select file 버튼을 눌�
 ><font color="#ff0000">주의 사항  </font>
 >이때 다른 모델의 firmware file 을 선택하지 않게 조심해야 합니다. Actuator List에 나와있는 Model 명과 uipdate file의 이름이 동일한지 확인해야 합니다.
 
-**업데이트**  ㅁ
+**업데이트** 
 모든 사항이 준비가 다 되었으면 상단 메뉴바에서 Update 아이콘을 클릭합니다.   
 ![[Update-Button.png|700]]
-이때 둘 이상의 actuator 가 연결되었을 경우 다음과 같은 경고창이 나타나고 SCAN  작업을 다시 합니다.  ㄴㄴ
+이때 둘 이상의 actuator 가 연결되었을 경우 다음과 같은 경고창이 나타나고 SCAN  작업을 다시 합니다. 
 ![[OneServo-kor.png]]
-업데이트를 위해서는 서보모터가 재 시작 해야하는데 정상적으로 통신이 이루어지지 않는 경우 아래의 그림과 같이 서보모터의 커넥터를 다시 연결하라는 메세지가 나타납니다.
+ mightyZAP이 업데이트를 위해서 재 시작하는데 정상적으로 통신이 이루어지지 않는 경우 아래의 그림과 같이 커넥터를 다시 연결하라는 메세지가 나타납니다. 이때 mightyZAP에 연결된 커넥터를 빼신 후 다시 연결하시면 정상 적으로 업데이트가 진행 됩니다.  
 ![[Update-Reconnect.png|600]]
 
 **업데이트 완료**
@@ -339,13 +339,15 @@ firmware update를 진행 할 경우 그림과 같이 Select file 버튼을 눌�
 필요에 따라 reset이나 Factory Reset을 추가적으로 진행하시면 됩니다.  
   
 **펌웨어 업데이트 실패**  
+업데이트가 실패 되었을 경우 아래의 이미지와 같이 Fail 문구가 나타납니다. 그럴 경우 먼저 업데이트를 다시 실행하여 주시기 바랍니다. 이 때 업데이트 파일이 업데이트 모델의 업데이트 파일인지 확인하신 후 실행하여 주시기 바랍니다.   
+추가적인 업데이트 시도에도 업데이트 실패 시 아래의 Recovery를 실행하여 주시고 그래도 실패할 경우 당사에 문의를 주시기 바랍니다.  
 ### 3.4.3 Recovery  
 Firmware 가 업데이트 실패 또는 SCAN을 통해 서보 모터를 검색하지 못할 경우 Recovery를 진행합니다. 문제가 발생한 Actuator 만을 연결한 후 상단 메뉴의 Recovery 아이콘을 클릭합니다.  
 ![[Recovery-Button.png|700]]
 Recovery 진행 사항은 각 단계마다 이미지 또는  Text로 그 단계를 표시합니다.
 ![[Recovery-StateWindow.png|500]]
  - **Actuator Search**  
-   검색 단계에서는 각 모든 Baudrate와 Protocol로 서보모터를 검색합니다. 이때 서보모터가 검색이 될 경우 Recovery를 완료하고 서보머터를 Servo List에 자동으로 추가합니다,.
+   검색 단계에서는 각 모든 Baudrate와 Protocol로 mightyZAP을 검색합니다. 이때 mightyZAP이 검색이 될 경우 Recovery를 완료하고 mightyZAP을 Servo List에 자동으로 추가합니다.  
    ![[REcovery-Complete.png|700]]
 
 - **Restart**   
@@ -367,7 +369,7 @@ mightyZAP의 Parameter를 초기화하는 명령입니다. 이때 ID, Baudrate, 
 Reset 아이콘을 클릭하면 다음과 같은 Popup창이 나타납니다.  OK 버튼을 누르면 Parameter가 리셋이 되며 화면이 깜빡이며 Parameter 창으로 이동하며 Data를 다시 불러옵니다.  
 ![[resetAction.gif]]
 ### 3.4.5 Restart  
-mightyuZAP의 시스템을 재 시작 할 때 사용합니다. Overload Shutdown 초기화 또는 변경된 Non Volatile Parameter의 Data를 확인하기 위해 사용합니다.  
+mightyZAP의 시스템을 재 시작 할 때 사용합니다. Overload Shutdown 초기화 또는 변경된 Non Volatile Parameter의 Data를 확인하기 위해 사용합니다.  
 ![[restartSelect.png]]  
 해당 버튼을 누르면 화면이 한번 깜빡이고 Parameter창으로 이동하여 Data를 다시 읽어옵니다.
 ### 3.4.6 Factory Reset   
