@@ -395,8 +395,3 @@ Factory Reset 진행이 되면서 Actuator가 몇 번의 시스템 재 시작을
 
 > <font color="#ff0000">주의 사항</font>  
 > Calibration 을 하기 앞서, 정확한 Calibration 작업을 위해 Actuator 에 연결되어있는 모든 기구물을 제거하여, 무 부하 상태에서 Full Stroke 구간에 걸쳐 기구 간섭이 없도록 합니다.
-
-
-
-
-// restart , reset 설명 추가
