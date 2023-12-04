@@ -4,10 +4,9 @@ mightyZAP Total Manager는 다양한 운영체제에서 mightyZAP Actuator를 �
 Total Manager에서는 다양한 OS를 제공하고, 사용자 인터페이스를 개선하고 신규 mightyZAP 모델을 추가로 지원하는 신규mightyZAP Manager 입니다.
 
 이 가이드에서는 Total Manager의 설치와 각 기능의 사용법에 대한 기본 사항을 다룹니다.  
->[Total Manager Software Download](https://mightyZAP.com/ko/digitalarchive6/?uid=211&mod=document&pageid=1) 페이지에서 다운로드 할 수 있습니다.
 
 ## 1.1 개요
-mightyZAP Total Manager는 다양한 기능을 가진 다목적 Software입니다. mightyZAP Actuator의 동작 Test와 Parameter 설정 및 동작 상태 Monitoring과 Firmware Update를 기본적으로 제공합니다.  
+mightyZAP Total Manager는 다양한 기능을 가진 다목적 Software입니다. mightyZAP의 동작 Test와 Parameter 설정 및 동작 상태 Monitoring과 Firmware Update를 기본적으로 제공합니다.  
 또한 모델에 따른 특수 기능을 설정 및 테스트 할 수도 있습니다. 
 >특수 기능 설정 및 테스트 내용은 각 모델의 매뉴얼을 참조하시기 바랍니다.
 
@@ -18,7 +17,7 @@ mightyZAP은 Half Duplex TTL, RS485, CAN 통신을 사용합니다. PC와의 통
 mightyZAP을 위한 USB Interface Board를 당사의 웹사이트에서 판매하고 있습니다. 해당  Interface Board를 사용할 경우 손쉽게 mightyZAP을 PC와 연결할 수 있습니다.  
 시중의 Convertor를 구매하여 사용하실 수 있지만, 안전성을 위하여 가급적 당사의 Interface Board를 사용하여 주시기 바랍니다.
 
-> <font color="#ff0000">주의 사항</font><br
+> <font color="#ff0000">⛔ 주의 사항</font><br
 > PC와 Interface Board 연결에 충전 전용 Cable을 사용하여 통신이 연결되지 않는 경우가 있습니다. 반드시 Data통신이 가능한 Cable인지 확인하시고 사용하여 주시기 바랍니다.
 
 ## 1.3 Feature
@@ -41,12 +40,14 @@ Total Manager는 Window , Mac OS, Linux 에서 모두 설치가 가능합니다.
 - Windows : windows 7(32bit) / windows 10 64bit 이상
 - Mac OS : Big Sur 이상 64bit
 - Linux : Ubuntu LTD 20.04 64bit
-Donwload Link : ----------
+>[mightyZAP Total Manager Download](https://github.com/mightyZap1/totalmanager/releases) 페이지에서 각 OS에 맞게 다운로드 하실 수 있습니다.
 
 ## 2.2 Install
 ### 2.2.1 Windows
 Windows 컴퓨터에서 mightyZAP Total Manager를 설치하려면 사용 중인 Windows의 
-OS 버전을 확인하신 후 버전에 맞게 다운로드하여 주시기 바랍니다.  
+OS 버전을 확인하신 후 버전에 맞게 다운로드하여 주시기 바랍니다.   
+- 32bit windows : mightyZAPTotalManagerx.y.z_ia32.exe
+- 64bit windows : mightyZAPTotalManagerx.y.z_x64.exe  
 
 **Windosw Version 확인 방법**
 - windows  7 : 제어판 -> 시스템 확인
@@ -62,14 +63,12 @@ OS 버전을 확인하신 후 버전에 맞게 다운로드하여 주시기 바�
 
 ### 2.2.2 Linux
 Linux 전용 패키지를 다운로드 합니다.
-	- [Linux Software 다운로드](https://github.com/mightyZAP25/Total-Manager/releases/download/v0.8.1/latest.yml) 
 Debian/Ubuntu 기반 배포용 Total Manager를 설치하기 위해서는 다음과 같은 Command Line을 통해 .deb 패키지(64bit)를 다운로드하고 설치하는 것입니다.
 ```
 $ sudo dpkg -i [file].deb
 ```
 ### 2.2.3 Mac OS
 Mac OS 전용 패키지를 다운로드 합니다.
-	- [Mac OS Software 다운로드](https://github.com/mightyZAP25/Total-Manager/releases/download/v0.8.1/latest.yml) 
 다운로드 파일을 더블 클릭하면 아래와 같이 설치 화면이 나타납니다. mightyZAP Total Manager 아이콘을 드래그 하여 Applications에 놓으면 설치가 완료됩니다. 
 ![[Total Manager/img/macOS_install.png|500]]
 ## 2.3 화면 구성
