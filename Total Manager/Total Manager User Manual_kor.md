@@ -3,7 +3,7 @@
 mightyZAP Total Manager는 다양한 운영체제에서 mightyZAP Actuator를 쉽게 관리 및 제어할 수 있는 Software입니다.
 Total Manager에서는 다양한 OS를 제공하고, 사용자 인터페이스를 개선하고 신규 mightyZAP 모델을 추가로 지원하는 신규mightyZAP Manager 입니다.
 
-이 가이드에서는 Total Manager의 설치와 각 기능의 사용법에 대한 기본 사항을 다룹니다.  
+이 가이드에서는 Total Manager의 설치와 각 기능의 사용법에 대한 기본 사항을 다룹니다.  111
 
 ## 1.1 개요
 mightyZAP Total Manager는 다양한 기능을 가진 다목적 Software입니다. mightyZAP의 동작 Test와 Parameter 설정 및 동작 상태 Monitoring과 Firmware Update를 기본적으로 제공합니다.  
