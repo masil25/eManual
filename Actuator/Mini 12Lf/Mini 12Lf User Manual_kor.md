@@ -678,7 +678,7 @@ highest voltage 및 Overload Error의 경우 Force Off (shutdown) 되며, 전원
 
 26. Present Motor Operating Rate [0~2047]
 	- Motor의 현재 가동률의 값 입니다.   
-	- Goal current와 Goal speed, 가감속 조정 등에 따라 달리 표시됩니다.   
+	- Goal current와 Goal speed, 가감속 조정 564등에 따라 달리 표시됩니다.   
 	- 0~2047의 범위로 표시 됩니다.  
 	- 0은 모터가 정지한 상태를 나타냅니다.  
 	- 1~1023 범위의 값은 Short Stroke(수축) 방향으로의 모터 가동률 상태이고,  
