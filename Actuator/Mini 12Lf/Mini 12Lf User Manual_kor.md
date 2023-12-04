@@ -154,24 +154,15 @@ Command Packet
 * 3번 M3 너트는 Hinge Shaft 고정과 더불어, 로드앤드 팁과 로드앤드너트 사이에 스토퍼로 체결하여 사용하시기 바랍니다.  
 ## 2.2. 제원 (mm)
 세부도면은 웹사이트의 자료실에서 3D 도면을 다운로드 받아 검토하시기 바랍니다.  
-
 ### 2.2.1. 27mm Stroke 제품군  
 <font color="#245bdb">공장 출하 시 27mm stroke제품은 27mm로 셋팅 되어 출하되며, 필요에 따라 사용자가 서보 매니져 프로그램을 통해 30mm까지 확장 가능 (기구안정성을 위해 27mm사용 권장)  </font>  
-
 ![[Dimension_12Lf-xx-27.png]]
-
 ### 2.2.2. 40mm Stroke 제품군
-
 ![[Dimension_12Lf-xx-40.png]]
-
 ### 2.2.3. 53mm Stroke 제품군
-
 ![[Dimension_12Lf-xx-53.png]]
-
 ### 2.2.4. 90mm Stroke 제품군
-
 ![[Dimension_12Lf-xx-90.png]]
-
 ## 2.3. 사양
 ### 2.3.1. 상세 스펙표
 
@@ -232,9 +223,6 @@ Command Packet
 
 * 디자인과 사양은 성능 및 품질 개량을 위해 사전고지 없이 변경될 수 있습니다.
 
-
-
-
 # 3. 리니어 서보의 활용처
 ## 3.1. 공장자동화
 ![[Applications_FactoryAutomation.png]]
@@ -283,7 +271,6 @@ Command Packet
 - 3D 프린터
 - 아두이노나 라즈베리 파이 제어 / Maker’s DIY
 
-
 # 4. 서보제어
 ## 4.1. 서보 회로 연결
 ### 4.1.1. TTL/PWM (3핀 커넥터-모델명 12Lf-xxPT-xx 계열)
@@ -294,10 +281,10 @@ Command Packet
 	- DIRECTION_PORT의 신호 Level이 LOW인 경우 :Data의 신호가 Rx로 입력  
 	- DIRECTION_PORT의 신호 Level이 HIGH인 경우 :Tx 의 신호가 Data로 출력  
 	※ 위 다이어그램과 같이 통신 제어기와 액츄에이터의 GND는 서로 연결이 되어야 합니다.  
-> ※ PWM통신의 경우, 위 청색 Data핀에 3~5V의 PWM 시그널선을 연결해 주면 됩니다 (전원 연결도 위 그림과 동일).  
-※ PWM통신을 이용하는 경우, 데이터 통신 지원이 안되므로, 위치 명령은 가능하지만 현재 위치값 등의 Feedback data를 받을 수 없으며, 시리얼 Daisy chain 연결을 지원하지 않습니다.  
-※ Feedback data 수신과 Daisy chain연결은 TTL 또는 RS-485통신을 통해 가능합니다.  
 
+>※ PWM통신의 경우, 위 청색 Data핀에 3~5V의 PWM 시그널선을 연결해 주면 됩니다 (전원 연결도 위 그림과 동일).  
+>※ PWM통신을 이용하는 경우, 데이터 통신 지원이 안되므로, 위치 명령은 가능하지만 현재 위치값 등의 Feedback data를 받을 수 없으며, 시리얼 Daisy chain 연결을 지원하지 않습니다.  
+>※ Feedback data 수신과 Daisy chain연결은 TTL 또는 RS-485통신을 통해 가능합니다.  
 
 ### 4.1.2. RS-485 (4핀 커넥터- 모델명 12Lf-xxF-xx 계열)
 mightyZAP (12Lf-xxF-xx)을 제어하기 위해 RS485 통신방식을 사용합니다.  
