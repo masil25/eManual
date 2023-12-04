@@ -17,7 +17,7 @@ mightyZAP은 Half Duplex TTL, RS485, CAN 통신을 사용합니다. PC와의 통
 mightyZAP을 위한 USB Interface Board를 당사의 웹사이트에서 판매하고 있습니다. 해당  Interface Board를 사용할 경우 손쉽게 mightyZAP을 PC와 연결할 수 있습니다.  
 시중의 Convertor를 구매하여 사용하실 수 있지만, 안전성을 위하여 가급적 당사의 Interface Board를 사용하여 주시기 바랍니다.
 
-> <font color="#ff0000">⛔ 주의 사항</font><br
+> <font color="#ff0000">⚠️ 주의 사항</font><br
 > PC와 Interface Board 연결에 충전 전용 Cable을 사용하여 통신이 연결되지 않는 경우가 있습니다. 반드시 Data통신이 가능한 Cable인지 확인하시고 사용하여 주시기 바랍니다.
 
 ## 1.3 Feature
@@ -86,7 +86,7 @@ Mac OS 전용 패키지를 다운로드 합니다.
 Total Manager와 mightyZAP과의 통신을 위하여 Serial Convertor 가 필요합니다.  
 해당 설명은 당사의 USB Interface Board를 기준으로 설명이 되어있습니다.  
 먼저 USB Cable을 이용하여 PC와 연결하여 주시기 바랍니다.   
-> <font color="#ff0000">⛔ 주의사항 </font>     
+> <font color="#ff0000">⚠️ 주의사항 </font>     
 > <font color="#ff0000">충전 전용 케이블이 아닌 통신이 가능한 케이블을 사용하여 주셔야합니다.</font>
 
 ### 2.4.1 Windows
@@ -309,20 +309,20 @@ Monitoring 기능은 아래와 같이 구성 되어있습니다.
 ## 3.4 Update    
 펌웨어를 업데이트 하는 페이지 입니다.  Firmware의 버전은 최신 버전을 유지하는 것을 추천 드립니다. 다만 수정된 펌웨어를 적용하기 전에  변경 사항이 사용자의 Apllication과 적합한지 테스트 하신 후에 적용하시기 바랍니다.   
 펌웨어 파일은 당사의 homepage에서 다운로드 받으시기 바랍니다.  
-www.mightyZAP.com  
+[Firmware Download](https://mightyzap.com/en/digitalarchive4/?category1=Firmware&mod=list&pageid=1)
 ### 3.4.1 화면 구성    
 Update Page는 이미지와 같이 펌웨어 업데이트, Actuator Recovery 영역으로 되어있으며, 각각의 실행은 상단 header의 메뉴에서 해당 아이콘을 선택하여 실행할 수 있습니다.  
 ![[Information_tag.png|700]]
 ### 3.4.2 Firmware Update   
 **Actuator 연결**  
 업데이트를 진행할 서보 모터를 연결하고 SCAN 을 합니다.  
-><font color="red">주의 사항  </font>  
+><font color="red">⚠️ 주의 사항  </font>  
 >펌웨어 업데이트 시에는 업데이트를 진행할 actuator 하나만 연결하고 SCAN 작업을 진행하여 Actuator List에 하나의 actuator만 남아 있어야 합니다.  하나 이상의 actuator 가 연결 된 상태에서 업데이트를 진행하면 업데이트가 비정상적으로 진행되어 실패하게 되고 해당  actuator 는 동작이 되지 않게 됩니다.  
   
 **업데이트 파일 선택**  
 firmware update를 진행 할 경우 그림과 같이 Select file 버튼을 눌러 다운로드 받은 업데이트 파일을 선택해야 합니다.    
 ![[UpdateSelect-Button.png|700]]
-><font color="#ff0000">주의 사항  </font>
+><font color="#ff0000">⚠️ 주의 사항  </font>
 >이때 다른 모델의 firmware file 을 선택하지 않게 조심해야 합니다. Actuator List에 나와있는 Model 명과 uipdate file의 이름이 동일한지 확인해야 합니다.
 
 **업데이트** 
@@ -374,7 +374,7 @@ mightyZAP의 시스템을 재 시작 할 때 사용합니다. Overload Shutdown 
 해당 버튼을 누르면 화면이 한번 깜빡이고 Parameter창으로 이동하여 Data를 다시 읽어옵니다.
 ### 3.4.6 Factory Reset   
 Actuator의  상태를 공장 출하 시의 초기 상태로 돌리고, 위치 값을 결정하는 Potentiometer의 Calibration을 진행합니다.  
-><font color="#ff0000">주의사항</font>  
+><font color="#ff0000">⚠️ 주의사항</font>  
 >Factroy Reset 중에 Actuator가 Calibration을 위해 최대/최소로 위치이동을 합니다. 정상적인 Calibration을 위해 장치에 연결하지 않고 무부하에 최대 동작거리를 유지할 수 있는 공간에서 진행해 주시기 바랍니다.
 
 Factory Reset은 Update Page에 들어오면 상단 메뉴바에 추가 되어있는 것을 확인할 수 있습니다.   
@@ -394,5 +394,5 @@ Factory Reset 진행이 되면서 Actuator가 몇 번의 시스템 재 시작을
 최종적으로 Factory Reset이 완료되면 하단의 Close 버튼이 활성화 되면서 Parameter 창으로 이동하여 reset된 Data를 보여줍니다.
 ![[FActoryRest-Complete.png]]
 
-> <font color="#ff0000">주의 사항</font>  
+> <font color="#ff0000">⚠️ 주의 사항</font>  
 > Calibration 을 하기 앞서, 정확한 Calibration 작업을 위해 Actuator 에 연결되어있는 모든 기구물을 제거하여, 무 부하 상태에서 Full Stroke 구간에 걸쳐 기구 간섭이 없도록 합니다.
