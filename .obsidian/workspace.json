@@ -6,7 +6,7 @@
       {
         "id": "4d11f05b3aace888",
         "type": "tabs",
-        "dimension": 50,
+        "dimension": 79.59770114942529,
         "children": [
           {
             "id": "b02ba1a8741bd7af",
@@ -23,12 +23,12 @@
         ]
       },
       {
-        "id": "bfe4b43694048ce5",
+        "id": "ac40f2a4b4dc787d",
         "type": "tabs",
-        "dimension": 50,
+        "dimension": 20.402298850574713,
         "children": [
           {
-            "id": "b8540e6b1a7fc0c9",
+            "id": "09cac7f1d42a2ca2",
             "type": "leaf",
             "state": {
               "type": "markdown-table-editor-view",
@@ -182,7 +182,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b8540e6b1a7fc0c9",
+  "active": "b02ba1a8741bd7af",
   "lastOpenFiles": [
     "Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
