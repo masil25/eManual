@@ -396,9 +396,13 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 |150 (0x96)|Moving|움직임 유무|R|0 (0x00)|
 <font color="#ff0000">** 펌웨어 V2.0이상부터 적용  </font>  
 ### 4.3.2 MODBUS RTU  
--  산업 표준화 프로토콜인 [[Modbus RTU]] Protocol 을 사용한 제어 Data Map 입니다.
+- 산업 표준화 프로토콜인 [[Modbus RTU]] Protocol 을 사용한 제어 Data Map 입니다.
 - 해당 모델은 Readd Single Register(0x03)와 Write Holding Register(0x06)만 사용 가능합니다.
 - Reset명령 수행 시 모든 데이터는 Default값으로 설정되게 됩니다.  
+
+ <font size="4">Memory 사용 데이터 (Non-volatile)</span>
+	- 전원OFF시에도 데이터를 유지하는 메모리 영역에 저장합니다.  
+	- Factory Reset명령 수행 시 모든 데이터는 Default값으로 설정되게 됩니다.  
 
 |     Address     |     addr       |     Name                                     |     Access     |     Default           |     MIN     |     MAX      |     Type                                        |
 |:----------------|:---------------|:---------------------------------------------|:---------------|:----------------------|:------------|:-------------|:------------------------------------------------|
@@ -428,6 +432,9 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 |       40024     |     0x0017     |     Speed P Gain                             |     RW         |     개별Spec            |       0     |      255     |    ^                                            |
 |       40025     |     0x0018     |     Min Stroke Position                      |     RW         |     개별Spec            |       0     |      255     |    ^                                            |
 |       40026     |     0x0019     |     Max Stroke Position                      |     RW         |     개별Spec            |       0     |      255     | ^                                               |
+
+<font size="4">Parameter 사용 데이터(Volatile)</font>
+	- 전원인가 시 매번 Default값으로 초기화합니다.  
 
 |     Address     |     addr       |     Name                                     |     Access     |     Default           |     MIN     |     MAX      |     Type                                        |
 |:----------------|:---------------|:---------------------------------------------|:---------------|:----------------------|:------------|:-------------|:------------------------------------------------|
@@ -612,8 +619,6 @@ highest voltage 및 Overload Error의 경우 Force Off (shutdown) 되며, 전원
 (예, 12Lf-20F-27의 Min Position 3.8mm/ Min Position Calibration값이 5 일 경우, Min Position Calibration 값을 높이면 Min Position 값이 늘어나고 전체 Stroke 구간은 Min Position이 늘어남만큼 줄어들게 됩니다.)   
 > 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
-
-#### 4.2.3.2. 휘발성 메모리 영역    
 20. Force ON/OFF (Default : 1 / Force ON)
     - 기동력 활성화 여부 설정 ( 0일 때 OFF, 1일 때 ON)  
     
