@@ -6,7 +6,6 @@
       {
         "id": "4d11f05b3aace888",
         "type": "tabs",
-        "dimension": 79.59770114942529,
         "children": [
           {
             "id": "b02ba1a8741bd7af",
@@ -18,21 +17,6 @@
                 "mode": "source",
                 "source": false
               }
-            }
-          }
-        ]
-      },
-      {
-        "id": "ac40f2a4b4dc787d",
-        "type": "tabs",
-        "dimension": 20.402298850574713,
-        "children": [
-          {
-            "id": "09cac7f1d42a2ca2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown-table-editor-view",
-              "state": {}
             }
           }
         ]
@@ -162,11 +146,11 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 502.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -184,8 +168,9 @@
   },
   "active": "b02ba1a8741bd7af",
   "lastOpenFiles": [
-    "Total Manager/Total Manager User Manual_kor.md",
+    "Protocl/Modbus RTU.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+    "Total Manager/Total Manager User Manual_kor.md",
     "Total Manager/img/resetPopup.png",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Total Manager/img/resetAction.gif",
@@ -197,7 +182,6 @@
     "Total Manager/img/스크린샷 2023-07-26 10-41-58.png",
     "Total Manager/img/reset_popup",
     "Actuator/Mini 12Lf/img/ACC_IR_GT01.png",
-    "Protocl/Modbus.md",
     "Protocl/IR Protocol.md",
     "Actuator/Mini 12Lf/img/Broken_Rod 1.png",
     "Pasted image 20231122140059.png",

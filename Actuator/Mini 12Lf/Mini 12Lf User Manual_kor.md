@@ -328,10 +328,9 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 > TTL통신의 경우 이론적으로 253개의 ID를 설정하고 연결할 수 있으며, RS-485 통신의 경우 253개의 ID설정은 가능하지만 표준 규정상 노드 제한으로 인해 연결가능 한 서보액츄에이터는 32개입니다. 
 > 출하 시 ID가 0으로 되어 있으므로, 여러개의 액츄에이터로 Daisy chain 구성시 0~253까지의 ID가 겹치지 않도록 각 액츄에이터 ID를 설정해주시면 됩니다.
 
-### 4.2.2. Data Map
-#### 4.2.2.1. IR 프로토콜
-##### 4.2.2.1.1. Data Memory Map    
- **Memory 사용 데이터 (Non-volatile)**
+## 4.3. Data Map
+### 4.3.1. IR 프로토콜
+ - **Memory 사용 데이터 (Non-volatile)**
 	- 전원OFF시에도 데이터를 유지하는 메모리 영역에 저장합니다.  
 	- Factory Reset명령 수행 시 모든 데이터는 Default값으로 설정되게 됩니다.  
 
@@ -374,8 +373,7 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 |52 (0x34)|Current Limit (L)|전류 값 한계치 하위 바이트|RW|32 (0x20)|
 |53 (0x35)|Current Limit (H)|전류 값 한계치 상위 바이트|RW|3 (0x03)|
 
-##### 4.2.2.1.2. Parameter Map    
-**Parameter 사용 데이터(Volatile)  **
+- **Parameter 사용 데이터(Volatile)**
 	- 전원인가 시 매번 Default값으로 초기화합니다.  
 
 |Address|Name|Description|Access|Default|
@@ -397,9 +395,9 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 |146 (0x92)|Present Voltage|현재 전압|R|-|
 |150 (0x96)|Moving|움직임 유무|R|0 (0x00)|
 <font color="#ff0000">** 펌웨어 V2.0이상부터 적용  </font>  
-#### 4.2.2.2 MODBUS RTU (이 부분만 모드버스 매뉴얼에서)    
-##### 4.2.2.2.1 Data Memory Map    
-- multi write 기능은 지원하지 않습니다.  
+### 4.3.2 MODBUS RTU  
+-  산업 표준화 프로토콜인 [[Modbus RTU]] Protocol 을 사용한 제어 Data Map 입니다.
+- 해당 모델은 Readd Single Register(0x03)와 Write Holding Register(0x06)만 사용 가능합니다.
 - Reset명령 수행 시 모든 데이터는 Default값으로 설정되게 됩니다.  
 
 |     Address     |     addr       |     Name                                     |     Access     |     Default           |     MIN     |     MAX      |     Type                                        |
@@ -430,7 +428,9 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 |       40024     |     0x0017     |     Speed P Gain                             |     RW         |     개별Spec            |       0     |      255     |    ^                                            |
 |       40025     |     0x0018     |     Min Stroke Position                      |     RW         |     개별Spec            |       0     |      255     |    ^                                            |
 |       40026     |     0x0019     |     Max Stroke Position                      |     RW         |     개별Spec            |       0     |      255     | ^                                               |
-|                 |                |                                              |                |                       |             |              |                                                 |
+
+|     Address     |     addr       |     Name                                     |     Access     |     Default           |     MIN     |     MAX      |     Type                                        |
+|:----------------|:---------------|:---------------------------------------------|:---------------|:----------------------|:------------|:-------------|:------------------------------------------------|
 |       40051     |     0x0032     |     Force ON/OFF                             |     RW         |               1**     |       0     |        1     | 휘발성 (Volatile)                                  |
 |       40052     |     0x0033     |     LED                                      |     RW         |                 0     |       0     |      255     |   ^                                             |
 |       40053     |     0x0034     |     Goal Position                            |     RW         |     -                 |       0     |     4095     |   ^                                             |
