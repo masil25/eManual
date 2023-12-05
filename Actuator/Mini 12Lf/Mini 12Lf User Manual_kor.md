@@ -450,6 +450,17 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 |       40060     |     0x003b     |     Moving                                   |     R          |     -                 |       0     |        1     |   ^                                             |
 |       40061     |     0x003c     |     Hardware Error State                     |     R          |                 0     |       0     |      255     | ^                                               |  
 
+## 4.4 Data Description
+### 1. Model Number
+mightyZAP의 모델 번호입니다. 
+모델을 구별하고 인지하기 의하여 읽기 전용으로 사용합니다.
+### 2. Version of Firmware
+펌웨어 버전 정보가 저장되어 현재 mightyZAP의 펌웨어 버전이 최신인지 확인하여 최신 펌웨어로 유지하도록 합니다
+### 3. ID 
+서보모터를 식별 하기 위한 고유 번호
+서보를 식별 하기 위한 고유 번호,Daisy-Chain방식으로 연결된 서보들은 서로 다른 ID가 할당되어야 합니다. ID = 0 ~253 일 때, 미리 저장된 ID와 비교하여 선별적으로 동작함 ID = 254 (0xFE) 일 때, Broadcasting Mode로 동작하며 Feedback Packet은 동작하지 않음
+
+
 |설정값|통신속도(bps)|
 |---|---|
 |16 (0x10)|115200|
