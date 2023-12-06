@@ -93,7 +93,7 @@ Shutdown된 후에도 통신 라인은 여전히 기능을 하고 있으므로, 
 |:---------|:-----|:-----|:--------|:-------------------------|:----------------------|:---------|
 | 0xFFFFFF | 0x00 | 0x04 |    0xF3 |                     0x12 |                  0x20 |     0xD6 |  
 
-><B><font size="5" color="#ff0000" >⚠️주의 </font> </B><font size="4">   정격부하에서의 사용!</font>  
+><B><font size="5" color="#ff0000" >⚠️주의 </font> </B><font size="4" color="#555"><b>   정격부하에서의 사용!</b></font>  
 >리니어 액츄에이터 적용 시 표기된 정격 부하 내에서 사용해야 안정적인 동작을 구현하고 제품의 수명을 적절히 관리할 수 있습니다.  
 
 ## 1.5. 포스오프기능
@@ -291,7 +291,7 @@ Controller와 마이티잽은 packet을 주고 받으며 통신합니다. Packet
 |**Parity**|non-parity|
 |**Stop Bit**|One bit|
 
-><font color="#ff0000" size="5"><b>⚠ 주의</b></font>    <font size="4">안정적인 통신을 위한 지연 시간</font>  
+><font color="#ff0000" size="5"><b>⚠ 주의</b></font>    <font size="4" color="#555"><b>안정적인 통신을 위한 지연 시간</b></font>  
 > MightyZap은 반이중 통신 방식으로, 데이터 읽고 쓰기 중 데이터 충돌이 나지 않도록, 데이터 쓰기 중에는 5msec, 데이터 읽어오기 중에는 10msec 정도의 지연 시간을 주어야 안정적으로 통신을 할 수 있습니다.  해당 지연시간을 지키지 않을 경우 통신 충돌로 인한 서보액츄에이터의 이상동작이 발생할 수 있습니다. 위의 지연시간은 최소 지연시간이 아닌 안전을 고려한 적정 지연 시간입니다
 
 - PWM Pulse Mode 
@@ -322,7 +322,7 @@ Controller와 마이티잽은 packet을 주고 받으며 통신합니다. Packet
 #### 4.2.1.3. Daisy-Chain Connection    
 ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 개의 MIGHTY ZAP중 ID가 N인 서보만이 Feedback Packet을 return하고, 그 Command를 수행합니다.  
 ![[DaisyChainConnection.png]]
-><font color="#ff0000" size="5"><b>⚠ 주의</b></font>    <font size="5">Unique ID  </font>  
+><font color="#ff0000" size="5"><b>⚠ 주의</b></font>    <font size="5" color="#555"><b>Unique ID </b> </font>  
 > 여러 개의 마이티잽이 동시에 Packet을 전송하면 Packet충돌이 일어나서 통신에 문제를 일으킵니다. 그러므로 Network Node안에 ID가 같은 마이티잽이 존재하지 않도록 ID설정을 해야 합니다.
 > TTL통신의 경우 이론적으로 253개의 ID를 설정하고 연결할 수 있으며, RS-485 통신의 경우 253개의 ID설정은 가능하지만 표준 규정상 노드 제한으로 인해 연결가능 한 서보액츄에이터는 32개입니다. 
 > 출하 시 ID가 0으로 되어 있으므로, 여러개의 액츄에이터로 Daisy chain 구성시 0~253까지의 ID가 겹치지 않도록 각 액츄에이터 ID를 설정해주시면 됩니다.
