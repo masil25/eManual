@@ -272,11 +272,11 @@ mightyZAP (12Lf-xxF-xx)을 제어하기 위해 RS485 통신방식을 사용합�
 	- DIRECTION_PORT의 신호 Level이 LOW인 경우 :Data의 신호가 Rx로 입력  
 	- DIRECTION_PORT의 신호 Level이 HIGH인 경우 :Tx의 신호가 Data로 출력  
 	※ 위 다이어그램과 같이 통신 제어기와 액츄에이터의 GND는 서로 연결이 되어야 합니다.  
-## 4.2. 통신
+## 4.2. 통신 
 ![[Communication_MainController.png]]
 Controller와 마이티잽은 packet을 주고 받으며 통신합니다. Packet의 종류로는 Main controller에서 마이티잽으로 전송되는Command Packet과 마이티잽에서 제어기로 전송되는 Feedback Packet이 있습니다.  
-### 4.2.1. Specification
-#### 4.2.1.1. Communication specification    
+
+### 4.2.1. Communication specification    
 - 2 Mode in One (Pulse / Data Mode Auto-Switching)  
   입력 신호에 따라 자동적으로 데이터 모드와 펄스 모드의 전환이 이루어집니다.  
 - Data Mode (TTL / RS-485)  
@@ -306,7 +306,7 @@ Controller와 마이티잽은 packet을 주고 받으며 통신합니다. Packet
 >※ 아래와 같은 방식으로도 PWM제어가 가능합니다.  Frequency 50Hz / Duty rate 4.5% ~ 10.5%. 
 >    (0.05% 단위로 제어)추천 frequency는 50Hz(20ms)  
 
-#### 4.2.1.2. Data specification    
+### 4.2.2. Data specification    
 데이터 모드와 펄스 모드에서 아래와 같은 데이터 범위로 기본지정 되어있습니다.   
 
 |Rod Stroke|Data Mode|Pulse Mode|
@@ -318,7 +318,7 @@ Controller와 마이티잽은 packet을 주고 받으며 통신합니다. Packet
 > <font color="#245bdb" size="5"><b>TIP</b> </font>  
 > 27mm 스트로크 제품은 공장 출하 시 27mm로 셋팅 되어 출하 되나, 30mm를 모두 사용해야 하는 경우 사용자가 설정 가능.  27mm의 데이터 값은 3686입니다.  (횡부하 관련 기구적인 안정성을 위해 가급적 27mm사용을 권장합니다.)  
 
-#### 4.2.1.3. Daisy-Chain Connection    
+### 4.2.3. Daisy-Chain Connection    
 ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 개의 MIGHTY ZAP중 ID가 N인 서보만이 Feedback Packet을 return하고, 그 Command를 수행합니다.  
 ![[DaisyChainConnection.png]]
 ><font color="#ff0000" size="5"><b>⚠ 주의</b></font>    <font size="5" color="#555"><b>Unique ID </b> </font>  
