@@ -449,12 +449,12 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 |        40061      |      0x003c      |      Hardware Error State                      |      R           |                  0      |        0      |       255      |  
 
 ## 4.4 Data Description
-### 1. Model Number
+### 4.4.1. Model Number
 mightyZAP의 모델 번호입니다. 
 모델을 구별하고 인지하기 의하여 읽기 전용으로 사용합니다.
-### 2. Version of Firmware
+### 4.4.2. Version of Firmware
 펌웨어 버전 정보가 저장되어 현재 mightyZAP의 펌웨어 버전이 최신인지 확인하여 최신 펌웨어로 유지하도록 합니다
-### 3. ID 
+### 4.4.3. ID 
 서보를 식별 하기 위한 고유 번호, Daisy-Chain방식으로 연결된 서보들은 서로 다른 ID가 할당되어야 합니다. 
  - 미리 저장된 ID와 비교하여 선별적으로 동작함
  - Broadcasting Mode로 동작할 경우 Feedback Packet은 동작하지 않음
@@ -463,7 +463,7 @@ mightyZAP의 모델 번호입니다.
 |----|----|----|
 |IR Protocol|0 ~ 253|254|
 |Modbus RTU|1~247|0|
-### 4. Baudrate
+### 4.4.4. Baudrate
 - 통신 속도를 결정, Default 통신 속도는 57600bps
 - 설정 값으로 통신 속도를 변경하고자 할 때는 서보 모터의 시스템을 재 시작 해야 합니다.
 
@@ -479,12 +479,12 @@ mightyZAP의 모델 번호입니다.
 
 >Firmware Version 1.5이하 에서는 Baudrate 38400bps는 지원하지 않습니다.  
 
-### 5. Stroke Limit (0~4095)  
+### 4.4.5. Stroke Limit (0~4095)  
 Short Stroke(A)또는 Long Stroke(C)상태의 한계 위치 값으로 Goal Position의 최대/최소 값이 됩니다. Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Stroke Limit 값보다 클 경우  Stroke Limit값으로 치환됩니다.  
 (범위 : 0 ~ 4095 )
    ![[StrokeLimit.png]]
 > 비 휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.   
-### 6. Protocol type (Default : IR Protocol)
+### 4.4.6. Protocol type (Default : IR Protocol)
 통신 Protocol 방식을 선택합니다.  
 
 |설정값|Protocol|설명|
@@ -496,7 +496,7 @@ Short Stroke(A)또는 Long Stroke(C)상태의 한계 위치 값으로 Goal Posit
 
 > Firmware Version 1.5 에서는 IR Protocol만 지원 하며, 해당 항목이 존재하지 않습니다.   (MODBUS RTU는 펌웨어 V2.0 이상에서 지원)  
 
-### 7. The Highest / Lowest Limit Voltage
+### 4.4.7. The Highest / Lowest Limit Voltage
 입력 전원의 전압에 상한 / 하한 (단위 : 0.1V).  
 입력 전압에 따라 Actuator의 속도, Force가 변경될 수 있습니다. 자세한 사항은 해당 모델 Datasheet참조.  
    
@@ -504,12 +504,12 @@ Short Stroke(A)또는 Long Stroke(C)상태의 한계 위치 값으로 Goal Posit
 |---|---|
 |Lowest voltage [하한 전압]|7.0[V]|
 |Hightest Voltage [상한 전압]|13[V]|
-### 8. Motor Operating Rate (0~1023 / Default : 1023)
+### 4.4.8. Motor Operating Rate (0~1023 / Default : 1023)
 모터의 최대 가동률을 값으로, 모터의 공급되는 최대 PWM 값을 나타냅니다.  
 400 이하로 설정할 경우, 모터가 동작 하지 않을 수도 있습니다. Motor Operating Rate를 변경하면 속도와 Stall Force가 변경됩니다.  
 > 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
-### 9. Feedback Return Mode
+### 4.4.9. Feedback Return Mode
 COMMAND Packet이 전송된 이후 Feedback Packet을 회신 결정 모드  
 
 |Mode|Feedback Packet Return 여부|
@@ -522,7 +522,7 @@ Broadcast ID(0xFE)일 때, Feedback Return Mode와 상관없이 Feedback Packet�
 
 > Broadcast ID(0xFE) mode에서, feedback packet 은 Feedback Return Mode 값에 상관없이 보내지지 않습니다.   
 
-### 10. Alarm LED  (Default : 33)  
+### 4.4.10. Alarm LED  (Default : 33)  
 Error가 발생 했을 때,해당 bit가 1로 설정되어 있으면 LED표시를 수행한다. (1=활성 / 0=비활성)  
 
 |Error|bit|LED Indicate|
@@ -533,7 +533,7 @@ Input voltage Alarm의 경우 원인이 해결 되면 LED 알람이 사라집니
 > 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.  운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
 Overload Error의 경우 원인이 해결되어도, LED 알람이 곧바로 해지 되지 않으며, 전원 재 시작(Restart) 또는 전원 재부팅 명령을 내려야 Alarm이 해제됩니다.
-### 11. Alarm Shutdown (Default : 33)
+### 4.4.11. Alarm Shutdown (Default : 33)
 Error가 발생 했을 때,해당 bit가 1로 설정되어 있으면 Force를 OFF (1=활성 / 0=비활성)
 
 |Error|bit|
@@ -555,7 +555,7 @@ highest voltage 및 Overload Error의 경우 Force Off (shutdown) 되며, 전원
 
 > 비 휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
-### 12. Compliance Margin
+### 4.4.12. Compliance Margin
 Compliance Margin이란 이동 명령을 통해 액츄에이터를 구동 시작 시키거나 혹은 명령 수행을 완료 시키기 위한 최소 값의 크기입니다. 일반적인 경우 한가지의 컴플라이언스 마진 값을 통해, 구동 시작이나 구동 완료를 시키는 것이 보통이지만 당사 액츄에이터는 시작 시와 완료 시의 컴플라이언스 마진을 각각 개별로 설정해서, 우수한 반복 위치 정밀도를 가지면서도, 안정적인 동작이 가능하게 설계가 되었습니다.　일반적으로 컴플라이언스 마진을 조종하는 경우는 디폴트 값보다 크게 해서 정밀도를 일부 희생하더라도 외압이나 노이즈 등이 발생하는 불안정된 환경에서도 안정적으로 동작이 될 수 있도록 하는 경우가 대부분입니다. 반대로 컴플라이언스 마진을 디폴트 값 보다 더 줄여서 사용하는 경우는 정밀도는 좋아지는 대신에 동작 안정성을 해칠 수 있으므로 특별한 주의를 요합니다.   
 
 **Start Compliance Margin(Long/Short) / 시작 컴플라이언스 마진(권장 Margin 값 : 7)**
@@ -573,7 +573,7 @@ Compliance Margin이란 이동 명령을 통해 액츄에이터를 구동 시작
   - End Compliance Margin을 늘릴 경우 목표 위치 도달 시 동작이 깔끔해지고 안정적으로 변하며, 특히 속도가 빠른 제품일수록 효과가 좋습니다. 단, 너무 클 경우 반대로 정밀도가 나빠질 수 있습니다.   
 > 비 휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.  운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
-### 13. Current Limit (0~1600 / Default : 800)  
+### 4.4.13. Current Limit (0~1600 / Default : 800)  
 - 모터의 최대 전류 제한 값입니다(0~1600). 즉, 모터의 최대 힘인 stall 전류를 제어하여 stall force를 조정합니다.  
 - 제어 값은 0~1600으로 설정하며, 제어 값 1600은 최대 stall 전류 값 1600mA를 나타냅니다. (오차 범위 :+/-15%)  
 - 공장 출하 시에는 800(mA)으로 셋팅되어 유사시 불필요한 최대 stall 전류 사용을 방지하되, 최대 속도를 보장합니다.   
@@ -584,7 +584,7 @@ Compliance Margin이란 이동 명령을 통해 액츄에이터를 구동 시작
 - 전류 설정에 따른 stall force값의 차이는 데이터 시트의 그래프를 참고하여 주십시오.   
 >   비 휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 휘발성 파라메터인 Goal Current를 사용하시기 바랍니다.  
 
-### 14. Speed Limit (0~1023 / Default : 1023)  
+### 4.4.14. Speed Limit (0~1023 / Default : 1023)  
 - 모터의 평균 이동 속도 제한 값입니다(0~1023). 0일 때 기동력 OFF 상태이고 1023일 때 최대 속도를 냅니다.  
 - Speed Limit를 변경해도 Force에 영향을 주지 않습니다.  
 - 다만, 너무 낮은 Speed Limit 설정 시 모터의 반응이 늦어지거나 움직이지 못할 수 있습니다.   
@@ -593,11 +593,11 @@ Compliance Margin이란 이동 명령을 통해 액츄에이터를 구동 시작
 
 > Firmware Version 1.5 에서의 Goal Speed와 같습니다.  
 
-### 15. Calibration Stroke  
+### 4.4.15. Calibration Stroke  
 - Calibration Short Stroke : Short Stroke위치 보정 값, 공장에서 설정된 Short Stroke Calibration 값을 저장  
 - Calibration Long Stroke : Long Stroke위치 보정 값,공장에서 설정된 Long Stroke Calibration 값을 저장  
 
-### 16. Acceleration / Deceleration (0~255 / Default : 개별 사양)  
+### 4.4.16. Acceleration / Deceleration (0~255 / Default : 개별 사양)  
     ![[DataDescription_AccelerationDeceleration.png]]
 	- 모터의 가감속률을 나타냅니다.  
 	- Acceleration : 모터의 이동 시작 시의 가속도 값으로 값이 클 경우 모터가 급 가속을 하게 됩니다. 반대로 값이 낮을 경우 부드러운 가속을 하지만, 너무 낮을 경우 모터가 움직이지 않을 수도 있습니다.  
