@@ -652,11 +652,9 @@ Compliance Margin이란 이동 명령을 통해 액츄에이터를 구동 시작
 |0|LED Disable (1일 때 모두 꺼짐)|
 |1|RED LED 제어|
 |2|GREEN LED 제어|
-
 ### 22. Goal Position (0~4095)
 - 목표 위치의 값. 이동 시키고자 하는 위치 값입니다. 목표위치 값은 Short/Long stroke limit 설정치에 영향을 받습니다. (즉, stroke limit 범위 밖으로는 위치 명령을 내려도 stroke limit위치까지만 움직임)  
 - 27mm stroke제품의 경우, Long stroke limit설정으로 인해 27mm에서의 Goal position 값은 3686입니다. 원할 경우 30mm(4095)로 늘려 사용할 수 있습니다.   
-
 ### 23. Goal Speed (0~1023 / Default : 1023)
 - 모터의 평균 이동속도 목표값(0~1023). 액츄에이터의 동작 중 속도변경을 원하는 경우 사용합니다.
 - 초기 전원 인가시 비휘발성 Speed Limit에서 값을 불러와 Goal Speed에 저장합니다.  
@@ -664,7 +662,6 @@ Compliance Margin이란 이동 명령을 통해 액츄에이터를 구동 시작
 - 0일 때 기동력 OFF 상태이고 1023일 때 최대 속도를 냅니다.  
 - Goal Speed를 변경해도 Force에 영향을 주지 않습니다.  
 - 다만, 너무 낮은 값을 설정 시 모터의 반응이 늦어지거나 움직이지 못할 수 있습니다.   
-
 ### 24. Goal Current (0~1600 / Default : 800)
 - 모터의 최대 전류 제한 값입니다(0~1600). 즉, 모터의 최대 힘인 stall 전류를 제어하여 stall force를 조정합니다.  
 - 기능적으로는 비 휘발성 파라메터인 Current Limit과 동일하지만, 동작 중의 빈번한 전류 설정 변경은, 응답이 빠른 휘발성 파라메터인 Goal Current 명령을 사용하시기 바랍니다.   
@@ -675,28 +672,23 @@ Compliance Margin이란 이동 명령을 통해 액츄에이터를 구동 시작
 - 비 휘발성 Current Limit 값을 변경할 경우, 전원 재 인가 시 휘발성 파라메터인 Goal Current 도 같이 변경됩니다.  
 - 제품 마다의 내부 기구 저항 편차에 따라 저 전류(200mA이하) 설정에서는 액츄에이터의 동작이 불규칙하거나 움직이지 않을 수도 있으니, 가급적 200mA이상의 전류 설정을 해 주시기 바랍니다.   
 - 전류 설정에 따른 stall force값의 차이는 데이터 시트의 그래프를 참고하여 주십시오.   
-
 ### 25. Present Position [0~4095]
 - 현재 Stroke 위치 값을 나타냅니다.  
 - 0~4095의 범위로 표시되며 모터가 정지한 후에도 margin 값 이내의 미세한 위치 변동이 나타날 수 있으며 이는 정상 동작입니다.  
-
-**26**. Present Motor Operating Rate [0~2047]
+### **26**. Present Motor Operating Rate [0~2047]
 - Motor의 현재 가동률의 값 입니다.   
 - Goal current와 Goal speed, 가감속 조정 564등에 따라 달리 표시됩니다.   
 - 0~2047의 범위로 표시 됩니다.  
 - 0은 모터가 정지한 상태를 나타냅니다.  
 - 1~1023 범위의 값은 Short Stroke(수축) 방향으로의 모터 가동률 상태이고,  
 - 1024~2047 범위의 값은 Long Stroke(확장) 방향으로의 모터 가동률 상태입니다.  
-
 ### 27. Present Current [0~1600]
 - Motor의 현재 전류 사용 값 입니다.  
 - 0~1600의 범위로 표시 됩니다.  
 - 전류 값은 실제 전류값의 오차를 포함한 값으로, 참고 용도로 사용하시기 바랍니다.  
-
 ### 28. Present Voltage
 - 현재 입력 전압 값이며 단위는 0.1V입니다.  
 - 예를 들어, 74이면 7.4V입니다.  
-
 ### 29. Moving
 - 움직임 유무  
 
@@ -705,13 +697,6 @@ Compliance Margin이란 이동 명령을 통해 액츄에이터를 구동 시작
 |0|Motor 정지 상태|
 |1|Motor 가동 중|
 
-
-'''## 4.2. 통신
-''### 4.2.1. Specification
-<font color="#ff0000">''### 4.2.2. Packet Description (삭제) </font>
-''### 4.2.3. Data Map
-''### 4.2.4. Data Description
-<font color="#ff0000">''### 4.2.5. Command 예제 Packet (삭제)</font>
 # 5. 별매 악세서리
 ## 5.1. 메탈 브라켓 (IR-MB02/IR-MB03/IR-MB04) 
 

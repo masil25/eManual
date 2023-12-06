@@ -37,3 +37,6 @@ table p {
 table th {
   background-color :#ccc!important;
 }
+table {
+  margin-bottom : 5px !important;
+}
