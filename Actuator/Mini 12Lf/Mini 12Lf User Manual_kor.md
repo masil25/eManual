@@ -398,7 +398,7 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 - 해당 모델은 Readd Single Register(0x03)와 Write Holding Register(0x06)만 사용 가능합니다.
 - Reset명령 수행 시 모든 데이터는 Default값으로 설정되게 됩니다.  
 
- <font size="4"><b>Memory 사용 데이터 (Non-volatile)</b></span>
+ <font size="4"><b>Memory 사용 데이터 (Non-volatile)</b></font>
 	- 전원OFF시에도 데이터를 유지하는 메모리 영역에 저장합니다.  
 	- Factory Reset명령 수행 시 모든 데이터는 Default값으로 설정되게 됩니다.  
 
