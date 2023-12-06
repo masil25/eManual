@@ -326,7 +326,7 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 
 ## 4.3. Data Map
 ### 4.3.1. IR 프로토콜
- - **Memory 사용 데이터 (Non-volatile)**
+<font size="4"> <b>Memory 사용 데이터 (Non-volatile)</b></font>
 	- 전원OFF시에도 데이터를 유지하는 메모리 영역에 저장합니다.  
 	- Factory Reset명령 수행 시 모든 데이터는 Default값으로 설정되게 됩니다.  
 
