@@ -393,7 +393,7 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 |145 (0x91)|Present Motor Operating Rate(H)|현재 모터가동률의 상위 바이트|R|-|
 |146 (0x92)|Present Voltage|현재 전압|R|-|
 |150 (0x96)|Moving|움직임 유무|R|0 (0x00)|
-<font color="#ff0000">** 펌웨어 V2.0이상부터 적용  </font>  
+<font color="#ff0000">펌웨어 V2.0이상부터 적용  </font>  
 ### 4.3.2 MODBUS RTU  
 - 산업 표준화 프로토콜인 [[Modbus RTU]] Protocol 을 사용한 제어 Data Map 입니다.
 - 해당 모델은 Readd Single Register(0x03)와 Write Holding Register(0x06)만 사용 가능합니다.
