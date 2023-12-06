@@ -400,51 +400,51 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 	- 전원OFF시에도 데이터를 유지하는 메모리 영역에 저장합니다.  
 	- Factory Reset명령 수행 시 모든 데이터는 Default값으로 설정되게 됩니다.  
 
-|     Address     |     addr       |     Name                                     |     Access     |     Default           |     MIN     |     MAX      |     Type                                        |
-|:----------------|:---------------|:---------------------------------------------|:---------------|:----------------------|:------------|:-------------|:------------------------------------------------|
-|       40001     |     0x0000     |     Model Number                             |     R          |     -                 |             |              | 비휘발성(Non-Volatile)                              |
-|       40002     |     0x0001     |     Version of Firmware                      |     R          |     -                 |             |              |    ^                                            |
-|       40003     |     0x0002     |     ID                                       |     RW         |                 1     |       1     |      247     |    ^                                            |
-|       40004     |     0x0003     |     Baud Rate                                |     RW         |          32(0x20)     |      16     |      128     |    ^                                            |
-|       40005     |     0x0004     |     Protocol Type (MODBUS RTU / IRROBOT)     |     RW         |                 0     |       0     |        1     |    ^                                            |
-|       40006     |     0x0005     |     Short Stroke Limit                       |     RW         |         0(0x0000)     |       0     |     4095     |    ^                                            |
-|       40007     |     0x0006     |     Long Stroke Limit                        |     RW         |     개별Spec            |       0     |     4095     |    ^                                            |
-|       40008     |     0x0007     |     Lowest Limit Voltage                     |     R          |                70     |     -       |     -        |    ^                                            |
-|       40009     |     0x0008     |     Highest Limit Voltage                    |     R          |               130     |     -       |     -        |    ^                                            |
-|       40010     |     0x0009     |     Alarm LED                                |     RW         |                33     |     -       |     -        |    ^                                            |
-|       40011     |     0x000a     |     Alarm Shutdown                           |     RW         |                33     |     -       |     -        |    ^                                            |
-|       40012     |     0x000b     |     Start Compliance Margin                  |     RW         |                 7     |       0     |      255     |    ^                                            |
-|       40013     |     0x000c     |     End Compliance Margin                    |     RW         |                 2     |       0     |      255     |    ^                                            |
-|       40014     |     0x000d     |     Speed Limit                              |     RW         |              1023     |       0     |     1023     |    ^                                            |
-|       40015     |     0x000e     |     Current Limit                            |     RW         |               800     |       0     |     1600     |    ^                                            |
-|       40016     |     0x000f     |     Calibration Short Stroke                 |     R          |     개별Spec            |       0     |     4095     |    ^                                            |
-|       40017     |     0x0010     |     Calibration Long Stroke                  |     R          |     개별Spec            |       0     |     4095     |    ^                                            |
-|       40018     |     0x0011     |     Acceleration Ratio                       |     RW         |     개별Spec            |       0     |      255     |    ^                                            |
-|       40019     |     0x0012     |     Deceleration Ratio                       |     RW         |     개별Spec            |       0     |      255     |    ^                                            |
-|       40020     |     0x0013     |     Current I Gain                           |     RW         |     개별Spec            |       0     |      255     |    ^                                            |
-|       40021     |     0x0014     |     Current P Gain                           |     RW         |     개별Spec            |       0     |      255     |    ^                                            |
-|       40022     |     0x0015     |     Speed D Gain                             |     RW         |     개별Spec            |       0     |      255     |    ^                                            |
-|       40023     |     0x0016     |     Speed I Gain                             |     RW         |     개별Spec            |       0     |      255     |    ^                                            |
-|       40024     |     0x0017     |     Speed P Gain                             |     RW         |     개별Spec            |       0     |      255     |    ^                                            |
-|       40025     |     0x0018     |     Min Stroke Position                      |     RW         |     개별Spec            |       0     |      255     |    ^                                            |
-|       40026     |     0x0019     |     Max Stroke Position                      |     RW         |     개별Spec            |       0     |      255     | ^                                               |
+|      Address      |      addr        |      Name                                      |      Access      |      Default            |      MIN      |      MAX       |
+|:------------------|:-----------------|:-----------------------------------------------|:-----------------|:------------------------|:--------------|:---------------|
+|        40001      |      0x0000      |      Model Number                              |      R           |      -                  |               |                |
+|        40002      |      0x0001      |      Version of Firmware                       |      R           |      -                  |               |                |
+|        40003      |      0x0002      |      ID                                        |      RW          |                  1      |        1      |       247      |
+|        40004      |      0x0003      |      Baud Rate                                 |      RW          |           32(0x20)      |       16      |       128      |
+|        40005      |      0x0004      |      Protocol Type (MODBUS RTU / IRROBOT)      |      RW          |                  0      |        0      |         1      |
+|        40006      |      0x0005      |      Short Stroke Limit                        |      RW          |          0(0x0000)      |        0      |      4095      |
+|        40007      |      0x0006      |      Long Stroke Limit                         |      RW          |      개별Spec             |        0      |      4095      |
+|        40008      |      0x0007      |      Lowest Limit Voltage                      |      R           |                 70      |      -        |      -         |
+|        40009      |      0x0008      |      Highest Limit Voltage                     |      R           |                130      |      -        |      -         |
+|        40010      |      0x0009      |      Alarm LED                                 |      RW          |                 33      |      -        |      -         |
+|        40011      |      0x000a      |      Alarm Shutdown                            |      RW          |                 33      |      -        |      -         |
+|        40012      |      0x000b      |      Start Compliance Margin                   |      RW          |                  7      |        0      |       255      |
+|        40013      |      0x000c      |      End Compliance Margin                     |      RW          |                  2      |        0      |       255      |
+|        40014      |      0x000d      |      Speed Limit                               |      RW          |               1023      |        0      |      1023      |
+|        40015      |      0x000e      |      Current Limit                             |      RW          |                800      |        0      |      1600      |
+|        40016      |      0x000f      |      Calibration Short Stroke                  |      R           |      개별Spec             |        0      |      4095      |
+|        40017      |      0x0010      |      Calibration Long Stroke                   |      R           |      개별Spec             |        0      |      4095      |
+|        40018      |      0x0011      |      Acceleration Ratio                        |      RW          |      개별Spec             |        0      |       255      |
+|        40019      |      0x0012      |      Deceleration Ratio                        |      RW          |      개별Spec             |        0      |       255      |
+|        40020      |      0x0013      |      Current I Gain                            |      RW          |      개별Spec             |        0      |       255      |
+|        40021      |      0x0014      |      Current P Gain                            |      RW          |      개별Spec             |        0      |       255      |
+|        40022      |      0x0015      |      Speed D Gain                              |      RW          |      개별Spec             |        0      |       255      |
+|        40023      |      0x0016      |      Speed I Gain                              |      RW          |      개별Spec             |        0      |       255      |
+|        40024      |      0x0017      |      Speed P Gain                              |      RW          |      개별Spec             |        0      |       255      |
+|        40025      |      0x0018      |      Min Stroke Position                       |      RW          |      개별Spec             |        0      |       255      |
+|        40026      |      0x0019      |      Max Stroke Position                       |      RW          |      개별Spec             |        0      |       255      |  
 
 <font size="4">Parameter 사용 데이터(Volatile)</font>
 	- 전원인가 시 매번 Default값으로 초기화합니다.  
 
-|     Address     |     addr       |     Name                                     |     Access     |     Default           |     MIN     |     MAX      |     Type                                        |
-|:----------------|:---------------|:---------------------------------------------|:---------------|:----------------------|:------------|:-------------|:------------------------------------------------|
-|       40051     |     0x0032     |     Force ON/OFF                             |     RW         |               1**     |       0     |        1     | 휘발성 (Volatile)                                  |
-|       40052     |     0x0033     |     LED                                      |     RW         |                 0     |       0     |      255     |   ^                                             |
-|       40053     |     0x0034     |     Goal Position                            |     RW         |     -                 |       0     |     4095     |   ^                                             |
-|       40054     |     0x0035     |     Goal Speed                               |     RW         |     Speed Limit       |       0     |     1023     |   ^                                             |
-|       40055     |     0x0036     |     Goal Current                             |     RW         |     Current Limit     |       0     |     1600     |   ^                                             |
-|       40056     |     0x0037     |     Present Position                         |     R          |     -                 |       0     |     4095     |   ^                                             |
-|       40057     |     0x0038     |     Present Current                          |     R          |     -                 |       0     |     1600     |   ^                                             |
-|       40058     |     0x0039     |     Present Motor Operating Rate             |     R          |     -                 |       0     |     2048     |   ^                                             |
-|       40059     |     0x003a     |     Present Voltage                          |     R          |     -                 |       0     |      255     |   ^                                             |
-|       40060     |     0x003b     |     Moving                                   |     R          |     -                 |       0     |        1     |   ^                                             |
-|       40061     |     0x003c     |     Hardware Error State                     |     R          |                 0     |       0     |      255     | ^                                               |  
+|      Address      |      addr        |      Name                                      |      Access      |      Default            |      MIN      |      MAX       |
+|:------------------|:-----------------|:-----------------------------------------------|:-----------------|:------------------------|:--------------|:---------------|
+|        40051      |      0x0032      |      Force ON/OFF                              |      RW          |                1**      |        0      |         1      |
+|        40052      |      0x0033      |      LED                                       |      RW          |                  0      |        0      |       255      |
+|        40053      |      0x0034      |      Goal Position                             |      RW          |      -                  |        0      |      4095      |
+|        40054      |      0x0035      |      Goal Speed                                |      RW          |      Speed Limit        |        0      |      1023      |
+|        40055      |      0x0036      |      Goal Current                              |      RW          |      Current Limit      |        0      |      1600      |
+|        40056      |      0x0037      |      Present Position                          |      R           |      -                  |        0      |      4095      |
+|        40057      |      0x0038      |      Present Current                           |      R           |      -                  |        0      |      1600      |
+|        40058      |      0x0039      |      Present Motor Operating Rate              |      R           |      -                  |        0      |      2048      |
+|        40059      |      0x003a      |      Present Voltage                           |      R           |      -                  |        0      |       255      |
+|        40060      |      0x003b      |      Moving                                    |      R           |      -                  |        0      |         1      |
+|        40061      |      0x003c      |      Hardware Error State                      |      R           |                  0      |        0      |       255      |  
 
 ## 4.4 Data Description
 ### 1. Model Number
@@ -767,16 +767,11 @@ Raspberry Pi B3 또는 Raspberry Pi Zero에 호환되는 HAT(Hardware Attached o
 ## 5.7. 로드앤드 팁 (IR-GT01) 
 ![[ACC_IR_GT01.png]]
 Rod-End Grip Tip은 mightyZAP의 rod end에 연질의 패드가 부착된 팁을 장착하여, 어플리케이션 대상체에 물리적인 손상을 주지 않도록 하는 제품입니다. 예를 들어, Flat grip tip에 고무/실리콘 패드를 부착하여, 상처나기 쉬운 물체를 밀거나 접촉하여 제어할 때, 또는 실리콘의 마찰력을 이용해서 물체를 잡거나 들어올릴 때 사용할 수 있습니다.
-
-
 > 추가적인 악세서리 정보는 당사 웹사이트의 악세서리 메뉴를 참고하시기 바랍니다. 
  
-
 # 6. 보증 및 수리
 ## 6.1. 보증 및 수리
 마이티잽의 보증기간은 구매일로부터 1년입니다. 보증 수리를 받기 위해서는 제품 구매일을 증명할 수 있는 영수증 등을 지참하시어 구매처 또는 본사 고객만족실로 문의를 하여 주시기 바랍니다.  단, 정상적인 기어의 마모, 와이어 피복의 벗겨짐, 모터의 소손 등 사용자의 오용과 과실에 따르는 문제는 보증에서 제외됩니다. 또한, 임의 분해 및 임의 수리에 따르는 고장 또한 보증 대상에서 제외되오니, 모든 수리는 지정된 업체에 의해 진행되어야 함을 양지하여 주시기 바랍니다.  
-
-
 
 > (주) 아이알로봇 고객만족실 070-7600-9466 / 경기도 부천시 원미구 평천로 655 부천테크노파크 401동 1303호 /   이메일 :cs@irrobot.com
 

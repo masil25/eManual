@@ -31,3 +31,6 @@
   border: none!important;
 }
 
+table p {
+  margin:5px 0!important;	
+}
