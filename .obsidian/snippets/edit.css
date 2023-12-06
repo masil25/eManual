@@ -34,3 +34,6 @@
 table p {
   margin:5px 0!important;	
 }
+table th {
+  background-color :#ccc!important;
+}
