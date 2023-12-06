@@ -285,13 +285,13 @@ Controller와 마이티잽은 packet을 주고 받으며 통신합니다. Packet
 
 |Item|Spec|
 |---|---|
-|<font color="#4f81bd">Structure</font>|Half-duplex UART|
-|Baud Rate|57600bps(default)|
-|Data Size|8bit|
-|Parity|non-parity|
-|Stop Bit|One bit|
+|**Structure**|Half-duplex UART|
+|**Baud Rate**|57600bps(default)|
+|**Data Size**|8bit|
+|**Parity**|non-parity|
+|**Stop Bit**|One bit|
 
-><font color="#ff0000">⚠ 주의 안정적인 통신을 위한 지연시간</font>
+><font color="#ff0000" size="5"><b>⚠ 주의</b></font>    <font size="4">안정적인 통신을 위한 지연 시간</font>
 > MightyZap은 반이중 통신 방식으로, 데이터 읽고 쓰기 중 데이터 충돌이 나지 않도록, 데이터 쓰기 중에는 5msec, 데이터 읽어오기 중에는 10msec 정도의 지연 시간을 주어야 안정적으로 통신을 할 수 있습니다.  해당 지연시간을 지키지 않을 경우 통신 충돌로 인한 서보액츄에이터의 이상동작이 발생할 수 있습니다. 위의 지연시간은 최소 지연시간이 아닌 안전을 고려한 적정 지연 시간입니다
 
 - PWM Pulse Mode 
@@ -299,10 +299,13 @@ Controller와 마이티잽은 packet을 주고 받으며 통신합니다. Packet
   흔히,RC용 서보에 사용하는 Pulse 규격을 사용합니다. 위치명령이 가능하지만, 여타 피드백 데이터는 없습니다.
   ![[Commu_spec_PWMPulseMode.png]]
 <font color="#ff0000">※ Period (8ms~23ms) 20ms 추천  </font>  
-> ※ PWM 제어는 노이즈에 취약함으로 한번의 PWM 신호로 제어하지 않고, 특정 주파수로 끊어지지않게  연속적으로 포화방식의 신호를 보내줘야 합니다. 추천 frequency는 50Hz(20ms) 입니다.  
->※ PWM통신을 이용하는 경우, 데이터 통신 지원이 안되므로, 위치 명령은 가능하지만 현재 위치값 등의 Feedback data를 받을 수 없으며, 시리얼 Daisy chain 연결을 지원하지 않습니다.   
+
+>※ PWM 제어는 노이즈에 취약함으로 한번의 PWM 신호로 제어하지 않고, 특정 주파수로 끊어지지
+>    않게  연속적으로 포화방식의 신호를 보내줘야 합니다. 추천 frequency는 50Hz(20ms) 입니다.  
+>※ PWM통신을 이용하는 경우, 데이터 통신 지원이 안되므로, 위치 명령은 가능하지만 현재 위치값 등의      Feedback data를 받을 수 없으며, 시리얼 Daisy chain 연결을 지원하지 않습니다.   
 >※ Feedback data 수신과 Daisy chain연결은 TTL 또는 RS-485통신을 통해 가능합니다.  
->※ 아래와 같은 방식으로도 PWM제어가 가능합니다.  Frequency 50Hz / Duty rate 4.5% ~ 10.5%. (0.05% 단위로 제어)추천 frequency는 50Hz(20ms)  
+>※ 아래와 같은 방식으로도 PWM제어가 가능합니다.  Frequency 50Hz / Duty rate 4.5% ~ 10.5%. 
+>    (0.05% 단위로 제어)추천 frequency는 50Hz(20ms)  
 
 #### 4.2.1.2. Data specification    
 데이터 모드와 펄스 모드에서 아래와 같은 데이터 범위로 기본지정 되어있습니다.   
