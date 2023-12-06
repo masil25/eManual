@@ -534,7 +534,7 @@ Input voltage Alarm의 경우 원인이 해결 되면 LED 알람이 사라집니
 
 Overload Error의 경우 원인이 해결되어도, LED 알람이 곧바로 해지 되지 않으며, 전원 재 시작(Restart) 또는 전원 재부팅 명령을 내려야 Alarm이 해제됩니다.
 ### 11. Alarm Shutdown (Default : 33)
-    Error가 발생 했을 때,해당 bit가 1로 설정되어 있으면 Force를 OFF (1=활성 / 0=비활성)
+Error가 발생 했을 때,해당 bit가 1로 설정되어 있으면 Force를 OFF (1=활성 / 0=비활성)
 
 |Error|bit|
 |---|---|
