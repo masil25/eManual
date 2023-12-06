@@ -1,7 +1,6 @@
 
 **<font color="#ff0000">제품군을 확인하세요!  </font>
-<font color="#ff0000">모델번호가 12Lf-로 시작하나요?  </font>**
-
+<font color="#ff0000">모델번호가 12Lf-로 시작하나요?  </font>
 > - 본 매뉴얼은 기존의 Position control 뿐만이 아니라, Force 및 Speed control이 자유롭게 가능한 12Lf Force Control 버전 mightyZAP 액츄에이터 전용 매뉴얼입니다.   
 > - 모델명이 12Lf로 시작하는 제품 사용자중 IR오픈 프로토콜 사용자분들만 본 매뉴얼을 참고하시기 바랍니다.   
 > - 12Lf시리즈 사용자 중 MODBUS RTU 프로토콜 사용자는 별도의 Force Control/MODBUS RTU매뉴얼을, 모델명이 D 혹은 L로 시작하는 제품 사용자는 별도의 Position control매뉴얼을 참고하시기 바랍니다.   
@@ -93,7 +92,7 @@ Shutdown된 후에도 통신 라인은 여전히 기능을 하고 있으므로, 
 |:---------|:-----|:-----|:--------|:-------------------------|:----------------------|:---------|
 | 0xFFFFFF | 0x00 | 0x04 |    0xF3 |                     0x12 |                  0x20 |     0xD6 |  
 
-><B><font size="5" color="#ff0000" >⚠️주의 </font> </B><font size="4" color="#555"><b>   정격부하에서의 사용!</b></font>  
+><B><font size="5" color="#ff0000" >⚠️ 주의 </font> </B><font size="4" color="#555"><b>   정격부하에서의 사용!</b></font>  
 >리니어 액츄에이터 적용 시 표기된 정격 부하 내에서 사용해야 안정적인 동작을 구현하고 제품의 수명을 적절히 관리할 수 있습니다.  
 
 ## 1.5. 포스오프기능
