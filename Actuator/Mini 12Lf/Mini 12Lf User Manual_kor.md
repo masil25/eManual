@@ -316,13 +316,13 @@ Controller와 마이티잽은 packet을 주고 받으며 통신합니다. Packet
 |Half Stroke|2047|1500us|
 |Long (확장) Stroke**|4095**|2100us|
 
-> <font color="#245bdb">TIP </font>
+> <font color="#245bdb" size="5"><b>TIP</b> </font>
 > 27mm 스트로크 제품은 공장 출하 시 27mm로 셋팅 되어 출하 되나, 30mm를 모두 사용해야 하는 경우 사용자가 설정 가능.  27mm의 데이터 값은 3686입니다.  (횡부하 관련 기구적인 안정성을 위해 가급적 27mm사용을 권장합니다.)  
 
 #### 4.2.1.3. Daisy-Chain Connection    
 ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 개의 MIGHTY ZAP중 ID가 N인 서보만이 Feedback Packet을 return하고, 그 Command를 수행합니다.  
 ![[DaisyChainConnection.png]]
-><font color="#ff0000">⚠ 주의</font>  Unique ID  
+><font color="#ff0000" size="5"><b>⚠ 주의</b></font>    <font size="5">Unique ID  </font>
 > 여러 개의 마이티잽이 동시에 Packet을 전송하면 Packet충돌이 일어나서 통신에 문제를 일으킵니다. 그러므로 Network Node안에 ID가 같은 마이티잽이 존재하지 않도록 ID설정을 해야 합니다.
 > TTL통신의 경우 이론적으로 253개의 ID를 설정하고 연결할 수 있으며, RS-485 통신의 경우 253개의 ID설정은 가능하지만 표준 규정상 노드 제한으로 인해 연결가능 한 서보액츄에이터는 32개입니다. 
 > 출하 시 ID가 0으로 되어 있으므로, 여러개의 액츄에이터로 Daisy chain 구성시 0~253까지의 ID가 겹치지 않도록 각 액츄에이터 ID를 설정해주시면 됩니다.
@@ -372,7 +372,7 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 |52 (0x34)|Current Limit (L)|전류 값 한계치 하위 바이트|RW|32 (0x20)|
 |53 (0x35)|Current Limit (H)|전류 값 한계치 상위 바이트|RW|3 (0x03)|
 
-- **Parameter 사용 데이터(Volatile)**
+<font size="4"> <b>Parameter 사용 데이터 (Volatile)</b></font>
 	- 전원인가 시 매번 Default값으로 초기화합니다.  
 
 |Address|Name|Description|Access|Default|
@@ -399,7 +399,7 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 - 해당 모델은 Readd Single Register(0x03)와 Write Holding Register(0x06)만 사용 가능합니다.
 - Reset명령 수행 시 모든 데이터는 Default값으로 설정되게 됩니다.  
 
- <font size="4">Memory 사용 데이터 (Non-volatile)</span>
+ <font size="4"><b>Memory 사용 데이터 (Non-volatile)</b></span>
 	- 전원OFF시에도 데이터를 유지하는 메모리 영역에 저장합니다.  
 	- Factory Reset명령 수행 시 모든 데이터는 Default값으로 설정되게 됩니다.  
 
@@ -432,7 +432,7 @@ ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 
 |        40025      |      0x0018      |      Min Stroke Position                       |      RW          |      개별Spec             |        0      |       255      |
 |        40026      |      0x0019      |      Max Stroke Position                       |      RW          |      개별Spec             |        0      |       255      |  
 
-<font size="4">Parameter 사용 데이터(Volatile)</font>
+<font size="4"><b>Parameter 사용 데이터(Volatile)</b></font>
 	- 전원인가 시 매번 Default값으로 초기화합니다.  
 
 |      Address      |      addr        |      Name                                      |      Access      |      Default            |      MIN      |      MAX       |
@@ -464,10 +464,9 @@ mightyZAP의 모델 번호입니다.
 |----|----|----|
 |IR Protocol|0 ~ 253|254|
 |Modbus RTU|1~247|0|
-
 ### 4. Baudrate
 - 통신 속도를 결정, Default 통신 속도는 57600bps
-- 설정 값으로 통신 속도를 변경하고자 할 때는 서보모터의 시스템을 재 시작 해야 합니다.
+- 설정 값으로 통신 속도를 변경하고자 할 때는 서보 모터의 시스템을 재 시작 해야 합니다.
 
 |설정값|통신속도(bps)|
 |---|---|
@@ -477,16 +476,15 @@ mightyZAP의 모델 번호입니다.
 |64 (0x40)|19200|
 |128 (0x80)|9600|
 **설정값 변환표**  
+>비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
-> 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
-
-> Firmware Version 1.5이하 에서는 Baudrate 38400bps는 지원하지 않습니다.  
+>Firmware Version 1.5이하 에서는 Baudrate 38400bps는 지원하지 않습니다.  
 
 ### 5. Stroke Limit (0~4095)  
-   Short Stroke(A)또는 Long Stroke(C)상태의 한계 위치 값으로 Goal Position의 최대/최소 값이 됩니다. Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Stroke Limit 값보다 클 경우  Stroke Limit값으로 치환됩니다.  
-   (범위 : 0 ~ 4095 )
+Short Stroke(A)또는 Long Stroke(C)상태의 한계 위치 값으로 Goal Position의 최대/최소 값이 됩니다. Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Stroke Limit 값보다 클 경우  Stroke Limit값으로 치환됩니다.  
+(범위 : 0 ~ 4095 )
    ![[StrokeLimit.png]]
-> 비 휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.  운영 중 빈번한 값의 변경은 주의하시기 바랍니다.   
+> 비 휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.   
 ### 6. Protocol type (Default : IR Protocol)
 통신 Protocol 방식을 선택합니다.  
 
@@ -500,35 +498,33 @@ mightyZAP의 모델 번호입니다.
 > Firmware Version 1.5 에서는 IR Protocol만 지원 하며, 해당 항목이 존재하지 않습니다.   (MODBUS RTU는 펌웨어 V2.0 이상에서 지원)  
 
 ### 7. The Highest / Lowest Limit Voltage
-   입력 전원의 전압에 상한 / 하한 (단위 : 0.1V).  
-   입력 전압에 따라 Actuator의 속도, Force가 변경될 수 있습니다. 자세한 사항은 해당 모델 Datasheet참조.  
+입력 전원의 전압에 상한 / 하한 (단위 : 0.1V).  
+입력 전압에 따라 Actuator의 속도, Force가 변경될 수 있습니다. 자세한 사항은 해당 모델 Datasheet참조.  
    
 |항목|Default 값|
 |---|---|
 |Lowest voltage [하한 전압]|7.0[V]|
 |Hightest Voltage [상한 전압]|13[V]|
-
 ### 8. Motor Operating Rate (0~1023 / Default : 1023)
-   모터의 최대 가동률을 값으로, 모터의 공급되는 최대 PWM 값을 나타냅니다.  
-   400 이하로 설정할 경우, 모터가 동작 하지 않을 수도 있습니다. Motor Operating Rate를 변경하면 속도와 Stall Force가 변경됩니다.  
->    비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
+모터의 최대 가동률을 값으로, 모터의 공급되는 최대 PWM 값을 나타냅니다.  
+400 이하로 설정할 경우, 모터가 동작 하지 않을 수도 있습니다. Motor Operating Rate를 변경하면 속도와 Stall Force가 변경됩니다.  
+> 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
 ### 9. Feedback Return Mode
-   COMMAND Packet이 전송된 이후 Feedback Packet을 회신 결정 모드  
+COMMAND Packet이 전송된 이후 Feedback Packet을 회신 결정 모드  
 
 |Mode|Feedback Packet Return 여부|
 |---|---|
 |0|모든 COMMAND에 대해 Feedback Packet을 전송하지 않음.<br>(단, Echo명령 패킷은 제외)|
 |1|Load Data명령에만 Feedback Packet을 전송|
 |2|모든 COMMAND에 대해 Feedback Packet을 전송|
-
 Broadcast ID(0xFE)일 때, Feedback Return Mode와 상관없이 Feedback Packet을 전송하지 않음.    
 > 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
 > Broadcast ID(0xFE) mode에서, feedback packet 은 Feedback Return Mode 값에 상관없이 보내지지 않습니다.   
 
 ### 10. Alarm LED  (Default : 33)  
-    Error가 발생 했을 때,해당 bit가 1로 설정되어 있으면 LED표시를 수행한다. (1=활성 / 0=비활성)  
+Error가 발생 했을 때,해당 bit가 1로 설정되어 있으면 LED표시를 수행한다. (1=활성 / 0=비활성)  
 
 |Error|bit|LED Indicate|
 |---|---|---|
@@ -538,7 +534,6 @@ Input voltage Alarm의 경우 원인이 해결 되면 LED 알람이 사라집니
 > 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.  운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
 Overload Error의 경우 원인이 해결되어도, LED 알람이 곧바로 해지 되지 않으며, 전원 재 시작(Restart) 또는 전원 재부팅 명령을 내려야 Alarm이 해제됩니다.
-
 ### 11. Alarm Shutdown (Default : 33)
     Error가 발생 했을 때,해당 bit가 1로 설정되어 있으면 Force를 OFF (1=활성 / 0=비활성)
 
@@ -556,7 +551,7 @@ Overload Error의 경우 원인이 해결되어도, LED 알람이 곧바로 해�
 Lowest input voltage의 경우 모터가 Force Off(shutdown) 되지는 않습니다.   
 highest voltage 및 Overload Error의 경우 Force Off (shutdown) 되며, 전원 재 부팅 또는 System Restart 명령을 내려야 shutdown이 해제됩니다.  
 
-> <font color="#245bdb">TIP</font>
+> <font color="#245bdb" size="5"><b>TIP</b></font>
 >  Overload 보호 자동 shutdown기능은 공장 출하 시 활성화 되어 출하 되며, 나머지 기능도 사용자 필요에 따라 서보 매니저 프로그램을 통해 활성화 / 비활성화가 가능합니다.
 
 > 비 휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
@@ -647,8 +642,8 @@ Compliance Margin이란 이동 명령을 통해 액츄에이터를 구동 시작
 |---|---|
 |0|모터의 전원을 차단하여서 기동력이 발생 되지 않도록 합니다.|
 |1|모터의 전원을 인가하여서 기동력이 발생하도록 합니다.|
-> <font color="#245bdb">> **TIP**</font>
-> <font color="#245bdb">> 당사 리니어 서보는 모터의 전원이 해제되어도 기구적인 설계 특성상 위치를 고수하려는 특성이 있습니다. 27N이상 정격부하 사양의 제품은 전원 차단 시에도 기구적인 마찰력으로 위치를 고수합니다. 따라서, 설비에서 서보 모터가 특정 위치를 지속적으로 고수하고 있어야 하는 경우 Force Off 명령으로 모터 전원을 차단하여 모터의 수명을 연장시킬 수 있습니다. 이 경우 통신은 여전히 유지되며, 모터의 전원만 차단됩니다. 다시 위치 이동 명령을 내리게 되면 자동으로 Force ON되어 다음 명령을 수행하게 됩니다.</font>
+> <font color="#245bdb" size="5"><b>TIP</b></font>
+>  당사 리니어 서보는 모터의 전원이 해제되어도 기구적인 설계 특성상 위치를 고수하려는 특성이 있습니다. 27N이상 정격부하 사양의 제품은 전원 차단 시에도 기구적인 마찰력으로 위치를 고수합니다. 따라서, 설비에서 서보 모터가 특정 위치를 지속적으로 고수하고 있어야 하는 경우 Force Off 명령으로 모터 전원을 차단하여 모터의 수명을 연장시킬 수 있습니다. 이 경우 통신은 여전히 유지되며, 모터의 전원만 차단됩니다. 다시 위치 이동 명령을 내리게 되면 자동으로 Force ON되어 다음 명령을 수행하게 됩니다.
 ### 21. LED
 - Error 표시가 되지 않을 때 사용자가 임의로 LED 제어하여 디스플레이 효과를 낼 수 있음.   (LED에러표시가 우선) 
 
