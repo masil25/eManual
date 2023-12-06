@@ -150,8 +150,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -167,7 +166,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b02ba1a8741bd7af",
+  "active": "719f7c1e9e32f8c6",
   "lastOpenFiles": [
     "Protocl/Modbus RTU.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
