@@ -29,7 +29,7 @@ mightyZAP Actuator를 안정적으로 사용하기 test 위해서는 몇 가지 
 ### Motor 성능 곡선
 ![[MotorSpecification.png]]  
 - ~~모터 성능 곡선에 대한 자세한 설명은 다음의 문서를 통해 확인해 주시기 바랍니다.~~ 
-# 2 Control Table
+# 2. Control Table
 Control Table은 Actuator를 구동 및 제어하기 위한 Parameter와 현재 상태를 나타내는 Parameter로 이루어져 있습니다.   
 사용자는 통신 Packet을 이용하여 특정 Parameter의 Data를  읽어 Actuator의 상태를 확인하거나, Paramter의 Data를 변경하여 Actuator를 제어할 수 있습니다.  
 <span style="background:rgba(136, 49, 204, 0.2)">*통신 Packet에 대한 자세한 내용은 Modbus-RTU를 참고하여 주시기 바랍니다.  </span>
@@ -526,7 +526,6 @@ Action Parameter로 작성된 Action을 실행할 때 사용합니다. Action Pa
 indirect Address로 설정된 Paramter들의 Data를 읽고 쓸 수 있는 Parameter입니다.
 ## 2.5 Packet Example
 17Lf 시리즈는 Modbus-RTU를 제공하는 모델입니다. Modbus-RTU에 관한 자세한 설명은 Modub-RTU 메뉴얼을 참조하기 바랍니다.  
-
 # 3. 유의사항  
 아래 주의 사항은 사용시 각별히 주의를 요하는 사항이므로, 반드시 숙지를 하여 주십시오. 아래 사항을 준수하지 못해 발생한 문제에 대해서는 보증 서비스를 받을 수 없음을 알려드립니다.
 1. 제품 동작 시 로드(Rod)를 무리한 힘으로 누르지 마십시오. 정격 로드(Load) 범위 이상의 힘이 지속적으로 가해질 경우 모터가 소손될 수 있습니다.
