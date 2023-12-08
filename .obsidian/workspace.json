@@ -30,9 +30,56 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "3366b58dcffd1c3d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e9ffe4a2777ee2a8",
+            "type": "leaf",
+            "state": {
+              "type": "diff-view",
+              "state": {
+                "file": "Total Manager/img/ActuatorList.png",
+                "staged": true
+              }
+            }
+          },
+          {
+            "id": "5e50645c8fe76703",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Actuator/Mini 12Lf/무제 파일.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d65007e83be08127",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Actuator/Mini 12Lf/무제 파일.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -159,7 +206,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -179,24 +226,26 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f4f15c2456f28f91",
+  "active": "d65007e83be08127",
   "lastOpenFiles": [
-    "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+    "conflict-files-obsidian-git.md",
     "Actuator/Mini 12Lf/무제 파일.md",
+    "Actuator/Mini 12Lf/img/Broken_Rod_en.png",
+    "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
-    "Actuator/Mini 12Lf/img/ACC_IR_GT01.png",
+    "Total Manager/img/update-view.png",
+    "Total Manager/img/restartSelect.png",
+    "Total Manager/img/reset_selcect.png",
+    "Total Manager/img/reset_popup.png",
+    "Total Manager/img/resetPopup.png",
+    "Total Manager/img/resetAction.gif",
+    "Total Manager/img/mainView-description.png",
+    "Total Manager/img/information.png",
+    "Total Manager/img/control-view.png",
+    "Protocl/Modbus RTU.md",
     "Protocl/Modbus.md",
     "Protocl/IR Protocol.md",
-    "Actuator/Mini 12Lf/img/Broken_Rod 1.png",
-    "Pasted image 20231122140059.png",
-    "Actuator/Mini 12Lf/img/Broken_Rod.png",
     "BrokenRod.png.md",
-    "Actuator/Mini 12Lf/img/Applications_UAV,Drone.png",
-    "Actuator/Mini 12Lf/img/Applications_Robotics.png",
-    "Actuator/Mini 12Lf/img/Applications_OtherUsage.png",
-    "Actuator/Mini 12Lf/img/Applications_Medical.png",
-    "Actuator/Mini 12Lf/img/Applications_GeneralUsage.png",
-    "Actuator/Mini 12Lf/img/Applications_FactoryAutomation.png",
     "StrokeLimit.png.md",
     "Pasted image 20231117110531.png.md",
     "UseSpanner.  png.md",
@@ -205,7 +254,6 @@
     "Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_eng.md",
-    "conflict-files-obsidian-git.md",
     "total.md",
     "BrokenRod.png{width=50%}.md",
     "BrokenRod.png{width=50%.md",
@@ -217,7 +265,6 @@
     "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
     "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
     "Datasheet17Lf-xx-27.md",
-    "Templates/DATASHEET.md",
     "Templates",
     "Technical",
     "Actuator/Mini 17Lf/Datasheet",
