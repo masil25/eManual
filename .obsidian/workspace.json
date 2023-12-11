@@ -18,8 +18,45 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "3f4f113d018fa78b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1fd45edd58c69b07",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Total Manager/Total Manager User Manual_kor.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7f5a744a7c6af1b8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -166,12 +203,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b02ba1a8741bd7af",
+  "active": "7f5a744a7c6af1b8",
   "lastOpenFiles": [
-    "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
-    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
-    "Protocl/Modbus RTU.md",
     "Total Manager/Total Manager User Manual_kor.md",
+    "conflict-files-obsidian-git.md",
+    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+    "Actuator/Mini 12Lf/img/Broken_Rod_en.png",
+    "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+    "Protocl/Modbus RTU.md",
     "Total Manager/img/resetPopup.png",
     "Total Manager/img/resetAction.gif",
     "Total Manager/img/restartSelect.png",
@@ -184,7 +223,6 @@
     "Actuator/Mini 12Lf/img/ACC_IR_GT01.png",
     "Protocl/IR Protocol.md",
     "Actuator/Mini 12Lf/img/Broken_Rod 1.png",
-    "Pasted image 20231122140059.png",
     "BrokenRod.png.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
     "무제 파일.md",
@@ -194,7 +232,6 @@
     "BrokenRod.  png.md",
     "Actuator/Mini 12Lf/img/CautionMotionSync.  png.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_eng.md",
-    "conflict-files-obsidian-git.md",
     "total.md",
     "BrokenRod.png{width=50%}.md",
     "BrokenRod.png{width=50%.md",
