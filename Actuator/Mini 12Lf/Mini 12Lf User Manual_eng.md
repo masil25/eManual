@@ -461,8 +461,8 @@ After receiving Command Packet at multiple qty of mightZAPs, the servo whose ID 
 
 #### 4.2.2.2 MODBUS RTU (이 부분만 모드버스 매뉴얼에서)    
 ##### 4.2.2.2.1 Data Memory Map    
-- multi write 기능은 지원하지 않습니다.  
-- Reset명령 수행 시 모든 데이터는 Default값으로 설정되게 됩니다.  
+- Multi write function is not supported. 
+- All data will be reset to default value when Reset command is executed. 
 
 |    Address    |    addr      |    Name                                    |    Access    |    Default          |    MIN    |    MAX     |    Type                     |
 |:--------------|:-------------|:-------------------------------------------|:-------------|:--------------------|:----------|:-----------|:----------------------------|
@@ -472,7 +472,7 @@ After receiving Command Packet at multiple qty of mightZAPs, the servo whose ID 
 |      40004    |    0x0003    |    Baud Rate                               |    RW        |         32(0x20)    |     16    |     128    |   ^                         |
 |      40005    |    0x0004    |    Protocol Type (MODBUS RTU / IRROBOT)    |    RW        |                0    |      0    |       1    |   ^                         |
 |      40006    |    0x0005    |    Short Stroke Limit                      |    RW        |        0(0x0000)    |      0    |    4095    |   ^                         |
-|      40007    |    0x0006    |    Long Stroke Limit                       |    RW        |    개별Spec           |      0    |    4095    |   ^                         |
+|      40007    |    0x0006    |    Long Stroke Limit                       |    RW        |    Individual Spec           |      0    |    4095    |   ^                         |
 |      40008    |    0x0007    |    Lowest Limit Voltage                    |    R         |               70    |    -      |    -       |   ^                         |
 |      40009    |    0x0008    |    Highest Limit Voltage                   |    R         |              130    |    -      |    -       |   ^                         |
 |      40010    |    0x0009    |    Alarm LED                               |    RW        |               33    |    -      |    -       |   ^                         |
@@ -481,17 +481,17 @@ After receiving Command Packet at multiple qty of mightZAPs, the servo whose ID 
 |      40013    |    0x000c    |    End Compliance Margin                   |    RW        |                2    |      0    |     255    |   ^                         |
 |      40014    |    0x000d    |    Speed Limit                             |    RW        |             1023    |      0    |    1023    |   ^                         |
 |      40015    |    0x000e    |    Current Limit                           |    RW        |              800    |      0    |    1600    |   ^                         |
-|      40016    |    0x000f    |    Calibration Short Stroke                |    R         |    개별Spec           |      0    |    4095    |   ^                         |
-|      40017    |    0x0010    |    Calibration Long Stroke                 |    R         |    개별Spec           |      0    |    4095    |   ^                         |
-|      40018    |    0x0011    |    Acceleration Ratio                      |    RW        |    개별Spec           |      0    |     255    |   ^                         |
-|      40019    |    0x0012    |    Deceleration Ratio                      |    RW        |    개별Spec           |      0    |     255    |   ^                         |
-|      40020    |    0x0013    |    Current I Gain                          |    RW        |    개별Spec           |      0    |     255    |   ^                         |
-|      40021    |    0x0014    |    Current P Gain                          |    RW        |    개별Spec           |      0    |     255    |   ^                         |
-|      40022    |    0x0015    |    Speed D Gain                            |    RW        |    개별Spec           |      0    |     255    |   ^                         |
-|      40023    |    0x0016    |    Speed I Gain                            |    RW        |    개별Spec           |      0    |     255    |   ^                         |
-|      40024    |    0x0017    |    Speed P Gain                            |    RW        |    개별Spec           |      0    |     255    |   ^                         |
-|      40025    |    0x0018    |    Min Stroke Position                     |    RW        |    개별Spec           |      0    |     255    |   ^                         |
-|      40026    |    0x0019    |    Max Stroke Position                     |    RW        |    개별Spec           |      0    |     255    | 비휘발성(Non-Volatile)          |
+|      40016    |    0x000f    |    Calibration Short Stroke                |    R         |    Individual Spec           |      0    |    4095    |   ^                         |
+|      40017    |    0x0010    |    Calibration Long Stroke                 |    R         |    Individual Spec           |      0    |    4095    |   ^                         |
+|      40018    |    0x0011    |    Acceleration Ratio                      |    RW        |    Individual Spec           |      0    |     255    |   ^                         |
+|      40019    |    0x0012    |    Deceleration Ratio                      |    RW        |    Individual Spec           |      0    |     255    |   ^                         |
+|      40020    |    0x0013    |    Current I Gain                          |    RW        |    Individual Spec           |      0    |     255    |   ^                         |
+|      40021    |    0x0014    |    Current P Gain                          |    RW        |    Individual Spec           |      0    |     255    |   ^                         |
+|      40022    |    0x0015    |    Speed D Gain                            |    RW        |    Individual Spec           |      0    |     255    |   ^                         |
+|      40023    |    0x0016    |    Speed I Gain                            |    RW        |    Individual Spec           |      0    |     255    |   ^                         |
+|      40024    |    0x0017    |    Speed P Gain                            |    RW        |    Individual Spec           |      0    |     255    |   ^                         |
+|      40025    |    0x0018    |    Min Stroke Position                     |    RW        |    Individual Spec           |      0    |     255    |   ^                         |
+|      40026    |    0x0019    |    Max Stroke Position                     |    RW        |    Individual Spec           |      0    |     255    | Non-Volatile          |
 |               |              |                                            |              |                     |           |            |                             |
 |      40051    |    0x0032    |    Force ON/OFF                            |    RW        |              1**    |      0    |       1    |                             |
 |      40052    |    0x0033    |    LED                                     |    RW        |                0    |      0    |     255    |  ^                          |
@@ -503,44 +503,49 @@ After receiving Command Packet at multiple qty of mightZAPs, the servo whose ID 
 |      40058    |    0x0039    |    Present Motor Operating Rate            |    R         |    -                |      0    |    2048    |  ^                          |
 |      40059    |    0x003a    |    Present Voltage                         |    R         |    -                |      0    |     255    |  ^                          |
 |      40060    |    0x003b    |    Moving                                  |    R         |    -                |      0    |       1    |  ^                          |
-|      40061    |    0x003c    |    Hardware Error State                    |    R         |                0    |      0    |     255    | 휘발성 (Volatile)              |  
+|      40061    |    0x003c    |    Hardware Error State                    |    R         |                0    |      0    |     255    | Volatile              |  
 
-<font color="#ff0000">** 펌웨어 버전 2.0이상부터 적용 (이전 버전에는 default 0)</font>
+<font color="#ff0000">** from firmware 2.0 or above</font>
 
 ### 4.2.3. Data Description
-#### 4.2.3.1. 비휘발성 메모리 영역    
+#### 4.2.3.1. Non-Volatile Memory
 
 1. Model Number   
-   MightyZAP의 모델 번호입니다.  
-   모델을 구별하고 인지하기 위하여 읽기 전용으로 사용합니다.  
-2. Version of Firmware  
-   펌웨어 버전 정보가 저장되어 현재 마이티잽의 펌웨어 버전이 최신인지 확인하여 최신 펌웨어로 유지하도록 합니다.  
-3. ID (0~254 / Default : 0)  
-   서보를 식별 하기 위한 고유 번호,Daisy-Chain방식으로 연결된 서보들은 서로 다른 ID가 할당되어야 합니다.  
-   - ID = 0 ~253 일 때, 미리 저장된 ID와 비교하여 선별적으로 동작함  
-   - ID = 254 (0xFE) 일 때, Broadcasting Mode로 동작하며 Feedback Packet은 동작하지 않음  
-4. Baud Rate  
-   통신 속도를 결정, Default 통신속도는 57600bps  
-   설정값으로 통신 속도 변경하고자 할 때는 서보 액츄에이터의 시스템을 재시작 하여야 합니다.
+	The model number of MightyZAP
+	"Read" only to discriminate & recognize concerned model
 
-|설정값|통신속도(bps)|
+2. Version of Firmware  
+   Check if current firmware is the latest version. 
+3. ID (1~247 / Default : 1)
+	ID to discriminate each servo.  Different IDs should be assigned in Daisy-Chain system. (Default ID : 1)
+	- In case of ID = 0, it is operated under "Broadcasting Mode (move all actuators)" and Feedback Packet does not work.
+	- In case of ID = 1 ~247, ID "N" which is stored in the servo will be operated individually. 
+> 	ID is a non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.
+4. Baud Rate  
+	Determining communication speed.  Default value is 57600bps
+	Servo system MUST be rebooted to apply changed baud rate to the actuator.
+
+**Setting Value** 
+
+|Value |Baud Rate(bps)|
 |---|---|
 |16 (0x10)|115200|
 |32 (0x20)|57600|
 |48(0x30)|38400|
 |64 (0x40)|19200|
 |128 (0x80)|9600|
-**설정값 변환표**  
+ 
 
-> 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
+> Baud Rate is a non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.
 
-> Firmware Version 1.5이하 에서는 Baudrate 38400bps는 지원하지 않습니다.  
+> In old Firmware version 1.5 or lower, Baudrate 38400bps is not provided. 
 
 5. Stroke Limit (0~4095)  
-   Short Stroke(A)또는 Long Stroke(C)상태의 한계 위치 값으로 Goal Position의 최대/최소 값이 됩니다. Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Stroke Limit 값보다 클 경우  Stroke Limit값으로 치환됩니다.  
-   (범위 : 0 ~ 4095 )
+   Stroke limit between Short Stroke (A) and Long Stroke (C) which is the max/min. value of Goal Position. If the Goal Position value is smaller than the Short Stroke Limit value or greater than the Long Stroke Limit value, Goal Position value is replaced with the Stroke Limit value. 
+
+   (Range : 0 ~ 4095 )
    ![[StrokeLimit.png]]
-> 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.  운영 중 빈번한 값의 변경은 주의하시기 바랍니다.   
+> Stroke limit is a non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.
 
 6. Protocol type (Default : IR Protocol)
 통신 Protocol 방식을 선택합니다.  
@@ -616,7 +621,7 @@ highest voltage 및 Overload Error의 경우 Force Off (shutdown) 되며, 전원
 > 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
 12. Compliance Margin
-    Compliance Margin이란 이동명령을 통해 액츄에이터를 구동 시작 시키거나 혹은 명령 수행을 완료시키기 위한 최소값의 크기입니다. 일반적인 경우 한가지의 컴플라이언스 마진 값을 통해, 구동 시작이나 구동 완료를 시키는 것이 보통이지만 당사 액츄에이터는 시작 시와 완료 시의 컴플라이언스 마진을 각각 개별로 설정해서, 우수한 반복 위치 정밀도를 가지면서도, 안정적인 동작이 가능하게 설계가 되었습니다.　일반적으로 컴플라이언스 마진을 조종하는 경우는 디폴트 값보다 크게 해서 정밀도를 일부 희생하더라도 외압이나 노이즈등이 발생하는 불안정된 환경에서도 안정적으로 동작이 될 수 있도록 하는 경우가 대부분입니다. 반대로 컴플라이언스 마진을 디폴트값보다 더 줄여서 사용하는 경우는 정밀도는 좋아지는 대신에 동작 안정성을 해칠수 있으므로 특별한 주의를 요합니다.  
+    Compliance Margin이란 이동명령을 통해 액츄에이터를 구동 시작 시키거나 혹은 명령 수행을 완료시키기 위한 최소값의 크기입니다. 일반적인 경우 한가지의 컴플라이언스 마진 값을 통해, 구동 시작이나 구동 완료를 시키는 것이 보통이지만 당사 액츄에이터는 시작 시와 완료 시의 컴플라이언스 마진을 각각 Individual 로 설정해서, 우수한 반복 위치 정밀도를 가지면서도, 안정적인 동작이 가능하게 설계가 되었습니다.　일반적으로 컴플라이언스 마진을 조종하는 경우는 디폴트 값보다 크게 해서 정밀도를 일부 희생하더라도 외압이나 노이즈등이 발생하는 불안정된 환경에서도 안정적으로 동작이 될 수 있도록 하는 경우가 대부분입니다. 반대로 컴플라이언스 마진을 디폴트값보다 더 줄여서 사용하는 경우는 정밀도는 좋아지는 대신에 동작 안정성을 해칠수 있으므로 특별한 주의를 요합니다.  
     
     - Start Compliance Margin(Long/Short) / 시작점 컴플라이언스 마진(권장 Margin 값 : 7)
 	    - 서보 액츄에이터가 위치이동을 시작하기 위한 최소한의 마진 값입니다.   
@@ -656,7 +661,7 @@ highest voltage 및 Overload Error의 경우 Force Off (shutdown) 되며, 전원
 	- Calibration Short Stroke : Short Stroke위치 보정 값, 공장에서 설정된 Short Stroke Calibration 값을 저장  
 	- Calibration Long Stroke : Long Stroke위치 보정 값,공장에서 설정된 Long Stroke Calibration 값을 저장  
 
-16. Acceleration / Deceleration (0~255 / Default : 개별 사양)  
+16. Acceleration / Deceleration (0~255 / Default : Individual  사양)  
     ![[DataDescription_AccelerationDeceleration.png]]
 	- 모터의 가감속률을 나타냅니다.  
 	- Acceleration : 모터의 이동 시작 시의 가속도 값으로 값이 클 경우 모터가 급 가속을 하게 됩니다. 반대로 값이 낮을 경우 부드러운 가속을 하지만, 너무 낮을 경우 모터가 움직이지 않을 수도 있습니다.  
@@ -665,21 +670,21 @@ highest voltage 및 Overload Error의 경우 Force Off (shutdown) 되며, 전원
 
 > 	비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. > 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
-17. Current PI (0~255 / Default : 개별 사양)
+17. Current PI (0~255 / Default : Individual  사양)
 	- 모터의 전류제어를 위한 PI 값  
 	- 정해진 값이 보다 큰 PI값을 적용할 경우 Goal Current와의 오차에 대해 거칠게 동작할 수 있습니다.  
 	- 정해진 값보다 작은 PI값을 적용할 경우 Goal Current와의 오차에 부드럽게 동작하나 Goal Current 값과의 오차가 크게 나타날 수 있습니다.  
 > 	  수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.    
 > 	  비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.   
 
-18. Speed PID (0~255 / Default : 개별 사양)  
+18. Speed PID (0~255 / Default : Individual  사양)  
 	- 모터의 속도제어를 위한 PID 값  
 	- 정해진 값이 보다 큰 PID값을 적용할 경우 Goal Speed와의 오차에 대해 거칠게 동작하여 Overshoot 또는 과도 응답상태로 정해진 위치 값에 정지하지 못하고 모터가 진동할 수 있습니다.  
 	- 정해진 값보다 작은 PI값을 적용할 경우 Goal Speed 와의 오차에 부드럽게 동작하나 Goal speed 값과의 오차가 크게 나타날 수 있습니다.  
 > 	  수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.    
 > 	  비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.  운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
-19. Min/Max Position Calibration (0~255 / Default : 개별 사양)  
+19. Min/Max Position Calibration (0~255 / Default : Individual  사양)  
 	- Min Position : Goal Position의 값이 ‘0’일경우 최소 Stroke의 위치  
 	- Max Position : Goal Position의 값이 ‘4095’일경우 최대 Stroke의 위치  
 	  ![[Min.MaxPositionCalibration.png]]
