@@ -548,58 +548,60 @@ After receiving Command Packet at multiple qty of mightZAPs, the servo whose ID 
 > Stroke limit is a non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.
 
 6. Protocol type (Default : IR Protocol)
-통신 Protocol 방식을 선택합니다.  
+Select the communication protocol method.
 
-|설정값|Protocol|설명|
+|Value|Protocol|Description|
 |---|---|---|
-|0 (0x00)|Modbus RTU|산업용 RS485 표준 통신 Protocol<br><font color="#ff0000">※별도의 Modbus Protocol 사용자 매뉴얼을 참조하세요</font>|
-|1(0x01)|IR Protocol|IRROBOT 자체 통신  Protocol|
+|0 (0x00)|MODBUS RTU|Industrial RS485 Standard Communication Protocol  <br>※Refer to the separate MODBUS Protocol user manual|
+|1(0x01)|IR Protocol|IRROBOT Open Protocol|
 
-> 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.  운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
-> Firmware Version 1.5 에서는 IR Protocol만 지원 하며, 해당 항목이 존재하지 않습니다.   (MODBUS RTU는 펌웨어 V2.0 이상에서 지원)  
+> non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.
+
+> In old Firmware version 1.5 or lower, only IR Protocol is provided. (MODBUS available from V2.0 or higher) 
 
 7. The Highest / Lowest Limit Voltage
-   입력 전원의 전압에 상한 / 하한 (단위 : 0.1V).  
-   입력 전압에 따라 Actuator의 속도, Force가 변경될 수 있습니다. 자세한 사항은 해당 모델 Datasheet참조.  
-   
-|항목|Default 값|
+  Max/Min. value of input voltage (unit : 0.1V)
+  According to input voltage, speed and force of actuator can be varied. 
+  For detailed info, please refer to the data sheet of each model.
+
+|Input Volt|Default Value|
 |---|---|
-|Lowest voltage [하한 전압]|7.0[V]|
-|Hightest Voltage [상한 전압]|13[V]|
+|Lowest Voltage|7.0 [V]|
+|Highest Voltage|13 [V]|
+- If higher voltage than 13V supplied, input voltage error will be triggered and motor power will be shutdown. 
 
 8. Motor Operating Rate (0~1023 / Default : 1023)
-   모터의 최대 가동률을 값으로, 모터의 공급되는 최대 PWM 값을 나타냅니다.  
-   400 이하로 설정할 경우, 모터가 동작 하지 않을 수도 있습니다. Motor Operating Rate를 변경하면 속도와 Stall Force가 변경됩니다.  
->    비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
+   It represents the maximum operating rate of the motor and the maximum PWM value supplied to the motor. If it is set to less than 400, the motor may not operate. Please note that changing the Motor Operating Rate also changes the speed and stall force.
+>    non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.
 
 9. Feedback Return Mode
-   COMMAND Packet이 전송된 이후 Feedback Packet을 회신 결정 모드  
-
-|Mode|Feedback Packet Return 여부|
+  Feedback packet return mode after receipt of Command Packet
+  
+|Mode|Feedback Packet Return or NOT|
 |---|---|
-|0|모든 COMMAND에 대해 Feedback Packet을 전송하지 않음.<br>(단, Echo명령 패킷은 제외)|
-|1|Load Data명령에만 Feedback Packet을 전송|
-|2|모든 COMMAND에 대해 Feedback Packet을 전송|
-Broadcast ID(0xFE)일 때, Feedback Return Mode와 상관없이 Feedback Packet을 전송하지 않음.    
-> 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
+|0|Do NOT sending Feedback packet for all Commands. (Except for Echo command)|
+|1|Sending Feedback packet only for Load Data Command.|
+|2|Sending Feedback packet for all Commands.|
+  
+> non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.
 
-> Broadcast ID(0xFE) mode에서, feedback packet 은 Feedback Return Mode 값에 상관없이 보내지지 않습니다.   
+> Under Broadcast ID(0xFE) mode, feedback packet will NOT be sent regardless values of Feedback Return Mode.
 
 10. Alarm LED  (Default : 33)  
-    Error가 발생 했을 때,해당 bit가 1로 설정되어 있으면 LED표시를 수행한다. (1=활성 / 0=비활성)  
+    If concerned bit is set as "1" when error occurs, error LED indication will be activated. (1 : activate, 0: deactivate)
 
 |Error|bit|LED Indicate|
 |---|---|---|
-|Overload Error|5|Red 점멸|
-|Input Voltage Error|0|Red 지속점등|
-Input voltage Alarm의 경우 원인이 해결 되면 LED 알람이 사라집니다.   
-> 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.  운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
+|Overload Error|5|Red Blink|
+|Input Voltage Error|0|Red Steadily ON|
+In case of Input Voltage Error, the alarm is immediately cleared when the error is resolved.
+In case of Overload Error, the alarm is not cleared even after overload condition is resolved, but can be cleared by rebooting the power or restarting the system.
+> non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.  
 
-Overload Error의 경우 원인이 해결되어도, LED 알람이 곧바로 해지 되지 않으며, 전원 재시작(Restart) 또는 전원 재부팅 명령을 내려야 Alarm이 해제됩니다.
 
-11. Alarm Shutdown (Default : 33)
-    Error가 발생 했을 때,해당 bit가 1로 설정되어 있으면 Force를 OFF (1=활성 / 0=비활성)
+<font color="#ff0000">11. Alarm Shutdown (Default : 33) ★국문이랑 내용다름★</font> 
+    Force will be OFF if concerned bit is set as "1" when error occurs. (1 : activate, 0: deactivate)
 
 |Error|bit|
 |---|---|
@@ -621,21 +623,21 @@ highest voltage 및 Overload Error의 경우 Force Off (shutdown) 되며, 전원
 > 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
 
 12. Compliance Margin
-    Compliance Margin이란 이동명령을 통해 액츄에이터를 구동 시작 시키거나 혹은 명령 수행을 완료시키기 위한 최소값의 크기입니다. 일반적인 경우 한가지의 컴플라이언스 마진 값을 통해, 구동 시작이나 구동 완료를 시키는 것이 보통이지만 당사 액츄에이터는 시작 시와 완료 시의 컴플라이언스 마진을 각각 Individual 로 설정해서, 우수한 반복 위치 정밀도를 가지면서도, 안정적인 동작이 가능하게 설계가 되었습니다.　일반적으로 컴플라이언스 마진을 조종하는 경우는 디폴트 값보다 크게 해서 정밀도를 일부 희생하더라도 외압이나 노이즈등이 발생하는 불안정된 환경에서도 안정적으로 동작이 될 수 있도록 하는 경우가 대부분입니다. 반대로 컴플라이언스 마진을 디폴트값보다 더 줄여서 사용하는 경우는 정밀도는 좋아지는 대신에 동작 안정성을 해칠수 있으므로 특별한 주의를 요합니다.  
     
     - Start Compliance Margin(Long/Short) / 시작점 컴플라이언스 마진(권장 Margin 값 : 7)
-	    - 서보 액츄에이터가 위치이동을 시작하기 위한 최소한의 마진 값입니다.   
-	    - 예를 들어 컴플라이언스 마진 값이 7이고, 현재 위치값이 400이라면 7을 더한 407 이상의 값,  혹은 7을 뺀 393 이하의 위치값이 입력되어야 구동을 시작합니다.   
-	    - 이와 마찬가지로 물리적인 외압이나 노이즈 등에 의해서 현재 입력된 위치값에서 7이상 틀어진 407 이상이나 393이하로 위치 변화가 일어나면 위치 보정을 위해 모터가 구동을 시작합니다.   
-	    - 그런 이유 때문에 이 값이 클수록 외압이나 노이즈의 발생 혹은 유격이 늘어나는 환경에서도 흔들리지 않고 깨끗한 동작을 하게 되지만, 원하는 위치로 정확한 구동을 하기 위한 민감성이 떨어집니다. 즉, 일반적으로 이 값을 키우면, 내구성이 증가하고, 줄이면 정밀도가 올라간다고 할 수 있습니다.  
-	    - 아래 항목의 “종료 컴플라이언스 마진 값”보다는 반드시 그 값이 같거나 커야 합니다. 이 보다 낮게 설정이 되면 에러를 일으킬 수 있습니다.   
-      - End Compliance Margin / 종료점 컴플라이언스 마진 (권장Margin 값 : 4 )  
-	      - 위치 이동 명령에 대해서 수행을 완수했다고 인정하는 오차의 크기 값입니다.  
-	      - 예를 들어 액츄에이터가 위치 값 400이라는 위치로 이동하라는 명령을 받았을 경우, 서보의 기구적인 오차나 회로적인 오차, 가속도 등으로 인해서 물리적으로 정확히 400 이라는 위치 값에 멈출 수가 없다고 가정할 때, 어느 정도의 오차 범위 내에서 명령 수행이 되었다고 인정을 하는 값이 종료 컴프라이언스 마진입니다. 이 값을 4라고 입력하고 위치 명령 값을 400으로 주었을 때, 실제 위치 값 396 부터 404내에 들어오면 완료되었다고 인정하고 구동을 멈추게 됩니다.  
-	      - 안정된 동작을 위해 이 값을 늘리는 경우, 위에서 설명한대로 “시작 컴프라이언스 마진 값” 이상으로 늘려서는 안되고, 정밀도를 높이려고 이 값을 줄이는 경우, 이 액츄에이터가 받아들일 수 있는 성능 이상으로 값을 줄이는 경우, 오히려 역효과가 나게 됩니다.  
-	      - End Compliance Margin이 작을수록 위치정밀도가 민감하고 좋아지나, 일정 값 이하로 줄일 경우 효과가 미비해집니다.   
-	      - End Compliance Margin을 늘릴 경우 목표위치 도달 시 동작이 깔끔해지고 안정적으로 변하며, 특히 속도가 빠른 제품일수록 효과가 좋습니다. 단, 너무 클 경우 반대로 정밀도가 나빠질 수 있습니다.   
-> 	      - 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.  운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
+	    - Minimum margin value for the servo actuator to start position movement.
+	    - For example, if the compliance margin is 7 and the current position value is 400, motor start will be made when positional value between 407(400+7) and 393(400-7) is set. 
+	    - Likewise, when the positional change occurs by more than +/-7(out of 393~407) from the present position value due to physical external pressure or electrical noise, the motor starts to run to compensate position.
+	    - For this reason, the larger this value means more stable operation without jittering even in the environment where the external pressure, electrical noise, or the clearance increases, but the sensitivity to drive to the desired position may be reduced. In other words, generally, increasing this value increases durability, and reducing it increases precision.
+	    - This value must be equal to or greater than the "End compliance margin value" described below.  Setting it to a lower value may cause an error.
+
+      - End Compliance Margin (Recommended margin value : 4)
+	      - Minimum margin value for the servo actuator to complete position movement. 
+	      - For example, if actuator is instructed to move to a position value of 400, and assuming that it cannot physically stop at a position value of 400 exactly due to software & mechanical clearance, acceleration, etc. of the servo, End compliance margin will be a criteria to judge if the positional command has been performed properly. If this value is set to 4 and the position command value is set to 400, actuator judges that positional movement has been made properly when it reaches within 396~404 range and then stop movement.
+	      - If this value is increased for stable operation, you should not increase it beyond the "Start Compliance Margin” value which is described above, and if this value is decreased too much to increase the accuracy, it may bring adverse effect such as jitter.
+	      - The smaller the End Compliance Margin, the more sensitive and better the positioning accuracy. However, if it is reduced below a certain value, the effect becomes insignificant.
+	      - If the End Compliance Margin is increased, the operation becomes cleaner and more stable when the target position is reached. Especially, the faster the product, the better the effect. However, if it is too large, conversely, the precision may deteriorate.
+> 	      - non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.
 
 13. Current Limit (0~1600 / Default : 800)  
 	- 모터의 최대 전류 제한 값입니다(0~1600). 즉, 모터의 최대힘인 stall 전류를 제어하여 stall force를 조정합니다.  
