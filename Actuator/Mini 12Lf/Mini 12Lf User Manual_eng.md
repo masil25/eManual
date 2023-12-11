@@ -706,7 +706,7 @@ For example, if the Min Position Calibration value at Min Position 3.8mm of 12Lf
 > It is a non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.
 
 
-#### 4.2.3.2. 휘발성 메모리 영역    
+#### 4.2.3.2. Volatile Memory    
 20. Force ON/OFF (Default : 1 / Force ON)
     - 기동력 활성화 여부 설정 ( 0일 때 OFF, 1일 때 ON)  
     
