@@ -328,17 +328,17 @@ You can convert TX and RX mode by controlling “Direction_Port pin” in above 
 	※ Both GNDs between actuator and controller should be connected as above diagram. 
 
 
-## 4.2. 통신
+## 4.2. Communication
 ![[Communication_MainController.png]]
-Controller와 마이티잽은 packet을 주고 받으며 통신합니다. Packet의 종류로는 Main controller에서 마이티잽으로 전송되는Command Packet과 마이티잽에서 제어기로 전송되는 Feedback Packet이 있습니다.  
+mightyZAP and your main controller will communicate by exchanging data packet. The sorts of packet are Command packet (Main controller to mightyZAP) and Feedback packet(mightZAP to your main controller) 
 
 ### 4.2.1. Specification
 
 #### 4.2.1.1. Communication specification    
-- 2 Mode in One (Pulse / Data Mode Auto-Switching)  
-  입력 신호에 따라 자동적으로 데이터 모드와 펄스 모드의 전환이 이루어집니다.  
-- Data Mode (TTL / RS-485)  
-   마이티잽은8 bit, 1 Stop bit, None Parity의 Asynchronous Serial 통신을 합니다.  
+- 2 Mode in One (Pulse / Data Mode Auto-Switching)
+  mightyZAP 12Lf-xxPT-xx series will automatically recognize the input signal between data mode(TTL) and pulse mode(PWM).
+- Data Mode (TTL/RS-485)
+  Asynchronous Serial communication (8 bit, 1 Stop bit, None Parity)
 
 |Item|Spec|
 |---|---|
@@ -348,46 +348,53 @@ Controller와 마이티잽은 packet을 주고 받으며 통신합니다. Packet
 |Parity|non-parity|
 |Stop Bit|One bit|
 
-⚠ <font color="#ff0000">주의</font> 안정적인 통신을 위한 지연시간
-> MightyZap은 반이중 통신 방식으로, 데이터 읽고 쓰기 중 데이터 충돌이 나지 않도록, 데이터 쓰기 중에는 5msec, 데이터 읽어오기 중에는 10msec 정도의 지연 시간을 주어야 안정적으로 통신을 할 수 있습니다.  해당 지연시간을 지키지 않을 경우 통신 충돌로 인한 서보액츄에이터의 이상동작이 발생할 수 있습니다. 위의 지연시간은 최소 지연시간이 아닌 안전을 고려한 적정 지연 시간입니다
+⚠ <font color="#ff0000">CAUTION</font> 
+>- mightyZAP uses half duplex communication, and need to put proper delay time to prevent communication error. 
+>- Recommendable delay time is 5msec for data write, 10msec for data read. 
+>- Otherwise, there can be communication collision and motor failure. 
+>- Above delay time is not minimum, but proper delay time for safety. 
 
 - PWM Pulse Mode 
-  PPM(Pulse Position Modulation) Compatible (Radio-Control Servo Pulse Mode) 
-  흔히,RC용 서보에 사용하는 Pulse 규격을 사용합니다. 위치명령이 가능하지만, 여타 피드백 데이터는 없습니다.
-  ![[Commu_spec_PWMPulseMode.png]]
-<font color="#ff0000">※ Period (8ms~23ms) 20ms 추천  </font>  
+	PPM(Pulse Position Modulation) Compatible [ Radio-Control Servo Pulse Mode]
+	(900us(Retracted)~1500 us(Center)~2100 us(Fully Extended). Under PWM mode, position command available without feedback data.
 
-> ※ PWM 제어는 노이즈에 취약함으로 한번의 PWM 신호로 제어하지 않고, 특정 주파수로 끊어지지않게  연속적으로 포화방식의 신호를 보내줘야 합니다. 추천 frequency는 50Hz(20ms) 입니다.  
->※ PWM통신을 이용하는 경우, 데이터 통신 지원이 안되므로, 위치 명령은 가능하지만 현재 위치값 등의 Feedback data를 받을 수 없으며, 시리얼 Daisy chain 연결을 지원하지 않습니다.   
->※ Feedback data 수신과 Daisy chain연결은 TTL 또는 RS-485통신을 통해 가능합니다.  
->※ 아래와 같은 방식으로도 PWM제어가 가능합니다.  Frequency 50Hz / Duty rate 4.5% ~ 10.5%. (0.05% 단위로 제어)추천 frequency는 50Hz(20ms)  
+  ![[Commu_spec_PWMPulseMode.png]]
+※ Short stroke : Retract stroke / Long stroke : Extend stroke
+
+> ※ Since PWM control is vulnerable to noise, it is highly recommended to control with a saturation-type PWM signal (continuous PWM) rather than a single PWM signal, so that it does not break at a specific frequency. Recommended frequency is 50Hz(20ms).
+> ※ In case of using PWM communication, position control is possible, but feedback data such as the present position value cannot be received, and serial daisy chain connection is not supported since data communication is not supported.  Feedback data reception and Daisy chain connection are possible by TTL or RS-485 communication.
+> ※ Alternatively, PWM control is possible in the following way. 
+> Frequency 50Hz / Duty rate 4.5% ~ 10.5%. (Control by 0.05% unit)
+
 
 #### 4.2.1.2. Data specification    
-데이터 모드와 펄스 모드에서 아래와 같은 데이터 범위로 기본지정 되어있습니다.   
+Data range is basically determined as below in both Data and Pulse modes.
 
 |Rod Stroke|Data Mode|Pulse Mode|
 |---|---|---|
-|Short (수축) Stroke|0|900us|
+|Short (Retracting) Stroke|0|900us|
 |Half Stroke|2047|1500us|
-|Long (확장) Stroke**|4095**|2100us|
+|Long (Extending) Stroke**|4095**|2100us|
 
 > <font color="#245bdb">TIP </font>
-> 27mm스트로크 제품은 공장 출하 시 27mm로 셋팅 되어 출하되나, 30mm를 모두 사용해야 하는 경우 사용자가 설정 가능.  27mm의 데이터 값은 3686입니다.  (횡부하 관련 기구적인 안정성을 위해 가급적 27mm사용을 권장합니다.)  
+> <sup>**For 27mm stroke mightyAP, long stroke limit is set at 27mm, but user is able to extend the long stroke to max.30mm. Data value for 27mm stroke is 3686. (for better mechanical stability against lateral load, 27mm is recommended.)</sup>
 
-#### 4.2.1.3. Daisy-Chain Connection    
-ID 번호 N번인 mightyZAP 서보에 Command Packet을 전송할 경우 여러 개의 MIGHTY ZAP중 ID가 N인 서보만이 Feedback Packet을 return하고, 그 Command를 수행합니다.  
+#### 4.2.1.3. Daisy-Chain Connection
+After receiving Command Packet at multiple qty of mightZAPs, the servo whose ID is N will be operated only. (Only N ID servo will send Feedback packet and execute Command.) 
 ![[DaisyChainConnection.png]]
 ⚠ <font color="#ff0000">주의</font>  Unique ID  
-> 여러 개의 마이티잽이 동시에 Packet을 전송하면 Packet충돌이 일어나서 통신에 문제를 일으킵니다. 그러므로 Network Node안에 ID가 같은 마이티잽이 존재하지 않도록 ID설정을 해야 합니다.
-> TTL통신의 경우 이론적으로 253개의 ID를 설정하고 연결할 수 있으며, RS-485 통신의 경우 253개의 ID설정은 가능하지만 표준 규정상 노드 제한으로 인해 연결가능 한 서보액츄에이터는 32개입니다. 
-> 출하 시 ID가 0으로 되어 있으므로, 여러개의 액츄에이터로 Daisy chain 구성시 0~253까지의 ID가 겹치지 않도록 각 액츄에이터 ID를 설정해주시면 됩니다.
+> - Each mightZAP servo must have an individual ID to prevent interference between same IDs. Therefore, you need to set individual IDs for each servo in the network node. 
+> - User may assign 253 different IDs and connect 253pcs servos in serial via TTL protocol. For RS-485 protocol, 253 IDs can be assigned, but available serial connection is up to 32pcs servo motors due to RS-485 node regulation.
+> - As factory default ID is 0, so please assign different, individual IDs for each actuator from ID0~253 for daisy chain connection. 
+
 
 ### 4.2.2. Data Map
 #### 4.2.2.1. IR 프로토콜
 ##### 4.2.2.1.1. Data Memory Map    
- **Memory 사용 데이터 (Non-volatile)**
-	- 전원OFF시에도 데이터를 유지하는 메모리 영역에 저장합니다.  
-	- Factory Reset명령 수행 시 모든 데이터는 Default값으로 설정되게 됩니다.  
+ **Memory using data (Non-volatile)**
+	- Data to be saved in non-volatile memory which maintains data even after power OFF/ON. 
+	- All data will be reset to default value when Factory Reset command is executed. 
+
 
 |Address|Name|Description|Access|Default|
 |---|---|---|---|---|
