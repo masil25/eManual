@@ -12,6 +12,7 @@ mightyZAP Actuator를 안정적으로 사용하기 test 위해서는 몇 가지 
 |  35N       |  85mm/s                |          27mm [17Lf-35F-27]<br>37mm&nbsp;[17Lf-35F-37]<br>50mm&nbsp;[17Lf-35F-50]<br>87mm&nbsp;[17Lf-35F-87]           |  30um<br>30um<br>40um<br>50um  |             |          없음  <br>(Z축 적용 주의)              |
 |^       |  85mm/s                |  27mm&nbsp;&nbsp;[17Lf-70F-27]<br>37mm&nbsp;[17Lf-70F-37]<br>50mm&nbsp;[17Lf-70F-50]<br>87mm&nbsp;&nbsp;[17Lf-70F-87]  |  30um<br>30um<br>40um<br>50um  |  RS-485     |          없음  <br>(Z축 적용 주의)              |  
 
+|| 
 
 | Item                | Description           |
 |:--------------------|:----------------------|
