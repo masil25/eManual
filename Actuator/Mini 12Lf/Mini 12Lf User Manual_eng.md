@@ -382,83 +382,82 @@ Data range is basically determined as below in both Data and Pulse modes.
 #### 4.2.1.3. Daisy-Chain Connection
 After receiving Command Packet at multiple qty of mightZAPs, the servo whose ID is N will be operated only. (Only N ID servo will send Feedback packet and execute Command.) 
 ![[DaisyChainConnection.png]]
-⚠ <font color="#ff0000">주의</font>  Unique ID  
+⚠ <font color="#ff0000">CAUTION</font>  Unique ID  
 > - Each mightZAP servo must have an individual ID to prevent interference between same IDs. Therefore, you need to set individual IDs for each servo in the network node. 
 > - User may assign 253 different IDs and connect 253pcs servos in serial via TTL protocol. For RS-485 protocol, 253 IDs can be assigned, but available serial connection is up to 32pcs servo motors due to RS-485 node regulation.
 > - As factory default ID is 0, so please assign different, individual IDs for each actuator from ID0~253 for daisy chain connection. 
 
 
 ### 4.2.2. Data Map
-#### 4.2.2.1. IR 프로토콜
+#### 4.2.2.1. IR Protocol
 ##### 4.2.2.1.1. Data Memory Map    
  **Memory using data (Non-volatile)**
 	- Data to be saved in non-volatile memory which maintains data even after power OFF/ON. 
 	- All data will be reset to default value when Factory Reset command is executed. 
 
-
 |Address|Name|Description|Access|Default|
 |---|---|---|---|---|
-|0 (0x00)|Model Number(L)|모델 번호의 하위 바이트|R||
-|1 (0x01)|Model Number(H)|모델 번호의 상위 바이트|R||
-|2 (0x02)|Version of Firmware|펌웨어 버전 정보|R|-|
-|3 (0x03)|ID|액츄에이터ID|RW|0 (0x00)|
-|4 (0x04)|Baud Rate|서보 통신 속도|RW|32 (0x20)|
-|6 (0x06)|Short Stroke Limit(L)|수축 방향 한계 위치 값의 하위 바이트|RW|0 (0x00)|
-|7 (0x07)|Short Stroke Limit(H)|수축 방향 한계 위치 값의 상위 바이트|RW|0 (0x00)|
-|8 (0x08)|Long Stroke Limit(L)|확장 방향 한계 위치 값의 하위 바이트|RW|102 (0x66)|
-|9 (0x09)|Long Stroke Limit(H)|확장 방향 한계 위치 값의 상위 바이트|RW|14 (0x0E)|
-|10 (00x0A)|Protocol Type|통신 Protocol (MODBUS RTU or IR Open)|RW|0x01 (IRPROTOCOL)|
-|12 (0x0C)|the Lowest Limit Voltage|입력 하한 전압|R|개별 SPEC|
-|13 (0x0D)|the Highest Limit Voltage|입력 상한 전압|R|개별 SPEC|
-|14(0x0E)|Motor Operating Rate(L)|모터 가동률 한계값 하위 바이트|RW|255 (0xFF)|
-|15(0x0F)|Motor Operating Rate(H)|모터 가동률 한계값 상위 바이트|RW|3 (0x03)|
-|16 (0x10)|Feedback Return Mode|응답 회신 모드|RW|1 (0x01)|
-|17 (0x11)|Alarm LED|알람용 LED 기능|RW|33 (0x21)|
-|18 (0x12)|Alarm Shutdown|알람용 셧 다운 기능|RW|33(0x21)|
-|19 (0x13)|Start Compliance Margin|시작 Compliance Margin|RW|개별 SPEC|
-|20 (0x14)|End Compliance Margin|종료 Compliance Margin|RW|개별 SPEC|
-|21 (0x15)|Speed Limit(L)|모터의 평균이동속도 한계 하위 바이트|RW|255(0xFF)|
-|22 (0x16)|Speed Limit(H)|모터의 평균이동속도 한계 상위 바이트|RW|3(0x03)|
-|24 (0x18)|Calibration Short Stroke (L)|최단 조정 값의 하위 바이트|R|0 (0x00)|
-|25 (0x19)|Calibration Short Stroke (H)|최단 조정 값의 상위 바이트|R|0 (0x00)|
-|26 (0x1A)|Calibration Long Stroke (L)|최장 조정 값의 하위 바이트|R|255 (0xFF)|
-|27 (0x1B)|Calibration Long Stroke (H)|최장 조정 값의 상위 바이트|R|15 (0x0F)|
-|33 (0x21)|Acceleration Ratio|이동 가속도 율|RW|개별 SPEC|
-|34 (0x22)|Deceleration Ratio|이동 감속도 율|RW|개별 SPEC|
-|35 (0x23)|Current I Gain|전류 Integral Gain|RW|개별 SPEC|
-|36 (0x24)|Current P Gain|전류 Proportional Gain|RW|개별 SPEC|
-|37 (0x25)|Speed D Gain|Derivative Gain|RW|개별 SPEC|
-|38 (0x26)|Speed I Gain|Integral Gain|RW|개별 SPEC|
-|39 (0x27)|Speed P Gain|Proportional Gain|RW|개별 SPEC|
-|46 (0x2E)|Min Position Calibration|Min Position 값 Trim|RW|개별 SPEC|
-|47 (0x2F)|Max Position Calibration|Max Position 값 Trim|RW|개별 SPEC|
-|52 (0x34)|Current Limit (L)|전류 값 한계치 하위 바이트|RW|32 (0x20)|
-|53 (0x35)|Current Limit (H)|전류 값 한계치 상위 바이트|RW|3 (0x03)|
+|0 (0x00)|Model Number(L)|Lower byte of Model number|R||
+|1 (0x01)|Model Number(H)|High byte of Model number|R||
+|2 (0x02)|Version of Firmware|Firmware version info|R|-|
+|3 (0x03)|ID|Servo ID|RW|0 (0x00)|
+|4 (0x04)|Baud Rate|Communication Speed|RW|32 (0x20)|
+|6 (0x06)|Short Stroke Limit(L)|Lower byte of Short Stroke Limit|RW|0 (0x00)|
+|7 (0x07)|Short Stroke Limit(H)|High byte of Short Stroke Limit|RW|0 (0x00)|
+|8 (0x08)|Long Stroke Limit(L)|Lower byte of Long Stroke Limit|RW|102 (0x66)|
+|9 (0x09)|Long Stroke Limit(H)|High byte of Long Stroke Limit|RW|14 (0x0E)|
+|10 (00x0A)|Protocol Type|Comm. Protocol (MODBUS RTU or  IR Open)|RW|0x01 (IRPROTOCOL)|
+|12 (0x0C)|the Lowest Limit Voltage|Lowest Voltage Limit|R|Each SPEC|
+|13 (0x0D)|the Highest Limit Voltage|Highest Limit Voltage|R|Each SPEC|
+|14 (0x0E)|Motor Operating Rate(L)|Lower byte of Motor Operating Rate|RW|255 (0xFF)|
+|15 (0x0F)|Motor Operating Rate (H)|High byte of Motor Operating Rate|RW|3 (0x03)|
+|16 (0x10)|Feedback Return Mode|Feedback Return Mode|RW|1 (0x01)|
+|17 (0x11)|Alarm LED|Alarm LED Function|RW|33 (0x21)|
+|18 (0x12)|Alarm Shutdown|Alarm Shutdown Function|RW|33(0x21)|
+|19 (0x13)|Start Compliance Margin|Start Compliance Margin|RW|Each SPEC|
+|20 (0x14)|End Compliance Margin|End Compliance Margin|RW|Each SPEC|
+|21 (0x15)|Speed Limit(L)|Lower byte of average motor speed limit|RW|255(0xFF)|
+|22 (0x16)|Speed Limit(H)|High byte of average motor speed limit|RW|3(0x03)|
+|24 (0x18)|Calibration Short Stroke (L)|Lower byte of Calibration Short Stroke|R|0 (0x00)|
+|25 (0x19)|Calibration Short Stroke (H)|High byte of Calibration Short Stroke|R|0 (0x00)|
+|26 (0x1A)|Calibration Long Stroke (L)|Lower byte of Calibration Long Stroke|R|255 (0xFF)|
+|27 (0x1B)|Calibration Long Stroke (H)|High byte of Calibration Long Stroke|R|15 (0x0F)|
+|33 (0x21)|Acceleration Ratio|Moving Acceleration Ratio|RW|Each SPEC|
+|34 (0x22)|Deceleration Ratio|Moving Deceleration Ratio|RW|Each SPEC|
+|35 (0x23)|Current I Gain|Current Integral Gain|RW|Each SPEC|
+|36 (0x24)|Current P Gain|Current Proportional Gain|RW|Each SPEC|
+|37 (0x25)|Speed D Gain|Derivative Gain|RW|Each SPEC|
+|38 (0x26)|Speed I Gain|Integral Gain|RW|Each SPEC|
+|39 (0x27)|Speed P Gain|Proportional Gain|RW|Each SPEC|
+|46 (0x2E)|Min Position Calibration|Min Position Value Trim|RW|Each SPEC|
+|47 (0x2F)|Max Position Calibration|Max Position Value Trim|RW|Each SPEC|
+|52 (0x34)|Current Limit (L)|Lower Byte of Current Limit|RW|32 (0x20)|
+|53 (0x35)|Current Limit (H)|High Byte of Current Limit|RW|3 (0x03)|
 
 ##### 4.2.2.1.2. Parameter Map    
-**Parameter 사용 데이터(Volatile)  **
-	- 전원인가 시 매번 Default값으로 초기화합니다.  
+**Parameter Using Data (Volatile)  **
+	- All data to be reset to default value whenever power is On.
 
-|Address|Name|Description|Access|Default|
-|---|---|---|---|---|
-|128 (0x80)|Force ON/OFF|기동력 켜기|RW|1 (0x01)|
-|129 (0x81)|LED|LED On/Off|RW|0 (0x00)|
-|134 (0x86)|Goal Position(L)|목표 위치 값의 하위 바이트|RW|-|
-|135 (0x87)|Goal Position(H)|목표 위치 값의 상위 바이트|RW|-|
-|136 (0x88)|Goal Speed(L)|목표 속도 값의 하위 바이트|RW|Speed Limit|
-|137 (0x89)|Goal Speed(H)|목표 속도 값의 상위 바이트|RW|Speed Limit|
-|138 (0x8a)|Goal Current(L)|목표 전류 값의 하위 바이트|RW|Current Limit|
-|139 (0x8b)|Goal Current(H)”|목표 전류 값의 상위 바이트|RW|Current Limit|
-|140 (0x8C)|Present Position(L)|현재 위치 값의 하위 바이트|R|-|
-|141 (0x8D)|Present Position(H)|현재 위치 값의 상위 바이트|R|-|
-|142 (0x8e)|Present Current(L)|현재 전류 값의 하위 바이트|R|-|
-|143 (0x8f)|Present Current (H)|현재 전류 값의 상위 바이트|R|-|
-|144 (0x90)|Present Motor Operating Rate (L)|현재 모터가동률의 하위 바이트|R|-|
-|145 (0x91)|Present Motor Operating Rate(H)|현재 모터가동률의 상위 바이트|R|-|
-|146 (0x92)|Present Voltage|현재 전압|R|-|
-|150 (0x96)|Moving|움직임 유무|R|0 (0x00)|
+| Address    | Name                             | Description                                | Access | Default       |
+|:-----------|:---------------------------------|:-------------------------------------------|:-------|:--------------|
+| 128 (0x80) | Force ON/OFF                     | Force On/ Off                              | RW     |    1 (0x01)** |
+| 129 (0x81) | LED                              | LED On/Off                                 | RW     |      0 (0x00) |
+| 134 (0x86) | Goal Position(L)                 | Low byte of Goal position value            | RW     | -             |
+| 135 (0x87) | Goal Position(H)                 | High byte of Goal position value           | RW     | -             |
+| 136 (0x88) | Goal Speed(L)                    | Low byte of Goal speed value               | RW     | Speed Limit   |
+| 137 (0x89) | Goal Speed(H)                    | High byte of Goal speed value              | RW     | Speed Limit   |
+| 138 (0x8a) | Goal Current(L)                  | Low byte of Goal curent value              | RW     | Current Limit |
+| 139 (0x8b) | Goal Current(H)”                 | High byte of Goal curent value             | RW     | Current Limit |
+| 140 (0x8C) | Present Position(L)              | Low byte of present position value         | R      | -             |
+| 141 (0x8D) | Present Position(H)              | High byte of present position value        | R      | -             |
+| 142 (0x8e) | Present Current (L)              | Low byte of present Current                | R      | -             |
+| 143 (0x8f) | Present Current (H)              | High byte of present Current               | R      | -             |
+| 144 (0x90) | Present Motor Operating Rate (L) | Low byte of present motor operating value  | R      | -             |
+| 145 (0x91) | Present Motor Operating Rate (H) | High byte of present motor operating value | R      | -             |
+| 146 (0x92) | Present Voltage                  | Current voltage                            | R      | -             |
+| 150 (0x96) | Moving                           | Moving status                              | R      |      0 (0x00) |  
 
-<font color="#ff0000">** 펌웨어 V2.0이상부터 적용  </font>  
+<font color="#ff0000">**Applied from firmware ver.2.0 or higher </font>  
 
 #### 4.2.2.2 MODBUS RTU (이 부분만 모드버스 매뉴얼에서)    
 ##### 4.2.2.2.1 Data Memory Map    
