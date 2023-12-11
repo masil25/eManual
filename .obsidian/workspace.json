@@ -207,11 +207,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 245.5
+    "width": 606.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -227,7 +227,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "629e492a1bff6ecc",
+  "active": "719f7c1e9e32f8c6",
   "lastOpenFiles": [
     "무제 파일.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",

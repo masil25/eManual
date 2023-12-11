@@ -640,65 +640,70 @@ highest voltage 및 Overload Error의 경우 Force Off (shutdown) 되며, 전원
 > 	      - non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.
 
 13. Current Limit (0~1600 / Default : 800)  
-	- 모터의 최대 전류 제한 값입니다(0~1600). 즉, 모터의 최대힘인 stall 전류를 제어하여 stall force를 조정합니다.  
-	- 제어값은 0~1600으로 설정하며, 제어값 1600은 최대 stall 전류값 1600mA를 나타냅니다. (오차범위 :+/-15%)  
-	- 공장 출하시에는 800(mA)으로 셋팅되어 유사시 불필요한 최대 stall 전류사용을 방지하되, 최대속도를 보장합니다.   
-	- Current Limit를 높게 설정할수록 과부하 상황에서 모터가 낼 수 있는 최대 force도 올라가지만, 모터 수명단축의 원인이 될 수도 있습니다.  
-	- 메모리에 저장되는 비휘발성 파라메터인 Current Limit 값은 초기설정에서만 설정하시기를 권장하며, 동작 중 빈번한 전류 변경은 휘발성 파라메터인 Goal Current명령을 사용하시기를 추천드립니다.                    
-	- 비휘발성 Current Limit 값을 변경할 경우, 전원재인가시 휘발성 파라메터인 Goal Current 도 같이 변경됩니다.  
-	- 제품마다의 내부 기구저항 편차에 따라 저전류(200mA이하) 설정에서는 액츄에이터의 동작이 불규칙하거나 움직이지 않을 수도 있으니, 가급적 200mA이상의 전류설정을 해 주시기 바랍니다.   
-	- 전류설정에 따른 stall force값의 차이는 데이터 시트의 그래프를 참고하여 주십시오.   
-> 	  비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 휘발성 파라메터인 Goal Current를 사용하시기 바랍니다.  
+	- It is the maximum current limit value of the motor (0~1600). In other words, the stall force is adjusted by controlling the stall current limit. (Stall force : maximum power of the motor.)
+	- The control value is set from 0 to 1600, and the control value of 1600 represents the maximum stall current - 1600mA. (Error range :+/-15%)
+	- The default set value is 800 (mA) from the factory to prevent unnecessary use of the maximum stall current in case of emergency, but guarantees the maximum speed at the rated load.
+	- As the Current Limit is set closer to the stall force, the maximum force that the motor can produce in an overload situation increases, but it may cause a shortening of motor lifespan.
+	- The Current Limit is a non-volatile parameter stored in memory. Thus, it is highly recommended to set the “Current Limit” value only at the initial setting. For frequent current changes during operation, please use the “Goal Current” command, which is a volatile parameter. 
+	- When the non-volatile “Current Limit” value is changed, note that the volatile parameter “Goal Current” is also changed when power is reapplied. 
+	- Actuator operation may be irregular or may not move in the low current setting (less than 200mA) depending on the deviation of internal mechanical resistance of each product.
+	- For the difference in stall force value according to the current setting, refer to the related graph in the data sheet.
+
+> 	 non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please use volatile parameter “Goal Current” for frequent value changes during operation.
 
 14. Speed Limit (0~1023 / Default : 1023)  
-	- 모터의 평균 이동속도 제한 값입니다(0~1023). 0일 때 기동력 OFF 상태이고 1023일 때 최대 속도를 냅니다.  
-	- Speed Limit 를 변경해도 Force에 영향을 주지 않습니다.  
-	- 다만, 너무 낮은 Speed Limit 설정 시 모터의 반응이 늦어지거나 움직이지 못할 수 있습니다.   
-	- Speed Limit 값을 변경할 경우 Goal Speed도 같이 변경됩니다.  
-> 	  비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
+	- Average moving speed limit value of the motor (0~1023). When it is 0, the starting power is OFF, and when it is 1023, the maximum speed is achieved.
+	- Changing the Speed Limit does not affect the Force.
+	- However, if the speed limit is set too low, the response of the motor may be delayed or it may not be able to move.
+	- When the Speed Limit value is changed, the Goal Speed is also changed.
 
-> 	Firmware Version 1.5 에서의 Goal Speed와 같습니다.  
+> 	 non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.
 
 15. Calibration Stroke  
-	- Calibration Short Stroke : Short Stroke위치 보정 값, 공장에서 설정된 Short Stroke Calibration 값을 저장  
-	- Calibration Long Stroke : Long Stroke위치 보정 값,공장에서 설정된 Long Stroke Calibration 값을 저장  
+	- Calibration Short Stroke : Short Stroke calibration value, Short Stroke Calibration value which is set at the factory will be saved.
+	- Calibration Long Stroke : Long Stroke calibration value, Long Stroke Calibration value which is set at the factory will be saved.
 
-16. Acceleration / Deceleration (0~255 / Default : Individual  사양)  
+
+16. Acceleration / Deceleration (0~255 / Default : Individual Spec)
     ![[DataDescription_AccelerationDeceleration.png]]
-	- 모터의 가감속률을 나타냅니다.  
-	- Acceleration : 모터의 이동 시작 시의 가속도 값으로 값이 클 경우 모터가 급 가속을 하게 됩니다. 반대로 값이 낮을 경우 부드러운 가속을 하지만, 너무 낮을 경우 모터가 움직이지 않을 수도 있습니다.  
-	- Deceleration : 모터의 위치 도달 시의 감속도 값으로 값이 클 경우 목표위치에서 급 감속을 하게 되어 목표 위치 값을 벗어나 정지하게 되고, 다시 벗어난 위치에서 목표위치로의 이동을 하게 되는 바운딩 현상이 나타나 정상적인 제동이 이루어지지 않을 수 있습니다. 너무 낮은 감속은 서보모터가 지나치게 느려지는 동작을 하게 되어 목표위치까지 도달하는 시간이 늦어질 수 있습니다.  
-> 	  Acceleration / Deceleration 수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.  
+	- Indicates the acceleration/deceleration rate of the motor.
+	- Acceleration: The acceleration value when the motor starts moving. If the value is high, the motor accelerates rapidly. Conversely, if the value is low, smooth acceleration, but if it is too low, the motor may not move.
+	- Deceleration: The deceleration value when the motor reaches the position. If the value is high, it decelerates rapidly and may stop outside the goal position with a bounding phenomenon occurs that moves from the deviating position to the goal position. In this case, normal braking may not be achieved. If the deceleration is too low, the actuator becomes too slow and the time to reach the goal position may be delayed.
+> 	  When correcting Acceleration / Deceleration, test after applying a small change value.
 
-> 	비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. > 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
+> 	It is a non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation..  
 
-17. Current PI (0~255 / Default : Individual  사양)
-	- 모터의 전류제어를 위한 PI 값  
-	- 정해진 값이 보다 큰 PI값을 적용할 경우 Goal Current와의 오차에 대해 거칠게 동작할 수 있습니다.  
-	- 정해진 값보다 작은 PI값을 적용할 경우 Goal Current와의 오차에 부드럽게 동작하나 Goal Current 값과의 오차가 크게 나타날 수 있습니다.  
-> 	  수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.    
-> 	  비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.   
+17. Current PI (0~255 / Default : Individual  Spec)
+	- PI value for motor current control.
+	- If you apply a larger PI value than the set value, it may operate harshly against the error with the Goal Current.
+	- If you apply a smaller PI value than the set value, it may operate smoothly against the error with the Goal Current, but the error with the Goal Current value may appear large.
 
-18. Speed PID (0~255 / Default : Individual  사양)  
-	- 모터의 속도제어를 위한 PID 값  
-	- 정해진 값이 보다 큰 PID값을 적용할 경우 Goal Speed와의 오차에 대해 거칠게 동작하여 Overshoot 또는 과도 응답상태로 정해진 위치 값에 정지하지 못하고 모터가 진동할 수 있습니다.  
-	- 정해진 값보다 작은 PI값을 적용할 경우 Goal Speed 와의 오차에 부드럽게 동작하나 Goal speed 값과의 오차가 크게 나타날 수 있습니다.  
-> 	  수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.    
-> 	  비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.  운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
+> 	  Please test by applying from small change values.
+> 	  non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation. 
 
-19. Min/Max Position Calibration (0~255 / Default : Individual  사양)  
-	- Min Position : Goal Position의 값이 ‘0’일경우 최소 Stroke의 위치  
-	- Max Position : Goal Position의 값이 ‘4095’일경우 최대 Stroke의 위치  
+18. Speed PID (0~255 / Default : Individual  Spec)  
+	- PID value for speed control of motor.
+	- If a PID value larger than the set value is applied, the motor may vibrate without being able to stop at the set position value due to overshoot or over-response state due to rough operation against the error between the goal speed and the current speed
+	- If a PI value smaller than the set value is applied, it operates smoothly in the error between the goal speed and the current speed, but the error between the goal speed value may appear large.
+
+> 	  It is a non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.
+> 	  Test from applying a small change value.
+
+19. Min/Max Position Calibration (0~255 / Default : Individual  Spec)  
+	- Min Position: The position of the minimum stroke when the Goal Position value is ‘0’.
+	- Max Position: The maximum stroke position when the Goal Position value is ‘4095’.
+	- Unlike the Stroke Limit command, the range of the Goal Position value [0~4095] is not limited and the length of the actual used stroke is changed.
+	- Min/Max Position value of each actuator has a mechanical tolerance of ±0.5mm.
+	  So, <font color="#ff0000">Position Calibration command can be used to synchronize the start and end positions of slightly different servos for the same Goal Position value by correcting each error value.</font>
+
 	  ![[Min.MaxPositionCalibration.png]]
-	  - Stroke Limit 명령과는 달리 Goal Position의 범위[0~4095]가 제한되지 않고 실제 사용 Stroke의 길이의 변화가 생깁니다.  
-	- 각 서보모터의 출하 시 Min/Max Position 값은 ±0.5mm의 오차를 가지고 있습니다. 해서, Position Calibration 명령은 각 오차의 값을 보정하여, 동일한 Goal Position 값에 대한 약간씩 다른 서보들의 시작위치와 종료위치를 동기화 시킬 때 사용합니다.  
 
-| Parameter| Goal Position 범위| 비고|
+|Parameter|Goal Position Range|Remark|
 |---|---|---|
-| Stroke Limit| Short Stroke Limit ~ Long Stroke Limit | 가용 스트로크 범위 제한 없이,입력범위(0~4095)만 제한            |
-| Position Calibration |0~4095(최대사용) | 입력범위 (0~4095) 제한은 없으나, 가용 스트로크 범위가 변동될 수 있음. |  
-(예, 12Lf-20F-27의 Min Position 3.8mm/ Min Position Calibration값이 5 일 경우, Min Position Calibration 값을 높이면 Min Position 값이 늘어나고 전체 Stroke 구간은 Min Position이 늘어남만큼 줄어들게 됩니다.)   
-> 비휘발성 메모리 영역입니다. 데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다. 운영 중 빈번한 값의 변경은 주의하시기 바랍니다.  
+|Stroke Limit|Short Stroke Limit ~ Long Stroke Limit|No limit on the available stroke range, only limit G/P input range (0~4095)|
+|Position Calibration|0 ~ 4095(Full range)|Input range (0~4095) is not limited, but the available stroke range may vary.|
+For example, if the Min Position Calibration value at Min Position 3.8mm of 12Lf-20F-27 is 5, increasing the Min Position Calibration value increases the Min Position value and the entire stroke range will be reduced as the Min Position increases.
+> It is a non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.
 
 
 #### 4.2.3.2. 휘발성 메모리 영역    
@@ -710,7 +715,7 @@ highest voltage 및 Overload Error의 경우 Force Off (shutdown) 되며, 전원
 |0|모터의 전원을 차단하여서 기동력이 발생 되지 않도록 합니다.|
 |1|모터의 전원을 인가하여서 기동력이 발생하도록 합니다.|
 > <font color="#245bdb">> **TIP**</font>
-> <font color="#245bdb">> 당사 리니어 서보는 모터의 전원이 해제되어도 기구적인 설계 특성상 위치를 고수하려는 특성이 있습니다. 27N이상 정격부하 사양의 제품은 전원 차단 시에도 기구적인 마찰력으로 위치를 고수합니다. 따라서, 설비에서 서보 모터가 특정 위치를 지속적으로 고수하고 있어야 하는 경우 Force Off 명령으로 모터 전원을 차단하여 모터의 수명을 연장시킬 수 있습니다. 이 경우 통신은 여전히 유지되며, 모터의 전원만 차단됩니다. 다시 위치 이동 명령을 내리게 되면 자동으로 Force ON되어 다음 명령을 수행하게 됩니다.</font>
+> <font color="#245bdb">> 당사 리니어 서보는 모터의 전원이 해제되어도 기구적인 설계 특성상 위치를 고수하려는 특성이 있습니다. 27N이상 정격부하 Spec의 제품은 전원 차단 시에도 기구적인 마찰력으로 위치를 고수합니다. 따라서, 설비에서 서보 모터가 특정 위치를 지속적으로 고수하고 있어야 하는 경우 Force Off 명령으로 모터 전원을 차단하여 모터의 수명을 연장시킬 수 있습니다. 이 경우 통신은 여전히 유지되며, 모터의 전원만 차단됩니다. 다시 위치 이동 명령을 내리게 되면 자동으로 Force ON되어 다음 명령을 수행하게 됩니다.</font>
 
 21. LED
 	- Error 표시가 되지 않을 때 사용자가 임의로 LED 제어하여 디스플레이 효과를 낼 수 있음.   (LED에러표시가 우선) 
