@@ -1,7 +1,7 @@
 
 # 1. Introduction
-Mini 17Lf Model은 다양한 기능을 내장한 Actuator로 효율적이고 유연한 모션 제어 어플리케이션을 위한 완벽한 솔루션입니다. mightyZAP Mini Linear Actuator는 협소한 공간에서 효율적인 선형 운동이 필요한 어플리케이션에 활용 가능한 제품이며, 산업, 의료, 로봇 연구, UAV 분양 등 다양한 방면에서 활용이 가능한 제품입니다. 
-<font size = "5" color="#ff0000" >주의 사항</font>
+Mini 17Lf Model은 다양한 기능을 내장한 Actuator로 효율적이고 유연한 모션 제어 어플리케이션을 위한 완벽한 솔루션입니다. mightyZAP Mini Linear Actuator는 협소한 공간에서 효율적인 선형 운동이 필요한 어플리케이션에 활용 가능한 제품이며, 산업, 의료, 로봇 연구, UAV 분양 등 다양한 방면에서 활용이 가능한 제품입니다.  
+<font size = "5" color="#ff0000" >주의 사항</font>  
 mightyZAP Actuator를 안정적으로 사용하기 test 위해서는 몇 가지 주의 사항이 있습니다.   
 
 ## 1.2 사양
@@ -360,31 +360,31 @@ Indirect Address에 특정 주소를 세팅하면, Indirect Data에 해당 주�
 
 ### 2.4.16 Extend I/O Control  
 Mini 17Lf 시리즈에는 Extended I/O Port가 존재합니다. 해당 기능은 통신 4개의 I/O Port를 제공하며 , 각각은 아래와 같은 기능을 제공합니다.  
-- IO Port 1 : Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart 
-- IO Port 2: Switch, JOG, Action Next, Action Enable,Force Off, Stop, Pause, Alarm Out, Restart  
-- IO Port 3: Force Off, Stop, Pause, Action Enable, Alarm Out, Restart  
-- IO Port 4 : Force Off, Stop, Pause, Action Enable, Alarm Out, Restart  
+- <font color="#f00">IO Port 1</font> : Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart 
+- <font color="#ff0000">IO Port 2</font>: Switch, JOG, Action Next, Action Enable,Force Off, Stop, Pause, Alarm Out, Restart    
+- <font color="#ff0000">IO Port 3</font>: Force Off, Stop, Pause, Action Enable, Alarm Out, Restart    
+- <font color="#ff0000">IO Port 4 </font>: Force Off, Stop, Pause, Action Enable, Alarm Out, Restart    
 Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며 외부 전원이 필요하지 않습니다.  각 기능 설명에 명시된 회로 구성대로 연결해야 Actuator 에 문제가 발생하지 않습니다.  
 (connector 기구 이미지 사이드 뷰)
 
-**Funtion Switch** 
+- **Funtion Switch**   
 	IO Port 1 또는 2번을 Switch 기능으로 지정 시 나머지 IO Port도 자동으로 지정 됩니다.  해당 기능은 그림과 같이 회로를 구성하였을 경우 각 버튼에 따라 short stroke Limit/Long Stroke Limit 값으로 이동을 합니다.
 	(회로 구성)  
-**Function JOG**
+- **Function JOG**  
 	IO Port 1 또는 2번을 Jog 기능으로 지정 시 나머지 IO Port도 작동으로 지정됩니다. 해당 기능은 그림과 같이 회로를 구성해야하며 각 버튼을 누를 경우 Short/Long 방향으로 모터가 동작 하다가 버튼을 놓았을 때 정지하게 됩니다.
-**Action Enable**  
+- **Action Enable**    
 	Action Enable 기능 Action 기능을 사용할 때 사용됩니다. 
-**Action Next**  
+- **Action Next**    
 	Action Next 기능 Action 기능을 사용할 때 사용됩니다. 해당 I/O Pin에 스위치 입력이 들어와야 다음 Action 기능을 진행합니다. 자세한 내용은 4.17 Action Control을 참조하여 주시기 바랍니다.
-**Force Off**  
+- **Force Off**  
 	해당 기능은 입력 기능으로 force off 기능을 해당 I/O Port에 적용합니다. 선택한 i/o port에 스위치 회로를 연결하여 버튼을 누르면 Force On/Off toggle 기능을 수행합니다.  
-**Function Stop**  
+- **Function Stop**    
 	해당 기능은 입력 기능으로 Stop 기능을 해당 I/O Port에 적용합니다. 선택한 i/o port에 스위치 회로를 연결하여 버튼을 누르면 Actuator가 정지 됩니다.  
-**Function Pause** 
+- **Function Pause**   
 	해당 기능은 입력 기능으로 Pause 기능을 해당 I/O Port에 적용합니다. 선택한 i/o port에 스위치 회로를 연결하여 버튼을 누르면 Pause toggle 기능을 수행합니다.  
-**Function Alarm Out**  
+- **Function Alarm Out**      
 	해당 기능은 출력 기능으로 Hardware Error 가 발생 시 'High' 신호를 내보냅니다.  
-**Restart**  
+- **Restart**    
 	해당 기능은 입력 기능으로 Restart 기능을 담당합니다.  Hardware Error 등의 문제로 Actuator가 정지한 경우 또는 시스템을 재 시작해야 해야하는 경우 해당 기능을 이용하여 외부에서 restart 기능을 사용할 수 있습니다.
   
 ### 4.17 Action Control  
