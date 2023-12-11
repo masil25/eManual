@@ -474,6 +474,7 @@ mightyZAP의 모델 번호입니다.
 |48(0x30)|38400|
 |64 (0x40)|19200|
 |128 (0x80)|9600|  
+
 **설정값 변환표**  
 >비휘발성 메모리 영역입니다.   데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.   운영 중 빈번한 값의 변경은 주의하시기 바랍니다.    
 
@@ -517,6 +518,7 @@ COMMAND Packet이 전송된 이후 Feedback Packet을 회신 결정 모드
 |0|모든 COMMAND에 대해 Feedback Packet을 전송하지 않음.<br>(단, Echo명령 패킷은 제외)|
 |1|Load Data명령에만 Feedback Packet을 전송|
 |2|모든 COMMAND에 대해 Feedback Packet을 전송|  
+
 Broadcast ID(0xFE)일 때, Feedback Return Mode와 상관없이 Feedback Packet을 전송하지 않음.    
 > 비휘발성 메모리 영역입니다.   데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.   운영 중 빈번한 값의 변경은 주의하시기 바랍니다.    
 

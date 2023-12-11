@@ -168,7 +168,7 @@ Control Table Data는 'R', 'RW'로 표기됩니다. 'R'은 읽기 전용(Read On
 |            40248  |   247 (0xF7)   |   Internal Data 7      |   간접 주소 7 데이터 값     |            |                   |
 |            40249  |   248 (0xF8)   |   Internal Data 8      |   간접 주소 8 데이터 값     |            |                   |
 |            40250  |   249 (0xF9)   |   Internal Data 9      |   간접 주소 9 데이터 값     |            |                   |  
-
+  
 ## 2.4 Control Table Discription
 ### 2.4.1  Model Serial Number
 mightyZAP Model을 식별하기 위한 번호입니다.
