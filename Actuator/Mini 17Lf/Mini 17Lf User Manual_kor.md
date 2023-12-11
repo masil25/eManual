@@ -361,13 +361,15 @@ Indirect Address에 특정 주소를 세팅하면, Indirect Data에 해당 주�
 ### 2.4.16 Extend I/O Control  
 Mini 17Lf 시리즈에는 Extended I/O Port가 존재합니다. 해당 기능은 통신 4개의 I/O Port를 제공하며 , 각각은 아래와 같은 기능을 제공합니다.  
 
-- <font color="#f00">IO Port 1</font> : Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart 
-- <font color="#ff0000">IO Port 2</font>: Switch, JOG, Action Next, Action Enable,Force Off, Stop, Pause, Alarm Out, Restart    
-- <font color="#ff0000">IO Port 3</font>: Force Off, Stop, Pause, Action Enable, Alarm Out, Restart    
-- <font color="#ff0000">IO Port 4 </font>: Force Off, Stop, Pause, Action Enable, Alarm Out, Restart     
+|IO PORT|Function|
+|---|---|
+|IO Port 1| Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
+|IO Port 2| Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
+|IO Port 3| Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
+|IO Port 4| Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
+
 Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며 외부 전원이 필요하지 않습니다.  각 기능 설명에 명시된 회로 구성대로 연결해야 Actuator 에 문제가 발생하지 않습니다.  
 (connector 기구 이미지 사이드 뷰)
-
 - **Funtion Switch**   
 	IO Port 1 또는 2번을 Switch 기능으로 지정 시 나머지 IO Port도 자동으로 지정 됩니다.  해당 기능은 그림과 같이 회로를 구성하였을 경우 각 버튼에 따라 short stroke Limit/Long Stroke Limit 값으로 이동을 합니다.
 	(회로 구성)  
