@@ -605,13 +605,7 @@ In case of Overload Error, the alarm is not cleared even after overload conditio
 
 |Error|bit|
 |---|---|
-|NONE|7|
-|NONE|6|
 |Overload Error|5|
-|NONE|4|
-|NONE|3|
-|NONE|2|
-|NONE|1|
 |Input Voltage Error|0|
 
 Lowest input voltage의 경우 모터가 Force Off(shutdown) 되지는 않습니다.   
