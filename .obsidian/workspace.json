@@ -11,10 +11,11 @@
             "id": "b02ba1a8741bd7af",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
                 "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
-                "staged": false
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -108,6 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -124,6 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +148,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md"
+              }
             }
           },
           {
@@ -187,12 +192,12 @@
   },
   "active": "b02ba1a8741bd7af",
   "lastOpenFiles": [
-    "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
+    "Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+    "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
     "무제 파일.md",
     "Actuator/Mini 12Lf/img/CircuitConnection_TTL_en.png",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
-    "Total Manager/Total Manager User Manual_kor.md",
     "Technical/Motor의 특성도 이해.md",
     "conflict-files-obsidian-git.md",
     "Actuator/Mini 12Lf/img/Broken_Rod_en.png",
