@@ -4,83 +4,45 @@
     "type": "split",
     "children": [
       {
-        "id": "8e185326cee59db9",
+        "id": "4d11f05b3aace888",
         "type": "tabs",
-        "dimension": 99.99999999999999,
         "children": [
           {
-            "id": "7739f073fb872f59",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3366b58dcffd1c3d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e9ffe4a2777ee2a8",
+            "id": "b02ba1a8741bd7af",
             "type": "leaf",
             "state": {
               "type": "diff-view",
               "state": {
-                "file": "Total Manager/img/ActuatorList.png",
-                "staged": true
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "staged": false
               }
             }
           },
           {
-            "id": "5e50645c8fe76703",
+            "id": "3f4f113d018fa78b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "d65007e83be08127",
+            "id": "1fd45edd58c69b07",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "629e492a1bff6ecc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
+                "file": "Total Manager/Total Manager User Manual_kor.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -109,7 +71,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "템플릿",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -146,7 +108,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -163,7 +124,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -185,9 +145,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md"
-              }
+              "state": {}
             }
           },
           {
@@ -211,7 +169,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 606.5
+    "width": 371.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -221,31 +179,34 @@
       "daily-notes:오늘의 데일리 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
-      "markdown-table-editor:Open Markdown Table Editor": false,
       "markdown-importer:마크다운 형식 가져오기 열기": false,
       "publish:변경사항 출판": false,
+      "markdown-table-editor:Open Markdown Table Editor": false,
       "templater-obsidian:Templater": false
     }
   },
-  "active": "719f7c1e9e32f8c6",
+  "active": "b02ba1a8741bd7af",
   "lastOpenFiles": [
-    "무제 파일.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
+    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+    "무제 파일.md",
     "Actuator/Mini 12Lf/img/CircuitConnection_TTL_en.png",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
-    "Actuator/Mini 12Lf/무제 파일.md",
+    "Total Manager/Total Manager User Manual_kor.md",
+    "Technical/Motor의 특성도 이해.md",
     "conflict-files-obsidian-git.md",
     "Actuator/Mini 12Lf/img/Broken_Rod_en.png",
-    "Total Manager/img/update-view.png",
-    "Total Manager/img/restartSelect.png",
-    "Total Manager/img/reset_selcect.png",
-    "Total Manager/img/reset_popup.png",
+    "Protocl/Modbus RTU.md",
     "Total Manager/img/resetPopup.png",
     "Total Manager/img/resetAction.gif",
-    "Total Manager/img/mainView-description.png",
-    "Total Manager/img/information.png",
-    "Protocl/Modbus RTU.md",
-    "Protocl/Modbus.md",
+    "Total Manager/img/restartSelect.png",
+    "simplescreenrecorder-2023-11-29_17.11.32 (2).gif",
+    "Total Manager/img/reset_popup.png.crswap",
+    "Total Manager/img/reset_popup.png",
+    "Total Manager/img/reset_selcect.png",
+    "Total Manager/img/스크린샷 2023-07-26 10-41-58.png",
+    "Total Manager/img/reset_popup",
+    "Actuator/Mini 12Lf/img/ACC_IR_GT01.png",
     "Protocl/IR Protocol.md",
     "BrokenRod.png.md",
     "StrokeLimit.png.md",
@@ -253,8 +214,6 @@
     "UseSpanner.  png.md",
     "BrokenRod.  png.md",
     "Actuator/Mini 12Lf/img/CautionMotionSync.  png.md",
-    "Total Manager/Total Manager User Manual_kor.md",
-    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_eng.md",
     "total.md",
     "BrokenRod.png{width=50%}.md",
@@ -274,8 +233,6 @@
     "Actuator/Mini 12Ls",
     "Library",
     "Boards",
-    "Actuator",
-    "Boards/Interface Board",
     "무제 파일 1.canvas"
   ]
 }
