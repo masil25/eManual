@@ -1,4 +1,4 @@
-### Features / 주요 특장점
+### 1 Features / 주요 특장점
 -  Micro size / 마이크로 사이즈  
 -  Precise position control / 정밀위치제어
 -  Force control by current feedback / 전류피드백 통한 포스 제어
@@ -9,6 +9,34 @@
 -  Parameter programmable on the Manager software / 매니져 소프트웨어를 통한 Parameter 셋팅 가능 
 
 ### Common Specifications / 공통 사양
+| Property | Value |
+|-------------------------------------|--------------------------------------------|
+| Stroke / 스트로크 | 27mm |
+| Rated Load / 정격 부하 | 20N~75N according to gear ratio/ 기어비에 따라 20N~75N |
+| Recommended duty cycle at rated load | under 50%(50% 이하) |
+| Micro controller | 32bit Arm Cortex |
+| Position Resolution | 10000 Resolution (A/D Converter) |
+| Input Voltage / 입력 전압 | 12.0V(Rated/정격), 8V ~ 13 V(Operating) |
+| Motor Type / Watt | Coreless DC Motor / xxWatt |
+| Current consumption / 소모전류 | 30mA(Idle), 400mA(Rated), 1.6A(Stall) |
+| Position repeatability | Unidirectional less than 0.03mm(30um) |
+| | Bydirectional less than +/0.06mm(60um) |
+| 전류 값 오차 / Current Tolerance | ±15% at Over 50mA |
+| Position sensor / 위치센서 | 10kΩ linearity potentiometer |
+| Size, Weight /크기,무게 | {xx.x}(L)x {xx.x}(W)x {xx.x}(H)mm / {xx ~ xx} (to be varied according to gear ratio) |
+| Communication/ 통신 | RS485 |
+| Protocol | IR Protocl, Modbus RTU |
+| Operating Temperatures / 동작온도 | 10℃ ~ 60℃ |
+| Ingress protection / 방수방진 | IP54 |
+| Mechanical Backlash / 기구백래쉬 | 0.03mm(30um) |
+| Audible Noise / 가청소음 | Max. 50db at 1m |
+| Gear ratio / 기어비 | 9.6 : 1 |
+| Gear type / 기어 타입 | Engineering Plastic |
+| Rod type / Rod 타입 | Staniless Steel Rod / 스테인레스 스틸 |
+| Standard Accessory / 표준 악세서리 | |
+| Connector Type (Male) in the Actuator | |
+
+| Wire Harness | |
 -  **Stroke / 스트로크** : 27mm 
 -  **Rated Load / 정격 부하** : 20N~75N according to gear ratio/ 기어비에 따라 20N~75N
    **Recommended duty cycle at rated load / 정격부하 시 권장 듀티사이클** :under 50%(50% 이하)
