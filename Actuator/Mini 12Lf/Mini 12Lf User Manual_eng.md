@@ -1,6 +1,6 @@
 
-**<font color="#ff0000">Check your product series!</font>
-<font color="#ff0000">Does your model number start with 12Lf-?</font>**
+**<font color="#ff0000">Check your product series!  </font>
+<font color="#ff0000">Does your model number start with 12Lf-?  </font>**
 
 
 > This manual is the dedicated manual for **12Lf FORCE control version actuator** which support force/speed control as well as position control. 
