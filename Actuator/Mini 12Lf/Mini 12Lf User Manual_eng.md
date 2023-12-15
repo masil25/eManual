@@ -182,26 +182,27 @@ Please refer to detailed dimension from 3D drawing at our website. (www.mightyza
 ## 2.3. Specification
 ### 2.3.1. 12Lf Series Specifications
 
-|Rated Load|Stroke	|Communication(RS-485)|Communication(TTL/PWM)|Rated Load/<br>Max Speed(No Load)|Stall Force at Current<br>(1.6A/800mA/100mA)|Mechanical  <br>Self Lock  <br>(Z Axis Use) | 리드스크류 / 기어비 / 기어타입|
+|Rated Load|Stroke	|Communication(RS-485)|Communication(TTL/PWM)|Rated Load/<br>Max Speed(No Load)|Stall Force at Current<br>(1.6A/800mA/100mA)|Mechanical  <br>Self Lock  <br>(Z Axis Use) | Lead Screw / Gear Ratio / Gear Type|
 |---|---|---|---|---|---|---|---|
-|10N|40mm|12Lf-10F-40|12Lf-10PT-40|10N / 110mm/s|60N / 40N / 10N|없음  <br>(Z축 적용주의)|리드각 20°  <br>/ 10:1  <br> / Engineering  <br>Plastic Gears|
+|10N|40mm|12Lf-10F-40|12Lf-10PT-40|10N / 110mm/s|60N / 40N / 10N|No (Pay attention to application)|Lead Angle 20°  <br>/ 10:1  <br> / Engineering  <br>Plastic Gears|
 |^|53mm|12Lf-10F-53|12Lf-10PT-53|^|^|^|^|
 |^|90mm|12Lf-10F-90|12Lf-10PT-90|^|^|^|^|
 |12N|27mm|12Lf-12F-27|12Lf-12PT-27|12N / 110mm/s|100N / 60N / 8N|^|^|
-|17N|40mm|12Lf-17F-40|12Lf-17PT-40|17N / 80mm/s|100N / 60N / 8N|^|리드각 15°  <br>/ 10:1  <br> / Engineering  <br>Plastic Gears|
+|17N|40mm|12Lf-17F-40|12Lf-17PT-40|17N / 80mm/s|100N / 60N / 8N|^|Lead Angle 15°  <br>/ 10:1  <br> / Engineering  <br>Plastic Gears|
 |^|53mm|12Lf-17F-53|12Lf-17PT-53|^|^|^|^|
 |^|90mm|12Lf-17F-90|12Lf-17PT-90|^|^|^|^|
 |20N|27mm|12Lf-20F-27|12Lf-20PT-27|20N / 80mm/s|120N / 72N / 9.6N|^|^|
-|27N|40mm|12Lf-27F-40|12Lf-27PT-40|27N / 28mm/s|160N / 96N / 12.8N|있음  <br>(Z축 적용가능)|리드각 5°  <br>/ 10:1  <br> / Engineering  <br>Plastic Gears|
+|27N|40mm|12Lf-27F-40|12Lf-27PT-40|27N / 28mm/s|160N / 96N / 12.8N|Yes (Applicable)|Lead Angle 5°  <br>/ 10:1  <br> / Engineering  <br>Plastic Gears|
 |^|53mm|12Lf-27F-53|12Lf-27PT-53|^|^|^|^|
 |^|90mm|12Lf-27F-90|12Lf-27PT-90|^|^|^|^|
 |35N|27mm|12Lf-35F-27|12Lf-35PT-27|35N / 28mm/s|210N / 126N / 16.8N|^|^|
-|42N|40mm|12Lf-42F-40|12Lf-42PT-40|42N / 15mm/s|240N / 144N / 19.2N|^|리드각 5°  <br>/ 20:1  <br> / Metal Gear|
+|42N|40mm|12Lf-42F-40|12Lf-42PT-40|42N / 15mm/s|240N / 144N / 19.2N|^|Lead Angle 5°  <br>/ 20:1  <br> / Metal Gear|
 |^|53mm|12Lf-42F-53|12Lf-42PT-53|^|^|^|^|
 |55N|27mm|12Lf-55F-27|12Lf-55PT-27|55N / 15mm/s|300N / 180N / 24N|^|^|
-|78N|40mm|12Lf-78F-40|12Lf-78PT-40|78N / 7.7mm/s|420N / 252N / 33.6N|^|리드각 5°  <br>/ 50:1  <br> / Metal Gears|
+|78N|40mm|12Lf-78F-40|12Lf-78PT-40|78N / 7.7mm/s|420N / 252N / 33.6N|^|Lead Angle 5°  <br>/ 50:1  <br> / Metal Gears|
 |^|53mm|12Lf-78F-53|12Lf-78PT-53|^|^|^|^|
 |100N|27mm|12Lf-100F-27|12Lf-100PT-27|100N / 7.7mm/s|600N / 360N / 48N|^|^|
+
 
 
 ### 2.3.2. 12Lf Series Common Specifications	
@@ -459,7 +460,7 @@ After receiving Command Packet at multiple qty of mightZAPs, the servo whose ID 
 
 <font color="#ff0000">**Applied from firmware ver.2.0 or higher </font>  
 
-#### 4.2.2.2 MODBUS RTU (이 부분만 모드버스 매뉴얼에서)    
+#### 4.2.2.2 MODBUS RTU
 ##### 4.2.2.2.1 Data Memory Map    
 - Multi write function is not supported. 
 - All data will be reset to default value when Reset command is executed. 
@@ -600,7 +601,7 @@ In case of Overload Error, the alarm is not cleared even after overload conditio
 > non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.  
 
 
-<font color="#ff0000">11. Alarm Shutdown (Default : 33) ★국문이랑 내용다름★</font> 
+11. Alarm Shutdown (Default : 33)
     Force will be OFF if concerned bit is set as "1" when error occurs. (1 : activate, 0: deactivate)
 
 |Error|bit|
@@ -700,77 +701,82 @@ For example, if the Min Position Calibration value at Min Position 3.8mm of 12Lf
 > It is a non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.
 
 
-#### 4.2.3.2. 휘발성 메모리 영역    
+#### 4.2.3.2. Volatile Memory  
 20. Force ON/OFF (Default : 1 / Force ON)
-    - 기동력 활성화 여부 설정 ( 0일 때 OFF, 1일 때 ON)  
+    - Setting for Force On and OFF ( 0 :  OFF, 1 :  ON)  
     
-|value|동작상태|
+|value|Description|
 |---|---|
-|0|모터의 전원을 차단하여서 기동력이 발생 되지 않도록 합니다.|
-|1|모터의 전원을 인가하여서 기동력이 발생하도록 합니다.|
+|0|Cut off power to the motor and Force is OFF. |
+|1|Power to be supplied to the motor and Force is ON.|
 > <font color="#245bdb">> **TIP**</font>
-> <font color="#245bdb">> 당사 리니어 서보는 모터의 전원이 해제되어도 기구적인 설계 특성상 위치를 고수하려는 특성이 있습니다. 27N이상 정격부하 Spec의 제품은 전원 차단 시에도 기구적인 마찰력으로 위치를 고수합니다. 따라서, 설비에서 서보 모터가 특정 위치를 지속적으로 고수하고 있어야 하는 경우 Force Off 명령으로 모터 전원을 차단하여 모터의 수명을 연장시킬 수 있습니다. 이 경우 통신은 여전히 유지되며, 모터의 전원만 차단됩니다. 다시 위치 이동 명령을 내리게 되면 자동으로 Force ON되어 다음 명령을 수행하게 됩니다.</font>
+> <font color="#245bdb">> migtyZAP keeps its position due to mechanical design even after motor power is off.  For instance, mightyZAP having more than 27N rated load, rod sticks to its position firmly when motor power is off. So, in case servo motor needs to keep certain position (if mechanical frictional force is able to keep its position under power off condition against your load), apply FORCE OFF parameter. In this case, communication line is still alive and only motor power can be off which helps longer lifespan of the servo. Upon new positional command, servo will be FORCE on and do its next movement. </font>
 
 21. LED
-	- Error 표시가 되지 않을 때 사용자가 임의로 LED 제어하여 디스플레이 효과를 낼 수 있음.   (LED에러표시가 우선) 
+	- Control LED when there is no Error indication. 
 
-|bit|동작상태|
+|bit|Description|
 |---|---|
-|0|LED Disable (1일 때 모두 꺼짐)|
-|1|RED LED 제어|
-|2|GREEN LED 제어|
+|0|LED Disable ( All LEDs will be Off when it is 1)|
+|1|RED LED Control|
+|2|GREEN LED Control|
 
 22. Goal Position (0~4095)
-	- 목표 위치의 값. 이동 시키고자 하는 위치 값입니다. 목표위치 값은 Short/Long stroke limit 설정치에 영향을 받습니다. (즉, stroke limit 범위 밖으로는 위치 명령을 내려도 stroke limit위치까지만 움직임)  
-	- 27mm stroke제품의 경우, Long stroke limit설정으로 인해 27mm에서의 Goal position 값은 3686입니다. 원할 경우 30mm(4095)로 늘려 사용할 수 있습니다.   
+	- Goal position value which is desired position value to move. The goal position value will be affected by both short/long stroke limit. (i.e. move only to the stroke limit position even if the position command is out of the stroke limit range) 
+	- For the 27mm stroke product, the goal position value at 27mm is 3686 due to the long stroke limit setting. It can be extended to 30mm (4095) if desired.
+
 
 23. Goal Speed (0~1023 / Default : 1023)
-	- 모터의 평균 이동속도 목표값(0~1023). 액츄에이터의 동작 중 속도변경을 원하는 경우 사용합니다.   
-	- 초기 전원 인가시 비휘발성 Speed Limit에서 값을 불러와 Goal Speed에 저장합니다.  
-	- Speed Limit 명령보다 빠르게 반응하며, 가동 중 실시간으로 속도를 변경하는 데 사용할 수 있습니다.  
-	- 0일 때 기동력 OFF 상태이고 1023일 때 최대 속도를 냅니다.  
-	- Goal Speed를 변경해도 Force에 영향을 주지 않습니다.  
-	- 다만, 너무 낮은 값을 설정 시 모터의 반응이 늦어지거나 움직이지 못할 수 있습니다.   
+	- Goal speed is the average moving speed value of motor (0 ~ 1023) and it is volatile memory parameter.
+	- When the servo motor power is applied or the Restart command is applied, the value of Speed Limit, which is a non-volatile parameter, is copied to Goal Speed.
+	- It reacts faster than the Speed Limit command and can be used to change the speed in real time during operation.
+	- When it is 0, the maneuverability is OFF and when it is 1023, it gives the maximum speed.
+	- Changing the Goal Speed does not affect the force.
+	- However, if the GoalSpeed setting is too low, the motor response may be slowed down or it may not be able to move.
+
 
 24. Goal Current (0~1600 / Default : 800)
-	- 모터의 최대 전류 제한 값입니다(0~1600). 즉, 모터의 최대힘인 stall 전류를 제어하여 stall force를 조정합니다.  
-	- 기능적으로는 비휘발성 파라메터인 Current Limit과 동일하지만, 동작중의 빈번한 전류설정 변경은, 응답이 빠른 휘발성 파라메터인 Goal Current 명령을 사용하시기 바랍니다.   
-	- 제어값은 0~1600으로 설정하며, 제어값 1600은 최대 stall 전류값 1600mA를 나타냅니다. (오차범위 :+/-15%)  
-	- 공장 출하시에는 800(mA)으로 셋팅되어 유사시 불필요한 최대 stall 전류사용을 방지하되, 최대속도를 보장합니다.   
-	- Stall force에 가깝게 Goal Current를 설정할수록 과부하 상황에서 모터가 낼 수 있는 최대 force도 올라가지만, 모터 수명단축의 원인이 될 수도 있습니다.  
-	- 메모리에 저장되는 비휘발성 파라메터인 Current Limit 값은 초기설정에서만 설정하시기를 권장하며, 동작 중 빈번한 전류 변경은 휘발성 파라메터인 Goal Current명령을 사용하시기를 추천드립니다.                    
-	- 비휘발성 Current Limit 값을 변경할 경우, 전원재인가시 휘발성 파라메터인 Goal Current 도 같이 변경됩니다.  
-	- 제품마다의 내부 기구저항 편차에 따라 저전류(200mA이하) 설정에서는 액츄에이터의 동작이 불규칙하거나 움직이지 않을 수도 있으니, 가급적 200mA이상의 전류설정을 해 주시기 바랍니다.   
-	- 전류설정에 따른 stall force값의 차이는 데이터 시트의 그래프를 참고하여 주십시오.   
+	- It is the maximum current limit value of the motor (0~1600). In other words, the stall force is adjusted by controlling the stall current limit. (Stall force : maximum power of the motor.)
+	- Goal Current is functionally same as Current Limit which is a non-volatile parameter, but for frequent current setting changes during operation, use the Goal Current command, a volatile parameter for faster response and preventing communication failure.
+	- The control value is set from 0 to 1600, and the control value of 1600 represents the maximum stall current - 1600mA. (Error range :+/-15%)
+	- The default set value is 800 (mA) from the factory to prevent unnecessary use of the maximum stall current in case of emergency, but guarantees the maximum speed at the rated load.
+	- As the Goal Current is set closer to the stall force current, the maximum force that the motor can produce in an overload situation increases, but it may cause a shortening of motor lifespan.
+	- When the non-volatile “Current Limit” value is changed, note that the volatile parameter “Goal Current” is also changed when power is reapplied. 
+	- Actuator operation may be irregular or may not move in the low current setting (less than 200mA) depending on the deviation of internal mechanical resistance of each product. So, please set the current to higher than 200mA for proper performance.
+	- For the difference in stall force value according to the current setting, refer to the related graph in the data sheet.
+
 
 25. Present Position [0~4095]
-	- 현재 Stroke 위치 값을 나타냅니다.  
-	- 0~4095의 범위로 표시되며 모터가 정지한 후에도 margin 값 이내의 미세한 위치 변동이 나타날 수 있으며 이는 정상동작입니다.  
+	- Current Position value.
+	- Range is between 0~4095, and even after the motor is stopped, the minute position change within the margin value can be made, and this is a normal operation.
+
 
 26. Present Motor Operating Rate [0~2047]
-	- Motor의 현재 가동률의 값 입니다.   
-	- Goal current와 Goal speed, 가감속 조정등에 따라 달리 표시됩니다.   
-	- 0~2047의 범위로 표시 됩니다.  
-	- 0은 모터가 정지한 상태를 나타냅니다.  
-	- 1~1023 범위의 값은 Short Stroke(수축) 방향으로의 모터 가동률 상태이고,  
-	- 1024~2047 범위의 값은 Long Stroke(확장) 방향으로의 모터 가동률 상태입니다.  
+	- Current Motor operating rate value. It can be affected by Goal current, Goal speed, Acceleration/ Deceleration adjustment. 
+	- To be shown in the range of 0~2047
+	- Value 0 indicates the motor is stopped.
+	- Between1~1023: Motor operating rate on short stoke direction (retract direction). 
+	- Between 1024~2047: Motor operating rate on long stoke direction (extend direction). 
+
 
 27. Present Current [0~1600]
-	- Motor의 현재 전류 사용 값 입니다.  
-	- 0~1600의 범위로 표시 됩니다.  
-	- 전류 값은 실제 전류값의 오차를 포함한 값으로, 참고 용도로 사용하시기 바랍니다.  
+	- Present motor Current value.
+	- To be displayed in the range of 0 ~ 1600.
+	- The value includes the error(+/-15%) of the actual current value. Please use it just for reference.
+
 
 28. Present Voltage
-	- 현재 입력 전압 값이며 단위는 0.1V입니다.  
-	- 예를 들어, 74이면 7.4V입니다.  
+	- Current input voltage. The unit is 0.1V
+	- For instance, 74 means 7.4V, 120 means 12V
+
 
 29. Moving
-	- 움직임 유무  
+	- Moving status
 
 |Value|Description|
 |---|---|
-|0|Motor 정지 상태|
-|1|Motor 가동 중|
+|0|Goal Position command execution is completed. (Motor stop)|
+|1|Goal Position command execution is under operation. (Motor moving)|
 
 
 '''## 4.2. 통신
@@ -779,8 +785,8 @@ For example, if the Min Position Calibration value at Min Position 3.8mm of 12Lf
 ''### 4.2.3. Data Map
 ''### 4.2.4. Data Description
 <font color="#ff0000">''### 4.2.5. Command 예제 Packet (삭제)</font>
-# 5. 별매 악세서리
-## 5.1. 메탈 브라켓 (IR-MB02/IR-MB03/IR-MB04) 
+# 5. Optional Accessories
+## 5.1. Metal Bracket (IR-MB02/IR-MB03/IR-MB04) 
 
 ![[ACC_IR-MB02.png]]
  - IR-MB02  
@@ -788,38 +794,44 @@ For example, if the Min Position Calibration value at Min Position 3.8mm of 12Lf
 - IR-MB03  
 ![[ACC_IR-MB04.png]]
 - IR-MB04  
-IR-MB02는 27mm 스트로크 제품 전용 가로 고정 브라켓입니다. 수직/전면 고정을 위해 IR-MB04를 사용하시기 바랍니다. 41/56/96mm 스트로크 제품은 케이스에 내부 장착된 마운팅 홀을 통해 취부가능하지만, 전용 IR-MB03을 통해 보다 유연한 설치가 가능합니다.  도면을 공개하고 있어, 고객사에서 직접 제작도 가능합니다.    
+IR-MB02 is the LATERAL mounting bracket for 27mm stroke lineup only and MB04 is the VERTICAL bracket for 27mm stroke mightyZAP. 
+For 41~90mm stroke lineup, they can be mounted via built-in mounting holes on the case. Or, if you wish more flexible mounting, you can use IR-MB03 for 40~90mm stroke versions. The drawing is open at our website, so you may make this bracket at their end. 
+
 ## 5.2. PC USB Interface (IR-USB02)
 ![[ACC_IR-USB02.png]]
-IR-USB02을 사용하면 PC를 통하여 아래와 같은 제어를 할 수 있습니다.   
-전용 PC 소프트웨어 mightyZAP Manager가 제공됩니다.  
+USB Interface between mightyZAP and user’s PC.  Through PC software, mightyZAP manager, user is able to control below. 
 ![[mightyZAPManager.png]]
-- 운용 파라메터 및 저장 메모리 셋팅
-- 모션 테스트
-- 전압, 온도, 현재 위치, 전류, 전압, 모터 가동률 모니터링
-- 시스템 초기화 및 펌웨어 업데이트
+- Parameter and Memory setting
+- Motion test
+- Voltage, temperature, present position, force monitoring
+- System initialization and Firmware update
 
-## 5.3. 엔드베어링 (IR-EB01)
-![[ACC_IR-EB01.png]]
-브라켓을 통한 고정이 아닌, 로드엔드와힌지부에 베어링을 장착하여 최적의 설치 및 운용이 가능하도록 합니다. M2.5와 M3규격의 엔드베어링 1셋트를 구성합니다.  
 
-## 5.4. 아두이노 기반 EZ Controlller (IR-CT01)
+## 5.3. End-Bearing  (IR-EB01)
+![[ACC_IR-EB01_en.png]]
+Mount mightyZAP on applications using this end bearings for most optimal installation. Put it on the rod end(M3) and on the end of servo case(M2.5). Two end bearings (M3 & M2.5) to be packed in a set. 
+
+## 5.4. EZ Controller (IR-CT01)
 ![[ACC_IR-CT01.png]]
-제어기가 없는 고객사를 위한 mightyZAP전용 컨트롤러/테스터
-간단한 조작의 아두이노 기반 컨트롤러
-기본 제어 프로그램 내장, 사용자 프로그래밍 가능 (아두이노 예제 제공)
-위치 지정 다이얼, 위치명령 버튼스위치, 위치명령 슬라이드 내장
-외부 스위치 또는 전압레벨 신호를 통한 제어 가능
-아날로그/디지털 센서 연결을 위한 별도 3개씩의 I/O 핀 제공
-블루투스 또는 지그비(Zigbee) 통신을 위한 외부통신 단자
+- mightyZAP controller/tester for customers who do not have their own controller
+- Arduino based simple operation
+- Built-in basic control program, User programmable (Arduino example provided)
+- Built-in position setting dials, position command button switches and position command slide
+- Controllable through external switch or voltage level signal
+- 6 x I/O pins for analog/digital sensor connection
+- External communication terminal for Bluetooth or Zigbee communication
 
-## 5.5. 라즈베리파이 HAT (IR-STS02)
-![[ACC_IR-STS02.png]]
-Raspberry Pi B3 또는 Raspberry Pi Zero에 호환되는 HAT(Hardware Attached on Top) 보드입니다. mightyZAP Raspberry Pi HAT 제품은 40 GPIO 핀을 통해서 라즈베리파이의 위에 바로 결합할 수 있는 제품입니다. TTL, RS-485, PWM 통신 인터페이스와 GPIO핀을 내장하고 있어 Raspberry Pi를 통한 mightyZAP 제어가 가능합니다. 
 
-## 5.6. 별매 익스텐션 와이어 (IR-EW01~10)
+## 5.5. Raspberry Pi HAT (IR-STS02) 
+![[ACC_IR-STS02_en.png]]
+IR-STS02 is a Raspberry Pi HAT(Hardware Attached on Top) which is compatible with Raspberry Pi B3 or Raspberry Pi Zero.
+With TTL/RS-485/PWM communication interface, power connector and GPIO pins, user is able to control mightyZAP on Raspberry Pie.
+API and Library can be downloaded from our web.
+
+
+## 5.6. Extension Wire  (IR-EW01~10)
 ![[ACC_IR-EW00.png]]
-산업현장에서 필요에 따라 사용할 수 있는 확장된 길이의 익스텐션 와이어입니다. 
+Optional extension wires for applications which need longer wire harness. 
 - IR-EW01 :Extension wire - 3pin TTL 1000mm
 - IR-EW02 :Extension wire - 3pin TTL 2000mm
 - IR-EW03 :Extension wire - 4pin RS-485 2000mm
@@ -827,23 +839,28 @@ Raspberry Pi B3 또는 Raspberry Pi Zero에 호환되는 HAT(Hardware Attached o
 - IR-EW08 :Extension wire - 3pin TTL 500mm
 - IR-EW09 :Extension wire - 4pin RS-485 500mm
 - IR-EW10 :Extension wire - 4pin RS-485 1000mm
-쉴드 처리가 되어 있지 않으므로 노이즈 환경이 많은 설비에서는, 별도의 쉴드 와이어를 사용하시기 바랍니다. 배선을 위한 커넥터와 커넥터 터미널은 당사에서 별도로 구매가 가능합니다.
+Above extension wires are NOT shielded wires. For the customer’s application having considerable electrical noise, please use shielded wires. Make shielded wires and we are selling optional Molex connector housings and terminals for it. 
 
-## 5.7. 로드앤드 팁 (IR-GT01) 
+
+## 5.7. Rod End Tips (IR-GT01) 
 ![[ACC_IR_GT01.png]]
-Rod-End Grip Tip은 mightyZAP의 rod end에 연질의 패드가 부착된 팁을 장착하여, 어플리케이션 대상체에 물리적인 손상을 주지 않도록 하는 제품입니다. 예를 들어, Flat grip tip에 고무/실리콘 패드를 부착하여, 상처나기 쉬운 물체를 밀거나 접촉하여 제어할 때, 또는 실리콘의 마찰력을 이용해서 물체를 잡거나 들어올릴 때 사용할 수 있습니다.
+The IR-GT01 Rod-End Grip tip is an accessory that prevents physical damage to the application object by attaching a grip tip with a soft pad onto the rod-end of mightyZAP.
+For example, by attaching a rubber/silicone pad to the flat grip tip, it can be used to push or touch an object that is easy to be scratched or damaged, or to hold or lift an object using the frictional force of the silicone. 
 
-
-> 추가적인 악세서리 정보는 당사 웹사이트의 악세서리 메뉴를 참고하시기 바랍니다. 
+> For more information for all available accessories, please visit our website – [www.mightyzap.com](http://www.mightyzap.com)
  
+# 6. Warranty Service
+## 6.1. Warranty & Service
+The warranty period of mightZAP is 1 year from the date of purchasing the goods. Please prepare some evidence showing the date of purchase and contact your product supplier or IR Robot. 
+Warranty service will not cover the malfunctions of product which are derived from customer's abuse, mistake, or carelessness (including normal wearing of gear train, tear of wire harness and motor burnt-out). Please kindly note that all service should be processed by designated engineers and voluntary disassembly or maintenance may void warranty.  
 
-# 6. 보증 및 수리
-## 6.1. 보증 및 수리
-마이티잽의 보증기간은 구매일로부터 1년입니다. 보증 수리를 받기 위해서는 제품 구매일을 증명할 수 있는 영수증 등을 지참하시어 구매처 또는 본사 고객만족실로 문의를 하여 주시기 바랍니다.  단, 정상적인 기어의 마모, 와이어 피복의 벗겨짐, 모터의 소손 등 사용자의 오용과 과실에 따르는 문제는 보증에서 제외됩니다. 또한, 임의 분해 및 임의 수리에 따르는 고장 또한 보증 대상에서 제외되오니, 모든 수리는 지정된 업체에 의해 진행되어야 함을 양지하여 주시기 바랍니다.  
+> IR Robot Customer Service Team : 
+> Tel : +82- 070-7600-9466 
+> Address : (ZIP 14502) 1303, Bucheon Techno Park 401, Pyeongcheon-Ro 655, Wonmi-Gu, Gyeonggi-Do, Korea. 
+> E-mail : cs@irrobot.com
 
+Thank you. 
 
-
-> (주) 아이알로봇 고객만족실 070-7600-9466 / 경기도 부천시 원미구 평천로 655 부천테크노파크 401동 1303호 /   이메일 :cs@irrobot.com
 
 
 
