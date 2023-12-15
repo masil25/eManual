@@ -109,12 +109,12 @@ Map.
 > Stall force는 참고용으로, 제품의 파손을 방지하기 위해 실제 application에서의 사용 시에는 정격 부하에 맞추어 사용하여 주십시오.
 
 ### 3.3 Goal Speed/Speed
-### Figure 2.
-#### Figure2-1 .Goal Speed /Speed<font color="#000000">[mm/s]</font> - at Goal current 800
-
-<font color="#ff0000">※</font> Data includes tolerance. / 해당 Data는 오차를 포함하고 있습니다.
-
-#### Figure2-2 .Goal Current / Stall Force <font color="#000000">[N]</font> - at Goal Speed 100
+Goal Current가 800일 때, Goal Speed Parameter 값의 변화에 따른 무 부하 속도 변화를 나타냅니다.
+정격 부하 이하의 경우, 부하 정도에 따라 최고 속도가 나오는 시간이 달라지게 됩니다.
+<이미지>
+### 3.4 Goal Current vs Stall Force
+### 3.5 Goal Current Vs Speed <font s
+정격 부하시 기준
 
 
 #### Figure2-3 .Goal Current / Speed<font color="#000000">[m/s]</font> –Rated Load basis / 정격 부하시 기준
