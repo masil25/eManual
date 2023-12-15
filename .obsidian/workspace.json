@@ -170,7 +170,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -193,8 +193,10 @@
   "active": "b02ba1a8741bd7af",
   "lastOpenFiles": [
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
-    "무제 파일.md",
+    "Actuator/Mini 12Lf/img/ACC_IR-STS02_en.png",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
+    "Actuator/Mini 12Lf/img/ACC_IR-EB01_en.png",
+    "무제 파일.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 12Lf/img/CircuitConnection_TTL_en.png",
@@ -209,9 +211,7 @@
     "Total Manager/img/reset_popup.png.crswap",
     "Total Manager/img/reset_popup.png",
     "Total Manager/img/reset_selcect.png",
-    "Total Manager/img/스크린샷 2023-07-26 10-41-58.png",
     "Total Manager/img/reset_popup",
-    "Actuator/Mini 12Lf/img/ACC_IR_GT01.png",
     "Protocl/IR Protocol.md",
     "BrokenRod.png.md",
     "StrokeLimit.png.md",

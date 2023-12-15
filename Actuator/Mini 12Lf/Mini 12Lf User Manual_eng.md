@@ -766,16 +766,17 @@ For example, if the Min Position Calibration value at Min Position 3.8mm of 12Lf
 
 
 28. Present Voltage
-	- 현재 입력 전압 값이며 단위는 0.1V입니다.  
-	- 예를 들어, 74이면 7.4V입니다.  
+	- Current input voltage. The unit is 0.1V
+	- For instance, 74 means 7.4V, 120 means 12V
+
 
 29. Moving
-	- 움직임 유무  
+	- Moving status
 
 |Value|Description|
 |---|---|
-|0|Motor 정지 상태|
-|1|Motor 가동 중|
+|0|Goal Position command execution is completed. (Motor stop)|
+|1|Goal Position command execution is under operation. (Motor moving)|
 
 
 '''## 4.2. 통신
@@ -784,8 +785,8 @@ For example, if the Min Position Calibration value at Min Position 3.8mm of 12Lf
 ''### 4.2.3. Data Map
 ''### 4.2.4. Data Description
 <font color="#ff0000">''### 4.2.5. Command 예제 Packet (삭제)</font>
-# 5. 별매 악세서리
-## 5.1. 메탈 브라켓 (IR-MB02/IR-MB03/IR-MB04) 
+# 5. Optional Accessories
+## 5.1. Metal Bracket (IR-MB02/IR-MB03/IR-MB04) 
 
 ![[ACC_IR-MB02.png]]
  - IR-MB02  
@@ -793,38 +794,44 @@ For example, if the Min Position Calibration value at Min Position 3.8mm of 12Lf
 - IR-MB03  
 ![[ACC_IR-MB04.png]]
 - IR-MB04  
-IR-MB02는 27mm 스트로크 제품 전용 가로 고정 브라켓입니다. 수직/전면 고정을 위해 IR-MB04를 사용하시기 바랍니다. 41/56/96mm 스트로크 제품은 케이스에 내부 장착된 마운팅 홀을 통해 취부가능하지만, 전용 IR-MB03을 통해 보다 유연한 설치가 가능합니다.  도면을 공개하고 있어, 고객사에서 직접 제작도 가능합니다.    
+IR-MB02 is the LATERAL mounting bracket for 27mm stroke lineup only and MB04 is the VERTICAL bracket for 27mm stroke mightyZAP. 
+For 41~90mm stroke lineup, they can be mounted via built-in mounting holes on the case. Or, if you wish more flexible mounting, you can use IR-MB03 for 40~90mm stroke versions. The drawing is open at our website, so you may make this bracket at their end. 
+
 ## 5.2. PC USB Interface (IR-USB02)
 ![[ACC_IR-USB02.png]]
-IR-USB02을 사용하면 PC를 통하여 아래와 같은 제어를 할 수 있습니다.   
-전용 PC 소프트웨어 mightyZAP Manager가 제공됩니다.  
+USB Interface between mightyZAP and user’s PC.  Through PC software, mightyZAP manager, user is able to control below. 
 ![[mightyZAPManager.png]]
-- 운용 파라메터 및 저장 메모리 셋팅
-- 모션 테스트
-- 전압, 온도, 현재 위치, 전류, 전압, 모터 가동률 모니터링
-- 시스템 초기화 및 펌웨어 업데이트
+- Parameter and Memory setting
+- Motion test
+- Voltage, temperature, present position, force monitoring
+- System initialization and Firmware update
 
-## 5.3. 엔드베어링 (IR-EB01)
-![[ACC_IR-EB01.png]]
-브라켓을 통한 고정이 아닌, 로드엔드와힌지부에 베어링을 장착하여 최적의 설치 및 운용이 가능하도록 합니다. M2.5와 M3규격의 엔드베어링 1셋트를 구성합니다.  
 
-## 5.4. 아두이노 기반 EZ Controlller (IR-CT01)
+## 5.3. End-Bearing  (IR-EB01)
+![[ACC_IR-EB01_en.png]]
+Mount mightyZAP on applications using this end bearings for most optimal installation. Put it on the rod end(M3) and on the end of servo case(M2.5). Two end bearings (M3 & M2.5) to be packed in a set. 
+
+## 5.4. EZ Controller (IR-CT01)
 ![[ACC_IR-CT01.png]]
-제어기가 없는 고객사를 위한 mightyZAP전용 컨트롤러/테스터
-간단한 조작의 아두이노 기반 컨트롤러
-기본 제어 프로그램 내장, 사용자 프로그래밍 가능 (아두이노 예제 제공)
-위치 지정 다이얼, 위치명령 버튼스위치, 위치명령 슬라이드 내장
-외부 스위치 또는 전압레벨 신호를 통한 제어 가능
-아날로그/디지털 센서 연결을 위한 별도 3개씩의 I/O 핀 제공
-블루투스 또는 지그비(Zigbee) 통신을 위한 외부통신 단자
+- mightyZAP controller/tester for customers who do not have their own controller
+- Arduino based simple operation
+- Built-in basic control program, User programmable (Arduino example provided)
+- Built-in position setting dials, position command button switches and position command slide
+- Controllable through external switch or voltage level signal
+- 6 x I/O pins for analog/digital sensor connection
+- External communication terminal for Bluetooth or Zigbee communication
 
-## 5.5. 라즈베리파이 HAT (IR-STS02)
-![[ACC_IR-STS02.png]]
-Raspberry Pi B3 또는 Raspberry Pi Zero에 호환되는 HAT(Hardware Attached on Top) 보드입니다. mightyZAP Raspberry Pi HAT 제품은 40 GPIO 핀을 통해서 라즈베리파이의 위에 바로 결합할 수 있는 제품입니다. TTL, RS-485, PWM 통신 인터페이스와 GPIO핀을 내장하고 있어 Raspberry Pi를 통한 mightyZAP 제어가 가능합니다. 
 
-## 5.6. 별매 익스텐션 와이어 (IR-EW01~10)
+## 5.5. Raspberry Pi HAT (IR-STS02) 
+![[ACC_IR-STS02_en.png]]
+IR-STS02 is a Raspberry Pi HAT(Hardware Attached on Top) which is compatible with Raspberry Pi B3 or Raspberry Pi Zero.
+With TTL/RS-485/PWM communication interface, power connector and GPIO pins, user is able to control mightyZAP on Raspberry Pie.
+API and Library can be downloaded from our web.
+
+
+## 5.6. Extension Wire  (IR-EW01~10)
 ![[ACC_IR-EW00.png]]
-산업현장에서 필요에 따라 사용할 수 있는 확장된 길이의 익스텐션 와이어입니다. 
+Optional extension wires for applications which need longer wire harness. 
 - IR-EW01 :Extension wire - 3pin TTL 1000mm
 - IR-EW02 :Extension wire - 3pin TTL 2000mm
 - IR-EW03 :Extension wire - 4pin RS-485 2000mm
@@ -832,23 +839,31 @@ Raspberry Pi B3 또는 Raspberry Pi Zero에 호환되는 HAT(Hardware Attached o
 - IR-EW08 :Extension wire - 3pin TTL 500mm
 - IR-EW09 :Extension wire - 4pin RS-485 500mm
 - IR-EW10 :Extension wire - 4pin RS-485 1000mm
-쉴드 처리가 되어 있지 않으므로 노이즈 환경이 많은 설비에서는, 별도의 쉴드 와이어를 사용하시기 바랍니다. 배선을 위한 커넥터와 커넥터 터미널은 당사에서 별도로 구매가 가능합니다.
+Above extension wires are NOT shielded wires. For the customer’s application having considerable electrical noise, please use shielded wires. Make shielded wires and we are selling optional Molex connector housings and terminals for it. 
 
-## 5.7. 로드앤드 팁 (IR-GT01) 
+
+## 5.7. Rod End Tips (IR-GT01) 
 ![[ACC_IR_GT01.png]]
-Rod-End Grip Tip은 mightyZAP의 rod end에 연질의 패드가 부착된 팁을 장착하여, 어플리케이션 대상체에 물리적인 손상을 주지 않도록 하는 제품입니다. 예를 들어, Flat grip tip에 고무/실리콘 패드를 부착하여, 상처나기 쉬운 물체를 밀거나 접촉하여 제어할 때, 또는 실리콘의 마찰력을 이용해서 물체를 잡거나 들어올릴 때 사용할 수 있습니다.
+The IR-GT01 Rod-End Grip tip is an accessory that prevents physical damage to the application object by attaching a grip tip with a soft pad onto the rod-end of mightyZAP.
+For example, by attaching a rubber/silicone pad to the flat grip tip, it can be used to push or touch an object that is easy to be scratched or damaged, or to hold or lift an object using the frictional force of the silicone. 
 
-
-> 추가적인 악세서리 정보는 당사 웹사이트의 악세서리 메뉴를 참고하시기 바랍니다. 
+> For more information for all available accessories, please visit our website – [www.mightyzap.com](http://www.mightyzap.com)
  
+# 6. Warranty Service
+## 6.1. Warranty & Service
+The warranty period of mightZAP is 1 year from the date of purchasing the goods. Please prepare some evidence showing the date of purchase and contact your product supplier or IR Robot. 
+Warranty service will not cover the malfunctions of product which are derived from customer's abuse, mistake, or carelessness (including normal wearing of gear train, tear of wire harness and motor burnt-out). Please kindly note that all service should be processed by designated engineers and voluntary disassembly or maintenance may void warranty.  
 
-# 6. 보증 및 수리
-## 6.1. 보증 및 수리
-마이티잽의 보증기간은 구매일로부터 1년입니다. 보증 수리를 받기 위해서는 제품 구매일을 증명할 수 있는 영수증 등을 지참하시어 구매처 또는 본사 고객만족실로 문의를 하여 주시기 바랍니다.  단, 정상적인 기어의 마모, 와이어 피복의 벗겨짐, 모터의 소손 등 사용자의 오용과 과실에 따르는 문제는 보증에서 제외됩니다. 또한, 임의 분해 및 임의 수리에 따르는 고장 또한 보증 대상에서 제외되오니, 모든 수리는 지정된 업체에 의해 진행되어야 함을 양지하여 주시기 바랍니다.  
 
 
 
-> (주) 아이알로봇 고객만족실 070-7600-9466 / 경기도 부천시 원미구 평천로 655 부천테크노파크 401동 1303호 /   이메일 :cs@irrobot.com
+> IR Robot Customer Service Team : 
+> Tel : +82- 070-7600-9466 
+Address : (ZIP 14502) 1303, Bucheon Techno Park 401, Pyeongcheon-Ro 655, Wonmi-Gu, Gyeonggi-Do, Korea. 
+E-mail : cs@irrobot.com
+
+Thank you. 
+
 
 
 
