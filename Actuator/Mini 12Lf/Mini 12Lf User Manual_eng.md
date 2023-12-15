@@ -854,13 +854,10 @@ For example, by attaching a rubber/silicone pad to the flat grip tip, it can be 
 The warranty period of mightZAP is 1 year from the date of purchasing the goods. Please prepare some evidence showing the date of purchase and contact your product supplier or IR Robot. 
 Warranty service will not cover the malfunctions of product which are derived from customer's abuse, mistake, or carelessness (including normal wearing of gear train, tear of wire harness and motor burnt-out). Please kindly note that all service should be processed by designated engineers and voluntary disassembly or maintenance may void warranty.  
 
-
-
-
 > IR Robot Customer Service Team : 
 > Tel : +82- 070-7600-9466 
-Address : (ZIP 14502) 1303, Bucheon Techno Park 401, Pyeongcheon-Ro 655, Wonmi-Gu, Gyeonggi-Do, Korea. 
-E-mail : cs@irrobot.com
+> Address : (ZIP 14502) 1303, Bucheon Techno Park 401, Pyeongcheon-Ro 655, Wonmi-Gu, Gyeonggi-Do, Korea. 
+> E-mail : cs@irrobot.com
 
 Thank you. 
 
