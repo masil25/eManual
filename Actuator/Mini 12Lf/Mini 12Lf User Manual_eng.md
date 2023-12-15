@@ -182,26 +182,27 @@ Please refer to detailed dimension from 3D drawing at our website. (www.mightyza
 ## 2.3. Specification
 ### 2.3.1. 12Lf Series Specifications
 
-|Rated Load|Stroke	|Communication(RS-485)|Communication(TTL/PWM)|Rated Load/<br>Max Speed(No Load)|Stall Force at Current<br>(1.6A/800mA/100mA)|Mechanical  <br>Self Lock  <br>(Z Axis Use) | 리드스크류 / 기어비 / 기어타입|
+|Rated Load|Stroke	|Communication(RS-485)|Communication(TTL/PWM)|Rated Load/<br>Max Speed(No Load)|Stall Force at Current<br>(1.6A/800mA/100mA)|Mechanical  <br>Self Lock  <br>(Z Axis Use) | Lead Screw / Gear Ratio / Gear Type|
 |---|---|---|---|---|---|---|---|
-|10N|40mm|12Lf-10F-40|12Lf-10PT-40|10N / 110mm/s|60N / 40N / 10N|없음  <br>(Z축 적용주의)|리드각 20°  <br>/ 10:1  <br> / Engineering  <br>Plastic Gears|
+|10N|40mm|12Lf-10F-40|12Lf-10PT-40|10N / 110mm/s|60N / 40N / 10N|No (Pay attention to application)|Lead Angle 20°  <br>/ 10:1  <br> / Engineering  <br>Plastic Gears|
 |^|53mm|12Lf-10F-53|12Lf-10PT-53|^|^|^|^|
 |^|90mm|12Lf-10F-90|12Lf-10PT-90|^|^|^|^|
 |12N|27mm|12Lf-12F-27|12Lf-12PT-27|12N / 110mm/s|100N / 60N / 8N|^|^|
-|17N|40mm|12Lf-17F-40|12Lf-17PT-40|17N / 80mm/s|100N / 60N / 8N|^|리드각 15°  <br>/ 10:1  <br> / Engineering  <br>Plastic Gears|
+|17N|40mm|12Lf-17F-40|12Lf-17PT-40|17N / 80mm/s|100N / 60N / 8N|^|Lead Angle 15°  <br>/ 10:1  <br> / Engineering  <br>Plastic Gears|
 |^|53mm|12Lf-17F-53|12Lf-17PT-53|^|^|^|^|
 |^|90mm|12Lf-17F-90|12Lf-17PT-90|^|^|^|^|
 |20N|27mm|12Lf-20F-27|12Lf-20PT-27|20N / 80mm/s|120N / 72N / 9.6N|^|^|
-|27N|40mm|12Lf-27F-40|12Lf-27PT-40|27N / 28mm/s|160N / 96N / 12.8N|있음  <br>(Z축 적용가능)|리드각 5°  <br>/ 10:1  <br> / Engineering  <br>Plastic Gears|
+|27N|40mm|12Lf-27F-40|12Lf-27PT-40|27N / 28mm/s|160N / 96N / 12.8N|Yes (Applicable)|Lead Angle 5°  <br>/ 10:1  <br> / Engineering  <br>Plastic Gears|
 |^|53mm|12Lf-27F-53|12Lf-27PT-53|^|^|^|^|
 |^|90mm|12Lf-27F-90|12Lf-27PT-90|^|^|^|^|
 |35N|27mm|12Lf-35F-27|12Lf-35PT-27|35N / 28mm/s|210N / 126N / 16.8N|^|^|
-|42N|40mm|12Lf-42F-40|12Lf-42PT-40|42N / 15mm/s|240N / 144N / 19.2N|^|리드각 5°  <br>/ 20:1  <br> / Metal Gear|
+|42N|40mm|12Lf-42F-40|12Lf-42PT-40|42N / 15mm/s|240N / 144N / 19.2N|^|Lead Angle 5°  <br>/ 20:1  <br> / Metal Gear|
 |^|53mm|12Lf-42F-53|12Lf-42PT-53|^|^|^|^|
 |55N|27mm|12Lf-55F-27|12Lf-55PT-27|55N / 15mm/s|300N / 180N / 24N|^|^|
-|78N|40mm|12Lf-78F-40|12Lf-78PT-40|78N / 7.7mm/s|420N / 252N / 33.6N|^|리드각 5°  <br>/ 50:1  <br> / Metal Gears|
+|78N|40mm|12Lf-78F-40|12Lf-78PT-40|78N / 7.7mm/s|420N / 252N / 33.6N|^|Lead Angle 5°  <br>/ 50:1  <br> / Metal Gears|
 |^|53mm|12Lf-78F-53|12Lf-78PT-53|^|^|^|^|
 |100N|27mm|12Lf-100F-27|12Lf-100PT-27|100N / 7.7mm/s|600N / 360N / 48N|^|^|
+
 
 
 ### 2.3.2. 12Lf Series Common Specifications	
@@ -459,7 +460,7 @@ After receiving Command Packet at multiple qty of mightZAPs, the servo whose ID 
 
 <font color="#ff0000">**Applied from firmware ver.2.0 or higher </font>  
 
-#### 4.2.2.2 MODBUS RTU (이 부분만 모드버스 매뉴얼에서)    
+#### 4.2.2.2 MODBUS RTU
 ##### 4.2.2.2.1 Data Memory Map    
 - Multi write function is not supported. 
 - All data will be reset to default value when Reset command is executed. 
@@ -600,7 +601,7 @@ In case of Overload Error, the alarm is not cleared even after overload conditio
 > non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.  
 
 
-<font color="#ff0000">11. Alarm Shutdown (Default : 33) ★국문이랑 내용다름★</font> 
+11. Alarm Shutdown (Default : 33)
     Force will be OFF if concerned bit is set as "1" when error occurs. (1 : activate, 0: deactivate)
 
 |Error|bit|

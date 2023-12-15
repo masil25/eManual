@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 284.5
   },
   "right": {
     "id": "7ccabca408164915",
@@ -110,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -127,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md"
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md"
               }
             }
           },
@@ -171,11 +170,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 534.5
+    "width": 371.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -191,14 +190,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8326d637edc67dcf",
+  "active": "b02ba1a8741bd7af",
   "lastOpenFiles": [
+    "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+    "무제 파일.md",
+    "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Total Manager/Total Manager User Manual_kor.md",
-    "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
-    "무제 파일.md",
     "Actuator/Mini 12Lf/img/CircuitConnection_TTL_en.png",
-    "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Technical/Motor의 특성도 이해.md",
     "conflict-files-obsidian-git.md",
     "Actuator/Mini 12Lf/img/Broken_Rod_en.png",
