@@ -113,13 +113,9 @@ Goal Current가 800일 때, Goal Speed Parameter 값의 변화에 따른 무 부
 정격 부하 이하의 경우, 부하 정도에 따라 최고 속도가 나오는 시간이 달라지게 됩니다.
 <이미지>
 ### 3.4 Goal Current vs Stall Force
-### 3.5 Goal Current Vs Speed <font s
-정격 부하시 기준
+### 3.5 Goal Current Vs Speed <font size ="3">정격 부하 시 기준</font>
 
-
-#### Figure2-3 .Goal Current / Speed<font color="#000000">[m/s]</font> –Rated Load basis / 정격 부하시 기준
-
-### Figure 3. PIN Map
+### Figure 3. PIN Map 은 위로 옮기기
 
 | PIN NUMBER(COLOR) | PIN NAME&nbsp; | <div>FUNCTION</div> |
 |:------------------:|:---------------:|:--------------------:|
@@ -128,6 +124,6 @@ Goal Current가 800일 때, Goal Speed Parameter 값의 변화에 따른 무 부
 |      3(RED)&nbsp; | VCC&nbsp;      | Power +             |
 |    4(BLACK)&nbsp; | GND            | Power -             |  
 
-
-### Figure 4. Dimension
+## 4. 도면 
+mm / inch
 
