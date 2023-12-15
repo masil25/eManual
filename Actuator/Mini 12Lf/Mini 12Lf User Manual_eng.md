@@ -701,65 +701,69 @@ For example, if the Min Position Calibration value at Min Position 3.8mm of 12Lf
 > It is a non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.
 
 
-#### 4.2.3.2. 휘발성 메모리 영역    
+#### 4.2.3.2. Volatile Memory  
 20. Force ON/OFF (Default : 1 / Force ON)
-    - 기동력 활성화 여부 설정 ( 0일 때 OFF, 1일 때 ON)  
+    - Setting for Force On and OFF ( 0 :  OFF, 1 :  ON)  
     
-|value|동작상태|
+|value|Description|
 |---|---|
-|0|모터의 전원을 차단하여서 기동력이 발생 되지 않도록 합니다.|
-|1|모터의 전원을 인가하여서 기동력이 발생하도록 합니다.|
+|0|Cut off power to the motor and Force is OFF. |
+|1|Power to be supplied to the motor and Force is ON.|
 > <font color="#245bdb">> **TIP**</font>
-> <font color="#245bdb">> 당사 리니어 서보는 모터의 전원이 해제되어도 기구적인 설계 특성상 위치를 고수하려는 특성이 있습니다. 27N이상 정격부하 Spec의 제품은 전원 차단 시에도 기구적인 마찰력으로 위치를 고수합니다. 따라서, 설비에서 서보 모터가 특정 위치를 지속적으로 고수하고 있어야 하는 경우 Force Off 명령으로 모터 전원을 차단하여 모터의 수명을 연장시킬 수 있습니다. 이 경우 통신은 여전히 유지되며, 모터의 전원만 차단됩니다. 다시 위치 이동 명령을 내리게 되면 자동으로 Force ON되어 다음 명령을 수행하게 됩니다.</font>
+> <font color="#245bdb">> migtyZAP keeps its position due to mechanical design even after motor power is off.  For instance, mightyZAP having more than 27N rated load, rod sticks to its position firmly when motor power is off. So, in case servo motor needs to keep certain position (if mechanical frictional force is able to keep its position under power off condition against your load), apply FORCE OFF parameter. In this case, communication line is still alive and only motor power can be off which helps longer lifespan of the servo. Upon new positional command, servo will be FORCE on and do its next movement. </font>
 
 21. LED
-	- Error 표시가 되지 않을 때 사용자가 임의로 LED 제어하여 디스플레이 효과를 낼 수 있음.   (LED에러표시가 우선) 
+	- Control LED when there is no Error indication. 
 
-|bit|동작상태|
+|bit|Description|
 |---|---|
-|0|LED Disable (1일 때 모두 꺼짐)|
-|1|RED LED 제어|
-|2|GREEN LED 제어|
+|0|LED Disable ( All LEDs will be Off when it is 1)|
+|1|RED LED Control|
+|2|GREEN LED Control|
 
 22. Goal Position (0~4095)
-	- 목표 위치의 값. 이동 시키고자 하는 위치 값입니다. 목표위치 값은 Short/Long stroke limit 설정치에 영향을 받습니다. (즉, stroke limit 범위 밖으로는 위치 명령을 내려도 stroke limit위치까지만 움직임)  
-	- 27mm stroke제품의 경우, Long stroke limit설정으로 인해 27mm에서의 Goal position 값은 3686입니다. 원할 경우 30mm(4095)로 늘려 사용할 수 있습니다.   
+	- Goal position value which is desired position value to move. The goal position value will be affected by both short/long stroke limit. (i.e. move only to the stroke limit position even if the position command is out of the stroke limit range) 
+	- For the 27mm stroke product, the goal position value at 27mm is 3686 due to the long stroke limit setting. It can be extended to 30mm (4095) if desired.
+
 
 23. Goal Speed (0~1023 / Default : 1023)
-	- 모터의 평균 이동속도 목표값(0~1023). 액츄에이터의 동작 중 속도변경을 원하는 경우 사용합니다.   
-	- 초기 전원 인가시 비휘발성 Speed Limit에서 값을 불러와 Goal Speed에 저장합니다.  
-	- Speed Limit 명령보다 빠르게 반응하며, 가동 중 실시간으로 속도를 변경하는 데 사용할 수 있습니다.  
-	- 0일 때 기동력 OFF 상태이고 1023일 때 최대 속도를 냅니다.  
-	- Goal Speed를 변경해도 Force에 영향을 주지 않습니다.  
-	- 다만, 너무 낮은 값을 설정 시 모터의 반응이 늦어지거나 움직이지 못할 수 있습니다.   
+	- Goal speed is the average moving speed value of motor (0 ~ 1023) and it is volatile memory parameter.
+	- When the servo motor power is applied or the Restart command is applied, the value of Speed Limit, which is a non-volatile parameter, is copied to Goal Speed.
+	- It reacts faster than the Speed Limit command and can be used to change the speed in real time during operation.
+	- When it is 0, the maneuverability is OFF and when it is 1023, it gives the maximum speed.
+	- Changing the Goal Speed does not affect the force.
+	- However, if the GoalSpeed setting is too low, the motor response may be slowed down or it may not be able to move.
+
 
 24. Goal Current (0~1600 / Default : 800)
-	- 모터의 최대 전류 제한 값입니다(0~1600). 즉, 모터의 최대힘인 stall 전류를 제어하여 stall force를 조정합니다.  
-	- 기능적으로는 비휘발성 파라메터인 Current Limit과 동일하지만, 동작중의 빈번한 전류설정 변경은, 응답이 빠른 휘발성 파라메터인 Goal Current 명령을 사용하시기 바랍니다.   
-	- 제어값은 0~1600으로 설정하며, 제어값 1600은 최대 stall 전류값 1600mA를 나타냅니다. (오차범위 :+/-15%)  
-	- 공장 출하시에는 800(mA)으로 셋팅되어 유사시 불필요한 최대 stall 전류사용을 방지하되, 최대속도를 보장합니다.   
-	- Stall force에 가깝게 Goal Current를 설정할수록 과부하 상황에서 모터가 낼 수 있는 최대 force도 올라가지만, 모터 수명단축의 원인이 될 수도 있습니다.  
-	- 메모리에 저장되는 비휘발성 파라메터인 Current Limit 값은 초기설정에서만 설정하시기를 권장하며, 동작 중 빈번한 전류 변경은 휘발성 파라메터인 Goal Current명령을 사용하시기를 추천드립니다.                    
-	- 비휘발성 Current Limit 값을 변경할 경우, 전원재인가시 휘발성 파라메터인 Goal Current 도 같이 변경됩니다.  
-	- 제품마다의 내부 기구저항 편차에 따라 저전류(200mA이하) 설정에서는 액츄에이터의 동작이 불규칙하거나 움직이지 않을 수도 있으니, 가급적 200mA이상의 전류설정을 해 주시기 바랍니다.   
-	- 전류설정에 따른 stall force값의 차이는 데이터 시트의 그래프를 참고하여 주십시오.   
+	- It is the maximum current limit value of the motor (0~1600). In other words, the stall force is adjusted by controlling the stall current limit. (Stall force : maximum power of the motor.)
+	- Goal Current is functionally same as Current Limit which is a non-volatile parameter, but for frequent current setting changes during operation, use the Goal Current command, a volatile parameter for faster response and preventing communication failure.
+	- The control value is set from 0 to 1600, and the control value of 1600 represents the maximum stall current - 1600mA. (Error range :+/-15%)
+	- The default set value is 800 (mA) from the factory to prevent unnecessary use of the maximum stall current in case of emergency, but guarantees the maximum speed at the rated load.
+	- As the Goal Current is set closer to the stall force current, the maximum force that the motor can produce in an overload situation increases, but it may cause a shortening of motor lifespan.
+	- When the non-volatile “Current Limit” value is changed, note that the volatile parameter “Goal Current” is also changed when power is reapplied. 
+	- Actuator operation may be irregular or may not move in the low current setting (less than 200mA) depending on the deviation of internal mechanical resistance of each product. So, please set the current to higher than 200mA for proper performance.
+	- For the difference in stall force value according to the current setting, refer to the related graph in the data sheet.
+
 
 25. Present Position [0~4095]
-	- 현재 Stroke 위치 값을 나타냅니다.  
-	- 0~4095의 범위로 표시되며 모터가 정지한 후에도 margin 값 이내의 미세한 위치 변동이 나타날 수 있으며 이는 정상동작입니다.  
+	- Current Position value.
+	- Range is between 0~4095, and even after the motor is stopped, the minute position change within the margin value can be made, and this is a normal operation.
+
 
 26. Present Motor Operating Rate [0~2047]
-	- Motor의 현재 가동률의 값 입니다.   
-	- Goal current와 Goal speed, 가감속 조정등에 따라 달리 표시됩니다.   
-	- 0~2047의 범위로 표시 됩니다.  
-	- 0은 모터가 정지한 상태를 나타냅니다.  
-	- 1~1023 범위의 값은 Short Stroke(수축) 방향으로의 모터 가동률 상태이고,  
-	- 1024~2047 범위의 값은 Long Stroke(확장) 방향으로의 모터 가동률 상태입니다.  
+	- Current Motor operating rate value. It can be affected by Goal current, Goal speed, Acceleration/ Deceleration adjustment. 
+	- To be shown in the range of 0~2047
+	- Value 0 indicates the motor is stopped.
+	- Between1~1023: Motor operating rate on short stoke direction (retract direction). 
+	- Between 1024~2047: Motor operating rate on long stoke direction (extend direction). 
+
 
 27. Present Current [0~1600]
-	- Motor의 현재 전류 사용 값 입니다.  
-	- 0~1600의 범위로 표시 됩니다.  
-	- 전류 값은 실제 전류값의 오차를 포함한 값으로, 참고 용도로 사용하시기 바랍니다.  
+	- Present motor Current value.
+	- To be displayed in the range of 0 ~ 1600.
+	- The value includes the error(+/-15%) of the actual current value. Please use it just for reference.
+
 
 28. Present Voltage
 	- 현재 입력 전압 값이며 단위는 0.1V입니다.  
