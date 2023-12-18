@@ -10,7 +10,11 @@
     "name": "Mini 12Lf",
     "value": "Mini 12Lf",
     "manualURL": "/Actuator/Mini%2012Lf/Mini%2012Lf%20User%20Manual",
-    "imageURL": "/Actuator/Mini%2012Lf"
+    "imageURL": "/Actuator/Mini%2012Lf",
+    "protocl":[
+      IR Protocol,
+      Modbus RTU    
+    ]
   },
   {
     "name": "Mini 17Lf",
