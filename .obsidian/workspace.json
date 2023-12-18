@@ -301,13 +301,14 @@
   },
   "active": "9196ba916f9143e0",
   "lastOpenFiles": [
-    "Protocl/Modbus RTU.md",
+    "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+    "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+    "17Lf-xxF-27-Sevo Series[inch]_Rev01_20231113.pdf",
+    "Protocl/Modbus RTU.md",
     "Pasted image 20231218093723.png",
     "Pasted image 20231218093652.png",
     "Total Manager/Total Manager User Manual_kor.md",
-    "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
-    "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "conflict-files-obsidian-git.md",
     "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
     "무제 파일.md",
@@ -346,7 +347,6 @@
     "Actuator/Mini 12Ls/img",
     "Actuator/Mini 12Ls",
     "Library",
-    "Boards",
     "무제 파일 1.canvas"
   ]
 }
