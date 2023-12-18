@@ -620,15 +620,11 @@ mightyZAP의 보증 기간은 구매 일부터 1년입니다. 보증 수리를 �
 - 라즈베리파이 HAT (IR-STS02)
 - 별매 익스텐션 와이어 (IR-EW01~10)
 ## 4.2 인증
-# 4.3 커넥터 자료
+## 4.3 커넥터 자료
+- Pi 배열
 - 통신 회로
-- 핀배역
+## 4.4 도면
 - 도면
--[[27mm 코어레스버전(FC버전)-inch.pdf]]
-[file](./Docu/27mm 코어레스버전(FC버전)-mm-inch.dxf)
--
-가생이 가장자리
-[test](https://drive.google.com/drive/folders/1JxnCtdwqvnIPVMGZCR-Yybqf1Ce3Df5I)
 
 
 ![[FactoryRest-Syq.png]]
