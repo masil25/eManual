@@ -613,7 +613,7 @@ mightyZAP의 보증 기간은 구매 일부터 1년입니다. 보증 수리를 �
 ### 4.1.1 악세사리
 ![[Pasted image 20231218093652.png|700]]    
 ### 4.1.2 별매 악세사리
-- 메찰 브라켓
+- 메탈 브라켓
 - PC USB Interface
 - 엔드베어링 (IR-EB01)
 - 아두이노 기반 EZ Controller (IR-CT01)
