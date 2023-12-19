@@ -11,6 +11,7 @@
     "value": "Mini 12Lf",
     "manualURL": "/Actuator/Mini%2012Lf/Mini%2012Lf%20User%20Manual",
     "imageURL": "/Actuator/Mini%2012Lf",
+    "document" :["Protocol","Datasheet","Drawing"],
     "Protocol" : ["IR Protocol","Modbus RTU"]
   },
   {
@@ -18,6 +19,7 @@
     "value": "Mini 17Lf",
     "manualURL": "/Actuator/Mini%2017Lf/Mini%2017Lf%20User%20Manual",
     "imageURL": "Actuator/Mini%2017Lf",
+    "document" :["Modbus RTU","Datasheet","Drawing"],
     "Protocol" : ["Modbus RTU"]
   },
   {
