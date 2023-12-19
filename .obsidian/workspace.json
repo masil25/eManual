@@ -230,6 +230,18 @@
             }
           },
           {
+            "id": "9484a24b89573233",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Actuator/Mini 17Lf/MachineDrawing/Mini 17Lf 2D Drawing.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "3f4f113d018fa78b",
             "type": "leaf",
             "state": {
@@ -254,7 +266,7 @@
             }
           }
         ],
-        "currentTab": 19
+        "currentTab": 20
       }
     ],
     "direction": "vertical"
@@ -320,7 +332,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "file": "Actuator/Mini 17Lf/MachineDrawing/Mini 17Lf 2D Drawing.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -337,7 +349,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "file": "Actuator/Mini 17Lf/MachineDrawing/Mini 17Lf 2D Drawing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -360,7 +372,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md"
+                "file": "Actuator/Mini 17Lf/MachineDrawing/Mini 17Lf 2D Drawing.md"
               }
             }
           },
@@ -402,8 +414,10 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "475606b51e0e2f3a",
+  "active": "3c8f0a42222ab22e",
   "lastOpenFiles": [
+    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+    "Actuator/Mini 17Lf/MachineDrawing/Mini 17Lf 2D Drawing.md",
     "Actuator/Mini 17Lf/img/27mm Machine Drwing.png",
     "Actuator/Mini 17Lf/img/87mm Machine Drwing.png",
     "Actuator/Mini 17Lf/img/50mm Machine Drwing.png",
@@ -412,7 +426,6 @@
     "Actuator/Mini 17Lf/img/AsbbleRodEndtip.png",
     "Actuator/Mini 17Lf/MachineDrawing/17Lf-xxF-27-Sevo Series[inch]_Rev01_20231113.pdf",
     "Actuator/Mini 17Lf/Drawing/Accessories.md",
-    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/MachineDrawing/17Lf-xxF-87-Sevo Series[mm]_Rev01_20231113.pdf",
     "Actuator/Mini 17Lf/MachineDrawing/17Lf-xxF-87-Sevo Series[inch]_Rev01_20231113.pdf",
     "Actuator/Mini 17Lf/MachineDrawing/17Lf-xxF-50-Sevo Series[mm]_Rev01_20231113.pdf",
@@ -428,14 +441,13 @@
     "Actuator/Mini 17Lf/img/socket head m3.0x8.png",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
-    "Protocl/Modbus RTU.md",
+    "Total Manager/img/Protocl/Modbus RTU.md",
     "Total Manager/Total Manager User Manual_kor.md",
     "conflict-files-obsidian-git.md",
     "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
-    "무제 파일.md",
     "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
     "Technical/Motor의 특성도 이해.md",
-    "Protocl/IR Protocol.md",
+    "Total Manager/img/Protocl/IR Protocol.md",
     "BrokenRod.png.md",
     "StrokeLimit.png.md",
     "Pasted image 20231117110531.png.md",

@@ -1,0 +1,1 @@
+![[17Lf-xxF-27-Sevo Series[inch]_Rev01_20231113.pdf]]![[17Lf-xxF-27-Sevo Series[mm]_Rev01_20231113.pdf]]
