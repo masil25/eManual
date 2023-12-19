@@ -133,7 +133,7 @@
             "state": {
               "type": "image",
               "state": {
-                "file": "Total Manager/img/17Lf Accessories.png"
+                "file": "Actuator/Mini 17Lf/img/17Lf Accessories.png"
               }
             }
           },
@@ -143,7 +143,87 @@
             "state": {
               "type": "image",
               "state": {
-                "file": "Total Manager/img/17Lf Rendering.png"
+                "file": "Actuator/Mini 17Lf/img/17Lf Rendering.png"
+              }
+            }
+          },
+          {
+            "id": "ebe4cfeb3f93bd1d",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Actuator/Mini 17Lf/img/Hinge Base.png"
+              }
+            }
+          },
+          {
+            "id": "44ecf17ec841c331",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Actuator/Mini 17Lf/img/Hinge Shaft.png"
+              }
+            }
+          },
+          {
+            "id": "fb73f2bdd786b260",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Actuator/Mini 17Lf/img/HingeBase.png"
+              }
+            }
+          },
+          {
+            "id": "0787e23447cb01cb",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Actuator/Mini 17Lf/img/M3 Nut.png"
+              }
+            }
+          },
+          {
+            "id": "b4f982d6fe9b2a9f",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Actuator/Mini 17Lf/img/Rod End Tip.png"
+              }
+            }
+          },
+          {
+            "id": "3e1d6921555235e2",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Actuator/Mini 17Lf/img/socket head m3.0x8.png"
+              }
+            }
+          },
+          {
+            "id": "e69514ff3f7853f0",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Actuator/Mini 17Lf/img/17Lf Accessories.png"
+              }
+            }
+          },
+          {
+            "id": "475606b51e0e2f3a",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md"
               }
             }
           },
@@ -172,7 +252,7 @@
             }
           }
         ],
-        "currentTab": 11
+        "currentTab": 19
       }
     ],
     "direction": "vertical"
@@ -222,7 +302,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 564.5
+    "width": 373.5
   },
   "right": {
     "id": "7ccabca408164915",
@@ -238,7 +318,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Total Manager/img/17Lf Rendering.png",
+                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -255,7 +335,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Total Manager/img/17Lf Rendering.png",
+                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -278,7 +358,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Total Manager/img/17Lf Rendering.png"
+                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md"
               }
             }
           },
@@ -320,22 +400,23 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "c2c34628961494cf",
+  "active": "475606b51e0e2f3a",
   "lastOpenFiles": [
-    "Total Manager/img/17Lf Accessories.png",
-    "Total Manager/img/Hinge Base.png",
-    "Total Manager/img/Hinge Shaft.png",
-    "Total Manager/img/M3 Nut.png",
-    "Total Manager/img/Rod End Tip.png",
-    "Total Manager/img/socket head m3.0x8.png",
-    "Total Manager/img/Wire_RS485.png",
-    "Total Manager/img/HingeBase.png",
-    "Total Manager/img/17Lf Rendering.png",
-    "Pasted image 20231218093652.png",
-    "Pasted image 20231218093723.png",
-    "Actuator/Mini 17Lf/img/Drawing 2023-12-19 10.25.28.excalidraw.md",
-    "17Lf-xxF-27-Sevo Series[inch]_Rev01_20231113.pdf",
+    "Pasted Image 20231219103642_487.png",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+    "Actuator/Mini 17Lf/Drawing/Accessories.md",
+    "Total Manager/img/yrdy-2023-07-25_10.39.gif",
+    "Actuator/Mini 17Lf/Drawing",
+    "Total Manager/img/tooltip.png",
+    "Total Manager/img/to.png",
+    "Actuator/Mini 17Lf/img/socket head m3.0x8.png",
+    "Total Manager/img/Slide_volatile_desc.png",
+    "Total Manager/img/Slide.png",
+    "Total Manager/img/SildebarActive.png",
+    "Total Manager/img/sildbar.png",
+    "Total Manager/img/scanning.png",
+    "Total Manager/img/scanbutton.jpg",
+    "17Lf-xxF-27-Sevo Series[inch]_Rev01_20231113.pdf",
     "Excalidraw",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
@@ -368,7 +449,6 @@
     "Technical",
     "Actuator/Mini 17Lf/Datasheet",
     "Actuator/Mini 12Ls/img",
-    "Actuator/Mini 12Ls",
     "무제 파일 1.canvas"
   ]
 }
