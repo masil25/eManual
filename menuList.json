@@ -19,7 +19,7 @@
     "value": "Mini 17Lf",
     "manualURL": "/Actuator/Mini%2017Lf/Mini%2017Lf%20User%20Manual",
     "imageURL": "Actuator/Mini%2017Lf",
-    "document" :{"Protocol"},{"Datasheet"},{"Drawing"},
+    "document" :["Protocol","Datasheet","Drawing"],
     "Protocol" : ["Modbus RTU"]
   },
   {
