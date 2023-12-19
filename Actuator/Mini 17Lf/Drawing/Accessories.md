@@ -154,7 +154,7 @@ c51b49672488ed5546b66e4b52d02fc0a0a3e4ed: [[Hinge Shaft.png]]
 414714111a6bf192193f68d5d7ae3b9ec03aafbe: [[Rod End Tip.png]]
 38efba5431186723e478a30f547b486812d29df2: [[socket head m3.0x8.png]]
 88437fd7e71fd0ce51f15815ace3762ac4c5d624: [[Wire_RS485.png]]
-49f05b5a857138ae63ca33cce102fb211da9e351: [[Pasted Image 20231219103642_487.png]]
+49f05b5a857138ae63ca33cce102fb211da9e351: [[AsbbleRodEndtip.png]]
 
 %%
 # Drawing

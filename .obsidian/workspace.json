@@ -221,9 +221,11 @@
             "id": "475606b51e0e2f3a",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Pasted Image 20231219103642_487.png"
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -318,7 +320,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pasted Image 20231219103642_487.png",
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -335,7 +337,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pasted Image 20231219103642_487.png",
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -358,7 +360,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pasted Image 20231219103642_487.png"
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md"
               }
             }
           },
@@ -402,13 +404,13 @@
   },
   "active": "475606b51e0e2f3a",
   "lastOpenFiles": [
+    "Actuator/Mini 17Lf/img/27mm Machine Drwing.png",
+    "Actuator/Mini 17Lf/img/87mm Machine Drwing.png",
+    "Actuator/Mini 17Lf/img/50mm Machine Drwing.png",
+    "Actuator/Mini 17Lf/img/37mm Machine Drwing.png",
+    "Actuator/Mini 17Lf/img/ASB_RodendTip.png",
+    "Actuator/Mini 17Lf/img/AsbbleRodEndtip.png",
     "Actuator/Mini 17Lf/MachineDrawing/17Lf-xxF-27-Sevo Series[inch]_Rev01_20231113.pdf",
-    "Pasted Image 20231219103642_487.png",
-    "Pasted image 20231219105818.png",
-    "Pasted image 20231219105553.png",
-    "Pasted image 20231219105348.png",
-    "Pasted image 20231219104921.png",
-    "Pasted image 20231219104009.png",
     "Actuator/Mini 17Lf/Drawing/Accessories.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/MachineDrawing/17Lf-xxF-87-Sevo Series[mm]_Rev01_20231113.pdf",
