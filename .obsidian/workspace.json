@@ -128,6 +128,26 @@
             }
           },
           {
+            "id": "486dee6afd734015",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Total Manager/img/17Lf Accessories.png"
+              }
+            }
+          },
+          {
+            "id": "c2c34628961494cf",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Total Manager/img/17Lf Rendering.png"
+              }
+            }
+          },
+          {
             "id": "3f4f113d018fa78b",
             "type": "leaf",
             "state": {
@@ -152,7 +172,7 @@
             }
           }
         ],
-        "currentTab": 9
+        "currentTab": 11
       }
     ],
     "direction": "vertical"
@@ -202,7 +222,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 564.5
   },
   "right": {
     "id": "7ccabca408164915",
@@ -218,7 +238,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "file": "Total Manager/img/17Lf Rendering.png",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -235,7 +255,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "file": "Total Manager/img/17Lf Rendering.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -258,7 +278,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md"
+                "file": "Total Manager/img/17Lf Rendering.png"
               }
             }
           },
@@ -296,32 +316,36 @@
       "markdown-importer:마크다운 형식 가져오기 열기": false,
       "publish:변경사항 출판": false,
       "markdown-table-editor:Open Markdown Table Editor": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "9196ba916f9143e0",
+  "active": "c2c34628961494cf",
   "lastOpenFiles": [
+    "Total Manager/img/17Lf Accessories.png",
+    "Total Manager/img/Hinge Base.png",
+    "Total Manager/img/Hinge Shaft.png",
+    "Total Manager/img/M3 Nut.png",
+    "Total Manager/img/Rod End Tip.png",
+    "Total Manager/img/socket head m3.0x8.png",
+    "Total Manager/img/Wire_RS485.png",
+    "Total Manager/img/HingeBase.png",
+    "Total Manager/img/17Lf Rendering.png",
+    "Pasted image 20231218093652.png",
+    "Pasted image 20231218093723.png",
+    "Actuator/Mini 17Lf/img/Drawing 2023-12-19 10.25.28.excalidraw.md",
+    "17Lf-xxF-27-Sevo Series[inch]_Rev01_20231113.pdf",
+    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+    "Excalidraw",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
-    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
-    "17Lf-xxF-27-Sevo Series[inch]_Rev01_20231113.pdf",
     "Protocl/Modbus RTU.md",
-    "Pasted image 20231218093723.png",
-    "Pasted image 20231218093652.png",
     "Total Manager/Total Manager User Manual_kor.md",
     "conflict-files-obsidian-git.md",
     "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
     "무제 파일.md",
-    "Actuator/Mini 12Lf/img/ACC_IR-STS02_en.png",
-    "Actuator/Mini 12Lf/img/ACC_IR-EB01_en.png",
     "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
-    "Actuator/Mini 12Lf/img/CircuitConnection_TTL_en.png",
     "Technical/Motor의 특성도 이해.md",
-    "Actuator/Mini 12Lf/img/Broken_Rod_en.png",
-    "Total Manager/img/resetPopup.png",
-    "Total Manager/img/resetAction.gif",
-    "Total Manager/img/restartSelect.png",
-    "simplescreenrecorder-2023-11-29_17.11.32 (2).gif",
     "Total Manager/img/reset_popup.png.crswap",
     "Total Manager/img/reset_popup",
     "Protocl/IR Protocol.md",
@@ -340,13 +364,11 @@
     "img/myImg.png.md",
     "img",
     "무제 파일.canvas",
-    "Datasheet17Lf-xx-27.md",
     "Templates",
     "Technical",
     "Actuator/Mini 17Lf/Datasheet",
     "Actuator/Mini 12Ls/img",
     "Actuator/Mini 12Ls",
-    "Library",
     "무제 파일 1.canvas"
   ]
 }
