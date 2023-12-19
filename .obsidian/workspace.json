@@ -221,9 +221,11 @@
             "id": "475606b51e0e2f3a",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md"
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -318,7 +320,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md",
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -335,7 +337,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md",
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -358,7 +360,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md"
+                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md"
               }
             }
           },
@@ -402,9 +404,11 @@
   },
   "active": "475606b51e0e2f3a",
   "lastOpenFiles": [
-    "Pasted Image 20231219103642_487.png",
-    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+    "Pasted image 20231219104921.png",
     "Actuator/Mini 17Lf/Drawing/Accessories.md",
+    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+    "Pasted image 20231219104009.png",
+    "Pasted Image 20231219103642_487.png",
     "Total Manager/img/yrdy-2023-07-25_10.39.gif",
     "Actuator/Mini 17Lf/Drawing",
     "Total Manager/img/tooltip.png",
@@ -414,8 +418,6 @@
     "Total Manager/img/Slide.png",
     "Total Manager/img/SildebarActive.png",
     "Total Manager/img/sildbar.png",
-    "Total Manager/img/scanning.png",
-    "Total Manager/img/scanbutton.jpg",
     "17Lf-xxF-27-Sevo Series[inch]_Rev01_20231113.pdf",
     "Excalidraw",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",

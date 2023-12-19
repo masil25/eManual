@@ -612,7 +612,8 @@ mightyZAP의 보증 기간은 구매 일부터 1년입니다. 보증 수리를 �
 ## 4.1 악세사리
 ### 4.1.1 기본 악세사리
 ![[17Lf Accessories.png|900]]  
->3번 M3 너트는 Hinge Shaft  고정과 더불어, Rod End Tip과 Rod End Nut 사이에 스토퍼로 체결하여 사용하시기 바랍니다.
+>3번 M3 너트는 Hinge Shaft  고정과 더불어, Rod End Tip과 Rod End Nut 사이에 스토퍼로 체결하여 사용하시기 바랍니다.  
+>![[Pasted image 20231219104009.png|300]]
 
 ### 4.1.2 별매 악세사리
 - 메탈 브라켓
@@ -626,7 +627,7 @@ mightyZAP의 보증 기간은 구매 일부터 1년입니다. 보증 수리를 �
 - Pi 배열
 - 통신 회로
 ## 4.4 도면
-- 도면
+-![[Pasted image 20231219104921.png]]
 -
 
 
