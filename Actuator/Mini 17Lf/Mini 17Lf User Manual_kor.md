@@ -624,12 +624,6 @@ mightyZAP의 보증 기간은 구매 일부터 1년입니다. 보증 수리를 �
 ## 4.3 커넥터 자료
 - Pi 배열
 - 통신 회로
-## 4.4 도면
-### 4.4.1 27mm Stroke 제품군
-![[27mm Machine Drwing.png|900]]
-### 4.4.2 37mm Stroke 제품군
-![[37mm Machine Drwing.png|900]]
-### 4.4.2 50mm Stroke 제품군
-![[50mm Machine Drwing.png|900]]
-### 4.4.2 87mm Stroke 제품군
-![[87mm Machine Drwing.png|900]]
+
+
+

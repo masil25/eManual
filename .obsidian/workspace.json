@@ -211,28 +211,6 @@
             "id": "e69514ff3f7853f0",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "Actuator/Mini 17Lf/img/17Lf Accessories.png"
-              }
-            }
-          },
-          {
-            "id": "475606b51e0e2f3a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9484a24b89573233",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
                 "file": "Actuator/Mini 17Lf/MachineDrawing/Mini 17Lf 2D Drawing.md",
@@ -266,7 +244,7 @@
             }
           }
         ],
-        "currentTab": 20
+        "currentTab": 18
       }
     ],
     "direction": "vertical"
@@ -414,9 +392,12 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "3c8f0a42222ab22e",
+  "active": "e69514ff3f7853f0",
   "lastOpenFiles": [
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+    "Actuator/Mini 17Lf/img/17Lf Accessories.png",
+    "Actuator/Mini 17Lf/MachineDrawing/17Lf-xxF-87-Sevo Series[mm]_Rev01_20231113.pdf",
+    "[.md",
     "Actuator/Mini 17Lf/MachineDrawing/Mini 17Lf 2D Drawing.md",
     "Actuator/Mini 17Lf/img/27mm Machine Drwing.png",
     "Actuator/Mini 17Lf/img/87mm Machine Drwing.png",
@@ -426,7 +407,6 @@
     "Actuator/Mini 17Lf/img/AsbbleRodEndtip.png",
     "Actuator/Mini 17Lf/MachineDrawing/17Lf-xxF-27-Sevo Series[inch]_Rev01_20231113.pdf",
     "Actuator/Mini 17Lf/Drawing/Accessories.md",
-    "Actuator/Mini 17Lf/MachineDrawing/17Lf-xxF-87-Sevo Series[mm]_Rev01_20231113.pdf",
     "Actuator/Mini 17Lf/MachineDrawing/17Lf-xxF-87-Sevo Series[inch]_Rev01_20231113.pdf",
     "Actuator/Mini 17Lf/MachineDrawing/17Lf-xxF-50-Sevo Series[mm]_Rev01_20231113.pdf",
     "Actuator/Mini 17Lf/MachineDrawing/17Lf-xxF-50-Sevo Series[inch]_Rev01_20231113.pdf",
@@ -438,7 +418,6 @@
     "Actuator/Mini 17Lf/Drawing",
     "Total Manager/img/tooltip.png",
     "Total Manager/img/to.png",
-    "Actuator/Mini 17Lf/img/socket head m3.0x8.png",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
     "Total Manager/img/Protocl/Modbus RTU.md",
@@ -460,7 +439,6 @@
     "BrokenRod.png{width=50%.md",
     "img/CautionMotionSync.png.md",
     "img/CautionMotionSy.md",
-    "img/myImg.png.md",
     "무제 파일.canvas",
     "무제 파일 1.canvas"
   ]
