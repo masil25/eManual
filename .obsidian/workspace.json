@@ -73,7 +73,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
+                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
                 "mode": "source",
                 "source": false
               }
@@ -213,7 +213,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
+                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
                 "mode": "source",
                 "source": false
               }
@@ -310,7 +310,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
+                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -327,7 +327,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
+                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -350,7 +350,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md"
+                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md"
               }
             }
           },
@@ -394,6 +394,8 @@
   },
   "active": "e69514ff3f7853f0",
   "lastOpenFiles": [
+    "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
+    "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
     "Actuator/Mini 17Lf/MachineDrawing/Mini 17Lf 2D Drawing.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/img/17Lf Accessories.png",
@@ -423,8 +425,6 @@
     "Total Manager/img/Protocl/Modbus RTU.md",
     "Total Manager/Total Manager User Manual_kor.md",
     "conflict-files-obsidian-git.md",
-    "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet.md",
-    "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
     "Technical/Motor의 특성도 이해.md",
     "Total Manager/img/Protocl/IR Protocol.md",
     "BrokenRod.png.md",
