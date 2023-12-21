@@ -1,6 +1,14 @@
 {
   "Actuator": [
   {
+    "name": "Mini 12Lf",
+    "value": "Mini 12Lf",
+    "manualURL": "/Actuator/Mini%2017Lf/Mini%2012Lf%20User%20Manual",
+    "imageURL": "Actuator/Mini%2012Lf",
+    "document" :["Datasheet"],
+    "Protocol" : ["Modbus RTU"]
+  },
+  {
     "name": "Mini 17Lf",
     "value": "Mini 17Lf",
     "manualURL": "/Actuator/Mini%2017Lf/Mini%2017Lf%20User%20Manual",
