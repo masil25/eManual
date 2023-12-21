@@ -291,18 +291,18 @@ End Compliance Margin은 작을 수록 위치 정밀도가 높아지나, 일정 
 **기본 개념**
 End Compliance Margin에 대한 기본적인 개념은 다음과 같습니다.
 진행 방향에서의 End Complilance Marign 위치에서 Actuator 는 전기적 브레이크 명령을 내립니다. 이때 Actuator는 전기적 인 브레이크와 내부적인 마찰과 관성등에 의해 일정 거리를 이동한 후 정지하게 됩니다.  이때 이동한 정지 거리가 End Compliance Margin의 값과 동일하게 하는것이 가장 좋습니다.  
-![[EndMarginBasic.gif]]  
+![[EndMarginBasic.gif|700]]  
 **End Compliance 줄이기**    
 부하가 적은 환경에서는 반복 정밀도를 높이기 위해 End compliance Margin을 줄이는 것이 효과적일 수 있습니다. 그렇지만 관성에 의해 밀리는 거리가 End Compliance Margin보다 길 경우 목표 위치를 벗어나 정지하게 되거나 그 이상의 거리를 이동한 후 정지 할 수 있습니다.
-  ![[EnmMarginDec.gif]]
+  ![[EnmMarginDec.gif|700]]
 **Start Compliance Margin과 End Compliance Margin과의 관계**   
 Start Compliance Margin과 End Compliance Margin과의 거리가 가깝거나 같을 경우 문제가 발생할 수 있습니다.  
 <font color="#4f81bd">상황 1.  Start Margin이 End Margin이 모두 작은 경우</font>
 아래의 이미지와 같이 Start Margin이 End Margin이 모두 작은 경우 부하가 크거나 관성이 있는 환경에서는 반대편  Start Margin까지 벗어나게 되는 경우가 발생하여 Over shoot 가 발생하게 됩니다.  
-![[StartEndMargin.gif]]  
+![[StartEndMargin.gif|700]]  
 <font color="#4f81bd">상황 2.  Start Margin 과 End Margin이 같은 경우</font>
 Start Margin 과 End Margin 거의 같고 부하가 적고 관성이 적은 제품을 제어할 경우 위치 오차와 노이즈로 아래와 같이 정상적이 정지를 못하고 진동할 수 있습니다.  
-![[StartEndMargin2.gif]]
+![[StartEndMargin2.gif|700]]
 
 ### 2.4.8 Acceleration/Deceration  
 각각은 Actuator의 가속과 감속을 제어하는 Parameter 입니다.  
