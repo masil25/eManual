@@ -211,11 +211,9 @@
             "id": "e69514ff3f7853f0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
-                "mode": "source",
-                "source": false
+                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md"
               }
             }
           },
@@ -310,7 +308,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -327,7 +325,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -350,7 +348,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md"
+                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md"
               }
             }
           },
