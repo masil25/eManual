@@ -124,6 +124,7 @@ Goal Current가 800일 때, Goal Speed Parameter 값의 변화에 따른 무 부
 |      3(RED)&nbsp; | VCC&nbsp;      | Power +             |
 |    4(BLACK)&nbsp; | GND            | Power -             |  
 
-## 4. 도면 
-mm / inch
-
+## 4. 도면  
+**외관 도면 [mm]**
+![[17Lf-xxF-27-Sevo Series[inch]_Rev01_20231113.pdf]]**외관 도면 [inch]**  
+![[17Lf-xxF-27-Sevo Series[mm]_Rev01_20231113.pdf]]
