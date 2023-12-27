@@ -98,25 +98,24 @@ Map.
 |   ^           |    -    |    Available(가능)                                                                                |    -    |          |    <div>17Lf-70F-27<br></div>                   |  
 
 # 3 참고 자료
-### 3.1 Voltage Vs Speed <font size="3">at Goall Current 1600</font>
+## 3.1 Voltage Vs Speed <font size="3">at Goall Current 1600</font>
 입력 전압에 따른 무 부하 시 속도 변화에 대한 그래프 입니다. 해당 Data는 오차를 포함하고 있음으로 참고로 사용하시면 됩니다.
 <이미지>
 
-### 3.2 Voltage Vs Stall Force[N] <font size="3">at Goall Current 1600 & \Goal Speed 100</font>
+## 3.2 Voltage Vs Stall Force[N] <font size="3">at Goall Current 1600 & \Goal Speed 100</font>
 입력 전압에 따른 1.6A에서 Stall Force를 측정한 Data입니다. 해당 Data는 오차를 포함하고 있음으로 참고로 사용하시면 됩니다.
 <이미지>
 
 > Stall force는 참고용으로, 제품의 파손을 방지하기 위해 실제 application에서의 사용 시에는 정격 부하에 맞추어 사용하여 주십시오.
 
-### 3.3 Goal Speed/Speed
+## 3.3 Goal Speed/Speed
 Goal Current가 800일 때, Goal Speed Parameter 값의 변화에 따른 무 부하 속도 변화를 나타냅니다.
 정격 부하 이하의 경우, 부하 정도에 따라 최고 속도가 나오는 시간이 달라지게 됩니다.
 <이미지>
-### 3.4 Goal Current vs Stall Force
-### 3.5 Goal Current Vs Speed <font size ="3">정격 부하 시 기준</font>
-
-### Figure 3. PIN Map 은 위로 옮기기
-
+## 3.4 Goal Current vs Stall Force
+## 3.5 Goal Current Vs Speed <font size ="3">정격 부하 시 기준</font>  
+ Figure 3. PIN Map 은 위로 옮기기
+ 
 | PIN NUMBER(COLOR) | PIN NAME&nbsp; | <div>FUNCTION</div> |
 |:------------------:|:---------------:|:--------------------:|
 |         1(YELLOW) | D-&nbsp;       | RS-485-             |
@@ -124,7 +123,7 @@ Goal Current가 800일 때, Goal Speed Parameter 값의 변화에 따른 무 부
 |      3(RED)&nbsp; | VCC&nbsp;      | Power +             |
 |    4(BLACK)&nbsp; | GND            | Power -             |  
 
-## 4. 도면  
+# 4. 도면  
 **외관 도면 [mm]**
 ![[17Lf-xxF-27-Sevo Series[inch]_Rev01_20231113.pdf]]**외관 도면 [inch]**  
 ![[17Lf-xxF-27-Sevo Series[mm]_Rev01_20231113.pdf]]

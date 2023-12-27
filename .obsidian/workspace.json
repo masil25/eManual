@@ -211,9 +211,11 @@
             "id": "e69514ff3f7853f0",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md"
+                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -308,7 +310,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md",
+                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -325,7 +327,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md",
+                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -348,7 +350,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md"
+                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md"
               }
             }
           },
@@ -392,6 +394,7 @@
   },
   "active": "e69514ff3f7853f0",
   "lastOpenFiles": [
+    "Actuator/Mini 17Lf/Drawing/Accessories.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
@@ -407,7 +410,6 @@
     "Actuator/Mini 17Lf/img/ASB_RodendTip.png",
     "Actuator/Mini 17Lf/img/AsbbleRodEndtip.png",
     "Actuator/Mini 17Lf/MachineDrawing/17Lf-xxF-27-Sevo Series[inch]_Rev01_20231113.pdf",
-    "Actuator/Mini 17Lf/Drawing/Accessories.md",
     "Actuator/Mini 17Lf/MachineDrawing/17Lf-xxF-87-Sevo Series[inch]_Rev01_20231113.pdf",
     "Actuator/Mini 17Lf/MachineDrawing/17Lf-xxF-50-Sevo Series[mm]_Rev01_20231113.pdf",
     "Actuator/Mini 17Lf/MachineDrawing/17Lf-xxF-50-Sevo Series[inch]_Rev01_20231113.pdf",
