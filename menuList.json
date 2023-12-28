@@ -82,11 +82,23 @@
       "url": "/etcUsermanual.md"
     }
   ],
-  "etc": [
+  "NEWS": [
     {
-      "name": "Total Manager",
-      "value": "Total Manager",
-      "url": "/TotalManagerUserManual.md"
+      "name": "NEWS",
+      "value": "NEWS",
+      "url": "/NEWS.md"
+    },
+    {
+      "name": "etc",
+      "value": "etc",
+      "url": "/etcUsermanual.md"
+    }
+  ],
+  "FAQ": [
+    {
+      "name": "FAQ",
+      "value": "FAQ",
+      "url": "/FAQ.md"
     },
     {
       "name": "etc",
