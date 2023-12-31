@@ -3,6 +3,7 @@ mightyZAP e-Manual은 IRROBOT에서 제공하는 모든 제품에 대한 사용�
 
 - mightyZAP
 	- 협소한 공간에 효율적인 선형 운동이 가능한 Mini Linear Actuator
+   이라고 생각합니다.
 - Software
 	- mightyZAP을 제어 및 테스트하기 위한 Manager Software
 - Boards
