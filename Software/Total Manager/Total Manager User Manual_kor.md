@@ -23,7 +23,7 @@ mightyZAP을 위한 USB Interface Board를 당사의 웹사이트에서 판매�
 ## 1.3 Feature
 ### 1.3.1 Information
 mightyZAP의 Model 명, Stroke, Rate Load, Firmware Version 등 Actuator와 관련된 기본 정보를 표시합니다. Software를 실행하였을 경우 제일 처음에 나타나는 화면입니다.  
-![[Sofware/Total Manager/img/Information.png|700]]
+![[Software/Total Manager/img/Information.png|700]]
 ### 1.3.2 Parameter
 mightyZAP을  제어하거나 Parameter를 변경 및 Monitoring을 할 수 있습니다.   
 연결된 여러 개의 mightyZAP 중 선택하여 하나의 mightyZAP을 제어할 수 있으며, Parameter의 Type에 따라 Non-voltatile Memory와 Volatile Memoty 화면으로 나누어져 있습니다.    
@@ -70,7 +70,7 @@ $ sudo dpkg -i [file].deb
 ### 2.2.3 Mac OS
 Mac OS 전용 패키지를 다운로드 합니다.
 다운로드 파일을 더블 클릭하면 아래와 같이 설치 화면이 나타납니다. mightyZAP Total Manager 아이콘을 드래그 하여 Applications에 놓으면 설치가 완료됩니다. 
-![[Sofware/Total Manager/img/macOS_install.png|500]]
+![[Software/Total Manager/img/macOS_install.png|500]]
 ## 2.3 화면 구성
 화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Footer로 구성되어있다.  
 ![[mainView-description.png|700]]
@@ -225,7 +225,7 @@ All 버튼을 누르게 되면 모든 선택하거나 모두 선택 해지를 �
 ## 3.2 Information
 mightyZAP Actuator의 Model명, Rated Load, Stroke, firmware Version등 관련된 정보를 표시하는 페이지 입니다.  
 Manager가 실행이 되면 처음 표시하는 창이  창이며, 아래의 이미지와 같이 사이드 바 메뉴의 첫번째 아이콘을 클릭하여 해당 페이지로 이동합니다. 
-![[Sofware/Total Manager/img/InformationMenu.png|700]]
+![[Software/Total Manager/img/InformationMenu.png|700]]
 ### 3.2.1 서보모터 List 확인
 아래의 그림과 같이 매니저에 왼쪽에는 검색된 서보모터가 Display 됩니다.  
 Actuator List는 Baudrate와 Protocol에 따라 분류되어 표시 되며,  Baudrate 별로 접거나 펼 수 습니다
