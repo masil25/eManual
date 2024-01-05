@@ -158,7 +158,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "file": "Actuator/Mini 17Lf/Manual/Mini 17Lf User Manual_eng.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -175,7 +175,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+                "file": "Actuator/Mini 17Lf/Manual/Mini 17Lf User Manual_eng.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -198,7 +198,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md"
+                "file": "Actuator/Mini 17Lf/Manual/Mini 17Lf User Manual_eng.md"
               }
             }
           },
@@ -234,19 +234,22 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "markdown-importer:Open format converter": false,
-      "publish:Publish changes...": false
+      "publish:Publish changes...": false,
+      "markdown-table-editor:Open Markdown Table Editor": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "3c8f0a42222ab22e",
+  "active": "91bd0774f5b64346",
   "lastOpenFiles": [
-    "FAQ/FAQ Test.md",
     "Actuator/Mini 17Lf/Manual/Mini 17Lf User Manual_kor.md",
+    "Actuator/Mini 17Lf/Manual/Mini 17Lf User Manual_eng.md",
+    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+    "FAQ/FAQ Test.md",
     "Actuator/Mini 17Lf/Manual",
     "Software/Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 17Lf/img/17Lf Rendering.png",
     "home.md",
     "Actuator/Mini 17Lf/img/17Lf Accessories.png",
-    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
     "Boards/Board Test.md",
     "Library/library Test.md",
@@ -284,7 +287,6 @@
     "Software/Total Manager/img/Protocl/IR Protocol.md",
     "BrokenRod.png.md",
     "StrokeLimit.png.md",
-    "Pasted image 20231117110531.png.md",
     "무제 파일.canvas",
     "무제 파일 1.canvas"
   ]

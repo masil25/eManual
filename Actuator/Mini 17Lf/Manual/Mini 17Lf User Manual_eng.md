@@ -266,7 +266,7 @@ Actuator와 통신을 하기 위한 통신 속도 입니다.
   2. 현재 위치에서 외력 또는 내부 유격에 의해 위치가 변화가 생긴 경우  
      사용자는 Goal Position을 변경하지 않았으나 Present Position이 바뀐 경우입니다.  일반적으로 외력에 의한 밀림이나 내부 유격등의 의한 현재 위치의 변동이 생길 경우 입니다.  
 ```
- 예 1>  외부 힘에 의해 위치 편차가 발생한 겨우  
+ 예 1>  외부 힘에 의해 위치 편차가 발생한 경우   
 Start Compliance Margin : 20  
 Goal Position : 1000  
 Present Positon : 1000 -> 1010  
