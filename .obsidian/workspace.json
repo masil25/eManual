@@ -23,9 +23,11 @@
             "id": "d8689d0bda321462",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md"
+                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -144,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md",
+                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -161,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md",
+                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -184,7 +186,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md"
+                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md"
               }
             }
           },
@@ -227,12 +229,14 @@
   },
   "active": "d8689d0bda321462",
   "lastOpenFiles": [
-    "Pasted Image 20240108172538_224.png",
+    "Actuator/Mini 17Lf/img/Daisy-chain Connection.png",
     "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
+    "Actuator/Mini 17Lf/Manual/Mini 17Lf User Manual_eng.md",
+    "Actuator/Mini 17Lf/Drawing/Accessories.md",
+    "Pasted Image 20240108172538_224.png",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Actuator/Main.md",
     "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
-    "Actuator/Mini 17Lf/Drawing/Accessories.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
     "Software/Total Manager/Total Manager User Manual_kor.md",
@@ -241,7 +245,6 @@
     "Actuator/Protocol/IR Protocol",
     "Actuator/Protocol/Modbus-RTU",
     "Actuator/Protocol",
-    "Actuator/Mini 17Lf/Manual/Mini 17Lf User Manual_eng.md",
     "NEWS/News Test.md",
     "Software/Total Manager/Total Manager User Manual_eng.md",
     "Technical/Motor의 특성도 이해.md",
@@ -271,8 +274,6 @@
     "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
     "Actuator/Mini 17Lf/MachineDrawing/Mini 17Lf 2D Drawing.md",
     "Actuator/Mini 17Lf/MachineDrawing/17Lf-xxF-87-Sevo Series[mm]_Rev01_20231113.pdf",
-    "Actuator/Mini 17Lf/img/27mm Machine Drwing.png",
-    "Actuator/Mini 17Lf/img/87mm Machine Drwing.png",
     "무제 파일.canvas",
     "무제 파일 1.canvas"
   ]
