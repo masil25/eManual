@@ -108,7 +108,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "modbus",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -125,7 +125,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -222,13 +223,15 @@
       "command-palette:명령어 팔레트 열기": false,
       "markdown-importer:마크다운 형식 가져오기 열기": false,
       "publish:변경사항 출판": false,
-      "markdown-table-editor:Open Markdown Table Editor": false,
       "templater-obsidian:Templater": false,
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "b02ba1a8741bd7af",
+  "active": "c54a1b1d79cb9574",
   "lastOpenFiles": [
+    "Actuator/Protocol/IR Protocol",
+    "Actuator/Protocol/Modbus-RTU",
+    "Actuator/Protocol",
     "Software/Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
@@ -269,12 +272,9 @@
     "Actuator/Mini 17Lf/img/27mm Machine Drwing.png",
     "Actuator/Mini 17Lf/img/87mm Machine Drwing.png",
     "Actuator/Mini 17Lf/MachineDrawing/17Lf-xxF-27-Sevo Series[inch]_Rev01_20231113.pdf",
-    "Actuator/Mini 17Lf/MachineDrawing/17Lf-xxF-87-Sevo Series[inch]_Rev01_20231113.pdf",
-    "Actuator/Mini 17Lf/MachineDrawing/17Lf-xxF-50-Sevo Series[mm]_Rev01_20231113.pdf",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
     "Software/Total Manager/img/Protocl/Modbus RTU.md",
     "Software/Total Manager/img/Protocl/IR Protocol.md",
-    "BrokenRod.png.md",
     "무제 파일.canvas",
     "무제 파일 1.canvas"
   ]
