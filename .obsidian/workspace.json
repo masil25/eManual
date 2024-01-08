@@ -71,10 +71,11 @@
             "id": "4015bd12fdc93a5c",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": ".obsidian/workspace.json",
-                "staged": false
+                "file": "Actuator/Mini 17Lf/Manual/Mini 17Lf User Manual_kor.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -145,6 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Actuator/Mini 17Lf/Manual/Mini 17Lf User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -161,6 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Actuator/Mini 17Lf/Manual/Mini 17Lf User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -182,7 +185,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Actuator/Mini 17Lf/Manual/Mini 17Lf User Manual_kor.md"
+              }
             }
           },
           {

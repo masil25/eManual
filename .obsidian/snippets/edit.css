@@ -21,8 +21,9 @@
 }
 
 .HyperMD-quote {
-  background-color : #a8e6f9!important;
-  font-weight :300!important;
+      background-color: #fff1f1!important;
+    font-weight: 300!important;
+
 }
 .HyperMD-codeblock-bg {
   color : #fff!important;

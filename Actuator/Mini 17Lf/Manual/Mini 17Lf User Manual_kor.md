@@ -1,8 +1,21 @@
 
 # 1. Introduction
 Mini 17Lf Model은 다양한 기능을 내장한 Actuator로 효율적이고 유연한 모션 제어 어플리케이션을 위한 완벽한 솔루션입니다. mightyZAP Mini Linear Actuator는 협소한 공간에서 효율적인 선형 운동이 필요한 어플리케이션에 활용 가능한 제품이며, 산업, 의료, 로봇 연구, UAV 분양 등 다양한 방면에서 활용이 가능한 제품입니다.  
-<font size = "5" color="#ff0000" >주의 사항</font>  
-mightyZAP Actuator를 안정적으로 사용하기 test 위해서는 몇 가지 주의 사항이 있습니다.   
+
+><font size = "5" color="#ff0000" >⚠️ 위험 </font>
+> 1.정격 로드(Load) 범위 이상의 힘이 지속적으로 가해질 경우 모터가 소손될 수 있습니다.
+> 2. Rod End Tip 장착 시 무리하게 Rod에 비트는 힘을 가하게 되면 내부 부품 파손의 원인이 됩니다.   
+> 3. 제품의 사용 환경을 준수하세요(8V~13V, -20도 ~ +80도)
+> 4. 최적의 수명 관리를 위해 Duty Rate 50%를 넘지 않고, 최대 연속 동작 시간 30초를 넘지 말아 주시기 바랍니다.
+> 5. 오 배선에 우의 하여 주시기 바랍니다.
+> <font color="#ff0000">(자세한 사항은</font> [[#3.1 사용 주의 사항]] <font color="#ff0000">을 참조 하여 주시기 바랍니다.)</font>
+
+> <font size = "5" color="#ff0000" >⚠️ 경고 </font>  
+> - 작동 직후 mightyZAP의 케이스가 뜨거울 수 있습니다. 화상에 주의하십시오.
+> - mightyZAP을 물기, 먼지, 기름으로부터 멀리 하십시오.
+> - 본 제품은 실내 용도로 설계된 제품입니다. 실 외 사용을 금합니다.
+> - 어린이의 손이 닿지 않는 곳에 제품을 보관하십시오. 성인이 사용 시에도 모터의 동작 시 발생할 수 있는 신체 상해에 유의하십시오.
+>    <font color="#ff0000">(자세한 사항은</font> [[#3.1 사용 주의 사항]] <font color="#ff0000">을 참조 하여 주시기 바랍니다.)</font>
 
 ## 1.2 사양
 ### 1.2.1 17Lf 시리즈 주요 사양
@@ -532,7 +545,6 @@ Motor Operating Rate는 Goal Speed, Goal Current 등에 따라 값이 달라집�
 |value|range|dfd|
 |---|---|---|
 |-10000~1000|0~1600mA|mA|
-
 ### 2.4.29 Present Voltage  
 입력 전압 값을 나타 냅니다. 
 
@@ -547,11 +559,10 @@ Motor Operating Rate 값이 '0'이어도 목표 위치 도달 완료 상태가 �
 ### 2.4.32 Action Enable
 Action Parameter로 작성된 Action을 실행할 때 사용합니다. Action Paramter 를 작성하였어도 Action Enable을 활성화 하지 않으면 Action은 동작하지 않습니다. 
 
-|value|range|dfd|
-|---|---|---|
-|0|Action disable||
-|1|Action Enable||
-
+| value | range | dfd |
+| ---- | ---- | ---- |
+| 0 | Action disable |  |
+| 1 | Action Enable |  |
 ### 2.4.31 Reset
 ### 2.4.32 Restart
 ### 2.4.33 Indirect Data

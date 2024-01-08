@@ -3,10 +3,10 @@
   "obsidian-git",
   "markdown-table-editor",
   "obsidian-mind-map",
-  "sheets",
   "templater-obsidian",
   "obsidian-emoji-toolbar",
   "quickadd",
   "remember-cursor-position",
-  "obsidian-excalidraw-plugin"
+  "obsidian-excalidraw-plugin",
+  "sheets"
 ]
