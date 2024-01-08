@@ -363,6 +363,7 @@ Min/Max Position Calibration Parameter는 Actuator의 Goal Position이 최소/�
 | ---- | ---- | ---- | ---- |
 | Motor Operating Rate Limit | 모터에 공급하는 PWM 의 최대 값 설정 | 0~1000 |  |
 Actuator의 모터를 제어하기 위해 사용되는 PWM의 최대 값 설정 Parameter 입니다.
+>**TIP**  
 >본 가이드에서는 위치 제어 신호용 PWM과 구분하여 사용하기 위해 Motor Operating Rate 란 용어를 사용합니다.  
 
 정격 부하 시 400 이하의 낮은 값에서는 모터가 동작하지 않을 수 있습니다.  또한 Motor Operating Rate값을 변경하면 속도와 Stall Force의 값이 변경 됩니다.  
@@ -372,32 +373,54 @@ Actuator의 모터를 제어하기 위해 사용되는 PWM의 최대 값 설정 
 | Speed Limit | Actuator의 최대 속도 제한 설정 | 0~1000 |  |
 Actuator의 최대 이동 속도 제한 값입니다. Speed Limit를 낮게 설정하여도 최대 Force에는 영향을 주지 않지만, 최대 전류까지 도달하는 시간은 다를 수 있습니다. 속도의 값이 낮을 수록 최대 전류까지 도달하는 시간이 길어집니다.  
 Speed Limit를 변경할 경우, Goal Speed도 같이 변경됩니다. 또한 전원 인가 시 Speed Limit의 값을 Goal Speed에 적용합니다.  
-Goal Speed를 변경하여도 Speed Limit는 변하지 않습니다.  
+>**TIP**  
+>Goal Speed를 변경하여도 Speed Limit는 변하지 않습니다.  
 ### 2.4.12 Current Limit  
-모터 가동 중 최대 전류값을 제한 합니다. 해당 기능을 이용하여 Actuator의 최대 Force를 제한 할 수 있습니다.    
-Current Limit는 비 휘발성 Parameter로 전원이 끊어져도 변경된 Data 를 유지합니다. Current Limit 값이 변경되면 Gaol Current 값도 같이 변경됩니다. 
+| Parameter | Description | Range | Unit |
+| ---- | ---- | ---- | ---- |
+| Current Limit | Actuator의 최대 속도 제한 설정 | 0~1600 | mA |
+모터 가동 중 최대 전류 값을 제한 합니다. 해당 기능을 이용하여 Actuator의 최대 Force를 제한 할 수 있습니다.    
+Current Limit는 비 휘발성 Parameter로 전원이 끊어져도 변경된 Data 를 유지합니다. Current Limit 값이 변경되면 Goal Current 값도 같이 변경됩니다. 
+>**TIP**
 >Current Limit/Goal current 값에 대한 동작 특성은  모터 성능 곡선 및 Datasheet를 참조하여 주시기 바랍니다.
 
 ### 2.4.13 Current PI Control  
-모터의 전류 제어를 위한 PI Gain값입니다. 
+| Parameter | Description | Range | Unit |
+| ---- | ---- | ---- | ---- |
+| Current P Gain |  Current PID 비례 제어 | 0 ~ 1000 |  |
+| Current I Gain | Current PID 적분 제어 | 0 ~ 1000 |  |
+모터의 전류 제어를 위한 PID Gain값입니다. 
 정해진 값이 보다 큰 PI값을 적용할 경우 Goal Current와의 오차에 대해 거칠게 동작할 수 있습니다.   
 정해진 값보다 작은 PI값을 적용할 경우 Goal Current와의 오차에 부드럽게 동작하나 Goal Current 값 과의 오차가 크게 나타날 수 있습니다.
->수정 시 작은 변화 값부터 적용 하신 후 테스트 해주시기 바랍니다.
->PID 값을 수정하기 전에 
+> **TIP**
+> PID값을 변경하기 전에 [[#2.4.8 Acceleration/Deceration]]을 먼저 적용하고 테스트하여 주시기 바랍니다.  
+> PID값을 수정하시기 전에 PID에 대한 충분히 숙지하신 후에 해당 값을 변경하여 주시기 바랍니다.  
 
 ### 2.4.14 Speed PID Control  
+| Parameter | Description | Range | Unit |
+| ---- | ---- | ---- | ---- |
+| Speed P Gain | Speed PID 비례 제어 | 0 ~ 1000 |  |
+| Speed I Gain | Speed PID 적분 제어 | 0 ~ 1000 |  |
+| Speed D Gain | Speed PID 미분 제어 | 0 ~ 1000 |  |
 속도 PID 제어의 Gain 값입니다.  PID 제어에 대한 자세한 설명은 다른 문서를 참조하여 주시기 바랍니다. Gain보다 큰 값을 넣을 경우 속도 및 위치 오차에 대해 빠르게 반응하여 목표한 위치에 도달하여 정지하는 데 가지의 시간이 줄어 들게 됩니다. 
 하지만, 너무 큰 Gain값을 적용할 경우  오차에 대해 거칠게 동작하여 Overshoot 도는 과도 응답 상태로 정해진 위치 값을 정지하지 못하고 모터가 진동할 수 있습니다.
 또한 외란에 민감하게 반응하여 목표 값 응답이 나빠지게 됩니다.
 
 반대로 Gain값을 적게 적용할 경우 목표 위치까지 도달하는 시간이 증가 할 수 있지만, 모터의 동작이 부드러워 질 수 있습니다. 하지만 과도하게 적은 Gain 값은 목표 위치에 도달하지 못하게 할 수도 있습니다.
 PID 값을 수정하실 때는 기본 값에서 작은 값을 가 감하여 테스트 하시기 바랍니다.
-<font color="#ff0000">가급적 PID값을 변경하지 마시고 가감속을 변경하여 사용하여 주시기 바랍니다.</font>
+
+><font color="#ff0000">Warnning</font>
+> PID값을 변경하기 전에 [[#2.4.8 Acceleration/Deceration]]을 먼저 적용하고 테스트하여 주시기 바랍니다.  
+> PID값을 수정하시기 전에 PID에 대한 충분히 숙지하신 후에 해당 값을 변경하여 주시기 바랍니다.  
+
 >[ 일반적인 PID값 제어 방법 ]
 >![[PID_Compensation_Animated.gif]]
  [참고 문헌][https://commons.wikimedia.org/wiki/File:PID_Compensation_Animated.gif](https://commons.wikimedia.org/wiki/File:PID_Compensation_Animated.gif) 
 
 ### 2.4.15 Indirect Address
+| Parameter | Description | Range | Unit |
+| ---- | ---- | ---- | ---- |
+| Indirect Address N | Actuator의 최대 속도 제한 설정 | 0~1600 | mA |
 사용자는 해당 기능을 이용하여, 떨어져 있는 여러 Parameter를 모아서 이용할 수 있습니다.  
 Indirect Address에 특정 주소를 저장하면 해당 Indirect Address는 특정 주소와 동일한 기능을 가지게 됩니다.  
 예를 들어 Indirect Address 0에 '205'(Goal Position)을 쓰고, Indirect Data 0에 '5000'을 쓰면, Actuator가 '5000'의 값으로 이동을 합니다. 또한 Goal Position 값 또한 '5000'으로 변경된 것을 확인 할 수 있습니다.   
