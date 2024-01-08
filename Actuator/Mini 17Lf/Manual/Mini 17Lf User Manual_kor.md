@@ -479,29 +479,29 @@ Action Setting은 모터가 움직이는 방식을 설정하며 아래와 같습
    <이미지 그래프로 표현>
 
 ### 2.4.18 Force On/Off  
-| Parameter | Description | Range | Unit |
-| ---- | ---- | ---- | ---- |
-| Force On/Off |  모터 동작 전원 차단 | 0, 1 |  |
+| value | 동작 상태 |
+| ---- | ---- |
+| 0 | 모터의 전원을 차단하여 기동력이 발생 되지 않도록 합니다. |
+| 1 | 모터의 전원을 인가하여 기동력이 발생하도록 합니다. |
 Force ON/OFF를 실행 합니다. 전원이 인가 되면 자동으로 Force ON으로 설정됩니다.  
-
-|value|동작 상태|
-|---|---|
-|0| 모터의 전원을 차단하여 기동력이 발생 되지 않도록 합니다.|
-|1|모터의 전원을 인가하여 기동력이 발생하도록 합니다.|
 Force Off 명령 시 즉시 모터의 전원을 차단하여 모터의 동작을 중지합니다. Self Lock을 지원하지 않는 제품의 경우 외부의 힘에 의해 위치 값이 변경될 수 있습니다.  
+Force Off 후 별도의 명령(Force ON) 명령이 없이 Goal Position 명령 시 자동으로 Force ON되어 집니다.  
 >**TIP**
->Self Lock이 지원 되는 제품의 경우, 위치 이동 완료 후 진동 및 외력에 의한 잦은 위치 변동으로 모터에 
+>Self Lock이 지원 되는 제품의 경우, 위치 이동 완료 후 진동 및 외력에 의한 잦은 위치 변동으로 모터에 스트레스를 주는 경우를 막기 위해 Force Off 명령을 사용하면 좋습니다.  
+>모터가 쉬지 못하고 지속적으로 동작하게 될 경우 모터의 수명에 영향을 주거나 Overload 발생의 원인이 될 수 있습니다.
 ### 2.4.19 Actuator Pause
+| value | 동작 상태 |
+| ---- | ---- |
+| 0 | 모터의 위치 이동을 일시 정지를 해지 합니다. |
+| 1 | 모터의 위치 이동을 일시 정지 합니다. |
 Actuator의 일시 정지 명령으로 이동 중 Pause 명령이 내려지면, 현재 위치에서 정지하고, 현재 위치를 유지합니다. Pause 명령이 해지 되면 Goal Position 위치로 다시 이동합니다.  
 
-|value|동작 상태|
-|---|---|
-|0|Goal Position 위치로 이동합니다.|
-|1|모터가 일시 정지하고 현재 위치를 유지합니다.|
-
 ### 2.4.20 Actuator Stop
-Actuator가 완전 정지하고, Goal Position 위치가 정지한 현재 위치로 변경됩니다.  
-Actuator가 정지 한 후에는 자동으로 Stop Paremeter가 리셋 됩니다.  
+| value | 동작 상태 |
+| ---- | ---- |
+| 1 | 위치 이동을 정지하고 Goal Position 값을 현재 위치 값으로 변경합니다.. |
+mightyZap이 완전 정지하고, Goal Position 위치가 정지한 현재 위치로 변경됩니다.  
+mightyZap이 정지 한 후에는 자동으로 Stop Paremeter가 리셋 됩니다.  
 
 ### 2.4.21 LED
 Error가 표시 되지 않을 때 사용자가 임의로 LED를 제어하여 디스플레이 효과를 낼 수 있습니다.  
@@ -511,7 +511,6 @@ Error가 표시 되지 않을 때 사용자가 임의로 LED를 제어하여 디
 |---|---|
 |0|RED LED |
 |1|GREEN LED|
-
 ### 2.4.22  Hardware Error
 Actuator 가 동작 중 발생하는 위험 상황 중 아래의 상황에 대하여 스스로 감지하고, 다양한 방법으로 스스로를 보호할 수 있습니다.  
 각  Bit들은 중복되어 설정이 되며, Alarm Shutdown, Alarm LED,  Extend IO 기능을 이용하여 Error 발생 시에 대한 조치를 할 수 있습니다.  
@@ -538,8 +537,11 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
   입력 전압의 범위가 벗어날 해당 bit 가 set 됩니다. Low voltage일 경우, 다시 정상 전압으로 변경되면 해당 Error가 clear 됩니다.  
   하지만 high voltage Error 일 경우, 해당 Reset이 되지 않는 이상 해지 되지 않습니다. 
 ### 2.4.23 Goal Position
-Actuator를 이동 시키고자 하는 위치 값입니다. Goal Position은 Short/Long stroke limit 설정치에 영향을 받습니다. (즉, stroke limit 범위 밖으로는 위치 명령을 내려도 stroke limit위치까지만 움직임)
+Actuator를 이동 시키고자 하는 위치 값입니다. Goal Position은 [[#2.4.5 Short/Long Stroke Limt|Short/Long Stroke Limt]] 설정 제한에 영향을 받습니다. (즉, stroke limit 범위 밖으로는 위치 명령을 내려도 stroke limit위치까지만 움직임)
 
+| value | 동작 상태 |
+| ---- | ---- |
+| 0 ~ 10000 | mightyZap의 이동 목표 위치값을 설정합니다. |
 ### 2.4.24 Goal Speed
 액츄에이터의 동작 속도를 변경할 때 사용합니다. [범위 : 0~ 1000]  
 각 actuator의 최대 속도에 대해 비율로 제어하며 약 10%의 오차가 있습니다.
