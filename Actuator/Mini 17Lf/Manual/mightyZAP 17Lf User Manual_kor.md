@@ -1,7 +1,7 @@
 # 1. Introduction
 mightyZAP 17Lf Model은 다양한 기능을 내장한 Actuator로 효율적이고 유연한 모션 제어 어플리케이션을 위한 완벽한 솔루션입니다. mightyZAP 17Lf Model은 협소한 공간에서 효율적인 선형 운동이 필요한 어플리케이션에 활용 가능한 제품이며, 산업, 의료, 로봇 연구, UAV 분양 등 다양한 방면에서 활용이 가능한 제품입니다.  
 
-><font size = "5" color="#ff0000" >⚠️ 위험 </font>
+>[!danger] <font size = "5" color="#ff0000" >⚠️ 경고 </font>  
 > 1. 정격 부하 이상의 힘이 지속적으로 가해질 경우 모터가 소손될 수 있습니다.
 > 2. Rod End Tip 장착 시 무리하게 Rod에 비트는 힘을 가하게 되면 내부 부품 파손의 원인이 됩니다.   
 > 3. 제품의 사용 환경을 준수하세요 (전압 : 8V~13V, 온도 : -10도 ~ +60도)
@@ -62,12 +62,9 @@ mightyZAP 17Lf Model은 다양한 기능을 내장한 Actuator로 효율적이�
 | ^ | **53mm** | &lt; | xx.x(L)xx.x(W)xxx(H)mm / xx~xxg[수정] |
 | ^ | **90mm** | &lt; | xx.x(L)xx.x(W)xxx(H)mm / xx~xxg[수정] |
 | **동작온도 조건** | &lt; | &lt; | -10℃ ~ 60℃ |
-| **와이어 하네스** | &lt; | &lt; | TTL(PT version) :&nbsp; Molex to Molex Type&nbsp;(Molex 50-37-5033, 3pins) / 200mm length, 0.08×60(22AWG) &lt;br&gt; 또는 RS485(F version) : Molex to Molex Type (Molex 0510650400, 4pins) / 200mm length, 0.08×60(22AWG) |
-
-
-### Motor 성능 곡선
+| **와이어 하네스** | &lt; | &lt; |  Molex to Molex Type (Molex 0510650400, 4pins) / 200mm length, 0.08×60(22AWG)  <br>[수정]-extended i/o |
+### 1.2.3 Motor 성능 곡선
 ![[MotorSpecification.png]]  
-- ~~모터 성능 곡선에 대한 자세한 설명은 다음의 문서를 통해 확인해 주시기 바랍니다.~~ 
 # 2. Control Table
 Control Table은 Actuator를 구동 및 제어하기 위한 Parameter와 현재 상태를 나타내는 Parameter로 이루어져 있습니다.   
 사용자는 통신 Packet을 이용하여 특정 Parameter의 Data를  읽어 Actuator의 상태를 확인하거나, Paramter의 Data를 변경하여 Actuator를 제어할 수 있습니다.  
@@ -226,7 +223,10 @@ mightyZAP Model을 식별하기 위한 번호입니다.
 ### 2.4.3 Actuator ID
 통신 상에서 Actuator를 식별 하기 위한 고유 번호, Daisy-chain 방식으로 연결된 Actuator들은 서로 다른 ID가 할당되어야 합니다.  
 ID 값은 1~243입니다. ID 0은 Broadcase ID로 특수하게 사용 됩니다.
-> <font color="#ff0000">주의사항</font>  
+> [!NOTE] Daisy-cahin Connection
+> 이미지 필요
+
+> [!danger] 주의사항
 > 연결된 Actuator의 ID가 중복되지 않도록 주의해야 합니다. 중복된 ID가 있을 경우 통신 오류가 발생하여 정상적인 통신이 이루어지지 않습니다.  
 
 ### 2.4.4 Baudrate  
