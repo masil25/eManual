@@ -155,6 +155,7 @@ c51b49672488ed5546b66e4b52d02fc0a0a3e4ed: [[Hinge Shaft.png]]
 38efba5431186723e478a30f547b486812d29df2: [[socket head m3.0x8.png]]
 88437fd7e71fd0ce51f15815ace3762ac4c5d624: [[Wire_RS485.png]]
 49f05b5a857138ae63ca33cce102fb211da9e351: [[AsbbleRodEndtip.png]]
+75a80883fdeeed1e27956619189417be54a2dab1: [[Pasted Image 20240108172538_224.png]]
 
 %%
 # Drawing
@@ -3953,6 +3954,151 @@ c51b49672488ed5546b66e4b52d02fc0a0a3e4ed: [[Hinge Shaft.png]]
 			"originalText": " Rod End Nut",
 			"lineHeight": 1.15,
 			"baseline": 25
+		},
+		{
+			"id": "6yl2W9cCgPuvTxRN3gXMb",
+			"type": "image",
+			"x": -831.2499999999999,
+			"y": 763.4352621101772,
+			"width": 380,
+			"height": 315,
+			"angle": 0,
+			"strokeColor": "transparent",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1508734854,
+			"version": 46,
+			"versionNonce": 1242980506,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704702370857,
+			"link": null,
+			"locked": false,
+			"status": "pending",
+			"fileId": "75a80883fdeeed1e27956619189417be54a2dab1",
+			"scale": [
+				1,
+				1
+			]
+		},
+		{
+			"type": "image",
+			"version": 92,
+			"versionNonce": 463324294,
+			"isDeleted": false,
+			"id": "gbqZTcNfCuwSWktpdOyjP",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -28.58333333333337,
+			"y": 763.4352621101772,
+			"strokeColor": "transparent",
+			"backgroundColor": "transparent",
+			"width": 380,
+			"height": 315,
+			"seed": 291880070,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704702372731,
+			"link": null,
+			"locked": false,
+			"status": "pending",
+			"fileId": "75a80883fdeeed1e27956619189417be54a2dab1",
+			"scale": [
+				1,
+				1
+			]
+		},
+		{
+			"type": "image",
+			"version": 111,
+			"versionNonce": 1083605530,
+			"isDeleted": false,
+			"id": "1cIbSHa6UhxtrfH-aKXe2",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -429.91666666666663,
+			"y": 763.4352621101773,
+			"strokeColor": "transparent",
+			"backgroundColor": "transparent",
+			"width": 380,
+			"height": 315,
+			"seed": 970302618,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704702372731,
+			"link": null,
+			"locked": false,
+			"status": "pending",
+			"fileId": "75a80883fdeeed1e27956619189417be54a2dab1",
+			"scale": [
+				1,
+				1
+			]
+		},
+		{
+			"id": "2of1qsfuJinK9jG0a5ERt",
+			"type": "line",
+			"x": -902.5833333333331,
+			"y": 641.2685954435109,
+			"width": 214.05205910747327,
+			"height": 152,
+			"angle": 0,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 329008026,
+			"version": 629,
+			"versionNonce": 328805894,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704702414737,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					214.05205910747327,
+					0
+				],
+				[
+					213.33333333333337,
+					152
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": null,
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": null
 		}
 	],
 	"appState": {
@@ -3970,12 +4116,12 @@ c51b49672488ed5546b66e4b52d02fc0a0a3e4ed: [[Hinge Shaft.png]]
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "triangle",
-		"scrollX": 1081.9166666666665,
-		"scrollY": 991.3772378898225,
+		"scrollX": 958.2328679713598,
+		"scrollY": -429.2804151424598,
 		"zoom": {
-			"value": 0.75
+			"value": 1.7778908657561487
 		},
-		"currentItemRoundness": "round",
+		"currentItemRoundness": "sharp",
 		"gridSize": null,
 		"gridColor": {
 			"Bold": "#C9C9C9FF",

@@ -218,9 +218,14 @@ mightyZAP Model을 식별하기 위한 번호입니다.
 	- patch :  버그 및 코드 보완이 추가된 경우
 
    ![[versioning.png|200]]
-### 2.4.3 Actuator ID
-통신 상에서 Actuator를 식별 하기 위한 고유 번호, Daisy-chain 방식으로 연결된 Actuator들은 서로 다른 ID가 할당되어야 합니다.  
-ID 값은 1~243입니다. ID 0은 Broadcase ID로 특수하게 사용 됩니다.
+### 2.4.3 mightyZAP ID
+통신 상에서 mightyZAP을 식별 하기 위한 고유 번호, Daisy-chain 방식으로 연결된 Actuator들은 서로 다른 ID가 할당되어야 합니다.  
+
+| value | Note |
+| ---- | ---- |
+| 1~243 | mightyZAP ID |
+| 0 | Broadcaste ID (Feedback  없이 쓰기 만 가능하고 읽기는 불가능 합니다.) |
+
 > [!NOTE] Daisy-cahin Connection
 > 이미지 필요
 

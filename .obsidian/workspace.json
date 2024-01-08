@@ -20,26 +20,12 @@
             }
           },
           {
-            "id": "2430ab06c98b9d65",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "d8689d0bda321462",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
-                "mode": "source",
-                "source": false
+                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md"
               }
             }
           },
@@ -158,7 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
+                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -175,7 +161,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
+                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -198,7 +184,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md"
+                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md"
               }
             }
           },
@@ -239,22 +225,24 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "2430ab06c98b9d65",
+  "active": "d8689d0bda321462",
   "lastOpenFiles": [
-    "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
+    "Pasted Image 20240108172538_224.png",
     "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
+    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Actuator/Main.md",
+    "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
+    "Actuator/Mini 17Lf/Drawing/Accessories.md",
+    "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+    "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
     "Software/Total Manager/Total Manager User Manual_kor.md",
     "home.md",
     "Software/Total Manager/img/Protocl/IR Protocol.md",
     "Actuator/Protocol/IR Protocol",
     "Actuator/Protocol/Modbus-RTU",
     "Actuator/Protocol",
-    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
-    "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/Manual/Mini 17Lf User Manual_eng.md",
     "NEWS/News Test.md",
-    "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
     "Software/Total Manager/Total Manager User Manual_eng.md",
     "Technical/Motor의 특성도 이해.md",
     "conflict-files-obsidian-git.md",
@@ -279,14 +267,12 @@
     "Actuator/Mini 17Lf/img/M3 Nut.png",
     "Actuator/Mini 17Lf/img/Rod End Tip.png",
     "Actuator/Mini 17Lf/img/socket head m3.0x8.png",
-    "Actuator/Mini 17Lf/Drawing/Accessories.md",
     "[.md",
     "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
     "Actuator/Mini 17Lf/MachineDrawing/Mini 17Lf 2D Drawing.md",
     "Actuator/Mini 17Lf/MachineDrawing/17Lf-xxF-87-Sevo Series[mm]_Rev01_20231113.pdf",
     "Actuator/Mini 17Lf/img/27mm Machine Drwing.png",
     "Actuator/Mini 17Lf/img/87mm Machine Drwing.png",
-    "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
     "무제 파일.canvas",
     "무제 파일 1.canvas"
   ]
