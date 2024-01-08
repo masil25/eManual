@@ -2,7 +2,7 @@
 # 1. Introduction
 Mini 17Lf Model은 다양한 기능을 내장한 Actuator로 효율적이고 유연한 모션 제어 어플리케이션을 위한 완벽한 솔루션입니다. mightyZAP Mini Linear Actuator는 협소한 공간에서 효율적인 선형 운동이 필요한 어플리케이션에 활용 가능한 제품이며, 산업, 의료, 로봇 연구, UAV 분양 등 다양한 방면에서 활용이 가능한 제품입니다.  
 <font size = "5" color="#ff0000" >주의 사항</font>  
-mightyZAP Actuator를 안정적으로 사용하기 test 위해서는 몇 가지 주의 사항이 있습니다.   
+mightyZAP 17Lf Model을 안정적으로 사용하기 위해서는 몇 가지 주의 사항이 있습니다.   
 
 ## 1.2 사양
 ### 1.2.1 17Lf 시리즈 주요 사양
