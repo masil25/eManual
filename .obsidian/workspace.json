@@ -71,28 +71,15 @@
             "id": "4015bd12fdc93a5c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "diff-view",
               "state": {
-                "file": "Library/library Test.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "91bd0774f5b64346",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
-                "mode": "source",
-                "source": false
+                "file": ".obsidian/workspace.json",
+                "staged": false
               }
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -158,7 +145,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -175,7 +161,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -197,9 +182,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md"
-              }
+              "state": {}
             }
           },
           {
@@ -240,18 +223,21 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "91bd0774f5b64346",
+  "active": "4015bd12fdc93a5c",
   "lastOpenFiles": [
-    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
-    "Software/Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 17Lf/Manual/Mini 17Lf User Manual_eng.md",
-    "FAQ/FAQ Test.md",
     "Actuator/Mini 17Lf/Manual/Mini 17Lf User Manual_kor.md",
+    "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
+    "Software/Total Manager/Total Manager User Manual_eng.md",
+    "Software/Total Manager/Total Manager User Manual_kor.md",
+    "Technical/Motor의 특성도 이해.md",
+    "home.md",
+    "conflict-files-obsidian-git.md",
+    "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
+    "FAQ/FAQ Test.md",
     "Actuator/Mini 17Lf/Manual",
     "Actuator/Mini 17Lf/img/17Lf Rendering.png",
-    "home.md",
     "Actuator/Mini 17Lf/img/17Lf Accessories.png",
-    "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
     "Boards/Board Test.md",
     "Library/library Test.md",
     "NEWS/News Test.md",
@@ -261,7 +247,6 @@
     "Boards",
     "Library",
     "Software",
-    "Technical/Motor의 특성도 이해.md",
     "img/myImg.png.md",
     "img/CautionMotionSync.png.md",
     "img/CautionMotionSy.md",
@@ -284,10 +269,8 @@
     "Actuator/Mini 17Lf/MachineDrawing/17Lf-xxF-50-Sevo Series[mm]_Rev01_20231113.pdf",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
     "Software/Total Manager/img/Protocl/Modbus RTU.md",
-    "conflict-files-obsidian-git.md",
     "Software/Total Manager/img/Protocl/IR Protocol.md",
     "BrokenRod.png.md",
-    "StrokeLimit.png.md",
     "무제 파일.canvas",
     "무제 파일 1.canvas"
   ]
