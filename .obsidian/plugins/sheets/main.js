@@ -1693,7 +1693,7 @@ Error: \`${error}\`
       cell.setAttribute("col-index", columnIndex.toString());
       import_obsidian2.MarkdownRenderer.render(
         this.app,
-        "\u200B " + cellContent,
+        "\u200B " + (cellContent || "\u200B"),
         // Make sure markdown that requires to be at the start of a line is not rendered
         cell,
         "",
