@@ -1,7 +1,7 @@
 # 1. Introduction
 mightyZAP 17Lf Model은 다양한 기능을 내장한 Actuator로 효율적이고 유연한 모션 제어 어플리케이션을 위한 완벽한 솔루션입니다. mightyZAP 17Lf Model은 협소한 공간에서 효율적인 선형 운동이 필요한 어플리케이션에 활용 가능한 제품이며, 산업, 의료, 로봇 연구, UAV 분양 등 다양한 방면에서 활용이 가능한 제품입니다.  
 
->[!danger] <font size = "5" color="#ff0000" >⚠️ 경고 </font>  
+>[!danger] 위험 
 > 1. 정격 부하 이상의 힘이 지속적으로 가해질 경우 모터가 소손될 수 있습니다.
 > 2. Rod End Tip 장착 시 무리하게 Rod에 비트는 힘을 가하게 되면 내부 부품 파손의 원인이 됩니다.   
 > 3. 제품의 사용 환경을 준수하세요 (전압 : 8V~13V, 온도 : -10도 ~ +60도)
@@ -9,7 +9,7 @@ mightyZAP 17Lf Model은 다양한 기능을 내장한 Actuator로 효율적이�
 > 5. 오배선에 우의 하여 주시기 바랍니다.
 > <font color="#ff0000">(자세한 사항은</font> [[#3.1 사용 주의 사항]] <font color="#ff0000">을 참조 하여 주시기 바랍니다.)</font>
 
-> <font size = "5" color="#ff0000" >⚠️ 경고 </font>  
+> [!warning] 경고 
 > - 작동 직후 mightyZAP의 케이스가 뜨거울 수 있습니다. 화상에 주의하십시오.
 > - mightyZAP을 물기, 먼지, 기름으로부터 멀리 하십시오.
 > - 본 제품은 실내 용도로 설계된 제품입니다. 실 외 사용을 금합니다.
@@ -226,7 +226,7 @@ ID 값은 1~243입니다. ID 0은 Broadcase ID로 특수하게 사용 됩니다.
 > [!NOTE] Daisy-cahin Connection
 > 이미지 필요
 
-> [!danger] 주의사항
+> [!warning] 주의사항
 > 연결된 Actuator의 ID가 중복되지 않도록 주의해야 합니다. 중복된 ID가 있을 경우 통신 오류가 발생하여 정상적인 통신이 이루어지지 않습니다.  
 
 ### 2.4.4 Baudrate  
@@ -240,18 +240,19 @@ Actuator와 통신을 하기 위한 통신 속도 입니다.
 |  64(0x40) |  19200 bps |
 | 128(0x80) |   9600 bps |  
 
-|Bit|Name|Description|
-|---|---|---|
-|Bit 7|-|미상용|
-|Bit 6|Overload Error|일정 시간 이상 동안 부하가 발생한 경우|
-|Bit 5|-||
-|Bit 4|-||
-|Bit 3|-||
-|Bit 2|Motor Error|모터가 동작하지 않는 경우|
-|Bit 1|Potentiometer Error|Potentiometer가 정상적으로 동작하지 않는 경우|
-|Bit 0|Input Voltage Error|인가된 전압이 동작 범위를 벗어난 경우|
+| Bit | Name | Description |
+| ---- | ---- | ---- |
+| Bit 7 | - | 미상용 |
+| Bit 6 | Overload Error | 일정 시간 이상 동안 부하가 발생한 경우 |
+| Bit 5 | - |  |
+| Bit 4 | - |  |
+| Bit 3 | - |  |
+| Bit 2 | Motor Error | 모터가 동작하지 않는 경우 |
+| Bit 1 | Potentiometer Error | Potentiometer가 정상적으로 동작하지 않는 경우 |
+| Bit 0 | Input Voltage Error | 인가된 전압이 동작 범위를 벗어난 경우 |
+|  |  |  |
 
-> **Tip**   
+> [!tip] Tip   
 > Lowest input Voltage의 경우 Reset을 하지 않아도 정상 전압으로 돌아오면 정상적으로 동작이 됩니다.
 
 ### 2.4.5 Short/Long Stroke Limt  
@@ -301,7 +302,7 @@ Present Positon : 1000 -> 1050
 -> 위치 편차가 마진 값보다 크게 발생하여, 위치 편차를 줄이기 위해 Actuator를 제어합니다.  
 ```
 위의 예와 같이 Start Compliacne  Margin을 크게 설정할 경우, 외부 변화에 둔감하게 동작하여 위치 정밀도는 떨어질 수 있으나, 사용자가 제어하지(의도하지) 않은 모터의 잦은 동작을 막아 동작 안전성 및 내구성에 좋습니다.  
-><font color="#ff0000">Warnning</font>  
+>[!warning] Warning
 > default로 설정된 값은 최소한의 안전성을 위해 선정된 값으로 default 값 아래로 낮추는 것은 추천 드리지 않습니다.  
 
 ### 2.4.7 End Compliance Margin  
@@ -362,7 +363,7 @@ Min/Max Position Calibration Parameter는 Actuator의 Goal Position이 최소/�
 | ---- | ---- | ---- | ---- |
 | Motor Operating Rate Limit | 모터에 공급하는 PWM 의 최대 값 설정 | 0~1000 |  |
 Actuator의 모터를 제어하기 위해 사용되는 PWM의 최대 값 설정 Parameter 입니다.
->**TIP**  
+>[!tip] TIP
 >본 가이드에서는 위치 제어 신호용 PWM과 구분하여 사용하기 위해 Motor Operating Rate 란 용어를 사용합니다.  
 
 정격 부하 시 400 이하의 낮은 값에서는 모터가 동작하지 않을 수 있습니다.  또한 Motor Operating Rate값을 변경하면 속도와 Stall Force의 값이 변경 됩니다.  
@@ -372,7 +373,7 @@ Actuator의 모터를 제어하기 위해 사용되는 PWM의 최대 값 설정 
 | Speed Limit | Actuator의 최대 속도 제한 설정 | 0~1000 |  |
 Actuator의 최대 이동 속도 제한 값입니다. Speed Limit를 낮게 설정하여도 최대 Force에는 영향을 주지 않지만, 최대 전류까지 도달하는 시간은 다를 수 있습니다. 속도의 값이 낮을 수록 최대 전류까지 도달하는 시간이 길어집니다.  
 Speed Limit를 변경할 경우, Goal Speed도 같이 변경됩니다. 또한 전원 인가 시 Speed Limit의 값을 Goal Speed에 적용합니다.  
->**TIP**  
+>[!tip] TIP  
 >Goal Speed를 변경하여도 Speed Limit는 변하지 않습니다.  
 ### 2.4.12 Current Limit  
 | Parameter | Description | Range | Unit |
@@ -380,7 +381,7 @@ Speed Limit를 변경할 경우, Goal Speed도 같이 변경됩니다. 또한 �
 | Current Limit | Actuator의 최대 속도 제한 설정 | 0~1600 | mA |
 모터 가동 중 최대 전류 값을 제한 합니다. 해당 기능을 이용하여 Actuator의 최대 Force를 제한 할 수 있습니다.    
 Current Limit는 비 휘발성 Parameter로 전원이 끊어져도 변경된 Data 를 유지합니다. Current Limit 값이 변경되면 Goal Current 값도 같이 변경됩니다. 
->**TIP**
+>[!tip] TIP  
 >Current Limit/Goal current 값에 대한 동작 특성은  모터 성능 곡선 및 Datasheet를 참조하여 주시기 바랍니다.
 
 ### 2.4.13 Current PI Control  
@@ -391,7 +392,7 @@ Current Limit는 비 휘발성 Parameter로 전원이 끊어져도 변경된 Dat
 모터의 전류 제어를 위한 PID Gain값입니다. 
 정해진 값이 보다 큰 PI값을 적용할 경우 Goal Current와의 오차에 대해 거칠게 동작할 수 있습니다.   
 정해진 값보다 작은 PI값을 적용할 경우 Goal Current와의 오차에 부드럽게 동작하나 Goal Current 값 과의 오차가 크게 나타날 수 있습니다.
-> **TIP**
+> [!tip] TIP  
 > PID값을 변경하기 전에 [[#2.4.8 Acceleration/Deceration]]을 먼저 적용하고 테스트하여 주시기 바랍니다.  
 > PID값을 수정하시기 전에 PID에 대한 충분히 숙지하신 후에 해당 값을 변경하여 주시기 바랍니다.  
 
@@ -408,11 +409,11 @@ Current Limit는 비 휘발성 Parameter로 전원이 끊어져도 변경된 Dat
 반대로 Gain값을 적게 적용할 경우 목표 위치까지 도달하는 시간이 증가 할 수 있지만, 모터의 동작이 부드러워 질 수 있습니다. 하지만 과도하게 적은 Gain 값은 목표 위치에 도달하지 못하게 할 수도 있습니다.
 PID 값을 수정하실 때는 기본 값에서 작은 값을 가 감하여 테스트 하시기 바랍니다.
 
-><font color="#ff0000">Warnning</font>
+>[!warning] Warning
 > PID값을 변경하기 전에 [[#2.4.8 Acceleration/Deceration]]을 먼저 적용하고 테스트하여 주시기 바랍니다.  
 > PID값을 수정하시기 전에 PID에 대한 충분히 숙지하신 후에 해당 값을 변경하여 주시기 바랍니다.  
 
->[ 일반적인 PID값 제어 방법 ]
+>[!tip] [ 일반적인 PID값 제어 방법 ]
 >![[PID_Compensation_Animated.gif]]
  [참고 문헌][https://commons.wikimedia.org/wiki/File:PID_Compensation_Animated.gif](https://commons.wikimedia.org/wiki/File:PID_Compensation_Animated.gif) 
 
@@ -424,6 +425,7 @@ PID 값을 수정하실 때는 기본 값에서 작은 값을 가 감하여 테�
 Indirect Address에 특정 주소를 저장하면 해당 Indirect Address는 특정 주소와 동일한 기능을 가지게 됩니다.  
 예를 들어 Indirect Address 0에 '205'(Goal Position)을 쓰고, Indirect Data 0에 '5000'을 쓰면, Actuator가 '5000'의 값으로 이동을 합니다. 또한 Goal Position 값 또한 '5000'으로 변경된 것을 확인 할 수 있습니다.   
 Indirect Address에 특정 주소를 세팅하면, Indirect Data에 해당 주소와 동일한 Parameter 가 됩니다.    
+>[!tip] TIP
 >Total Manager를 통해 Indricet Address 설정을 쉽게 사용할 수 있습니다.   
 >사용 빈도가 높은 Parameter는 Select Box에 Option으로 추가 하였으며, 등록되지 않은 주소의 경우 'User Input' Option을 선택 하신 Select Box 옆 Test Box에 직접 작성하여 저장하여 주시면 됩니다.   
 >![[indirectAddrss.gif]]
@@ -485,7 +487,7 @@ Action Setting은 모터가 움직이는 방식을 설정하며 아래와 같습
 Force ON/OFF를 실행 합니다. 전원이 인가 되면 자동으로 Force ON으로 설정됩니다.  
 Force Off 명령 시 즉시 모터의 전원을 차단하여 모터의 동작을 중지합니다. Self Lock을 지원하지 않는 제품의 경우 외부의 힘에 의해 위치 값이 변경될 수 있습니다.  
 Force Off 후 별도의 명령(Force ON) 명령이 없이 Goal Position 명령 시 자동으로 Force ON되어 집니다.  
->**TIP**
+>[!tip] TIP
 >Self Lock이 지원 되는 제품의 경우, 위치 이동 완료 후 진동 및 외력에 의한 잦은 위치 변동으로 모터에 스트레스를 주는 경우를 막기 위해 Force Off 명령을 사용하면 좋습니다.  
 >모터가 쉬지 못하고 지속적으로 동작하게 될 경우 모터의 수명에 영향을 주거나 Overload 발생의 원인이 될 수 있습니다.
 ### 2.4.19 Actuator Pause
@@ -541,7 +543,7 @@ Actuator를 이동 시키고자 하는 위치 값입니다. Goal Position은 [[#
 | value | 동작 상태 |
 | ---- | ---- |
 | 0 ~ 10000 | mightyZap의 이동 목표 위치값을 설정합니다.<br>(각 모델의 Stroke 길이와 상관없이 위치 해상도는 모두 10000입니다.) |
->**TIP**  
+>[!tip] TIP
 >사용하고 계신 Stoke 의 최대 길이를 참조하시여 위치 값을 계산하시기 바랍니다.   
 > ![[17lfCurrentPositionCalc.png]]  
 ### 2.4.24 Goal Speed
@@ -565,12 +567,12 @@ Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
 | ---- | ---- |
 | 0 ~ 1600 | mightyZap의 최대 전류 설정 값 |
 초기 전원 인가 시 비 휘발성 [[#2.4.12 Current Limit|Current Limit]]의 값을 Goal Current의 초기 값으로 적용합니다.  
-> **Tip** <font color="#4f81bd">Goal Current를 이용한 Force 제한</font>
+> [!tip] Tip - Goal Current를 이용한 Force 제한
 > Goal Current를 조절하면 모터가 낼 수 있는 최대 힘을 조절할 수 있습니다. 제어 대상 및 사용자의 어플리케이션에 따라 특정 Force를 이상 넘어가는 것을 제한하고 자 할 때 사용하시면 됩니다.   
 > 지나치게 낮은 Goal Current는 모터의 부하를 이기지 못해 동작하지 않을 수 있습니다. 
 > Datasheet의 Goal Current Vs Force 표를 참조하신 후 적절한 값을 적용하시기 바랍니다. 또한 해당 값은 약 15%의 오차를 포함합니다.  
 
->**Warnning** <font color="#ff0000">Over Current</font>
+>[!warning] Warning - Over Current
 >Goal Current 800  이상 또는 1600- 설정일 경우 모터에 무리가 발생한다. 지속적으로 사용하는 구간이 아닌 특정상황 잠시 사용하는 구간이다.  지속 적으로 사용할 경우 overload Error가 발생하거나 모터의 수명이 짧아지게 됩니다.
 ### 2.4.26 Present Postion
 현재 stroke의 위치 값을 나타냅니다. 사용하고 계신 Stoke 의 최대 길이를 참조하시여 위치 값을 계산하시기 바랍니다.   
@@ -609,6 +611,7 @@ Overload의 기준이 되는 전류 누적량을 표시합니다. 모터가 동�
 최대 값을 100으로 표시하며, 해당 값이 100이 될 경우 Overload Shutdown  이 발생하게 됩니다.  
 Overload Shutdown이 발생하지 않도록 Overload value 값이 90 이하로 관리하여 주시기 바랍니다.  
 Overload Value 값이 다 내려가는데 최대 30초가 걸리게 됩니다.  
+> [!tip] TIP
 > 동작 Dutyrate를 50%이하로 관리하여 주시며, 최대 연속 동작 시간이 30초가 넘지 않아야 합니다. 자세한 사항은 [[#2.4.22 Hardware Error]]와 [[#3.1.3 Duty Rate]]를 참조하여 주시기 바랍니다.
 ### 2.4.32 Action Enable
 Action Parameter로 작성된 Action을 실행할 때 사용합니다. Action Paramter 를 작성하였어도 Action Enable을 활성화 하지 않으면 Action은 동작하지 않습니다. 
@@ -617,7 +620,7 @@ Action Parameter로 작성된 Action을 실행할 때 사용합니다. Action Pa
 | ---- | ---- | ---- |
 | 0 | Action disable |  |
 | 1 | Action Enable |  |
->**TIP** 
+> [!tip] TIP
 >Action에 대한 자세한 사항은 [[#4.17 Action Control]]을 참조하여 주시기 바랍니다.
 ### 2.4.31 Indirect Data
 indirect Address로 설정된 Paramter들의 Data를 읽고 쓸 수 있는 Parameter입니다.
@@ -625,7 +628,7 @@ indirect Address로 설정된 Paramter들의 Data를 읽고 쓸 수 있는 Param
 ### 2.4.32 Reset
 ID, Baudrate, Protocol, Min/Max Position Calibration을 제외한 모든 Parameter가 초기화 됩니다.  
 Reset이 완료되면 mightyZAP의 시스템이 재 시작 되어 LED가 2번 깜빡입니다.  
->  **Tip**  
+>  [!tip] TIP
 >  모든 데이터를 초기화하기 위해서는  당사의 Manager 프로그램을 이용하여 Factory Reset을 진행하여 주시기 바랍니다.
 ### 2.4.33 Restart  
 Baudrate, Protocol 변경 후 적용을 위해  또는 Hardware Error 인해 Suthdown이 발생하여 시스템을 재 시작 해야 하는경우 Restart Parameter 에 '1'으로 세팅하여 진행할 수 있습니다.
@@ -646,6 +649,7 @@ Baudrate, Protocol 변경 후 적용을 위해  또는 Hardware Error 인해 Sut
 ### 3.1.2 전원 관리
 mightyZAP에 DC 정전압 장치를 사용하여 정격 전압에 맞게 전원인 가를 하여 주십시오. 전원 입력은  8.0 ~ 13V를 인가 해 주셔야 합니다.  13V이상의 과전압이 들어가면 제품 파손 의 원인이 됩니다.
 또한, 하나의 전원 Source에 여러 개의 mightyZAP을 연결 하였을 경우 최대 허용 전류를 계산하여 사용하여 주시기 바랍니다. 기본 설정에서 하나의 mightyZAP에서 사용하는 최대 전류는 800mA로 아래와 같이 계산하여 주시면 됩니다.
+>[!tip] TIP
 >- 예를 들어 3개의 mightyZAP을 연결하여 사용하는 경우
    800mA x 3EA = 2.4A
   안전성을 고려하여 500mA 이상 높은 3A 이상의 Power Source를 사용하시기 바랍니다.
@@ -683,6 +687,7 @@ mightyZAP의 보증 기간은 구매 일부터 1년입니다. 보증 수리를 �
 ## 4.1 악세사리
 ### 4.1.1 기본 악세사리
 ![[17Lf Accessories.png|700]]  
+>[!warning] Warning
 >3번 M3 너트는 Hinge Shaft  고정과 더불어, Rod End Tip과 Rod End Nut 사이에 스토퍼로 체결하여 사용하시기 바랍니다.  
 >![[ASB_RodendTip.png|300]]
 
