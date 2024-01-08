@@ -182,33 +182,35 @@ Control Table Data는 'R', 'RW'로 표기됩니다. 'R'은 읽기 전용(Read On
 
 ## 2.3 Volatile Memory(RAM)
 
-|  Register Number  |   Address      |   Name                 |   Description       |   Access   |   Default         |
-|:------------------|:---------------|:-----------------------|:--------------------|:-----------|:------------------|
-|            40201  |   200 (0xC8)   |   Force On/Off         |   모터 출력 끄고 켜기       |   RW       |         1(0x01)   |
-|            40202  |   201 (0xC9)   |   Actuator Pause       |   모터 일시 정지          |   RW       |         0(0x00)   |
-|            40203  |   202 (0xCA)   |   Actuator Stop        |   모터 일시 정지          |   RW       |         0(0x00)   |
-|            40204  |   203 (0xCB)   |   LED Color            |   LED On/Off        |   RW       |         0(0x00)   |
-|            40205  |   204 (0xCC)   |   Hardware Error       |   Hardware Error    |   R        |         0(0x00)   |
-|            40206  |   205 (0xCD)   |   Goal Position        |   목표 위치 값           |   RW       |                   |
-|            40209  |   208 (0xD0)   |   Goal Speed           |   목표 속도 값           |   RW       |   Speed Limit     |
-|            40210  |   209 (0xD1)   |   Goal Current         |   최대 전류 값           |   RW       |   Current Limit   |
-|            40211  |   210 (0xD2)   |   Present Position     |   현재 위치 값           |   R        |                   |
-|            40212  |   211 (0xD3)   |   Present Current      |   현재 소비 전류 값        |   R        |                   |
-|            40214  |   213 (0xD5)   |   Present Motor PWM    |   모터 입력 PWM         |   R        |                   |
-|            40215  |   214 (0xD6)   |   Present Voltage      |   현재 전압 값           |   R        |                   |
-|            40216  |   215 (0xD7)   |   Moving               |   모터 동작 유무          |   R        |                   |
-|             40218 |     217 (0xD9) | Present Overload Value |                     | R          |                   |
-|            40221  |   220 (0xDC)   |   Action Enable        |   Action 기능 켜기/끄기   |   RW       |                   |
-|            40241  |   240 (0xF0)   |   Internal Data 0      |   간접 주소 0 데이터 값     |            |                   |
-|            40242  |   241 (0xF1)   |   Internal Data 1      |   간접 주소 1 데이터 값     |            |                   |
-|            40243  |   242 (0xF2)   |   Internal Data 2      |   간접 주소 2 데이터 값     |            |                   |
-|            40244  |   243 (0xF3)   |   Internal Data 3      |   간접 주소 3 데이터 값     |            |                   |
-|            40245  |   244 (0xF4)   |   Internal Data 4      |   간접 주소 4 데이터 값     |            |                   |
-|            40246  |   245 (0xF5)   |   Internal Data 5      |   간접 주소 5 데이터 값     |            |                   |
-|            40247  |   246 (0xF6)   |   Internal Data 6      |   간접 주소 6 데이터 값     |            |                   |
-|            40248  |   247 (0xF7)   |   Internal Data 7      |   간접 주소 7 데이터 값     |            |                   |
-|            40249  |   248 (0xF8)   |   Internal Data 8      |   간접 주소 8 데이터 값     |            |                   |
-|            40250  |   249 (0xF9)   |   Internal Data 9      |   간접 주소 9 데이터 값     |            |                   |  
+| Register Number | Address | Name | Description | Access | Default |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 40201 | 200 (0xC8) | Force On/Off | 모터 출력 끄고 켜기 | RW | 1(0x01) |
+| 40202 | 201 (0xC9) | Actuator Pause | 모터 일시 정지 | RW | 0(0x00) |
+| 40203 | 202 (0xCA) | Actuator Stop | 모터 일시 정지 | RW | 0(0x00) |
+| 40204 | 203 (0xCB) | LED Color | LED On/Off | RW | 0(0x00) |
+| 40205 | 204 (0xCC) | Hardware Error | Hardware Error | R | 0(0x00) |
+| 40206 | 205 (0xCD) | Goal Position | 목표 위치 값 | RW |  |
+| 40209 | 208 (0xD0) | Goal Speed | 목표 속도 값 | RW | Speed Limit |
+| 40210 | 209 (0xD1) | Goal Current | 최대 전류 값 | RW | Current Limit |
+| 40211 | 210 (0xD2) | Present Position | 현재 위치 값 | R |  |
+| 40212 | 211 (0xD3) | Present Current | 현재 소비 전류 값 | R |  |
+| 40214 | 213 (0xD5) | Present Motor PWM | 모터 입력 PWM | R |  |
+| 40215 | 214 (0xD6) | Present Voltage | 현재 전압 값 | R |  |
+| 40216 | 215 (0xD7) | Moving | 모터 동작 유무 | R |  |
+| 40218 | 217 (0xD9) | Present Overload Value |  | R |  |
+| 40221 | 220 (0xDC) | Action Enable | Action 기능 켜기/끄기 | RW |  |
+| 40231 | 230 (0xE6) | Reset | Parameter Reset | W |  |
+| 40232 | 231 (0xE7) | Restart | System Restart | W |  |
+| 40241 | 240 (0xF0) | Internal Data 0 | 간접 주소 0 데이터 값 |  |  |
+| 40242 | 241 (0xF1) | Internal Data 1 | 간접 주소 1 데이터 값 |  |  |
+| 40243 | 242 (0xF2) | Internal Data 2 | 간접 주소 2 데이터 값 |  |  |
+| 40244 | 243 (0xF3) | Internal Data 3 | 간접 주소 3 데이터 값 |  |  |
+| 40245 | 244 (0xF4) | Internal Data 4 | 간접 주소 4 데이터 값 |  |  |
+| 40246 | 245 (0xF5) | Internal Data 5 | 간접 주소 5 데이터 값 |  |  |
+| 40247 | 246 (0xF6) | Internal Data 6 | 간접 주소 6 데이터 값 |  |  |
+| 40248 | 247 (0xF7) | Internal Data 7 | 간접 주소 7 데이터 값 |  |  |
+| 40249 | 248 (0xF8) | Internal Data 8 | 간접 주소 8 데이터 값 |  |  |
+| 40250 | 249 (0xF9) | Internal Data 9 | 간접 주소 9 데이터 값 |  |  |
   
 ## 2.4 Control Table Discription
 ### 2.4.1  Model Serial Number
@@ -564,6 +566,8 @@ Action Parameter로 작성된 Action을 실행할 때 사용합니다. Action Pa
 | 0 | Action disable |  |
 | 1 | Action Enable |  |
 ### 2.4.31 Reset
+ID, Baudrate, Protocol, Min/Max Position Calibration을 제외한 모든 Parameter가 초기화 됩니다.  
+Reset이 완료되면 mightyZAP의 시스템이 재 시작 되어 LED가 2번 깜빡입니다.
 ### 2.4.32 Restart
 ### 2.4.33 Indirect Data
 indirect Address로 설정된 Paramter들의 Data를 읽고 쓸 수 있는 Parameter입니다.
@@ -620,7 +624,7 @@ mightyZAP의 보증 기간은 구매 일부터 1년입니다. 보증 수리를 �
 # 4. 참고 자료
 ## 4.1 악세사리
 ### 4.1.1 기본 악세사리
-![[17Lf Accessories.png|900]]  
+![[17Lf Accessories.png|700]]  
 >3번 M3 너트는 Hinge Shaft  고정과 더불어, Rod End Tip과 Rod End Nut 사이에 스토퍼로 체결하여 사용하시기 바랍니다.  
 >![[ASB_RodendTip.png|300]]
 
@@ -631,8 +635,8 @@ mightyZAP의 보증 기간은 구매 일부터 1년입니다. 보증 수리를 �
 - 아두이노 기반 EZ Controller (IR-CT01)
 - 라즈베리파이 HAT (IR-STS02)
 - 별매 익스텐션 와이어 (IR-EW01~10)
-## 4.2 인증
-## 4.3 커넥터 자료
+
+## 4.2 커넥터 자료
 - Pin 배열
 - 통신 회로
 
