@@ -494,7 +494,7 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
 | Bit 2 | - | - |
 | Bit 1 | - | - |
 | Bit 0 | Input Voltage Error | 인가된 전압이 동작 범위를 벗어난 경우 |
-- Overload  Error    
+- Overload  Error[수정]    
   2가지 방식이 있음, Motor continous current Limit 연속 전류 제한  
   Overload를 발생하는 는  I<sup>2</sup>T 방식을 이용하여 전류를 축적하여 모터를 보호하는데 사용됩니다. I<sup>2</sup>T 보호는 모터의 열 모델링을 기반으로 한 모터 과부하 보호 방법으로, 일종의 센서리스 모터 과열 보호 장치 입니다.  
   i<sup>2</sup>t = i<sub>peak</sub><sup>2</sup>t - i<sub>norm</sub><sup>2</sup>t = (i<sub>peak</sub><sup>2</sup> -i<sub>norm</sub><sup>2</sup>)t  
@@ -555,9 +555,11 @@ Motor Operating Rate는 Goal Speed, Goal Current 등에 따라 값이 달라집�
 모터의 동작 유무를 나타냅니다. 정확히는 모터의 목표 도달 유무를 나타냅니다.  
 Motor Operating Rate 값이 '0'이어도 목표 위치 도달 완료 상태가 아니면 Moving값은 '0'이 되지 않습니다. 
 ### 2.4.31 Present Overload Value
-Overload의 기준이 되는 전류 누적량을 표시합니다. 최대 값을 100으로 표시하며, 해당 값이 100이 될 경우 Overload Shutdown  이 발생하게 됩니다.  
-Overload value 값이 90이 넘지 않도록 관리해주셔야 합니다. 모터가 동작할 경우 전류값이 누적되어 값이 상승하고 모터가 정지할 경우 해당 값이 서서히 내려가게 됩니다.  
-Overload Value 값이 다 내려가는데 
+Overload의 기준이 되는 전류 누적량을 표시합니다. 모터가 동작 할 경우 전류값이 누적되어 값이 상승하고 모터가 정지 할 때 값이 감소됩니다. 누적되는 값이 부하 정도에 따라 다르며, 감소 되는 값은 모터 정지시 정격 전류 기준값이 감소됩니다.  
+최대 값을 100으로 표시하며, 해당 값이 100이 될 경우 Overload Shutdown  이 발생하게 됩니다.  
+Overload Shutdown이 발생하지 않도록 Overload value 값이 90 이하로 관리하여 주시기 바랍니다.  
+Overload Value 값이 다 내려가는데 최대 30초가 걸리게 됩니다.  
+> 동작 Dutyrate를 50%이하로 관리하여 주시며, 최대 연속 동작 시간이 30초가 넘지 않아야 합니다. 자세한 사항은 [[#2.4.22 Hardware Error]]와 [[#3.1.3 Duty Rate]]를 참조하여 주시기 바랍니다.
 ### 2.4.32 Action Enable
 Action Parameter로 작성된 Action을 실행할 때 사용합니다. Action Paramter 를 작성하였어도 Action Enable을 활성화 하지 않으면 Action은 동작하지 않습니다. 
 
@@ -567,7 +569,9 @@ Action Parameter로 작성된 Action을 실행할 때 사용합니다. Action Pa
 | 1 | Action Enable |  |
 ### 2.4.31 Reset
 ID, Baudrate, Protocol, Min/Max Position Calibration을 제외한 모든 Parameter가 초기화 됩니다.  
-Reset이 완료되면 mightyZAP의 시스템이 재 시작 되어 LED가 2번 깜빡입니다.
+Reset이 완료되면 mightyZAP의 시스템이 재 시작 되어 LED가 2번 깜빡입니다.  
+>  **Tip**  
+>  모든 데이터를 초기화하기 위해서는  당사의 Manager 프로그램을 이용하여 Factory Reset을 진행하여 주시기 바랍니다.
 ### 2.4.32 Restart
 ### 2.4.33 Indirect Data
 indirect Address로 설정된 Paramter들의 Data를 읽고 쓸 수 있는 Parameter입니다.
