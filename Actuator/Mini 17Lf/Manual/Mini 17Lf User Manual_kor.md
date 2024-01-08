@@ -420,7 +420,7 @@ PID 값을 수정하실 때는 기본 값에서 작은 값을 가 감하여 테�
 ### 2.4.15 Indirect Address
 | Parameter | Description | Range | Unit |
 | ---- | ---- | ---- | ---- |
-| Indirect Address N | Actuator의 최대 속도 제한 설정 | 0~1600 | mA |
+| Indirect Address N | 사용자 간접 주소 지정 | 0 ~ 65535 |  |
 사용자는 해당 기능을 이용하여, 떨어져 있는 여러 Parameter를 모아서 이용할 수 있습니다.  
 Indirect Address에 특정 주소를 저장하면 해당 Indirect Address는 특정 주소와 동일한 기능을 가지게 됩니다.  
 예를 들어 Indirect Address 0에 '205'(Goal Position)을 쓰고, Indirect Data 0에 '5000'을 쓰면, Actuator가 '5000'의 값으로 이동을 합니다. 또한 Goal Position 값 또한 '5000'으로 변경된 것을 확인 할 수 있습니다.   
@@ -430,17 +430,17 @@ Indirect Address에 특정 주소를 세팅하면, Indirect Data에 해당 주�
 >![[indirectAddrss.gif]]
 
 ### 2.4.16 Extend I/O Control  
-Mini 17Lf 시리즈에는 Extended I/O Port가 존재합니다. 해당 기능은 통신 4개의 I/O Port를 제공하며 , 각각은 아래와 같은 기능을 제공합니다.  
-
-|IO PORT|Function|
-|---|---|
-|IO Port 1| Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
-|IO Port 2| Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
-|IO Port 3| Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
-|IO Port 4| Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
+| IO PORT | Function |
+| ---- | ---- |
+| IO Port 1 | Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
+| IO Port 2 | Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
+| IO Port 3 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
+| IO Port 4 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
+Mini 17Lf 시리즈에는 Extended I/O Port가 존재합니다. 해당 기능은 통신 4개의 I/O Port를 제공하며 , 각각은 위와 같은 기능을 제공합니다.  
+해당 값을 설정하기 위해서는 당사의 Manager Program을 사용하여 주시기 바랍니다.
 
 Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며 외부 전원이 필요하지 않습니다.  각 기능 설명에 명시된 회로 구성대로 연결해야 Actuator 에 문제가 발생하지 않습니다.  
-(connector 기구 이미지 사이드 뷰)
+(connector 기구 이미지 사이드 뷰)[수정]
 
 <font size="5"> Function Description</font>
 - **Funtion Switch**   
@@ -479,12 +479,18 @@ Action Setting은 모터가 움직이는 방식을 설정하며 아래와 같습
    <이미지 그래프로 표현>
 
 ### 2.4.18 Force On/Off  
+| Parameter | Description | Range | Unit |
+| ---- | ---- | ---- | ---- |
+| Force On/Off |  모터 동작 전원 차단 | 0, 1 |  |
 Force ON/OFF를 실행 합니다. 전원이 인가 되면 자동으로 Force ON으로 설정됩니다.  
 
 |value|동작 상태|
 |---|---|
 |0| 모터의 전원을 차단하여 기동력이 발생 되지 않도록 합니다.|
 |1|모터의 전원을 인가하여 기동력이 발생하도록 합니다.|
+Force Off 명령 시 즉시 모터의 전원을 차단하여 모터의 동작을 중지합니다. Self Lock을 지원하지 않는 제품의 경우 외부의 힘에 의해 위치 값이 변경될 수 있습니다.  
+>**TIP**
+>Self Lock이 지원 되는 제품의 경우, 위치 이동 완료 후 진동 및 외력에 의한 잦은 위치 변동으로 모터에 
 ### 2.4.19 Actuator Pause
 Actuator의 일시 정지 명령으로 이동 중 Pause 명령이 내려지면, 현재 위치에서 정지하고, 현재 위치를 유지합니다. Pause 명령이 해지 되면 Goal Position 위치로 다시 이동합니다.  
 
