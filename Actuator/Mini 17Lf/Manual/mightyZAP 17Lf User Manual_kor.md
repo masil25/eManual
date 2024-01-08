@@ -71,14 +71,14 @@ Control Table은 mightyZAP을 구동 및 제어하기 위한 Parameter와 현재
 > 통신 Packet에 대한 자세한 내용은 [[Modbus RTU Manual-kor|Modbus RTU]]를 참고하여 주시기 바랍니다.
 >
 ## 2.1 Description  
-### 2.1.1 Memory Type (Non-Volatile, Volatile)  
-Control Table은 2개의 영역으로 구분됩니다. Data를 변경한 후 전원을 꺼도 그 Data가 유지가 되는  Non-volatile Memory(ROM)와 전원이 꺼지면 Data가 초기화 되는 Volatile Memory(RAM)가 있습니다.    
+### 2.1.1 Memory Type
+Control Table은 2개의 영역으로 구분됩니다. Data를 변경한 후 전원을 꺼도 Data가 유지가 되는  Non-Volatile Memory(ROM)와 전원이 꺼지면 Data가 초기화 되는 Volatile Memory(RAM)가 있습니다.    
 - **Non-Volatile Memory (ROM)** : 데이터 수정 시 약 250ms의 시간이 걸릴 수 있습니다. 또한 메모리를 저장 중에는 통신이 제한 될 수 있습니다.  일반적으로 동작 전 설정 사항을 정할 때에만 사용합니다. 
 - **Volatile Memeory(RAM)** :  실시간으로 데이터를 변경할 때 사용합니다. 일반적인 동작 제어 파라메터들로 구성 되어있습니다. 전원이 재인가 되면 초기화 됩니다.  
 ### 2.1.2 Address  
 본 문서에서 Address는 Control Table에서 Data Adress를 의미합니다.
 ### 2.1.3 Size  
-Mini 17Lf Model의 모든 Parameter의 Data Size 2byte 로 되어있습니다.
+mightyZAP 17Lf Model의 모든 Parameter의 Data Size 2byte 로 되어있습니다.
 ### 2.1.4 Access  (접근 권한)
 Control Table Data는 'R', 'RW'로 표기됩니다. 'R'은 읽기 전용(Read Only) 의미하고, 'RW'는  읽기와 쓰기가 모두 가능합니다.  
 읽기 전용 권한은 주로 서보 모터의 기본 정보 또는 모니터링 용으로 사용됩니다. 읽기 쓰기 권한은 mightyZAP 제어 용도로 사용됩니다.  
@@ -206,7 +206,6 @@ Control Table Data는 'R', 'RW'로 표기됩니다. 'R'은 읽기 전용(Read On
 | 40248 | 247 (0xF7) | Internal Data 7 | 간접 주소 7 데이터 값 |  |  |
 | 40249 | 248 (0xF8) | Internal Data 8 | 간접 주소 8 데이터 값 |  |  |
 | 40250 | 249 (0xF9) | Internal Data 9 | 간접 주소 9 데이터 값 |  |  |
-  
 ## 2.4 Control Table Discription
 ### 2.4.1  Model Serial Number
 mightyZAP Model을 식별하기 위한 번호입니다.
