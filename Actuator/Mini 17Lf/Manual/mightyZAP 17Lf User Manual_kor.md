@@ -532,6 +532,7 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
   2가지 방식이 있음, Motor continous current Limit 연속 전류 제한  
   Overload를 발생하는 는  I<sup>2</sup>T 방식을 이용하여 전류를 축적하여 모터를 보호하는데 사용됩니다. I<sup>2</sup>T 보호는 모터의 열 모델링을 기반으로 한 모터 과부하 보호 방법으로, 일종의 센서리스 모터 과열 보호 장치 입니다.  
   i<sup>2</sup>t = i<sub>peak</sub><sup>2</sup>t - i<sub>norm</sub><sup>2</sup>t = (i<sub>peak</sub><sup>2</sup> -i<sub>norm</sub><sup>2</sup>)t  
+  $$i^2t=i_{peak}^2t - i_{norm}^2t = {i_{peak}^2-i_{norm}^2}t$$
   아래의 그림과 같이... 이미지는 수정 및 설명 도 추가설명  
    ![[i2t_graph.png]] 
 - Input Voltage Error  
@@ -545,17 +546,19 @@ Actuator를 이동 시키고자 하는 위치 값입니다. Goal Position은 [[#
 | 0 ~ 10000 | mightyZap의 이동 목표 위치값을 설정합니다.<br>(각 모델의 Stroke 길이와 상관없이 위치 해상도는 모두 10000입니다.) |
 >[!tip] TIP
 >사용하고 계신 Stoke 의 최대 길이를 참조하시여 위치 값을 계산하시기 바랍니다.   
-> ![[17lfCurrentPositionCalc.png]]  
+$$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$
+
+
+
 ### 2.4.24 Goal Speed
 mightyZAP의 동작 속도를 변경할 때 사용합니다.  
 
-| value | 동작 상태 |
-| ---- | ---- |
-| 0 ~ 1000 | mightyZap의 최대 속도 값 |
+| value | 동작 상태 | 비고 |
+| ---- | ---- | ---- |
+| 0 ~ 1000 | mightyZap의 최대 속도 값 | +/- 10% |
 각 mightyZAP의 최대 속도에 대해 비율로 제어하며 약 10%의 오차가 있습니다.
-value : 0 ~ 1000 [+-10%]
-![[17lf_TargetSpeedCalc.png]]
-초기 전원 인가시 비휘발성 Speed Limit에서 값을 불러와 Goal Speed에 저장합니다.
+$$ TargetSpeed = MaxSpeed\times\frac{GoalSpeed}{1000}$$
+초기 전원 인가 시 비휘발성 Speed Limit에서 값을 불러와 Goal Speed에 저장합니다.
 Speed Limit 명령보다 빠르게 반응하며, 가동 중 실시간으로 속도를 변경하는 데 사용할 수 있습니다.
 0일 때 기동력 OFF 상태이고 1023일 때 최대 속도를 냅니다.
 Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
@@ -567,7 +570,7 @@ Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
 | ---- | ---- |
 | 0 ~ 1600 | mightyZap의 최대 전류 설정 값 |
 초기 전원 인가 시 비 휘발성 [[#2.4.12 Current Limit|Current Limit]]의 값을 Goal Current의 초기 값으로 적용합니다.  
-> [!tip] Tip - Goal Current를 이용한 Force 제한
+> [!note] Note - Goal Current를 이용한 Force 제한
 > Goal Current를 조절하면 모터가 낼 수 있는 최대 힘을 조절할 수 있습니다. 제어 대상 및 사용자의 어플리케이션에 따라 특정 Force를 이상 넘어가는 것을 제한하고 자 할 때 사용하시면 됩니다.   
 > 지나치게 낮은 Goal Current는 모터의 부하를 이기지 못해 동작하지 않을 수 있습니다. 
 > Datasheet의 Goal Current Vs Force 표를 참조하신 후 적절한 값을 적용하시기 바랍니다. 또한 해당 값은 약 15%의 오차를 포함합니다.  
@@ -576,7 +579,7 @@ Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
 >Goal Current 800  이상 또는 1600- 설정일 경우 모터에 무리가 발생한다. 지속적으로 사용하는 구간이 아닌 특정상황 잠시 사용하는 구간이다.  지속 적으로 사용할 경우 overload Error가 발생하거나 모터의 수명이 짧아지게 됩니다.
 ### 2.4.26 Present Postion
 현재 stroke의 위치 값을 나타냅니다. 사용하고 계신 Stoke 의 최대 길이를 참조하시여 위치 값을 계산하시기 바랍니다.   
-![[17lfCurrentPositionCalc.png]]  
+$$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$
 정지한 이후에도 미세한 위치 변동은 나타날 수 있으며 이는 정상 동작입니다. 
 ### 2.4.27 Present Current
 모터의 현재 전류 사용 값입니다.
