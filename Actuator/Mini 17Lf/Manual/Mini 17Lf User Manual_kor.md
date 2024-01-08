@@ -619,17 +619,17 @@ Action Parameter로 작성된 Action을 실행할 때 사용합니다. Action Pa
 | 0 | Action disable |  |
 | 1 | Action Enable |  |
 >**TIP** 
->Action에 대한 자세한 사항은 [[#ac]]
-### 2.4.31 Reset
+>Action에 대한 자세한 사항은 [[#4.17 Action Control]]을 참조하여 주시기 바랍니다.
+### 2.4.31 Indirect Data
+indirect Address로 설정된 Paramter들의 Data를 읽고 쓸 수 있는 Parameter입니다.
+자세한 사항은 [[#2.4.15 Indirect Address]]를 참조하여 주시기 바랍니다.
+### 2.4.32 Reset
 ID, Baudrate, Protocol, Min/Max Position Calibration을 제외한 모든 Parameter가 초기화 됩니다.  
 Reset이 완료되면 mightyZAP의 시스템이 재 시작 되어 LED가 2번 깜빡입니다.  
 >  **Tip**  
 >  모든 데이터를 초기화하기 위해서는  당사의 Manager 프로그램을 이용하여 Factory Reset을 진행하여 주시기 바랍니다.
-### 2.4.32 Restart  
+### 2.4.33 Restart  
 Baudrate, Protocol 변경 후 적용을 위해  또는 Hardware Error 인해 Suthdown이 발생하여 시스템을 재 시작 해야 하는경우 Restart Parameter 에 '1'으로 세팅하여 진행할 수 있습니다.
-
-### 2.4.33 Indirect Data
-indirect Address로 설정된 Paramter들의 Data를 읽고 쓸 수 있는 Parameter입니다.
 ## 2.5 Packet Example
 17Lf 시리즈는 Modbus-RTU를 제공하는 모델입니다. Modbus-RTU에 관한 자세한 설명은 Modub-RTU 메뉴얼을 참조하기 바랍니다.  
 # 3. 유의 사항  
