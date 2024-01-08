@@ -537,14 +537,21 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
   입력 전압의 범위가 벗어날 해당 bit 가 set 됩니다. Low voltage일 경우, 다시 정상 전압으로 변경되면 해당 Error가 clear 됩니다.  
   하지만 high voltage Error 일 경우, 해당 Reset이 되지 않는 이상 해지 되지 않습니다. 
 ### 2.4.23 Goal Position
-Actuator를 이동 시키고자 하는 위치 값입니다. Goal Position은 [[#2.4.5 Short/Long Stroke Limt|Short/Long Stroke Limt]] 설정 제한에 영향을 받습니다. (즉, stroke limit 범위 밖으로는 위치 명령을 내려도 stroke limit위치까지만 움직임)
+Actuator를 이동 시키고자 하는 위치 값입니다. Goal Position은 [[#2.4.5 Short/Long Stroke Limt|Short/Long Stroke Limt]] 설정 제한 값 가지 입력이 가능합니다. (즉, stroke limit 범위 밖으로는 위치 명령을 내려도 stroke limit위치까지만 움직입니다)
 
 | value | 동작 상태 |
 | ---- | ---- |
-| 0 ~ 10000 | mightyZap의 이동 목표 위치값을 설정합니다. |
+| 0 ~ 10000 | mightyZap의 이동 목표 위치값을 설정합니다.<br>(각 모델의 Stroke 길이와 상관없이 위치 해상도는 모두 10000입니다.) |
+>**TIP**  
+>사용하고 계신 Stoke 의 최대 길이를 참조하시여 위치 값을 계산하시기 바랍니다.   
+> ![[17lfCurrentPositionCalc.png]]  
 ### 2.4.24 Goal Speed
-액츄에이터의 동작 속도를 변경할 때 사용합니다. [범위 : 0~ 1000]  
-각 actuator의 최대 속도에 대해 비율로 제어하며 약 10%의 오차가 있습니다.
+mightyZAP의 동작 속도를 변경할 때 사용합니다.  
+
+| value | 동작 상태 |
+| ---- | ---- |
+| 0 ~ 1000 | mightyZap의 최대 속도 값 |
+각 mightyZAP의 최대 속도에 대해 비율로 제어하며 약 10%의 오차가 있습니다.
 value : 0 ~ 1000 [+-10%]
 ![[17lf_TargetSpeedCalc.png]]
 초기 전원 인가시 비휘발성 Speed Limit에서 값을 불러와 Goal Speed에 저장합니다.
@@ -554,7 +561,11 @@ Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
 다만, 너무 낮은 값을 설정 시 모터의 반응이 늦어지거나 움직이지 못할 수 있습니다.
 ### 2.4.25 Goal Current  
 모터의 최대 전류를 제한합니다. 전류 값을 제한하여 Actuator의 최대 Force를 제한 할 수 있습니다. 각 Goal Current 값에 대한 Stall Force는 Datasheet를 참조하여 주시기 바랍니다.  
-초기 전원 인가시 비휘발성 Current Limit의 값을 Goal Current의 초기값으로 적용합니다.  
+
+| value | 동작 상태 |
+| ---- | ---- |
+| 0 ~ 1600 | mightyZap의 최대 전류 설정 값 |
+초기 전원 인가 시 비 휘발성 [[#2.4.12 Current Limit|Current Limit]]의 값을 Goal Current의 초기 값으로 적용합니다.  
 > **Tip** <font color="#4f81bd">Goal Current를 이용한 Force 제한</font>
 > Goal Current를 조절하면 모터가 낼 수 있는 최대 힘을 조절할 수 있습니다. 제어 대상 및 사용자의 어플리케이션에 따라 특정 Force를 이상 넘어가는 것을 제한하고 자 할 때 사용하시면 됩니다.   
 > 지나치게 낮은 Goal Current는 모터의 부하를 이기지 못해 동작하지 않을 수 있습니다. 
@@ -578,18 +589,22 @@ present Current는 오차를 포함하고 있음으로 참고 용으로 사용�
 Motor Operating Rate는 Goal Speed, Goal Current 등에 따라 값이 달라집니다.   
 '0'은 모터가 정지한 상태를 나타냅니다.
 
-|value|range|dfd|
+|value|range|Unit |
 |---|---|---|
 |-10000~1000|0~1600mA|mA|
 ### 2.4.29 Present Voltage  
 입력 전압 값을 나타 냅니다. 
 
-|value|range|dfd|
+|value|range|Unit |
 |---|---|---|
 |0~130|0~13.0|[v]|
 ### 2.4.30 Moving
 모터의 동작 유무를 나타냅니다. 정확히는 모터의 목표 도달 유무를 나타냅니다.  
-Motor Operating Rate 값이 '0'이어도 목표 위치 도달 완료 상태가 아니면 Moving값은 '0'이 되지 않습니다. 
+
+| value | 동작 상태 |
+| ---- | ---- |
+| 0 | mightyZAP 정지 상태 |
+| 1 | mightyZAP 동작 중 |
 ### 2.4.31 Present Overload Value
 Overload의 기준이 되는 전류 누적량을 표시합니다. 모터가 동작 할 경우 전류값이 누적되어 값이 상승하고 모터가 정지 할 때 값이 감소됩니다. 누적되는 값이 부하 정도에 따라 다르며, 감소 되는 값은 모터 정지시 정격 전류 기준값이 감소됩니다.  
 최대 값을 100으로 표시하며, 해당 값이 100이 될 경우 Overload Shutdown  이 발생하게 됩니다.  
@@ -599,10 +614,12 @@ Overload Value 값이 다 내려가는데 최대 30초가 걸리게 됩니다.
 ### 2.4.32 Action Enable
 Action Parameter로 작성된 Action을 실행할 때 사용합니다. Action Paramter 를 작성하였어도 Action Enable을 활성화 하지 않으면 Action은 동작하지 않습니다. 
 
-| value | range | dfd |
+| value | range | Unit |
 | ---- | ---- | ---- |
 | 0 | Action disable |  |
 | 1 | Action Enable |  |
+>**TIP** 
+>Action에 대한 자세한 사항은 [[#ac]]
 ### 2.4.31 Reset
 ID, Baudrate, Protocol, Min/Max Position Calibration을 제외한 모든 Parameter가 초기화 됩니다.  
 Reset이 완료되면 mightyZAP의 시스템이 재 시작 되어 LED가 2번 깜빡입니다.  
