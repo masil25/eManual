@@ -8,19 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b02ba1a8741bd7af",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Actuator/Main.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d8689d0bda321462",
+            "id": "bed695024dbd799d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -30,57 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "24d7ad2d655dce05",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bed695024dbd799d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Templates/DATASHEET.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f5dceaad5894a768",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NEWS/News Test.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4015bd12fdc93a5c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -227,17 +166,23 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "d8689d0bda321462",
+  "active": "bed695024dbd799d",
   "lastOpenFiles": [
     "Actuator/Mini 17Lf/img/Daisy-chain Connection.png",
     "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
-    "Actuator/Mini 17Lf/Manual/Mini 17Lf User Manual_eng.md",
-    "Actuator/Mini 17Lf/Drawing/Accessories.md",
+    "Actuator/Mini 17Lf/img/Daisy-chain.png",
+    "Pasted image 20240108180231.png",
+    "Pasted image 20240108180351.png",
+    "Pasted image 20240108180325.png",
+    "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
+    "Templates/DATASHEET.md",
+    "Actuator/Main.md",
     "Pasted Image 20240108172538_224.png",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
-    "Actuator/Main.md",
+    "Actuator/Mini 17Lf/img/Daisy-Chain Connection.png",
+    "Actuator/Mini 17Lf/Manual/Mini 17Lf User Manual_eng.md",
+    "Actuator/Mini 17Lf/Drawing/Accessories.md",
     "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
-    "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
     "Software/Total Manager/Total Manager User Manual_kor.md",
     "home.md",
@@ -255,7 +200,6 @@
     "Actuator/Mini 17Lf/img/17Lf Accessories.png",
     "Boards/Board Test.md",
     "Library/library Test.md",
-    "Templates/DATASHEET.md",
     "NEWS",
     "FAQ",
     "Boards",
@@ -265,11 +209,6 @@
     "img/CautionMotionSync.png.md",
     "img/CautionMotionSy.md",
     "Actuator/Mini 17Lf/img/Hinge Base.png",
-    "Actuator/Mini 17Lf/img/Hinge Shaft.png",
-    "Actuator/Mini 17Lf/img/HingeBase.png",
-    "Actuator/Mini 17Lf/img/M3 Nut.png",
-    "Actuator/Mini 17Lf/img/Rod End Tip.png",
-    "Actuator/Mini 17Lf/img/socket head m3.0x8.png",
     "[.md",
     "Actuator/Mini 17Lf/Datasheet/IRROBOT DATASHEET_17Lfe 양식.md",
     "Actuator/Mini 17Lf/MachineDrawing/Mini 17Lf 2D Drawing.md",
