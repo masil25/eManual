@@ -73,7 +73,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
                 "mode": "source",
                 "source": false
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -163,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -186,7 +186,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md"
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md"
               }
             }
           },
@@ -230,9 +230,9 @@
   },
   "active": "4015bd12fdc93a5c",
   "lastOpenFiles": [
+    "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/Manual/Mini 17Lf User Manual_eng.md",
     "NEWS/News Test.md",
-    "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
