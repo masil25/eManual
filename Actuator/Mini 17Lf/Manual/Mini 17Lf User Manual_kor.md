@@ -484,24 +484,22 @@ Actuator 가 동작 중 발생하는 위험 상황 중 아래의 상황에 대�
 일반적으로 추천하는 방법은 Alarm Shutdown 기능을 이용하여 해당 Error가 발생 할 경우, Force On/Off를 '0'으로 하여,  Actuator 와  사용자의 system을 보호하는것이 좋습니다.  
 ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 이상 모터가 동작하지 않습니다.  
 
-|Bit|Name|Description|
-|---|---|---|
-|Bit 7|-|미상용|
-|Bit 6|Overload Error|일정 시간 이상 동안 부하가 발생한 경우|
-|Bit 5|-||
-|Bit 4|-||
-|Bit 3|-||
-|Bit 2|Motor Error|모터가 동작하지 않는 경우|
-|Bit 1|Potentiometer Error|Potentiometer가 정상적으로 동작하지 않는 경우|
-|Bit 0|Input Voltage Error|인가된 전압이 동작 범위를 벗어난 경우|
+| Bit | Name | Description |
+| ---- | ---- | ---- |
+| Bit 7 | - | 미상용 |
+| Bit 6 | Overload Error | 일정 시간 이상 동안 부하가 발생한 경우 |
+| Bit 5 | - |  |
+| Bit 4 | - |  |
+| Bit 3 | - |  |
+| Bit 2 | - | - |
+| Bit 1 | - | - |
+| Bit 0 | Input Voltage Error | 인가된 전압이 동작 범위를 벗어난 경우 |
 - Overload  Error    
   2가지 방식이 있음, Motor continous current Limit 연속 전류 제한  
   Overload를 발생하는 는  I<sup>2</sup>T 방식을 이용하여 전류를 축적하여 모터를 보호하는데 사용됩니다. I<sup>2</sup>T 보호는 모터의 열 모델링을 기반으로 한 모터 과부하 보호 방법으로, 일종의 센서리스 모터 과열 보호 장치 입니다.  
   i<sup>2</sup>t = i<sub>peak</sub><sup>2</sup>t - i<sub>norm</sub><sup>2</sup>t = (i<sub>peak</sub><sup>2</sup> -i<sub>norm</sub><sup>2</sup>)t  
   아래의 그림과 같이... 이미지는 수정 및 설명 도 추가설명  
    ![[i2t_graph.png]] 
-- Potentiometer Error  
-  Potentiometer가 정상적인 동작을 하지 않을 때 해당 bit가 set 됩니다.  Potentiometer Error 가 지속적으로 나타날 경우 A/S가 필요함으로 당사에 문의 주시기 바랍니다.
 - Input Voltage Error  
   입력 전압의 범위가 벗어날 해당 bit 가 set 됩니다. Low voltage일 경우, 다시 정상 전압으로 변경되면 해당 Error가 clear 됩니다.  
   하지만 high voltage Error 일 경우, 해당 Reset이 되지 않는 이상 해지 되지 않습니다. 
@@ -557,7 +555,9 @@ Motor Operating Rate는 Goal Speed, Goal Current 등에 따라 값이 달라집�
 모터의 동작 유무를 나타냅니다. 정확히는 모터의 목표 도달 유무를 나타냅니다.  
 Motor Operating Rate 값이 '0'이어도 목표 위치 도달 완료 상태가 아니면 Moving값은 '0'이 되지 않습니다. 
 ### 2.4.31 Present Overload Value
-내부적으로 정한 특정 전류 ㄱ바
+Overload의 기준이 되는 전류 누적량을 표시합니다. 최대 값을 100으로 표시하며, 해당 값이 100이 될 경우 Overload Shutdown  이 발생하게 됩니다.  
+Overload value 값이 90이 넘지 않도록 관리해주셔야 합니다. 모터가 동작할 경우 전류값이 누적되어 값이 상승하고 모터가 정지할 경우 해당 값이 서서히 내려가게 됩니다.  
+Overload Value 값이 다 내려가는데 
 ### 2.4.32 Action Enable
 Action Parameter로 작성된 Action을 실행할 때 사용합니다. Action Paramter 를 작성하였어도 Action Enable을 활성화 하지 않으면 Action은 동작하지 않습니다. 
 
