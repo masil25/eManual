@@ -366,19 +366,17 @@ Min/Max Position Calibration Parameter는 mightyZAP의 Goal Position이 최소/�
 
 이해를 위해 아래의 이미지를 참조하여 주시기 바랍니다.  
 ![[minmaxPostion.png]]
-- Min Poisition  
+- Min Poisition Calibration
 	  Min Position Calibration 값을 늘릴 경우 Goal Position '0'일 때의 Min Position 위치가  늘어나게 되며 전체 동작 Stroke가 줄어들게 됩니다.
 	  Min Position Calibration 값을 줄일 경우 Goal Position '0'일 때의 Min Position 위치가 줄어들게 되며 전체 동작 stroke가 늘어나게 됩니다. 하지만 비선형 구간이 늘어나게 됩니다.
-- Max Position  
+- Max Position Calibration
 	  Max Position Calibration 값을 늘릴 경우 Goal Position 최대 값일 때의 Max Position 위치가 줄어들게 되며 전체 동작 Stroke가 줄어들게 됩니다.   
 	  Max Position Calibration 값을 줄일 경우 Goal Position 최대 값일 때의 Max Position 위치가 줄어들게 되며 전체 동작 stroke가 늘어나게 됩니다. 하지만 비선형 구간이 늘어나게 됩니다.
   ![[minmaxCalibration.gif]]
   
 ### 2.4.10 Motor Operating Rate Limit  
-| Parameter | Description | Range | Unit |
-| ---- | ---- | ---- | ---- |
-| Motor Operating Rate Limit | 모터에 공급하는 PWM 의 최대 값 설정 | 0~1000 |  |
 mightyZAP의 모터를 제어하기 위해 사용되는 PWM의 최대 값 설정 Parameter 입니다.
+200 이하로 설정한 경우, 모터가 동작하지 않을 수도 있습니다. Motor Operaing Rate를 변경하면 Stall Foce 와 Speed가 변경 됩니다.
 
 | value | 동작 상태 |
 | ---- | ---- |
