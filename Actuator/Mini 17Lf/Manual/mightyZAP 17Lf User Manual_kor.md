@@ -517,14 +517,14 @@ Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며
 	![[Pasted image 20240109163918.png|500]]
 ### 4.17 Action Control  
 Action 기능은 통신 및 외부 제어기 없이 mightyZAP을 제어하기 위한 방법으로 총 5개의 Action을 작성 할 수 있습니다.  
-하나의 Action에는 총 10개의 Parameter 속성을 가지고 있으며, 크게 Action Setting, Repeat Setting, Moving Setting으로 나뉠 수 있습니다.  
+하나의 Action에는 총 10개의 Parameter 속성을 가지고 있으며, 크게 Action Type, Repeat Data, Commo으로 나뉠 수 있습니다.  
 ![[스크린샷 2024-01-09 17-01-46.png|700]]
 #### Action Setting 
 Action Setting은 모터가 움직이는 방식을 설정하며 아래와 같습니다.
  -  Goal Position : Action Data에 값을 Goal Position에 입력하여 한번에 해당 위치까지 이동합니다.
  - Goal Distance : 현재 위치에서 Action Data값을 가감하여 위치 이동을 합니다. Goal Position 과 다르게 절대 위치 값이 아닌 상대적인 값으로 동작합니다.
 #### Repeat Setting
-반복 횟수 또는 1회 동작에 대한 동작 시간 등을 설정하는 Parameter 입니다.  
+Action Setting에서 설정된 내용에 대한 반복 횟수 또는 1회 동작에 대한 동작 시간 등을 설정하는 Parameter 입니다.  
 **Repeat type**
  - Interval : Repeat Time에 의해 설정된 시간 간격마다 Action을 수행합니다.  일정한 시간마다 반복된 동작이 필요할 경우 사용합니다. 
  - dWellTime : Action 명령에 의해 위치 이동이 완료된 다음 시간을 카운트 합니다.   
