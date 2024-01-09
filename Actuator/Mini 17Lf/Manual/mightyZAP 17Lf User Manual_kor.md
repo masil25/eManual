@@ -458,7 +458,8 @@ Indirect Address에 특정 주소를 세팅하면, Indirect Data에 해당 주�
 >![[indirectAddrss.gif]]
 
 ### 2.4.16 Extended I/O Control  
-Extended I/O는 RS485 통신으로 제공하지 못하는 추가적인 기능을 제공하는 Port 입니다.  4개의 I/O Port를 제공하며 아래와 같은 기능을 제공합니다.  
+Extended I/O는 RS485 통신으로 제공하지 못하는 추가적인 기능을 제공하는 Port 입니다.  4개의 I/O Port를 제공하며 아래와 같은 기능을 제공합니다.   
+
 
 | IO PORT | Function |
 | ---- | ---- |
@@ -466,6 +467,7 @@ Extended I/O는 RS485 통신으로 제공하지 못하는 추가적인 기능을
 | IO Port 2 | Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
 | IO Port 3 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
 | IO Port 4 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
+Extended I/O Control 기능은 Programming 없이 단순 스위치 제어 또는 내부 [[#4.17 Action Control|Action control]] 기능을 이용하
 <font color="#ff0000">해당 값을 설정하기 위해서는 당사의 Manager Program을 사용하여 주시기 바랍니다.</font>
 
 Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며 외부 전원이 필요하지 않습니다.  각 기능 설명에 명시된 회로 구성대로 연결해야 Actuator 에 문제가 발생하지 않습니다.  
@@ -498,8 +500,11 @@ Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며
 	![[Pasted image 20240109163918.png|500]]
 - **Function Alarm Out**      
 	해당 기능은 출력 기능으로 Hardware Error 가 발생 시 'High' 신호를 내보냅니다.  
+	![[Pasted image 20240109164105.png|500]]  
+	![[Pasted image 20240109164822.png|600]]
 - **Restart**    
-	해당 기능은 입력 기능으로 Restart 기능을 담당합니다.  Hardware Error 등의 문제로 Actuator가 정지한 경우 또는 시스템을 재 시작해야 해야하는 경우 해당 기능을 이용하여 외부에서 restart 기능을 사용할 수 있습니다.
+	해당 기능은 입력 기능으로 Restart 기능을 담당합니다.  Hardware Error 등의 문제로 Actuator가 정지한 경우 또는 시스템을 재 시작이 필요한 경우 해당 기능을 이용하여 외부에서 restart 기능을 사용할 수 있습니다.  
+	![[Pasted image 20240109163918.png|500]]
 ### 4.17 Action Control  
 Action 기능은 통신 및 외부 제어기 없이 Actuator를 제어하기 위한 방법으로 총 5개의 Action을 작성 할 수 있습니다.  
 하나의 Action에는 총10개 Parameter 속성을 가지고 있으며, 크게 Action Setting, Repeat Setting, Moving Setting으로 나뉠 수 있습니다.  
