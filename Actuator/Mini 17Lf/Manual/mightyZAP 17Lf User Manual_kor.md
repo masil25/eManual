@@ -283,7 +283,7 @@ Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Strok
 >자세한 내용은 [[#3. 유의 사항]]을 확안하여 주시기 바랍니다.
 
 ### 2.4.6 Start Compliance Margin  
-  Start Compliance Margin은 mightyZAP Goal Position 위치 값을 지키기 위해 이동 하기 위한 위치 편차(마진)의 최소 값 입니다.  
+  Start Compliance Margin은 mightyZAP이 Goal Position 위치 값으로 이동 하기 위한  최소 위치 편차(마진) 값 입니다.  
   
 | value | 동작 상태 |
 | ---- | ---- |
@@ -292,15 +292,15 @@ Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Strok
   
 **Start Compliance Margin은 다음의 2가지의 경우에 적용이 됩니다.**
 - 현재 위치에서 다른 위치로 이동하기 위해 Goal Postion 값을 변경하는 경우
-- 정지 위치에서 외력 또는 내부 유격에 의해 위치가 변화가 생긴 경우
-    사용자는 Goal Position을 변경하지 않았으나 Present Position이 바뀐 경우입니다.  일반적으로 외력에 의한 밀림이나 내부 유격 등의 의한 현재 위치의 변동이 생길 경우 입니다
+- 정지 위치에서 외력에 의해 위치가 변화가 생긴 경우  
+    (사용자는 Goal Position을 변경하지 않았으나 Present Position이 바뀐 경우입니다.  일반적으로 외력에 의한 밀림이나 내부 유격 등의 의한 현재 위치의 변동이 생길 경우 입니다)
  
-<font color="#4f81bd">예시 1. Start Margin 이내로  Goal Position을 변경한 경우</font>  
+<font color="#4f81bd">예시 1. Start Compliance Margin 보다 작게  Goal Position을 변경한 경우</font>  
 - Start Compliance Margin : 20
 - Present Positon  : 1000
 - Goal Position : 1000 -> 1010으로 변경할 경우
 - **결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다**
-   <font color="#4f81bd">예시 2. Start Margin 보다 크게  Goal Position을 변경한 경우</font>  
+   <font color="#4f81bd">예시 2. Start Compliance Margin 보다 크게  Goal Position을 변경한 경우</font>  
 - Start Compliance Margin : 20
 - Present Positon  : 1000
 - Goal Position : 1000 -> 950으로 변경할 경우
@@ -326,7 +326,7 @@ End Compliance Margin은 mightyZAP이 정지하기 위한 최대 위치 편차 �
 | value | 동작 상태 |
 | ---- | ---- |
 | 0 ~ 255 | 정지하기 위한 최대 위치 편차 값 |
-Actuator가 위치 편차를 줄이기 위해 동작 중일 때 적용이 되며, Present Position과 Gaol Position과의 편차가 End Compliance Margin 보다 작을 경우 motor의 동작을 멈춥니다.  
+mightyZAP이 위치 편차를 줄이기 위해 동작 중일 때 적용이 되며, Present Position과 Gaol Position의 편차가 End Compliance Margin 보다 작을 경우 mightyZAP이 정지 합니다.
 End Compliance Margin은 작을 수록 위치 정밀도가 높아지나, 일정 값 이하로 줄일 경우 그 효과가 미미해 집니다.  
 
 **기본 개념**
