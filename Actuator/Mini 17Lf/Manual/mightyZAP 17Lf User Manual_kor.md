@@ -460,7 +460,6 @@ Indirect Address에 특정 주소를 세팅하면, Indirect Data에 해당 주�
 ### 2.4.16 Extended I/O Control  
 Extended I/O는 RS485 통신으로 제공하지 못하는 추가적인 기능을 제공하는 Port 입니다.  4개의 I/O Port를 제공하며 아래와 같은 기능을 제공합니다.   
 
-
 | IO PORT | Function |
 | ---- | ---- |
 | IO Port 1 | Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
@@ -471,10 +470,15 @@ Extended I/O Control은 스위치 또는 내부 [[#4.17 Action Control|Action co
 또는 반이중 통신으로 불가능한  mightyZAP에서 control Board 에 먼저 데이터를 전송 할 수 있습니다.
 
 Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며 외부 전원이 필요하지 않습니다.  각 기능 설명에 명시된 회로 구성대로 연결해야 Actuator 에 문제가 발생하지 않습니다.  
+>[!note] NOTE
+> 연결 Connector는 동봉된 Extenxded Wire를 사용하여 주시기 바랍니다.
 
 > [!warning] 주의 사항
 > 해당 값을 설정하기 위해서는 당사의 Manager Program을 사용하여 주시기 바랍니다.  
-> 연결 Connector는 동봉된 Extenxded Wire를 사용하여 주시기 바랍니다.
+> 
+> ![[simplescreenrecorder-2024-01-09_17.06.38.gif]]  
+>
+> 
 
 ![[Pasted image 20240109170002.png|500]]
 
@@ -512,7 +516,7 @@ Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며
 ### 4.17 Action Control  
 Action 기능은 통신 및 외부 제어기 없이 mightyZAP을 제어하기 위한 방법으로 총 5개의 Action을 작성 할 수 있습니다.  
 하나의 Action에는 총 10개의 Parameter 속성을 가지고 있으며, 크게 Action Setting, Repeat Setting, Moving Setting으로 나뉠 수 있습니다.  
-(full shot 이미지)
+![[스크린샷 2024-01-09 17-01-46.png|700]]
 #### Action Setting 
 Action Setting은 모터가 움직이는 방식을 설정하며 아래와 같습니다.
  -  Goal Position : Action Data에 값을 >Goal Position에 입력하여 한번에 해당 위치까지 이동합니다.
