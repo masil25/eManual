@@ -244,17 +244,25 @@ mightyZAP과 통신을 하기 위한 통신 속도 입니다.
 |  32(0x20) |  38400  |
 |  64(0x40) |  19200  |
 | 128(0x80) |   9600 bps |  
-### 2.4.5 Alarm LED 
-Hardware Error 가 발생 했을 때, 해당 Error bit가 1로 설정되어 있으면 LED에 표시를 합니다.
-( 1 = 활성 /0 = 비활성)
+### 2.4.5 Alarm LED
+| Bit | Name | LED Indicate | Description |
+| ---- | ---- | ---- | ---- |
+| Bit 6 | Overload Error | RED 점멸 | 일정 시간 이상 동안 부하가 발생한 경우 |
+| Bit 0 | Input Voltage Error | RED 지속 점등 | 인가된 전압이 동작 범위를 벗어난 경우 |
+일반적으로 모든 Alarm은 시스템을 재 시작해야 사라지게 됩니다.  
+하지만 저전압 Input Volatage LED Alarm의 경우 원인이 해결 되면 LED가 꺼지게 됩니다.
+> [!note] NOTE   
+> Hardware Error에 대한 자세한 설명은 [[#2.4.22 Hardware Error]]를 참조하여 주시기 바랍니다.
 
-| Bit | Name | Description |
-| ---- | ---- | ---- |
-| Bit 6 | Overload Error | 일정 시간 이상 동안 부하가 발생한 경우 |
-| Bit 0 | Input Voltage Error | 인가된 전압이 동작 범위를 벗어난 경우 |
-
-> [!tip] Tip   
-> Lowest input Voltage의 경우 Reset을 하지 않아도 정상 전압으로 돌아오면 정상적으로 동작이 됩니다.
+### 2.4.6 Alarm Shutdown
+| Bit | Name | LED Indicate | Description |
+| ---- | ---- | ---- | ---- |
+| Bit 6 | Overload Error | RED 점멸 | 일정 시간 이상 동안 부하가 발생한 경우 |
+| Bit 0 | Input Voltage Error | RED 지속 점등 | 인가된 전압이 동작 범위를 벗어난 경우 |
+일반적으로 모든 Alarm은 시스템을 재 시작해야 사라지게 됩니다.  
+하지만 저전압 Input Volatage LED Alarm의 경우 원인이 해결 되면 LED가 꺼지게 됩니다.
+> [!note] NOTE   
+> Hardware Error에 대한 자세한 설명은 [[#2.4.22 Hardware Error]]를 참조하여 주시기 바랍니다.
 
 ### 2.4.6 Short/Long Stroke Limt  
 | Parameter | Description | Range | Unit |
