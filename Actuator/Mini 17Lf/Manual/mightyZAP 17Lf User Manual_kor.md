@@ -395,16 +395,14 @@ Speed Limit를 변경할 경우, Goal Speed도 같이 변경됩니다. 또한 �
 >[!tip] TIP  
 >Goal Speed를 변경하여도 Speed Limit는 변하지 않습니다.  
 ### 2.4.12 Current Limit  
-| Parameter | Description | Range | Unit | Note |
-| ---- | ---- | ---- | ---- | ---- |
-| Current Limit | Actuator의 최대 속도 제한 설정 | 0~1600 | mA | 오차범 |
-모터 가동 중 최대 전류 값을 제한 합니다. 해당 기능을 이용하여 Actuator의 최대 Force를 제한 할 수 있습니다.    
+모터 가동 중 최대 전류 값을 제한 합니다. 해당 기능을 이용하여 mightyZAP의 최대 Force를 제한 할 수 있습니다.    
 
-| value | Description | Unit |
-| ---- | ---- | ---- |
-| 0 ~ 1000 | mightyZAP 최대 속도 제한 설정 | mA |
-
-Current Limit는 비 휘발성 Parameter로 전원이 끊어져도 변경된 Data 를 유지합니다. Current Limit 값이 변경되면 Goal Current 값도 같이 변경됩니다. 
+| value | Description | Unit | Note |
+| ---- | ---- | ---- | ---- |
+| 0 ~1600 | mightyZAP 최대 속도 제한 설정 | mA | default : 800  <br>오차 범위 +/- 15% |
+Current Limit는 비 휘발성 Parameter로 전원이 끊어져도 변경된 Data 를 유지합니다. Current Limit 값이 변경되면 Goal Current 값도 같이 변경됩니다.   
+Current Limit를 높게 설정할수록 과부하 상황에서 모터가 낼 수 있는 최대 force도 올라가지만, 모터 수명 단축의 원인이 될 수도 있습니다.  
+<font color="#4f81bd">제품마다 내부 기구 저항 편차에 따라 저전류(200mA 이하) 설정에서는 mightyZAP의 동작이 불규칙하거나 움직이지 않을 수도 있습니다. 충분한 테스트 후 전류 설정을 하여 주시기 바랍니다.</font>
 >[!tip] TIP  
 >Current Limit/Goal current 값에 대한 동작 특성은  모터 성능 곡선 및 Datasheet를 참조하여 주시기 바랍니다.
 
@@ -414,9 +412,9 @@ Current Limit는 비 휘발성 Parameter로 전원이 끊어져도 변경된 Dat
 | Current P Gain |  Current PID 비례 제어 | 0 ~ 1000 |  |
 | Current I Gain | Current PID 적분 제어 | 0 ~ 1000 |  |
 모터의 전류 제어를 위한 PID Gain값입니다. 
-정해진 값이 보다 큰 PI값을 적용할 경우 Goal Current와의 오차에 대해 거칠게 동작할 수 있습니다.   
-정해진 값보다 작은 PI값을 적용할 경우 Goal Current와의 오차에 부드럽게 동작하나 Goal Current 값 과의 오차가 크게 나타날 수 있습니다.
-> [!tip] TIP  
+정해진 값이 보다 큰 PI값을 적용할 경우 Goal Current 오차에 대해 거칠게 동작할 수 있습니다.   
+정해진 값보다 작은 PI값을 적용할 경우 Goal Current 오차에 부드럽게 동작하나 Goal Current 값 과의 오차가 크게 나타날 수 있습니다.
+> [!warning] WARNING  
 > PID값을 변경하기 전에 [[#2.4.8 Acceleration/Deceration]]을 먼저 적용하고 테스트하여 주시기 바랍니다.  
 > PID값을 수정하시기 전에 PID에 대한 충분히 숙지하신 후에 해당 값을 변경하여 주시기 바랍니다.  
 
