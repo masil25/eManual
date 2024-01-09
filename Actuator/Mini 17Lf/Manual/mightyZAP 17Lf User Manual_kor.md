@@ -377,7 +377,7 @@ Min/Max Position Calibration Parameter는 Actuator의 Goal Position이 최소/�
 | Parameter | Description | Range | Unit |
 | ---- | ---- | ---- | ---- |
 | Motor Operating Rate Limit | 모터에 공급하는 PWM 의 최대 값 설정 | 0~1000 |  |
-Actuator의 모터를 제어하기 위해 사용되는 PWM의 최대 값 설정 Parameter 입니다.
+mightyZAP의 모터를 제어하기 위해 사용되는 PWM의 최대 값 설정 Parameter 입니다.
 
 | value | 동작 상태 |
 | ---- | ---- |
