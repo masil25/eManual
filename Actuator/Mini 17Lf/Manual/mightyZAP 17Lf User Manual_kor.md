@@ -245,6 +245,8 @@ mightyZAP과 통신을 하기 위한 통신 속도 입니다.
 |  64(0x40) |  19200  |
 | 128(0x80) |   9600 bps |  
 ### 2.4.5 Alarm LED
+Hardware Error 가 발생 했을 때, 해당 Alarm LED  bit 가 세팅 되어 있는 경우 LED표시를 실행합니다. (1 = 활성 / 0 = 비활성)
+
 | Bit | Name | LED Indicate | Description |
 | ---- | ---- | ---- | ---- |
 | Bit 6 | Overload Error | RED 점멸 | 일정 시간 이상 동안 부하가 발생한 경우 |
@@ -255,12 +257,14 @@ mightyZAP과 통신을 하기 위한 통신 속도 입니다.
 > Hardware Error에 대한 자세한 설명은 [[#2.4.22 Hardware Error]]를 참조하여 주시기 바랍니다.
 
 ### 2.4.6 Alarm Shutdown
-| Bit | Name | LED Indicate | Description |
-| ---- | ---- | ---- | ---- |
-| Bit 6 | Overload Error | RED 점멸 | 일정 시간 이상 동안 부하가 발생한 경우 |
-| Bit 0 | Input Voltage Error | RED 지속 점등 | 인가된 전압이 동작 범위를 벗어난 경우 |
-일반적으로 모든 Alarm은 시스템을 재 시작해야 사라지게 됩니다.  
-하지만 저전압 Input Volatage LED Alarm의 경우 원인이 해결 되면 LED가 꺼지게 됩니다.
+Hardware Error 가 발생 했을 때, 해당 Alarm LED  bit 가 세팅 되어 있는 경우 모터를 Shutdown 합니다. (1 = 활성 / 0 = 비활성)
+
+| Bit | Name | Description |
+| ---- | ---- | ---- |
+| Bit 6 | Overload Error | 일정 시간 이상 동안 부하가 발생한 경우 |
+| Bit 0 | Input Voltage Error | 인가된 전압이 동작 범위를 벗어난 경우 |
+Shutdown은 Hardware Error가 발생할 경우, 모터를 Force Off 상태 즉, 모터에 전원 공급을 중단합니다. Shutdown애 의해 설정된 Force Off는 시스템 재 시작으로만 해지가 되며, [[#2.4.18 Force On/Off|Force ON]] 명령 또는 [[#2.4.23 Goal Position|Goal Position]] 명령에도 Force Off 명령을 수행합니다.
+하지만 저전압 Input Volatage의 경우 정상 전압으로 될 경우 Force On 됩니다.
 > [!note] NOTE   
 > Hardware Error에 대한 자세한 설명은 [[#2.4.22 Hardware Error]]를 참조하여 주시기 바랍니다.
 
