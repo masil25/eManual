@@ -403,7 +403,11 @@ Speed Limit를 변경할 경우, Goal Speed도 같이 변경됩니다. 또한 �
 Current Limit는 비 휘발성 Parameter로 전원이 끊어져도 변경된 Data 를 유지합니다. Current Limit 값이 변경되면 Goal Current 값도 같이 변경됩니다.   
 Current Limit를 높게 설정할수록 과부하 상황에서 모터가 낼 수 있는 최대 force도 올라가지만, 모터 수명 단축의 원인이 될 수도 있습니다.  
 <font color="#4f81bd">제품마다 내부 기구 저항 편차에 따라 저전류(200mA 이하) 설정에서는 mightyZAP의 동작이 불규칙하거나 움직이지 않을 수도 있습니다. 충분한 테스트 후 전류 설정을 하여 주시기 바랍니다.</font>
->[!tip] TIP  
+>[!tip] TIP - Speed 오차 누적으로 인한 떠는 현상
+>Current Limit 값을 낮출 경우  Force 뿐만 아니라 Speed도 줄어 들게 됩니다. 이때 Speed Limit/Goal Speed 값을 같이 낮춰 주지 않을 경우 속도 오차 값 누적으로 최종 위치에서 바운딩 현상이 나타날 수 있습니다.  
+>바운딩 또는 떠는 현상이 나타날 경우 Speed Limit/Goal Speed를 줄여 주시면 됩니다.
+
+>[!tip] TIP - Current Limit/Goal Current 에 따른 Force와 무 부하 Speed
 >Current Limit/Goal current 값에 대한 동작 특성은  모터 성능 곡선 및 Datasheet를 참조하여 주시기 바랍니다.
 
 ### 2.4.13 Current PI Control  
@@ -440,11 +444,12 @@ PID 값을 수정하실 때는 기본 값에서 작은 값을 가 감하여 테�
  [참고 문헌][https://commons.wikimedia.org/wiki/File:PID_Compensation_Animated.gif](https://commons.wikimedia.org/wiki/File:PID_Compensation_Animated.gif) 
 
 ### 2.4.15 Indirect Address
-사용자는 해당 기능을 이용하여, 떨어져 있는 여러 Parameter를 모아서 이용할 수 있습니다.  
+사용자는 해당 기능을 이용하여, 서로 떨어져 있는 여러 Parameter를 모아서 이용할 수 있습니다.  
 
 | Parameter | Description | Range | Unit |
 | ---- | ---- | ---- | ---- |
 | Indirect Address N | 사용자 간접 주소 지정 | 0 ~ 65535 |  |
+통신으로 개별 Parameter를 각각 읽어 올
 Indirect Address에 특정 주소를 저장하면 해당 Indirect Address는 특정 주소와 동일한 기능을 가지게 됩니다.  
 예를 들어 Indirect Address 0에 '205'(Goal Position)을 쓰고, Indirect Data 0에 '5000'을 쓰면, Actuator가 '5000'의 값으로 이동을 합니다. 또한 Goal Position 값 또한 '5000'으로 변경된 것을 확인 할 수 있습니다.   
 Indirect Address에 특정 주소를 세팅하면, Indirect Data에 해당 주소와 동일한 Parameter 가 됩니다.    
