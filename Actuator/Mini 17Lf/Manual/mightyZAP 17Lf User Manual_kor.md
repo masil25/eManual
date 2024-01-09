@@ -409,8 +409,8 @@ Current Limit를 높게 설정할수록 과부하 상황에서 모터가 낼 수
 ### 2.4.13 Current PI Control  
 | Parameter | Description | Range | Unit |
 | ---- | ---- | ---- | ---- |
-| Current P Gain |  Current PID 비례 제어 | 0 ~ 1000 |  |
-| Current I Gain | Current PID 적분 제어 | 0 ~ 1000 |  |
+| Current P Gain |  Current PID 비례 제어 | 0 ~ 255 |  |
+| Current I Gain | Current PID 적분 제어 | 0 ~ 255 |  |
 모터의 전류 제어를 위한 PID Gain값입니다. 
 정해진 값이 보다 큰 PI값을 적용할 경우 Goal Current 오차에 대해 거칠게 동작할 수 있습니다.   
 정해진 값보다 작은 PI값을 적용할 경우 Goal Current 오차에 부드럽게 동작하나 Goal Current 값 과의 오차가 크게 나타날 수 있습니다.
@@ -421,9 +421,9 @@ Current Limit를 높게 설정할수록 과부하 상황에서 모터가 낼 수
 ### 2.4.14 Speed PID Control  
 | Parameter | Description | Range | Unit |
 | ---- | ---- | ---- | ---- |
-| Speed P Gain | Speed PID 비례 제어 | 0 ~ 1000 |  |
-| Speed I Gain | Speed PID 적분 제어 | 0 ~ 1000 |  |
-| Speed D Gain | Speed PID 미분 제어 | 0 ~ 1000 |  |
+| Speed P Gain | Speed PID 비례 제어 | 0 ~ 255 |  |
+| Speed I Gain | Speed PID 적분 제어 | 0 ~ 255 |  |
+| Speed D Gain | Speed PID 미분 제어 | 0 ~ 255 |  |
 속도 PID 제어의 Gain 값입니다.  PID 제어에 대한 자세한 설명은 다른 문서를 참조하여 주시기 바랍니다. Gain보다 큰 값을 넣을 경우 속도 및 위치 오차에 대해 빠르게 반응하여 목표한 위치에 도달하여 정지하는 데 가지의 시간이 줄어 들게 됩니다. 
 하지만, 너무 큰 Gain값을 적용할 경우  오차에 대해 거칠게 동작하여 Overshoot 도는 과도 응답 상태로 정해진 위치 값을 정지하지 못하고 모터가 진동할 수 있습니다.
 또한 외란에 민감하게 반응하여 목표 값 응답이 나빠지게 됩니다.
@@ -440,10 +440,11 @@ PID 값을 수정하실 때는 기본 값에서 작은 값을 가 감하여 테�
  [참고 문헌][https://commons.wikimedia.org/wiki/File:PID_Compensation_Animated.gif](https://commons.wikimedia.org/wiki/File:PID_Compensation_Animated.gif) 
 
 ### 2.4.15 Indirect Address
+사용자는 해당 기능을 이용하여, 떨어져 있는 여러 Parameter를 모아서 이용할 수 있습니다.  
+
 | Parameter | Description | Range | Unit |
 | ---- | ---- | ---- | ---- |
 | Indirect Address N | 사용자 간접 주소 지정 | 0 ~ 65535 |  |
-사용자는 해당 기능을 이용하여, 떨어져 있는 여러 Parameter를 모아서 이용할 수 있습니다.  
 Indirect Address에 특정 주소를 저장하면 해당 Indirect Address는 특정 주소와 동일한 기능을 가지게 됩니다.  
 예를 들어 Indirect Address 0에 '205'(Goal Position)을 쓰고, Indirect Data 0에 '5000'을 쓰면, Actuator가 '5000'의 값으로 이동을 합니다. 또한 Goal Position 값 또한 '5000'으로 변경된 것을 확인 할 수 있습니다.   
 Indirect Address에 특정 주소를 세팅하면, Indirect Data에 해당 주소와 동일한 Parameter 가 됩니다.    
@@ -452,14 +453,16 @@ Indirect Address에 특정 주소를 세팅하면, Indirect Data에 해당 주�
 >사용 빈도가 높은 Parameter는 Select Box에 Option으로 추가 하였으며, 등록되지 않은 주소의 경우 'User Input' Option을 선택 하신 Select Box 옆 Test Box에 직접 작성하여 저장하여 주시면 됩니다.   
 >![[indirectAddrss.gif]]
 
-### 2.4.16 Extend I/O Control  
+### 2.4.16 Extended I/O Control  
+Extended I/O는 RS485 통신으로 제공하지 못하는 추가적인 기능을 제공하는 Port 입니다. 가 존재합니다. 해당 기능은 통신 4개의 I/O Port를 제공하며 , 각각은 위와 같은 기능을 제공합니다.  
+
 | IO PORT | Function |
 | ---- | ---- |
 | IO Port 1 | Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
 | IO Port 2 | Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
 | IO Port 3 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
 | IO Port 4 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
-Mini 17Lf 시리즈에는 Extended I/O Port가 존재합니다. 해당 기능은 통신 4개의 I/O Port를 제공하며 , 각각은 위와 같은 기능을 제공합니다.  
+
 해당 값을 설정하기 위해서는 당사의 Manager Program을 사용하여 주시기 바랍니다.
 
 Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며 외부 전원이 필요하지 않습니다.  각 기능 설명에 명시된 회로 구성대로 연결해야 Actuator 에 문제가 발생하지 않습니다.  
