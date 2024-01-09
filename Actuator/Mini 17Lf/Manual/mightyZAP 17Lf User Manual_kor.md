@@ -540,7 +540,7 @@ Force ON/OFF를 실행 합니다. 전원이 인가 되면 자동으로 Force ON�
 Force Off 명령 시 즉시 모터의 전원을 차단하여 모터의 동작을 중지합니다. Self Lock을 지원하지 않는 제품의 경우 외부의 힘에 의해 위치 값이 변경될 수 있습니다.  
 Force Off 후 별도의 명령(Force ON) 명령이 없이 Goal Position 명령 시 자동으로 Force ON되어 집니다.  
 >[!tip] TIP
->Self Lock이 지원 되는 제품의 경우, 위치 이동 완료 후 진동 및 외력에 의한 잦은 위치 변동으로 모터에 스트레스를 주는 경우를 막기 위해 Force Off 명령을 사용하면 좋습니다.  
+>Self Lock이 지원 되는 제품의 경우, 위치 이동 완료 후 진동 및 외력에 의한 빈번한 위치 변동으로 모터에 스트레스를 주는 경우를 막기 위해 Force Off 명령을 사용하면 좋습니다.  
 >모터가 쉬지 못하고 지속적으로 동작하게 될 경우 모터의 수명에 영향을 주거나 Overload 발생의 원인이 될 수 있습니다.
 ### 2.4.19 Actuator Pause
 | value | 동작 상태 |
@@ -557,8 +557,7 @@ mightyZap이 완전 정지하고, Goal Position 위치가 정지한 현재 위�
 mightyZap이 정지 한 후에는 자동으로 Stop Paremeter가 리셋 됩니다.  
 
 ### 2.4.21 LED
-Error가 표시 되지 않을 때 사용자가 임의로 LED를 제어하여 디스플레이 효과를 낼 수 있습니다.  
-(Error 표시가 우선)  
+Error가 표시 되지 않을 때 사용자가 임의로 LED를 제어하여 디스플레이 효과를 낼 수 있습니다.  (Error 표시가 우선)  
 
 |bit|동작 상태|
 |---|---|
@@ -572,13 +571,7 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
 
 | Bit | Name | Description |
 | ---- | ---- | ---- |
-| Bit 7 | - | 미상용 |
 | Bit 6 | Overload Error | 일정 시간 이상 동안 부하가 발생한 경우 |
-| Bit 5 | - |  |
-| Bit 4 | - |  |
-| Bit 3 | - |  |
-| Bit 2 | - | - |
-| Bit 1 | - | - |
 | Bit 0 | Input Voltage Error | 인가된 전압이 동작 범위를 벗어난 경우 |
 - Overload  Error[수정]    
   2가지 방식이 있음, Motor continous current Limit 연속 전류 제한  
