@@ -454,7 +454,7 @@ Indirect Address에 특정 주소를 세팅하면, Indirect Data에 해당 주�
 >![[indirectAddrss.gif]]
 
 ### 2.4.16 Extended I/O Control  
-Extended I/O는 RS485 통신으로 제공하지 못하는 추가적인 기능을 제공하는 Port 입니다. 가 존재합니다. 해당 기능은 통신 4개의 I/O Port를 제공하며 , 각각은 위와 같은 기능을 제공합니다.  
+Extended I/O는 RS485 통신으로 제공하지 못하는 추가적인 기능을 제공하는 Port 입니다.  4개의 I/O Port를 제공하며 아래와 같은 기능을 제공합니다.  
 
 | IO PORT | Function |
 | ---- | ---- |
@@ -462,24 +462,26 @@ Extended I/O는 RS485 통신으로 제공하지 못하는 추가적인 기능을
 | IO Port 2 | Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
 | IO Port 3 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
 | IO Port 4 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
-
-해당 값을 설정하기 위해서는 당사의 Manager Program을 사용하여 주시기 바랍니다.
+<font color="#ff0000">해당 값을 설정하기 위해서는 당사의 Manager Program을 사용하여 주시기 바랍니다.</font>
 
 Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며 외부 전원이 필요하지 않습니다.  각 기능 설명에 명시된 회로 구성대로 연결해야 Actuator 에 문제가 발생하지 않습니다.  
-(connector 기구 이미지 사이드 뷰)[수정]
+(연결 Connector는 동봉된 Extenxded Connector를 사용하여 주시기 바랍니다.)  
+![[Pasted image 20240109114414.png|300]]
 
 <font size="5"> Function Description</font>
 - **Funtion Switch**   
-	IO Port 1 또는 2번을 Switch 기능으로 지정 시 나머지 IO Port도 자동으로 지정 됩니다.  해당 기능은 그림과 같이 회로를 구성하였을 경우 각 버튼에 따라 short stroke Limit/Long Stroke Limit 값으로 이동을 합니다.
+	IO Port 1 또는 2번을 Switch 기능으로 지정 시 나머지 IO Port도 자동으로 지정 됩니다.  해당 기능은 그림과 같이 회로를 구성하며, 각 버튼에 따라 Short stroke Limit/Long Stroke Limit 값으로 이동을 합니다.
 	(회로 구성)  
 - **Function JOG**  
-	IO Port 1 또는 2번을 Jog 기능으로 지정 시 나머지 IO Port도 작동으로 지정됩니다. 해당 기능은 그림과 같이 회로를 구성해야하며 각 버튼을 누를 경우 Short/Long 방향으로 모터가 동작 하다가 버튼을 놓았을 때 정지하게 됩니다.
+	IO Port 1 또는 2번을 Jog 기능으로 지정 시 나머지 IO Port도 작동으로 지정됩니다. 해당 기능은 그림과 같이 회로를 구성하며, 각 버튼을 누를 경우 Short stroke Limit/Long Stroke Limit  방향으로 모터가 동작 하다가 버튼을 놓았을 때 정지하게 됩니다.
 - **Action Enable**    
 	Action Enable 기능 Action 기능을 사용할 때 사용됩니다. 
+	( 자세한 내용은 [[#4.17 Action Control]]을 참조하여 주시기 바랍니다. )
 - **Action Next**    
-	Action Next 기능 Action 기능을 사용할 때 사용됩니다. 해당 I/O Pin에 스위치 입력이 들어와야 다음 Action 기능을 진행합니다. 자세한 내용은 4.17 Action Control을 참조하여 주시기 바랍니다.
+	Action Next 기능 Action 기능을 사용할 때 사용됩니다. 해당 I/O Pin에 스위치 입력이 들어와야 다음 Action 기능을 진행합니다.   
+	( 자세한 내용은 [[#4.17 Action Control]]을 참조하여 주시기 바랍니다. )
 - **Force Off**  
-	해당 기능은 입력 기능으로 force off 기능을 해당 I/O Port에 적용합니다. 선택한 i/o port에 스위치 회로를 연결하여 버튼을 누르면 Force On/Off toggle 기능을 수행합니다.  
+	해당 기능은 입력 기능으로 force off 기능을 해당 I/O Port에 적용합니다. 선택한 I/O port에 스위치 회로를 연결하여 버튼을 누르면 Force On/Off toggle 기능을 수행합니다.  
 - **Function Stop**    
 	해당 기능은 입력 기능으로 Stop 기능을 해당 I/O Port에 적용합니다. 선택한 i/o port에 스위치 회로를 연결하여 버튼을 누르면 Actuator가 정지 됩니다.  
 - **Function Pause**   
