@@ -362,16 +362,16 @@ Start Margin 과 End Margin 거의 같고 부하가 적고 관성이 적은 제�
 | ---- | ---- | ---- | ---- |
 | Min Position Calibration | Goal Position 최소 위치 조정 | 0~1000 |  |
 | Max Position Calibration | Goal Position 최대 위치 조정 | 0~1000 |  |
-Min/Max Position Calibration Parameter는 Actuator의 Goal Position이 최소/최대 값일 때의 Rod의 위치 값을 조절하는 Parameter이다.  
+Min/Max Position Calibration Parameter는 mightyZAP의 Goal Position이 최소/최대 값일 때의 Rod의 위치 값을 조절하는 Parameter이다.  
 
 이해를 위해 아래의 이미지를 참조하여 주시기 바랍니다.  
 ![[minmaxPostion.png]]
 - Min Poisition  
-  Min Position Calibration 값을 늘릴 경우 Goal Position '0'일 때의 Min Position 위치가 늘어나게 되며 전체 동작 stroke가 줄어들게 됩니다.
-  Min Position Calibration 값을 줄일 경우 Goal Position '0'일 때의 Min Position 위치가 줄어들게 되며 전체 동작 stroke가 늘어나게 됩니다. 하지만 비선형 구간이 늘어나게 됩니다.
+	  Min Position Calibration 값을 늘릴 경우 Goal Position '0'일 때의 Min Position 위치가  늘어나게 되며 전체 동작 Stroke가 줄어들게 됩니다.
+	  Min Position Calibration 값을 줄일 경우 Goal Position '0'일 때의 Min Position 위치가 줄어들게 되며 전체 동작 stroke가 늘어나게 됩니다. 하지만 비선형 구간이 늘어나게 됩니다.
 - Max Position  
-  Max Position Calibration 값을 늘릴 경우 Goal Position 최대 값일 때의 Max Position 위치가 줄어들게 되며 전체 동작 Stroke가 줄어들게 됩니다.   
-  Max Position Calibration 값을 줄일 경우 Goal Position 최대 값일 때의 Max Position 위치가 줄어들게 되며 전체 동작 stroke가 늘어나게 됩니다. 하지만 비선형 구간이 늘어나게 됩니다.
+	  Max Position Calibration 값을 늘릴 경우 Goal Position 최대 값일 때의 Max Position 위치가 줄어들게 되며 전체 동작 Stroke가 줄어들게 됩니다.   
+	  Max Position Calibration 값을 줄일 경우 Goal Position 최대 값일 때의 Max Position 위치가 줄어들게 되며 전체 동작 stroke가 늘어나게 됩니다. 하지만 비선형 구간이 늘어나게 됩니다.
   ![[minmaxCalibration.gif]]
   
 ### 2.4.10 Motor Operating Rate Limit  
