@@ -274,20 +274,23 @@ Shutdown은 Hardware Error가 발생할 경우, 모터를 Force Off 상태 즉, 
 | Short Stroke Limit | Goal Position 최소 입력 하한값  | 0~10,000 |  |
 | Long Stroke Limit | Goal Position 최대 입력 상한값  | 0~10,000 |  |
 위치 제어에서 목표 위치의 제한 값으로 0 ~ 10000 범위 내에서 목표 위치 값을 제한합니다.
-따라서 Goal Position(203)값은 Short Stroke Limit 값보다 작을 수 없고, Long Stroke Limit 값보다 커서는 안됩니다.
+따라서 Goal Position값은 Short Stroke Limit(A) 값보다 작을 수 없고, Long Stroke Limit(B) 값보다 커서는 안됩니다.
 Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Stroke Limit 값보다 클 경우 Stroke Limit값으로 치환됩니다.
-![[Pasted image 20240109094047.png|600]]
+![[Pasted image 20240109094047.png|600]]   
+>[!warning] WARNING
+>mightyZAP이 사용자의 Application에 설치 되어 동작하기 전에 , 실제 가동 가능한 범위를 측정하여 Short Stroke Limit/Long Stroke Limit를 설정하신 후 사용하는 것을 추천 드립니다.  
+>설치된 기구물의 한계 밖의 위치 이동값을 입력할 경우 mightyZAP 또는 사용자의 Application 이 파손되거나, Overload 보호 기능이 동작 될 수 있습니다. 
 
 ### 2.4.6 Start Compliance Margin  
-| Parameter | Description | Range | Unit |
-| ---- | ---- | ---- | ---- |
-| Start Complicane Margin | Goal Position 최소 입력 하한값 | 0~255 |  |
   Start Compliance Margin은 Actuator가 Goal Position 위치 값을 지키기 위해 이동 하기 위한 위치 편차(마진)의 최소 값 입니다.  
+  
+| value | 동작 상태 |
+| ---- | ---- |
+| 0 ~ 255 | Goal Position 최소 입력 하한값 |
   현재 위치(Present Position)값이 Goal Position 값보다 마진 값 이상 크거나 작을 경우, 위치 오차를 정정하기 위해 모터를 제어합니다.
   
-  Start Compliance Margin은 다음의 2가지의 경우에 적용이 됩니다.  
-  1. 현재 위치에서 다른 위치로 이동하기 위해 Goal Postion 값을 변경하는 경우 
-```
+  **Start Compliance Margin은 다음의 2가지의 경우에 적용이 됩니다.**  
+<font color="#4f81bd">상황 1. 현재 위치에서 다른 위치로 이동하기 위해 Goal Postion 값을 변경하는 경우 </font>  
 예 1> Start Margin 이내로 Goal Position을 변경한 경우
  - Start Compliance Margin : 20
  - Present Position : 1000  
@@ -299,11 +302,11 @@ Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Strok
  - Present Position : 1000  
  - Goal Position : 1000 -> 950으로 변경할 경우
  위치 편차가50으로 마진값 보다 커 actuator는 위치 편차를 줄이기 위해 동작을 합니다. 
-```
+
 
   2. 현재 위치에서 외력 또는 내부 유격에 의해 위치가 변화가 생긴 경우  
      사용자는 Goal Position을 변경하지 않았으나 Present Position이 바뀐 경우입니다.  일반적으로 외력에 의한 밀림이나 내부 유격 등의 의한 현재 위치의 변동이 생길 경우 입니다.  
-```
+
  예 1>  외부 힘에 의해 위치 편차가 발생한 겨우  
 Start Compliance Margin : 20  
 Goal Position : 1000  
@@ -321,10 +324,11 @@ Present Positon : 1000 -> 1050
 > default로 설정된 값은 최소한의 안전성을 위해 선정된 값으로 default 값 아래로 낮추는 것은 추천 드리지 않습니다.  
 
 ### 2.4.7 End Compliance Margin  
-| Parameter | Description | Range | Unit |
-| ---- | ---- | ---- | ---- |
-| End Complicane Margin | Goal Position 최소 입력 하한값 | 0~255 |  |
-End Compliance Margin은 Acuator가 정지하기 위한 최대 위치 편차 값입니다.  
+End Compliance Margin은 mightyZAP이 정지하기 위한 최대 위치 편차 값입니다.  
+
+| value | 동작 상태 |
+| ---- | ---- |
+| 0 ~ 255 | 정지하기 위한 최대 위치 편차 값 |
 Actuator가 위치 편차를 줄이기 위해 동작 중일 때 적용이 되며, Present Position과 Gaol Position과의 편차가 End Compliance Margin 보다 작을 경우 motor의 동작을 멈춥니다.  
 End Compliance Margin은 작을 수록 위치 정밀도가 높아지나, 일정 값 이하로 줄일 경우 그 효과가 미미해 집니다.  
 
