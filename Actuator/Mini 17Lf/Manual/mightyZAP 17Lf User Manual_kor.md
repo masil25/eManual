@@ -470,12 +470,12 @@ Extended I/O는 RS485 통신으로 제공하지 못하는 추가적인 기능을
 
 Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며 외부 전원이 필요하지 않습니다.  각 기능 설명에 명시된 회로 구성대로 연결해야 Actuator 에 문제가 발생하지 않습니다.  
 (연결 Connector는 동봉된 Extenxded Connector를 사용하여 주시기 바랍니다.)  
-![[Pasted image 20240109114414.png|300]]
+![[Pasted image 20240109160551.png|400]]
 
 <font size="5"> Function Description</font>
 - **Funtion Switch**   
 	IO Port 1 또는 2번을 Switch 기능으로 지정 시 나머지 IO Port도 자동으로 지정 됩니다.  해당 기능은 그림과 같이 회로를 구성하며, 각 버튼에 따라 Short stroke Limit/Long Stroke Limit 값으로 이동을 합니다.
-	![[스크린샷 2024-01-09 11-51-15.png|400]]
+	![[스크린샷 2024-01-09 11-51-15.png|]]
 - **Function JOG**  
 	IO Port 1 또는 2번을 Jog 기능으로 지정 시 나머지 IO Port도 작동으로 지정됩니다. 해당 기능은 그림과 같이 회로를 구성하며, 각 버튼을 누를 경우 Short stroke Limit/Long Stroke Limit  방향으로 모터가 동작 하다가 버튼을 놓았을 때 정지하게 됩니다.  
 	![[스크린샷 2024-01-09 11-51-15.png|400]]
