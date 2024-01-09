@@ -219,42 +219,38 @@ mightyZAP Model을 식별하기 위한 번호입니다.
 
    ![[versioning.png|200]]
 ### 2.4.3 mightyZAP ID
-통신 상에서 mightyZAP을 식별 하기 위한 고유 번호, Daisy-chain 방식으로 연결된 Actuator들은 서로 다른 ID가 할당되어야 합니다.  
+통신 상에서 mightyZAP을 식별 하기 위한 고유 번호, Daisy-chain 방식으로 연결된 mightyZAP들은 서로 다른 ID가 할당되어야 합니다.  
 
 | value | Note |
 | ---- | ---- |
-| 1~243 | mightyZAP ID (default ID 1) |
 | 0 | Broadcaste ID (Feedback  없이 쓰기 만 가능하고 읽기는 불가능 합니다.) |
+| 1~243 | mightyZAP ID (default ID 1) |
 > [!NOTE] Daisy-cahin Connection  
-> ID 번호가 N번인 mightyZAP 서보에 Command Packet 을 전송할 경우 여러 개의 mightyZAP 중 ID가 N번에 해당하는 서보만이 Feedback Packet을 return하고 , 그 Command를 수행합니다.  
+> ID 번호가 N번인 mightyZAP 서보에 Command Packet 을 전송할 경우 여러 개의 mightyZAP 중 ID가 N번에 해당하는 서보만이 Feedback Packet을 return하고, 그 Command를 수행합니다.  
 > 
 > ![[Daisy-chain.png]]
 
 > [!warning]  Unique ID
-> 연결된 Actuator의 ID가 중복되지 않도록 주의해야 합니다. 중복된 ID가 있을 경우 통신 오류가 발생하여 정상적인 통신이 이루어지지 않습니다.   
+> 연결된 mightyZAP의 ID가 중복되지 않도록 주의해야 합니다. 중복된 ID가 있을 경우 통신 오류가 발생하여 정상적인 통신이 이루어지지 않습니다.   
 > 최대 243개의 ID 설정이 가능하지만 표준 규정상 하나의 노드에 연결 가능한 mightyZAP은 이론적으로 최대 32개입니다.
-
 ### 2.4.4 Baudrate  
 mightyZAP과 통신을 하기 위한 통신 속도 입니다.
-설정된 값을 적용하기 위해서는 mightyZAP을 재시작 해야 합니다.
+설정된 값을 적용하기 위해서는 mightyZAP을 재 시작 해야 합니다.
 
-| 설정값       | 통신 속도      |
+| 설정값       | 통신 속도 (bps)      |
 |:----------|:-----------|
-|   8(0x08) | 115200 bps |
-|  16(0x10) |  57600 bps (default) |
-|  32(0x20) |  38400 bps |
-|  64(0x40) |  19200 bps |
+|   8(0x08) | 115200  |
+|  16(0x10) |  57600 (default) |
+|  32(0x20) |  38400  |
+|  64(0x40) |  19200  |
 | 128(0x80) |   9600 bps |  
-### 2.4.5 Hardware Error
+### 2.4.5 Alarm LED 
+Hardware Error 가 발생 했을 때, 해당 Error bit가 1로 설정되어 있으면 LED에 표시를 합니다.
+( 1 = 활성 /0 = 비활성)
+
 | Bit | Name | Description |
 | ---- | ---- | ---- |
-| Bit 7 | - | 미상용 |
 | Bit 6 | Overload Error | 일정 시간 이상 동안 부하가 발생한 경우 |
-| Bit 5 | - |  |
-| Bit 4 | - |  |
-| Bit 3 | - |  |
-| Bit 2 |  |  |
-| Bit 1 |  |  |
 | Bit 0 | Input Voltage Error | 인가된 전압이 동작 범위를 벗어난 경우 |
 
 > [!tip] Tip   
