@@ -685,9 +685,12 @@ Motor Operating Rate는 Goal Speed, Goal Current 등에 따라 값이 달라집�
 ```sheet
 {
 classes:{
-class
+class1:{
+"background-color":"blue",
 }
 }
+}
+---
 | value | Description |
 | ---- | ---- |
 | 0 | mightyZAP 정지 상태 ~ .class1|

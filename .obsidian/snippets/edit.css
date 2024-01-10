@@ -21,13 +21,15 @@
 }
 
 .HyperMD-quote {
-      background-color: #fff1f1!important;
+    background-color: #fff1f1!important;
+   
     font-weight: 300!important;
 
 }
 .HyperMD-codeblock-bg {
   color : #fff!important;
-  background-color : #0e2f48!important;
+/*  background-color : #0e2f48!important;*/
+ background-color: #a5a5a5!important;
 }
 .HyperMD-quote:before {
   border: none!important;
