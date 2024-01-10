@@ -614,10 +614,11 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
     ![[Pasted image 20240110155529.png|]]
 		
   - 동작 전류 누적 
-  Overload를 발생하는 는  I<sup>2</sup>T 방식을 이용하여 전류를 축적하여 모터를 보호하는데 사용됩니다. I<sup>2</sup>T 보호는 모터의 열 모델링을 기반으로 한 모터 과부하 보호 방법으로, 일종의 센서리스 모터 과열 보호 장치 입니다.  
-$$i^2t=i_{peak}^2t - i_{norm}^2t = (i_{peak}^2-i_{norm}^2)t$$
-  아래의 그림과 같이... 이미지는 수정 및 설명 도 추가설명   [수정 필요]
-   ![[i2t_graph.png]] 
+    동작 전류 누적 방식은 동작 중 발생하는 전류의 양을 누적하는 방식으로 아래의 식과 같이 누적됩니다.  I<sup>2</sup>T 보호는 모터의 열 모델링을 기반으로 한 모터 과부하 보호 방법으로, 일종의 Sensorless 모터 과열 보호 장치 입니다.
+    $$i^2t=i_{peak}^2t - i_{norm}^2t = (i_{peak}^2-i_{norm}^2)t$$
+    ![[Pasted image 20240110163239.png]]  
+    정격 부하로 30초 동안 동작할 경우 
+  
 - Input Voltage Error  
   입력 전압의 범위가 벗어날 해당 bit 가 set 됩니다. Low voltage일 경우, 다시 정상 전압으로 변경되면 해당 Error가 clear 됩니다.  
   하지만 high voltage Error 일 경우, 해당 Reset이 되지 않는 이상 해지 되지 않습니다. 
