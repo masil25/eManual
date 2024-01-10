@@ -543,13 +543,13 @@ Action Setting에서 설정된 내용에 대한 반복 횟수 또는 1회 동작
 **Repeat time**  
 Interval 또는 dWell Time으로 설정할 시간 값을 입력합니다.
 
-| value | 동작 상태 |
+| value | Description |
 | ---- | ---- |
 | 0 ~ 65535 | Interval 또는 dWell Time 시간  |
 **Repeat Count**  
 하나의 Action을 반복할 횟수를 지정합니다.
 
-| value | 동작 상태 |
+| value | Description |
 | ---- | ---- |
 | 1 ~ 1000 | 반복횟수 |
 | 0 | '0'을 입력해도 1회는 실행합니다. |
@@ -558,14 +558,14 @@ Moving data는 각 Action 마다 Goal Speed, Goal Current, Acceleartion Decelera
 **Stop Action**  
 Stop Action은 한 Action 종료 후 상태를 설정합니다.
 
-| value | 동작 상태 |
+| value | Description |
 | ---- | ---- |
 | Stop | 모든 Action을 종료합니다. 다음 Action Enable 신호가 오기 전까지 대기합니다. |
 | Next | 다음 Index를 실행합니다. |
 | Repeat | Index 0부터 다시 시작하여 Action 정지 명령이 있을 때 까지 모든 Action을 무한 반복 실행합니다.  |
 
 ### 2.4.18 Force On/Off  
-| value | 동작 상태 |
+| value | Description |
 | ---- | ---- |
 | 0 | 모터의 전원을 차단하여 기동력이 발생 되지 않도록 합니다. |
 | 1 | 모터의 전원을 인가하여 기동력이 발생하도록 합니다. |
@@ -576,14 +576,14 @@ Force Off 후 별도의 명령(Force ON) 명령이 없이 Goal Position 명령 �
 >Self Lock이 지원 되는 제품의 경우, 위치 이동 완료 후 진동 및 외력에 의한 빈번한 위치 변동으로 모터에 스트레스를 주는 경우를 막기 위해 Force Off 명령을 사용하면 좋습니다.  
 >모터가 쉬지 못하고 지속적으로 동작하게 될 경우 모터의 수명에 영향을 주거나 Overload 발생의 원인이 될 수 있습니다.
 ### 2.4.19 Actuator Pause
-| value | 동작 상태 |
+| value | Description |
 | ---- | ---- |
 | 0 | 모터의 위치 이동을 일시 정지를 해지 합니다. |
 | 1 | 모터의 위치 이동을 일시 정지 합니다. |
 Actuator의 일시 정지 명령으로 이동 중 Pause 명령이 내려지면, 현재 위치에서 정지하고, 현재 위치를 유지합니다. Pause 명령이 해지 되면 Goal Position 위치로 다시 이동합니다.  
 
 ### 2.4.20 Actuator Stop
-| value | 동작 상태 |
+| value | Description |
 | ---- | ---- |
 | 1 | 위치 이동을 정지하고 Goal Position 값을 현재 위치 값으로 변경합니다.. |
 mightyZap이 완전 정지하고, Goal Position 위치가 정지한 현재 위치로 변경됩니다.  
@@ -592,12 +592,12 @@ mightyZap이 정지 한 후에는 자동으로 Stop Paremeter가 리셋 됩니�
 ### 2.4.21 LED
 Error가 표시 되지 않을 때 사용자가 임의로 LED를 제어하여 디스플레이 효과를 낼 수 있습니다.  (Error 표시가 우선)  
 
-|bit|동작 상태|
+|bit|Description |
 |---|---|
 |0|RED LED |
 |1|GREEN LED|
 ### 2.4.22  Hardware Error
-Actuator 가 동작 중 발생하는 위험 상황 중 아래의 상황에 대하여 스스로 감지하고, 다양한 방법으로 스스로를 보호할 수 있습니다.  
+mightyZap이 동작 중 발생하는 위험 상황 중 아래의 상황에 대하여 스스로 감지하고, 다양한 방법으로 스스로를 보호할 수 있습니다.  
 각  Bit들은 중복되어 설정이 되며, Alarm Shutdown, Alarm LED,  Extend IO 기능을 이용하여 Error 발생 시에 대한 조치를 할 수 있습니다.  
 일반적으로 추천하는 방법은 Alarm Shutdown 기능을 이용하여 해당 Error가 발생 할 경우, Force On/Off를 '0'으로 하여,  Actuator 와  사용자의 system을 보호하는것이 좋습니다.  
 ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 이상 모터가 동작하지 않습니다.  
@@ -618,7 +618,7 @@ $$i^2t=i_{peak}^2t - i_{norm}^2t = (i_{peak}^2-i_{norm}^2)t$$
 ### 2.4.23 Goal Position
 Actuator를 이동 시키고자 하는 위치 값입니다. Goal Position은 [[#2.4.5 Short/Long Stroke Limt|Short/Long Stroke Limt]] 설정 제한 값 가지 입력이 가능합니다. (즉, stroke limit 범위 밖으로는 위치 명령을 내려도 stroke limit위치까지만 움직입니다)
 
-| value | 동작 상태 |
+| value | Description |
 | ---- | ---- |
 | 0 ~ 10000 | mightyZap의 이동 목표 위치값을 설정합니다.<br>(각 모델의 Stroke 길이와 상관없이 위치 해상도는 모두 10000입니다.) |
 >[!tip] TIP
@@ -630,7 +630,7 @@ $$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$
 ### 2.4.24 Goal Speed
 mightyZAP의 동작 속도를 변경할 때 사용합니다.  
 
-| value | 동작 상태 | 비고 |
+| value | Description | 비고 |
 | ---- | ---- | ---- |
 | 0 ~ 1000 | mightyZap의 최대 속도 값 | +/- 10% |
 각 mightyZAP의 최대 속도에 대해 비율로 제어하며 약 10%의 오차가 있습니다.
@@ -643,7 +643,7 @@ Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
 ### 2.4.25 Goal Current  
 모터의 최대 전류를 제한합니다. 전류 값을 제한하여 Actuator의 최대 Force를 제한 할 수 있습니다. 각 Goal Current 값에 대한 Stall Force는 Datasheet를 참조하여 주시기 바랍니다.  
 
-| value | 동작 상태 |
+| value | Description |
 | ---- | ---- |
 | 0 ~ 1600 | mightyZap의 최대 전류 설정 값 |
 초기 전원 인가 시 비 휘발성 [[#2.4.12 Current Limit|Current Limit]]의 값을 Goal Current의 초기 값으로 적용합니다.  
@@ -661,28 +661,28 @@ $$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$
 ### 2.4.27 Present Current
 모터의 현재 전류 사용 값입니다.
 
-|value|range|dfd|
-|---|---|---|
-|0~16000|0~1600mA|mA|
+| value | range | Description | Unit |
+| ---- | ---- | ---- | ---- |
+| 0~16000 | 0~1600mA |  |  |
 present Current는 오차를 포함하고 있음으로 참고 용으로 사용하여 주시기 바랍니다.
 ### 2.4.28 Present Motor Operating Rate
 모터에 공급되는 PWM값을 나타냅니다. (통신용 PWM과의 오해를 방지하기 위해 Motor Operating Rate(모터 가동율)이라는 용어를 사용합니다. )  
 Motor Operating Rate는 Goal Speed, Goal Current 등에 따라 값이 달라집니다.   
 '0'은 모터가 정지한 상태를 나타냅니다.
 
-|value|range|Unit |
-|---|---|---|
-|-10000~1000|0~1600mA|mA|
+| value | Description | Unit |
+| ---- | ---- | ---- |
+| -10000~1000 |  | mA |
 ### 2.4.29 Present Voltage  
 입력 전압 값을 나타 냅니다. 
 
-|value|range|Unit |
+|value|Description |Unit |
 |---|---|---|
-|0~130|0~13.0|[v]|
+|0~130| |[v]|
 ### 2.4.30 Moving
 모터의 동작 유무를 나타냅니다. 정확히는 모터의 목표 도달 유무를 나타냅니다.  
 
-| value | 동작 상태 |
+| value | Description |
 | ---- | ---- |
 | 0 | mightyZAP 정지 상태 |
 | 1 | mightyZAP 동작 중 |
@@ -696,7 +696,7 @@ Overload Value 값이 다 내려가는데 최대 30초가 걸리게 됩니다.
 ### 2.4.32 Action Enable
 Action Parameter로 작성된 Action을 실행할 때 사용합니다. Action Paramter 를 작성하였어도 Action Enable을 활성화 하지 않으면 Action은 동작하지 않습니다. 
 
-| value | range | Unit |
+| value | Description | Unit |
 | ---- | ---- | ---- |
 | 0 | Action disable |  |
 | 1 | Action Enable |  |
