@@ -609,7 +609,10 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
 <font color="#4f81bd"><b>Overload  Error</b></font>
   17Lf Model의 Overload 측정 방식은 연속 누적 동작 시간 측정과, 전류 누적 계산 2가지가 있습니다.  
   - 동작 시간 누적  
-    일정 시간동안 누적도
+    누적된 동작 시간이 30초가 넘으면 Overload 에 걸리게 됩니다.  
+    예 1 > 동작 20초 -> 정지 10초 -> 동작 20초 -> Overload  발생
+    
+		
   - 동작 전류 누적 
   Overload를 발생하는 는  I<sup>2</sup>T 방식을 이용하여 전류를 축적하여 모터를 보호하는데 사용됩니다. I<sup>2</sup>T 보호는 모터의 열 모델링을 기반으로 한 모터 과부하 보호 방법으로, 일종의 센서리스 모터 과열 보호 장치 입니다.  
 $$i^2t=i_{peak}^2t - i_{norm}^2t = (i_{peak}^2-i_{norm}^2)t$$
