@@ -654,8 +654,13 @@ mightyZAP의 동작 속도를 변경할 때 사용합니다.
 ( 0일 때 기동력 OFF 상태이고 1023일 때 최대 속도를 냅니다. )
 Goal Speed값을 이용하여 실제 예상되는 속도 계산값은 아래와 같습니다. 
 $$ TargetSpeed = MaxSpeed\times\frac{GoalSpeed}{1000}$$
-```
-<input 
+```sheet
+{
+<table>
+    <input type="text">etset
+    </imput>
+</table>
+}
 ```
 [[#2.4.11 Speed Limit|Speed Limit]] 명령은 초기 설정 값으로 사용하며, 실시간 속도 변경이 필요한 경우 Goal Speed 를  사용합니다.  
 
