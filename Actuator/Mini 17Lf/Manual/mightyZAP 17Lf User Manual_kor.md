@@ -606,8 +606,11 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
 | ---- | ---- | ---- |
 | Bit 6 | Overload Error | 일정 시간 이상 동안 부하가 발생한 경우 |
 | Bit 0 | Input Voltage Error | 인가된 전압이 동작 범위를 벗어난 경우 |
-- Overload  Error 
-  2가지 방식이 있음, Motor continous current Limit 연속 전류 제한  
+<font color="#4f81bd"><b>Overload  Error</b></font>
+  17Lf Model의 Overload 측정 방식은 연속 누적 동작 시간 측정과, 전류 누적 계산 2가지가 있습니다.  
+  - 동작 시간 누적  
+    일정 시간동안 누적도
+  - 동작 전류 누적 
   Overload를 발생하는 는  I<sup>2</sup>T 방식을 이용하여 전류를 축적하여 모터를 보호하는데 사용됩니다. I<sup>2</sup>T 보호는 모터의 열 모델링을 기반으로 한 모터 과부하 보호 방법으로, 일종의 센서리스 모터 과열 보호 장치 입니다.  
 $$i^2t=i_{peak}^2t - i_{norm}^2t = (i_{peak}^2-i_{norm}^2)t$$
   아래의 그림과 같이... 이미지는 수정 및 설명 도 추가설명   [수정 필요]
