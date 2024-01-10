@@ -484,7 +484,7 @@ mightyZAP의 모델 번호입니다.
 ### 4.4.5. Stroke Limit (0~4095)  
 Short Stroke(A)또는 Long Stroke(C)상태의 한계 위치 값으로 Goal Position의 최대/최소 값이 됩니다.   Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Stroke Limit 값보다 클 경우  Stroke Limit값으로 치환됩니다.    
 (범위 : 0 ~ 4095 )
-   ![[StrokeLimit.png]]
+   ![[Actuator/Mini 12Lf/img/StrokeLimit.png]]
 > 비 휘발성 메모리 영역입니다.   데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.   운영 중 빈번한 값의 변경은 주의하시기 바랍니다.     
 ### 4.4.6. Protocol type (Default : IR Protocol)
 통신 Protocol 방식을 선택합니다.    

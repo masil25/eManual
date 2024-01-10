@@ -545,7 +545,7 @@ After receiving Command Packet at multiple qty of mightZAPs, the servo whose ID 
    Stroke limit between Short Stroke (A) and Long Stroke (C) which is the max/min. value of Goal Position. If the Goal Position value is smaller than the Short Stroke Limit value or greater than the Long Stroke Limit value, Goal Position value is replaced with the Stroke Limit value. 
 
    (Range : 0 ~ 4095 )
-   ![[StrokeLimit.png]]
+   ![[Actuator/Mini 12Lf/img/StrokeLimit.png]]
 > Stroke limit is a non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.
 
 6. Protocol type (Default : IR Protocol)

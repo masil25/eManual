@@ -11,11 +11,9 @@
             "id": "bed695024dbd799d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
-                "mode": "source",
-                "source": false
+                "file": "Pasted image 20240109114414.png"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
+                "file": "Pasted image 20240109114414.png",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
+                "file": "Pasted image 20240109114414.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md"
+                "file": "Pasted image 20240109114414.png"
               }
             }
           },
@@ -146,7 +144,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -161,25 +159,26 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "markdown-importer:Open format converter": false,
-      "publish:Publish changes...": false
+      "publish:Publish changes...": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "bed695024dbd799d",
+  "active": "3c8f0a42222ab22e",
   "lastOpenFiles": [
-    "Pasted image 20240110163239.png",
-    "Pasted image 20240110163033.png",
-    "Pasted image 20240110155529.png",
     "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
+    "Actuator/Mini 17Lf/img/overload_i2t.png",
+    "Actuator/Mini 17Lf/img/overload_time.png",
+    "Actuator/Mini 17Lf/img/action_dwell.png",
+    "Actuator/Mini 17Lf/img/action_interval.png",
+    "Actuator/Mini 17Lf/img/action_editor.png",
+    "Actuator/Mini 17Lf/img/extended_io_userboard.png",
+    "Actuator/Mini 17Lf/img/extened_io_led.png",
+    "Actuator/Mini 17Lf/img/extended_io_single_sw.png",
+    "Actuator/Mini 17Lf/img/extended_io_switch.png",
+    "NEWS/News Test.md",
+    "Actuator/Mini 17Lf/img/extende_io_pinmap.png",
     "Excalidraw/Drawing 2024-01-10 14.48.49.excalidraw.md",
     "Excalidraw",
-    "Pasted image 20240110102524.png",
-    "Pasted image 20240110102438.png",
-    "Pasted image 20240110102415.png",
-    "Pasted image 20240110102317.png",
-    "simplescreenrecorder-2024-01-09_17.06.38.gif",
-    "Pasted image 20240109170258.png",
-    "스크린샷 2024-01-09 17-01-46.png",
-    "Pasted image 20240109170002.png",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Templates/DATASHEET.md",
     "Actuator/Main.md",
@@ -194,7 +193,6 @@
     "Actuator/Protocol/IR Protocol",
     "Actuator/Protocol/Modbus-RTU",
     "Actuator/Protocol",
-    "NEWS/News Test.md",
     "Software/Total Manager/Total Manager User Manual_eng.md",
     "Technical/Motor의 특성도 이해.md",
     "conflict-files-obsidian-git.md",

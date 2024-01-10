@@ -276,7 +276,7 @@ Shutdown은 Hardware Error가 발생할 경우, 모터를 Force Off 상태 즉, 
 위치 제어에서 목표 위치의 제한 값으로 0 ~ 10,000 범위 내에서 목표 위치 값을 제한합니다.
 따라서 Goal Position값은 Short Stroke Limit(A) 값보다 작을 수 없고, Long Stroke Limit(B) 값보다 커서는 안됩니다.
 Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Stroke Limit 값보다 클 경우 Stroke Limit값으로 치환됩니다.
-![[Pasted image 20240109094047.png|600]]   
+![[Actuator/Mini 17Lf/img/StrokeLImit.png|600]]   
 >[!warning] WARNING
 >mightyZAP이 사용자의 Application에 설치 되어 동작하기 전에 , 실제 가동 가능한 범위를 측정하여 Short Stroke Limit/Long Stroke Limit를 설정하신 후 사용하는 것을 추천 드립니다.  
 >설치된 기구물의 한계 밖의 위치 이동값을 입력할 경우 mightyZAP 또는 사용자의 Application 이 파손되거나, Overload 보호 기능이 동작 될 수 있습니다.   
@@ -480,44 +480,44 @@ Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며
 > 해당 값을 설정하기 위해서는 당사의 Manager Program을 사용하여 주시기 바랍니다.  
 > 변경된 사항을 적용하기 위해서는 시스템을 재 시작해야 합니다.
 > 
-> ![[simplescreenrecorder-2024-01-09_17.06.38.gif]]  
+> ![[extendio.gif]]  
 >
 > 
 
 **Extended I/O Connect Pin MAP**
-![[Pasted image 20240109170002.png|500]]
+![[extende_io_pinmap.png|500]]
 
 <font size="5"> Function Description</font>
 - **Funtion Switch**   
 	IO Port 1 또는 2번을 Switch 기능으로 지정 시 나머지 IO Port도 자동으로 지정 됩니다.  해당 기능은 그림과 같이 회로를 구성하며, 각 버튼에 따라 Short stroke Limit/Long Stroke Limit 값으로 이동을 합니다.
-	![[Pasted image 20240109163723.png|500]]
+	![[extended_io_switch.png|500]]
 - **Function JOG**  
 	IO Port 1 또는 2번을 Jog 기능으로 지정 시 나머지 IO Port도 작동으로 지정됩니다. 해당 기능은 그림과 같이 회로를 구성하며, 각 버튼을 누를 경우 Short stroke Limit/Long Stroke Limit  방향으로 모터가 동작 하다가 버튼을 놓았을 때 정지하게 됩니다.  
-	![[Pasted image 20240109163723.png|500]]
+	![[extended_io_switch.png|500]]
 - **Action Enable**    
 	Action Enable 기능 Action 기능을 사용할 때 사용됩니다. 
 	( 자세한 내용은 [[#4.17 Action Control]]을 참조하여 주시기 바랍니다. )
-	![[Pasted image 20240109163918.png|500]]
+	![[extended_io_single_sw.png|500]]
 - **Action Next**    
 	Action Next 기능 Action 기능을 사용할 때 사용됩니다. 해당 I/O Pin에 스위치 입력이 들어와야 다음 Action 기능을 진행합니다.   
 	( 자세한 내용은 [[#4.17 Action Control]]을 참조하여 주시기 바랍니다. )
-	![[Pasted image 20240109163918.png|500]]
+	![[extended_io_single_sw.png|500]]
 - **Force Off**  
 	해당 기능은 입력 기능으로 force off 기능을 해당 I/O Port에 적용합니다. 선택한 I/O port에 스위치 회로를 연결하여 버튼을 누르면 Force On/Off toggle 기능을 수행합니다.  
-	![[Pasted image 20240109163918.png|500]]
+	![[extended_io_single_sw.png|500]]
 - **Function Stop**    
 	해당 기능은 입력 기능으로 Stop 기능을 해당 I/O Port에 적용합니다. 선택한 i/o port에 스위치 회로를 연결하여 버튼을 누르면 Actuator가 정지 됩니다.  
-	![[Pasted image 20240109163918.png|500]]
+	![[extended_io_single_sw.png|500]]
 - **Function Pause**   
 	해당 기능은 입력 기능으로 Pause 기능을 해당 I/O Port에 적용합니다. 선택한 i/o port에 스위치 회로를 연결하여 버튼을 누르면 Pause toggle 기능을 수행합니다.  
-	![[Pasted image 20240109163918.png|500]]
+	![[extended_io_single_sw.png|500]]
 - **Function Alarm Out**      
 	해당 기능은 출력 기능으로 Hardware Error 가 발생 시 'High' 신호를 내보냅니다.  
-	![[Pasted image 20240109164105.png|500]]  
-	![[Pasted image 20240109164822.png|600]]
+	![[extened_io_led.png|500]]  
+	![[extended_io_userboard.png|600]]
 - **Restart**    
 	해당 기능은 입력 기능으로 Restart 기능을 담당합니다.  Hardware Error 등의 문제로 Actuator가 정지한 경우 또는 시스템을 재 시작이 필요한 경우 해당 기능을 이용하여 외부에서 restart 기능을 사용할 수 있습니다.  
-	![[Pasted image 20240109163918.png|500]]
+	![[extended_io_single_sw.png|500]]
 ### 4.17 Action Control  
 Action 기능은 통신 및 외부 제어기 없이 mightyZAP을 제어하기 위한 방법으로 총 5개의 Action을 작성 할 수 있습니다.  
 
@@ -527,7 +527,7 @@ Action 기능을 실행 및 종료 시키는 방법은 2가지가 있습니다.
 - [[#2.4.16 Extended I/O Control]]에서 Action Enable 기능을 이용하여 실행 및 정지 할 수 있습니다.
 
 하나의 Action에는 총 10개의 Parameter 속성을 가지고 있으며, 크게 Action Type, Repeat Data, Moving Setting으로 나뉠 수 있습니다.  
-![[스크린샷 2024-01-09 17-01-46.png|700]]
+![[action_editor.png|700]]
 
 <font color="#4f81bd" size='5'><b>Action Setting</b></font>
 Action Setting은 모터가 움직이는 방식을 설정하며 아래와 같습니다.
@@ -538,8 +538,8 @@ Action Setting에서 설정된 내용에 대한 반복 횟수 또는 1회 동작
 **Repeat type**
  - Interval : Repeat Time에 의해 설정된 시간 간격마다 Action을 수행합니다.  일정한 시간마다 반복된 동작이 필요할 경우 사용합니다. 
  - dWellTime : Action 명령에 의해 위치 이동이 완료되어 정지하는 시간을 설정합니다. 동작 완료 후 일정한 시간 동안 위치를 유지해야  할 때 사용합니다.
-   ![[Pasted image 20240110102415.png|600]]  
-   ![[Pasted image 20240110102524.png|600]]  
+   ![[action_interval.png|600]]  
+   ![[action_dwell.png|600]]  
 **Repeat time**  
 Interval 또는 dWell Time으로 설정할 시간 값을 입력합니다.
 
@@ -611,14 +611,14 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
   - 동작 시간 누적  
     누적된 동작 시간이 30초가 넘으면 Overload 에 걸리게 됩니다.  
     예 1 > 아래의 이미지를 보면 동작 중에는 누적량이 증가하고 하고 쉬는 동안에는 감소하는 것을 확인 할 수 있습니다. 그러다 누적량이 30 초를 넘게 되면 Overload가 발생하게 됩니다.
-    ![[Pasted image 20240110155529.png|]]
+    ![[overload_time.png]]
 		
   - 동작 전류 누적 
     동작 전류 누적 방식은 동작 중 발생하는 전류의 양을 누적하는 방식으로 아래의 식과 같이 누적됩니다.
     $$i^2t=i_{peak}^2t - i_{norm}^2t = (i_{peak}^2-i_{norm}^2)t$$
       I<sup>2</sup>T 보호는 모터의 열 모델링을 기반으로 한 모터 과부하 보호 방법으로, 일종의 Sensorless 모터 과열 보호 장치 입니다.  
       아래의 그림은 전류 누적과 Overload 발생에 대한 예 입니다.
-    ![[Pasted image 20240110163239.png|600]]  
+    ![[overload_i2t.png|600]]  
      (mightyZAP의 I<sub>norm</sub> 는 60mA 이하의 적은 전류량으로 설정 되어있습니다.)
 	  동작 중에는 전류를 누적하고 정지 시에는 정격 전류량 만큼 감소합니다. 
       누적량이 한계 값을 넘게 되면 Overload에 걸리게 되며 정격 부하로 30초 동안 동작한 경우의 I<sup>2</sup>T 양이 Overload에 걸리게 됩니다.  
