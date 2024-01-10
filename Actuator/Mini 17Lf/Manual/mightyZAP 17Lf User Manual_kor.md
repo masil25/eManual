@@ -619,16 +619,21 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
       I<sup>2</sup>T 보호는 모터의 열 모델링을 기반으로 한 모터 과부하 보호 방법으로, 일종의 Sensorless 모터 과열 보호 장치 입니다.  
       아래의 그림은 전류 누적과 Overload 발생에 대한 예 입니다.
     ![[Pasted image 20240110163239.png|600]]  
-     mightyZAP의 
- 
-    정격 부하로 30초 동안 동작한 경우의 I<sup>2</sup>T 양이 Overload에 걸리게 됩니다.
-    
-  <font color="#4f81bd"><b>Input Voltage  Error</b></font>
+     (mightyZAP의 I<sub>norm</sub> 는 60mA 이하의 적은 전류량으로 설정 되어있습니다.)
+	  동작 중에는 전류를 누적하고 정지 시에는 정격 전류량 만큼 감소합니다. 
+      누적량이 한계 값을 넘게 되면 Overload에 걸리게 되며 정격 부하로 30초 동안 동작한 경우의 I<sup>2</sup>T 양이 Overload에 걸리게 됩니다.  
+      즉, 정격 부하로 30초 동안 연속 동작이 가능합니다.  
+      
+>[!tip] TIP
+  I<sup>2</sup>t 의 값은 [[#2.4.31 Present Overload Value]]에서 백분율 값으로 확인이 가능합니다.
+
+  <font color="#4f81bd"><b>Input Voltage  Error</b></font>  
 - Low Input Voltage  
 	  입력 전압이 8V 이하일 경우 Error가 발생합니다. 입력 전압이 8V 이상으로 올라가면 Error가 해지 됩니다.
 - High Input Voltage  
 	  입력 전압이 13V 이상일 경우 Error가 발생합니다. High Input Voltage Error는 시스템을 재 시작해야 해지가 됩니다. 
-
+>[!note] 전압 측정
+>migtyZAP에서 측정되는 전압은 약 +/- 0.4V의 오차가 있습니다. 
 ### 2.4.23 Goal Position
 Actuator를 이동 시키고자 하는 위치 값입니다. Goal Position은 [[#2.4.5 Short/Long Stroke Limt|Short/Long Stroke Limt]] 설정 제한 값 가지 입력이 가능합니다. (즉, stroke limit 범위 밖으로는 위치 명령을 내려도 stroke limit위치까지만 움직입니다)
 
