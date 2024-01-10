@@ -664,6 +664,7 @@ $$ TargetSpeed = MaxSpeed\times\frac{GoalSpeed}{1000}$$
 ```
 [[#2.4.11 Speed Limit|Speed Limit]] 명령은 초기 설정 값으로 사용하며, 실시간 속도 변경이 필요한 경우 Goal Speed 를  사용합니다.  
 
+
 Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
 다만, 너무 낮은 값을 설정 시 모터의 반응이 늦어지거나 움직이지 못할 수 있습니다.
 ### 2.4.25 Goal Current  
