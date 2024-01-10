@@ -4,17 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "4d11f05b3aace888",
+        "id": "f4bc74622ca7b3d8",
         "type": "tabs",
         "children": [
           {
-            "id": "bed695024dbd799d",
+            "id": "db968f94a6893298",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": "Software/Total Manager/img/InformationMenu.png",
-                "staged": false
+                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -68,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 373.5,
-    "collapsed": true
+    "width": 373.5
   },
   "right": {
     "id": "7ccabca408164915",
@@ -85,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -101,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md"
+              }
             }
           },
           {
@@ -146,7 +150,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 784.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -161,7 +165,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "719f7c1e9e32f8c6",
+  "active": "db968f94a6893298",
   "lastOpenFiles": [
     "home.md",
     "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",

@@ -664,7 +664,6 @@ $$ TargetSpeed = MaxSpeed\times\frac{GoalSpeed}{1000}$$
 ```
 [[#2.4.11 Speed Limit|Speed Limit]] 명령은 초기 설정 값으로 사용하며, 실시간 속도 변경이 필요한 경우 Goal Speed 를  사용합니다.  
 
-
 Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
 다만, 너무 낮은 값을 설정 시 모터의 반응이 늦어지거나 움직이지 못할 수 있습니다.
 ### 2.4.25 Goal Current  
@@ -682,30 +681,35 @@ Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
 >[!warning] Warning - Over Current
 >Goal Current 800  이상 또는 1600- 설정일 경우 모터에 무리가 발생한다. 지속적으로 사용하는 구간이 아닌 특정상황 잠시 사용하는 구간이다.  지속 적으로 사용할 경우 overload Error가 발생하거나 모터의 수명이 짧아지게 됩니다.
 ### 2.4.26 Present Postion
-현재 stroke의 위치 값을 나타냅니다. 사용하고 계신 Stoke 의 최대 길이를 참조하시여 위치 값을 계산하시기 바랍니다.   
-$$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$
-정지한 이후에도 미세한 위치 변동은 나타날 수 있으며 이는 정상 동작입니다. 
-### 2.4.27 Present Current
-모터의 현재 전류 사용 값입니다.
-
-| value | range | Description | Unit |
-| ---- | ---- | ---- | ---- |
-| 0~16000 | 0~1600mA |  |  |
-present Current는 오차를 포함하고 있음으로 참고 용으로 사용하여 주시기 바랍니다.
-### 2.4.28 Present Motor Operating Rate
-모터에 공급되는 PWM값을 나타냅니다. (통신용 PWM과의 오해를 방지하기 위해 Motor Operating Rate(모터 가동율)이라는 용어를 사용합니다. )  
-Motor Operating Rate는 Goal Speed, Goal Current 등에 따라 값이 달라집니다.   
-'0'은 모터가 정지한 상태를 나타냅니다.
+현재 mightyZAP의 위치 값을 나타냅니다.   
 
 | value | Description | Unit |
 | ---- | ---- | ---- |
-| -10000~1000 |  | mA |
+| 0~10000 | 현재 위치 값 |  |
+사용하고 계신 mightyZAP 의 최대 길이를 참조하시여 위치 값을 계산하시기 바랍니다.     
+$$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$
+정지한 이후에도 미세한 위치 변동은 나타날 수 있으며 이는 정상 동작입니다.  
+### 2.4.27 Present Current
+모터의 현재 전류 사용 값입니다.  
+
+| value | Description | Unit |
+| ---- | ---- | ---- |
+| 0~1600 | 현재 전류 값 | mA |
+Present Current는 오차를 포함하고 있음으로 참고 용으로 사용하여 주시기 바랍니다.
+### 2.4.28 Present Motor Operating Rate
+모터에 공급되는 PWM값을 나타냅니다. (통신용 PWM과의 오해를 방지하기 위해 Motor Operating Rate(모터 가동율)이라는 용어를 사용합니다. )   
+
+| value | Description |
+| ---- | ---- |
+| -10000~1000 | Motor에 공급되는 PWM 값 |
+| 0 | Motor 정지 사태 |
+Motor Operating Rate는 Goal Speed, Goal Current 등에 따라 값이 달라집니다.   
 ### 2.4.29 Present Voltage  
-입력 전압 값을 나타 냅니다. 
+입력 전압 값을 나타내며 단위는 0.1[V] 입니다.
 
 |value|Description |Unit |
 |---|---|---|
-|0~130| |[v]|
+|0~130| 현재 입력 전압 |[v]|
 ### 2.4.30 Moving
 모터의 동작 유무를 나타냅니다. 정확히는 모터의 목표 도달 유무를 나타냅니다.  
 <table>
@@ -716,19 +720,24 @@ Motor Operating Rate는 Goal Speed, Goal Current 등에 따라 값이 달라집�
 | 0 | mightyZAP 정지 상태 |
 | 1 | mightyZAP 동작 중 |
 ### 2.4.31 Present Overload Value
-Overload의 기준이 되는 전류 누적량을 표시합니다. 모터가 동작 할 경우 전류값이 누적되어 값이 상승하고 모터가 정지 할 때 값이 감소됩니다. 누적되는 값이 부하 정도에 따라 다르며, 감소 되는 값은 모터 정지시 정격 전류 기준값이 감소됩니다.  
-최대 값을 100으로 표시하며, 해당 값이 100이 될 경우 Overload Shutdown  이 발생하게 됩니다.  
-Overload Shutdown이 발생하지 않도록 Overload value 값이 90 이하로 관리하여 주시기 바랍니다.  
-Overload Value 값이 다 내려가는데 최대 30초가 걸리게 됩니다.  
-> [!tip] TIP
-> 동작 Dutyrate를 50%이하로 관리하여 주시며, 최대 연속 동작 시간이 30초가 넘지 않아야 합니다. 자세한 사항은 [[#2.4.22 Hardware Error]]와 [[#3.1.3 Duty Rate]]를 참조하여 주시기 바랍니다.
-### 2.4.32 Action Enable
-Action Parameter로 작성된 Action을 실행할 때 사용합니다. Action Paramter 를 작성하였어도 Action Enable을 활성화 하지 않으면 Action은 동작하지 않습니다. 
+Overload의 기준이 되는 전류 누적량을 백분율로 표시합니다. 
 
 | value | Description | Unit |
 | ---- | ---- | ---- |
-| 0 | Action disable |  |
-| 1 | Action Enable |  |
+| 0~100 | Overload 전류 누적량 백분율 | % |
+모터가 동작 할 경우 전류값이 누적되어 값이 상승하고 모터가 정지 할 때 값이 감소됩니다. 누적되는 값이 부하 정도에 따라 다르며, 감소 되는 값은 모터 정지 시 정격 전류 기준값이 감소됩니다.   
+Overload에 관한 자세한 사항은 [[#2.4.22 Hardware Error|Hardware Error]] Overload에서 확인하여 주시기 바랍니다.   
+최대 값을 100으로 표시하며, 해당 값이 100이 될 경우 Overload Error  이 발생하게 됩니다.  
+Overload Error 발생하지 않도록 Overload value 값이 90 이하로 관리하여 주시기 바랍니다.  
+> [!tip] TIP
+> 동작 Dutyrate를 50%이하로 관리하여 주시며, 최대 연속 동작 시간이 30초가 넘지 않아야 합니다. 자세한 사항은 [[#2.4.22 Hardware Error]]와 [[#3.1.3 Duty Rate]]를 참조하여 주시기 바랍니다.
+### 2.4.32 Action Enable
+Action Parameter로 작성된 Action을 실행할 때 사용합니다. Action Parameter 를 작성하였어도 Action Enable을 활성화 하지 않으면 Action은 동작하지 않습니다. 
+
+| value | Description |
+| ---- | ---- |
+| 0 | Action Disable |
+| 1 | Action Enable |
 > [!tip] TIP
 >Action에 대한 자세한 사항은 [[#4.17 Action Control]]을 참조하여 주시기 바랍니다.
 ### 2.4.31 Indirect Data
@@ -737,12 +746,11 @@ indirect Address로 설정된 Paramter들의 Data를 읽고 쓸 수 있는 Param
 ### 2.4.32 Reset
 ID, Baudrate, Protocol, Min/Max Position Calibration을 제외한 모든 Parameter가 초기화 됩니다.  
 Reset이 완료되면 mightyZAP의 시스템이 재 시작 되어 LED가 2번 깜빡입니다.  
->  [!tip] TIP
+>[!tip] TIP
 >  모든 데이터를 초기화하기 위해서는  당사의 Manager 프로그램을 이용하여 Factory Reset을 진행하여 주시기 바랍니다.
 ### 2.4.33 Restart  
 Baudrate, Protocol 변경 후 적용을 위해  또는 Hardware Error 인해 Suthdown이 발생하여 시스템을 재 시작 해야 하는경우 Restart Parameter 에 '1'으로 세팅하여 진행할 수 있습니다.
-## 2.5 Packet Example
-17Lf 시리즈는 Modbus-RTU를 제공하는 모델입니다. Modbus-RTU에 관한 자세한 설명은 Modub-RTU 메뉴얼을 참조하기 바랍니다.  
+
 # 3. 유의 사항  
 ## 3.1 사용 주의 사항   
 아래 주의 사항은 사용시 각별히 주의를 요하는 사항이므로, 반드시 숙지를 하여 주십시오. 아래 사항을 준수하지 못해 발생한 문제에 대해서는 보증 서비스를 받을 수 없음을 알려드립니다.
