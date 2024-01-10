@@ -530,11 +530,24 @@ Action Setting은 모터가 움직이는 방식을 설정하며 아래와 같습
 Action Setting에서 설정된 내용에 대한 반복 횟수 또는 1회 동작에 대한 동작 시간 등을 설정하는 Parameter 입니다.  
 **Repeat type**
  - Interval : Repeat Time에 의해 설정된 시간 간격마다 Action을 수행합니다.  일정한 시간마다 반복된 동작이 필요할 경우 사용합니다. 
- - dWellTime : Action 명령에 의해 위치 이동이 완료되어 정지하는 시간을 설정합니다.   
-   ![[Pasted image 20240110102415.png|600]]
-   
-   <이미지 그래프로 표현>
+ - dWellTime : Action 명령에 의해 위치 이동이 완료되어 정지하는 시간을 설정합니다. 동작 완료 후 일정한 시간 동안 위치를 유지해야  할 때 사용합니다.
+   ![[Pasted image 20240110102415.png|600]]  
+   ![[Pasted image 20240110102524.png|600]]  
+**Repeat time**  
+Interval 또는 dWell Time으로 설정할 시간 값을 입력합니다.
 
+| value | 동작 상태 |
+| ---- | ---- |
+| 0 ~ 65535 | Interval 또는 dWell Time 시간  |
+**Repeat Count**  
+하나의 Action을 반복할 횟수를 지정합니다.
+
+| value | 동작 상태 |
+| ---- | ---- |
+| 1 ~ 1000 | 반복횟수 |
+| 0 | '0'을 입력해도 1회는 실행합니다. |
+**Moving Data**
+Moving data는 각 Action 마다 Goal Speed, Goal Current, Acceleartion Deceleration 등 동작 특성을 설정합니다.
 ### 2.4.18 Force On/Off  
 | value | 동작 상태 |
 | ---- | ---- |
