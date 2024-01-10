@@ -28,8 +28,9 @@
 }
 .HyperMD-codeblock-bg {
   color : #fff!important;
-/*  background-color : #0e2f48!important;*/
- background-color: #a5a5a5!important;
+  background-color : #0e2f48!important;
+   caret-color: white;
+
 }
 .HyperMD-quote:before {
   border: none!important;
