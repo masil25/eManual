@@ -599,7 +599,7 @@ Error가 표시 되지 않을 때 사용자가 임의로 LED를 제어하여 디
 ### 2.4.22  Hardware Error
 mightyZap이 동작 중 발생하는 위험 상황 중 아래의 상황에 대하여 스스로 감지하고, 다양한 방법으로 스스로를 보호할 수 있습니다.  
 각  Bit들은 중복되어 설정이 되며, Alarm Shutdown, Alarm LED,  Extend IO 기능을 이용하여 Error 발생 시에 대한 조치를 할 수 있습니다.  
-일반적으로 추천하는 방법은 [[#2.4.6 Alarm Shutdown|Alarm Shutdown]] 기능을 이용하여 해당 Error가 발생 할 경우, Force Off를 활성화하여,  mightyZap과  사용자의 system을 보호하는 것이 좋습니다.  
+일반적으로 추천하는 방법은 [[#2.4.6 Alarm Shutdown|Alarm Shutdown]] 기능을 이용하여 해당 Error가 발생 할 경우, Force Off를 활성화하여,  mightyZap과  사용자의 System을 보호하는 것이 좋습니다.  
 ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 이상 모터가 동작하지 않습니다.  
 
 | Bit | Name | Description |
@@ -614,14 +614,20 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
     ![[Pasted image 20240110155529.png|]]
 		
   - 동작 전류 누적 
-    동작 전류 누적 방식은 동작 중 발생하는 전류의 양을 누적하는 방식으로 아래의 식과 같이 누적됩니다.  I<sup>2</sup>T 보호는 모터의 열 모델링을 기반으로 한 모터 과부하 보호 방법으로, 일종의 Sensorless 모터 과열 보호 장치 입니다.
+    동작 전류 누적 방식은 동작 중 발생하는 전류의 양을 누적하는 방식으로 아래의 식과 같이 누적됩니다.
     $$i^2t=i_{peak}^2t - i_{norm}^2t = (i_{peak}^2-i_{norm}^2)t$$
-    ![[Pasted image 20240110163239.png]]  
+      I<sup>2</sup>T 보호는 모터의 열 모델링을 기반으로 한 모터 과부하 보호 방법으로, 일종의 Sensorless 모터 과열 보호 장치 입니다.  
+      아래의 그림은 전류 누적과 Overload 발생에 대한 예 입니다.
+    ![[Pasted image 20240110163239.png|600]]  
+     mightyZAP의 
+ 
     정격 부하로 30초 동안 동작한 경우의 I<sup>2</sup>T 양이 Overload에 걸리게 됩니다.
+    
   <font color="#4f81bd"><b>Input Voltage  Error</b></font>
 - Low Input Voltage  
-  입력 전압
+	  입력 전압이 8V 이하일 경우 Error가 발생합니다. 입력 전압이 8V 이상으로 올라가면 Error가 해지 됩니다.
 - High Input Voltage  
+	  입력 전압이 13V 이상일 경우 Error가 발생합니다. High Input Voltage Error는 시스템을 재 시작해야 해지가 됩니다. 
 
 ### 2.4.23 Goal Position
 Actuator를 이동 시키고자 하는 위치 값입니다. Goal Position은 [[#2.4.5 Short/Long Stroke Limt|Short/Long Stroke Limt]] 설정 제한 값 가지 입력이 가능합니다. (즉, stroke limit 범위 밖으로는 위치 명령을 내려도 stroke limit위치까지만 움직입니다)
