@@ -682,10 +682,19 @@ Motor Operating Rate는 Goal Speed, Goal Current 등에 따라 값이 달라집�
 ### 2.4.30 Moving
 모터의 동작 유무를 나타냅니다. 정확히는 모터의 목표 도달 유무를 나타냅니다.  
 
+```sheet
+{
+classes:{
+class
+}
+}
 | value | Description |
 | ---- | ---- |
-| 0 | mightyZAP 정지 상태 |
-| 1 | mightyZAP 동작 중 |
+| 0 | mightyZAP 정지 상태 ~ .class1|
+| 1 | <|
+```
+
+
 ### 2.4.31 Present Overload Value
 Overload의 기준이 되는 전류 누적량을 표시합니다. 모터가 동작 할 경우 전류값이 누적되어 값이 상승하고 모터가 정지 할 때 값이 감소됩니다. 누적되는 값이 부하 정도에 따라 다르며, 감소 되는 값은 모터 정지시 정격 전류 기준값이 감소됩니다.  
 최대 값을 100으로 표시하며, 해당 값이 100이 될 경우 Overload Shutdown  이 발생하게 됩니다.  
