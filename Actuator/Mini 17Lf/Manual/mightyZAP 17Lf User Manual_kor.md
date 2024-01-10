@@ -337,7 +337,7 @@ End Compliance Margin에 대한 기본적인 개념은 다음과 같습니다.
 부하가 적은 환경에서는 반복 정밀도를 높이기 위해 End compliance Margin을 줄이는 것이 효과적일 수 있습니다. 그렇지만 관성에 의해 밀리는 거리가 End Compliance Margin보다 길 경우 목표 위치를 벗어나 정지하게 되거나 그 이상의 거리를 이동한 후 정지 할 수 있습니다.
   ![[EnmMarginDec.gif|700]]
 **Start Compliance Margin과 End Compliance Margin과의 관계**   
-Start Compliance Margin과 End Compliance Margin과의 거리가 가깝거나 같을 경우 문제가 발생할 수 있습니다.  
+Start Compliance Margin과 End Compliance Margin과의 거리가 가깝거나 같을 경우 문제가 발생할 수 있습니다.   
 <font color="#4f81bd">상황 1.  Start Margin이 End Margin이 모두 작은 경우</font>
 아래의 이미지와 같이 Start Margin이 End Margin이 모두 작은 경우 부하가 크거나 관성이 있는 환경에서는 반대편  Start Margin까지 벗어나게 되는 경우가 발생하여 Over shoot 가 발생하게 됩니다.  
 ![[StartEndMargin.gif|700]]  

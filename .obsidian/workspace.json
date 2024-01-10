@@ -150,7 +150,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 472.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -165,7 +165,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "db968f94a6893298",
+  "active": "719f7c1e9e32f8c6",
   "lastOpenFiles": [
     "home.md",
     "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
