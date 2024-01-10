@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      height: 50px;
+      /* border: 1px solid gray; */
+    }
+    #max{
+      margin-top : 15px;
+      width: 100px;
+    }
+    .multi{
+      margin: 10px 10px;
+    }
+    #goal{
+      width: 100px;
+    }
+    #resolution{
+      width: 100px;
+      text-align: center;
+      margin-top: 2px;;
+      border-top: 1px soild red;
+    }
+    #btn-Cal{
+      margin : 10px 10px;
+      width : 60px;
+    }
+    #result{
+      width: 60px;;
+    }
+  </style>
+</head>
+<body>
+  <div style="display: inline-block;">
+    
+    <input id="max"type="text" placeholder="Max Speed">
+    <span class="multi">x </span>
+  </div> 
+  <div style=" display: inline-block;">
+    <input id="goal" type="text" placeholder="Goal Speed">
+    <div id="resolution">1000</div>
+  </div>
+
+  <span class="multi">=</span>
+  <button id="btn-Cal"onclick="onCalc()">calc</button>
+  <span  class="multi"> 결과</span>
+  
+  
+  <input class="multi" placeholder="result" readonly id="result"></input>
+  
+</body>
+<script>
+  function onCalc(){
+    const max = document.querySelector('#max').value;
+    const goal = document.querySelector('#goal').value;
+    const result = document.querySelector('#result')
+
+    let rst = max *(goal/1000);
+    console.log(max,goal,rst)
+    result.innerText=  `${rst}`;
+  }
+  
+</script>
+</html>
