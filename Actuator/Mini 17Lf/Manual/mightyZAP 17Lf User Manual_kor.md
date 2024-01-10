@@ -635,7 +635,8 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
 >[!note] 전압 측정
 >migtyZAP에서 측정되는 전압은 약 +/- 0.4V의 오차가 있습니다. 
 ### 2.4.23 Goal Position
-Actuator를 이동 시키고자 하는 위치 값입니다. Goal Position은 [[#2.4.5 Short/Long Stroke Limt|Short/Long Stroke Limt]] 설정 제한 값 가지 입력이 가능합니다. (즉, stroke limit 범위 밖으로는 위치 명령을 내려도 stroke limit위치까지만 움직입니다)
+위치 이동 명령으로 migthtyZAP을 이동 시키고자 할 때 사용하는 위치 값입니다. Goal Position은 [[#2.4.5 Short/Long Stroke Limt|Short/Long Stroke Limt]] 설정 제한 값 까지 입력이 가능합니다.  
+(즉, stroke limit 범위 밖으로는 위치 명령을 내려도 stroke limit위치까지만 움직입니다)
 
 | value | Description |
 | ---- | ---- |
@@ -643,20 +644,22 @@ Actuator를 이동 시키고자 하는 위치 값입니다. Goal Position은 [[#
 >[!tip] TIP
 >사용하고 계신 Stoke 의 최대 길이를 참조하시여 위치 값을 계산하시기 바랍니다.   
 $$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$
-
-
-
 ### 2.4.24 Goal Speed
 mightyZAP의 동작 속도를 변경할 때 사용합니다.  
+초기 전원 인가 시 비휘발성 Speed Limit에서 값을 불러와 Goal Speed에 저장합니다.
 
 | value | Description | 비고 |
 | ---- | ---- | ---- |
 | 0 ~ 1000 | mightyZap의 최대 속도 값 | +/- 10% |
-각 mightyZAP의 최대 속도에 대해 비율로 제어하며 약 10%의 오차가 있습니다.
+( 0일 때 기동력 OFF 상태이고 1023일 때 최대 속도를 냅니다. )
+Goal Speed값을 이용하여 실제 예상되는 속도 계산값은 아래와 같습니다. 
 $$ TargetSpeed = MaxSpeed\times\frac{GoalSpeed}{1000}$$
-초기 전원 인가 시 비휘발성 Speed Limit에서 값을 불러와 Goal Speed에 저장합니다.
-Speed Limit 명령보다 빠르게 반응하며, 가동 중 실시간으로 속도를 변경하는 데 사용할 수 있습니다.
-0일 때 기동력 OFF 상태이고 1023일 때 최대 속도를 냅니다.
+<iframe>
+<input><input>
+</iframe>
+
+[[#2.4.11 Speed Limit|Speed Limit]] 명령은 초기 설정 값으로 사용하며, 실시간 속도 변경이 필요한 경우 Goal Speed 를  사용합니다.  
+
 Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
 다만, 너무 낮은 값을 설정 시 모터의 반응이 늦어지거나 움직이지 못할 수 있습니다.
 ### 2.4.25 Goal Current  
