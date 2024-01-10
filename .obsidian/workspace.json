@@ -11,9 +11,11 @@
             "id": "bed695024dbd799d",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Pasted image 20240109114414.png"
+                "file": "home.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pasted image 20240109114414.png",
+                "file": "home.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pasted image 20240109114414.png",
+                "file": "home.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pasted image 20240109114414.png"
+                "file": "home.md"
               }
             }
           },
@@ -148,7 +150,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 270.5
+    "width": 784.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -163,20 +165,20 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "3c8f0a42222ab22e",
+  "active": "bed695024dbd799d",
   "lastOpenFiles": [
     "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
-    "Actuator/Mini 17Lf/img/overload_i2t.png",
-    "Actuator/Mini 17Lf/img/overload_time.png",
-    "Actuator/Mini 17Lf/img/action_dwell.png",
-    "Actuator/Mini 17Lf/img/action_interval.png",
-    "Actuator/Mini 17Lf/img/action_editor.png",
-    "Actuator/Mini 17Lf/img/extended_io_userboard.png",
-    "Actuator/Mini 17Lf/img/extened_io_led.png",
-    "Actuator/Mini 17Lf/img/extended_io_single_sw.png",
-    "Actuator/Mini 17Lf/img/extended_io_switch.png",
+    "Pasted image 20240110163033.png",
+    "Pasted image 20240110102438.png",
+    "Pasted image 20240110102317.png",
+    "Pasted image 20240109170258.png",
+    "Pasted image 20240109164740.png",
+    "Pasted image 20240109163841.png",
+    "Pasted image 20240109163508.png",
+    "Pasted image 20240109163308.png",
+    "Pasted image 20240109160551.png",
+    "Pasted image 20240109114414.png",
     "NEWS/News Test.md",
-    "Actuator/Mini 17Lf/img/extende_io_pinmap.png",
     "Excalidraw/Drawing 2024-01-10 14.48.49.excalidraw.md",
     "Excalidraw",
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
