@@ -522,11 +522,11 @@ Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며
 Action 기능은 통신 및 외부 제어기 없이 mightyZAP을 제어하기 위한 방법으로 총 5개의 Action을 작성 할 수 있습니다.  
 하나의 Action에는 총 10개의 Parameter 속성을 가지고 있으며, 크게 Action Type, Repeat Data, Moving Setting으로 나뉠 수 있습니다.  
 ![[스크린샷 2024-01-09 17-01-46.png|700]]
-#### Action Setting 
+<font size='6' color="#4f81bd">Action Setting</font>
 Action Setting은 모터가 움직이는 방식을 설정하며 아래와 같습니다.
  -  Goal Position : Action Data에 값을 Goal Position에 입력하여 한번에 해당 위치까지 이동합니다.
  - Goal Distance : 현재 위치에서 Action Data값을 가감하여 위치 이동을 합니다. Goal Position 과 다르게 절대 위치 값이 아닌 상대적인 값으로 동작합니다.
-#### Repeat Setting
+<font size='6' color="#4f81bd">Repeat Setting</font>
 Action Setting에서 설정된 내용에 대한 반복 횟수 또는 1회 동작에 대한 동작 시간 등을 설정하는 Parameter 입니다.  
 **Repeat type**
  - Interval : Repeat Time에 의해 설정된 시간 간격마다 Action을 수행합니다.  일정한 시간마다 반복된 동작이 필요할 경우 사용합니다. 
@@ -546,8 +546,17 @@ Interval 또는 dWell Time으로 설정할 시간 값을 입력합니다.
 | ---- | ---- |
 | 1 ~ 1000 | 반복횟수 |
 | 0 | '0'을 입력해도 1회는 실행합니다. |
-**Moving Data**
+<font size='6' color="#4f81bd">Moving Data</font>
 Moving data는 각 Action 마다 Goal Speed, Goal Current, Acceleartion Deceleration 등 동작 특성을 설정합니다.
+**Stop Action**  
+Stop Action은 한 Action 종료 후 상태를 설정합니다.
+
+| value | 동작 상태 |
+| ---- | ---- |
+| Stop | 모든 Action을 종료합니다. 다음 Action Enable 신호가 오기 전까지 대기합니다. |
+| Next | 다음 Index를 실행합니다. |
+| Repeat | Index 0부터 다시 시작하여 Action 정지 명령이 있을 때 까지 모든 Action을 무한 반복 실행합니다.  |
+
 ### 2.4.18 Force On/Off  
 | value | 동작 상태 |
 | ---- | ---- |
