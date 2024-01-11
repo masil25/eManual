@@ -67,8 +67,8 @@ mightyZAP 17Lf Model은 다양한 기능을 내장한 Actuator로 효율적이�
 Control Table은 mightyZAP을 구동 및 제어하기 위한 Parameter와 현재 상태를 나타내는 Parameter로 이루어져 있습니다.   
 사용자는 통신 Packet을 이용하여 특정 Parameter의 Data를  읽어 mightyZAP의 상태를 확인하거나, Data를 변경하여 Actuator를 제어할 수 있습니다.  
 >[!note] Noto  
->Mini 17Lf Model은 Modbus-RTU 통신 만을 제공합니다.  
->통신 Packet에 대한 자세한 내용은 [[Modbus RTU Manual-kor|Modbus RTU]]를 참고하여 주시기 바랍니다.
+> -  Mini 17Lf Model은 Modbus-RTU 통신 만을 제공합니다.  
+> - 통신 Packet에 대한 자세한 내용은 [[Modbus RTU Manual-kor|Modbus RTU]]를 참고하여 주시기 바랍니다.
 >
 ## 2.1 Description  
 ### 2.1.1 Memory Type
