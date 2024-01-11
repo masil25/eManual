@@ -387,7 +387,7 @@ mightyZAP의 모터를 제어하기 위해 사용되는 PWM의 최대 값 설정
 | value | Description |
 | ---- | ---- |
 | -1000 ~ 1000 | 모터에 공급하는 PWM 의 최대 값 설정 |
->[!tip] TIP
+>[!tip] TIP  
 >본 가이드에서는 위치 제어 신호용 PWM과 구분하여 사용하기 위해 Motor Operating Rate 란 용어를 사용합니다.  
  
 ### 2.4.11 Speed Limit  
@@ -399,10 +399,10 @@ Actuator의 최대 이동 속도 제한 값입니다.
 
 Speed Limit를 낮게 설정하여도 최대 Force에는 영향을 주지 않지만, 최대 전류까지 도달하는 시간은 다를 수 있습니다. 속도의 값이 낮을 수록 최대 전류까지 도달하는 시간이 길어집니다.  
 Speed Limit를 변경할 경우, Goal Speed도 같이 변경됩니다. 또한 전원 인가 시 Speed Limit의 값을 Goal Speed에 적용합니다.  
->[!tip] TIP -  부하에 따른 Speed Setting 
+>[!tip] TIP -  부하에 따른 Speed Setting   
 >부하에 따라 최대 속도가 변경 될 수 있습니다. 이때  Speed Limit/Goal Speed 값도 같이 변경해주면 더욱 안정적으로 제어가 됩니다.
 
->[!tip] TIP  
+>[!tip] TIP   
 >Goal Speed를 변경하여도 Speed Limit는 변하지 않습니다.  
 ### 2.4.12 Current Limit  
 모터 가동 중 최대 전류 값을 제한 합니다. 해당 기능을 이용하여 mightyZAP의 최대 Force를 제한 할 수 있습니다.    
@@ -414,11 +414,11 @@ Speed Limit를 변경할 경우, Goal Speed도 같이 변경됩니다. 또한 �
 Current Limit는 비 휘발성 Parameter로 전원이 끊어져도 변경된 Data 를 유지합니다. Current Limit 값이 변경되면 Goal Current 값도 같이 변경됩니다.   
 Current Limit를 높게 설정할수록 과부하 상황에서 모터가 낼 수 있는 최대 force도 올라가지만, 모터 수명 단축의 원인이 될 수도 있습니다.  
 <font color="#4f81bd">제품마다 내부 기구 저항 편차에 따라 저전류(200mA 이하) 설정에서는 mightyZAP의 동작이 불규칙하거나 움직이지 않을 수도 있습니다. 충분한 테스트 후 전류 설정을 하여 주시기 바랍니다.</font>
->[!tip] TIP - Speed 오차 누적으로 인한 떠는 현상
+>[!tip] TIP - Speed 오차 누적으로 인한 떠는 현상  
 >Current Limit 값을 낮출 경우  Force 뿐만 아니라 Speed도 줄어 들게 됩니다. 이때 Speed Limit/Goal Speed 값을 같이 낮춰 주지 않을 경우 속도 오차 값 누적으로 최종 위치에서 바운딩 현상이 나타날 수 있습니다.  
 >바운딩 또는 떠는 현상이 나타날 경우 Speed Limit/Goal Speed를 줄여 주시면 됩니다.
 
->[!tip] TIP - Current Limit/Goal Current 에 따른 Force와 무 부하 Speed
+>[!tip] TIP - Current Limit/Goal Current 에 따른 Force와 무 부하 Speed  
 >Current Limit/Goal current 값에 대한 동작 특성은  모터 성능 곡선 및 Datasheet를 참조하여 주시기 바랍니다.
 
 ### 2.4.13 Current PI Control  
@@ -430,7 +430,7 @@ Current Limit를 높게 설정할수록 과부하 상황에서 모터가 낼 수
 모터의 전류 제어를 위한 PID Gain값입니다. 
 정해진 값이 보다 큰 PI값을 적용할 경우 Goal Current 오차에 대해 거칠게 동작할 수 있습니다.   
 정해진 값보다 작은 PI값을 적용할 경우 Goal Current 오차에 부드럽게 동작하나 Goal Current 값 과의 오차가 크게 나타날 수 있습니다.
-> [!warning] WARNING  
+> [!warning] WARNING   
 > PID값을 변경하기 전에 [[#2.4.8 Acceleration/Deceration]]을 먼저 적용하고 테스트하여 주시기 바랍니다.  
 > PID값을 수정하시기 전에 PID에 대한 충분히 숙지하신 후에 해당 값을 변경하여 주시기 바랍니다.  
 
@@ -448,7 +448,7 @@ Current Limit를 높게 설정할수록 과부하 상황에서 모터가 낼 수
 반대로 Gain값을 적게 적용할 경우 목표 위치까지 도달하는 시간이 증가 할 수 있지만, 모터의 동작이 부드러워 질 수 있습니다. 하지만 과도하게 적은 Gain 값은 목표 위치에 도달하지 못하게 할 수도 있습니다.
 PID 값을 수정하실 때는 기본 값에서 작은 값을 가 감하여 테스트 하시기 바랍니다.
 
->[!warning] Warning
+>[!warning] Warning  
 > PID값을 변경하기 전에 [[#2.4.8 Acceleration/Deceration]]을 먼저 적용하고 테스트하여 주시기 바랍니다.  
 > PID값을 수정하시기 전에 PID에 대한 충분히 숙지하신 후에 해당 값을 변경하여 주시기 바랍니다.  
 
@@ -466,7 +466,7 @@ PID 값을 수정하실 때는 기본 값에서 작은 값을 가 감하여 테�
 통신으로 서로 떨어져 있는 Parameter를 각각 읽어 올 경우 통신 시간이 증가하게 됩니다. 이때 사용자에게 필요한 Parameter를 Indirect Address에 지정하면 해당 Indirect Address는 특정 주소와 동일한 기능을 가지게 됩니다.  
 예를 들어 Indirect Address 0에 '205'(Goal Position)을 쓰고, Indirect Data 0에 '5000'을 쓰면, Actuator가 '5000'의 값으로 이동을 합니다. 또한 Goal Position 값 또한 '5000'으로 변경된 것을 확인 할 수 있습니다.   
 Indirect Address에 특정 주소를 세팅하면, Indirect Data에 해당 주소와 동일한 Parameter 가 됩니다.    
->[!tip] TIP
+>[!tip] TIP  
 >Total Manager를 통해 Indricet Address 설정을 쉽게 사용할 수 있습니다.   
 >사용 빈도가 높은 Parameter는 Select Box에 Option으로 추가 하였으며, 등록되지 않은 주소의 경우 'User Input' Option을 선택 하신 Select Box 옆 Test Box에 직접 작성하여 저장하여 주시면 됩니다.   
 >![[indirectAddrss.gif]]
@@ -485,10 +485,10 @@ Extended I/O Control은 스위치 또는 내부 [[#4.17 Action Control|Action co
 또는 반이중 통신으로 불가능한  mightyZAP에서 control Board 에 먼저 데이터를 전송 할 수 있습니다.
 
 Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며 외부 전원이 필요하지 않습니다.  각 기능 설명에 명시된 회로 구성대로 연결해야 Actuator 에 문제가 발생하지 않습니다.  
->[!note] NOTE
+>[!note] NOTE  
 > 연결 Connector는 동봉된 Extenxded Wire를 사용하여 주시기 바랍니다.
 
-> [!warning] Extended I/O 수정 방법
+> [!warning] Extended I/O 수정 방법  
 > 해당 값을 설정하기 위해서는 당사의 Manager Program을 사용하여 주시기 바랍니다.  
 > 변경된 사항을 적용하기 위해서는 시스템을 재 시작해야 합니다.
 > 
@@ -585,7 +585,7 @@ Stop Action은 한 Action 종료 후 상태를 설정합니다.
 Force ON/OFF를 실행 합니다. 전원이 인가 되면 자동으로 Force ON으로 설정됩니다.  
 Force Off 명령 시 즉시 모터의 전원을 차단하여 모터의 동작을 중지합니다. Self Lock을 지원하지 않는 제품의 경우 외부의 힘에 의해 위치 값이 변경될 수 있습니다.  
 Force Off 후 별도의 명령(Force ON) 명령이 없이 Goal Position 명령 시 자동으로 Force ON되어 집니다.  
->[!tip] TIP
+>[!tip] TIP  
 >Self Lock이 지원 되는 제품의 경우, 위치 이동 완료 후 진동 및 외력에 의한 빈번한 위치 변동으로 모터에 스트레스를 주는 경우를 막기 위해 Force Off 명령을 사용하면 좋습니다.  
 >모터가 쉬지 못하고 지속적으로 동작하게 될 경우 모터의 수명에 영향을 주거나 Overload 발생의 원인이 될 수 있습니다.
 ### 2.4.19 Actuator Pause
@@ -640,7 +640,7 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
       누적량이 한계 값을 넘게 되면 Overload에 걸리게 되며 정격 부하로 30초 동안 동작한 경우의 I<sup>2</sup>T 양이 Overload에 걸리게 됩니다.  
       즉, 정격 부하로 30초 동안 연속 동작이 가능합니다.  
       
->[!tip] TIP
+>[!tip] TIP  
   I<sup>2</sup>t 의 값은 [[#2.4.31 Present Overload Value]]에서 백분율 값으로 확인이 가능합니다.
 
   <font color="#4f81bd"><b>Input Voltage  Error</b></font>  
@@ -648,7 +648,7 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
 	  입력 전압이 8V 이하일 경우 Error가 발생합니다. 입력 전압이 8V 이상으로 올라가면 Error가 해지 됩니다.
 - High Input Voltage  
 	  입력 전압이 13V 이상일 경우 Error가 발생합니다. High Input Voltage Error는 시스템을 재 시작해야 해지가 됩니다. 
->[!note] 전압 측정
+>[!note] 전압 측정  
 >migtyZAP에서 측정되는 전압은 약 +/- 0.4V의 오차가 있습니다. 
 ### 2.4.23 Goal Position
 위치 이동 명령으로 migthtyZAP을 이동 시키고자 할 때 사용하는 위치 값입니다. Goal Position은 [[#2.4.5 Short/Long Stroke Limt|Short/Long Stroke Limt]] 설정 제한 값 까지 입력이 가능합니다.  
@@ -657,7 +657,7 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
 | value | Description |
 | ---- | ---- |
 | 0 ~ 10000 | mightyZap의 이동 목표 위치값을 설정합니다.<br>(각 모델의 Stroke 길이와 상관없이 위치 해상도는 모두 10000입니다.) |
->[!tip] TIP
+>[!tip] TIP  
 >사용하고 계신 Stoke 의 최대 길이를 참조하시여 위치 값을 계산하시기 바랍니다.   
 $$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$
 ### 2.4.24 Goal Speed
@@ -691,12 +691,12 @@ Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
 | 0 ~ 1600 | mightyZap의 최대 전류 설정 값 |
 
 초기 전원 인가 시 비 휘발성 [[#2.4.12 Current Limit|Current Limit]]의 값을 Goal Current의 초기 값으로 적용합니다.  
-> [!note] Note - Goal Current를 이용한 Force 제한
+> [!note] Note - Goal Current를 이용한 Force 제한  
 > Goal Current를 조절하면 모터가 낼 수 있는 최대 힘을 조절할 수 있습니다. 제어 대상 및 사용자의 어플리케이션에 따라 특정 Force를 이상 넘어가는 것을 제한하고 자 할 때 사용하시면 됩니다.   
 > 지나치게 낮은 Goal Current는 모터의 부하를 이기지 못해 동작하지 않을 수 있습니다. 
 > Datasheet의 Goal Current Vs Force 표를 참조하신 후 적절한 값을 적용하시기 바랍니다. 또한 해당 값은 약 15%의 오차를 포함합니다.  
 
->[!warning] Warning - Over Current
+>[!warning] Warning - Over Current  
 >Goal Current 800  이상 또는 1600- 설정일 경우 모터에 무리가 발생한다. 지속적으로 사용하는 구간이 아닌 특정상황 잠시 사용하는 구간이다.  지속 적으로 사용할 경우 overload Error가 발생하거나 모터의 수명이 짧아지게 됩니다.
 ### 2.4.26 Present Postion
 현재 mightyZAP의 위치 값을 나타냅니다.   
@@ -751,7 +751,7 @@ Overload의 기준이 되는 전류 누적량을 백분율로 표시합니다.
 Overload에 관한 자세한 사항은 [[#2.4.22 Hardware Error|Hardware Error]] Overload에서 확인하여 주시기 바랍니다.   
 최대 값을 100으로 표시하며, 해당 값이 100이 될 경우 Overload Error  이 발생하게 됩니다.  
 Overload Error 발생하지 않도록 Overload value 값이 90 이하로 관리하여 주시기 바랍니다.  
-> [!tip] TIP
+> [!tip] TIP  
 > 동작 Dutyrate를 50%이하로 관리하여 주시며, 최대 연속 동작 시간이 30초가 넘지 않아야 합니다. 자세한 사항은 [[#2.4.22 Hardware Error]]와 [[#3.1.3 Duty Rate]]를 참조하여 주시기 바랍니다.
 ### 2.4.32 Action Enable
 Action Parameter로 작성된 Action을 실행할 때 사용합니다. Action Parameter 를 작성하였어도 Action Enable을 활성화 하지 않으면 Action은 동작하지 않습니다. 
@@ -760,7 +760,7 @@ Action Parameter로 작성된 Action을 실행할 때 사용합니다. Action Pa
 | ---- | ---- |
 | 0 | Action Disable |
 | 1 | Action Enable |
-> [!tip] TIP
+> [!tip] TIP  
 >Action에 대한 자세한 사항은 [[#4.17 Action Control]]을 참조하여 주시기 바랍니다.
 ### 2.4.31 Indirect Data
 indirect Address로 설정된 Paramter들의 Data를 읽고 쓸 수 있는 Parameter입니다.
@@ -768,7 +768,7 @@ indirect Address로 설정된 Paramter들의 Data를 읽고 쓸 수 있는 Param
 ### 2.4.32 Reset
 ID, Baudrate, Protocol, Min/Max Position Calibration을 제외한 모든 Parameter가 초기화 됩니다.  
 Reset이 완료되면 mightyZAP의 시스템이 재 시작 되어 LED가 2번 깜빡입니다.  
->[!tip] TIP
+>[!tip] TIP  
 >  모든 데이터를 초기화하기 위해서는  당사의 Manager 프로그램을 이용하여 Factory Reset을 진행하여 주시기 바랍니다.
 ### 2.4.33 Restart  
 Baudrate, Protocol 변경 후 적용을 위해  또는 Hardware Error 인해 Suthdown이 발생하여 시스템을 재 시작 해야 하는경우 Restart Parameter 에 '1'으로 세팅하여 진행할 수 있습니다.
@@ -788,7 +788,7 @@ Baudrate, Protocol 변경 후 적용을 위해  또는 Hardware Error 인해 Sut
 ### 3.1.2 전원 관리
 mightyZAP에 DC 정전압 장치를 사용하여 정격 전압에 맞게 전원인 가를 하여 주십시오. 전원 입력은  8.0 ~ 13V를 인가 해 주셔야 합니다.  13V이상의 과전압이 들어가면 제품 파손 의 원인이 됩니다.
 또한, 하나의 전원 Source에 여러 개의 mightyZAP을 연결 하였을 경우 최대 허용 전류를 계산하여 사용하여 주시기 바랍니다. 기본 설정에서 하나의 mightyZAP에서 사용하는 최대 전류는 800mA로 아래와 같이 계산하여 주시면 됩니다.
->[!tip] TIP
+>[!tip] TIP  
 >- 예를 들어 3개의 mightyZAP을 연결하여 사용하는 경우
    800mA x 3EA = 2.4A
   안전성을 고려하여 500mA 이상 높은 3A 이상의 Power Source를 사용하시기 바랍니다.
@@ -846,7 +846,7 @@ RS-485 Connecter의 Pin Map은 아래와 같습니다.
 위의 회로도에서 Direction Port 핀을 제어하여 RS485의 Tx 및 Rx 모드를 변환할 수 있습니다.
 - Direction Port의 신호  Level이 Low인 경우 : Data 의 신호가 Rx 로 입력
 - Direction Port의 신호  Level이 High인 경우 : Tx 의 신호가 Data로 출력
->[!warning] 주의 
+>[!warning] 주의   
 >그림과 같이 통신 제어기와 mightyZAP의 GND는 서로 연결이 되어야 합니다.
 ### 4.1.3 별매 악세사리
 **메탈 브라켓**
@@ -892,7 +892,7 @@ IR-EW04 :Extension wire - 4pin RS-485 4000mm
 IR-EW08 :Extension wire - 3pin TTL 500mm
 IR-EW09 :Extension wire - 4pin RS-485 500mm
 IR-EW10 :Extension wire - 4pin RS-485 1000mm
->[!tip] Tip 
+>[!tip] Tip   
 >쉴드 처리가 되어 있지 않으므로 노이즈 환경이 많은 설비에서는, 별도의 쉴드 와이어를 사용하시기 바랍니다. 배선 을 위한 커넥터와 커넥터 터미널은 당사에서 별도로 구매가 가능합니다.
 
 **로드앤드 팁 (IR-GT01)**
