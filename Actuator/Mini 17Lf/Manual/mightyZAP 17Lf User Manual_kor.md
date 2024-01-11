@@ -67,8 +67,8 @@ mightyZAP 17Lf Model은 다양한 기능을 내장한 Actuator로 효율적이�
 Control Table은 mightyZAP을 구동 및 제어하기 위한 Parameter와 현재 상태를 나타내는 Parameter로 이루어져 있습니다.   
 사용자는 통신 Packet을 이용하여 특정 Parameter의 Data를  읽어 mightyZAP의 상태를 확인하거나, Data를 변경하여 Actuator를 제어할 수 있습니다.  
 >[!note] Note 
->	Mini 17Lf Model은 Modbus-RTU 통신 만을 제공합니다.  
-> 	통신 Packet에 대한 자세한 내용은 [[Modbus RTU Manual-kor|Modbus RTU]]를 참고하여 주시기 바랍니다.
+>- Mini 17Lf Model은 Modbus-RTU 통신 만을 제공합니다.  
+>- 통신 Packet에 대한 자세한 내용은 [[Modbus RTU Manual-kor|Modbus RTU]]를 참고하여 주시기 바랍니다.
 >
 ## 2.1 Description  
 ### 2.1.1 Memory Type
@@ -230,8 +230,8 @@ mightyZAP Model을 식별하기 위한 번호입니다.
 > ![[Daisy-chain.png|600]]
 
 > [!warning]  Unique ID  
->연결된 mightyZAP의 ID가 중복되지 않도록 주의해야 합니다. 중복된 ID가 있을 경우 통신 오류가 발생하여 정상적인 통신이 이루어지지 않습니다.   
->최대 243개의 ID 설정이 가능하지만 표준 규정상 하나의 노드에 연결 가능한 mightyZAP은 이론적으로 최대 32개입니다.
+>- 연결된 mightyZAP의 ID가 중복되지 않도록 주의해야 합니다. 중복된 ID가 있을 경우 통신 오류가 발생하여 정상적인 통신이 이루어지지 않습니다.   
+>- 최대 243개의 ID 설정이 가능하지만 표준 규정상 하나의 노드에 연결 가능한 mightyZAP은 이론적으로 최대 32개입니다.
 ### 2.4.4 Baudrate  
 mightyZAP과 통신을 하기 위한 통신 속도 입니다.
 설정된 값을 적용하기 위해서는 mightyZAP을 재 시작 해야 합니다.
@@ -254,7 +254,7 @@ Hardware Error 가 발생 했을 때, 해당 Alarm LED  bit 가 세팅 되어 �
 모든 Alarm은 시스템을 재 시작해야 사라지게 됩니다.  
 하지만 저전압 Input Volatage LED Alarm의 경우 원인이 해결 되면 LED가 꺼지게 됩니다.
 > [!note] NOTE   
-> Hardware Error에 대한 자세한 설명은 [[#2.4.22 Hardware Error]]를 참조하여 주시기 바랍니다.
+> - Hardware Error에 대한 자세한 설명은 [[#2.4.22 Hardware Error]]를 참조하여 주시기 바랍니다.
 
 ### 2.4.6 Alarm Shutdown
 Hardware Error 가 발생 했을 때, 해당 Alarm Shutdown bit 가 세팅 되어 있는 경우 모터를 Shutdown 합니다. (1 = 활성 / 0 = 비활성)
@@ -267,7 +267,7 @@ Hardware Error 가 발생 했을 때, 해당 Alarm Shutdown bit 가 세팅 되�
 Shutdown은 Hardware Error가 발생할 경우, 모터를 Force Off 상태 즉, 모터에 전원 공급을 중단합니다. Shutdown애 의해 설정된 Force Off는 시스템 재 시작으로만 해지가 되며, [[#2.4.18 Force On/Off|Force ON]] 명령 또는 [[#2.4.23 Goal Position|Goal Position]] 명령에도 Force Off 명령을 수행합니다.
 하지만 저전압 Input Volatage의 경우 정상 전압으로 될 경우 Force On 됩니다.
 > [!note] NOTE   
-> Hardware Error에 대한 자세한 설명은 [[#2.4.22 Hardware Error]]를 참조하여 주시기 바랍니다.
+>- Hardware Error에 대한 자세한 설명은 [[#2.4.22 Hardware Error]]를 참조하여 주시기 바랍니다.
 
 ### 2.4.6 Short/Long Stroke Limt  
 | Parameter | Range | Description | Unit |
@@ -280,9 +280,9 @@ Shutdown은 Hardware Error가 발생할 경우, 모터를 Force Off 상태 즉, 
 Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Stroke Limit 값보다 클 경우 Stroke Limit값으로 치환됩니다.  
 ![[Actuator/Mini 17Lf/img/StrokeLImit.png|600]]   
 >[!warning] WARNING  
->mightyZAP이 사용자의 Application에 설치 되어 동작하기 전에 , 실제 가동 가능한 범위를 측정하여 Short Stroke Limit/Long Stroke Limit를 설정하신 후 사용하는 것을 추천 드립니다.  
->설치된 기구물의 한계 밖의 위치 이동값을 입력할 경우 mightyZAP 또는 사용자의 Application 이 파손되거나, Overload 보호 기능이 동작 될 수 있습니다.   
->자세한 내용은 [[#3. 유의 사항]]을 확안하여 주시기 바랍니다.
+>- mightyZAP이 사용자의 Application에 설치 되어 동작하기 전에 , 실제 가동 가능한 범위를 측정하여 Short Stroke Limit/Long Stroke Limit를 설정하신 후 사용하는 것을 추천 드립니다.  
+>- 설치된 기구물의 한계 밖의 위치 이동값을 입력할 경우 mightyZAP 또는 사용자의 Application 이 파손되거나, Overload 보호 기능이 동작 될 수 있습니다.   
+>- 자세한 내용은 [[#3. 유의 사항]]을 확안하여 주시기 바랍니다.
 
 ### 2.4.6 Start Compliance Margin  
   Start Compliance Margin은 mightyZAP이 Goal Position 위치 값으로 이동 하기 위한  최소 위치 편차(마진) 값 입니다.  
@@ -321,7 +321,7 @@ Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Strok
 
 위의 예와 같이 Start Compliacne  Margin을 크게 설정할 경우, 외부 변화에 둔감하게 동작하여 위치 정밀도는 떨어질 수 있으나, 사용자가 제어하지(의도하지) 않은 모터의 잦은 동작을 막아 동작 안전성 및 내구성에 좋습니다.  
 >[!warning] Warning  
-> default로 설정된 값은 최소한의 안전성을 위해 선정된 값으로 default 값 아래로 낮추는 것은 추천 드리지 않습니다.  
+>- default로 설정된 값은 최소한의 안전성을 위해 선정된 값으로 default 값 아래로 낮추는 것은 추천 드리지 않습니다.  
 
 ### 2.4.7 End Compliance Margin  
 End Compliance Margin은 mightyZAP이 정지하기 위한 최대 위치 편차 값입니다.  
@@ -388,7 +388,7 @@ mightyZAP의 모터를 제어하기 위해 사용되는 PWM의 최대 값 설정
 | ---- | ---- |
 | -1000 ~ 1000 | 모터에 공급하는 PWM 의 최대 값 설정 |
 >[!tip] TIP  
->본 가이드에서는 위치 제어 신호용 PWM과 구분하여 사용하기 위해 Motor Operating Rate 란 용어를 사용합니다.  
+>- 본 가이드에서는 위치 제어 신호용 PWM과 구분하여 사용하기 위해 Motor Operating Rate 란 용어를 사용합니다.  
  
 ### 2.4.11 Speed Limit  
 Actuator의 최대 이동 속도 제한 값입니다.
@@ -400,10 +400,10 @@ Actuator의 최대 이동 속도 제한 값입니다.
 Speed Limit를 낮게 설정하여도 최대 Force에는 영향을 주지 않지만, 최대 전류까지 도달하는 시간은 다를 수 있습니다. 속도의 값이 낮을 수록 최대 전류까지 도달하는 시간이 길어집니다.  
 Speed Limit를 변경할 경우, Goal Speed도 같이 변경됩니다. 또한 전원 인가 시 Speed Limit의 값을 Goal Speed에 적용합니다.  
 >[!tip] TIP -  부하에 따른 Speed Setting   
->부하에 따라 최대 속도가 변경 될 수 있습니다. 이때  Speed Limit/Goal Speed 값도 같이 변경해주면 더욱 안정적으로 제어가 됩니다.
+>- 부하에 따라 최대 속도가 변경 될 수 있습니다. 이때  Speed Limit/Goal Speed 값도 같이 변경해주면 더욱 안정적으로 제어가 됩니다.
 
 >[!tip] TIP   
->Goal Speed를 변경하여도 Speed Limit는 변하지 않습니다.  
+>- Goal Speed를 변경하여도 Speed Limit는 변하지 않습니다.  
 ### 2.4.12 Current Limit  
 모터 가동 중 최대 전류 값을 제한 합니다. 해당 기능을 이용하여 mightyZAP의 최대 Force를 제한 할 수 있습니다.    
 
@@ -415,11 +415,11 @@ Current Limit는 비 휘발성 Parameter로 전원이 끊어져도 변경된 Dat
 Current Limit를 높게 설정할수록 과부하 상황에서 모터가 낼 수 있는 최대 force도 올라가지만, 모터 수명 단축의 원인이 될 수도 있습니다.  
 <font color="#4f81bd">제품마다 내부 기구 저항 편차에 따라 저전류(200mA 이하) 설정에서는 mightyZAP의 동작이 불규칙하거나 움직이지 않을 수도 있습니다. 충분한 테스트 후 전류 설정을 하여 주시기 바랍니다.</font>
 >[!tip] TIP - Speed 오차 누적으로 인한 떠는 현상  
->Current Limit 값을 낮출 경우  Force 뿐만 아니라 Speed도 줄어 들게 됩니다. 이때 Speed Limit/Goal Speed 값을 같이 낮춰 주지 않을 경우 속도 오차 값 누적으로 최종 위치에서 바운딩 현상이 나타날 수 있습니다.  
->바운딩 또는 떠는 현상이 나타날 경우 Speed Limit/Goal Speed를 줄여 주시면 됩니다.
+>- Current Limit 값을 낮출 경우  Force 뿐만 아니라 Speed도 줄어 들게 됩니다. 이때 Speed Limit/Goal Speed 값을 같이 낮춰 주지 않을 경우 속도 오차 값 누적으로 최종 위치에서 바운딩 현상이 나타날 수 있습니다.  
+>- 바운딩 또는 떠는 현상이 나타날 경우 Speed Limit/Goal Speed를 줄여 주시면 됩니다.
 
 >[!tip] TIP - Current Limit/Goal Current 에 따른 Force와 무 부하 Speed  
->Current Limit/Goal current 값에 대한 동작 특성은  모터 성능 곡선 및 Datasheet를 참조하여 주시기 바랍니다.
+>- Current Limit/Goal current 값에 대한 동작 특성은  모터 성능 곡선 및 Datasheet를 참조하여 주시기 바랍니다.
 
 ### 2.4.13 Current PI Control  
 | Parameter | Description | Range | Unit |
@@ -431,8 +431,8 @@ Current Limit를 높게 설정할수록 과부하 상황에서 모터가 낼 수
 정해진 값이 보다 큰 PI값을 적용할 경우 Goal Current 오차에 대해 거칠게 동작할 수 있습니다.   
 정해진 값보다 작은 PI값을 적용할 경우 Goal Current 오차에 부드럽게 동작하나 Goal Current 값 과의 오차가 크게 나타날 수 있습니다.
 > [!warning] WARNING   
-> PID값을 변경하기 전에 [[#2.4.8 Acceleration/Deceration]]을 먼저 적용하고 테스트하여 주시기 바랍니다.  
-> PID값을 수정하시기 전에 PID에 대한 충분히 숙지하신 후에 해당 값을 변경하여 주시기 바랍니다.  
+> - PID값을 변경하기 전에 [[#2.4.8 Acceleration/Deceration]]을 먼저 적용하고 테스트하여 주시기 바랍니다.  
+> - PID값을 수정하시기 전에 PID에 대한 충분히 숙지하신 후에 해당 값을 변경하여 주시기 바랍니다.  
 
 ### 2.4.14 Speed PID Control  
 | Parameter | Description | Range | Unit |
@@ -448,7 +448,7 @@ Current Limit를 높게 설정할수록 과부하 상황에서 모터가 낼 수
 반대로 Gain값을 적게 적용할 경우 목표 위치까지 도달하는 시간이 증가 할 수 있지만, 모터의 동작이 부드러워 질 수 있습니다. 하지만 과도하게 적은 Gain 값은 목표 위치에 도달하지 못하게 할 수도 있습니다.
 PID 값을 수정하실 때는 기본 값에서 작은 값을 가 감하여 테스트 하시기 바랍니다.
 
->[!warning] Warning  
+>[!warning] Warning  <br>
 > PID값을 변경하기 전에 [[#2.4.8 Acceleration/Deceration]]을 먼저 적용하고 테스트하여 주시기 바랍니다.  
 > PID값을 수정하시기 전에 PID에 대한 충분히 숙지하신 후에 해당 값을 변경하여 주시기 바랍니다.  
 
