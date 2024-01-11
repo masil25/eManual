@@ -250,6 +250,7 @@ Hardware Error 가 발생 했을 때, 해당 Alarm LED  bit 가 세팅 되어 �
 | ---- | ---- | ---- | ---- |
 | Bit 6 | Overload Error | RED 점멸 | 일정 시간 이상 동안 부하가 발생한 경우 |
 | Bit 0 | Input Voltage Error | RED 지속 점등 | 인가된 전압이 동작 범위를 벗어난 경우 |
+
 모든 Alarm은 시스템을 재 시작해야 사라지게 됩니다.  
 하지만 저전압 Input Volatage LED Alarm의 경우 원인이 해결 되면 LED가 꺼지게 됩니다.
 > [!note] NOTE   
@@ -829,7 +830,7 @@ RS-485 Connecter의 Pin Map은 아래와 같습니다.
 **메탈 브라켓**
 IR-MB05 는 세로 고정 브라켓입니다.  
 17Lf Model 모든 Stroke에서 사용 가능한 제품입니다.  
-![[Pasted image 20240111123828.png|300]]
+![[verticval_braket.png|300]]
 
 **PC USB Interface** 
 IR-USB02 을 사용하면 PC 를 통하여 아래와 같은 제어를 할 수 있습니다.
