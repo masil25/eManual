@@ -3,5 +3,6 @@
   "foldIndent": false,
   "readableLineLength": true,
   "legacyEditor": false,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "strictLineBreaks": false
 }

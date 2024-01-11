@@ -174,7 +174,6 @@ Control Table Data는 'R', 'RW'로 표기됩니다. 'R'은 읽기 전용(Read On
 |            40108 | 107 (0x6B) | Action 4 Accleration      | Action 4 Acceleration | RW     |  0(0x00) |
 |            40109 | 108 (0x6C) | Action 4 Delceration      | Action 4 Deceleration | RW     |  0(0x00) |
 |            40110 | 109 (0x6D) | Action 4 Stop             | Action 4 정지 형식        | RW     |  0(0x00) |  
-
 ## 2.3 Volatile Memory(RAM)
 
 | Register Number | Address | Name | Description | Access | Default |
@@ -228,7 +227,7 @@ mightyZAP Model을 식별하기 위한 번호입니다.
 > [!NOTE] Daisy-cahin Connection  
 > ID 번호가 N번인 mightyZAP 서보에 Command Packet 을 전송할 경우 여러 개의 mightyZAP 중 ID가 N번에 해당하는 서보만이 Feedback Packet을 return하고, 그 Command를 수행합니다.  
 > 
-> ![[Daisy-chain.png]]
+> ![[Daisy-chain.png|600]]
 
 > [!warning]  Unique ID
 > 연결된 mightyZAP의 ID가 중복되지 않도록 주의해야 합니다. 중복된 ID가 있을 경우 통신 오류가 발생하여 정상적인 통신이 이루어지지 않습니다.   
@@ -276,7 +275,7 @@ Shutdown은 Hardware Error가 발생할 경우, 모터를 Force Off 상태 즉, 
 위치 제어에서 목표 위치의 제한 값으로 0 ~ 10,000 범위 내에서 목표 위치 값을 제한합니다.
 따라서 Goal Position값은 Short Stroke Limit(A) 값보다 작을 수 없고, Long Stroke Limit(B) 값보다 커서는 안됩니다.
 Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Stroke Limit 값보다 클 경우 Stroke Limit값으로 치환됩니다.
-![[Pasted image 20240109094047.png|600]]   
+![[Actuator/Mini 17Lf/img/StrokeLImit.png|600]]   
 >[!warning] WARNING
 >mightyZAP이 사용자의 Application에 설치 되어 동작하기 전에 , 실제 가동 가능한 범위를 측정하여 Short Stroke Limit/Long Stroke Limit를 설정하신 후 사용하는 것을 추천 드립니다.  
 >설치된 기구물의 한계 밖의 위치 이동값을 입력할 경우 mightyZAP 또는 사용자의 Application 이 파손되거나, Overload 보호 기능이 동작 될 수 있습니다.   
@@ -337,7 +336,7 @@ End Compliance Margin에 대한 기본적인 개념은 다음과 같습니다.
 부하가 적은 환경에서는 반복 정밀도를 높이기 위해 End compliance Margin을 줄이는 것이 효과적일 수 있습니다. 그렇지만 관성에 의해 밀리는 거리가 End Compliance Margin보다 길 경우 목표 위치를 벗어나 정지하게 되거나 그 이상의 거리를 이동한 후 정지 할 수 있습니다.
   ![[EnmMarginDec.gif|700]]
 **Start Compliance Margin과 End Compliance Margin과의 관계**   
-Start Compliance Margin과 End Compliance Margin과의 거리가 가깝거나 같을 경우 문제가 발생할 수 있습니다.  
+Start Compliance Margin과 End Compliance Margin과의 거리가 가깝거나 같을 경우 문제가 발생할 수 있습니다.   
 <font color="#4f81bd">상황 1.  Start Margin이 End Margin이 모두 작은 경우</font>
 아래의 이미지와 같이 Start Margin이 End Margin이 모두 작은 경우 부하가 크거나 관성이 있는 환경에서는 반대편  Start Margin까지 벗어나게 되는 경우가 발생하여 Over shoot 가 발생하게 됩니다.  
 ![[StartEndMargin.gif|700]]  
@@ -480,44 +479,44 @@ Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며
 > 해당 값을 설정하기 위해서는 당사의 Manager Program을 사용하여 주시기 바랍니다.  
 > 변경된 사항을 적용하기 위해서는 시스템을 재 시작해야 합니다.
 > 
-> ![[simplescreenrecorder-2024-01-09_17.06.38.gif]]  
+> ![[extendio.gif]]  
 >
 > 
 
 **Extended I/O Connect Pin MAP**
-![[Pasted image 20240109170002.png|500]]
+![[extende_io_pinmap.png|500]]
 
 <font size="5"> Function Description</font>
 - **Funtion Switch**   
 	IO Port 1 또는 2번을 Switch 기능으로 지정 시 나머지 IO Port도 자동으로 지정 됩니다.  해당 기능은 그림과 같이 회로를 구성하며, 각 버튼에 따라 Short stroke Limit/Long Stroke Limit 값으로 이동을 합니다.
-	![[Pasted image 20240109163723.png|500]]
+	![[extended_io_switch.png|500]]
 - **Function JOG**  
 	IO Port 1 또는 2번을 Jog 기능으로 지정 시 나머지 IO Port도 작동으로 지정됩니다. 해당 기능은 그림과 같이 회로를 구성하며, 각 버튼을 누를 경우 Short stroke Limit/Long Stroke Limit  방향으로 모터가 동작 하다가 버튼을 놓았을 때 정지하게 됩니다.  
-	![[Pasted image 20240109163723.png|500]]
+	![[extended_io_switch.png|500]]
 - **Action Enable**    
 	Action Enable 기능 Action 기능을 사용할 때 사용됩니다. 
 	( 자세한 내용은 [[#4.17 Action Control]]을 참조하여 주시기 바랍니다. )
-	![[Pasted image 20240109163918.png|500]]
+	![[extended_io_single_sw.png|500]]
 - **Action Next**    
 	Action Next 기능 Action 기능을 사용할 때 사용됩니다. 해당 I/O Pin에 스위치 입력이 들어와야 다음 Action 기능을 진행합니다.   
 	( 자세한 내용은 [[#4.17 Action Control]]을 참조하여 주시기 바랍니다. )
-	![[Pasted image 20240109163918.png|500]]
+	![[extended_io_single_sw.png|500]]
 - **Force Off**  
 	해당 기능은 입력 기능으로 force off 기능을 해당 I/O Port에 적용합니다. 선택한 I/O port에 스위치 회로를 연결하여 버튼을 누르면 Force On/Off toggle 기능을 수행합니다.  
-	![[Pasted image 20240109163918.png|500]]
+	![[extended_io_single_sw.png|500]]
 - **Function Stop**    
 	해당 기능은 입력 기능으로 Stop 기능을 해당 I/O Port에 적용합니다. 선택한 i/o port에 스위치 회로를 연결하여 버튼을 누르면 Actuator가 정지 됩니다.  
-	![[Pasted image 20240109163918.png|500]]
+	![[extended_io_single_sw.png|500]]
 - **Function Pause**   
 	해당 기능은 입력 기능으로 Pause 기능을 해당 I/O Port에 적용합니다. 선택한 i/o port에 스위치 회로를 연결하여 버튼을 누르면 Pause toggle 기능을 수행합니다.  
-	![[Pasted image 20240109163918.png|500]]
+	![[extended_io_single_sw.png|500]]
 - **Function Alarm Out**      
 	해당 기능은 출력 기능으로 Hardware Error 가 발생 시 'High' 신호를 내보냅니다.  
-	![[Pasted image 20240109164105.png|500]]  
-	![[Pasted image 20240109164822.png|600]]
+	![[extened_io_led.png|500]]  
+	![[extended_io_userboard.png|600]]
 - **Restart**    
 	해당 기능은 입력 기능으로 Restart 기능을 담당합니다.  Hardware Error 등의 문제로 Actuator가 정지한 경우 또는 시스템을 재 시작이 필요한 경우 해당 기능을 이용하여 외부에서 restart 기능을 사용할 수 있습니다.  
-	![[Pasted image 20240109163918.png|500]]
+	![[extended_io_single_sw.png|500]]
 ### 4.17 Action Control  
 Action 기능은 통신 및 외부 제어기 없이 mightyZAP을 제어하기 위한 방법으로 총 5개의 Action을 작성 할 수 있습니다.  
 
@@ -527,7 +526,7 @@ Action 기능을 실행 및 종료 시키는 방법은 2가지가 있습니다.
 - [[#2.4.16 Extended I/O Control]]에서 Action Enable 기능을 이용하여 실행 및 정지 할 수 있습니다.
 
 하나의 Action에는 총 10개의 Parameter 속성을 가지고 있으며, 크게 Action Type, Repeat Data, Moving Setting으로 나뉠 수 있습니다.  
-![[스크린샷 2024-01-09 17-01-46.png|700]]
+![[action_editor.png|700]]
 
 <font color="#4f81bd" size='5'><b>Action Setting</b></font>
 Action Setting은 모터가 움직이는 방식을 설정하며 아래와 같습니다.
@@ -538,8 +537,8 @@ Action Setting에서 설정된 내용에 대한 반복 횟수 또는 1회 동작
 **Repeat type**
  - Interval : Repeat Time에 의해 설정된 시간 간격마다 Action을 수행합니다.  일정한 시간마다 반복된 동작이 필요할 경우 사용합니다. 
  - dWellTime : Action 명령에 의해 위치 이동이 완료되어 정지하는 시간을 설정합니다. 동작 완료 후 일정한 시간 동안 위치를 유지해야  할 때 사용합니다.
-   ![[Pasted image 20240110102415.png|600]]  
-   ![[Pasted image 20240110102524.png|600]]  
+   ![[action_interval.png|600]]  
+   ![[action_dwell.png|600]]  
 **Repeat time**  
 Interval 또는 dWell Time으로 설정할 시간 값을 입력합니다.
 
@@ -611,14 +610,14 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
   - 동작 시간 누적  
     누적된 동작 시간이 30초가 넘으면 Overload 에 걸리게 됩니다.  
     예 1 > 아래의 이미지를 보면 동작 중에는 누적량이 증가하고 하고 쉬는 동안에는 감소하는 것을 확인 할 수 있습니다. 그러다 누적량이 30 초를 넘게 되면 Overload가 발생하게 됩니다.
-    ![[Pasted image 20240110155529.png|]]
+    ![[overload_time.png]]
 		
   - 동작 전류 누적 
     동작 전류 누적 방식은 동작 중 발생하는 전류의 양을 누적하는 방식으로 아래의 식과 같이 누적됩니다.
     $$i^2t=i_{peak}^2t - i_{norm}^2t = (i_{peak}^2-i_{norm}^2)t$$
       I<sup>2</sup>T 보호는 모터의 열 모델링을 기반으로 한 모터 과부하 보호 방법으로, 일종의 Sensorless 모터 과열 보호 장치 입니다.  
       아래의 그림은 전류 누적과 Overload 발생에 대한 예 입니다.
-    ![[Pasted image 20240110163239.png|600]]  
+    ![[overload_i2t.png|600]]  
      (mightyZAP의 I<sub>norm</sub> 는 60mA 이하의 적은 전류량으로 설정 되어있습니다.)
 	  동작 중에는 전류를 누적하고 정지 시에는 정격 전류량 만큼 감소합니다. 
       누적량이 한계 값을 넘게 되면 Overload에 걸리게 되며 정격 부하로 30초 동안 동작한 경우의 I<sup>2</sup>T 양이 Overload에 걸리게 됩니다.  
@@ -664,7 +663,6 @@ $$ TargetSpeed = MaxSpeed\times\frac{GoalSpeed}{1000}$$
 ```
 [[#2.4.11 Speed Limit|Speed Limit]] 명령은 초기 설정 값으로 사용하며, 실시간 속도 변경이 필요한 경우 Goal Speed 를  사용합니다.  
 
-
 Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
 다만, 너무 낮은 값을 설정 시 모터의 반응이 늦어지거나 움직이지 못할 수 있습니다.
 ### 2.4.25 Goal Current  
@@ -682,30 +680,35 @@ Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
 >[!warning] Warning - Over Current
 >Goal Current 800  이상 또는 1600- 설정일 경우 모터에 무리가 발생한다. 지속적으로 사용하는 구간이 아닌 특정상황 잠시 사용하는 구간이다.  지속 적으로 사용할 경우 overload Error가 발생하거나 모터의 수명이 짧아지게 됩니다.
 ### 2.4.26 Present Postion
-현재 stroke의 위치 값을 나타냅니다. 사용하고 계신 Stoke 의 최대 길이를 참조하시여 위치 값을 계산하시기 바랍니다.   
-$$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$
-정지한 이후에도 미세한 위치 변동은 나타날 수 있으며 이는 정상 동작입니다. 
-### 2.4.27 Present Current
-모터의 현재 전류 사용 값입니다.
-
-| value | range | Description | Unit |
-| ---- | ---- | ---- | ---- |
-| 0~16000 | 0~1600mA |  |  |
-present Current는 오차를 포함하고 있음으로 참고 용으로 사용하여 주시기 바랍니다.
-### 2.4.28 Present Motor Operating Rate
-모터에 공급되는 PWM값을 나타냅니다. (통신용 PWM과의 오해를 방지하기 위해 Motor Operating Rate(모터 가동율)이라는 용어를 사용합니다. )  
-Motor Operating Rate는 Goal Speed, Goal Current 등에 따라 값이 달라집니다.   
-'0'은 모터가 정지한 상태를 나타냅니다.
+현재 mightyZAP의 위치 값을 나타냅니다.   
 
 | value | Description | Unit |
 | ---- | ---- | ---- |
-| -10000~1000 |  | mA |
+| 0~10000 | 현재 위치 값 |  |
+사용하고 계신 mightyZAP 의 최대 길이를 참조하시여 위치 값을 계산하시기 바랍니다.     
+$$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$
+정지한 이후에도 미세한 위치 변동은 나타날 수 있으며 이는 정상 동작입니다.  
+### 2.4.27 Present Current
+모터의 현재 전류 사용 값입니다.  
+
+| value | Description | Unit |
+| ---- | ---- | ---- |
+| 0~1600 | 현재 전류 값 | mA |
+Present Current는 오차를 포함하고 있음으로 참고 용으로 사용하여 주시기 바랍니다.
+### 2.4.28 Present Motor Operating Rate
+모터에 공급되는 PWM값을 나타냅니다. (통신용 PWM과의 오해를 방지하기 위해 Motor Operating Rate(모터 가동율)이라는 용어를 사용합니다. )   
+
+| value | Description |
+| ---- | ---- |
+| -10000~1000 | Motor에 공급되는 PWM 값 |
+| 0 | Motor 정지 사태 |
+Motor Operating Rate는 Goal Speed, Goal Current 등에 따라 값이 달라집니다.   
 ### 2.4.29 Present Voltage  
-입력 전압 값을 나타 냅니다. 
+입력 전압 값을 나타내며 단위는 0.1[V] 입니다.
 
 |value|Description |Unit |
 |---|---|---|
-|0~130| |[v]|
+|0~130| 현재 입력 전압 |[v]|
 ### 2.4.30 Moving
 모터의 동작 유무를 나타냅니다. 정확히는 모터의 목표 도달 유무를 나타냅니다.  
 <table>
@@ -716,19 +719,24 @@ Motor Operating Rate는 Goal Speed, Goal Current 등에 따라 값이 달라집�
 | 0 | mightyZAP 정지 상태 |
 | 1 | mightyZAP 동작 중 |
 ### 2.4.31 Present Overload Value
-Overload의 기준이 되는 전류 누적량을 표시합니다. 모터가 동작 할 경우 전류값이 누적되어 값이 상승하고 모터가 정지 할 때 값이 감소됩니다. 누적되는 값이 부하 정도에 따라 다르며, 감소 되는 값은 모터 정지시 정격 전류 기준값이 감소됩니다.  
-최대 값을 100으로 표시하며, 해당 값이 100이 될 경우 Overload Shutdown  이 발생하게 됩니다.  
-Overload Shutdown이 발생하지 않도록 Overload value 값이 90 이하로 관리하여 주시기 바랍니다.  
-Overload Value 값이 다 내려가는데 최대 30초가 걸리게 됩니다.  
-> [!tip] TIP
-> 동작 Dutyrate를 50%이하로 관리하여 주시며, 최대 연속 동작 시간이 30초가 넘지 않아야 합니다. 자세한 사항은 [[#2.4.22 Hardware Error]]와 [[#3.1.3 Duty Rate]]를 참조하여 주시기 바랍니다.
-### 2.4.32 Action Enable
-Action Parameter로 작성된 Action을 실행할 때 사용합니다. Action Paramter 를 작성하였어도 Action Enable을 활성화 하지 않으면 Action은 동작하지 않습니다. 
+Overload의 기준이 되는 전류 누적량을 백분율로 표시합니다. 
 
 | value | Description | Unit |
 | ---- | ---- | ---- |
-| 0 | Action disable |  |
-| 1 | Action Enable |  |
+| 0~100 | Overload 전류 누적량 백분율 | % |
+모터가 동작 할 경우 전류값이 누적되어 값이 상승하고 모터가 정지 할 때 값이 감소됩니다. 누적되는 값이 부하 정도에 따라 다르며, 감소 되는 값은 모터 정지 시 정격 전류 기준값이 감소됩니다.   
+Overload에 관한 자세한 사항은 [[#2.4.22 Hardware Error|Hardware Error]] Overload에서 확인하여 주시기 바랍니다.   
+최대 값을 100으로 표시하며, 해당 값이 100이 될 경우 Overload Error  이 발생하게 됩니다.  
+Overload Error 발생하지 않도록 Overload value 값이 90 이하로 관리하여 주시기 바랍니다.  
+> [!tip] TIP
+> 동작 Dutyrate를 50%이하로 관리하여 주시며, 최대 연속 동작 시간이 30초가 넘지 않아야 합니다. 자세한 사항은 [[#2.4.22 Hardware Error]]와 [[#3.1.3 Duty Rate]]를 참조하여 주시기 바랍니다.
+### 2.4.32 Action Enable
+Action Parameter로 작성된 Action을 실행할 때 사용합니다. Action Parameter 를 작성하였어도 Action Enable을 활성화 하지 않으면 Action은 동작하지 않습니다. 
+
+| value | Description |
+| ---- | ---- |
+| 0 | Action Disable |
+| 1 | Action Enable |
 > [!tip] TIP
 >Action에 대한 자세한 사항은 [[#4.17 Action Control]]을 참조하여 주시기 바랍니다.
 ### 2.4.31 Indirect Data
@@ -737,12 +745,11 @@ indirect Address로 설정된 Paramter들의 Data를 읽고 쓸 수 있는 Param
 ### 2.4.32 Reset
 ID, Baudrate, Protocol, Min/Max Position Calibration을 제외한 모든 Parameter가 초기화 됩니다.  
 Reset이 완료되면 mightyZAP의 시스템이 재 시작 되어 LED가 2번 깜빡입니다.  
->  [!tip] TIP
+>[!tip] TIP
 >  모든 데이터를 초기화하기 위해서는  당사의 Manager 프로그램을 이용하여 Factory Reset을 진행하여 주시기 바랍니다.
 ### 2.4.33 Restart  
 Baudrate, Protocol 변경 후 적용을 위해  또는 Hardware Error 인해 Suthdown이 발생하여 시스템을 재 시작 해야 하는경우 Restart Parameter 에 '1'으로 세팅하여 진행할 수 있습니다.
-## 2.5 Packet Example
-17Lf 시리즈는 Modbus-RTU를 제공하는 모델입니다. Modbus-RTU에 관한 자세한 설명은 Modub-RTU 메뉴얼을 참조하기 바랍니다.  
+
 # 3. 유의 사항  
 ## 3.1 사용 주의 사항   
 아래 주의 사항은 사용시 각별히 주의를 요하는 사항이므로, 반드시 숙지를 하여 주십시오. 아래 사항을 준수하지 못해 발생한 문제에 대해서는 보증 서비스를 받을 수 없음을 알려드립니다.
@@ -795,19 +802,77 @@ mightyZAP의 보증 기간은 구매 일부터 1년입니다. 보증 수리를 �
 # 4. 참고 자료
 ## 4.1 악세사리
 ### 4.1.1 기본 악세사리
-![[17Lf Accessories.png|700]]  
+![[17Lf Accessories.png|700]]
 >[!warning] Warning
 >3번 M3 너트는 Hinge Shaft  고정과 더불어, Rod End Tip과 Rod End Nut 사이에 스토퍼로 체결하여 사용하시기 바랍니다.  
 >![[ASB_RodendTip.png|300]]
 
-### 4.1.2 별매 악세사리
-- 메탈 브라켓
-- PC USB Interface
-- 엔드베어링 (IR-EB01)
-- 아두이노 기반 EZ Controller (IR-CT01)
-- 라즈베리파이 HAT (IR-STS02)
-- 별매 익스텐션 와이어 (IR-EW01~10)
+### 4.1.2 커넥터 자료
+mightyZAP 17Lf Model을 제어하기 위해 RS-485 통신을 사용합니다.   
+RS-485 Connecter의 Pin Map은 아래와 같습니다.  
 
+| PIN NUMBER(COLOR) | PIN NAME | FUNCTION(RS485) |
+| ---- | ---- | ---- |
+| 1(황색) | D- | RS485 - |
+| 2(백색) | D+ | RS485 + |
+| 3(적색) | VCC | 전원 + |
+| 4(흑색) | GND | 전원 - |
+사용자 개인 보드를 사용할 경우 아래와 같이 통신 회로를 구현하시면 됩니다.  
+
+![[rs485_circuit.png|700]]  
+위의 회로도에서 Direction Port 핀을 제어하여 RS485의 Tx 및 Rx 모드를 변환할 수 있습니다.
+- Direction Port의 신호  Level이 Low인 경우 : Data 의 신호가 Rx 로 입력
+- Direction Port의 신호  Level이 High인 경우 : Tx 의 신호가 Data로 출력
+>[!warning] 주의 
+>그림과 같이 통신 제어기와 mightyZAP의 GND는 서로 연결이 되어야 합니다.
+### 4.1.3 별매 악세사리
+**메탈 브라켓 (수정)**
+
+**PC USB Interface** 
+IR-USB02 을 사용하면 PC 를 통하여 아래와 같은 제어를 할 수 있습니다.
+전용 PC 소프트웨어 mightyZAP Manager 가 제공됩니다.  
+- 운용 파라메터 및 저장 메모리 셋팅
+- 모션 테스트
+- 전압, 온도, 현재 위치, 전류, 전압, 모터 가동률 모니터링
+- 시스템 초기화 및 펌웨어 업데이트
+![[usbInterfaceboard.png|250]]
+
+**엔드베어링 (IR-EB01)**
+브라켓을 통한 고정이 아닌, 로드엔드와힌지부에 베어링을 장착하여 최적의 설치 및 운용이 가능하도록 합니다. M2.5와 M3규격의 엔드베 어링 1셋트를 구성합니다.  
+![[end_ball.png|500]]
+
+**아두이노 기반 EZ Controller (IR-CT01)**  
+- 제어기가 없는 고객사를 위한 mightyZAP전용 컨트롤러/테스터
+- 간단한 조작의 아두이노 기반 컨트롤러
+- 기본 제어 프로그램 내장, 사용자 프로그래밍 가능 (아두이노 예제 제공)
+- 위치 지정 다이얼, 위치명령 버튼스위치, 위치명령 슬라이드 내장
+- 외부 스위치 또는 전압레벨 신호를 통한 제어 가능
+- 아날로그/디지털 센서 연결을 위한 별도 3개씩의 I/O 핀 제공
+- 블루투스 또는 지그비(Zigbee) 통신을 위한 외부통신 단자
+![[ezController.png|300]]
+
+**라즈베리파이 HAT (IR-STS02)**  
+Raspberry Pi B3 또는 Raspberry Pi Zero에 호환되는 HAT(Hardware Attached on Top) 보드입니다.
+mightyZAP Raspberry Pi HAT 제품은 40 GPIO 핀을 통해서 Raspberry Pi 위에 바로 결합할 수 있는 제품입니다.
+TTL, RS-485, PWM 통신 인터페이스와 GPIO핀을 내장하고 있어 Raspberry Pi를 통한 mightyZAP 제어가 가능합니다.
+![[raspHAT.png|300]]
+
+**별매 익스텐션 와이어 (IR-EW01~10)**
+산업현장에서 필요에 따라 사용할 수 있는 확장된 길이의 익스텐션 와이어입니다.
+IR-EW01 :Extension wire - 3pin TTL 1000mm
+IR-EW02 :Extension wire - 3pin TTL 2000mm
+IR-EW03 :Extension wire - 4pin RS-485 2000mm
+IR-EW04 :Extension wire - 4pin RS-485 4000mm
+IR-EW08 :Extension wire - 3pin TTL 500mm
+IR-EW09 :Extension wire - 4pin RS-485 500mm
+IR-EW10 :Extension wire - 4pin RS-485 1000mm
+>[!tip] Tip 
+>쉴드 처리가 되어 있지 않으므로 노이즈 환경이 많은 설비에서는, 별도의 쉴드 와이어를 사용하시기 바랍니다. 배선 을 위한 커넥터와 커넥터 터미널은 당사에서 별도로 구매가 가능합니다.
+
+**로드앤드 팁 (IR-GT01)**
+Rod-End Grip Tip은 mightyZAP의 rod end에 연질의 패드가 부착된 팁을 장착하
+여, 어플리케이션 대상체에 물리적인 손상을 주지 않도록 하는 제품입니다. 예를 들어, Flat grip tip에 고무/실리콘 패드를 부착하여, 상처나기 쉬운 물체를 밀거나 접촉하여 제어할 때, 또는 실리콘의 마찰력을 이용해서 물체를 잡거나 들어올릴 때 사용할 수 있습니다.  
+![[endtip.png]]
 ## 4.2 커넥터 자료
 - Pin 배열
 - 통신 회로
