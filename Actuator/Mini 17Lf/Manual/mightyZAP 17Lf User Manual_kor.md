@@ -593,13 +593,15 @@ Force Off 후 별도의 명령(Force ON) 명령이 없이 Goal Position 명령 �
 | ---- | ---- |
 | 0 | 모터의 위치 이동을 일시 정지를 해지 합니다. |
 | 1 | 모터의 위치 이동을 일시 정지 합니다. |
+
 Actuator의 일시 정지 명령으로 이동 중 Pause 명령이 내려지면, 현재 위치에서 정지하고, 현재 위치를 유지합니다. Pause 명령이 해지 되면 Goal Position 위치로 다시 이동합니다.  
 
 ### 2.4.20 Actuator Stop
 | value | Description |
 | ---- | ---- |
 | 1 | 위치 이동을 정지하고 Goal Position 값을 현재 위치 값으로 변경합니다.. |
-mightyZap이 완전 정지하고, Goal Position 위치가 정지한 현재 위치로 변경됩니다.  
+
+mightyZap이 완전 정지하고, Goal Position 위치가 정지한 현재 위치로 변경됩니다. 
 mightyZap이 정지 한 후에는 자동으로 Stop Paremeter가 리셋 됩니다.  
 
 ### 2.4.21 LED
@@ -619,12 +621,13 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
 | ---- | ---- | ---- |
 | Bit 6 | Overload Error | 일정 시간 이상 동안 부하가 발생한 경우 |
 | Bit 0 | Input Voltage Error | 인가된 전압이 동작 범위를 벗어난 경우 |
+
 <font color="#4f81bd"><b>Overload  Error</b></font>
   17Lf Model의 Overload 측정 방식은 연속 누적 동작 시간 측정과, 전류 누적 계산 2가지가 있습니다.  
   - 동작 시간 누적  
     누적된 동작 시간이 30초가 넘으면 Overload 에 걸리게 됩니다.  
     예 1 > 아래의 이미지를 보면 동작 중에는 누적량이 증가하고 하고 쉬는 동안에는 감소하는 것을 확인 할 수 있습니다. 그러다 누적량이 30 초를 넘게 되면 Overload가 발생하게 됩니다.
-    ![[overload_time.png]]
+    ![[overload_time.png|700]]
 		
   - 동작 전류 누적 
     동작 전류 누적 방식은 동작 중 발생하는 전류의 양을 누적하는 방식으로 아래의 식과 같이 누적됩니다.
@@ -664,6 +667,7 @@ mightyZAP의 동작 속도를 변경할 때 사용합니다.
 | value | Description | 비고 |
 | ---- | ---- | ---- |
 | 0 ~ 1000 | mightyZap의 최대 속도 값 | +/- 10% |
+
 ( 0일 때 기동력 OFF 상태이고 1023일 때 최대 속도를 냅니다. )
 Goal Speed값을 이용하여 실제 예상되는 속도 계산값은 아래와 같습니다. 
 $$ TargetSpeed = MaxSpeed\times\frac{GoalSpeed}{1000}$$
@@ -685,6 +689,7 @@ Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
 | value | Description |
 | ---- | ---- |
 | 0 ~ 1600 | mightyZap의 최대 전류 설정 값 |
+
 초기 전원 인가 시 비 휘발성 [[#2.4.12 Current Limit|Current Limit]]의 값을 Goal Current의 초기 값으로 적용합니다.  
 > [!note] Note - Goal Current를 이용한 Force 제한
 > Goal Current를 조절하면 모터가 낼 수 있는 최대 힘을 조절할 수 있습니다. 제어 대상 및 사용자의 어플리케이션에 따라 특정 Force를 이상 넘어가는 것을 제한하고 자 할 때 사용하시면 됩니다.   
@@ -699,6 +704,7 @@ Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
 | value | Description | Unit |
 | ---- | ---- | ---- |
 | 0~10000 | 현재 위치 값 |  |
+
 사용하고 계신 mightyZAP 의 최대 길이를 참조하시여 위치 값을 계산하시기 바랍니다.     
 $$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$
 정지한 이후에도 미세한 위치 변동은 나타날 수 있으며 이는 정상 동작입니다.  
@@ -708,6 +714,7 @@ $$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$
 | value | Description | Unit |
 | ---- | ---- | ---- |
 | 0~1600 | 현재 전류 값 | mA |
+
 Present Current는 오차를 포함하고 있음으로 참고 용으로 사용하여 주시기 바랍니다.
 ### 2.4.28 Present Motor Operating Rate
 모터에 공급되는 PWM값을 나타냅니다. (통신용 PWM과의 오해를 방지하기 위해 Motor Operating Rate(모터 가동율)이라는 용어를 사용합니다. )   
@@ -716,6 +723,7 @@ Present Current는 오차를 포함하고 있음으로 참고 용으로 사용�
 | ---- | ---- |
 | -10000~1000 | Motor에 공급되는 PWM 값 |
 | 0 | Motor 정지 사태 |
+
 Motor Operating Rate는 Goal Speed, Goal Current 등에 따라 값이 달라집니다.   
 ### 2.4.29 Present Voltage  
 입력 전압 값을 나타내며 단위는 0.1[V] 입니다.
@@ -738,6 +746,7 @@ Overload의 기준이 되는 전류 누적량을 백분율로 표시합니다.
 | value | Description | Unit |
 | ---- | ---- | ---- |
 | 0~100 | Overload 전류 누적량 백분율 | % |
+
 모터가 동작 할 경우 전류값이 누적되어 값이 상승하고 모터가 정지 할 때 값이 감소됩니다. 누적되는 값이 부하 정도에 따라 다르며, 감소 되는 값은 모터 정지 시 정격 전류 기준값이 감소됩니다.   
 Overload에 관한 자세한 사항은 [[#2.4.22 Hardware Error|Hardware Error]] Overload에서 확인하여 주시기 바랍니다.   
 최대 값을 100으로 표시하며, 해당 값이 100이 될 경우 Overload Error  이 발생하게 됩니다.  
