@@ -279,7 +279,7 @@ Shutdown은 Hardware Error가 발생할 경우, 모터를 Force Off 상태 즉, 
 따라서 Goal Position값은 Short Stroke Limit(A) 값보다 작을 수 없고, Long Stroke Limit(B) 값보다 커서는 안됩니다.
 Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Stroke Limit 값보다 클 경우 Stroke Limit값으로 치환됩니다.  
 ![[Actuator/Mini 17Lf/img/StrokeLImit.png|600]]   
->[!warning] WARNING
+>[!warning] WARNING  
 >mightyZAP이 사용자의 Application에 설치 되어 동작하기 전에 , 실제 가동 가능한 범위를 측정하여 Short Stroke Limit/Long Stroke Limit를 설정하신 후 사용하는 것을 추천 드립니다.  
 >설치된 기구물의 한계 밖의 위치 이동값을 입력할 경우 mightyZAP 또는 사용자의 Application 이 파손되거나, Overload 보호 기능이 동작 될 수 있습니다.   
 >자세한 내용은 [[#3. 유의 사항]]을 확안하여 주시기 바랍니다.
@@ -320,7 +320,7 @@ Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Strok
 - **결과 : 위치 편차가 Margin보다 커 모터가 동작되어 Present Position 값이 1000으로 변경
 
 위의 예와 같이 Start Compliacne  Margin을 크게 설정할 경우, 외부 변화에 둔감하게 동작하여 위치 정밀도는 떨어질 수 있으나, 사용자가 제어하지(의도하지) 않은 모터의 잦은 동작을 막아 동작 안전성 및 내구성에 좋습니다.  
->[!warning] Warning
+>[!warning] Warning  
 > default로 설정된 값은 최소한의 안전성을 위해 선정된 값으로 default 값 아래로 낮추는 것은 추천 드리지 않습니다.  
 
 ### 2.4.7 End Compliance Margin  
