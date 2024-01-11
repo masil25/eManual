@@ -229,7 +229,7 @@ mightyZAP Model을 식별하기 위한 번호입니다.
 > 
 > ![[Daisy-chain.png|600]]
 
-> [!warning]  Unique ID
+> [!warning]  Unique ID  
 > 연결된 mightyZAP의 ID가 중복되지 않도록 주의해야 합니다. 중복된 ID가 있을 경우 통신 오류가 발생하여 정상적인 통신이 이루어지지 않습니다.   
 > 최대 243개의 ID 설정이 가능하지만 표준 규정상 하나의 노드에 연결 가능한 mightyZAP은 이론적으로 최대 32개입니다.
 ### 2.4.4 Baudrate  
