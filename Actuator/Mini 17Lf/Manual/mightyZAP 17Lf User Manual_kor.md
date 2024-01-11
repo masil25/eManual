@@ -263,6 +263,7 @@ Hardware Error 가 발생 했을 때, 해당 Alarm Shutdown bit 가 세팅 되�
 | ---- | ---- | ---- |
 | Bit 6 | Overload Error | 일정 시간 이상 동안 부하가 발생한 경우 |
 | Bit 0 | Input Voltage Error | 인가된 전압이 동작 범위를 벗어난 경우 |
+
 Shutdown은 Hardware Error가 발생할 경우, 모터를 Force Off 상태 즉, 모터에 전원 공급을 중단합니다. Shutdown애 의해 설정된 Force Off는 시스템 재 시작으로만 해지가 되며, [[#2.4.18 Force On/Off|Force ON]] 명령 또는 [[#2.4.23 Goal Position|Goal Position]] 명령에도 Force Off 명령을 수행합니다.
 하지만 저전압 Input Volatage의 경우 정상 전압으로 될 경우 Force On 됩니다.
 > [!note] NOTE   
@@ -273,6 +274,7 @@ Shutdown은 Hardware Error가 발생할 경우, 모터를 Force Off 상태 즉, 
 | ---- | ---- | ---- | ---- |
 | Short Stroke Limit | 0~10,000 | Goal Position 최소 입력 하한값 |  |
 | Long Stroke Limit | 0~10,000 | Goal Position 최대 입력 상한값 |  |
+
 위치 제어에서 목표 위치의 제한 값으로 0 ~ 10,000 범위 내에서 목표 위치 값을 제한합니다.
 따라서 Goal Position값은 Short Stroke Limit(A) 값보다 작을 수 없고, Long Stroke Limit(B) 값보다 커서는 안됩니다.
 Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Stroke Limit 값보다 클 경우 Stroke Limit값으로 치환됩니다.  
@@ -288,6 +290,7 @@ Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Strok
 | value | Description |
 | ---- | ---- |
 | 0 ~ 255 | Goal Position 최소 입력 하한값 |
+
 현재 위치(Present Position)값이 Goal Position 값보다 마진 값 이상 크거나 작을 경우, 위치 오차를 정정하기 위해 모터를 제어합니다.
   
 **Start Compliance Margin은 다음의 2가지의 경우에 적용이 됩니다.**
@@ -326,6 +329,7 @@ End Compliance Margin은 mightyZAP이 정지하기 위한 최대 위치 편차 �
 | value | 동작 상태 |
 | ---- | ---- |
 | 0 ~ 255 | 정지하기 위한 최대 위치 편차 값 |
+
 mightyZAP이 위치 편차를 줄이기 위해 동작 중일 때 적용이 되며, Present Position과 Gaol Position의 편차가 End Compliance Margin 보다 작을 경우 mightyZAP이 정지 합니다.
 End Compliance Margin은 작을 수록 위치 정밀도가 높아지나, 일정 값 이하로 줄일 경우 그 효과가 미미해 집니다.  
 
@@ -350,6 +354,7 @@ Start Margin 과 End Margin 거의 같고 부하가 적고 관성이 적은 제�
 | ---- | ---- | ---- | ---- |
 | Acceleration | 모터 가속 시간 | 0~1000 | msec |
 | Deceleration | 모터 감속 시간 | 0~1000 | msec |
+
 각각은 Actuator의 가속과 감속을 제어하는 Parameter 입니다.  
 가감속 제어는 모터의 진동, 소음 부하 등을 줄이기 위한 제어 방법입니다.  Parameter에 입력된 값은 가감속 제어를 하는 기간을 의미하며 부하에 따라 제어 시간이 늘어날 수 있으며 절대적인 값은 아닙니다.  
 너무 긴 시간 동안 가감속을 할 경우 제어 값이 충분하지 않아 정지한 것처럼 보일 수도 있습니다. 반대로 가속 시간이 짧을 경우 초기 동작 시 모터 또 제어 대상에 충격을 줄 수 있으며, 모터 내구성에 좋지 않습니다.  감속 시간이 짧을 경우 감속 시간이 거의 없이 최대 속도에서 정지하여 관성에 의해 이동하는 거리가 늘어나게 됩니다.  
@@ -362,6 +367,7 @@ Start Margin 과 End Margin 거의 같고 부하가 적고 관성이 적은 제�
 | ---- | ---- | ---- | ---- |
 | Min Position Calibration | Goal Position 최소 위치 조정 | 0~1000 |  |
 | Max Position Calibration | Goal Position 최대 위치 조정 | 0~1000 |  |
+
 Min/Max Position Calibration Parameter는 mightyZAP의 Goal Position이 최소/최대 값일 때의 Rod의 위치 값을 조절하는 Parameter이다.  
 
 이해를 위해 아래의 이미지를 참조하여 주시기 바랍니다.  
@@ -390,6 +396,7 @@ Actuator의 최대 이동 속도 제한 값입니다.
 | value | Description | Note |
 | ---- | ---- | ---- |
 | 0 ~ 1000 | mightyZAP 최대 속도 제한 설정 |  |
+
 Speed Limit를 낮게 설정하여도 최대 Force에는 영향을 주지 않지만, 최대 전류까지 도달하는 시간은 다를 수 있습니다. 속도의 값이 낮을 수록 최대 전류까지 도달하는 시간이 길어집니다.  
 Speed Limit를 변경할 경우, Goal Speed도 같이 변경됩니다. 또한 전원 인가 시 Speed Limit의 값을 Goal Speed에 적용합니다.  
 >[!tip] TIP -  부하에 따른 Speed Setting 
@@ -403,6 +410,7 @@ Speed Limit를 변경할 경우, Goal Speed도 같이 변경됩니다. 또한 �
 | value | Description | Unit | Note |
 | ---- | ---- | ---- | ---- |
 | 0 ~1600 | mightyZAP 최대 속도 제한 설정 | mA | default : 800  <br>오차 범위 +/- 15% |
+
 Current Limit는 비 휘발성 Parameter로 전원이 끊어져도 변경된 Data 를 유지합니다. Current Limit 값이 변경되면 Goal Current 값도 같이 변경됩니다.   
 Current Limit를 높게 설정할수록 과부하 상황에서 모터가 낼 수 있는 최대 force도 올라가지만, 모터 수명 단축의 원인이 될 수도 있습니다.  
 <font color="#4f81bd">제품마다 내부 기구 저항 편차에 따라 저전류(200mA 이하) 설정에서는 mightyZAP의 동작이 불규칙하거나 움직이지 않을 수도 있습니다. 충분한 테스트 후 전류 설정을 하여 주시기 바랍니다.</font>
@@ -418,6 +426,7 @@ Current Limit를 높게 설정할수록 과부하 상황에서 모터가 낼 수
 | ---- | ---- | ---- | ---- |
 | Current P Gain |  Current PID 비례 제어 | 0 ~ 255 |  |
 | Current I Gain | Current PID 적분 제어 | 0 ~ 255 |  |
+
 모터의 전류 제어를 위한 PID Gain값입니다. 
 정해진 값이 보다 큰 PI값을 적용할 경우 Goal Current 오차에 대해 거칠게 동작할 수 있습니다.   
 정해진 값보다 작은 PI값을 적용할 경우 Goal Current 오차에 부드럽게 동작하나 Goal Current 값 과의 오차가 크게 나타날 수 있습니다.
@@ -431,6 +440,7 @@ Current Limit를 높게 설정할수록 과부하 상황에서 모터가 낼 수
 | Speed P Gain | Speed PID 비례 제어 | 0 ~ 255 |  |
 | Speed I Gain | Speed PID 적분 제어 | 0 ~ 255 |  |
 | Speed D Gain | Speed PID 미분 제어 | 0 ~ 255 |  |
+
 속도 PID 제어의 Gain 값입니다.  PID 제어에 대한 자세한 설명은 다른 문서를 참조하여 주시기 바랍니다. Gain보다 큰 값을 넣을 경우 속도 및 위치 오차에 대해 빠르게 반응하여 목표한 위치에 도달하여 정지하는 데 가지의 시간이 줄어 들게 됩니다. 
 하지만, 너무 큰 Gain값을 적용할 경우  오차에 대해 거칠게 동작하여 Overshoot 도는 과도 응답 상태로 정해진 위치 값을 정지하지 못하고 모터가 진동할 수 있습니다.
 또한 외란에 민감하게 반응하여 목표 값 응답이 나빠지게 됩니다.
@@ -452,6 +462,7 @@ PID 값을 수정하실 때는 기본 값에서 작은 값을 가 감하여 테�
 | Parameter | Description | Range | Unit |
 | ---- | ---- | ---- | ---- |
 | Indirect Address N | 사용자 간접 주소 지정 | 0 ~ 65535 |  |
+
 통신으로 서로 떨어져 있는 Parameter를 각각 읽어 올 경우 통신 시간이 증가하게 됩니다. 이때 사용자에게 필요한 Parameter를 Indirect Address에 지정하면 해당 Indirect Address는 특정 주소와 동일한 기능을 가지게 됩니다.  
 예를 들어 Indirect Address 0에 '205'(Goal Position)을 쓰고, Indirect Data 0에 '5000'을 쓰면, Actuator가 '5000'의 값으로 이동을 합니다. 또한 Goal Position 값 또한 '5000'으로 변경된 것을 확인 할 수 있습니다.   
 Indirect Address에 특정 주소를 세팅하면, Indirect Data에 해당 주소와 동일한 Parameter 가 됩니다.    
@@ -469,6 +480,7 @@ Extended I/O는 RS485 통신으로 제공하지 못하는 추가적인 기능을
 | IO Port 2 | Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
 | IO Port 3 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
 | IO Port 4 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
+
 Extended I/O Control은 스위치 또는 내부 [[#4.17 Action Control|Action control]] 기능을 이용하여 사용자가 Programming 없이 제어가 가능합니다.
 또는 반이중 통신으로 불가능한  mightyZAP에서 control Board 에 먼저 데이터를 전송 할 수 있습니다.
 
@@ -553,6 +565,7 @@ Interval 또는 dWell Time으로 설정할 시간 값을 입력합니다.
 | ---- | ---- |
 | 1 ~ 1000 | 반복횟수 |
 | 0 | '0'을 입력해도 1회는 실행합니다. |
+
 <font color="#4f81bd" size='5'><b>Moving Data</b></font>
 Moving data는 각 Action 마다 Goal Speed, Goal Current, Acceleartion Deceleration 등 동작 특성을 설정합니다.
 **Stop Action**  
