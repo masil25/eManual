@@ -272,6 +272,7 @@ Shutdown은 Hardware Error가 발생할 경우, 모터를 Force Off 상태 즉, 
 | ---- | ---- | ---- | ---- |
 | Short Stroke Limit | 0~10,000 | Goal Position 최소 입력 하한값 |  |
 | Long Stroke Limit | 0~10,000 | Goal Position 최대 입력 상한값 |  |
+  
 위치 제어에서 목표 위치의 제한 값으로 0 ~ 10,000 범위 내에서 목표 위치 값을 제한합니다.
 따라서 Goal Position값은 Short Stroke Limit(A) 값보다 작을 수 없고, Long Stroke Limit(B) 값보다 커서는 안됩니다.
 Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Stroke Limit 값보다 클 경우 Stroke Limit값으로 치환됩니다.  
