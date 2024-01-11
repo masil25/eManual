@@ -1,1 +1,11 @@
-[]
+[
+  "obsidian-git",
+  "editing-toolbar",
+  "obsidian-emoji-toolbar",
+  "obsidian-excalidraw-plugin",
+  "obsidian-mind-map",
+  "quickadd",
+  "remember-cursor-position",
+  "sheets",
+  "obsidian-tasks-plugin"
+]

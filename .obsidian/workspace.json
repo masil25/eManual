@@ -263,7 +263,8 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "markdown-importer:Open format converter": false,
-      "publish:Publish changes...": false
+      "publish:Publish changes...": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
   "active": "8326d637edc67dcf",
