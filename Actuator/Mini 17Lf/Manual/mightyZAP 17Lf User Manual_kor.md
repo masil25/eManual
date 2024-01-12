@@ -491,11 +491,11 @@ Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며
 > [!warning] Extended I/O 수정 방법  
 > 해당 값을 설정하기 위해서는 당사의 Manager Program을 사용하여 주시기 바랍니다.  
 > 변경된 사항을 적용하기 위해서는 시스템을 재 시작해야 합니다.
-> ![[extendio.gif|700]]  
+> ![[extendio.gif]]  
 >
 
 
-**Extended I/O Connect Pin MAP**  
+**Extended I/O Connect Pin MAP**   
 ![[extende_io_pinmap.png|500]]
 
 <font size="5"> Function Description</font>
@@ -507,17 +507,17 @@ Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며
 	![[extended_io_switch.png|500]]
 - **Action Enable**    
 	Action Enable 기능 Action 기능을 사용할 때 사용됩니다. 
-	( 자세한 내용은 [[#4.17 Action Control]]을 참조하여 주시기 바랍니다. )
+	( 자세한 내용은 [[#4.17 Action Control]]을 참조하여 주시기 바랍니다. )  
 	![[extended_io_single_sw.png|500]]
 - **Action Next**    
 	Action Next 기능 Action 기능을 사용할 때 사용됩니다. 해당 I/O Pin에 스위치 입력이 들어와야 다음 Action 기능을 진행합니다.   
-	( 자세한 내용은 [[#4.17 Action Control]]을 참조하여 주시기 바랍니다. )
+	( 자세한 내용은 [[#4.17 Action Control]]을 참조하여 주시기 바랍니다. )  
 	![[extended_io_single_sw.png|500]]
 - **Force Off**  
-	해당 기능은 입력 기능으로 force off 기능을 해당 I/O Port에 적용합니다. 선택한 I/O port에 스위치 회로를 연결하여 버튼을 누르면 Force On/Off toggle 기능을 수행합니다.  
+	해당 기능은 입력 기능으로 force off 기능을 해당 I/O Port에 적용합니다. 선택한 I/O port에 스위치 회로를 연결하여 버튼을 누르면 Force On/Off toggle 기능을 수행합니다.   
 	![[extended_io_single_sw.png|500]]
 - **Function Stop**    
-	해당 기능은 입력 기능으로 Stop 기능을 해당 I/O Port에 적용합니다. 선택한 i/o port에 스위치 회로를 연결하여 버튼을 누르면 Actuator가 정지 됩니다.  
+	해당 기능은 입력 기능으로 Stop 기능을 해당 I/O Port에 적용합니다. 선택한 i/o port에 스위치 회로를 연결하여 버튼을 누르면 Actuator가 정지 됩니다.   
 	![[extended_io_single_sw.png|500]]
 - **Function Pause**   
 	해당 기능은 입력 기능으로 Pause 기능을 해당 I/O Port에 적용합니다. 선택한 i/o port에 스위치 회로를 연결하여 버튼을 누르면 Pause toggle 기능을 수행합니다.  
@@ -540,19 +540,19 @@ Action 기능을 실행 및 종료 시키는 방법은 2가지가 있습니다.
 하나의 Action에는 총 10개의 Parameter 속성을 가지고 있으며, 크게 Action Type, Repeat Data, Moving Setting으로 나뉠 수 있습니다.  
 ![[action_editor.png|700]]
 
-<font color="#4f81bd" size='5'><b>Action Setting</b></font>
+<font color="#4f81bd" size='5'><b>Action Setting</b></font>  
 Action Setting은 모터가 움직이는 방식을 설정하며 아래와 같습니다.
  -  Goal Position : Action Data에 값을 Goal Position에 입력하여 한번에 해당 위치까지 이동합니다.
  - Goal Distance : 현재 위치에서 Action Data값을 가감하여 위치 이동을 합니다. Goal Position 과 다르게 절대 위치 값이 아닌 상대적인 값으로 동작합니다.
-<font color="#4f81bd" size='5'><b>Repeat Setting</b></font>
+<font color="#4f81bd" size='5'><b>Repeat Setting</b></font>  
 Action Setting에서 설정된 내용에 대한 반복 횟수 또는 1회 동작에 대한 동작 시간 등을 설정하는 Parameter 입니다.  
-**Repeat type**
+**Repeat type**  
  - Interval : Repeat Time에 의해 설정된 시간 간격마다 Action을 수행합니다.  일정한 시간마다 반복된 동작이 필요할 경우 사용합니다. 
  - dWellTime : Action 명령에 의해 위치 이동이 완료되어 정지하는 시간을 설정합니다. 동작 완료 후 일정한 시간 동안 위치를 유지해야  할 때 사용합니다.
    ![[action_interval.png|600]]  
    ![[action_dwell.png|600]]  
 **Repeat time**  
-Interval 또는 dWell Time으로 설정할 시간 값을 입력합니다.
+Interval 또는 dWell Time으로 설정할 시간 값을 입력합니다.  
 
 | value | Description |
 | ---- | ---- |
@@ -565,10 +565,10 @@ Interval 또는 dWell Time으로 설정할 시간 값을 입력합니다.
 | 1 ~ 1000 | 반복횟수 |
 | 0 | '0'을 입력해도 1회는 실행합니다. |
 
-<font color="#4f81bd" size='5'><b>Moving Data</b></font>
-Moving data는 각 Action 마다 Goal Speed, Goal Current, Acceleartion Deceleration 등 동작 특성을 설정합니다.
-**Stop Action**  
-Stop Action은 한 Action 종료 후 상태를 설정합니다.
+<font color="#4f81bd" size='5'><b>Moving Data</b></font>  
+Moving data는 각 Action 마다 Goal Speed, Goal Current, Acceleartion Deceleration 등 동작 특성을 설정합니다.  
+**Stop Action**   
+Stop Action은 한 Action 종료 후 상태를 설정합니다.  
 
 | value | Description |
 | ---- | ---- |
@@ -581,9 +581,9 @@ Stop Action은 한 Action 종료 후 상태를 설정합니다.
 | ---- | ---- |
 | 0 | 모터의 전원을 차단하여 기동력이 발생 되지 않도록 합니다. |
 | 1 | 모터의 전원을 인가하여 기동력이 발생하도록 합니다. |
-Force ON/OFF를 실행 합니다. 전원이 인가 되면 자동으로 Force ON으로 설정됩니다.  
-Force Off 명령 시 즉시 모터의 전원을 차단하여 모터의 동작을 중지합니다. Self Lock을 지원하지 않는 제품의 경우 외부의 힘에 의해 위치 값이 변경될 수 있습니다.  
-Force Off 후 별도의 명령(Force ON) 명령이 없이 Goal Position 명령 시 자동으로 Force ON되어 집니다.  
+Force ON/OFF를 실행 합니다. 전원이 인가 되면 자동으로 Force ON으로 설정됩니다.   
+Force Off 명령 시 즉시 모터의 전원을 차단하여 모터의 동작을 중지합니다. Self Lock을 지원하지 않는 제품의 경우 외부의 힘에 의해 위치 값이 변경될 수 있습니다.   
+Force Off 후 별도의 명령(Force ON) 명령이 없이 Goal Position 명령 시 자동으로 Force ON되어 집니다.     
 >[!tip] TIP  
 >Self Lock이 지원 되는 제품의 경우, 위치 이동 완료 후 진동 및 외력에 의한 빈번한 위치 변동으로 모터에 스트레스를 주는 경우를 막기 위해 Force Off 명령을 사용하면 좋습니다.  
 >모터가 쉬지 못하고 지속적으로 동작하게 될 경우 모터의 수명에 영향을 주거나 Overload 발생의 원인이 될 수 있습니다.
@@ -621,23 +621,23 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
 | Bit 6 | Overload Error | 일정 시간 이상 동안 부하가 발생한 경우 |
 | Bit 0 | Input Voltage Error | 인가된 전압이 동작 범위를 벗어난 경우 |
 
-<font color="#4f81bd"><b>Overload  Error</b></font>
+<font color="#4f81bd"><b>Overload  Error</b></font>  
   17Lf Model의 Overload 측정 방식은 연속 누적 동작 시간 측정과, 전류 누적 계산 2가지가 있습니다.  
   - 동작 시간 누적  
     누적된 동작 시간이 30초가 넘으면 Overload 에 걸리게 됩니다.  
     예 1 > 아래의 이미지를 보면 동작 중에는 누적량이 증가하고 하고 쉬는 동안에는 감소하는 것을 확인 할 수 있습니다. 그러다 누적량이 30 초를 넘게 되면 Overload가 발생하게 됩니다.
     ![[overload_time.png|700]]
 		
-  - 동작 전류 누적 
-    동작 전류 누적 방식은 동작 중 발생하는 전류의 양을 누적하는 방식으로 아래의 식과 같이 누적됩니다.
+  - 동작 전류 누적   
+    동작 전류 누적 방식은 동작 중 발생하는 전류의 양을 누적하는 방식으로 아래의 식과 같이 누적됩니다.  
     $$i^2t=i_{peak}^2t - i_{norm}^2t = (i_{peak}^2-i_{norm}^2)t$$
       I<sup>2</sup>T 보호는 모터의 열 모델링을 기반으로 한 모터 과부하 보호 방법으로, 일종의 Sensorless 모터 과열 보호 장치 입니다.  
-      아래의 그림은 전류 누적과 Overload 발생에 대한 예 입니다.
+      아래의 그림은 전류 누적과 Overload 발생에 대한 예 입니다.  
     ![[overload_i2t.png|600]]  
-     (mightyZAP의 I<sub>norm</sub> 는 60mA 이하의 적은 전류량으로 설정 되어있습니다.)
-	  동작 중에는 전류를 누적하고 정지 시에는 정격 전류량 만큼 감소합니다. 
-      누적량이 한계 값을 넘게 되면 Overload에 걸리게 되며 정격 부하로 30초 동안 동작한 경우의 I<sup>2</sup>T 양이 Overload에 걸리게 됩니다.  
-      즉, 정격 부하로 30초 동안 연속 동작이 가능합니다.  
+     (mightyZAP의 I<sub>norm</sub> 는 60mA 이하의 적은 전류량으로 설정 되어있습니다.)  
+	  동작 중에는 전류를 누적하고 정지 시에는 정격 전류량 만큼 감소합니다.   
+      누적량이 한계 값을 넘게 되면 Overload에 걸리게 되며 정격 부하로 30초 동안 동작한 경우의 I<sup>2</sup>T 양이 Overload에 걸리게 됩니다.   
+      즉, 정격 부하로 30초 동안 연속 동작이 가능합니다.    
       
 >[!tip] TIP  
   I<sup>2</sup>t 의 값은 [[#2.4.31 Present Overload Value]]에서 백분율 값으로 확인이 가능합니다.
@@ -670,14 +670,6 @@ mightyZAP의 동작 속도를 변경할 때 사용합니다.
 ( 0일 때 기동력 OFF 상태이고 1023일 때 최대 속도를 냅니다. )
 Goal Speed값을 이용하여 실제 예상되는 속도 계산값은 아래와 같습니다. 
 $$ TargetSpeed = MaxSpeed\times\frac{GoalSpeed}{1000}$$
-```sheet
-{
-<table>
-    <input type="text">etset
-    </imput>
-</table>
-}
-```
 [[#2.4.11 Speed Limit|Speed Limit]] 명령은 초기 설정 값으로 사용하며, 실시간 속도 변경이 필요한 경우 Goal Speed 를  사용합니다.  
 
 Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
@@ -704,9 +696,9 @@ Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
 | ---- | ---- | ---- |
 | 0~10000 | 현재 위치 값 |  |
 
-사용하고 계신 mightyZAP 의 최대 길이를 참조하시여 위치 값을 계산하시기 바랍니다.     
+사용하고 계신 mightyZAP 의 최대 길이를 참조하시여 위치 값을 계산하시기 바랍니다.      
 $$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$
-정지한 이후에도 미세한 위치 변동은 나타날 수 있으며 이는 정상 동작입니다.  
+정지한 이후에도 미세한 위치 변동은 나타날 수 있으며 이는 정상 동작입니다.   
 ### 2.4.27 Present Current
 모터의 현재 전류 사용 값입니다.  
 
@@ -867,36 +859,36 @@ IR-USB02 을 사용하면 PC 를 통하여 아래와 같은 제어를 할 수 �
 ![[end_ball.png|500]]
 
 **아두이노 기반 EZ Controller (IR-CT01)**  
-- 제어기가 없는 고객사를 위한 mightyZAP전용 컨트롤러/테스터
-- 간단한 조작의 아두이노 기반 컨트롤러
-- 기본 제어 프로그램 내장, 사용자 프로그래밍 가능 (아두이노 예제 제공)
-- 위치 지정 다이얼, 위치명령 버튼스위치, 위치명령 슬라이드 내장
-- 외부 스위치 또는 전압레벨 신호를 통한 제어 가능
-- 아날로그/디지털 센서 연결을 위한 별도 3개씩의 I/O 핀 제공
-- 블루투스 또는 지그비(Zigbee) 통신을 위한 외부통신 단자
+- 제어기가 없는 고객사를 위한 mightyZAP전용 컨트롤러/테스터  
+- 간단한 조작의 아두이노 기반 컨트롤러  
+- 기본 제어 프로그램 내장, 사용자 프로그래밍 가능 (아두이노 예제 제공)  
+- 위치 지정 다이얼, 위치명령 버튼스위치, 위치명령 슬라이드 내장  
+- 외부 스위치 또는 전압레벨 신호를 통한 제어 가능  
+- 아날로그/디지털 센서 연결을 위한 별도 3개씩의 I/O 핀 제공  
+- 블루투스 또는 지그비(Zigbee) 통신을 위한 외부통신 단자  
 ![[ezController.png|300]]
 
 **라즈베리파이 HAT (IR-STS02)**  
-Raspberry Pi B3 또는 Raspberry Pi Zero에 호환되는 HAT(Hardware Attached on Top) 보드입니다.
-mightyZAP Raspberry Pi HAT 제품은 40 GPIO 핀을 통해서 Raspberry Pi 위에 바로 결합할 수 있는 제품입니다.
-TTL, RS-485, PWM 통신 인터페이스와 GPIO핀을 내장하고 있어 Raspberry Pi를 통한 mightyZAP 제어가 가능합니다.
+Raspberry Pi B3 또는 Raspberry Pi Zero에 호환되는 HAT(Hardware Attached on Top) 보드입니다.  
+mightyZAP Raspberry Pi HAT 제품은 40 GPIO 핀을 통해서 Raspberry Pi 위에 바로 결합할 수 있는 제품입니다.  
+TTL, RS-485, PWM 통신 인터페이스와 GPIO핀을 내장하고 있어 Raspberry Pi를 통한 mightyZAP 제어가 가능합니다.  
 ![[raspHAT.png|300]]
 
 **별매 익스텐션 와이어 (IR-EW01~10)**
-산업현장에서 필요에 따라 사용할 수 있는 확장된 길이의 익스텐션 와이어입니다.
-IR-EW01 :Extension wire - 3pin TTL 1000mm
-IR-EW02 :Extension wire - 3pin TTL 2000mm
-IR-EW03 :Extension wire - 4pin RS-485 2000mm
-IR-EW04 :Extension wire - 4pin RS-485 4000mm
-IR-EW08 :Extension wire - 3pin TTL 500mm
-IR-EW09 :Extension wire - 4pin RS-485 500mm
-IR-EW10 :Extension wire - 4pin RS-485 1000mm
+산업현장에서 필요에 따라 사용할 수 있는 확장된 길이의 익스텐션 와이어입니다.  
+IR-EW01 :Extension wire - 3pin TTL 1000mm  
+IR-EW02 :Extension wire - 3pin TTL 2000mm  
+IR-EW03 :Extension wire - 4pin RS-485 2000mm  
+IR-EW04 :Extension wire - 4pin RS-485 4000mm  
+IR-EW08 :Extension wire - 3pin TTL 500mm  
+IR-EW09 :Extension wire - 4pin RS-485 500mm  
+IR-EW10 :Extension wire - 4pin RS-485 1000mm  
 >[!tip] Tip   
 >쉴드 처리가 되어 있지 않으므로 노이즈 환경이 많은 설비에서는, 별도의 쉴드 와이어를 사용하시기 바랍니다. 배선 을 위한 커넥터와 커넥터 터미널은 당사에서 별도로 구매가 가능합니다.
 
 **로드앤드 팁 (IR-GT01)**
-Rod-End Grip Tip은 mightyZAP의 rod end에 연질의 패드가 부착된 팁을 장착하
-여, 어플리케이션 대상체에 물리적인 손상을 주지 않도록 하는 제품입니다. 예를 들어, Flat grip tip에 고무/실리콘 패드를 부착하여, 상처나기 쉬운 물체를 밀거나 접촉하여 제어할 때, 또는 실리콘의 마찰력을 이용해서 물체를 잡거나 들어올릴 때 사용할 수 있습니다.  
+Rod-End Grip Tip은 mightyZAP의 rod end에 연질의 패드가 부착된 팁을 장착하여, 어플리케이션 대상체에 물리적인 손상을 주지 않도록 하는 제품입니다.  
+예를 들어, Flat grip tip에 고무/실리콘 패드를 부착하여, 상처나기 쉬운 물체를 밀거나 접촉하여 제어할 때, 또는 실리콘의 마찰력을 이용해서 물체를 잡거나 들어올릴 때 사용할 수 있습니다.   
 ![[endtip.png]]
 ## 4.2 커넥터 자료
 - Pin 배열
