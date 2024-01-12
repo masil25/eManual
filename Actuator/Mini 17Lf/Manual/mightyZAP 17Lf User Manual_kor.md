@@ -543,7 +543,7 @@ Action 기능을 실행 및 종료 시키는 방법은 2가지가 있습니다.
 <font color="#4f81bd" size='5'><b>Action Setting</b></font>  
 Action Setting은 모터가 움직이는 방식을 설정하며 아래와 같습니다.
  -  Goal Position : Action Data에 값을 Goal Position에 입력하여 한번에 해당 위치까지 이동합니다.
- - Goal Distance : 현재 위치에서 Action Data값을 가감하여 위치 이동을 합니다. Goal Position 과 다르게 절대 위치 값이 아닌 상대적인 값으로 동작합니다.
+ - Goal Distance : 현재 위치에서 Action Data값을 가감하여 위치 이동을 합니다. Goal Position 과 다르게 절대 위치 값이 아닌 상대적인 값으로 동작합니다.  
 <font color="#4f81bd" size='5'><b>Repeat Setting</b></font>  
 Action Setting에서 설정된 내용에 대한 반복 횟수 또는 1회 동작에 대한 동작 시간 등을 설정하는 Parameter 입니다.  
 **Repeat type**  
@@ -697,7 +697,7 @@ Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
 | 0~10000 | 현재 위치 값 |  |
 
 사용하고 계신 mightyZAP 의 최대 길이를 참조하시여 위치 값을 계산하시기 바랍니다.      
-$$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$
+$$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$  
 정지한 이후에도 미세한 위치 변동은 나타날 수 있으며 이는 정상 동작입니다.   
 ### 2.4.27 Present Current
 모터의 현재 전류 사용 값입니다.  
