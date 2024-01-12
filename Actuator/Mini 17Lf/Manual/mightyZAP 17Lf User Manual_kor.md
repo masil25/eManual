@@ -491,11 +491,11 @@ Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며
 > [!warning] Extended I/O 수정 방법  
 > 해당 값을 설정하기 위해서는 당사의 Manager Program을 사용하여 주시기 바랍니다.  
 > 변경된 사항을 적용하기 위해서는 시스템을 재 시작해야 합니다.
-> ![[extendio.gif]]  
+> ![[extendio.gif|700]]  
 >
 
 
-**Extended I/O Connect Pin MAP**
+**Extended I/O Connect Pin MAP**  
 ![[extende_io_pinmap.png|500]]
 
 <font size="5"> Function Description</font>
