@@ -452,9 +452,9 @@ PID 값을 수정하실 때는 기본 값에서 작은 값을 가 감하여 테�
 > PID값을 변경하기 전에 [[#2.4.8 Acceleration/Deceration]]을 먼저 적용하고 테스트하여 주시기 바랍니다.  
 > PID값을 수정하시기 전에 PID에 대한 충분히 숙지하신 후에 해당 값을 변경하여 주시기 바랍니다.  
 
->[!tip] [ 일반적인 PID값 제어 방법 ]
+>[!tip] [ 일반적인 PID값 제어 방법 ]  
 >![[PID_Compensation_Animated.gif]]
- [참고 문헌][https://commons.wikimedia.org/wiki/File:PID_Compensation_Animated.gif](https://commons.wikimedia.org/wiki/File:PID_Compensation_Animated.gif) 
+ [참고 문헌]  [https://commons.wikimedia.org/wiki/File:PID_Compensation_Animated.gif](https://commons.wikimedia.org/wiki/File:PID_Compensation_Animated.gif) 
 
 ### 2.4.15 Indirect Address
 사용자는 해당 기능을 이용하여, 서로 떨어져 있는 여러 Parameter를 모아서 이용할 수 있습니다.   
