@@ -115,7 +115,12 @@ Goal Current가 800일 때, Goal Speed Parameter 값의 변화에 따른 무 부
 ## 3.4 Goal Current vs Stall Force
 ## 3.5 Goal Current Vs Speed <font size ="3">정격 부하 시 기준</font>  
  Figure 3. PIN Map 은 위로 옮기기
- 
+```sheet
+|r|
+|---|
+|t|
+```
+
 | PIN NUMBER(COLOR) | PIN NAME&nbsp; | <div>FUNCTION</div> |
 |:------------------:|:---------------:|:--------------------:|
 |         1(YELLOW) | D-&       | RS-485-             |
