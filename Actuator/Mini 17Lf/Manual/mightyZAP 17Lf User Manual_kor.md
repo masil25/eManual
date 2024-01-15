@@ -254,7 +254,7 @@ Hardware Error 가 발생 했을 때, 해당 Alarm LED  bit 가 세팅 되어 �
 모든 Alarm은 시스템을 재 시작해야 사라지게 됩니다.  
 하지만 저전압 Input Volatage LED Alarm의 경우 원인이 해결 되면 LED가 꺼지게 됩니다.
 > [!note] NOTE   
->Hardware Error에 대한 자세한 설명은 [[#2.4.22 Hardware Error]]를 참조하여 주시기 바랍니다. [[#2.4 Control Table Discription]]
+>Hardware Error에 대한 자세한 설명은 [[#2.4.22 Hardware Error]]를 참조하여 주시기 바랍니다. 
 
 ### 2.4.6 Alarm Shutdown
 Hardware Error 가 발생 했을 때, 해당 Alarm Shutdown bit 가 세팅 되어 있는 경우 모터를 Shutdown 합니다. (1 = 활성 / 0 = 비활성)
