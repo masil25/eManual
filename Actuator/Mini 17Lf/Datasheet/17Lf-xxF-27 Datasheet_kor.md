@@ -27,14 +27,14 @@
 | **Size, Weight /크기,무게** | {xx.x}(L)x {xx.x}(W)x {xx.x}(H)mm / {xx ~ xx} (to be varied according to gear ratio) |
 | **Communication/ 통신** | RS485 |
 | **Protocol** | IR Protocl, Modbus RTU |
-| **Operating Temperatures / 동작온도** | 10℃ ~ 60℃ |
+| **Operating Temperatures / 동작온도** | -10℃ ~ 60℃ |
 | **Ingress protection / 방수방진** | IP54 |
 | **Mechanical Backlash / 기구백래쉬** | 0.03mm(30um) |
 | **Audible Noise / 가청소음** | Max. 50db at 1m |
 | **Gear ratio / 기어비** | 9.6 : 1 |
 | **Gear type / 기어 타입** | Engineering Plastic |
 | **Rod type / Rod 타입** | Staniless Steel Rod / 스테인레스 스틸 |
-| **Standard Accessory / 표준 악세서리** | |
+| **Standard Accessory / 표준 악세서리** | 1xHinge base  <br>1x Hinge  <br>1xHinge shaft  <br>1xRod end tip  <br>2x M3 NUT  <br>3 x M2.5x6 screws  <br>1x RS485 Molex wire harness (200mm)   <br>Extended I/O 1x Molex wire harness (200mm)  <br>1 x M3 spanner  <br>1 x Socket set screw |
 | **Connector Type (Male) in the Actuator** | |
 | **Wire Harness** | |
 
