@@ -84,7 +84,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
+                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
                 "mode": "source",
                 "source": false
               }
@@ -171,8 +171,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "7ccabca408164915",
@@ -188,7 +187,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
+                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -205,7 +204,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
+                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -228,7 +227,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md"
+                "file": "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md"
               }
             }
           },
@@ -270,8 +269,8 @@
   },
   "active": "6fcbf08c53d906c2",
   "lastOpenFiles": [
-    "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
     "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
+    "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
     "Actuator/Mini 17Lf/img/verticval_braket.png",
     "Actuator/Mini 17Lf/img/end_ball.png",
     "Actuator/Mini 17Lf/img/endtip.png",

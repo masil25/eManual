@@ -1,12 +1,12 @@
 # 1 Features / 주요 특장점
 -  Micro size / 마이크로 사이즈  
--  Precise position control / 정밀위치제어
--  Force control by current feedback / 전류피드백 통한 포스 제어
--  Speed control (1000 resolution) / 속도제어( 1000 해상도)
+-  Precise position control / 정밀 위치 제어
+-  Force control by current feedback / 전류 피드백 통한 포스 제어
+-  Speed control (1000 resolution) / 속도 제어( 1000 해상도)
 -  Strong force comparing to the size / 체적 대비 강한 힘
 -  Built-in Drive Circuitry / 드라이브 회로 내장
 -  RS-485 communication / RS-485 통신 지원
--  Parameter programmable on the Manager software / 매니져 소프트웨어를 통한 Parameter 셋팅 가능 
+-  Parameter programmable on the Manager software / 매니저 소프트웨어를 통한 Parameter 셋팅 가능 
 
 # 2 Specification
 ## 2.1 Common Specifications / 공통 사양
