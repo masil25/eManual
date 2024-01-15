@@ -4,22 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e45386271ff86171",
+        "id": "f6447233d3bc79a3",
         "type": "tabs",
         "children": [
           {
-            "id": "af68593d587d314b",
-            "type": "leaf",
-            "state": {
-              "type": "diff-view",
-              "state": {
-                "file": ".DS_Store",
-                "staged": false
-              }
-            }
-          },
-          {
-            "id": "77380c04748d01c9",
+            "id": "4c6a1f4ffa8ba0fd",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -27,69 +16,10 @@
                 "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "a310eb7861a0721e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f513897c8b84d550",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e6d0672bf357636c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e5012dd258799634",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8349178c63979225",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Actuator/Mini 17Lf/img/17Lf Accessories.png"
               }
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -139,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 435.5
   },
   "right": {
     "id": "7ccabca408164915",
@@ -155,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
+                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -172,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
+                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -195,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md"
+                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md"
               }
             }
           },
@@ -224,38 +154,37 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:퀵 스위처 열기": false,
-      "graph:그래프 뷰 열기": false,
-      "canvas:새 캔버스 만들기": false,
-      "daily-notes:오늘의 데일리 노트 열기": false,
-      "templates:템플릿 삽입": false,
-      "command-palette:명령어 팔레트 열기": false,
-      "markdown-importer:마크다운 형식 가져오기 열기": false,
-      "publish:변경사항 출판": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "publish:Publish changes...": false
     }
   },
-  "active": "e5012dd258799634",
+  "active": "4c6a1f4ffa8ba0fd",
   "lastOpenFiles": [
+    "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_eng.md",
+    "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
+    "Actuator/Mini 17Lf/img/17Lf Accessories.png",
+    "Software/Total Manager/img/Information.png",
+    "Software/Total Manager/img/InformationMenu.png",
+    "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
     "Actuator/Protocol/Modbus-RTU/img/packet Description.png",
     "Actuator/Protocol/Modbus-RTU/img",
     "Pasted image 20240115153139.png",
     "Pasted image 20240115151825.png",
-    "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
-    "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
     "Pasted image 20240115151633.png",
     "스크린샷 2024-01-15 14-49-44.png",
     "Actuator/Mini 17Lf/Drawing/Accessories.md",
-    "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_eng.md",
     "Actuator/Mini 17Lf/img/i2t.png",
     "Actuator/Protocol/IR Protocol/IR Protocol Manual-kor.md",
     "Software/Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
     "Actuator/Mini 17Lf/img/verticval_braket.png",
-    "Actuator/Mini 17Lf/img/end_ball.png",
-    "Actuator/Mini 17Lf/img/endtip.png",
-    "Actuator/Mini 17Lf/img/rs485_circuit.png",
     "conflict-files-obsidian-git.md",
     "Templates/speedCalc.html",
     "Excalidraw/Drawing 2024-01-10 14.48.49.excalidraw.md",
