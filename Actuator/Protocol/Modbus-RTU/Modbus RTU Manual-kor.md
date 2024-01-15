@@ -8,15 +8,19 @@ MODBUS 프로토콜은 산업용 프로토콜로 PLC통신 등에 주로 사용�
 MODBUS는 요청/응답 프로토콜이며 기능 코드별로 지정된 서비스를 제공합니다. 프레임의 구성은 Application Data Unit인 ADU와 Protocol Data Unit인 PDU로 구성되어 있습니다.
 
 
+
 # 프레임 구조
-## 프로토콜 설명
+mightyZAP은 MODBUS-RTU 프로토콜 내용을 준수합니다.  
+본 매뉴얼에 나오지 않은 사항들은 아래의 관련 표준 문서를 참조하여 주시기 바랍니다. ()
+## Packet Discri
 MODBUS 프로토콜은 기본 통신 계층과 관계없이 간단한 PDU(프로토콜 데이터 단위)를 정의합니다. 특정 버스나 네트워크에서 MODBUS 프로토콜 을 매핑하면 ADU(응용 프로그램 데이터 단위)에 몇 가지 추가 필드가 추가될 수 있습니다.  
 
 ![[Pasted image 20240115151825.png]]
 <p align="center">Gernerral Modbus Frame</p>
+MODBUS 애플리케이션 데이터 단위(ADU)는 MODBUS 전송을 시작하는 클라이언트에 의해 구축됩니다. 이 함수는 어떤 종류의 작업을 수행할지 서버에(mightyZAP) 알려줍니다. MODBUS 애플리케이션 Protocol은 Client가 시작한 요청의 형식을 설정합니다.
 
-첫번째는 MODBUS RTU방식입니다.
-RTU방식은 빠르고 간단하여 가장 많이 쓰입니다.
+### Modbus RTU Protocol
+
 
 ![](https://blog.kakaocdn.net/dn/BZAcw/btqxDt4uOn5/Uxx3rBmxbIfC6tyy5Gcrb1/img.png)
 
