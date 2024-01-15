@@ -65,7 +65,7 @@ mightyZAP 17Lf Model은 다양한 기능을 내장한 Actuator로 효율적이�
 ![[MotorSpecification.png]]  
 # 2. Control Table
 Control Table은 mightyZAP을 구동 및 제어하기 위한 Parameter와 현재 상태를 나타내는 Parameter로 이루어져 있습니다.   
-사용자는 통신 Packet을 이용하여 특정 Parameter의 Data를  읽어 mightyZAP의 상태를 확인하거나, Data를 변경하여 Actuator를 제어할 수 있습니다.  
+사용자는 통신 Packet을 이용하여 특정 Parameter의 Data를  읽어 mightyZAP의 상태를 확인하거나, Data를 변경하여 mightyZAP을 제어할 수 있습니다.  
 >[!note] Note 
 >Mini 17Lf Model은 Modbus-RTU 통신 만을 제공합니다.  
 >통신 Packet에 대한 자세한 내용은 [[Modbus RTU Manual-kor|Modbus RTU]]를 참고하여 주시기 바랍니다.
@@ -90,8 +90,8 @@ Control Table Data는 'R', 'RW'로 표기됩니다. 'R'은 읽기 전용(Read On
 |:-----------------|:-----------|:--------------------------|:----------------------|:-------|:---------|
 |            40001 |   0 (0x00) | Serial Number             | Model Serial Nu mber  | R      |          |
 |            40002 |   1 (0x01) | Firmware Version          | 펌웨어 버전 정보             | R      |          |
-|            40005 |   4 (0x04) | Actuator ID               | Actuator ID           | RW     |  1(0x01) |
-|            40006 |   5 (0x05) | Actuator Baudrate         | 통신 속도                 | RW     | 32(0x20) |
+|            40005 |   4 (0x04) | mightyZAP ID               | mightyZAP ID           | RW     |  1(0x01) |
+|            40006 |   5 (0x05) | mightyZAP Baudrate         | 통신 속도                 | RW     | 32(0x20) |
 |            40010 |   9 (0x09) | Alarm Led                 | 하드웨어 에러 알랍 LED 표시     | RW     | 33(0x21) |
 |            40011 |  10 (0x0A) | Alarm Shutdown            | 하드웨어 에러 셧다운 기능        | RW     | 33(0x21) |
 |            40012 |  11 (0x0B) | Short Stroke Limit        | 수축 방향 한계 위치 값         | RW     |  0(0x00) |
@@ -335,7 +335,7 @@ End Compliance Margin은 작을 수록 위치 정밀도가 높아지나, 일정 
 
 **기본 개념**
 End Compliance Margin에 대한 기본적인 개념은 다음과 같습니다.
-진행 방향에서의 End Complilance Marign 위치에서 Actuator 는 전기적 브레이크 명령을 내립니다. 이때 Actuator는 전기적 인 브레이크와 내부적인 마찰과 관성등에 의해 일정 거리를 이동한 후 정지하게 됩니다.  이때 이동한 정지 거리가 End Compliance Margin의 값과 동일하게 하는것이 가장 좋습니다.  
+진행 방향에서의 End Complilance Marign 위치에서 mightyZAP은 전기적 브레이크 명령을 내립니다. 이때 mightyZAP은 전기적 인 브레이크와 내부적인 마찰과 관성등에 의해 일정 거리를 이동한 후 정지하게 됩니다.  이때 이동한 정지 거리가 End Compliance Margin의 값과 동일하게 하는것이 가장 좋습니다.  
 ![[EndMarginBasic.gif|700]]  
 **End Compliance 줄이기**    
 부하가 적은 환경에서는 반복 정밀도를 높이기 위해 End compliance Margin을 줄이는 것이 효과적일 수 있습니다. 그렇지만 관성에 의해 밀리는 거리가 End Compliance Margin보다 길 경우 목표 위치를 벗어나 정지하게 되거나 그 이상의 거리를 이동한 후 정지 할 수 있습니다.
@@ -355,7 +355,7 @@ Start Margin 과 End Margin 거의 같고 부하가 적고 관성이 적은 제�
 | Acceleration | 모터 가속 시간 | 0~1000 | msec |
 | Deceleration | 모터 감속 시간 | 0~1000 | msec |
 
-각각은 Actuator의 가속과 감속을 제어하는 Parameter 입니다.  
+각각은 mightyZAP의 가속과 감속을 제어하는 Parameter 입니다.  
 가감속 제어는 모터의 진동, 소음 부하 등을 줄이기 위한 제어 방법입니다.  Parameter에 입력된 값은 가감속 제어를 하는 기간을 의미하며 부하에 따라 제어 시간이 늘어날 수 있으며 절대적인 값은 아닙니다.  
 너무 긴 시간 동안 가감속을 할 경우 제어 값이 충분하지 않아 정지한 것처럼 보일 수도 있습니다. 반대로 가속 시간이 짧을 경우 초기 동작 시 모터 또 제어 대상에 충격을 줄 수 있으며, 모터 내구성에 좋지 않습니다.  감속 시간이 짧을 경우 감속 시간이 거의 없이 최대 속도에서 정지하여 관성에 의해 이동하는 거리가 늘어나게 됩니다.  
 일반적으로 감속 시간이 지나치게 짧을 경우 Overshoot가 잘 발생할 수 있습니다.   
@@ -391,7 +391,7 @@ mightyZAP의 모터를 제어하기 위해 사용되는 PWM의 최대 값 설정
 >본 가이드에서는 위치 제어 신호용 PWM과 구분하여 사용하기 위해 Motor Operating Rate 란 용어를 사용합니다.  
  
 ### 2.4.11 Speed Limit  
-Actuator의 최대 이동 속도 제한 값입니다.
+mightyZAP의 최대 이동 속도 제한 값입니다.
 
 | value | Description | Note |
 | ---- | ---- | ---- |
@@ -464,7 +464,7 @@ PID 값을 수정하실 때는 기본 값에서 작은 값을 가 감하여 테�
 | Indirect Address N | 사용자 간접 주소 지정 | 0 ~ 65535 |  |
 
 통신으로 서로 떨어져 있는 Parameter를 각각 읽어 올 경우 통신 시간이 증가하게 됩니다. 이때 사용자에게 필요한 Parameter를 Indirect Address에 지정하면 해당 Indirect Address는 특정 주소와 동일한 기능을 가지게 됩니다.  
-예를 들어 Indirect Address 0에 '205'(Goal Position)을 쓰고, Indirect Data 0에 '5000'을 쓰면, Actuator가 '5000'의 값으로 이동을 합니다. 또한 Goal Position 값 또한 '5000'으로 변경된 것을 확인 할 수 있습니다.   
+예를 들어 Indirect Address 0에 '205'(Goal Position)을 쓰고, Indirect Data 0에 '5000'을 쓰면, mightyZAP이 '5000'의 값으로 이동을 합니다. 또한 Goal Position 값 또한 '5000'으로 변경된 것을 확인 할 수 있습니다.   
 Indirect Address에 특정 주소를 세팅하면, Indirect Data에 해당 주소와 동일한 Parameter 가 됩니다.    
 >[!tip] TIP  
 >Total Manager를 통해 Indricet Address 설정을 쉽게 사용할 수 있습니다.   
@@ -484,7 +484,7 @@ Extended I/O는 RS485 통신으로 제공하지 못하는 추가적인 기능을
 Extended I/O Control은 스위치 또는 내부 [[#4.17 Action Control|Action control]] 기능을 이용하여 사용자가 Programming 없이 제어가 가능합니다.
 또는 반이중 통신으로 불가능한  mightyZAP에서 control Board 에 먼저 데이터를 전송 할 수 있습니다.
 
-Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며 외부 전원이 필요하지 않습니다.  각 기능 설명에 명시된 회로 구성대로 연결해야 Actuator 에 문제가 발생하지 않습니다.  
+Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며 외부 전원이 필요하지 않습니다.  각 기능 설명에 명시된 회로 구성대로 연결해야 mightyZAP 에 문제가 발생하지 않습니다.  
 >[!note] NOTE  
 > 연결 Connector는 동봉된 Extenxded Wire를 사용하여 주시기 바랍니다.
 
@@ -517,7 +517,7 @@ Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며
 	해당 기능은 입력 기능으로 force off 기능을 해당 I/O Port에 적용합니다. 선택한 I/O port에 스위치 회로를 연결하여 버튼을 누르면 Force On/Off toggle 기능을 수행합니다.   
 	![[extended_io_single_sw.png|500]]
 - **Function Stop**    
-	해당 기능은 입력 기능으로 Stop 기능을 해당 I/O Port에 적용합니다. 선택한 i/o port에 스위치 회로를 연결하여 버튼을 누르면 Actuator가 정지 됩니다.   
+	해당 기능은 입력 기능으로 Stop 기능을 해당 I/O Port에 적용합니다. 선택한 i/o port에 스위치 회로를 연결하여 버튼을 누르면 mightyZAP가 정지 됩니다.   
 	![[extended_io_single_sw.png|500]]
 - **Function Pause**   
 	해당 기능은 입력 기능으로 Pause 기능을 해당 I/O Port에 적용합니다. 선택한 i/o port에 스위치 회로를 연결하여 버튼을 누르면 Pause toggle 기능을 수행합니다.  
@@ -527,7 +527,7 @@ Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며
 	![[extened_io_led.png|500]]  
 	![[extended_io_userboard.png|600]]
 - **Restart**    
-	해당 기능은 입력 기능으로 Restart 기능을 담당합니다.  Hardware Error 등의 문제로 Actuator가 정지한 경우 또는 시스템을 재 시작이 필요한 경우 해당 기능을 이용하여 외부에서 restart 기능을 사용할 수 있습니다.  
+	해당 기능은 입력 기능으로 Restart 기능을 담당합니다.  Hardware Error 등의 문제로 mightyZAP이 정지한 경우 또는 시스템을 재 시작이 필요한 경우 해당 기능을 이용하여 외부에서 restart 기능을 사용할 수 있습니다.  
 	![[extended_io_single_sw.png|500]]
 ### 4.17 Action Control  
 Action 기능은 통신 및 외부 제어기 없이 mightyZAP을 제어하기 위한 방법으로 총 5개의 Action을 작성 할 수 있습니다.  
@@ -594,7 +594,7 @@ Force Off 후 별도의 명령(Force ON) 명령이 없이 Goal Position 명령 �
 | 0 | 모터의 위치 이동을 일시 정지를 해지 합니다. |
 | 1 | 모터의 위치 이동을 일시 정지 합니다. |
 
-Actuator의 일시 정지 명령으로 이동 중 Pause 명령이 내려지면, 현재 위치에서 정지하고, 현재 위치를 유지합니다. Pause 명령이 해지 되면 Goal Position 위치로 다시 이동합니다.  
+mightyZAP의 일시 정지 명령으로 이동 중 Pause 명령이 내려지면, 현재 위치에서 정지하고, 현재 위치를 유지합니다. Pause 명령이 해지 되면 Goal Position 위치로 다시 이동합니다.  
 
 ### 2.4.20 Actuator Stop
 | value | Description |
@@ -677,7 +677,7 @@ $$ TargetSpeed = MaxSpeed\times\frac{GoalSpeed}{1000}$$
 Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
 다만, 너무 낮은 값을 설정 시 모터의 반응이 늦어지거나 움직이지 못할 수 있습니다.
 ### 2.4.25 Goal Current  
-모터의 최대 전류를 제한합니다. 전류 값을 제한하여 Actuator의 최대 Force를 제한 할 수 있습니다. 각 Goal Current 값에 대한 Stall Force는 Datasheet를 참조하여 주시기 바랍니다.  
+모터의 최대 전류를 제한합니다. 전류 값을 제한하여 mightyZAP의 최대 Force를 제한 할 수 있습니다. 각 Goal Current 값에 대한 Stall Force는 Datasheet를 참조하여 주시기 바랍니다.  
 
 | value | Description |
 | ---- | ---- |
