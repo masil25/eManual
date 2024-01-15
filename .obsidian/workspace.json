@@ -72,7 +72,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
+                "file": "Software/Total Manager/Total Manager User Manual_kor.md",
                 "mode": "source",
                 "source": false
               }
@@ -139,7 +139,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 425.5
   },
   "right": {
     "id": "7ccabca408164915",
@@ -155,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
+                "file": "Software/Total Manager/Total Manager User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -172,7 +172,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
+                "file": "Software/Total Manager/Total Manager User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -195,7 +195,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md"
+                "file": "Software/Total Manager/Total Manager User Manual_kor.md"
               }
             }
           },
@@ -237,11 +237,12 @@
   },
   "active": "e5012dd258799634",
   "lastOpenFiles": [
+    "Software/Total Manager/Total Manager User Manual_eng.md",
+    "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
     "Actuator/Protocol/Modbus-RTU/img/packet Description.png",
     "Actuator/Protocol/Modbus-RTU/img",
     "Pasted image 20240115153139.png",
     "Pasted image 20240115151825.png",
-    "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
     "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
     "Pasted image 20240115151633.png",
     "스크린샷 2024-01-15 14-49-44.png",
@@ -269,7 +270,6 @@
     "Actuator/Protocol/Modbus-RTU",
     "Actuator/Protocol",
     "NEWS/News Test.md",
-    "Software/Total Manager/Total Manager User Manual_eng.md",
     "Technical/Motor의 특성도 이해.md",
     "FAQ/FAQ Test.md",
     "Actuator/Mini 17Lf/Manual",
