@@ -7,8 +7,6 @@ MODBUS 프로토콜은 산업용 프로토콜로 PLC통신 등에 주로 사용�
 1979년부터 업계의 사실상 직렬 표준인 MODBUS는 수 백만 개의 자동화 장치가 지속적으로 통신할 수 있도록 지원하고 있습니다. 
 MODBUS는 요청/응답 프로토콜이며 기능 코드별로 지정된 서비스를 제공합니다. 프레임의 구성은 Application Data Unit인 ADU와 Protocol Data Unit인 PDU로 구성되어 있습니다.
 
-
-
 # 1 프레임 구조
 ## 1.1 Packet Discription
 mightyZAP은 MODBUS-RTU 프로토콜 내용을 준수합니다.  
@@ -52,6 +50,47 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 | Read Holding Register | 0x03 | mightyZAP의 Data를 읽어오기 |
 | Write Single Register | 0x06 | mightyZAP의 특정 주소에 Data값을 Setting  하기 |
 | Write Multiple Register | 0x16 | mightyZAP의 연속된 주소에 Data값을 Setting  하기 |
+| SP  Function code | 0xxx |  해당 모델 사용자 매뉴얼을 참조하여주시기 바랍니다. |
 
-- Data  
-- CRC  
+- Data
+송신 : Read Register 명령의 경우 Modbus 주소, 레지스터 개수, Byte 개수 등을 지정하게 되며, Write Register 명령의 경우 Modbus 주소, Byte 개수, 설정 할 값 등을 지정하게 됩니다.  
+수신: Read Register 명령의 경우, 정상응답은 Node ID 와 Function Code 가 송신 때와 동일한 값으로 수신되며, Data 는 송신 때 보낸 Register 순서에 따라 각 Register 의 값이 수신됩니다.
+
+Write Single Register 명령의 경우, 송신 때와 동일한 데이터가 수신됩니다. Write Multi  Register 의 경우에는 Write Multi Register 명령으로 데이터를 쓰고자 한 Register 의 시작 주소와 Register 개수가 수신됩니다.
+
+이상응답의 경우에는 Node ID, Error Code, Exception Code 로 구성되며, 이상응답의 패킷 구조는 Function Code 와 관계없이 모두 동일합니다.
+
+- CRC
+16 비트 CRC 값을 입력합니다. 구성은 MSB/LSB 로 나누어 각각 1Byte 씩 전송합니다.
+
+- Exception Code
+mightyZAP에서 지원하는 모든 Function Code 의 이상 응답에 대한 Exception Code 는 아래와 같이 정의되어 있습니다.
+
+| Exception Code | Description |
+| ---- | ---- |
+| 0x01 | 지원하지 않는 Function Code |
+| 0x02 | 잘못된 레지스터 주소 |
+| 0x03 | 잘못된 데이터 값 |
+| 0x04 | 장치 고장, 파라미터 설정값 이상. |
+| 0x05 | 데이터가 준비되지 않은 상태 |
+| 0x06 | 파라미터 잠금 상태 |
+
+## 프로토콜 Function Code 설명
+### Read Holding Register
+단일레지스터(16bit 데이터) 및 연속된 레지스터 블록(16bit 데이터 단위)의 값을 읽습니다.
+- Request
+
+|  | byte | Data |
+| ---- | ---- | ---- |
+| Function Code | 1 byte | 0x03 |
+| Starting Addresse | 2 byte | 0x0000 to 0xffff |
+| Quatity of Register | 2 bytes | 1 to 125(0x7d) |
+- Request OK
+
+|  | byte | Data |
+| ---- | ---- | ---- |
+| Function Code | 1 byte | 0x03 |
+| Starting Addresse | 2 byte | 2 x N* |
+| Quatity of Register | N* x 2 bytes |  |
+*N = Quanti*
+- Request not OK
