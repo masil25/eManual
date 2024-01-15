@@ -72,41 +72,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6fcbf08c53d906c2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "498cedf2f56d1d49",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md"
-              }
-            }
-          },
-          {
-            "id": "13b47e63160b1ba7",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Actuator/Mini 17Lf/Drawing/Accessories.md"
               }
             }
           },
@@ -121,7 +89,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -267,14 +235,17 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "6fcbf08c53d906c2",
+  "active": "e5012dd258799634",
   "lastOpenFiles": [
+    "Pasted image 20240115151825.png",
     "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
-    "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_eng.md",
+    "Pasted image 20240115151633.png",
     "스크린샷 2024-01-15 14-49-44.png",
+    "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
+    "Actuator/Mini 17Lf/Drawing/Accessories.md",
+    "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_eng.md",
     "Actuator/Mini 17Lf/img/i2t.png",
     "Actuator/Protocol/IR Protocol/IR Protocol Manual-kor.md",
-    "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
     "Software/Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
@@ -286,8 +257,6 @@
     "Actuator/Mini 17Lf/img/usbInterfaceboard.png",
     "conflict-files-obsidian-git.md",
     "Actuator/Mini 17Lf/img/MotorSpecification.png",
-    "Actuator/Mini 17Lf/img/ezController.png",
-    "Actuator/Mini 17Lf/Drawing/Accessories.md",
     "Templates/speedCalc.html",
     "Excalidraw/Drawing 2024-01-10 14.48.49.excalidraw.md",
     "Excalidraw",

@@ -1,5 +1,5 @@
 Modbus RTU Manual
-# 1 소개
+# 소개
 
 MODBUS 프로토콜은 산업용 프로토콜로 PLC통신 등에 주로 사용되는 표준이 되는 프로토콜입니다.
 주로 사용하는 방식은 RTU방식과 ASCII방식이 주로 사용되고, 요즘에는 TCP방식도 나와있습니다.
@@ -8,7 +8,12 @@ MODBUS 프로토콜은 산업용 프로토콜로 PLC통신 등에 주로 사용�
 MODBUS는 요청/응답 프로토콜이며 기능 코드별로 지정된 서비스를 제공합니다. 프레임의 구성은 Application Data Unit인 ADU와 Protocol Data Unit인 PDU로 구성되어 있습니다.
 
 
-**1. 프레임 구조**
+# 프레임 구조
+## 프로토콜 설명
+MODBUS 프로토콜은 기본 통신 계층과 관계없이 간단한 PDU(프로토콜 데이터 단위)를 정의합니다. 특정 버스나 네트워크에서 MODBUS 프로토콜 을 매핑하면 ADU(응용 프로그램 데이터 단위)에 몇 가지 추가 필드가 추가될 수 있습니다.  
+
+![[Pasted image 20240115151825.png]]
+<p align="center">Gernerral Modbus Frame</p>
 
 첫번째는 MODBUS RTU방식입니다.
 RTU방식은 빠르고 간단하여 가장 많이 쓰입니다.
