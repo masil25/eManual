@@ -84,7 +84,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_eng.md",
+                "file": "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
                 "mode": "source",
                 "source": false
               }
@@ -187,7 +187,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_eng.md",
+                "file": "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -204,7 +204,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_eng.md",
+                "file": "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -227,7 +227,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_eng.md"
+                "file": "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md"
               }
             }
           },
@@ -270,8 +270,8 @@
   "active": "6fcbf08c53d906c2",
   "lastOpenFiles": [
     "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
-    "스크린샷 2024-01-15 14-49-44.png",
     "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_eng.md",
+    "스크린샷 2024-01-15 14-49-44.png",
     "Actuator/Mini 17Lf/img/i2t.png",
     "Actuator/Protocol/IR Protocol/IR Protocol Manual-kor.md",
     "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
