@@ -84,7 +84,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
+                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
                 "mode": "source",
                 "source": false
               }
@@ -187,7 +187,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
+                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -204,7 +204,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
+                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -227,7 +227,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md"
+                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md"
               }
             }
           },
@@ -267,12 +267,12 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "3c8f0a42222ab22e",
+  "active": "6fcbf08c53d906c2",
   "lastOpenFiles": [
+    "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
     "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/Manual/Mini 17Lf User Manual_eng.md",
     "Software/Total Manager/Total Manager User Manual_kor.md",
-    "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
     "Actuator/Mini 17Lf/Mini 17Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27 Datasheet_kor.md",
     "Actuator/Mini 17Lf/img/verticval_braket.png",
