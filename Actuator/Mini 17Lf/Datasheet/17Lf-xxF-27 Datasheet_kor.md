@@ -13,7 +13,7 @@
 | **Property** | Value |
 |-------------------------------------|--------------------------------------------|
 | **Stroke / 스트로크** | 27mm |
-| **Rated Load / 정격 부하** | 20N~75N according to gear ratio/ 기어비에 따라 20N~75N |
+| **Rated Load / 정격 부하** | 20N~70N according to gear ratio/ 기어비에 따라 20N~70N |
 | **Recommended duty cycle at rated load** | under 50%(50% 이하) |
 | **Micro controller** | 32bit Arm Cortex |
 | **Position Resolution** | 10000 Resolution (A/D Converter) |
