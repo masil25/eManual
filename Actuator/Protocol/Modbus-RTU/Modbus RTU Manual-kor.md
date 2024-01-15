@@ -49,7 +49,7 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 | ---- | ---- | ---- |
 | Read Holding Register | 0x03 | mightyZAP의 Data를 읽어오기 |
 | Write Single Register | 0x06 | mightyZAP의 특정 주소에 Data값을 Setting  하기 |
-| Write Multiple Register | 0x16 | mightyZAP의 연속된 주소에 Data값을 Setting  하기 |
+| Write Multiple Register | 0x10 | mightyZAP의 연속된 주소에 Data값을 Setting  하기 |
 | SP  Function code | 0xxx |  해당 모델 사용자 매뉴얼을 참조하여주시기 바랍니다. |
 
 - Data
@@ -77,7 +77,7 @@ mightyZAP에서 지원하는 모든 Function Code 의 이상 응답에 대한 Ex
 
 ## 프로토콜 Function Code 설명
 ### Read Holding Register
-단일레지스터(16bit 데이터) 및 연속된 레지스터 블록(16bit 데이터 단위)의 값을 읽습니다.
+단일 레지스터(16bit 데이터) 및 연속된 레지스터 블록(16bit 데이터 단위)의 값을 읽습니다.
 - Request
 
 |  | byte | Data |
@@ -92,5 +92,64 @@ mightyZAP에서 지원하는 모든 Function Code 의 이상 응답에 대한 Ex
 | Function Code | 1 byte | 0x03 |
 | Starting Addresse | 2 byte | 2 x N* |
 | Quatity of Register | N* x 2 bytes |  |
-*N = Quanti*
-- Request not OK
+*N = Quantity of Registers
+
+- Request not OK  
+
+|  | byte | Data |
+| ---- | ---- | ---- |
+| Error Code | 1 byte | 0x83 |
+| Exception Code | 1 byte | 0x01 ~ 0x06 |
+- example
+### Write Sing Register
+단일레지스터(16bit 데이터)에 값을 씁니다.  
+- Request
+
+|  | byte | Data |
+| ---- | ---- | ---- |
+| Function Code | 1 byte | 0x06 |
+| Starting Addresse | 2 bytes | 0x0000 to 0xffff |
+| Quatity of Register | 2 bytes | 0x0000 to 0xffff |
+- Request OK
+
+|  | byte | Data |
+| ---- | ---- | ---- |
+| Function Code | 1 byte | 0x03 |
+| Starting Addresse | 2 bytes | 0x0000 to 0xffff |
+| Quatity of Register | 2 bytes | 0x0000 to 0xffff |
+*N = Quantity of Registers
+
+- Request not OK  
+
+|  | byte | Data |
+| ---- | ---- | ---- |
+| Error Code | 1 byte | 0x86 |
+| Exception Code | 1 byte | 0x01 ~ 0x06 |
+- example
+### Write Multi Register(0x10)
+연속된 레지스터 블록(16bit 데이터 단위)에 값을 씁니다.  
+- Request
+
+|  | byte | Data |
+| ---- | ---- | ---- |
+| Function Code | 1 byte | 0x06 |
+| Starting Addresse | 2 bytes | 0x0000 to 0xffff |
+| Quatity of Register | 2 bytes | 0x0000 to 0xffff |
+| Bytes Count | 1Byte | 2 x N* |
+| Registers Value | N* x 2 Bytes | value |
+- Request OK
+
+|  | byte | Data |
+| ---- | ---- | ---- |
+| Function Code | 1 byte | 0x10 |
+| Starting Addresse | 2 bytes | 0x0000 to 0xffff |
+| Quatity of Register | 2 bytes | 1 to 123(0x7b) |
+*N = Quantity of Registers
+
+- Request not OK  
+
+|  | byte | Data |
+| ---- | ---- | ---- |
+| Error Code | 1 byte | 0x90 |
+| Exception Code | 1 byte | 0x01 ~ 0x06 |
+- example
