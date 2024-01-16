@@ -506,7 +506,7 @@ Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며
 	IO Port 1 또는 2번을 Jog 기능으로 지정 시 나머지 IO Port도 작동으로 지정됩니다. 해당 기능은 그림과 같이 회로를 구성하며, 각 버튼을 누를 경우 Short stroke Limit/Long Stroke Limit  방향으로 모터가 동작 하다가 버튼을 놓았을 때 정지하게 됩니다.  
 	![[extended_io_switch.png|500]]
 - **Action Enable**    
-	Action Enable 기능 Action 기능을 사용할 때 사용됩니다. 
+	Action Enable 기능 Action 기능을 사용할 때 사용됩니다.  
 	( 자세한 내용은 [[#4.17 Action Control]]을 참조하여 주시기 바랍니다. )  
 	![[extended_io_single_sw.png|500]]
 - **Action Next**    
@@ -548,7 +548,7 @@ Action Setting은 모터가 움직이는 방식을 설정하며 아래와 같습
 Action Setting에서 설정된 내용에 대한 반복 횟수 또는 1회 동작에 대한 동작 시간 등을 설정하는 Parameter 입니다.  
 **Repeat type**  
  - Interval : Repeat Time에 의해 설정된 시간 간격마다 Action을 수행합니다.  일정한 시간마다 반복된 동작이 필요할 경우 사용합니다. 
- - dWellTime : Action 명령에 의해 위치 이동이 완료되어 정지하는 시간을 설정합니다. 동작 완료 후 일정한 시간 동안 위치를 유지해야  할 때 사용합니다.
+ - dWellTime : Action 명령에 의해 위치 이동이 완료되어 정지하는 시간을 설정합니다. 동작 완료 후 일정한 시간 동안 위치를 유지해야  할 때 사용합니다.  
    ![[action_interval.png|600]]  
    ![[action_dwell.png|600]]  
 **Repeat time**  
@@ -652,7 +652,7 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
 >[!note] 전압 측정  
 >migtyZAP에서 측정되는 전압은 약 +/- 0.4V의 오차가 있습니다. 
 ### 2.4.23 Goal Position
-위치 이동 명령으로 migthtyZAP을 이동 시키고자 할 때 사용하는 위치 값입니다. Goal Position은 [[#2.4.5 Short/Long Stroke Limt|Short/Long Stroke Limt]] 설정 제한 값 까지 입력이 가능합니다.  
+위치 이동 명령으로 migthtyZAP을 이동 시키고자 할 때 사용하는 위치 값입니다. Goal Position은 [[#3.1.5 Stroke Limit 설정|Stroke Limit]] 설정 제한 값 까지 입력이 가능합니다.  
 (즉, stroke limit 범위 밖으로는 위치 명령을 내려도 stroke limit위치까지만 움직입니다)
 
 | value | Description |
