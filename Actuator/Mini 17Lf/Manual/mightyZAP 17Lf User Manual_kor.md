@@ -86,7 +86,7 @@ Control Table Data는 'R', 'RW'로 표기됩니다. 'R'은 읽기 전용(Read On
 기본 값은 초기 설정 값(공장 출하 설정 값)입니다. Non-Volatile Memory 영역의 값은 사용자가 수정할 경우 변경한 값으로 적용되며, Volatile Memory 영역은 전원이 인가 되었을 때의 값을 의미합니다.  
 ## 2.2 Non-volatile Memory (ROM)  
 
-| Rergister Number | Address    | Name                      | Description           | Access | Default  |
+| <center>Rergister<br>Number</center> | <center>Address</center>    | <center>Name</center>                      | <center>Description</center>           | Access | <center>Default</center>  |
 |:-----------------|:-----------|:--------------------------|:----------------------|:-------|:---------|
 |            40001 |   0 (0x00) | Serial Number             | Model Serial Nu mber  | R      |          |
 |            40002 |   1 (0x01) | Firmware Version          | 펌웨어 버전 정보             | R      |          |
