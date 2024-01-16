@@ -4,7 +4,7 @@ mightyZAP은 협소한 공간에서 효율적인 선형 운동이 필요한 어�
 # Software
 mightyZAP에서 제공하는 모든 소프트웨어는  mightyZAP에 최적화된 환경을 제공합니다. Manager Software 및 다양한 Software를 제공합니다.
 
-# Boads
+# Boards
 mightyZAP을 제어하기위한 다양한 장비를 소개합니다. PC Interface Board 및 여러 사용자 보드를 위한 악세사리 보드를 제공합니다.
 
 # Library
