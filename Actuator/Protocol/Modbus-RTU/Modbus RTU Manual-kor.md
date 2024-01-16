@@ -66,14 +66,14 @@ Write Single Register 명령의 경우, 송신 때와 동일한 데이터가 수
 - Exception Code
 mightyZAP에서 지원하는 모든 Function Code 의 이상 응답에 대한 Exception Code 는 아래와 같이 정의되어 있습니다.
 
-| Exception Code | Description |
-| ---- | ---- |
-| 0x01 | 지원하지 않는 Function Code |
-| 0x02 | 잘못된 레지스터 주소 |
-| 0x03 | 잘못된 데이터 값 |
-| 0x04 | 장치 고장, 파라미터 설정값 이상. |
-| 0x05 | 데이터가 준비되지 않은 상태 |
-| 0x06 | 파라미터 잠금 상태 |
+| Exception Code |  | Description |
+| ---- | ---- | ---- |
+| 0x01 | Illegal Function | 지원하지 않는 Function Code |
+| 0x02 | Illegal Data Address | 잘못된 레지스터 주소 |
+| 0x03 | Illegal Data Value | 잘못된 데이터 값 |
+| 0x04 | Slave Device Failure | 장치 고장, 파라미터 설정값 이상(ready) |
+| 0x05 | Acknowledge | 데이터가 준비되지 않은 상태(ready) |
+| 0x06 | Slave Device Busy | 파라미터 잠금 상태 |
 
 ## 프로토콜 Function Code 설명
 ### Read Holding Register
