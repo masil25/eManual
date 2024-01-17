@@ -12,8 +12,8 @@
 ## 2.1 Common Specifications / 공통 사양
 | **Property** | Value |
 |-------------------------------------|--------------------------------------------|
-| **Stroke / 스트로크** | 27mm |
-| **Rated Load / 정격 부하** | 20N~70N according to gear ratio/ 기어비에 따라 20N~70N |
+| **Stroke / 스트로크** | 37mm |
+| **Rated Load / 정격 부하** | 17N ~ 50N according to gear ratio/ 기어비에 따라 17N ~ 50N |
 | **Recommended duty cycle at rated load** | under 50%(50% 이하) |
 | **Micro controller** | 32bit Arm Cortex |
 | **Position Resolution** | 10000 Resolution (A/D Converter) |
