@@ -278,7 +278,7 @@ Shutdown은 Hardware Error가 발생할 경우, 모터를 Force Off 상태 즉, 
 위치 제어에서 목표 위치의 제한 값으로 0 ~ 10,000 범위 내에서 목표 위치 값을 제한합니다.
 따라서 Goal Position값은 Short Stroke Limit(A) 값보다 작을 수 없고, Long Stroke Limit(B) 값보다 커서는 안됩니다.
 Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Stroke Limit 값보다 클 경우 Stroke Limit값으로 치환됩니다.  
-![[Actuator/Mini 17Lf/img/StrokeLImit.png|600]]   
+[[Actuator/Mini 17Lf/img/StrokeLImit.png|600]]   
 >[!warning] WARNING  
 >mightyZAP이 사용자의 Application에 설치 되어 동작하기 전에 , 실제 가동 가능한 범위를 측정하여 Short Stroke Limit/Long Stroke Limit를 설정하신 후 사용하는 것을 추천 드립니다.  
 >설치된 기구물의 한계 밖의 위치 이동값을 입력할 경우 mightyZAP 또는 사용자의 Application 이 파손되거나, Overload 보호 기능이 동작 될 수 있습니다.   
