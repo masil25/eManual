@@ -109,7 +109,7 @@ USB Interface Board를 PC와 연결합니다.
 ![[serialPort_check_win.jpg]]
 ### 2.4.2 Linux[ubuntu/Demian]
 <font size="5"> Driver 설치</font>
-##### 1) CH341 Driver 
+1) CH341 Driver 
 CH341 driver는 USB-02 Model에서 만 사용됩니다. 
 CH340, CH341 의 시리얼 드라이버는 Linux 커널 버전 2.6.24부터 내장되어 있으며, 해당 위치는 drivers/usb/serial/ch341.c입니다. 다만 드라이버를 최신 상태로 유지 하기 원하실 경우 아래의 방법을 사용하기 바랍니다.
  - 아래의 사이트에서 Linux용 드라이버를 다운로드 받으시기 바랍니다.
@@ -131,7 +131,7 @@ $ sudo dmesg | grep ch34
 [   xxx] ch341 1-6.4.3:1.0: ch341-uart converter detected  
 [   xxx] usb 1-6.4.3: ch341-uart converter now attached to ttyUSB1  
 ```
-##### 2) FTDI Driver
+2) FTDI Driver
 FTDI Driver는 USB-02를 제외한 모든 모델에서 사용됩니다.  
 FTDI VCP 드라이버는 Linux  커널에 내장되어 있습니다. 모든 FTDI 장치에 VCP 드라이버 지원이 있는지 확인하기 위해 FTDI는 Linux  시스템에 최신 커널 릴리즈를 설치할 것을 권장합니다. Linux 에서는 VCP 드라이버가 /dev/ttyUSBx로 표시됩니다.  
 Comport를 확인하는 방법 :  
@@ -145,7 +145,7 @@ $ dmesg|grep FTDI
 [   xxx] ftdi_sio: v1.6.0:USB FTDI Serial Converters Driver  
 ```
 
-#### Serial Port 권한 얻기
+**Serial Port 권한 얻기**
 우분투는 기본적으로  root 사용자가 아닌 일반 사용자로 로그인하도록 하기 때문에 Serial Port와 같은 시스템 장치를 다루기 위해서는 권한 설정을 해야 합니다.   
 먼저 연결된 Port 명을 확인하기 위해 아래의 명령을 입력합니다.
 ```
@@ -202,7 +202,7 @@ Actuaotor Scan 팝업 창의 화면 구성은 아래와 같습니다.
 - **Scan 결과 창** : SCAN 진행 상황과 결과를 출력한다.
 - **SCAN, CLOSE** : SCAN 실행 및 창 닫기 버튼
 ### 3.1.2 통신 설정
-##### 1. Port 선택
+**1. Port 선택**
 위 [[#2.4 USB Interface Board]] 의 설명을 참조하시어 Serial Port 명을 확인 하신 후 진행하시기 바랍니다.  연결된 Serial Port와 동일한 Port를 선택한 후 OPEN 버튼을 클릭하여 Serial Port를 연결합니다.  
 ![[ScanActuator-PortSelect.png|700]]
 Serial Port 를 Open하면 Option 항목이 활성화 됩니다.  
@@ -380,14 +380,14 @@ Actuator의  상태를 공장 출하 시의 초기 상태로 돌리고, 위치 �
 Factory Reset은 Update Page에 들어오면 상단 메뉴바에 추가 되어있는 것을 확인할 수 있습니다.   
 해당 아이콘을 클릭하면 Factory Reset 을 하기 위한 팝업 창이 활성화 됩니다.
 ![[FactoryReset-Button.png|700]]
-##### 1. 화면 구성
+**1. 화면 구성**
 Factory Reset을 선택하면 팝업 창이 나타납니다. 팝업창에는 Factory Reset 관련 Option 선택창과 Text Area가 나타나고 하단에 Factory Reset 을 위한 버튼이 존재합니다.  
 ![[FactoryReset-Disc..png|500]]
-##### 2. Options
+**2. Options**
 Factory Reset에 대한 Option은 2가지로 ID Remind와 Baudrate Remind 입니다. 그 외의 다른 Parameter들은 모두 초기화 됩니다.  
 일반적인 Reset 에서는 초기화 되지 않는 Protocol, Min/Max Position Calibration이 초기화 되고, Potentiometer의 Calibration을 실행하면서 해당 내부 Parameter도 수정이 됩니다.  
 Factopry Reset 후에도 유지하고 싶은 Option을 선택하시면 됩니다.  
-##### 3. Factory Reset 
+**3. Factory Reset**
 하단의 Factory Reset 버튼을 클릭하면, Factory Reset을 실행합니다. 실행 중 진행되는 사항을 Option 선택 아래의 Text Area 창에 표시합니다. 
 ![[FactoryReset-Popup.png]]
 Factory Reset 진행이 되면서 Actuator가 몇 번의 시스템 재 시작을 하면서 LED가 깜빡입니다. 또한 Potenmtiometer Calibration 시에는 Actuator가 최대로 확장 및 수축 행동을 하면서 Calibration 을 진행합니다.  
