@@ -93,7 +93,7 @@ Shutdown된 후에도 통신 라인은 여전히 기능을 하고 있으므로, 
 |:---------|:-----|:-----|:--------|:-------------------------|:----------------------|:---------|
 | 0xFFFFFF | 0x00 | 0x04 |    0xF3 |                     0x12 |                  0x20 |     0xD6 |  
 
-> [!warning] 주의  정격부하에서의 사용!
+> [!warning] 주의  정격부하에서의 사용!  
 >리니어 액츄에이터 적용 시 표기된 정격 부하 내에서 사용해야 안정적인 동작을 구현하고 제품의 수명을 적절히 관리할 수 있습니다.    
 
 ## 1.5. 포스오프기능
@@ -253,7 +253,7 @@ Command Packet
 	- DIRECTION_PORT의 신호 Level이 LOW인 경우 :Data의 신호가 Rx로 입력  
 	- DIRECTION_PORT의 신호 Level이 HIGH인 경우 :Tx 의 신호가 Data로 출력  
 	※ 위 다이어그램과 같이 통신 제어기와 액츄에이터의 GND는 서로 연결이 되어야 합니다.    
-> [!note] NOTE
+> [!note] NOTE  
 >※ PWM통신의 경우, 위 청색 Data핀에 3~5V의 PWM 시그널선을 연결해 주면 됩니다 (전원 연결도 위 그림과 동일).  
 >※ PWM통신을 이용하는 경우, 데이터 통신 지원이 안되므로, 위치 명령은 가능하지만 현재 위치값 등의 Feedback data를 받을 수 없으며, 시리얼 Daisy chain 연결을 지원하지 않습니다.    
 >※ Feedback data 수신과 Daisy chain연결은 TTL 또는 RS-485통신을 통해 가능합니다.    
@@ -302,7 +302,7 @@ Controller와 마이티잽은 packet을 주고 받으며 통신합니다.   Pack
   ![[Commu_spec_PWMPulseMode.png]]
 <font color="#ff0000">※ Period (8ms~23ms) 20ms 추천  </font>  
 
-> [!note] NOTE
+> [!note] NOTE  
 >※ PWM 제어는 노이즈에 취약함으로 한번의 PWM 신호로 제어하지 않고, 특정 주파수로 끊어지지않게  연속적으로 포화방식의 신호를 보내줘야 합니다.   추천 frequency는 50Hz(20ms) 입니다.    
 >※ PWM통신을 이용하는 경우, 데이터 통신 지원이 안되므로, 위치 명령은 가능하지만 현재 위치값 등의 Feedback data를 받을 수 없으며, 시리얼 Daisy chain 연결을 지원하지 않습니다.     
 >※ Feedback data 수신과 Daisy chain연결은 TTL 또는 RS-485통신을 통해 가능합니다.    
@@ -319,7 +319,7 @@ Controller와 마이티잽은 packet을 주고 받으며 통신합니다.   Pack
 |Half Stroke|2047|1500us|
 |Long (확장) Stroke**|4095**|2100us|
 
-> [!tip] TIP
+> [!tip] TIP  
 > 27mm 스트로크 제품은 공장 출하 시 27mm로 셋팅 되어 출하 되나, 30mm를 모두 사용해야 하는 경우 사용자가 설정 가능.  27mm의 데이터 값은 3686입니다.    (횡부하 관련 기구적인 안정성을 위해 가급적 27mm사용을 권장합니다.  )  
 
 ### 4.2.3. Daisy-Chain Connection    
@@ -481,17 +481,17 @@ mightyZAP의 모델 번호입니다.
 |128 (0x80)|9600|  
 
 **설정 값 변환표**  
-> [!warning] WARNING
+> [!warning] WARNING  
 >비휘발성 메모리 영역입니다.   데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.   운영 중 빈번한 값의 변경은 주의하시기 바랍니다.    
 
-> [!note] NOTE
+> [!note] NOTE  
 >Firmware Version 1.5이하 에서는 Baudrate 38400bps는 지원하지 않습니다.    
 
 ### 4.4.5. Stroke Limit (0~4095)  
 Short Stroke(A)또는 Long Stroke(C)상태의 한계 위치 값으로 Goal Position의 최대/최소 값이 됩니다.   Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Stroke Limit 값보다 클 경우  Stroke Limit값으로 치환됩니다.    
 (범위 : 0 ~ 4095 )
    ![[Actuator/Mini 12Lf/img/StrokeLimit.png]]
-> [!note] NOTE
+> [!note] NOTE  
 > 비 휘발성 메모리 영역입니다.   데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.   운영 중 빈번한 값의 변경은 주의하시기 바랍니다.     
 ### 4.4.6. Protocol type (Default : IR Protocol)
 통신 Protocol 방식을 선택합니다.    
@@ -501,10 +501,10 @@ Short Stroke(A)또는 Long Stroke(C)상태의 한계 위치 값으로 Goal Posit
 |0 (0x00)|Modbus RTU|산업용 RS485 표준 통신 Protocol<br><font color="#ff0000">※별도의 Modbus Protocol 사용자 매뉴얼을 참조하세요</font>|
 |1(0x01)|IR Protocol|IRROBOT 자체 통신  Protocol|
 
-> [!warning] WARNING
+> [!warning] WARNING  
 > 비휘발성 메모리 영역입니다.   데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.    운영 중 빈번한 값의 변경은 주의하시기 바랍니다.    
 
-> [!warning] WARNING
+> [!warning] WARNING  
 > Firmware Version 1.5 에서는 IR Protocol만 지원 하며, 해당 항목이 존재하지 않습니다.     (MODBUS RTU는 펌웨어 V2.0 이상에서 지원)  
 
 ### 4.4.7. The Highest / Lowest Limit Voltage
@@ -518,7 +518,7 @@ Short Stroke(A)또는 Long Stroke(C)상태의 한계 위치 값으로 Goal Posit
 ### 4.4.8. Motor Operating Rate (0~1023 / Default : 1023)
 모터의 최대 가동률을 값으로, 모터의 공급되는 최대 PWM 값을 나타냅니다.    
 400 이하로 설정할 경우, 모터가 동작 하지 않을 수도 있습니다.   Motor Operating Rate를 변경하면 속도와 Stall Force가 변경됩니다.    
-> [!warning] WARNING
+> [!warning] WARNING  
 > 비휘발성 메모리 영역입니다.   데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.   운영 중 빈번한 값의 변경은 주의하시기 바랍니다.    
 
 ### 4.4.9. Feedback Return Mode
@@ -531,10 +531,10 @@ COMMAND Packet이 전송된 이후 Feedback Packet을 회신 결정 모드
 |2|모든 COMMAND에 대해 Feedback Packet을 전송|  
 
 Broadcast ID(0xFE)일 때, Feedback Return Mode와 상관없이 Feedback Packet을 전송하지 않음.    
-> [!warning] WARNING
+> [!warning] WARNING  
 > 비휘발성 메모리 영역입니다.   데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.   운영 중 빈번한 값의 변경은 주의하시기 바랍니다.    
 
-> [!note]
+> [!note]  
 > Broadcast ID(0xFE) mode에서, feedback packet 은 Feedback Return Mode 값에 상관없이 보내지지 않습니다.     
 
 ### 4.4.10. Alarm LED  (Default : 33)  
@@ -545,7 +545,7 @@ Error가 발생 했을 때,해당 bit가 1로 설정되어 있으면 LED표시�
 |Overload Error|5|Red 점멸|
 |Input Voltage Error|0|Red 지속점등|
 Input voltage Alarm의 경우 원인이 해결 되면 LED 알람이 사라집니다.     
-> [!warning]
+> [!warning]  
 > 비휘발성 메모리 영역입니다.   데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.    운영 중 빈번한 값의 변경은 주의하시기 바랍니다.    
 
 Overload Error의 경우 원인이 해결되어도, LED 알람이 곧바로 해지 되지 않으며, 전원 재 시작(Restart) 또는 전원 재부팅 명령을 내려야 Alarm이 해제됩니다.  
@@ -566,10 +566,10 @@ Error가 발생 했을 때,해당 bit가 1로 설정되어 있으면 Force를 OF
 Lowest input voltage의 경우 모터가 Force Off(shutdown) 되지는 않습니다.     
 highest voltage 및 Overload Error의 경우 Force Off (shutdown) 되며, 전원 재 부팅 또는 System Restart 명령을 내려야 shutdown이 해제됩니다.    
 
-> [!tip]
+> [!tip]  
 > Overload 보호 자동 shutdown기능은 공장 출하 시 활성화 되어 출하 되며, 나머지 기능도 사용자 필요에 따라 서보 매니저 프로그램을 통해 활성화 / 비활성화가 가능합니다.  
 
-> [!warning] 
+> [!warning]   
 > 비 휘발성 메모리 영역입니다.   데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.   운영 중 빈번한 값의 변경은 주의하시기 바랍니다.    
 
 ### 4.4.12. Compliance Margin
@@ -588,7 +588,7 @@ Compliance Margin이란 이동 명령을 통해 액츄에이터를 구동 시작
   - 안정된 동작을 위해 이 값을 늘리는 경우, 위에서 설명한 대로 “시작 컴프라이언스 마진 값” 이상으로 늘려서는 안되고, 정밀도를 높이려고 이 값을 줄이는 경우, 이 액츄에이터가 받아들일 수 있는 성능 이상으로 값을 줄이는 경우, 오히려 역효과가 나게 됩니다.    
   - End Compliance Margin이 작을수록 위치 정밀도가 민감하고 좋아지나, 일정 값 이하로 줄일 경우 효과가 미비해집니다.     
   - End Compliance Margin을 늘릴 경우 목표 위치 도달 시 동작이 깔끔해지고 안정적으로 변하며, 특히 속도가 빠른 제품일수록 효과가 좋습니다.   단, 너무 클 경우 반대로 정밀도가 나빠질 수 있습니다.     
-> [!warning] 
+> [!warning]  
 > 비 휘발성 메모리 영역입니다.   데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.    운영 중 빈번한 값의 변경은 주의하시기 바랍니다.    
 
 ### 4.4.13. Current Limit (0~1600 / Default : 800)  
@@ -611,7 +611,7 @@ Compliance Margin이란 이동 명령을 통해 액츄에이터를 구동 시작
 >   [!warning] 
 >   비휘발성 메모리 영역입니다.   데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.   운영 중 빈번한 값의 변경은 주의하시기 바랍니다.    
 
-> [!Note] 
+> [!Note]  
 > Firmware Version 1.5 에서의 Goal Speed와 같습니다.    
 
 ### 4.4.15. Calibration Stroke  
@@ -623,17 +623,17 @@ Compliance Margin이란 이동 명령을 통해 액츄에이터를 구동 시작
 	- 모터의 가감속률을 나타냅니다.    
 	- Acceleration : 모터의 이동 시작 시의 가속도 값으로 값이 클 경우 모터가 급 가속을 하게 됩니다.   반대로 값이 낮을 경우 부드러운 가속을 하지만, 너무 낮을 경우 모터가 움직이지 않을 수도 있습니다.    
 	- Deceleration : 모터의 위치 도달 시의 감속도 값으로 값이 클 경우 목표위치에서 급 감속을 하게 되어 목표 위치 값을 벗어나 정지하게 되고, 다시 벗어난 위치에서 목표위치로의 이동을 하게 되는 바운딩 현상이 나타나 정상적인 제동이 이루어지지 않을 수 있습니다.   너무 낮은 감속은 서보모터가 지나치게 느려지는 동작을 하게 되어 목표위치까지 도달하는 시간이 늦어질 수 있습니다.    
-> [!tip]
+> [!tip] 
 > Acceleration / Deceleration 수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.  
 
-> [!warning] 
+> [!warning]  
 > 비휘발성 메모리 영역입니다.   데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.   운영 중 빈번한 값의 변경은 주의하시기 바랍니다.    
 
 ### 17. Current PI (0~255 / Default : 개별 사양)
 - 모터의 전류제어를 위한 PI 값  
 - 정해진 값이 보다 큰 PI값을 적용할 경우 Goal Current와의 오차에 대해 거칠게 동작할 수 있습니다.    
 - 정해진 값보다 작은 PI값을 적용할 경우 Goal Current와의 오차에 부드럽게 동작하나 Goal Current 값과의 오차가 크게 나타날 수 있습니다.    
-> [!warning] 
+> [!warning]  
 > **수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.**      
 > 비 휘발성 메모리 영역입니다.   데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.   운영 중 빈번한 값의 변경은 주의하시기 바랍니다.     
 
@@ -641,7 +641,7 @@ Compliance Margin이란 이동 명령을 통해 액츄에이터를 구동 시작
 - 모터의 속도제어를 위한 PID 값  
 - 정해진 값이 보다 큰 PID값을 적용할 경우 Goal Speed와의 오차에 대해 거칠게 동작하여 Overshoot 또는 과도 응답상태로 정해진 위치 값에 정지하지 못하고 모터가 진동할 수 있습니다.    
 - 정해진 값보다 작은 PI값을 적용할 경우 Goal Speed 와의 오차에 부드럽게 동작하나 Goal speed 값과의 오차가 크게 나타날 수 있습니다.    
-> [!warning] 
+> [!warning]  
 > **수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.**
 > 비휘발성 메모리 영역입니다.   데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.    운영 중 빈번한 값의 변경은 주의하시기 바랍니다.    
 
@@ -657,7 +657,7 @@ Compliance Margin이란 이동 명령을 통해 액츄에이터를 구동 시작
 | Stroke Limit| Short Stroke Limit ~ Long Stroke Limit | 가용 스트로크 범위 제한 없이,입력범위(0~4095)만 제한            |
 | Position Calibration |0~4095(최대사용) | 입력범위 (0~4095) 제한은 없으나, 가용 스트로크 범위가 변동될 수 있음. |  
 (예, 12Lf-20F-27의 Min Position 3.8mm/ Min Position Calibration값이 5 일 경우, Min Position Calibration 값을 높이면 Min Position 값이 늘어나고 전체 Stroke 구간은 Min Position이 늘어남만큼 줄어들게 됩니다.  )   
-> [!warning] 
+> [!warning]  
 > 비 휘발성 메모리 영역입니다.   데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.   운영 중 빈번한 값의 변경은 주의하시기 바랍니다.    
 
 ### 20. Force ON/OFF (Default : 1 / Force ON)
@@ -667,7 +667,7 @@ Compliance Margin이란 이동 명령을 통해 액츄에이터를 구동 시작
 |---|---|
 |0|모터의 전원을 차단하여서 기동력이 발생 되지 않도록 합니다.  |
 |1|모터의 전원을 인가하여서 기동력이 발생하도록 합니다.  |
-> [!tip]
+> [!tip]  
 >  당사 리니어 서보는 모터의 전원이 해제되어도 기구적인 설계 특성상 위치를 고수하려는 특성이 있습니다.   27N이상 정격부하 사양의 제품은 전원 차단 시에도 기구적인 마찰력으로 위치를 고수합니다.   따라서, 설비에서 서보 모터가 특정 위치를 지속적으로 고수하고 있어야 하는 경우 Force Off 명령으로 모터 전원을 차단하여 모터의 수명을 연장시킬 수 있습니다.   이 경우 통신은 여전히 유지되며, 모터의 전원만 차단됩니다.   다시 위치 이동 명령을 내리게 되면 자동으로 Force ON되어 다음 명령을 수행하게 됩니다.  
 ### 21. LED
 - Error 표시가 되지 않을 때 사용자가 임의로 LED 제어하여 디스플레이 효과를 낼 수 있음.   (LED에러표시가 우선) 
