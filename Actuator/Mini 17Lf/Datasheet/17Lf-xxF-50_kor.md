@@ -79,7 +79,7 @@ Map.
 | ^ |  | 28.0 |  | mm/s | 17Lf-50F-50 |
 
 ## 2.7 Load / 부하
-| Paramter | Min | Rated | Max | Unit | Note |
+| Parameter | Min | Rated | Max | Unit | Note |
 | :--- | :--: | :--: | :--: | :--: | :--- |
 | Load at 12.0V  <br>부하 at 12.0V |  | 17 |  | N | 17Lf-17F-50 |
 | ^ |  | 4.49 |  | lbf | ^ |
