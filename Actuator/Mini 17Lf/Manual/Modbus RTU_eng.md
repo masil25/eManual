@@ -153,4 +153,3 @@ mightyZAP에서 지원하는 모든 Function Code 의 이상 응답에 대한 Ex
 | Error Code | 1 byte | 0x90 |
 | Exception Code | 1 byte | 0x01 ~ 0x06 |
 - example
-# Packet Test
