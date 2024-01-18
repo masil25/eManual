@@ -12,7 +12,7 @@
 ## 2.1 Common Specifications / 공통 사양
 | **Property** | Value |
 | ---- | ---- |
-| **Stroke / 스트로크** | 37mm |
+| **Stroke / 스트로크** | 50mm |
 | **Rated Load / 정격 부하** | 17N~50N according to gear ratio/ 기어비에 따라 17N~50N |
 | **Recommended duty cycle at rated load** | under 50%(50% 이하) |
 | **Micro controller** | 32bit Arm Cortex |
@@ -20,11 +20,11 @@
 | **Input Voltage / 입력 전압** | 12.0V(Rated/정격), 8V ~ 13 V(Operating) |
 | **Motor Type / Watt** | Coreless DC Motor / <font color="#4f81bd">xx</font>Watt |
 | **Current consumption / 소모전류** | 30mA(Idle), 400mA(Rated), 1.6A(Stall) |
-| **Position repeatability** | Unidirectional less than 0.03mm(30um) |
-| ^ | Bydirectional less than +/0.06mm(60um) |
+| **Position repeatability** | Unidirectional less than 0.04mm(40um) |
+| ^ | Bydirectional less than +/0.08mm(80um) |
 | **전류 값 오차 / Current Tolerance** | ±15% at Over 50mA |
 | **Position sensor / 위치센서** | 10kΩ linearity potentiometer |
-| **Size, Weight /크기,무게** | 86.8(L)x 57.9(W)x 23(H)mm / 113.5g [+/-5%] (to be varied according to gear ratio) |
+| **Size, Weight /크기,무게** | 111.5(L)x 57.9(W)x 23(H)mm / 140g [+/-5%] (to be varied according to gear ratio) |
 | **Communication/ 통신** | RS485 |
 | **Protocol** | Modbus RTU |
 | **Operating Temperatures / 동작온도** | -10℃ ~ 60℃ |
@@ -37,7 +37,7 @@
 | **Standard Accessory / 표준 악세서리** | 1xHinge base  <br>1x Hinge  <br>1xHinge shaft  <br>1xRod end tip  <br>2x M3 NUT  <br>3 x M2.5x6 screws  <br>1x RS485 Molex wire harness (200mm)   <br>Extended I/O 1x Molex wire harness (200mm)  <br>1 x M3 spanner  <br>1 x Socket set screw |
 | **Connector Type (Male) in the Actuator** | MOLEX 53253-0470 |
 | **Wire Harness** | Molex(51065-0400) to Molex(51065-0400)/ 200mm / 0.08x60(22AWG) |
-| **Extended Wire Harness**  | Molex 510210500, 5pins / 200mm length, 0.16 x 7 (26AWG) |
+| **Extended Wire Harness** | Molex 510210500, 5pins / 200mm length, 0.16 x 7 (26AWG) |
 
 ## 2.2 Volatges / 전압  
 |    Parameter                                     |        Min                      |        Norm          |        Max           |      Unit           |    Note&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    |
@@ -57,15 +57,15 @@
 ## 2.4 Temperatures / 온도
 |   Parameter                     |   Min   |   Norm   |   Max   |   Unit   |   Note   |
 |:--------------------------------|:-------:|:--------:|:-------:|:--------:|:--------:|
-|   **StorageTemp. / 보관온도**       |     -10 |    -     |      10 |    ℃     |          |
+|   **StorageTemp. / 보관온도**       |     -10 |    -     |      60 |    ℃     |          |
 |   **Operating Temp. / 동작온도 **   |     -10 |    -     |      60 |    ℃     |          |  
 
 ## 2.5 Strokes / 스트로크
 |  Parameter                  |  Min  |  Norm  |  Max  |  Unit  |  Note                           |
 |:----------------------------|:------|:-------|:------|:-------|:--------------------------------|
-|  **MIN Position / 최소 수축 위치**  |   4.5 |    5.0 |   5.5 |   mm   |                                 |
-|  **MAX Position / 최대 확장 위치**  |  41.5 |   42.0 |  42.5 |   mm   |                                 |
-|  **Stroke length/ 스트로크**    |       |   37.0 |       |   mm   |                                 |  
+|  **MIN Position / 최소 수축 위치**  |   55 |    6.0 |   6.5 |   mm   |                                 |
+|  **MAX Position / 최대 확장 위치**  |  55.5 |   56.0 |  56.5 |   mm   |                                 |
+|  **Stroke length/ 스트로크**    |       |   50.0 |       |   mm   |                                 |  
 
 ⁕매니저 소프트웨어 또는 파라메터 맵의 Min / Max Position Calibration 기능으로 Min / Max 위치값 동기화 가능.
 ⁕Synchronize Min / Max Position by “Min / Max Position Calibration” feature on Manager software or Parameter 
@@ -74,38 +74,36 @@ Map.
 ## 2.6 No Load Speed / 무부하 속도
 | Parameter | Min | Norm | Max | Unit | Note |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Maximum Speed at 12.0V  <br>최대 속도 at 12.0V | 94.5 | 105.0 | 115.5 | mm/s | 17Lf-17F-37 |
-| ^ | 73.8 | 82.0 | 90.2 | mm/s | 17Lf-27F-37 |
-| ^ | 25.2 | 28.0 | 30.8 | mm/s | 17Lf-50F-37 |
+| Maximum Speed at 12.0V  <br>최대 속도 at 12.0V |  | 105.0 |  | mm/s | 17Lf-17F-50 |
+| ^ |  | 82.0 |  | mm/s | 17Lf-27F-50 |
+| ^ |  | 28.0 |  | mm/s | 17Lf-50F-50 |
 
 ## 2.7 Load / 부하
 | Paramter | Min | Rated | Max | Unit | Note |
 | :--- | :--: | :--: | :--: | :--: | :--- |
-| Load at 12.0V  <br>부하 at 12.0V |  | 17 |  | N | 17Lf-17F-37 |
+| Load at 12.0V  <br>부하 at 12.0V |  | 17 |  | N | 17Lf-17F-50 |
 | ^ |  | 4.49 |  | lbf | ^ |
 | ^ |  | 1.73 |  | kgf | ^ |
-| ^ |  | 27 |  | N | 17Lf-27F-37 |
+| ^ |  | 27 |  | N | 17Lf-27F-50 |
 | ^ |  | 7.13 |  | lbf | ^ |
 | ^ |  | 2.76 |  | kgf | ^ |
-| ^ |  | 50 |  | N | 17Lf-50F-37 |
+| ^ |  | 50 |  | N | 17Lf-50F-50 |
 | ^ |  | 13.21 |  | lbf | ^ |
 | ^ |  | 5.10 |  | kgf | ^ |
 
 ## 2.8 Self Lock Feature / 셀프-락기능
 | Parameter | Min | Norm | Max | Unit | Note |
 | :--- | :--: | :--: | :--: | :--: | :--- |
-|  |  | N/A(불가) | - |  | 17Lf-17F-37 |
-| ^ | - | N/A(불가) | - |  | 17Lf-27F-37 |
-| ^ | - | Available(가능) | - |  | 17Lf-50F-37 |
+|  |  | N/A(불가) | - |  | 17Lf-17F-50 |
+| ^ | - | N/A(불가) | - |  | 17Lf-27F-50 |
+| ^ | - | Available(가능) | - |  | 17Lf-50F-50 |
 
 # 3 참고 자료
 ## 3.1 Voltage Vs Speed <font size="3">at Goall Current 1600</font>
 입력 전압에 따른 무 부하 시 속도 변화에 대한 그래프 입니다. 해당 Data는 오차를 포함하고 있음으로 참고로 사용하시면 됩니다.
 <이미지>
 
-## 3.2 Voltage Vs Stall Force[N]
-at Goall Current 1600 & \Goal Speed 100
-
+## 3.2 Voltage Vs Stall Force[N] <font size="3">at Goall Current 1600 & \Goal Speed 100</font>
 입력 전압에 따른 1.6A에서 Stall Force를 측정한 Data입니다. 해당 Data는 오차를 포함하고 있음으로 참고로 사용하시면 됩니다.
 <이미지>
 
