@@ -40,7 +40,7 @@
 | **Extended Wire Harness** | Molex 510210500, 5pins / 200mm length, 0.16 x 7 (26AWG) |
 
 ## 2.2 Volatges / 전압  
-|    Parameter                                     |        Min                      |        Norm          |        Max           |      Unit           |    Note&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    |
+|    Parameter                                     |        Min                      |        Norm          |        Max           |      Unit           |    Note    |
 |:-------------------------------------------------|:-------------------------------:|:--------------------:|:--------------------:|:-------------------:|:----------------------------------------------------------:|
 |   **Supply voltage/ 공급 전압**                       | 8                               |                   12 |                   13 | V                   | <br>                                                       |
 |   **Logic input voltage / 로직 인가 전압**               |                            -7.0 |         -            |                 12.0 | V                   | RS-485                                                     |  
