@@ -2,7 +2,7 @@
   "accentColor": "",
   "theme": "moonstone",
   "textFontFamily": "Noto Sans CJK KR",
-  "baseFontSize": 20,
+  "baseFontSize": 18,
   "enabledCssSnippets": [
     "edit"
   ]

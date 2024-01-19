@@ -8,7 +8,7 @@ Total Manager에서는 다양한 OS를 제공하고, 사용자 인터페이스�
 ## 1.1 개요
 mightyZAP Total Manager는 다양한 기능을 가진 다목적 Software입니다. mightyZAP의 동작 Test와 Parameter 설정 및 동작 상태 Monitoring과 Firmware Update를 기본적으로 제공합니다.  
 또한 모델에 따른 특수 기능을 설정 및 테스트 할 수도 있습니다. 
-> [!tip] TIP
+> [!tip] TIP  
 > 특수 기능 설정 및 테스트 내용은 각 모델의 매뉴얼을 참조하시기 바랍니다.
 
 ![[total_image.png|500]]
@@ -18,13 +18,13 @@ mightyZAP은 Half Duplex TTL, RS485, CAN 통신을 사용합니다. PC와의 통
 mightyZAP을 위한 USB Interface Board를 당사의 웹사이트에서 판매하고 있습니다. 해당  Interface Board를 사용할 경우 손쉽게 mightyZAP을 PC와 연결할 수 있습니다.  
 시중의 Convertor를 구매하여 사용하실 수 있지만, 안전성을 위하여 가급적 당사의 Interface Board를 사용하여 주시기 바랍니다.
 
-> [!warning] 주의 사항
+> [!warning] 주의 사항  
 > PC와 Interface Board 연결에 충전 전용 Cable을 사용하여 통신이 연결되지 않는 경우가 있습니다. 반드시 Data통신이 가능한 Cable인지 확인하시고 사용하여 주시기 바랍니다.
 
 ## 1.3 Feature
 ### 1.3.1 Information
 mightyZAP의 Model 명, Stroke, Rate Load, Firmware Version 등 Actuator와 관련된 기본 정보를 표시합니다. Software를 실행하였을 경우 제일 처음에 나타나는 화면입니다.  
-![[Software/Total Manager/img/Information.png|700]]
+![[Information_tag.png|700]]
 ### 1.3.2 Parameter
 mightyZAP을  제어하거나 Parameter를 변경 및 Monitoring을 할 수 있습니다.   
 연결된 여러 개의 mightyZAP 중 선택하여 하나의 mightyZAP을 제어할 수 있으며, Parameter의 Type에 따라 Non-voltatile Memory와 Volatile Memoty 화면으로 나누어져 있습니다.    
@@ -41,7 +41,7 @@ Total Manager는 Window , Mac OS, Linux 에서 모두 설치가 가능합니다.
 - Windows : windows 7(32bit) / windows 10 64bit 이상
 - Mac OS : Big Sur 이상 64bit
 - Linux : Ubuntu LTD 20.04 64bit
-> [!tip] TIP
+> [!tip] TIP  
 > [mightyZAP Total Manager Download](https://github.com/mightyZap1/totalmanager/releases) 페이지에서 각 OS에 맞게 다운로드 하실 수 있습니다.
 
 ## 2.2 Install
@@ -72,7 +72,8 @@ $ sudo dpkg -i [file].deb
 ### 2.2.3 Mac OS
 Mac OS 전용 패키지를 다운로드 합니다.
 다운로드 파일을 더블 클릭하면 아래와 같이 설치 화면이 나타납니다. mightyZAP Total Manager 아이콘을 드래그 하여 Applications에 놓으면 설치가 완료됩니다. 
-![[Software/Total Manager/img/macOS_install.png|500]]
+
+![[macOS_install.png]]
 ## 2.3 화면 구성
 화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Footer로 구성되어있다.  
 ![[mainView-description.png|700]]
@@ -89,7 +90,7 @@ Total Manager와 mightyZAP과의 통신을 위하여 Serial Convertor 가 필요
 해당 설명은 당사의 USB Interface Board를 기준으로 설명이 되어있습니다.  
 먼저 USB Cable을 이용하여 PC와 연결하여 주시기 바랍니다.   
 > [!warning] 주의사항     
-> <font color="#ff0000">충전 전용 케이블이 아닌 통신이 가능한 케이블을 사용하여 주셔야합니다.</font>
+> 충전 전용 케이블이 아닌 통신이 가능한 케이블을 사용하여 주셔야합니다.
 
 ### 2.4.1 Windows
 당사의 Interface Board 는 2가지 Type으로 되어있으며, 각 버전에 따라 드라이버를 다르게 설치해야 합니다. 아래의 설명을 참조하여 드라이버를 설치 합니다.
@@ -204,7 +205,7 @@ Actuaotor Scan 팝업 창의 화면 구성은 아래와 같습니다.
 - **Scan 결과 창** : SCAN 진행 상황과 결과를 출력한다.
 - **SCAN, CLOSE** : SCAN 실행 및 창 닫기 버튼
 ### 3.1.2 통신 설정
-**1. Port 선택**
+**1. Port 선택**  
 위 [[#2.4 USB Interface Board]] 의 설명을 참조하시어 Serial Port 명을 확인 하신 후 진행하시기 바랍니다.  연결된 Serial Port와 동일한 Port를 선택한 후 OPEN 버튼을 클릭하여 Serial Port를 연결합니다.  
 ![[ScanActuator-PortSelect.png|700]]
 Serial Port 를 Open하면 Option 항목이 활성화 됩니다.  
@@ -227,7 +228,7 @@ All 버튼을 누르게 되면 모든 선택하거나 모두 선택 해지를 �
 ## 3.2 Information
 mightyZAP Actuator의 Model명, Rated Load, Stroke, firmware Version등 관련된 정보를 표시하는 페이지 입니다.  
 Manager가 실행이 되면 처음 표시하는 창이  창이며, 아래의 이미지와 같이 사이드 바 메뉴의 첫번째 아이콘을 클릭하여 해당 페이지로 이동합니다. 
-![[Software/Total Manager/img/InformationMenu.png|700]]
+![[InformationMenu.png|700]]
 ### 3.2.1 서보모터 List 확인
 아래의 그림과 같이 매니저에 왼쪽에는 검색된 서보모터가 Display 됩니다.  
 Actuator List는 Baudrate와 Protocol에 따라 분류되어 표시 되며,  Baudrate 별로 접거나 펼 수 습니다
@@ -235,7 +236,7 @@ Actuator List는 Baudrate와 Protocol에 따라 분류되어 표시 되며,  Bau
 
 ### 3.2.2 정보 확인
 Actuator List를 선택하면 해당 Actuator의 모델 명, Stroke 길이, 정격 부하, 통신 Protocol 등의 정보가 표시됩니다. 
-![[Actuator_Information.png]]
+![[Actuator_Information.png|700]]
 이중 중요한 일부 정보가 Manager의 하단 Footer에 표시됩니다.
 ![[FooterDiscription.png]]
 Footer에 표시된 정보는 information Page가 아닌 다른 Page에서도 볼 수 있습니다. 
@@ -270,11 +271,11 @@ Parameter 영역은 매니저의 크기를 줄일 경우, 주로 사용되어지
   또한 TextBox를 통해 Data를 입력할 경우 Data를 변경한 후 Enter key를 입력하면 변경된 Data가 즉시 적용됩니다.
   또한 Data가 변경되도 TextBoxd의 Font는 푸른색으로 변경되지 않습니다.
   ![[SlideVolatile_active.png|400]]  
-  > [!tip]
+  > [!tip] Tip  
   > Goal Position TextBox를 클릭한 후 다음과 같이 키보드 키로 제어가 가능합니다.  
-  > 	'a' : 최소 stroke로 이동
-  > 	's' : stroke 중간 위치로 이동
-  > 	'd' : 최대 Stroke로 이동  
+  > 	'a' : 최소 stroke로 이동  
+  > 	's' : stroke 중간 위치로 이동  
+  > 	'd' : 최대 Stroke로 이동    
 - **Check Control Box** : <font color="#4f81bd">Non-volatile Memory</font>   
   Check Control은 check 기능을 이용하여 Data를 변경 가능하며, 이때 Textbox는 Read Only 상태로 Data값과 상태만을 확인할 수 있습니다.  
   ![[checkbox-Volatile.png|600]]
@@ -300,13 +301,13 @@ Monitoring 기능은 mightyZAP Actuator의 현재 위치, 모터 입력 값, 전
 Parameter 항목은 Model에 따라 다르게 표시되며, Check box를 통해 하나의 Parameter만 선택하실 수 있습니다.  
 ![[Monitoring-Data.png|600]]
 Monitoring 기능은 아래와 같이 구성 되어있습니다.
-- **Data 범위**
+- **Data 범위**  
   Data 표현 범위는 선택된 Parameter의 표현 범위에 맞게 변경이 됩니다.
-- **Sample 표현 갯 수**
+- **Sample 표현 갯 수**  
   최대 Display되는 Sample 갯 수는 200개이며 이전 Data는 확인할 수 없습니다. Sample Counter의 최대 표현 수는 899이며 이보다 클 경우 0으로 리셋이 됩니다.
-- **Interval**  
+- **Interval**    
   Interval은 Data Sample 당 읽어오는 시간 간격을 의미하며 약 50ms 간격으로 동작 합니다.     
-- **Hover 기능**
+- **Hover 기능**  
   마우스를 그래프 위에 놓으면 해당 위치의 데이터 값과 Sample Counter 값을 표기합니다.
 ## 3.4 Update    
 펌웨어를 업데이트 하는 페이지 입니다.  Firmware의 버전은 최신 버전을 유지하는 것을 추천 드립니다. 다만 수정된 펌웨어를 적용하기 전에  변경 사항이 사용자의 Apllication과 적합한지 테스트 하신 후에 적용하시기 바랍니다.   
@@ -318,13 +319,13 @@ Update Page는 이미지와 같이 펌웨어 업데이트, Actuator Recovery 영
 ### 3.4.2 Firmware Update   
 **Actuator 연결**  
 업데이트를 진행할 서보 모터를 연결하고 SCAN 을 합니다.  
-> [!warning] 주의 사항 
+> [!warning] 주의 사항  
 > 펌웨어 업데이트 시에는 업데이트를 진행할 actuator 하나만 연결하고 SCAN 작업을 진행하여 Actuator List에 하나의 actuator만 남아 있어야 합니다.  하나 이상의 actuator 가 연결 된 상태에서 업데이트를 진행하면 업데이트가 비정상적으로 진행되어 실패하게 되고 해당  actuator 는 동작이 되지 않게 됩니다.  
   
 **업데이트 파일 선택**  
 firmware update를 진행 할 경우 그림과 같이 Select file 버튼을 눌러 다운로드 받은 업데이트 파일을 선택해야 합니다.    
 ![[UpdateSelect-Button.png|700]]
-> [!warning] 주의 사항 
+> [!warning] 주의 사항  
 > 이때 다른 모델의 firmware file 을 선택하지 않게 조심해야 합니다. Actuator List에 나와있는 Model 명과 uipdate file의 이름이 동일한지 확인해야 합니다.
 
 **업데이트** 
@@ -382,18 +383,18 @@ Actuator의  상태를 공장 출하 시의 초기 상태로 돌리고, 위치 �
 Factory Reset은 Update Page에 들어오면 상단 메뉴바에 추가 되어있는 것을 확인할 수 있습니다.   
 해당 아이콘을 클릭하면 Factory Reset 을 하기 위한 팝업 창이 활성화 됩니다.
 ![[FactoryReset-Button.png|700]]
-**1. 화면 구성**
+**1. 화면 구성**  
 Factory Reset을 선택하면 팝업 창이 나타납니다. 팝업창에는 Factory Reset 관련 Option 선택창과 Text Area가 나타나고 하단에 Factory Reset 을 위한 버튼이 존재합니다.  
 ![[FactoryReset-Disc..png|500]]
-**2. Options**
+**2. Options**  
 Factory Reset에 대한 Option은 2가지로 ID Remind와 Baudrate Remind 입니다. 그 외의 다른 Parameter들은 모두 초기화 됩니다.  
 일반적인 Reset 에서는 초기화 되지 않는 Protocol, Min/Max Position Calibration이 초기화 되고, Potentiometer의 Calibration을 실행하면서 해당 내부 Parameter도 수정이 됩니다.  
 Factopry Reset 후에도 유지하고 싶은 Option을 선택하시면 됩니다.  
-**3. Factory Reset**
-하단의 Factory Reset 버튼을 클릭하면, Factory Reset을 실행합니다. 실행 중 진행되는 사항을 Option 선택 아래의 Text Area 창에 표시합니다. 
+**3. Factory Reset**  
+하단의 Factory Reset 버튼을 클릭하면, Factory Reset을 실행합니다. 실행 중 진행되는 사항을 Option 선택 아래의 Text Area 창에 표시합니다.   
 ![[FactoryReset-Popup.png]]
 Factory Reset 진행이 되면서 Actuator가 몇 번의 시스템 재 시작을 하면서 LED가 깜빡입니다. 또한 Potenmtiometer Calibration 시에는 Actuator가 최대로 확장 및 수축 행동을 하면서 Calibration 을 진행합니다.  
-최종적으로 Factory Reset이 완료되면 하단의 Close 버튼이 활성화 되면서 Parameter 창으로 이동하여 reset된 Data를 보여줍니다.
+최종적으로 Factory Reset이 완료되면 하단의 Close 버튼이 활성화 되면서 Parameter 창으로 이동하여 reset된 Data를 보여줍니다.  
 ![[FActoryRest-Complete.png]]
 
 > [!warning] 주의 사항   
