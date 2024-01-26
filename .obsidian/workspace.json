@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
+                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
+                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_eng.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
+                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_eng.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md"
+                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_eng.md"
               }
             }
           },
@@ -176,10 +177,13 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "4c6a1f4ffa8ba0fd",
+  "active": "3c63394367b997e3",
   "lastOpenFiles": [
-    "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_eng.md",
+    "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
+    "Actuator/Mini 12Ls/Mini 12Ls User Manual_eng.md",
+    "Actuator/Mini 12Ls/Mini 12Ls User Manual_kor.md",
     "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
+    "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_eng.md",
     "Actuator/Mini 17Lf/img/17Lf Accessories.png",
     "Software/Total Manager/img/Information.png",
     "Software/Total Manager/img/InformationMenu.png",
@@ -221,8 +225,6 @@
     "Boards",
     "img/myImg.png.md",
     "img/CautionMotionSync.png.md",
-    "img/CautionMotionSy.md",
-    "[.md",
     "무제 파일.canvas",
     "무제 파일 1.canvas"
   ]
