@@ -1,5 +1,5 @@
 # 1 Features / 주요 특장점
--  Micro size / 마이크로 사이즈  
+- Micro size / 마이크로 사이즈  
 -  Precise position control / 정밀 위치 제어
 -  Force control by current feedback / 전류 피드백 통한 포스 제어
 -  Speed control (1000 resolution) / 속도 제어( 1000 해상도)
@@ -68,8 +68,6 @@
 |  **Stroke length/ 스트로크**    |       |   37.0 |       |   mm   |                                 |  
 
 ⁕매니저 소프트웨어 또는 파라메터 맵의 Min / Max Position Calibration 기능으로 Min / Max 위치값 동기화 가능.
-⁕Synchronize Min / Max Position by “Min / Max Position Calibration” feature on Manager software or Parameter Map.
-
 ## 2.6 No Load Speed / 무부하 속도
 | Parameter | Min | Norm | Max | Unit | Note |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -98,20 +96,27 @@
 | ^ | - | Available(가능) | - |  | 17Lf-50F-37 |
 
 # 3 참고 자료
-## 3.1 Voltage Vs Speed <font size="4">at Goal Current 800</font>
+## 3.1 Voltage Vs Speed   
 입력 전압에 따른 무 부하 시 속도 변화에 대한 그래프 입니다. 해당 Data는 오차를 포함하고 있음으로 참고로 사용하시면 됩니다.
-![[37_voltageVSspeed.png|700]]
+![[37_voltageVSspeed.png|700]]  
+>[!note] Note  
+>Voltage Vs Speed Data는 Goal Current 800에서 Test한 Data입니다.
 
-## 3.2 Voltage Vs Stall Force[N] <font size="4">at Goal Current 800</font>
+## 3.2 Voltage Vs Stall Force  
 입력 전압에 따른 800mA에서 Stall Force를 측정한 Data입니다. 해당 Data는 오차를 포함하고 있음으로 참고로 사용하시면 됩니다.
-![[37_voltageVSforce.png|700]]
+![[37_voltageVSforce.png|700]]  
+>[!note] Note  
+>Voltage Vs Stall Force Data는 Goal Current 800에서 Test한 Data입니다.
+
 > [!warning] Waring  
 >각 Force 값의 오차는 +/- 15% 입니다. 
 
-## 3.3 Goal Speed Vs Speed <font size="4">at Goal Current 800</font>
+## 3.3 Goal Speed Vs Speed
 Goal Current가 800일 때, Goal Speed Parameter 값의 변화에 따른 무 부하 속도 변화를 나타냅니다.
 정격 부하 이하의 경우, 부하 정도에 따라 최고 속도가 나오는 시간이 달라지게 됩니다.  
-![[37_goalspeedVSspeed.png|700]]
+![[37_goalspeedVSspeed.png|700]]  
+>[!note] Note  
+>Goal Speed Vs Speed Data는 Goal Current 800에서 Test한 Data입니다.
 ## 3.4 Goal Current vs Stall Force  
 Goal Current 값에 대한 mightyZAP의 Stall Force를 나타냅니다. 
 ![[37_goalcurrentVSstallforce.png|700]]
@@ -138,9 +143,12 @@ Stall Force 측정 방식은 속도 값을 최소한으로 하여 순수 전류 
 정격 부하 시 Goal Current  값에 대한 mightyZAP의  속도 변화를 나타냅니다.  
 ![[37_goalspeedVSspeed.png|700]]
 정격 부하 속도의 경우 무부하 최대 속도 대비 모델에 따라 약 90 ~ 78% 대의 성능을 보여줍니다. 
+>[!note] Note  
+>Goal Speed Vs Speed Data는 정격 부하에서 Test한 Data입니다.
+
  >[!warning] 주의사항  
 >Speed Data는 약 +/-10% 오차를 가지고 있습니다.
->붉은색으로 표기된 부분은 해당 Goal Current 값에서의 Stall Force와 정격부하가 비슷한 구간으로 ㅁmightyZAP이 움직이지 않을 수 있습니다.  참고용으로만 사용하여 주시기 바랍니다.
+>붉은색으로 표기된 부분은 해당 Goal Current 값에서의 Stall Force와 정격부하가 비슷한 구간으로 mightyZAP이 움직이지 않을 수 있습니다.  참고용으로만 사용하여 주시기 바랍니다.
  
 ## 3.6 PIN Map
 
