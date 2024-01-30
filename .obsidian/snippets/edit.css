@@ -46,3 +46,8 @@ table {
   margin-bottom : 5px!important;
   ;
 }
+
+img {
+  border : 1px solid darkgray;
+  border-radius : 5px;
+}

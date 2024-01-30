@@ -18,7 +18,7 @@
 | **Micro controller** | 32bit Arm Cortex |
 | **Position Resolution** | 10000 Resolution (A/D Converter) |
 | **Input Voltage / 입력 전압** | 12.0V(Rated/정격), 8V ~ 13 V(Operating) |
-| **Motor Type / Watt** | Coreless DC Motor / <font color="#4f81bd">xx</font>Watt |
+| **Motor Type / Watt** | Coreless DC Motor / 3.8 Watt |
 | **Current consumption / 소모전류** | 30mA(Idle), 400mA(Rated), 1.6A(Stall) |
 | **Position repeatability** | Unidirectional less than 0.03mm(30um) |
 | ^ | Bydirectional less than +/0.06mm(60um) |
@@ -68,8 +68,7 @@
 |  **Stroke length/ 스트로크**    |       |   37.0 |       |   mm   |                                 |  
 
 ⁕매니저 소프트웨어 또는 파라메터 맵의 Min / Max Position Calibration 기능으로 Min / Max 위치값 동기화 가능.
-⁕Synchronize Min / Max Position by “Min / Max Position Calibration” feature on Manager software or Parameter 
-Map.
+⁕Synchronize Min / Max Position by “Min / Max Position Calibration” feature on Manager software or Parameter Map.
 
 ## 2.6 No Load Speed / 무부하 속도
 | Parameter | Min | Norm | Max | Unit | Note |
@@ -99,26 +98,51 @@ Map.
 | ^ | - | Available(가능) | - |  | 17Lf-50F-37 |
 
 # 3 참고 자료
-## 3.1 Voltage Vs Speed <font size="3">at Goall Current 1600</font>
+## 3.1 Voltage Vs Speed <font size="4">at Goal Current 800</font>
 입력 전압에 따른 무 부하 시 속도 변화에 대한 그래프 입니다. 해당 Data는 오차를 포함하고 있음으로 참고로 사용하시면 됩니다.
-<이미지>
+![[37_voltageVSspeed.png|700]]
 
-## 3.2 Voltage Vs Stall Force[N]
-at Goall Current 1600 & \Goal Speed 100
+## 3.2 Voltage Vs Stall Force[N] <font size="4">at Goal Current 800</font>
+입력 전압에 따른 800mA에서 Stall Force를 측정한 Data입니다. 해당 Data는 오차를 포함하고 있음으로 참고로 사용하시면 됩니다.
+![[37_voltageVSforce.png|700]]
+> [!warning] Waring  
+>각 Force 값의 오차는 +/- 15% 입니다. 
 
-입력 전압에 따른 1.6A에서 Stall Force를 측정한 Data입니다. 해당 Data는 오차를 포함하고 있음으로 참고로 사용하시면 됩니다.
-<이미지>
-
-> [!warning] Waring
-> Stall force는 참고용으로, 제품의 파손을 방지하기 위해 실제 application에서의 사용 시에는 정격 부하에 맞추어 사용하여 주십시오.
-
-## 3.3 Goal Speed/Speed
+## 3.3 Goal Speed Vs Speed <font size="4">at Goal Current 800</font>
 Goal Current가 800일 때, Goal Speed Parameter 값의 변화에 따른 무 부하 속도 변화를 나타냅니다.
-정격 부하 이하의 경우, 부하 정도에 따라 최고 속도가 나오는 시간이 달라지게 됩니다.
-<이미지>
-## 3.4 Goal Current vs Stall Force
-## 3.5 Goal Current Vs Speed <font size ="3">정격 부하 시 기준</font>  
- Figure 3. PIN Map 은 위로 옮기기
+정격 부하 이하의 경우, 부하 정도에 따라 최고 속도가 나오는 시간이 달라지게 됩니다.  
+![[37_goalspeedVSspeed.png|700]]
+## 3.4 Goal Current vs Stall Force  
+Goal Current 값에 대한 mightyZAP의 Stall Force를 나타냅니다. 
+![[37_goalcurrentVSstallforce.png|700]]
+Stall Force 측정 방식은 속도 값을 최소한으로 하여 순수 전류 값에 대한 힘만 측정한 값입니다.     
+>[!warning] 주의사항  
+>각 Goal Current 값에 대한 Stall Force갑의 오차는 +/- 15%입니다.
+>붉은색으로 표기된 부분은 내부 부하 및 발열에 의해  오차가 큼으로 참고용으로만 사용하여 주시기 바랍니다. 
+>지속적인 부하가 발생하여 1A 이상의 전류가 흐를 경우 전류값이 점점 하락하여 1A에서 안정적으로 유지 됩니다.
+
+>[!warning] 주의 사항  
+>해당 자료는 모터의 힘을 나타내는 자료로, 모터 걸리는 실제 부하량의 3배에 해당하는 Goal current 선정 하는 것을 추천 드립니다.  
+>실제 부하와 모터가 내는 힘의 차가 적으로 수록 모터의 속도가 줄게 되며 같을 경우 모터가 움직이지 않습니다.  
+
+>[!warning] 2배 부하 설정
+>mightyZAP은 최대 2배 부하까지 사용가능하며, 2배 부하 시에는 Duty Rate를 20% 이하로 적용해야 합니다.
+>**ex>**
+>
+>|Load|Goal Current|Duty rate|Load|Goal Current|Duty Rate|
+>|---|---|---|---|---|---|
+>|20N(Rated)|800|Max. 50%|35N(Rated)|800|Max. 50%|
+>|40N(Max)|1600|Max. 20%|70N(Max)|1600|Max. 20%|
+>
+## 3.5 Goal Current vs Speed <font size="4">at Rated Load</font>  
+정격 부하 시 Goal Current  값에 대한 mightyZAP의  속도 변화를 나타냅니다.  
+![[37_goalspeedVSspeed.png|700]]
+정격 부하 속도의 경우 무부하 최대 속도 대비 모델에 따라 약 90 ~ 78% 대의 성능을 보여줍니다. 
+ >[!warning] 주의사항  
+>Speed Data는 약 +/-10% 오차를 가지고 있습니다.
+>붉은색으로 표기된 부분은 해당 Goal Current 값에서의 Stall Force와 정격부하가 비슷한 구간으로 ㅁmightyZAP이 움직이지 않을 수 있습니다.  참고용으로만 사용하여 주시기 바랍니다.
+ 
+## 3.6 PIN Map
 
 | PIN NUMBER(COLOR) | PIN NAME&nbsp; | <div>FUNCTION</div> |
 |:------------------:|:---------------:|:--------------------:|
@@ -126,3 +150,4 @@ Goal Current가 800일 때, Goal Speed Parameter 값의 변화에 따른 무 부
 |          2(WHITE) | D+             | RS-485+  |
 |      3(RED) | VCC      | Power +             |
 |    4(BLACK) | GND            | Power -             |  
+![[rs485circuit.png]]
