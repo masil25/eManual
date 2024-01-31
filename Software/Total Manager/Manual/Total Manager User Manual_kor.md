@@ -77,6 +77,7 @@ Mac OS 전용 패키지를 다운로드 합니다.
 ## 2.3 화면 구성
 화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Footer로 구성되어있다.  
 ![[mainView-description.png|700]]
+<pre>
 <font color="#548dd4">① Main Toolbar</font>  
     Actuator의 Reset, Restart, Data Undo/Redo 등을 수행  
 <font color="#548dd4">② SCAN</font>  
@@ -93,6 +94,7 @@ Mac OS 전용 패키지를 다운로드 합니다.
 	통신 Protocol 및 송수신 Error 등 통신 상태 표시  
 <font color="#0070c0">⑧ Manager Status</font>  
 	Manager 의 버전 및 Language 등 표시  
+</pre>
 ## 2.4 USB Interface Board 
 Total Manager와 mightyZAP과의 통신을 위하여 Serial Convertor 가 필요합니다.  
 해당 설명은 당사의 USB Interface Board를 기준으로 설명이 되어있습니다.  
