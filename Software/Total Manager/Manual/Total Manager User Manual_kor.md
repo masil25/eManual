@@ -78,21 +78,21 @@ Mac OS 전용 패키지를 다운로드 합니다.
 화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Footer로 구성되어있다.  
 ![[mainView-description.png|700]]
 <font color="#548dd4">① Main Toolbar</font>  
-	Actuator의 Reset, Restart, Data Undo/Redo 등을 수행  
+- Actuator의 Reset, Restart, Data Undo/Redo 등을 수행  
 <font color="#548dd4">② SCAN</font> 
-	Software의 통신을 연결하고 mightyZAP 검색  
+- Software의 통신을 연결하고 mightyZAP 검색  
 <font color="#548dd4">③ Main Menu</font>
-	Information, control, Update, Manager Setting 등 Manager에서 제공하는 기능 선택 Side bar Menu  
+- Information, control, Update, Manager Setting 등 Manager에서 제공하는 기능 선택 Side bar Menu  
 <font color="#0070c0">④ Actuator List</font>
-	검색된 mightyZAP의 이름이 통신 속도와 Protocol에 따라 분류되어 표시  
+- 검색된 mightyZAP의 이름이 통신 속도와 Protocol에 따라 분류되어 표시  
 <font color="#0070c0">⑤ Main contents</font>
-	매니저에 제공하는 Main 기능 표시  
+- 매니저에 제공하는 Main 기능 표시  
 <font color="#0070c0">⑥ Actuator Information</font>
-	선택된 Actuator의 모델명, Firmware Version, 통신 방식 등이 표기    
+- 선택된 Actuator의 모델 명, Firmware Version, 통신 방식 등이 표기    
 <font color="#0070c0">⑦ 통신 상태</font>
-	통신 Protocol 및 송수신 Error 등 통신 상태 표시  
+- 통신 Protocol 및 송수신 Error 등 통신 상태 표시  
 <font color="#0070c0">⑧ Manager Status</font>
-	Manager 의 버전 및 Language 등 표시  
+- Manager 의 버전 및 Language 등 표시  
 ## 2.4 USB Interface Board 
 Total Manager와 mightyZAP과의 통신을 위하여 Serial Convertor 가 필요합니다.  
 해당 설명은 당사의 USB Interface Board를 기준으로 설명이 되어있습니다.  
