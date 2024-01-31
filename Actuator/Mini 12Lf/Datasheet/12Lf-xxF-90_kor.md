@@ -20,7 +20,7 @@
 | **Micro controller** | 32bit Arm Cortex |
 | **Position Resolution** | 4096 Resolution (A/D Converter) |
 | **Input Voltage / 입력 전압** | 12.0V(Rated/정격), 7.4V ~ 13 V(Operating) |
-| **Motor Type / Watt** | Coreless DC Motor / ㄱ.ㄱ Watt |
+| **Motor Type / Watt** | Coreless DC Motor / 3.5 Watt |
 | **Current consumption / 소모전류** | 30mA(Idle), 380mA(Rated), 1.6A(Stall) |
 | **Position repeatability** | Unidirectional less than 0.05mm(50um) |
 | ^ | Bydirectional less than +/0.100mm(100um) |
@@ -67,6 +67,7 @@
 | **MIN Position / 최소 수축 위치** | 5.3 | 5.8 | 6.3 | mm | ⁕ |
 | **MAX Position / 최대 확장 위치** | 95.8 | 96.3 | 96.8 | mm |  |
 | **Stroke length/ 스트로크** |  | 90.5 |  | mm |  |
+
 ⁕ 복수의 mightyZAP의 최소 수축 위치를 완벽하게 동일하게 설정해야 하는 경우, 별도 협의
 ⁕ 매니저 소프트웨어 또는 파라메터 맵의 Min / Max Position Calibration 기능으로 Min / Max 위치 값 동기화 가능.
 ## 2.6 No Load Speed / 무 부하 속도
@@ -100,7 +101,6 @@
 | ^ | - | ^ | - |  | 12Lf-17x-90 |
 | ^ | - | Available(가능) | - |  | 12Lf-27x-90 |
 
-
 >[!tip] Tip
 >Self-Lock 이란 액츄에이터가 전원을 통한 모터의 힘 없이, 기구마찰력만으로 위치를 고수할 수 있는 힘을 의미합니다.
 # 3. 참고 자료
@@ -113,7 +113,6 @@
 ## 3.2 Voltage Vs Stall Force 
 입력 전압에 따른 800mA에서 Stall Force를 측정한 Data입니다. 해당 Data는 오차를 포함하고 있음으로 참고로 사용하시면 됩니다.  
   ![[00_voltageVSstallforce.png|700]]
-
 > [!note] Note  
 > Voltage Vs Stall Force Data는 Goal Current 1600에서 Test한 Data입니다.
 >각 Force 값의 오차는 +/- 15% 입니다. 
@@ -130,14 +129,14 @@ Goal Current가 800일 때, Goal Speed Parameter 값의 변화에 따른 무 부
 Goal Current 값에 대한 mightyZAP의 Stall Force를 나타냅니다. 
 Stall Force 측정 방식은 속도 값을 최소한으로 하여 순수 전류 값에 대한 힘만 측정한 값입니다.     
 ![[00_goalcurrentVSstallforce.png|700]]
+>[!tip] TIP
+>해당 자료는 모터의 힘을 나타내는 자료로, 모터 걸리는 실제 부하량의 3배에 해당하는 Goal current 선정 하는 것을 추천 드립니다.  
+>실제 부하와 모터가 내는 힘의 차가 적으로 수록 모터의 속도가 줄게 되며 같을 경우 모터가 움직이지 않습니다>
+
 >[!warning] 주의사항  
 >각 Goal Current 값에 대한 Stall Force갑의 오차는 +/- 15%입니다.
 >붉은색으로 표기된 부분은 내부 부하 및 발열에 의해  오차가 큼으로 참고용으로만 사용하여 주시기 바랍니다. 
 >지속적인 부하가 발생하여 1A 이상의 전류가 흐를 경우 전류값이 점점 하락하여 1A에서 안정적으로 유지 됩니다.
-
->[!warning] 주의 사항  
->해당 자료는 모터의 힘을 나타내는 자료로, 모터 걸리는 실제 부하량의 3배에 해당하는 Goal current 선정 하는 것을 추천 드립니다.  
->실제 부하와 모터가 내는 힘의 차가 적으로 수록 모터의 속도가 줄게 되며 같을 경우 모터가 움직이지 않습니다.  
 
 >[!warning] 2배 부하 설정
 >mightyZAP은 최대 2배 부하까지 사용가능하며, 2배 부하 시에는 Duty Rate를 20% 이하로 적용해야 합니다.

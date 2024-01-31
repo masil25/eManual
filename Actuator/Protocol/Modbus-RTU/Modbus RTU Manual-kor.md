@@ -1,6 +1,3 @@
-Modbus RTU Manual
-# 소개
-
 MODBUS 프로토콜은 산업용 프로토콜로 PLC통신 등에 주로 사용되는 표준이 되는 프로토콜입니다.
 주로 사용하는 방식은 RTU방식과 ASCII방식이 주로 사용되고, 요즘에는 TCP방식도 나와있습니다.
 
@@ -153,3 +150,4 @@ mightyZAP에서 지원하는 모든 Function Code 의 이상 응답에 대한 Ex
 | Error Code | 1 byte | 0x90 |
 | Exception Code | 1 byte | 0x01 ~ 0x06 |
 - example
+# Packet Test

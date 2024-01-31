@@ -600,7 +600,7 @@ Compliance Margin이란 이동 명령을 통해 액츄에이터를 구동 시작
 - 비 휘발성 Current Limit 값을 변경할 경우, 전원 재 인가 시 휘발성 파라메터인 Goal Current 도 같이 변경됩니다.    
 - 제품 마다의 내부 기구 저항 편차에 따라 저 전류(200mA이하) 설정에서는 액츄에이터의 동작이 불규칙하거나 움직이지 않을 수도 있으니, 가급적 200mA이상의 전류 설정을 해 주시기 바랍니다.     
 - 전류 설정에 따른 stall force값의 차이는 데이터 시트의 그래프를 참고하여 주십시오.       
-> [!warning] Warning
+> [!warning] Warning  
 > 비 휘발성 메모리 영역입니다.   데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.   운영 중 빈번한 값의 변경은 휘발성 파라메터인 Goal Current를 사용하시기 바랍니다.    
 
 ### 4.4.14. Speed Limit (0~1023 / Default : 1023)  
@@ -608,7 +608,7 @@ Compliance Margin이란 이동 명령을 통해 액츄에이터를 구동 시작
 - Speed Limit를 변경해도 Force에 영향을 주지 않습니다.    
 - 다만, 너무 낮은 Speed Limit 설정 시 모터의 반응이 늦어지거나 움직이지 못할 수 있습니다.     
 - Speed Limit 값을 변경할 경우 Goal Speed도 같이 변경됩니다.    
-> [!warning] Warning
+> [!warning] Warning  
 > 비휘발성 메모리 영역입니다.   데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.   운영 중 빈번한 값의 변경은 주의하시기 바랍니다.    
 
 > [!Note] NOTE  
@@ -619,10 +619,10 @@ Compliance Margin이란 이동 명령을 통해 액츄에이터를 구동 시작
 - Calibration Long Stroke : Long Stroke위치 보정 값,공장에서 설정된 Long Stroke Calibration 값을 저장  
 
 ### 4.4.16. Acceleration / Deceleration (0~255 / Default : 개별 사양)  
-    ![[DataDescription_AccelerationDeceleration.png]]
-	- 모터의 가감속률을 나타냅니다.    
-	- Acceleration : 모터의 이동 시작 시의 가속도 값으로 값이 클 경우 모터가 급 가속을 하게 됩니다. 반대로 값이 낮을 경우 부드러운 가속을 하지만, 너무 낮을 경우 모터가 움직이지 않을 수도 있습니다.    
-	- Deceleration : 모터의 위치 도달 시의 감속도 값으로 값이 클 경우 목표위치에서 급 감속을 하게 되어 목표 위치 값을 벗어나 정지하게 되고, 다시 벗어난 위치에서 목표위치로의 이동을 하게 되는 바운딩 현상이 나타나 정상적인 제동이 이루어지지 않을 수 있습니다.   너무 낮은 감속은 서보모터가 지나치게 느려지는 동작을 하게 되어 목표위치까지 도달하는 시간이 늦어질 수 있습니다.    
+![[DataDescription_AccelerationDeceleration.png]]
+- 모터의 가감속률을 나타냅니다.    
+- Acceleration : 모터의 이동 시작 시의 가속도 값으로 값이 클 경우 모터가 급 가속을 하게 됩니다. 반대로 값이 낮을 경우 부드러운 가속을 하지만, 너무 낮을 경우 모터가 움직이지 않을 수도 있습니다.    
+- Deceleration : 모터의 위치 도달 시의 감속도 값으로 값이 클 경우 목표위치에서 급 감속을 하게 되어 목표 위치 값을 벗어나 정지하게 되고, 다시 벗어난 위치에서 목표위치로의 이동을 하게 되는 바운딩 현상이 나타나 정상적인 제동이 이루어지지 않을 수 있습니다.   너무 낮은 감속은 서보모터가 지나치게 느려지는 동작을 하게 되어 목표위치까지 도달하는 시간이 늦어질 수 있습니다.    
 > [!tip] TIP  
 > Acceleration / Deceleration 수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.  
 
@@ -634,7 +634,7 @@ Compliance Margin이란 이동 명령을 통해 액츄에이터를 구동 시작
 - 정해진 값이 보다 큰 PI값을 적용할 경우 Goal Current와의 오차에 대해 거칠게 동작할 수 있습니다.    
 - 정해진 값보다 작은 PI값을 적용할 경우 Goal Current와의 오차에 부드럽게 동작하나 Goal Current 값과의 오차가 크게 나타날 수 있습니다.    
 > [!warning] WARNING  
-> **수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.**      
+> **수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.**   
 > 비 휘발성 메모리 영역입니다.   데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.   운영 중 빈번한 값의 변경은 주의하시기 바랍니다.     
 
 ### 4.4.18. Speed PID (0~255 / Default : 개별 사양)  
@@ -642,7 +642,7 @@ Compliance Margin이란 이동 명령을 통해 액츄에이터를 구동 시작
 - 정해진 값이 보다 큰 PID값을 적용할 경우 Goal Speed와의 오차에 대해 거칠게 동작하여 Overshoot 또는 과도 응답상태로 정해진 위치 값에 정지하지 못하고 모터가 진동할 수 있습니다.    
 - 정해진 값보다 작은 PI값을 적용할 경우 Goal Speed 와의 오차에 부드럽게 동작하나 Goal speed 값과의 오차가 크게 나타날 수 있습니다.    
 > [!warning] WARNING  
-> **수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.**
+> **수정 시 작은 변화 값부터 적용하신 후 테스트 해주세요.**  
 > 비휘발성 메모리 영역입니다.   데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.    운영 중 빈번한 값의 변경은 주의하시기 바랍니다.    
 
 ### 4.4.19. Min/Max Position Calibration (0~255 / Default : 개별 사양)  
@@ -656,6 +656,7 @@ Compliance Margin이란 이동 명령을 통해 액츄에이터를 구동 시작
 |---|---|---|
 | Stroke Limit| Short Stroke Limit ~ Long Stroke Limit | 가용 스트로크 범위 제한 없이,입력범위(0~4095)만 제한            |
 | Position Calibration |0~4095(최대사용) | 입력범위 (0~4095) 제한은 없으나, 가용 스트로크 범위가 변동될 수 있음. |  
+
 (예, 12Lf-20F-27의 Min Position 3.8mm/ Min Position Calibration값이 5 일 경우, Min Position Calibration 값을 높이면 Min Position 값이 늘어나고 전체 Stroke 구간은 Min Position이 늘어남만큼 줄어들게 됩니다.  )   
 > [!warning] WARNING  
 > 비 휘발성 메모리 영역입니다.   데이터를 변경할 경우 저장하는 동안 통신이 짧은 시간 멈출 수 있습니다.   운영 중 빈번한 값의 변경은 주의하시기 바랍니다.    
