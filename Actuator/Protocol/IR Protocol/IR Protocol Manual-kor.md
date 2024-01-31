@@ -48,8 +48,8 @@ mightyZAP에 동작을 수행할 수 있는 명령 Packet으로 다음과 같은
 | Send Data | 0xF4 | Address와 Data를 발송하여 임시 보관시킴 |
 | Excution | 0xF5 | Send Data를 통한 임시보관 정보를 실행시킴 |
 | Factory Reset | 0xF6 | 공장 출하 상태인 기본 파라미터로 리셋 |
-| Restart | 0xF8 | 서보 시스템 재시작 |
-| Symmetric Store | 0x73 | 다수 서보의 동일한 Address에 Data를 저장 |
+| Restart | 0xF8 | mightyZAP 시스템 재시작 |
+| Symmetric Store | 0x73 | 다수  mightyZAP의 동일한 Address에 Data를 저장 |
 5. FACTOR
 	- COMMAND에 따른 추가 Packet 요소
 6. CHECKSUM
@@ -125,7 +125,7 @@ mightyZAP을 리셋하기 위해서는 아래의 Option Data를 설정해야 합
 
 | Option | Bit | 리셋 동작 |
 | ---- | ---- | ---- |
-| Servo ID | 0 | 서보 ID를 0으로 초기화 |
+| Servo ID | 0 | mightyZAP ID를 0으로 초기화 |
 | Baudrate | 1 | 통신 속도를 32(57600 bps)로 설정 |
 ### 2.2.1 예제
 ID '1'번인 mightyZAP의ID 는 0(ID Default)으로 초기화하고 Baud Rate 는 현재 상태 유지하여 초기화 수행
@@ -261,7 +261,7 @@ mightyZAP의 Address 를 보내고 Data 를 Feedback 받습니다..
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | 0xFFFFFF | 0x00 | 0x04 | 0x00 | 0xFF | 0x07 | 0xF5 |
 
--  ID : 대상 서보액츄에이터의 ID
+-  ID : mightyZAP ID
 - Error : 동작 중에 발생한 요류 상태 표시
 - Factor 1 : 현재 위치 값 하위 byte (ex> 0xff)
 - Factor 2 : 현재 위치 값 상위 byte (ex> 0x07)
@@ -283,7 +283,7 @@ mightyZAP의 Address 를 보내고 Data 를 Feedback 받습니다..
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | 0xFFFFFF | 0x00 | 0x04 | 0x00 | 0xFF | 0x03 | 0xF9 |
 
--  ID : 대상 서보액츄에이터의 ID
+-  ID : mightyZAP ID
 - Error : 동작 중에 발생한 요류 상태 표시
 - Factor 1 : 현재 Motor operating rate 값 하위 byte (ex> 0xff)
 - Factor 2 : 현재 Motor operating rate 값 상위 byte (ex> 0x03)
@@ -305,7 +305,7 @@ mightyZAP의 Address 를 보내고 Data 를 Feedback 받습니다..
 | ---- | ---- | ---- | ---- | ---- | ---- |
 | 0xFFFFFF | 0x00 | 0x03 | 0x00 | 0x7B | 0x81 |
 
--  ID : 대상 서보액츄에이터의 ID
+-  ID : mightyZAP ID
 - Error : 동작 중에 발생한 요류 상태 표시
 - Factor 1 : 현재 Voltage 치 값 byte (ex> 0x7B)
 	※ 현재 Load 값 Hex 변환(16 진수 -> 10 진수) : 0x7B -> 123(12.3V)
@@ -337,7 +337,7 @@ Send Data를 통한 임시 보관 정보를 실행시킴
 | ---- | ---- | ---- | ---- | ---- |
 | 0xFFFFFF | 0x01 | 0x02 | 0x00 | 0xFC |
 # 2.7 Symmetric Store
-다수 서보의 동일한 Address 에 Data 저장
+다수 mightyZAP의 동일한 Address 에 Data 저장
 ### 2.7.1 Goal Position
 #### 2.7.1.1 Description
 mightyZAP의 목표 위치 값을 지정하는 명령 패킷
