@@ -98,7 +98,7 @@
 ## 3.1 Voltage Vs Speed
 
 입력 전압에 따른 무 부하 시 속도 변화에 대한 그래프 입니다. 해당 Data는 오차를 포함하고 있음으로 참고로 사용하시면 됩니다.
-![[27_voltageVSspeed.png|700]]
+![[Actuator/Mini 17Lf/img/27_voltageVSspeed.png|700]]
 >[!note] Note  
 >Voltage Vs Speed는 Goal Current 800에서 Test한 Data입니다.
 ## 3.2 Voltage Vs Stall Force 
@@ -113,12 +113,12 @@
 ## 3.3 Goal Speed Vs Speed  
 Goal Current가 800일 때, Goal Speed Parameter 값의 변화에 따른 무 부하 속도 변화를 나타냅니다.
 정격 부하 이하의 경우, 부하 정도에 따라 최고 속도가 나오는 시간이 달라지게 됩니다.  
-![[27_goalspeedVSspeed.png|700]]  
+![[Actuator/Mini 17Lf/img/27_goalspeedVSspeed.png|700]]  
 >[!tip] tip
 >Voltage Vs Stall Force Data는 Goal Current 800에서 Test한 Data입니다.
 ## 3.4 Goal Current vs Stall Force  
 Goal Current 값에 대한 mightyZAP의 Stall Force를 나타냅니다. 
-![[27_goalcurrentVSstallforce.png|700]]
+![[Actuator/Mini 17Lf/img/27_goalcurrentVSstallforce.png|700]]
 Stall Force 측정 방식은 속도 값을 최소한으로 하여 순수 전류 값에 대한 힘만 측정한 값입니다.     
 >[!warning] 주의사항  
 >각 Goal Current 값에 대한 Stall Force갑의 오차는 +/- 15%입니다.

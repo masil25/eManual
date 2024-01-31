@@ -2,7 +2,7 @@
 -  Micro size / 마이크로 사이즈  
 -  Precise position control / 정밀 위치 제어
 -  Force control by current feedback / 전류 피드백 통한 포스 제어
--  Speed control (1000 resolution) / 속도 제어( 1000 해상도)
+-  Speed control (1024 resolution) / 속도 제어( 1024 해상도)
 -  Strong force comparing to the size / 체적 대비 강한 힘
 -  Built-in Drive Circuitry / 드라이브 회로 내장
 -  RS-485 communication / RS-485 통신 지원
@@ -13,37 +13,38 @@
 | **Property** | Value |
 | ---- | ---- |
 | **Stroke / 스트로크** | 27mm |
-| **Rated Load / 정격 부하** | 기어비에 따라 20N~70N |
+| **Rated Load / 정격 부하** | 기어비에 따라 12N ~ 100N |
 | **Recommended duty cycle at rated load** | 50% 이하 |
+| **Max apllicable Load/ 최대 허용부하** | 2times rated load / 정격 부하의 2배 |
+| **Recommended duty cycle at max applicable load/ 최대 허용 부하시 권장 듀티사이클 :** | under 20% (20% 이하) |
 | **Micro controller** | 32bit Arm Cortex |
-| **Position Resolution** | 10000 Resolution (A/D Converter) |
-| **Input Voltage / 입력 전압** | 12.0V(Rated/정격), 8V ~ 13 V(Operating) |
-| **Motor Type / Watt** | Coreless DC Motor / 3.8 Watt |
-| **Current consumption / 소모전류** | 30mA(Idle), 400mA(Rated), 1.6A(Stall) |
+| **Position Resolution** | 4096 Resolution (A/D Converter) |
+| **Input Voltage / 입력 전압** | 12.0V(Rated/정격), 7.4V ~ 13 V(Operating) |
+| **Motor Type / Watt** | Coreless DC Motor / ㄱ.ㄱ Watt |
+| **Current consumption / 소모전류** | 30mA(Idle), 380mA(Rated), 1.6A(Stall) |
 | **Position repeatability** | Unidirectional less than 0.03mm(30um) |
 | ^ | Bydirectional less than +/0.06mm(60um) |
 | **전류 값 오차 / Current Tolerance** | ±15% at Over 50mA |
 | **Position sensor / 위치센서** | 10kΩ linearity potentiometer |
-| **Size, Weight /크기,무게** | 57.5(L)x 40.6(W)x 23(H)mm / 65.5g [+/-5%] (to be varied according to gear ratio) |
-| **Communication/ 통신** | RS485 |
-| **Protocol** | Modbus RTU |
+| **Size, Weight /크기,무게** | 86.9(L)x36(W)x18(H)mm /96~99g (to be varied according to gear ratio) be varied according to gear ratio) |
+| **Communication/ 통신** | TTL/PWM(Automatic signal recognition / 신호자동인식)  <br>→ TTL Level voltage : 3.3 ~ 5.0V  <br>→ PWM Pulse range : 900us(retracted/최대수축) – 1500us(center) – 2100us(extended/최대확장)  <br>→ TTL Communication range / TTL 통신 통달 거리 : Max.4m |
+| **Protocol** | IR Robot Open Protocol (switchable to MODBUS RTU protocol/ MODBUS 프로토콜전환 가능) |
 | **Operating Temperatures / 동작온도** | -10℃ ~ 60℃ |
-| **Ingress protection / 방수방진** | IP54 |
+| **Ingress protection / 방수방진** | IP-54 |
 | **Mechanical Backlash / 기구백래쉬** | 0.03mm(30um) |
 | **Audible Noise / 가청소음** | Max. 50db at 1m |
-| **Gear ratio / 기어비** | 9.6 : 1 |
-| **Gear type / 기어 타입** | Engineering Plastic |
+| **Gear ratio / 기어비** | 110:1(1PT,20PT,35PT) /20:1(55PT) /50:1(100PT) |
+| **Gear type / 기어 타입** | Engineering plastic gears(12PT,20PT,35PT)  <br>4metal & 2engineering plastic gears(42PT,78PT) (Aluminum and stainless steel combination) |
 | **Rod type / Rod 타입** | 스테인레스 스틸 |
-| **Standard Accessory / 표준 악세서리** | 1 x Hinge base  <br>1 x Hinge  <br>1 x Hinge shaft  <br>1 x Rod end tip  <br>2 x M3 NUT  <br>3 x M2.5x6 screws  <br>1 x RS485 Molex wire harness (200mm)   <br>1 x Extended I/O Molex wire harness (200mm)  <br>1 x M3 spanner  <br>1 x Socket set screw |
-| **Connector Type (Male) in the Actuator** | MOLEX 53253-0470 |
-| **Wire Harness** | Molex(51065-0400) to Molex(51065-0400)/ 200mm / 0.08x60(22AWG) |
-| **Extended Wire Harness**  | Molex 510210500, 5pins / 200mm length, 0.16 x 7 (26AWG) |
+| **Standard Accessory / 표준 악세서리** | 1xHinge base  <br>1x Hinge  <br>1xHinge shaft  <br>1xRod end tip  <br>2x M3 NUT  <br>3 x M2.5x6 screws  <br>1x Molex wire harness (200mm)  <br>1 x M3 spanner  <br>1 x Socket set screwlex wire harness (200mm)    <br>1 x M3 spanner    <br>1 x Socket set screw |
+| **Connector Type (Male) in the Actuator** | MOLEX 22-03-5035 |
+| **Wire Harness** | Molex(50-37-5033) to Molex(50-37-5033)/ 200mm / 0.08x60(22AWG) |
 
 ## 2.2 Volatges / 전압  
 |    Parameter                                     |        Min                      |        Norm          |        Max           |      Unit           |    Note    |
 |:-------------------------------------------------|:-------------------------------:|:--------------------:|:--------------------:|:-------------------:|:----------------------------------------------------------:|
-|   **Supply voltage/ 공급 전압**                       | 8                               |                   12 |                   13 | V                   | <br>                                                       |
-|   **Logic input voltage / 로직 인가 전압**               |                            -7.0 |         -            |                 12.0 | V                   | RS-485                                                     |  
+|   **Supply voltage/ 공급 전압**                       | 7.4                               |                   12 |                   13 | V                   | <br>                                                       |
+|   **Logic input voltage / 로직 인가 전압**               |                            2.0 |         3.3            |                 5.5 | V                   | RS-485                                                     |  
 
 ## 2.3 Currents / 전류
 |    Parameter                                                                                                                                                                                                                   |      Min      |      Norm                                                                                                                                                                                                                                                                                                                                                                                                                                               |      Max         |      Unit          |      Note                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
@@ -52,7 +53,7 @@
 |     **No Load Current <br>/ 무 부하 전류**                                                                                                                                                                                           |               | ≤300                         |                  | mA                 | No Load                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |         **Rated Load Current <br>/정격 부하 시 전류**                                                                                                                                                      |               | ≤400                         |                  | mA                 |       골커런트 800mA 이상설정                                                                                                 |
 |         **Max Applicable Load Current / <br>최대 허용 부하 시 전류**                                                                                                                                          |               | ≤600                         |                  |                    |       골커런트1.6A설정 시                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-|     **Idle Current**                                                                                                                                                                                                           |               | ≤30                          |                  | mA                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |  
+|     **Idle Current**                                                                                                                                                                                                           |               | ≤20                          |                  | mA                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |  
 
 ## 2.4 Temperatures / 온도
 |   Parameter                     |   Min   |   Norm   |   Max   |   Unit   |   Note   |
@@ -63,63 +64,79 @@
 ## 2.5 Strokes / 스트로크
 |  Parameter                  |  Min  |  Norm  |  Max  |  Unit  |  Note                           |
 |:----------------------------|:------|:-------|:------|:-------|:--------------------------------|
-|  **MIN Position / 최소 수축 위치**  |   3.3 |    3.8 |   4.3 |   mm   |                                 |
+|  **MIN Position / 최소 수축 위치**  |   3.3 |    3.8 |   4.3 |   mm   | ⁕                                |
 |  **MAX Position / 최대 확장 위치**  |  30.3 |   30.8 |  31.3 |   mm   |                                 |
 |  **Stroke length/ 스트로크**    |       |   27.0 |       |   mm   |                                 |  
-
-⁕매니저 소프트웨어 또는 파라메터 맵의 Min / Max Position Calibration 기능으로 Min / Max 위치값 동기화 가능.
+⁕ 복수의 mightyZAP의 최소 수축 위치를 완벽하게 동일하게 설정해야 하는 경우, 별도 협의
+⁕ 매니저 소프트웨어 또는 파라메터 맵의 Min / Max Position Calibration 기능으로 Min / Max 위치 값 동기화 가능.
 ## 2.6 No Load Speed / 무부하 속도
 | Parameter | Min | Norm | Max | Unit | Note |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Maximum Speed at 12.0V  <br>최대 속도 at 12.0V | 105.3 | 117.0 | 128.7 | mm/s | 17Lf-20F-27 |
-| ^ | 81 | 90 | 99 | mm/s | 17Lf-35F-27 |
-| ^ | 27 | 30 | 33 | mm/s | 17Lf-70F-27 |
+| Maximum Speed at 12.0V  <br>최대 속도 at 12.0V | 100.8 | 112.0 | 123.2 | mm/s | 12Lf-12PT-27 |
+| ^ | 75.6 | 84.0 | 92.4 | mm/s | 12Lf-20PT-27 |
+| ^ | 26.1 | 29.0 | 31.9 | mm/s | 12Lf-35PT-27 |
+| ^ | 13.95 | 15.5 | 17.05 | mm/s | 12Lf-55PT-27 |
+| ^ | 6.93 | 7.7 | 8.47 | mm/s | 12Lf-100PT-27 |
 ## 2.7 Load / 부하
-|  Parameter<br>Parameter                                               |  Min  |  Rated  |  Max  |  Unit                                |  Note                                                     |
-|:--------------------------------------------------------|:-----:|:-------:|:-----:|:------------------------------------:|:----------------------------------------------------------|
-|     Load at 12.0V  <br>부하 at 12.0V      |       |      20 |       |     N                                |                                               17Lf-20F-27 |
-|  ^                                                      |       |    4.49 |       |     lbf                              |   ^                                                       |
-|  ^                                                      |       |    2.04 |       |     kgf                              |    ^                                                      |
-|  ^                                                      |       |      35 |       |     N                                | 17Lf-35F-27                                               |
-|  ^                                                      |       |    7.86 |       |     lbf                              |    ^                                                      |
-|  ^                                                      |       |    3.57 |       |     kgf                              |    ^                                                      |
-|  ^                                                      |       |      70 |       |     N                                | 17Lf-70F-27                                               |
-|  ^                                                      |       |   15.73 |       |     lbf                              |    ^                                                      |
-|  ^                                                      |       |    7.14 |       |     kgf                              |    ^                                                      |  
-
+| Parameter<br>Parameter | Min | Rated | Max | Unit | Note |
+| :--- | :--: | :--: | :--: | :--: | :--- |
+| Load at 12.0V  <br>부하 at 12.0V |  | 12.0 | 24.0 | N | 12Lf-12PT-27 |
+| ^ |  | 2.69 | 5.39 | lbf | ^ |
+| ^ |  | 1.22 | 2.44 | kgf | ^ |
+| ^ |  | 20.0 | 30.0 | N | 12Lf-20PT-27 |
+| ^ |  | 4.49 | 8.98 | lbf | ^ |
+| ^ |  | 2.04 | 4.08 | kgf | ^ |
+| ^ |  | 35.0 | 70.0 | N | 12Lf-35PT-27 |
+| ^ |  | 7.87 | 15.73 | lbf | ^ |
+| ^ |  | 3.57 | 7.14 | kgf | ^ |
+| ^ |  | 55.0 | 110.0 | N | 12Lf-55PT-27 |
+| ^ |  | 12.37 | 24.72 | lbf | ^ |
+| ^ |  | 5.61 | 11.22 | kgf | ^ |
+| ^ |  | 100.0 | 200.0 | N | 12Lf-100PT-27 |
+| ^ |  | 22.48 | 44.94 | lbf | ^ |
+| ^ |  | 10.19 | 20.4 | kgf | ^ |
+<p align="right">⁕ 1 kgf = 9.8N, 1lbf = 4.45N</p>
+>[!warning] Caution / 주의  
+>가급적 정격 부하 조건에서 사용하되, 최대 허용 부하 (정격부하의 2배) 적용시에는 Goal current설정을 1600(1.6A) 으로, Duty cycle을 20% 이하로 낮추어야 합니다.
 ## 2.8 Self Lock Feature / 셀프-락 기능
-|   Parameter   |   Min   |   Norm                                                                                          |   Max   |   Unit   |   Note                                          |
-|:--------------|:-------:|:-----------------------------------------------------------------------------------------------:|:-------:|:--------:|:------------------------------------------------|
-| Slef Lock              |         |  불가                                                                                        |    -    |          |    17Lf-20F-27                       |
-|   ^           |    -    |  불가                                                                                        |    -    |          |  17Lf-35F-27                                    |
-|   ^           |    -    |    Available(가능)                                                                                |    -    |          |    17Lf-70F-27                   |  
 
+| Parameter | Min | Norm | Max | Unit | Note |
+| :--- | :--: | :--: | :--: | :--: | :--- |
+| Slef Lock | - | N/A(불가) | - |  | 12Lf-12x-27 |
+| ^ | - | ^ | - |  | 12Lf-20x-27 |
+| ^ | - | Available(가능) | - |  | 12Lf-35x-27 |
+| ^ | - | ^ | - |  | 12Lf-55x-27 |
+| ^ | - | ^ | - |  | 12Lf-100x-27 |
+
+>[!tip] Tip
+>Self-Lock 이란 액츄에이터가 전원을 통한 모터의 힘 없이, 기구마찰력만으로 위치를 고수할 수 있는 힘을 의미합니다.
 # 3. 참고 자료
 ## 3.1 Voltage Vs Speed
-
 입력 전압에 따른 무 부하 시 속도 변화에 대한 그래프 입니다. 해당 Data는 오차를 포함하고 있음으로 참고로 사용하시면 됩니다.
-![[Actuator/Mini 17Lf/img/27_voltageVSspeed.png|700]]
+![[Actuator/Mini 12Lf/img/27_voltageVSspeed.png]]
 >[!note] Note  
->Voltage Vs Speed는 Goal Current 800에서 Test한 Data입니다.
+>Voltage Vs Speed는 Goal Current 800에서 Test한 Data입니다.  
+>해당 Data는 약 +/-15%오차를 포함하고 있습니다.
 ## 3.2 Voltage Vs Stall Force 
-입력 전압에 따른 800mA에서 Stall Force를 측정한 Data입니다. 해당 Data는 오차를 포함하고 있음으로 참고로 사용하시면 됩니다.
-![[27_valtageVSstallforce.png]]
->[!tip] tip
->Voltage Vs Stall Force Data는 Goal Current 800에서 Test한 Data입니다.
+입력 전압에 따른 800mA에서 Stall Force를 측정한 Data입니다. 해당 Data는 오차를 포함하고 있음으로 참고로 사용하시면 됩니다.  
+  ![[27_voltageVSstallforce 1.png]]
 
-> [!warning] Waring  
+> [!note] Note  
+> Voltage Vs Stall Force Data는 Goal Current 1600에서 Test한 Data입니다.
 >각 Force 값의 오차는 +/- 15% 입니다. 
 
+>[!warning] Caution  
+>Stall force는 참고용으로, 제품의 파손을 방지하기 위해 실제 application에서의 사용시에는 정격부하에 맞추어 사용하여 주십시오.
 ## 3.3 Goal Speed Vs Speed  
 Goal Current가 800일 때, Goal Speed Parameter 값의 변화에 따른 무 부하 속도 변화를 나타냅니다.
 정격 부하 이하의 경우, 부하 정도에 따라 최고 속도가 나오는 시간이 달라지게 됩니다.  
-![[Actuator/Mini 17Lf/img/27_goalspeedVSspeed.png|700]]  
->[!tip] tip
->Voltage Vs Stall Force Data는 Goal Current 800에서 Test한 Data입니다.
+![[27 _goalspeedVSspeed.png]]  
+>[!note] Note
+>Goal Speed Vs Speed Data는 Goal Current 800에서 Test한 Data입니다.
 ## 3.4 Goal Current vs Stall Force  
 Goal Current 값에 대한 mightyZAP의 Stall Force를 나타냅니다. 
-![[Actuator/Mini 17Lf/img/27_goalcurrentVSstallforce.png|700]]
 Stall Force 측정 방식은 속도 값을 최소한으로 하여 순수 전류 값에 대한 힘만 측정한 값입니다.     
+![[27_goalcuttentVSstallforce.png|700]]
 >[!warning] 주의사항  
 >각 Goal Current 값에 대한 Stall Force갑의 오차는 +/- 15%입니다.
 >붉은색으로 표기된 부분은 내부 부하 및 발열에 의해  오차가 큼으로 참고용으로만 사용하여 주시기 바랍니다. 
@@ -140,8 +157,7 @@ Stall Force 측정 방식은 속도 값을 최소한으로 하여 순수 전류 
 >
 ## 3.5 Goal Current vs Speed <font size="4">at Rated Load</font>  
 정격 부하 시 Goal Current  값에 대한 mightyZAP의  속도 변화를 나타냅니다.  
-![[37_goalcurrentVSspeed.png]]  
-정격 부하 속도의 경우 무 부하 최대 속도 대비 모델에 따라 약 80 ~ 90% 대의 성능을 보여줍니다. 
+![[27_goalcurrentVSspeed 1.png|700]]
 >[!tip] TIP
 >Goal Current Vs Speed Data는 정격 부하 상태에서 측정한 Data입니다.
 
@@ -152,9 +168,9 @@ Stall Force 측정 방식은 속도 값을 최소한으로 하여 순수 전류 
 ## 3.6 PIN Map
 
 | PIN NUMBER(COLOR) | PIN NAME&nbsp; | <div>FUNCTION</div> |
-|:------------------:|:---------------:|:--------------------:|
-|         1(YELLOW) | D-&       | RS-485-             |
-|          2(WHITE) | D+             | RS-485+  |
-|      3(RED) | VCC      | Power +             |
-|    4(BLACK) | GND            | Power -             |  
-![[rs485circuit.png]]
+| :--: | :--: | :--: |
+| 1(WHITE) | DATA | 통신 |
+| 2(RED) | VCC | 전원 + |
+| 3(BLACK) | GND | 전원 - |
+
+![[PT_circuit.png]]
