@@ -30,8 +30,16 @@
   color : #fff!important;
   background-color : #0e2f48!important;
    caret-color: white;
-
 }
+
+.callout table td{
+  background-color : white!important;
+}
+.callout table th {
+  background-color : #f1f1f1!important;
+}
+
+
 .HyperMD-quote:before {
   border: none!important;
 }
@@ -45,4 +53,9 @@ table th {
 table {
   margin-bottom : 5px!important;
   ;
+}
+
+img {
+  border : 1px solid darkgray;
+  border-radius : 5px;
 }

@@ -86,7 +86,7 @@ Control Table Data는 'R', 'RW'로 표기됩니다. 'R'은 읽기 전용(Read On
 기본 값은 초기 설정 값(공장 출하 설정 값)입니다. Non-Volatile Memory 영역의 값은 사용자가 수정할 경우 변경한 값으로 적용되며, Volatile Memory 영역은 전원이 인가 되었을 때의 값을 의미합니다.  
 ## 2.2 Non-volatile Memory (ROM)  
 
-| Rergister Number | Address    | Name                      | Description           | Access | Default  |
+| <center>Rergister<br>Number</center> | <center>Address</center>    | <center>Name</center>                      | <center>Description</center>           | Access | <center>Default</center>  |
 |:-----------------|:-----------|:--------------------------|:----------------------|:-------|:---------|
 |            40001 |   0 (0x00) | Serial Number             | Model Serial Nu mber  | R      |          |
 |            40002 |   1 (0x01) | Firmware Version          | 펌웨어 버전 정보             | R      |          |
@@ -278,7 +278,7 @@ Shutdown은 Hardware Error가 발생할 경우, 모터를 Force Off 상태 즉, 
 위치 제어에서 목표 위치의 제한 값으로 0 ~ 10,000 범위 내에서 목표 위치 값을 제한합니다.
 따라서 Goal Position값은 Short Stroke Limit(A) 값보다 작을 수 없고, Long Stroke Limit(B) 값보다 커서는 안됩니다.
 Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Stroke Limit 값보다 클 경우 Stroke Limit값으로 치환됩니다.  
-![[Actuator/Mini 17Lf/img/StrokeLImit.png|600]]   
+[[Actuator/Mini 17Lf/img/StrokeLImit.png|600]]   
 >[!warning] WARNING  
 >mightyZAP이 사용자의 Application에 설치 되어 동작하기 전에 , 실제 가동 가능한 범위를 측정하여 Short Stroke Limit/Long Stroke Limit를 설정하신 후 사용하는 것을 추천 드립니다.  
 >설치된 기구물의 한계 밖의 위치 이동값을 입력할 경우 mightyZAP 또는 사용자의 Application 이 파손되거나, Overload 보호 기능이 동작 될 수 있습니다.   
@@ -506,7 +506,7 @@ Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며
 	IO Port 1 또는 2번을 Jog 기능으로 지정 시 나머지 IO Port도 작동으로 지정됩니다. 해당 기능은 그림과 같이 회로를 구성하며, 각 버튼을 누를 경우 Short stroke Limit/Long Stroke Limit  방향으로 모터가 동작 하다가 버튼을 놓았을 때 정지하게 됩니다.  
 	![[extended_io_switch.png|500]]
 - **Action Enable**    
-	Action Enable 기능 Action 기능을 사용할 때 사용됩니다. 
+	Action Enable 기능 Action 기능을 사용할 때 사용됩니다.  
 	( 자세한 내용은 [[#4.17 Action Control]]을 참조하여 주시기 바랍니다. )  
 	![[extended_io_single_sw.png|500]]
 - **Action Next**    
@@ -548,7 +548,7 @@ Action Setting은 모터가 움직이는 방식을 설정하며 아래와 같습
 Action Setting에서 설정된 내용에 대한 반복 횟수 또는 1회 동작에 대한 동작 시간 등을 설정하는 Parameter 입니다.  
 **Repeat type**  
  - Interval : Repeat Time에 의해 설정된 시간 간격마다 Action을 수행합니다.  일정한 시간마다 반복된 동작이 필요할 경우 사용합니다. 
- - dWellTime : Action 명령에 의해 위치 이동이 완료되어 정지하는 시간을 설정합니다. 동작 완료 후 일정한 시간 동안 위치를 유지해야  할 때 사용합니다.
+ - dWellTime : Action 명령에 의해 위치 이동이 완료되어 정지하는 시간을 설정합니다. 동작 완료 후 일정한 시간 동안 위치를 유지해야  할 때 사용합니다.  
    ![[action_interval.png|600]]  
    ![[action_dwell.png|600]]  
 **Repeat time**  
@@ -652,7 +652,7 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
 >[!note] 전압 측정  
 >migtyZAP에서 측정되는 전압은 약 +/- 0.4V의 오차가 있습니다. 
 ### 2.4.23 Goal Position
-위치 이동 명령으로 migthtyZAP을 이동 시키고자 할 때 사용하는 위치 값입니다. Goal Position은 [[#2.4.5 Short/Long Stroke Limt|Short/Long Stroke Limt]] 설정 제한 값 까지 입력이 가능합니다.  
+위치 이동 명령으로 migthtyZAP을 이동 시키고자 할 때 사용하는 위치 값입니다. Goal Position은 [[#3.1.5 Stroke Limit 설정|Stroke Limit]] 설정 제한 값 까지 입력이 가능합니다.  
 (즉, stroke limit 범위 밖으로는 위치 명령을 내려도 stroke limit위치까지만 움직입니다)
 
 | value | Description |
