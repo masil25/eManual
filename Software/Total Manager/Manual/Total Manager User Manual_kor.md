@@ -111,7 +111,6 @@ USB Interface Board를 PC와 연결합니다.
 정장적으로 연결되어 있을 경우 이미지에서와 같이 새로운 com port가 추가되는것을 확인할 수 있습니다.
 ![[serialPort_check_win.jpg]]
 ### 2.4.2 Linux[ubuntu/Demian]
-<font size="5"> Driver 설치</font>
 1) CH341 Driver 
 CH341 driver는 USB-02 Model에서 만 사용됩니다. 
 CH340, CH341 의 시리얼 드라이버는 Linux 커널 버전 2.6.24부터 내장되어 있으며, 해당 위치는 drivers/usb/serial/ch341.c입니다. 다만 드라이버를 최신 상태로 유지 하기 원하실 경우 아래의 방법을 사용하기 바랍니다.
@@ -183,14 +182,16 @@ Done
 
 그룹에 추가 한 후에는 반드시 로그아웃 후 로그인 해야 변경 사항이 적용 됩니다.
 ### 2.4.3 Mac OS
+#### 2.4.3.1 USB 02(CH34x Driver)
 USB Interface Board Driver를 다운로드 합니다.  
-	-  [USB Interface Board Window Driver]  
+	- https://www.wch.cn/download/CH341SER_ZIP.html
 다운로드한 파일을 실행하고 가이드에 따라 드라이버를 설치합니다.  
 	[이미지 ]  
 USB Interface Board를 PC와 연결합니다.  
-[시스템 정보]-[Hardware]-[USB]에서 Serial Port가 정상적으로 연결되었는지 확인합니다.    
+[시스템 정보]-[Hardware]-[USB]에서 Serial Port가 정 상적으로 연결되었는지 확인합니다.    
 정장적으로 연결되어 있을 경우 이미지에서와 같이 새로운 com port가 추가되는것을 확인할 수 있습니다.  
 [이미지]  
+#### 2.4.3.2 USB 03(FTDI Driver)
 # 3 Total Manager Description
 ## 3.1 통신 연결 및 검색
 아래의 이미지와 같이 프로그램을 실행 한 후 상단 매뉴바에서 Scan 버튼을 누르면 Actuator Scan을 위한 팝업 창이 활성화 됩니다.   
