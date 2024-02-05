@@ -113,10 +113,10 @@ mightyZAP Total Manager와 mightyZAP의 통신을 위하여 Serial Convertor 가
 	![[ftdi_win_install.png|650]]
 
 - **Interface Board 연결 확인**  
-USB Interface Board를 PC와 연결합니다.
-[시스템]-[장치관리자]-[port]에서 Serial Port가 정상적으로 연결되었는지 확인합니다.  
-정장적으로 연결되어 있을 경우 이미지에서와 같이 새로운 com port가 추가되는것을 확인할 수 있습니다.
-![[serialPort_check_win.jpg]]
+  USB Interface Board를 PC와 연결합니다.
+  [시스템]-[장치관리자]-[port]에서 Serial Port가 정상적으로 연결되었는지 확인합니다. 
+  정장적으로 연결되어 있을 경우 이미지에서와 같이 새로운 com port가 추가되는것을 확인할 수 있습니다.  
+  ![[serialPort_check_win.jpg]]
 ### 2.4.2 Linux[ubuntu/Demian]
 1) CH341 Driver 
 CH341 driver는 USB-02 Model에서 만 사용됩니다. 
