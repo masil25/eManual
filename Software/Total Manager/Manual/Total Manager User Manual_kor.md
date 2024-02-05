@@ -75,9 +75,10 @@ Mac OS 전용 패키지를 다운로드 합니다.
 ## 2.3 화면 구성
 화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Footer로 구성되어있다.  
 ![[mainView-description.png|700]]
-* <font color="#548dd4">① Main Toolbar</font>  
-	+ Actuator의 Reset, Restart, Data Undo/Redo 등을 수행  
-<font color="#548dd4">② SCAN</font> : Software의 통신을 연결하고 mightyZAP 검색  
+- <font color="#548dd4">① Main Toolbar</font>  
+	- Actuator의 Reset, Restart, Data Undo/Redo 등을 수행  
+- <font color="#548dd4">② SCAN</font>  
+	  Software의 통신을 연결하고 mightyZAP 검색  
 <font color="#548dd4">③ Main Menu</font> : Information, control, Update, Manager Setting 등 Manager에서 제공하는 기능 선택 Side bar Menu  
 <font color="#0070c0">④ Actuator List</font> : 검색된 mightyZAP의 이름이 통신 속도와 Protocol에 따라 분류되어 표시  
 <font color="#0070c0">⑤ Main contents</font> : 매니저에 제공하는 Main 기능 표시  
