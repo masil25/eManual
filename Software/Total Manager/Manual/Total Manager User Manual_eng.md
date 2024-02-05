@@ -1,8 +1,8 @@
 # 1 Total Manager 시작하기
-mightyZAP Total Manager는 다양한 운영체제에서 mightyZAP Actuator를 쉽게 관리 및 제어할 수 있는 Software입니다.
-Total Manager에서는 다양한 OS를 제공하고, 사용자 인터페이스를 개선하고 신규 mightyZAP 모델을 추가로 지원하는 신규mightyZAP Manager 입니다.
+mightyZAP Total Manager는 다양한 운영체제에서 mightyZAP을 쉽게  관리 및 제어할 수 있는 Software입니다.
+mightyZAP Total Manager에서는 다양한 OS 환경을 제공하고, 사용자 인터페이스를 개선하고 신규 mightyZAP 모델을 추가로 지원하는 신규 mightyZAP Manager 입니다.
 
-이 가이드에서는 Total Manager의 설치와 각 기능의 사용법에 대한 기본 사항을 다룹니다. 
+이 가이드에서는 mightyZAP Total Manager의 설치와 각 기능의 사용법에 대한 기본 사항을 다룹니다. 
 
 ## 1.1 개요
 mightyZAP Total Manager는 다양한 기능을 가진 다목적 Software입니다. mightyZAP의 동작 Test와 Parameter 설정 및 동작 상태 Monitoring과 Firmware Update를 기본적으로 제공합니다.  
@@ -23,7 +23,7 @@ mightyZAP을 위한 USB Interface Board를 당사의 웹사이트에서 판매�
 ## 1.3 Feature
 ### 1.3.1 Information
 mightyZAP의 Model 명, Stroke, Rate Load, Firmware Version 등 Actuator와 관련된 기본 정보를 표시합니다. Software를 실행하였을 경우 제일 처음에 나타나는 화면입니다.  
-![[Information_tag.png|700]]
+![[information_tag.png]]
 ### 1.3.2 Parameter
 mightyZAP을  제어하거나 Parameter를 변경 및 Monitoring을 할 수 있습니다.   
 연결된 여러 개의 mightyZAP 중 선택하여 하나의 mightyZAP을 제어할 수 있으며, Parameter의 Type에 따라 Non-voltatile Memory와 Volatile Memoty 화면으로 나누어져 있습니다.    
@@ -315,7 +315,7 @@ Monitoring 기능은 아래와 같이 구성 되어있습니다.
 [Firmware Download](https://mightyzap.com/en/digitalarchive4/?category1=Firmware&mod=list&pageid=1)
 ### 3.4.1 화면 구성    
 Update Page는 이미지와 같이 펌웨어 업데이트, Actuator Recovery 영역으로 되어있으며, 각각의 실행은 상단 header의 메뉴에서 해당 아이콘을 선택하여 실행할 수 있습니다.  
-![[Information_tag.png|700]]
+![[Software/Total Manager/img/Information_tag.png|700]]
 ### 3.4.2 Firmware Update   
 **Actuator 연결**  
 업데이트를 진행할 서보 모터를 연결하고 SCAN 을 합니다.  

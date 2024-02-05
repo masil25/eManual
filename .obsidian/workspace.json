@@ -4,47 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f6447233d3bc79a3",
+        "id": "c01f3af49d05ccf2",
         "type": "tabs",
         "children": [
           {
-            "id": "4c6a1f4ffa8ba0fd",
+            "id": "c2eb027ea3811807",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "diff-view",
               "state": {
-                "file": "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3c63394367b997e3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_eng.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "53ce88406e806bff",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Software/Total Manager/Total Manager User Manual_kor.md",
-                "mode": "source",
-                "source": false
+                "file": "Software/Total Manager/Manual/Total Manager User Manual_eng.md",
+                "staged": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -73,7 +47,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#N",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +68,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 435.5
+    "width": 335.5
   },
   "right": {
     "id": "7ccabca408164915",
@@ -110,7 +84,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Software/Total Manager/Total Manager User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -127,7 +100,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Software/Total Manager/Total Manager User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,9 +121,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Software/Total Manager/Total Manager User Manual_kor.md"
-              }
+              "state": {}
             }
           },
           {
@@ -175,68 +145,68 @@
       }
     ],
     "direction": "horizontal",
-    "width": 511.5
+    "width": 375.5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "markdown-importer:Open format converter": false,
-      "publish:Publish changes...": false
+      "switcher:퀵 스위처 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "markdown-importer:마크다운 형식 가져오기 열기": false,
+      "publish:변경사항 출판": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "53ce88406e806bff",
+  "active": "c2eb027ea3811807",
   "lastOpenFiles": [
-    "Software/Total Manager/Total Manager User Manual_eng.md",
-    "conflict-files-obsidian-git.md",
-    "Actuator/Mini 12Lf/Mini 12Lf User Manual_eng.md",
-    "homepage.md",
-    "Software/Total Manager/Protocl/img/modbus_pdu.png",
-    "Software/Total Manager/Protocl/img/modbusRTUFrame.png",
-    "Software/Total Manager/Protocl/img/ModbusNetworkArchitecture.png",
-    "Software/Total Manager/Protocl/img/ModbusCommunication.png",
-    "Software/Total Manager/Protocl/img/MightyzapConnect.png",
-    "Software/Total Manager/Protocl/Modbus RTU.md",
     "Software/Total Manager/Manual/Total Manager User Manual_kor.md",
+    "Software/Total Manager/img/update-veiw.png",
+    "Software/Total Manager/img/update-view.png",
+    "Software/Total Manager/img/UpdateComplete-SCAN.png",
+    "Software/Total Manager/img/UpdateSelect-Button.png",
+    "Software/Total Manager/img/updateMenu.png",
+    "Software/Total Manager/img/UpdateComplete.png",
+    "Software/Total Manager/img/Update-Reconnect2.png",
+    "Software/Total Manager/img/Update-Reconnect.png",
+    "Software/Total Manager/img/update-view.jpg",
+    "Software/Total Manager/img/Parameter.png",
     "Software/Total Manager/Manual/Total Manager User Manual_eng.md",
-    "Actuator/Protocol/IR Protocol/img/feedbackPacket 1.png",
-    "Actuator/Protocol/IR Protocol/img/CommandPacket 1.png",
-    "Actuator/Protocol/IR Protocol/img",
+    "Software/Total Manager/Total Manager User Manual_kor.md",
+    "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
+    "Actuator/Mini 12Lf/Datasheet/12Lf-xxF-27_kor.md",
+    "Actuator/Protocol/Modbus-RTU/Modbus RTU Manual-kor.md",
+    "Actuator/Protocol/IR Protocol/IR Protocol Manual-kor.md",
     "Actuator/Protocol/IR Protocol/IR Protocol Manual-eng.md",
-    "Actuator/Protocol/IR Protocol.md",
-    "Actuator/Mini.md",
-    "Actuator/Mini 17Lf/img/rs485circuit.png",
-    "Actuator/Mini 17Lf/img/drawingTest.png",
-    "Actuator/Mini 17Lf/img/87_voltageVSspeed.png",
+    "Actuator/Mini 12Lf/Manual/Mini 12Lf User Manual_eng.md",
+    "Actuator/Protocol/IR Protocol/img",
     "Actuator/Mini 17Lf/Manual/Modbus RTU_kor.md",
-    "Actuator/Mini 17Lf/Manual/Modbus RTU_eng.md",
-    "Actuator/Mini 17Lf/Drawing/17Lf-xxF-87-Sevo Series[mm]_Rev01_20231113.pdf",
-    "Actuator/Mini 17Lf/Drawing/17Lf-xxF-87-Sevo Series[inch]_Rev01_20231113.pdf",
-    "Actuator/Mini 17Lf/Drawing/17Lf-xxF-50-Sevo Series[mm]_Rev01_20231113.pdf",
-    "Actuator/Mini 17Lf/Drawing/17Lf-xxF-50-Sevo Series[inch]_Rev01_20231113.pdf",
-    "Actuator/Mini 17Lf/Drawing/17Lf-xxF-37-Sevo Series[mm]_Rev01_20231113.pdf",
-    "Actuator/Mini 17Lf/Drawing/17Lf-xxF-37-Sevo Series[inch]_Rev01_20231113.pdf",
+    "Actuator/Mini 12Lf/Manual/Modbus RTU_kor.md",
     "Actuator/Mini 17Lf/Drawing/17Lf-xxF-27_kor.md.md",
-    "Actuator/Mini 17Lf/Drawing/17Lf-xxF-27-Sevo Series[mm]_Rev01_20231113.pdf",
+    "Actuator/Mini.md",
     "Actuator/Mini 17Lf/Drawing/17Lf-xxF-27-Sevo Series[inch]_Rev01_20231113.pdf",
-    "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-87_kor.md",
-    "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-87_eng.md",
-    "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-50_kor.md",
-    "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-50_eng.md",
-    "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-37_kor.md",
-    "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-37_eng.md",
+    "Actuator/Mini 12Lf/Datasheet/12Lf-xxPT-53_kor.md",
+    "Actuator/Mini 12Lf/Datasheet/12Lf-xxPT-90_kor.md",
+    "Actuator/Mini 12Lf/Datasheet/12Lf-xxF-90_kor.md",
+    "Actuator/Mini 12Lf/Datasheet/12Lf-xxF-53_kor.md",
+    "Actuator/Mini 12Lf/Datasheet/12Lf-xxPT-40_kor.md",
+    "Actuator/Mini 12Lf/Datasheet/12Lf-xxPT-27_kor.md",
+    "Actuator/Mini 12Lf/Datasheet/12Lf-xxF-40_kor.md",
+    "Actuator/Mini 12Lf/Manual/Mini 12Lf User Manual_kor.md",
+    "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27_kor.md",
     "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27_eng.md",
-    "Actuator/Mini 12Lf/Manual/Modbus RTU_kor.md",
-    "Actuator/Mini 12Lf/Manual/Mini 12Lf User Manual_kor.md",
-    "Actuator/Mini 12Lf/Manual/Mini 12Lf User Manual_eng.md",
-    "Actuator/Mini 12Lf/Datasheet/12Lf-xxPT-90_kor.md",
-    "Actuator/Mini 12Lf/Datasheet/12Lf-xxPT-53_kor.md",
+    "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-37_kor.md",
+    "Actuator/Mini 12Lf/Drawing",
+    "Software/Total Manager/Manual",
+    "Actuator/Drawing",
     "Actuator/Mini 12Lf/Datasheet",
+    "Actuator/Mini 12Lf/Manual",
+    "Actuator/Mini 17Lf/Drawing/17Lf-xxF-27-Sevo Series[mm]_Rev01_20231113.pdf",
+    "Actuator/Mini 17Lf/Drawing/17Lf-xxF-87-Sevo Series[mm]_Rev01_20231113.pdf",
+    "Actuator/Mini 17Lf/Drawing/17Lf-xxF-87-Sevo Series[inch]_Rev01_20231113.pdf",
     "무제 파일.canvas",
     "무제 파일 1.canvas"
   ]

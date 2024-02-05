@@ -29,12 +29,12 @@ mightyZAP의 Model 명, Stroke, Rate Load, Firmware Version 등 Actuator와 관�
 mightyZAP을  제어하거나 Parameter를 변경 및 Monitoring을 할 수 있습니다.   
 연결된 여러 개의 mightyZAP 중 선택하여 하나의 mightyZAP을 제어할 수 있으며, Parameter의 Type에 따라 Non-voltatile Memory와 Volatile Memoty 화면으로 나누어져 있습니다.    
 사용 모델에 따라 Parameter의 구성이 달라지며, 화면의 크기에 따라 화면 구성이 변하게 됩니다.  
-![[control-view.png|700]]
+![[Parameter.png|700]]
 
 ### 1.3.3 update
 mightyZAP의 Firmware를 Update할 때 사용합니다. 당사의 Webpage에서 해당 모델에 맞는 업데이트 파일을 다운로드 받으신 후 업데이트를 진행 하실 수 있습니다.  
 또한, Update Fail 및 사용자의 실수로 인해 서보모터가 검색이 되지 않을 경우 Firmware를 검사 및 복구 하실 수도 있습니다.  
-![[update-view.png|700]]
+![[update-veiw.png|700]]
 # 2 Total Manager 다운로드 및 설치
 Total Manager는 Window , Mac OS, Linux 에서 모두 설치가 가능합니다.
 ## 2.1 요구 사항
@@ -46,9 +46,8 @@ Total Manager는 Window , Mac OS, Linux 에서 모두 설치가 가능합니다.
 
 ## 2.2 Install
 ### 2.2.1 Windows
-Windows 컴퓨터에서 mightyZAP Total Manager를 설치하려면 사용 중인 Windows의 
-OS 버전을 확인하신 후 버전에 맞게 다운로드하여 주시기 바랍니다.   
-- 32bit windows : mightyZAPTotalManagerx.y.z_ia32.exe
+Windows 컴퓨터에서 mightyZAP Total Manager를 설치하려면 사용 중인 Windows의 OS 버전을 확인하신 후 버전에 맞게 다운로드하여 주시기 바랍니다.   
+- 32bit windows : mightyZAPTotalManagerx.y.z_ia32.exe (추후 32bit지원 종료)
 - 64bit windows : mightyZAPTotalManagerx.y.z_x64.exe  
 
 **Windosw Version 확인 방법**
@@ -56,7 +55,6 @@ OS 버전을 확인하신 후 버전에 맞게 다운로드하여 주시기 바�
 - windows 10 이상 : 설정 -> 시스템 -> 정보
 <font color="#4f81bd">OS Version 확인 방법</font>
 ![[windows_version_check.jpg|700]]
-**mightyZAP Total Manager Download Link**
 
 다운로드한 파일을 실행하여, 설치 가이드의 지침에 따라 설치하시면 됩니다.  
 설치에는 몇 분 정도 걸릴 수 있습니다.
@@ -77,7 +75,8 @@ Mac OS 전용 패키지를 다운로드 합니다.
 ## 2.3 화면 구성
 화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Footer로 구성되어있다.  
 ![[mainView-description.png|700]]
-<font color="#548dd4">① Main Toolbar</font>  Actuator의 Reset, Restart, Data Undo/Redo 등을 수행  
+<font color="#548dd4">① Main Toolbar</font>  
+	Actuator의 Reset, Restart, Data Undo/Redo 등을 수행  
 <font color="#548dd4">② SCAN</font> : Software의 통신을 연결하고 mightyZAP 검색  
 <font color="#548dd4">③ Main Menu</font> : Information, control, Update, Manager Setting 등 Manager에서 제공하는 기능 선택 Side bar Menu  
 <font color="#0070c0">④ Actuator List</font> : 검색된 mightyZAP의 이름이 통신 속도와 Protocol에 따라 분류되어 표시  
@@ -316,7 +315,7 @@ Monitoring 기능은 아래와 같이 구성 되어있습니다.
 [Firmware Download](https://mightyzap.com/en/digitalarchive4/?category1=Firmware&mod=list&pageid=1)
 ### 3.4.1 화면 구성    
 Update Page는 이미지와 같이 펌웨어 업데이트, Actuator Recovery 영역으로 되어있으며, 각각의 실행은 상단 header의 메뉴에서 해당 아이콘을 선택하여 실행할 수 있습니다.  
-![[Information_tag.png|700]]
+![[Software/Total Manager/img/Information_tag.png|700]]
 ### 3.4.2 Firmware Update   
 **Actuator 연결**  
 업데이트를 진행할 서보 모터를 연결하고 SCAN 을 합니다.  
