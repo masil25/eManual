@@ -88,11 +88,11 @@ Information, control, Update, Manager Setting 등 Manager에서 제공하는 기
 <font color="#4f81bd">6. Actuator Information</font>  
 선택된 Actuator의 모델명, Firmware Version, 통신 방식 등이 표기    
 <font color="#4f81bd">7. 통신 상태</font>  
-통신 Protocol 및 송수신 Error 등 통신 상태 표시
+통신 Protocol 및 송수신 Error 등 통신 상태 표시  
 <font color="#4f81bd">8. Manager Status</font>    
 Manager 의 버전 및 Language 등 표시  
 ## 2.4 USB Interface Board 
-Total Manager와 mightyZAP과의 통신을 위하여 Serial Convertor 가 필요합니다.  
+mightyZAP Total Manager와 mightyZAP의 통신을 위하여 Serial Convertor 가 필요합니다.  
 해당 설명은 당사의 USB Interface Board를 기준으로 설명이 되어있습니다.  
 먼저 USB Cable을 이용하여 PC와 연결하여 주시기 바랍니다.   
 > [!warning] 주의사항     
@@ -103,11 +103,12 @@ Total Manager와 mightyZAP과의 통신을 위하여 Serial Convertor 가 필요
 
 - **IR-USB02 Driver 설치** (CH340x)
 	아래의 링크에서 IR-USB03의 Driver를 다운로드 합니다.
+	-  [Driver Link](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)  
 	다운로드 받은 파일을 실행한 후 INSTALL 버튼을 클릭하여 드라이버를 설치합니다
 	![[ch340x_win_install.jpg]]
 - **IR-USB03 Driver 설치**  
 	아래의 링크에서 IR-USB03의 Driver를 다운로드 합니다.  
-	-  [USB Interface Board Window Driver]  
+	-  [Driver Link](https://ftdichip.com/wp-content/uploads/2021/08/CDM212364_Setup.zip)  
 	다운로드 받은 파일을 실행하여 드라이버를 설치합니다.  
 	![[ftdi_win_install.png|650]]
 
