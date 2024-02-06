@@ -71,7 +71,7 @@ $ sudo dpkg -i [file].deb
 Mac OS 전용 패키지를 다운로드 합니다.
 다운로드 파일을 더블 클릭하면 아래와 같이 설치 화면이 나타납니다. mightyZAP Total Manager 아이콘을 드래그 하여 Applications에 놓으면 설치가 완료됩니다. 
 
-![[macOS_install.png|500]]
+![[Actuator/Mini 17Lf/img/macOS_install.png|500]]
 ## 2.3 화면 구성
 화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Footer로 구성되어있다.  
 ![[mainView-description.png|700]]
@@ -101,7 +101,7 @@ mightyZAP Total Manager와 mightyZAP의 통신을 위하여 Serial Convertor 가
 ### 2.4.1 Windows
 당사의 Interface Board 는 2가지 Type으로 되어있으며, 각 버전에 따라 드라이버를 다르게 설치해야 합니다. 아래의 설명을 참조하여 드라이버를 설치 합니다.
 #### 2.4.1.1 IR_USB02 Driver (CH340x)
-아래의 링크에서 IR-USB03의 Driver를 다운로드 합니다.
+아래의 링크에서 IR-USB03의 Driver를 다운로드 합니다.  
 [CH341SER_ZIP Driver Download Link](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)   
 
 <font color="#4f81bd"><b>Step 1. Driver Install</b></font>  
@@ -124,8 +124,9 @@ mightyZAP Total Manager와 mightyZAP의 통신을 위하여 Serial Convertor 가
 <font color="#4f81bd"><b>Step 2. Driver 확인</b></font>  
 - USB Interface Board를 PC와 연결합니다.  
 - [시스템]-[장치관리자]-[port]에서 Serial Port가 정상적으로 연결되었는지 확인합니다.  
-- 정상적으로 연결되어 있을 경우 아래의 이미지와 같이 Model명이 표시되는것을 확인할 수 있습니다.
-  ![[serialPort_check_win.jpg]]
+- 정상적으로 연결되어 있을 경우 아래의 이미지와 같이 Model명이 표시되는 것을 확인할 수 있습니다.
+	 ![[fd_confirm_driver.png|600]]
+
 ### 2.4.2 Linux[ubuntu/Demian]
 #### 2.4.2.1 CH341 Driver   
 CH341 driver는 USB-02 Model에서 만 사용됩니다.   
@@ -206,11 +207,11 @@ Done
   그룹에 추가 한 후에는 반드시 로그아웃 후 로그인 해야 변경 사항이 적용 됩니다.
 ### 2.4.3 Mac OS
 #### 2.4.3.1 USB 02(CH34x Driver)
-USB Interface Board Driver를 다운로드 합니다.
+USB Interface Board Driver를 다운로드 합니다.  
 [CH341SER_ZIP Driver Download Link](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)
 
-다운로드한 파일을 실행하고, 다운로드한 파일 중 <font color="#4f81bd">"CH34X_DRV_INSTRUCTIONS.pdf"</font> 파일의 가이드에 따라 드라이버를 설치합니다.  
-OS X 11.0 이상을 사용하고 OS가 Rosetta를 지원하지 않는 경우 dmg 형식 드라이버를 설치해야 합니다(Step 4 수행). 그렇지 않으면 pkg 형식 드라이버를 설치해야 합니다. 기본적으로(Step 3을 따르세요).  
+다운로드한 파일을 실행하고, 다운로드한 파일 중 <font color="#4f81bd">"CH34X_DRV_INSTRUCTIONS.pdf"</font> 파일의 가이드에 따라 드라이버를 설치합니다.   
+OS X 11.0 이상을 사용하고 OS가 Rosetta를 지원하지 않는 경우 dmg 형식 드라이버를 설치해야 합니다. 그럴 경우 <font color="#4f81bd">Step 3 </font>을 확인 하시기 바랍니다. 
 
 <font color="#4f81bd"><b>Step 1. Install pkg format Driver</b></font>   
 - CH34xVCPDriver.pkg 파일을 click 하여 설치를 진행합니다.  
@@ -220,8 +221,8 @@ OS X 11.0 이상을 사용하고 OS가 Rosetta를 지원하지 않는 경우 dmg
 <font color="#4f81bd"><b>Step 2. Install CH32xVCPDriver Application</b></font>   
 - LaunchPad를 열고 "CH34xVCPDriver" 애플리케이션을 찾아 App을 열고 "Install" 버튼을 Click 합니다.  
 ![[ch34x_app.png|600]]  
-OS X 10.9~OS X 10.15를 사용하는 경우 "다시 시작"을 클릭하여 컴퓨터를 다시 시작해야 합니다.
-다시 시작한 후 <font color="#4f81bd"><b>Step 4</b></font> 단계를 수행하십시오.
+- OS X 10.9~OS X 10.15를 사용하는 경우 "다시 시작"을 클릭하여 컴퓨터를 다시 시작해야 합니다.
+- 다시 시작한 후 <font color="#4f81bd"><b>Step 4</b></font> 단계를 수행하십시오.
 
 <font color="#4f81bd"><b>Step 3. OS X 11.0 이상을 사용하고 OS가 Rosetta를 지원하지 않는 경우</b></font>  
 - dmg 형식 드라이버를 설치할 때 dmg 파일을 클릭하고 Drag해야 합니다.
@@ -231,10 +232,10 @@ OS X 10.9~OS X 10.15를 사용하는 경우 "다시 시작"을 클릭하여 컴�
 
 <font color="#4f81bd"><b>Step 4. Driver  설치 확인</b></font>  
 - USB-02을 USB 포트에 연결하고 [System Report]->[Hardware]->[USB]을 선택하면, 오른쪽은 “USB Device Tree”에서 연결한 장치를 찾을 수 있습니다.  
-- USB 장치가 제대로 작동하는 경우 "Vendor ID"가 [0x1a86]으로 나타납니다.
+- USB 장치가 제대로 작동하는 경우 "Vendor ID"가 [0x1a86]으로 나타납니다.  
 ![[Software/Total Manager/img/ch34x_confirm_Driver.png|600]]  
 
-<font color="#4f81bd"><b>Step 5. Comport 확인</b></font>  
+<font color="#4f81bd"><b>Step 5. Comport 확인</b></font>   
 - [Application] - [Utility] 폴더에서 "터미널" 프로그램을 열고 다음 명령을 입력하세요.  
 ~~~
 $ ls /dev/tty*
@@ -245,7 +246,7 @@ tty.wchusbserial121311
 >[!note] Note  
 >추가적인 내용은 다운로드한 파일 중 <font color="#4f81bd">"CH34X_DRV_INSTRUCTIONS.pdf"</font> 을 참조하여 주시기 바랍니다.  
 #### 2.4.3.2 USB 03(FTDI Driver)
-해당 Driver 설치 설명은 해당 Driver 설치 설명은 Mac OS X10.15 and macOS 11/12을 기준으로 설명을 드립니다.  그 이전 OS X 버전의 경우 FTDI 사의 2016년  "Mac OS X Installation Guide"을 참조하여 주시기 바랍니다.
+해당 Driver 설치 설명은 해당 Driver 설치 설명은 Mac OS X10.15 and macOS 11/12을 기준으로 설명을 드립니다.  그 이전 OS X 버전의 경우 FTDI 사의 2016년  "Mac OS X Installation Guide"을 참조하여 주시기 바랍니다.  
 
 USB Interface Board Driver를 다운로드 합니다.  
 - https://ftdichip.com/drivers/vcp-drivers/  
@@ -255,7 +256,6 @@ USB Interface Board Driver를 다운로드 합니다.
 ![[FTDI_driver_file.png|500]]
 
 <font color="#4f81bd"><b>Step 2. FTDI USB Serial Dext VCP Install</b></font>   
-
 FTDIUSBSerialDextInstaller_x_y_z 실행 시킨 후 아래와 같이 Install 버튼을 클릭합니다.  
 ![[FTDI_install.png|600]]    
 만약 아래와 같이, "System Extention blocked" 메세지가 나왔을 경우 "Open System Settings" 버튼을 클릭하여 시스템 창을 엽니다.   
@@ -264,11 +264,13 @@ FTDIUSBSerialDextInstaller_x_y_z 실행 시킨 후 아래와 같이 Install 버�
 
 설치가 완료되면 아래와 같이 표시가 됩니다.  
 ![[FTDI Succeeded Install.png|500]]  
-**Step 3. Driver  설치 확인**   
+
+<font color="#4f81bd"><b>Step 3. Driver  설치 확인</b></font>   
 USB-03을 USB 포트에 연결하고 [System Report]->[Hardware]->[USB]을 선택하면, 오른쪽은 “USB Device Tree”에서 연결한 장치를 찾을 수 있습니다.  
 USB 장치가 제대로 작동하는 경우 아래의 그림과 같이 Model 명이 나타납니다.
 ![[ch34x_confirm_Driver.png|700]]
-**Step 4. Comport 확인**  
+
+<font color="#4f81bd"><b>Step 4. Comport 확인</b></font>   
 [Application]-[Utility] 폴더에서 "터미널" 프로그램을 열고 다음 명령을 입력하세요.  
 ~~~
 $ ls /dev/tty*
@@ -292,9 +294,11 @@ Actuaotor Scan 팝업 창의 화면 구성은 아래와 같습니다.
 **1. Port 선택**  
 위 [[#2.4 USB Interface Board]] 의 설명을 참조하시어 Serial Port 명을 확인 하신 후 진행하시기 바랍니다.  연결된 Serial Port와 동일한 Port를 선택한 후 OPEN 버튼을 클릭하여 Serial Port를 연결합니다.  
 ![[ScanActuator-PortSelect.png|700]]
+
 Serial Port 를 Open하면 Option 항목이 활성화 됩니다.  
 모든 옵션은 중복으로 선택할 수 있으며 검색 시 순차적으로 진행이 됩니다.  
 All 버튼을 누르게 되면 모든 선택하거나 모두 선택 해지를 하게 됩니다.
+
    ![[yrdy-2023-07-25_10.39.gif]]
   
 다음은 모델에 따른 기본 설정 값에 대한 예시 입니다.   
@@ -303,12 +307,11 @@ All 버튼을 누르게 되면 모든 선택하거나 모두 선택 해지를 �
 |:------------------|:----------------------------|:---------------------|
 |   **Mini L12/12Lf**   | Own Protocol                |             57600pbs |
 |   **Mini 17Lf**       | Modbus Protocol             |             57600pbs |  
-
 ### 3.1.3 Actuator 검색
- SCAN 버튼을 누르게 되면 선택한 옵션에 따라 차례로 검색을 시작하여 해당 결과를 표시합니다.
+ SCAN 버튼을 누르게 되면 선택한 옵션에 따라 차례로 검색을 시작하여 해당 결과를 표시합니다.  
  원하는 Actuator 가 모두 검색 되었을 경우, 완료를 기다리지 않고 STOP 버튼을 click하면 검색을 종료하면 됩니다.  
- ![[SCAN_Desc.png|700]]
- 검색이 완료되었으면 Close 버튼을 click하여 Popup 창을 닫습니다.
+ ![[SCAN_Desc.png|700]]  
+ 검색이 완료되었으면 Close 버튼을 Click하여 Pop-Up 창을 닫습니다.
 ## 3.2 Information
 mightyZAP Actuator의 Model명, Rated Load, Stroke, firmware Version등 관련된 정보를 표시하는 페이지 입니다.  
 Manager가 실행이 되면 처음 표시하는 창이  창이며, 아래의 이미지와 같이 사이드 바 메뉴의 첫번째 아이콘을 클릭하여 해당 페이지로 이동합니다. 
@@ -321,8 +324,10 @@ Actuator List는 Baudrate와 Protocol에 따라 분류되어 표시 되며,  Bau
 ### 3.2.2 정보 확인
 Actuator List를 선택하면 해당 Actuator의 모델 명, Stroke 길이, 정격 부하, 통신 Protocol 등의 정보가 표시됩니다. 
 ![[Actuator_Information.png|700]]
+  
 이중 중요한 일부 정보가 Manager의 하단 Footer에 표시됩니다.
 ![[FooterDiscription.png]]
+  
 Footer에 표시된 정보는 information Page가 아닌 다른 Page에서도 볼 수 있습니다. 
 ## 3.3 Parameter
 mightyZAP Actuator를 설정 및 간단한 동작 테스트를 하고, 동작 상태를 Monitoring하는 페이지 입니다.  
@@ -337,9 +342,9 @@ Non-volatile Meomory는 비 휘발성 메모리 영역의 Parameter로 수정 �
 Volatile Memory는 휘발성 메모리 영역으로 내부 Ram에 저장이 되며, 전원이 꺼지기 전까지는 해당 Data를 저장하고 있지만, 전원이 꺼지게 되면 해당 Data는 초기화 됩니다.  
 Parameter 영역은 매니저의 크기를 줄일 경우, 주로 사용되어지는 Volatile-Memeory 영역이 상단으로 이동합니다.   
 ![[DynamicSize.png|700]]
-
+  
 **Tooltip 기능**
-각 Paremater 이름의 옆에는 <span style="aline-text:center;display:inline-block;background-color:black; color:white;width:20px;border-radius:5px;">?</span>를 한 아이콘이 있습니다. 해당 아이콘에  mouse를 가져가 대면 해당 Paremater에 대한 간단한 설명이 표시됩니다.  
+각 Paremater 이름의 옆에는 <span style="text-align:center;display:inline-block;background-color:white;border:1px solid  black; color:black;width:20px;height:20px;border-radius:20px;line-height:normal;"> ? </span>를 한 아이콘이 있습니다. 해당 아이콘에  mouse를 가져가 대면 해당 Paremater에 대한 간단한 설명이 표시됩니다.  
 ![[tooltip.png|500]]
 ### 3.3.2 Parameter Control
 - **Slide Control** : <font color="#4f81bd">Non-volatile Memory</font>  
