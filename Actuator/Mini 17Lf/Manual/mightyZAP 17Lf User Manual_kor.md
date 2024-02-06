@@ -296,28 +296,28 @@ Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Strok
 **Start Compliance Margin은 다음의 2가지의 경우에 적용이 됩니다.**
 - 현재 위치에서 다른 위치로 이동하기 위해 Goal Postion 값을 변경하는 경우
 - 정지 위치에서 외력에 의해 위치가 변화가 생긴 경우  
-    (사용자는 Goal Position을 변경하지 않았으나 Present Position이 바뀐 경우입니다.  일반적으로 외력에 의한 밀림이나 내부 유격 등의 의한 현재 위치의 변동이 생길 경우 입니다)
+    (사용자는 Goal Position을 변경하지 않았으나 Present Position이 바뀐 경우입니다.  일반적으로 외력에 의한 밀림이나 내부 유격 등의 의한 현재 위치의 변동이 생길 경우 입니다)  
  
 <font color="#4f81bd">예시 1. Start Compliance Margin 보다 작게  Goal Position을 변경한 경우</font>  
 - Start Compliance Margin : 20
 - Present Positon  : 1000
 - Goal Position : 1000 -> 1010으로 변경할 경우
-- **결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다**
+- **결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다**  
    <font color="#4f81bd">예시 2. Start Compliance Margin 보다 크게  Goal Position을 변경한 경우</font>  
 - Start Compliance Margin : 20
 - Present Positon  : 1000
 - Goal Position : 1000 -> 950으로 변경할 경우
-- **결과 : 위치 편차가 Margin보다 커 모터가 동작되어 Present Position 값이 950으로 변경**
+- **결과 : 위치 편차가 Margin보다 커 모터가 동작되어 Present Position 값이 950으로 변경**  
  <font color="#4f81bd">예시 3. 외부 힘에 의해 위치 편차가 발생한 경우</font>  
 - Start Compliance Margin : 20
 - Goal Position : 1000
 - Present Positon  : 1000 -> 1010으로 변경된 경우
-- **결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다**
+- **결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다**  
       <font color="#4f81bd">예시 4. 외부 힘에 의해 위치값이 크게 변경된 경우</font>  
 - Start Compliance Margin : 20
 - Goal Positon  : 1000
 - Present Position : 1000 -> 950으로 변경할 경우
-- **결과 : 위치 편차가 Margin보다 커 모터가 동작되어 Present Position 값이 1000으로 변경
+- **결과 : 위치 편차가 Margin보다 커 모터가 동작되어 Present Position 값이 1000으로 변경  
 
 위의 예와 같이 Start Compliacne  Margin을 크게 설정할 경우, 외부 변화에 둔감하게 동작하여 위치 정밀도는 떨어질 수 있으나, 사용자가 제어하지(의도하지) 않은 모터의 잦은 동작을 막아 동작 안전성 및 내구성에 좋습니다.  
 >[!warning] Warning  
