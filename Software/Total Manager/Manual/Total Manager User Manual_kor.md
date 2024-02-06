@@ -24,7 +24,7 @@ mightyZAP을 위한 USB Interface Board를 당사의 웹사이트에서 판매�
 ## 1.3 Feature
 ### 1.3.1 Information
 mightyZAP의 Model 명, Stroke, Rate Load, Firmware Version 등 Actuator와 관련된 기본 정보를 표시합니다. Software를 실행하였을 경우 제일 처음에 나타나는 화면입니다.  
-![[Information_tag.png|700]]
+![[information_tag.png|700]]
 ### 1.3.2 Parameter
 mightyZAP을  제어하거나 Parameter를 변경 및 Monitoring을 할 수 있습니다.   
 연결된 여러 개의 mightyZAP 중 선택하여 하나의 mightyZAP을 제어할 수 있으며, Parameter의 Type에 따라 Non-voltatile Memory와 Volatile Memoty 화면으로 나누어져 있습니다.    
@@ -208,9 +208,9 @@ OS X 10.9~OS X 10.15를 사용하는 경우 "다시 시작"을 클릭하여 컴�
 다시 시작한 후 <font color="#4f81bd"><b>Step 4</b></font> 단계를 수행하십시오.
 
 **Step 3. OS X 11.0 이상을 사용하고 OS가 Rosetta를 지원하지 않는 경우**  
-	dmg 형식 드라이버를 설치할 때 dmg 파일을 클릭하고 Drag해야 합니다.
-	OS의 응용 프로그램 폴더에 "CH34xVCPDriver"를 넣은 다음 "LaunchPad"를 열고 찾습니다.
-	“CH34xVCPDriver” 애플리케이션을 실행하고 앱을 열고 “설치” 버튼을 클릭하세요.  
+dmg 형식 드라이버를 설치할 때 dmg 파일을 클릭하고 Drag해야 합니다.
+OS의 응용 프로그램 폴더에 "CH34xVCPDriver"를 넣은 다음 "LaunchPad"를 열고 찾습니다.
+“CH34xVCPDriver” 애플리케이션을 실행하고 앱을 열고 “설치” 버튼을 클릭하세요.  
 ![[ch34x_app.png|600]]    
 
 **Step 4. Driver  설치 확인**  
@@ -224,7 +224,7 @@ $ ls /dev/tty*
 tty.wchusbserial121311
 ~~~
   "tty.wchusbserialx"가 표시되어야 합니다. 여기서 "x"는 Windows COM 포트 할당과 유사하게 할당된 장치 번호입니다.
->[!note] Note
+>[!note] Note  
 >추가적인 내용은 다운로드한 파일 중 <font color="#4f81bd">"CH34X_DRV_INSTRUCTIONS.pdf"</font> 을 참조하여 주시기 바랍니다.  
 #### 2.4.3.2 USB 03(FTDI Driver)
 해당 Driver 설치 설명은 해당 Driver 설치 설명은 Mac OS X10.15 and macOS 11/12을 기준으로 설명을 드립니다.  그 이전 OS X 버전의 경우 FTDI 사의 2016년  "Mac OS X Installation Guide"을 참조하여 주시기 바랍니다.
@@ -235,6 +235,7 @@ USB Interface Board Driver를 다운로드 합니다.
 **Step 1. Application folder에 설치 하기**  
 다운로드 받은 "FTDIUSBSerialDextInstaller_x_y_z.app" 파일을 Application 폴더로 옮깁니다.  
 ![[FTDI_driver_file.png|500]]
+
 **Step 2. FTDI USB Serial Dext VCP Install**  
 FTDIUSBSerialDextInstaller_x_y_z 실행 시킨 후 아래와 같이 Install 버튼을 클릭합니다.  
 ![[FTDI_install.png|600]]    
@@ -242,12 +243,12 @@ FTDIUSBSerialDextInstaller_x_y_z 실행 시킨 후 아래와 같이 Install 버�
 [Privacy & Security] 항목에서  "FTDIUSBSerialDextInstall_x_y_z.app"을 허용 버튼을 눌러 설치를 지속합니다.  
 ![[Allow_FTDI_Driver.png|700]]
 
-설치가 완료되면 아래와 같이 표시가 됩니다.
+설치가 완료되면 아래와 같이 표시가 됩니다.  
 ![[FTDI Succeeded Install.png|500]]  
 **Step 3. Driver  설치 확인**   
 USB-03을 USB 포트에 연결하고 [System Report]->[Hardware]->[USB]을 선택하면, 오른쪽은 “USB Device Tree”에서 연결한 장치를 찾을 수 있습니다.  
 USB 장치가 제대로 작동하는 경우 아래의 그림과 같이 Model 명이 나타납니다.
-![[Software/Total Manager/img/ch34x_confirm_Driver.png|700]]
+![[ch34x_confirm_Driver.png|700]]
 **Step 4. Comport 확인**  
 [Application]-[Utility] 폴더에서 "터미널" 프로그램을 열고 다음 명령을 입력하세요.  
 ~~~
@@ -379,7 +380,7 @@ Monitoring 기능은 아래와 같이 구성 되어있습니다.
 [Firmware Download](https://mightyzap.com/en/digitalarchive4/?category1=Firmware&mod=list&pageid=1)
 ### 3.4.1 화면 구성    
 Update Page는 이미지와 같이 펌웨어 업데이트, Actuator Recovery 영역으로 되어있으며, 각각의 실행은 상단 header의 메뉴에서 해당 아이콘을 선택하여 실행할 수 있습니다.  
-![[Software/Total Manager/img/Information_tag.png|700]]
+![[Information_tag.png|700]]
 ### 3.4.2 Firmware Update   
 **Actuator 연결**  
 업데이트를 진행할 서보 모터를 연결하고 SCAN 을 합니다.  
@@ -392,7 +393,7 @@ firmware update를 진행 할 경우 그림과 같이 Select file 버튼을 눌�
 > [!warning] 주의 사항  
 > 이때 다른 모델의 firmware file 을 선택하지 않게 조심해야 합니다. Actuator List에 나와있는 Model 명과 uipdate file의 이름이 동일한지 확인해야 합니다.
 
-**업데이트** 
+**업데이트**   
 모든 사항이 준비가 다 되었으면 상단 메뉴바에서 Update 아이콘을 클릭합니다.   
 ![[Update-Button.png|700]]
 이때 둘 이상의 actuator 가 연결되었을 경우 다음과 같은 경고창이 나타나고 SCAN  작업을 다시 합니다. 
@@ -400,7 +401,7 @@ firmware update를 진행 할 경우 그림과 같이 Select file 버튼을 눌�
  mightyZAP이 업데이트를 위해서 재 시작하는데 정상적으로 통신이 이루어지지 않는 경우 아래의 그림과 같이 커넥터를 다시 연결하라는 메세지가 나타납니다. 이때 mightyZAP에 연결된 커넥터를 빼신 후 다시 연결하시면 정상 적으로 업데이트가 진행 됩니다.  
 ![[Update-Reconnect.png|600]]
 
-**업데이트 완료**
+**업데이트 완료**  
 업데이트가 진행되면 그림과 같이 progress bar가 진행이 됩니다. 100%까지 완료되면 update 완료 메세지가 나타납니다.    
 ![[Update-Complete.png|700]]
 필요에 따라 reset이나 Factory Reset을 추가적으로 진행하시면 됩니다.  
@@ -431,13 +432,13 @@ Recovery 진행 사항은 각 단계마다 이미지 또는  Text로 그 단계�
 
 ### 3.4.4 Reset
 mightyZAP의 Parameter를 초기화하는 명령입니다. 이때 ID, Baudrate, Protocol 및 Calibration Parameter는 초기화 되지 않습니다.  
-![[reset_selcect.png]]  
+![[reset_selcect.png|700]]  
 ![[resetPopup.png|300]]
 Reset 아이콘을 클릭하면 다음과 같은 Popup창이 나타납니다.  OK 버튼을 누르면 Parameter가 리셋이 되며 화면이 깜빡이며 Parameter 창으로 이동하며 Data를 다시 불러옵니다.  
-![[resetAction.gif]]
+![[resetAction.gif|700]]
 ### 3.4.5 Restart  
 mightyZAP의 시스템을 재 시작 할 때 사용합니다. Overload Shutdown 초기화 또는 변경된 Non Volatile Parameter의 Data를 확인하기 위해 사용합니다.  
-![[restartSelect.png]]  
+![[restartSelect.png|700]]  
 해당 버튼을 누르면 화면이 한번 깜빡이고 Parameter창으로 이동하여 Data를 다시 읽어옵니다.
 ### 3.4.6 Factory Reset   
 Actuator의  상태를 공장 출하 시의 초기 상태로 돌리고, 위치 값을 결정하는 Potentiometer의 Calibration을 진행합니다.  
