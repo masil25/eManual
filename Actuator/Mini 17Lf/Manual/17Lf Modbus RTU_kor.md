@@ -15,6 +15,7 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 
 ![[packet Description.png]]  
   
+
 - 송신 패킷 구조
 
 |  | Additional Address | Fucntion code | Data | < | < | Error Check |  |
