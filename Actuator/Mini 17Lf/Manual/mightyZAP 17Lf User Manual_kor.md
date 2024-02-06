@@ -302,18 +302,21 @@ Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Strok
 - Start Compliance Margin : 20
 - Present Positon  : 1000
 - Goal Position : 1000 -> 1010으로 변경할 경우
-- **결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다**  
-   <font color="#4f81bd">예시 2. Start Compliance Margin 보다 크게  Goal Position을 변경한 경우</font>  
+- **결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다**   
+
+<font color="#4f81bd">예시 2. Start Compliance Margin 보다 크게  Goal Position을 변경한 경우</font>  
 - Start Compliance Margin : 20
 - Present Positon  : 1000
 - Goal Position : 1000 -> 950으로 변경할 경우
 - **결과 : 위치 편차가 Margin보다 커 모터가 동작되어 Present Position 값이 950으로 변경**  
- <font color="#4f81bd">예시 3. 외부 힘에 의해 위치 편차가 발생한 경우</font>  
+
+<font color="#4f81bd">예시 3. 외부 힘에 의해 위치 편차가 발생한 경우</font>  
 - Start Compliance Margin : 20
 - Goal Position : 1000
 - Present Positon  : 1000 -> 1010으로 변경된 경우
 - **결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다**  
-      <font color="#4f81bd">예시 4. 외부 힘에 의해 위치값이 크게 변경된 경우</font>  
+
+<font color="#4f81bd">예시 4. 외부 힘에 의해 위치값이 크게 변경된 경우</font>  
 - Start Compliance Margin : 20
 - Goal Positon  : 1000
 - Present Position : 1000 -> 950으로 변경할 경우
