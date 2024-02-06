@@ -13,8 +13,7 @@ mightyZAP은 MODBUS-RTU 프로토콜 내용을 준수합니다.
 MODBUS-RTU 프로토콜의 최대 송수신 패킷 길이는 256 Byte 입니다. 따라서 송수신 패킷의 총 길이가 256Byte 를 넘기지 않도록 주의하여 주십시오.  
 MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 같이 시작과 끝 사이에 최소 3.5 Char 이상의 이 필요합니다.  
 
-![[packet Description.png]]  
-  
+![[packet Description.png|700]]   
 
 - 송신 패킷 구조
 
