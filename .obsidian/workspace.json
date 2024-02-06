@@ -4,17 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "c01f3af49d05ccf2",
+        "id": "369010f19639e2bc",
         "type": "tabs",
         "children": [
           {
-            "id": "c2eb027ea3811807",
+            "id": "087b1ff4bb4bb44d",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": "Software/Total Manager/Manual/Total Manager User Manual_eng.md",
-                "staged": false
+                "file": "Software/Total Manager/Manual/Total Manager User Manual_kor.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -84,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Software/Total Manager/Manual/Total Manager User Manual_kor.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -100,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Software/Total Manager/Manual/Total Manager User Manual_kor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Software/Total Manager/Manual/Total Manager User Manual_kor.md"
+              }
             }
           },
           {
@@ -160,19 +165,20 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "c2eb027ea3811807",
+  "active": "087b1ff4bb4bb44d",
   "lastOpenFiles": [
+    "Software/Total Manager/img/FTDI_install.png",
+    "Software/Total Manager/img/CH34x_Install success.png",
+    "Software/Total Manager/img/CH34x_install.png",
     "Software/Total Manager/Manual/Total Manager User Manual_kor.md",
-    "Software/Total Manager/img/update-veiw.png",
-    "Software/Total Manager/img/update-view.png",
-    "Software/Total Manager/img/UpdateComplete-SCAN.png",
-    "Software/Total Manager/img/UpdateSelect-Button.png",
-    "Software/Total Manager/img/updateMenu.png",
-    "Software/Total Manager/img/UpdateComplete.png",
-    "Software/Total Manager/img/Update-Reconnect2.png",
-    "Software/Total Manager/img/Update-Reconnect.png",
-    "Software/Total Manager/img/update-view.jpg",
-    "Software/Total Manager/img/Parameter.png",
+    "Software/Total Manager/img/CH34x_Confirm_driver.png",
+    "Software/Total Manager/img/FTDI Succeeded Install.png",
+    "Pasted image 20240205181745.png",
+    "Software/Total Manager/img/Allow_FTDI_Driver.png",
+    "Software/Total Manager/img/Allow_FTDI_Driver.png",
+    "Pasted image 20240205174228.png",
+    "Software/Total Manager/img/ch34x_app.png",
+    "무제 파일.md",
     "Software/Total Manager/Manual/Total Manager User Manual_eng.md",
     "Software/Total Manager/Total Manager User Manual_kor.md",
     "Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_kor.md",
@@ -198,7 +204,6 @@
     "Actuator/Mini 12Lf/Mini 12Lf User Manual_kor.md",
     "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27_kor.md",
     "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-27_eng.md",
-    "Actuator/Mini 17Lf/Datasheet/17Lf-xxF-37_kor.md",
     "Actuator/Mini 12Lf/Drawing",
     "Software/Total Manager/Manual",
     "Actuator/Drawing",

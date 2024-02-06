@@ -113,15 +113,16 @@ mightyZAP Total Manager와 mightyZAP의 통신을 위하여 Serial Convertor 가
 	![[ftdi_win_install.png|650]]
 
 - **Interface Board 연결 확인**  
-  USB Interface Board를 PC와 연결합니다.
+  USB Interface Board를 PC와 연결합니다.  
   [시스템]-[장치관리자]-[port]에서 Serial Port가 정상적으로 연결되었는지 확인합니다. 
-  정장적으로 연결되어 있을 경우 이미지에서와 같이 새로운 com port가 추가되는것을 확인할 수 있습니다.  
+  정장적으로 연결되어 있을 경우 이미지에서와 같이 새로운 com port가 추가된것을 확인할 수 있습니다.  
   ![[serialPort_check_win.jpg]]
 ### 2.4.2 Linux[ubuntu/Demian]
-1) CH341 Driver 
-CH341 driver는 USB-02 Model에서 만 사용됩니다. 
-CH340, CH341 의 시리얼 드라이버는 Linux 커널 버전 2.6.24부터 내장되어 있으며, 해당 위치는 drivers/usb/serial/ch341.c입니다. 다만 드라이버를 최신 상태로 유지 하기 원하실 경우 아래의 방법을 사용하기 바랍니다.
- - 아래의 사이트에서 Linux용 드라이버를 다운로드 받으시기 바랍니다.
+1) CH341 Driver   
+   CH341 driver는 USB-02 Model에서 만 사용됩니다.   
+   CH340, CH341 의 시리얼 드라이버는 Linux 커널 버전 2.6.24부터 내장되어 있으며, 해당 위치는 drivers/usb/serial/ch341.c입니다.  
+   다만 드라이버를 최신 상태로 유지 하기 원하실 경우 아래의 방법을 사용하기 바랍니다.
+ - 아래의 사이트에서 Linux용 드라이버를 다운로드 받으시기 바랍니다.  
    [LINUX용 CH341 Driver Donwload(ZIP)](https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html)  
  - 다운로드한 파일의 압축을 풉니다.
  - 터미널 창을 열고 다운로드한 디렉토리로 이동을 합니다.
@@ -142,7 +143,7 @@ $ sudo dmesg | grep ch34
 ```
 2) FTDI Driver
 FTDI Driver는 USB-02를 제외한 모든 모델에서 사용됩니다.  
-FTDI VCP 드라이버는 Linux  커널에 내장되어 있습니다. 모든 FTDI 장치에 VCP 드라이버 지원이 있는지 확인하기 위해 FTDI는 Linux  시스템에 최신 커널 릴리즈를 설치할 것을 권장합니다. Linux 에서는 VCP 드라이버가 /dev/ttyUSBx로 표시됩니다.  
+FTDI VCP 드라이버는 Linux  커널에 내장되어 있습니다. 모든 FTDI 장치에 VCP 드라이버 지원이 있는지 확인하기 위해 FTDI는 Linux  시스템에 최신 커널 릴리즈를 설치할 것을 권장합니다. Linux 에서는 VCP 드라이버가 "/dev/ttyUSBx" 로 표시됩니다.  
 Comport를 확인하는 방법 :  
 - USB Interface board를 PC와 Cable로 연결한다.
 - 터미널 창을 열고 다음을 입력하면 다음과 같이 출력이 나타납니다.
@@ -154,7 +155,7 @@ $ dmesg|grep FTDI
 [   xxx] ftdi_sio: v1.6.0:USB FTDI Serial Converters Driver  
 ```
 
-**Serial Port 권한 얻기**
+**Serial Port 권한 얻기**  
 우분투는 기본적으로  root 사용자가 아닌 일반 사용자로 로그인하도록 하기 때문에 Serial Port와 같은 시스템 장치를 다루기 위해서는 권한 설정을 해야 합니다.   
 먼저 연결된 Port 명을 확인하기 위해 아래의 명령을 입력합니다.
 ```
@@ -172,7 +173,7 @@ $ ls -l /dev/ttyUSB0
 crw-rw---- 1 root dialout 188,  0 11월  1 10:49 /dev/ttyUSB0  
 ```
 
-"id Gn" 명령을 통해 현재 로그인 중인 사용자가 속한 그룹을 확인합니다.
+"id -Gn" 명령을 통해 현재 로그인 중인 사용자가 속한 그룹을 확인합니다.
 ```baSH
 $ id -Gn  
 user adm cdrom sudo dip plugdev  
@@ -191,14 +192,69 @@ Done
 ### 2.4.3 Mac OS
 #### 2.4.3.1 USB 02(CH34x Driver)
 USB Interface Board Driver를 다운로드 합니다.  
-	- https://www.wch.cn/download/CH341SER_ZIP.html
-다운로드한 파일을 실행하고 가이드에 따라 드라이버를 설치합니다.  
-	[이미지 ]  
-USB Interface Board를 PC와 연결합니다.  
-[시스템 정보]-[Hardware]-[USB]에서 Serial Port가 정 상적으로 연결되었는지 확인합니다.    
-정장적으로 연결되어 있을 경우 이미지에서와 같이 새로운 com port가 추가되는것을 확인할 수 있습니다.  
-[이미지]  
+	- https://www.wch.cn/download/CH341SER_ZIP.html  
+다운로드한 파일을 실행하고, 다운로드한 파일 중 <font color="#4f81bd">"CH34X_DRV_INSTRUCTIONS.pdf"</font> 파일의 가이드에 따라 드라이버를 설치합니다.  
+OS X 11.0 이상을 사용하고 OS가 Rosetta를 지원하지 않는 경우 dmg 형식 드라이버를 설치해야 합니다(4단계 수행). 그렇지 않으면 pkg 형식 드라이버를 설치해야 합니다. 기본적으로(3단계를 따르세요).
+**Step 1. Install pkg format Driver**  
+![[CH34x_install.png|600]]  
+![[CH34x_Install success.png|600]]  
+  
+OS X 11.0 이상에 pkg 형식 드라이버를 설치할 때 다음을 수행해야 합니다. 
+
+**Step 2. Install CH32xVCPDriver Application**  
+"LaunchPad"를 열고 "CH34xVCPDriver" 애플리케이션을 찾아 앱을 열고 "Install" 버튼을 Click 합니다.  
+![[ch34x_app.png|600]]  
+OS X 10.9~OS X 10.15를 사용하는 경우 "다시 시작"을 클릭하여 컴퓨터를 다시 시작해야 합니다.
+다시 시작한 후 <font color="#4f81bd"><b>Step 4</b></font> 단계를 수행하십시오.
+
+**Step 3. OS X 11.0 이상을 사용하고 OS가 Rosetta를 지원하지 않는 경우**
+	dmg 형식 드라이버를 설치할 때 dmg 파일을 클릭하고 Drag해야 합니다.
+OS의 응용 프로그램 폴더에 "CH34xVCPDriver"를 넣은 다음 "LaunchPad"를 열고 찾습니다.
+“CH34xVCPDriver” 애플리케이션을 실행하고 앱을 열고 “설치” 버튼을 클릭하세요.
+![[ch34x_app.png|600]]    
+
+**Step 4. Driver  설치 확인**  
+USB-02을 USB 포트에 연결하고 [System Report]->[Hardware]->[USB]을 선택하면, 오른쪽은 “USB Device Tree”에서 연결한 장치를 찾을 수 있습니다.  
+USB 장치가 제대로 작동하는 경우 "Vendor ID"가 [0x1a86]으로 나타납니다.
+![[Software/Total Manager/img/ch34x_confirm_Driver.png|600]]  
+**Step 5. Comport 확인**  
+응용 프로그램-유틸리티 폴더에서 "터미널" 프로그램을 열고 다음 명령을 입력하세요.  
+~~~
+$ ls /dev/tty*
+tty.wchusbserial121311
+~~~
+  "tty.wchusbserialx"가 표시되어야 합니다. 여기서 "x"는 Windows COM 포트 할당과 유사하게 할당된 장치 번호입니다.
+>[!note] Note
+>추가적인 내용은 다운로드한 파일 중 <font color="#4f81bd">"CH34X_DRV_INSTRUCTIONS.pdf"</font> 을 참조하여 주시기 바랍니다.  
 #### 2.4.3.2 USB 03(FTDI Driver)
+해당 Driver 설치 설명은 해당 Driver 설치 설명은 Mac OS X10.15 and macOS 11/12을 기준으로 설명을 드립니다.  그 이전 OS X 버전의 경우 FTDI 사의 2016년  "Mac OS X Installation Guide"을 참조하여 주시기 바랍니다.
+
+USB Interface Board Driver를 다운로드 합니다.  
+- https://ftdichip.com/drivers/vcp-drivers/  
+
+**Step 1. Application folder에 설치 하기**  
+다운로드 받은 "FTDIUSBSerialDextInstaller_x_y_z.app" 파일을 Application 폴더로 옮깁니다.  
+![[FTDI_driver_file.png|500]]
+**Step 2. FTDI USB Serial Dext VCP Install**  
+FTDIUSBSerialDextInstaller_x_y_z 실행 시킨 후 아래와 같이 Install 버튼을 클릭합니다.  
+![[FTDI_install.png|600]]    
+만약 아래와 같이, "System Extention blocked" 메세지가 나왔을 경우 "Open System Settings" 버튼을 클릭하여 시스템 창을 엽니다.   
+[Privacy & Security] 항목에서  "FTDIUSBSerialDextInstall_x_y_z.app"을 허용 버튼을 눌러 설치를 지속합니다.  
+![[Allow_FTDI_Driver.png|700]]
+
+설치가 완료되면 아래와 같이 표시가 됩니다.
+![[FTDI Succeeded Install.png|500]]  
+**Step 3. Driver  설치 확인**   
+USB-03을 USB 포트에 연결하고 [System Report]->[Hardware]->[USB]을 선택하면, 오른쪽은 “USB Device Tree”에서 연결한 장치를 찾을 수 있습니다.  
+USB 장치가 제대로 작동하는 경우 아래의 그림과 같이 Model 명이 나타납니다.
+![[Software/Total Manager/img/ch34x_confirm_Driver.png|700]]
+**Step 4. Comport 확인**  
+[Application]-[Utility] 폴더에서 "터미널" 프로그램을 열고 다음 명령을 입력하세요.  
+~~~
+$ ls /dev/tty*
+tty.usbserial-x
+~~~
+  "tty.usbserial-x"가 표시되어야 합니다. 여기서 "x"는 Windows COM 포트 할당과 유사하게 할당된 장치 번호입니다.
 # 3 Total Manager Description
 ## 3.1 통신 연결 및 검색
 아래의 이미지와 같이 프로그램을 실행 한 후 상단 매뉴바에서 Scan 버튼을 누르면 Actuator Scan을 위한 팝업 창이 활성화 됩니다.   
