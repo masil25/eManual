@@ -14,7 +14,7 @@ MODBUS-RTU 프로토콜의 최대 송수신 패킷 길이는 256 Byte 입니다.
 MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 같이 시작과 끝 사이에 최소 3.5 Char 이상의 이 필요합니다.  
 
 ![[packet Description.png]]  
-
+  
 - 송신 패킷 구조
 
 |  | Additional Address | Fucntion code | Data | < | < | Error Check |  |
