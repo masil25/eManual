@@ -101,14 +101,14 @@ mightyZAP Total Manager와 mightyZAP의 통신을 위하여 Serial Convertor 가
 ### 2.4.1 Windows
 당사의 Interface Board 는 2가지 Type으로 되어있으며, 각 버전에 따라 드라이버를 다르게 설치해야 합니다. 아래의 설명을 참조하여 드라이버를 설치 합니다.
 
-- **IR-USB02 Driver 설치** (CH340x)
+- **IR-USB02 Driver 설치** (CH340x)  
 	아래의 링크에서 IR-USB03의 Driver를 다운로드 합니다.
-	-  [Driver Link](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)  
+	-  [Driver Link](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)   
 	다운로드 받은 파일을 실행한 후 INSTALL 버튼을 클릭하여 드라이버를 설치합니다
 	![[ch340x_win_install.jpg]]
 - **IR-USB03 Driver 설치**  
 	아래의 링크에서 IR-USB03의 Driver를 다운로드 합니다.  
-	-  [Driver Link](https://ftdichip.com/wp-content/uploads/2021/08/CDM212364_Setup.zip)  
+	[Driver Link](https://ftdichip.com/wp-content/uploads/2021/08/CDM212364_Setup.zip)    
 	다운로드 받은 파일을 실행하여 드라이버를 설치합니다.  
 	![[ftdi_win_install.png|650]]
 
@@ -124,6 +124,8 @@ mightyZAP Total Manager와 mightyZAP의 통신을 위하여 Serial Convertor 가
    다만 드라이버를 최신 상태로 유지 하기 원하실 경우 아래의 방법을 사용하기 바랍니다.
  - 아래의 사이트에서 Linux용 드라이버를 다운로드 받으시기 바랍니다.  
    [LINUX용 CH341 Driver Donwload(ZIP)](https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html)  
+   
+   **Step 1. Driver Install**
  - 다운로드한 파일의 압축을 풉니다.
  - 터미널 창을 열고 다운로드한 디렉토리로 이동을 합니다.
  - 다음의 명령들을 입력합니다
@@ -132,8 +134,10 @@ $ make clean
 $ make  
 $ sudo make load    
 ```
+
+  **Step 2. Driver 확인**
  - 설치된 드라이버를 확인하기 위해 USB-02를 PC와 연결한 후 다음의 명령을 입력합니다.  
-   정상적으로 설치가 되었다면 "ch34x"로 표시되어야 합니다.
+ - 정상적으로 설치가 되었다면 "ch34x"로 표시되어야 합니다.
 ```bash
 $ sudo dmesg | grep ch34    
 [   xxx] usbcore: registered new interface driver ch341  
@@ -141,10 +145,12 @@ $ sudo dmesg | grep ch34
 [   xxx] ch341 1-6.4.3:1.0: ch341-uart converter detected  
 [   xxx] usb 1-6.4.3: ch341-uart converter now attached to ttyUSB1  
 ```
-2) FTDI Driver
-FTDI Driver는 USB-02를 제외한 모든 모델에서 사용됩니다.  
-FTDI VCP 드라이버는 Linux  커널에 내장되어 있습니다. 모든 FTDI 장치에 VCP 드라이버 지원이 있는지 확인하기 위해 FTDI는 Linux  시스템에 최신 커널 릴리즈를 설치할 것을 권장합니다. Linux 에서는 VCP 드라이버가 "/dev/ttyUSBx" 로 표시됩니다.  
-Comport를 확인하는 방법 :  
+
+2) FTDI Driver  
+   FTDI Driver는 USB-02를 제외한 모든 모델에서 사용됩니다.  
+   FTDI VCP 드라이버는 Linux  커널에 내장되어 있습니다. 모든 FTDI 장치에 VCP 드라이버 지원이 있는지 확인하기 위해 FTDI는 Linux  시스템에 최신 커널 릴리즈를 설치할 것을 권장합니다. Linux 에서는 VCP 드라이버가 "/dev/ttyUSBx" 로 표시됩니다.  
+   
+   **Step 1. Comport 확인**  
 - USB Interface board를 PC와 Cable로 연결한다.
 - 터미널 창을 열고 다음을 입력하면 다음과 같이 출력이 나타납니다.
 ```bash
@@ -154,10 +160,9 @@ $ dmesg|grep FTDI
 [   xxx] usb 9-1: FTDI USB Serial Device converter now attached to ttyUSB0  
 [   xxx] ftdi_sio: v1.6.0:USB FTDI Serial Converters Driver  
 ```
-
-**Serial Port 권한 얻기**  
-우분투는 기본적으로  root 사용자가 아닌 일반 사용자로 로그인하도록 하기 때문에 Serial Port와 같은 시스템 장치를 다루기 위해서는 권한 설정을 해야 합니다.   
-먼저 연결된 Port 명을 확인하기 위해 아래의 명령을 입력합니다.
+   **Step 2. Serial Port 권한 얻기**  
+   우분투는 기본적으로  root 사용자가 아닌 일반 사용자로 로그인하도록 하기 때문에 Serial Port와 같은 시스템 장치를 다루기 위해서는 권한 설정을 해야 합니다.   
+   먼저 연결된 Port 명을 확인하기 위해 아래의 명령을 입력합니다.
 ```
 $ dmesg|grep tty  
 [   xxx] printk: console [tty0] enabled  
@@ -166,20 +171,19 @@ $ dmesg|grep tty
 [   xxx] usb 1-6.1.4: FTDI USB Serial Device converter now attached to ttyUSB0  
 ```
 
-
-"ls -l" 명령을 이용하여 확인된 Serial Port를 이용하여 사용 그룹을 확인합니다.
+  "ls -l" 명령을 이용하여 확인된 Serial Port를 이용하여 사용 그룹을 확인합니다.
 ```bash
 $ ls -l /dev/ttyUSB0  
 crw-rw---- 1 root dialout 188,  0 11월  1 10:49 /dev/ttyUSB0  
 ```
 
-"id -Gn" 명령을 통해 현재 로그인 중인 사용자가 속한 그룹을 확인합니다.
+  "id -Gn" 명령을 통해 현재 로그인 중인 사용자가 속한 그룹을 확인합니다.
 ```baSH
 $ id -Gn  
 user adm cdrom sudo dip plugdev  
 ```
 
-현재 로그인한 사용자에서 dialout 그룹이 포함되어 있지 않기 때문에, 현재 사용자에게 dialout 그룹을 추가해 줍니다.
+  현재 로그인한 사용자에서 dialout 그룹이 포함되어 있지 않기 때문에, 현재 사용자에게 dialout 그룹을 추가해 줍니다.
 ```bash
 $ sudo adduser $USER dialout
 [sudo] password for user.
@@ -188,7 +192,7 @@ Adding user user to group dialout
 Done
 ```
 
-그룹에 추가 한 후에는 반드시 로그아웃 후 로그인 해야 변경 사항이 적용 됩니다.
+  그룹에 추가 한 후에는 반드시 로그아웃 후 로그인 해야 변경 사항이 적용 됩니다.
 ### 2.4.3 Mac OS
 #### 2.4.3.1 USB 02(CH34x Driver)
 USB Interface Board Driver를 다운로드 합니다.  
