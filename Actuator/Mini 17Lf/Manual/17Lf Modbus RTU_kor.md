@@ -13,7 +13,7 @@ mightyZAP은 MODBUS-RTU 프로토콜 내용을 준수합니다.
 MODBUS-RTU 프로토콜의 최대 송수신 패킷 길이는 256 Byte 입니다. 따라서 송수신 패킷의 총 길이가 256Byte 를 넘기지 않도록 주의하여 주십시오.  
 MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 같이 시작과 끝 사이에 최소 3.5 Char 이상의 이 필요합니다.  
 
-![[packet Description.png]]
+![[packet Description.png]]  
 
 - 송신 패킷 구조
 
@@ -51,7 +51,6 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 #### 2.1.2.3 Data
 <b>송신</b>
 - Read Register 명령의 경우 Modbus 주소, 레지스터 개수, Byte 개수 등을 지정하게 되며, Write Register 명령의 경우 Modbus 주소, Byte 개수, 설정 할 값 등을 지정하게 됩니다.   
-
 <b>수신</b>
 - Read Register 명령의 경우, 정상 응답은 Node ID 와 Function Code 가 송신 때와 동일한 값으로 수신 되며, Data 는 송신 때 보낸 Register 순서에 따라 각 Register 의 값이 수신 됩니다.
 - Write Single Register 명령의 경우, 송신 때와 동일한 데이터가 수신됩니다. Write Multi  Register 의 경우에는 Write Multi Register 명령으로 데이터를 쓰고자 한 Register 의 시작 주소와 Register 개수가 수신됩니다.
