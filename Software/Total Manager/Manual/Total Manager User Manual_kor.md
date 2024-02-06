@@ -210,7 +210,7 @@ OS X 10.9~OS X 10.15를 사용하는 경우 "다시 시작"을 클릭하여 컴�
 **Step 3. OS X 11.0 이상을 사용하고 OS가 Rosetta를 지원하지 않는 경우**  
 	dmg 형식 드라이버를 설치할 때 dmg 파일을 클릭하고 Drag해야 합니다.
 	OS의 응용 프로그램 폴더에 "CH34xVCPDriver"를 넣은 다음 "LaunchPad"를 열고 찾습니다.
-	“CH34xVCPDriver” 애플리케이션을 실행하고 앱을 열고 “설치” 버튼을 클릭하세요.
+	“CH34xVCPDriver” 애플리케이션을 실행하고 앱을 열고 “설치” 버튼을 클릭하세요.  
 ![[ch34x_app.png|600]]    
 
 **Step 4. Driver  설치 확인**  
