@@ -19,10 +19,10 @@ mightyZAP에 동작을 수행할 수 있는 명령 Packet으로 다음과 같은
 | 3 | ID | Servo ID (범위 0 ~253, Broadcast ID:254) |
 | 4 | SIZE | Packet Size (COMMAND+FACTOR+CHECKSUM) |
 | 5 | COMMAND | Instruction |
-| 5+1 | FACTOR # 1 | 첫 번째 Parameter |
-| 5+m | FACTOR # M | m 번째 Parameter |
-| 5+N | FACTOR # N | 마지막 Parameter |
-| 5+N+1 | Check Sum | Check Sum = 0xff – ( LOWER_BYTE( ID + SIZE + COMMAND + FACTOR#1 + … + FACTOR#N ) ) |
+| 5+1 | FACTOR  1 | 첫 번째 Parameter |
+| 5+m | FACTOR  M | m 번째 Parameter |
+| 5+N | FACTOR  N | 마지막 Parameter |
+| 5+N+1 | Check Sum | Check Sum = 0xff – ( LOWER_BYTE( ID + SIZE + COMMAND + FACTOR 1 + … + FACTOR N ) ) |
 
 **Element Descroption**
 1. Header (3 Bytes)
@@ -58,8 +58,8 @@ mightyZAP에 동작을 수행할 수 있는 명령 Packet으로 다음과 같은
 	- LOWER_BYTE = 합산된 Data 값 중 하위 1byte만 취합니다. 
 		  = 합산된 Data 값을 0x100으로 나누어 나머지만 취합니다.
 	- 설명에 대한 공식은 아래와 같습니다.
-		LOWER_BYTE( ID + SIZE + COMMAND + FACTOR#1 + ... + FACTOR#N ) == ( ID + SIZE + COMMAND + FACTOR#1 + ... + FACTOR#N ) % 0x100
-	
+		LOWER_BYTE( ID + SIZE + COMMAND + FACTOR 1 + ... + FACTOR N ) == ( ID + SIZE + COMMAND + FACTOR 1 + ... + FACTOR N ) % 0x100
+
 ### 1.2.2 Feedback Packet
 Command Packet 을 수신한 액츄에이터가 요청 정보를 포함한 회신을 하는 Packet 으로 다음과 같은 구조와 요소로 이루어져 있습니다.  
 **Structure**  
@@ -74,10 +74,10 @@ Command Packet 을 수신한 액츄에이터가 요청 정보를 포함한 회�
 | 3 | ID | Servo ID (범위 0 ~253, Broadcast ID:254) |
 | 4 | SIZE | Packet Size (COMMAND+FACTOR+CHECKSUM) |
 | 5 | ERROR | Error Code |
-| 5+1 | FACTOR # 1 | 첫 번째 Parameter |
-| 5+m | FACTOR # M | m 번째 Parameter |
-| 5+N | FACTOR # N | 마지막 Parameter |
-| 5+N+1 | Check Sum | Check Sum = 0xff – ( LOWER_BYTE( ID + SIZE + COMMAND + FACTOR#1 + … + FACTOR#N ) ) |
+| 5+1 | FACTOR  1 | 첫 번째 Parameter |
+| 5+m | FACTOR  M | m 번째 Parameter |
+| 5+N | FACTOR  N | 마지막 Parameter |
+| 5+N+1 | Check Sum | Check Sum = 0xff – ( LOWER_BYTE( ID + SIZE + COMMAND + FACTOR 1 + … + FACTOR N ) ) |
 **Element Descroption**
 1. Header (3 Bytes)
 	- Packet 시작을 인식하는 코드로 0xFFFFFF
@@ -104,7 +104,7 @@ Command Packet 을 수신한 액츄에이터가 요청 정보를 포함한 회�
 	- LOWER_BYTE = 합산된 Data 값 중 하위 1byte만 취합니다. 
 		  = 합산된 Data 값을 0x100으로 나누어 나머지만 취합니다.
 	- 설명에 대한 공식은 아래와 같습니다.
-		LOWER_BYTE( ID + SIZE + COMMAND + FACTOR#1 + ... + FACTOR#N ) == ( ID + SIZE + COMMAND + FACTOR#1 + ... + FACTOR#N ) % 0x100
+		LOWER_BYTE( ID + SIZE + COMMAND + FACTOR 1 + ... + FACTOR N ) == ( ID + SIZE + COMMAND + FACTOR 1 + ... + FACTOR N ) % 0x100
 # 2 Instruction 종류
 # 2.1 Echo
 단순한 Feedback Packet수신하는 명령으로 mightyZAP과의 통신 상태 확인으로 사용됩니다. 
