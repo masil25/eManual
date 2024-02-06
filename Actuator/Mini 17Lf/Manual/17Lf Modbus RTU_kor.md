@@ -49,10 +49,10 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 | Write Multiple Register | 0x10 | mightyZAP의 연속된 주소에 Data값을 Setting  하기 |
 | SP  Function code | 0xxx |  해당 모델 사용자 매뉴얼을 참조하여주시기 바랍니다. |
 #### 2.1.2.3 Data
-**송신**
+<b>송신</b>
 - Read Register 명령의 경우 Modbus 주소, 레지스터 개수, Byte 개수 등을 지정하게 되며, Write Register 명령의 경우 Modbus 주소, Byte 개수, 설정 할 값 등을 지정하게 됩니다.   
 
-**수신**  
+<b>수신</b>
 - Read Register 명령의 경우, 정상 응답은 Node ID 와 Function Code 가 송신 때와 동일한 값으로 수신 되며, Data 는 송신 때 보낸 Register 순서에 따라 각 Register 의 값이 수신 됩니다.
 - Write Single Register 명령의 경우, 송신 때와 동일한 데이터가 수신됩니다. Write Multi  Register 의 경우에는 Write Multi Register 명령으로 데이터를 쓰고자 한 Register 의 시작 주소와 Register 개수가 수신됩니다.
 - 이상응답의 경우에는 Node ID, Error Code, Exception Code 로 구성되며, 이상응답의 패킷 구조는 Function Code 와 관계없이 모두 동일합니다.
