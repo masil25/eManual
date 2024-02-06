@@ -1,3 +1,6 @@
+Modbus RTU Manual
+# 소개
+
 MODBUS 프로토콜은 산업용 프로토콜로 PLC통신 등에 주로 사용되는 표준이 되는 프로토콜입니다.
 주로 사용하는 방식은 RTU방식과 ASCII방식이 주로 사용되고, 요즘에는 TCP방식도 나와있습니다.
 
@@ -12,7 +15,7 @@ mightyZAP은 MODBUS-RTU 프로토콜 내용을 준수합니다.
 MODBUS-RTU 프로토콜의 최대 송수신 패킷 길이는 256 Byte 입니다. 따라서 송수신 패킷의 총 길이가 256Byte 를 넘기지 않도록 주의하여 주십시오.  
 MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 같이 시작과 끝 사이에 최소 3.5 Char 이상의 이 필요합니다.
 
-![[packet Description.png]]
+![[Actuator/Mini 12Lf/img/packet Description.png]]
 
 - 송신 패킷 구조
 
@@ -150,4 +153,3 @@ mightyZAP에서 지원하는 모든 Function Code 의 이상 응답에 대한 Ex
 | Error Code | 1 byte | 0x90 |
 | Exception Code | 1 byte | 0x01 ~ 0x06 |
 - example
-# Packet Test
