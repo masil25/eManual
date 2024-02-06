@@ -269,7 +269,7 @@ Shutdown은 Hardware Error가 발생할 경우, 모터를 Force Off 상태 즉, 
 > [!note] NOTE   
 >Hardware Error에 대한 자세한 설명은 [[#2.4.22 Hardware Error]]를 참조하여 주시기 바랍니다.
 
-### 2.4.6 Short/Long Stroke Limt  
+### 2.4.7 Short/Long Stroke Limt  
 | Parameter | Range | Description | Unit |
 | ---- | ---- | ---- | ---- |
 | Short Stroke Limit | 0~10,000 | Goal Position 최소 입력 하한값 |  |
@@ -284,7 +284,7 @@ Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Strok
 >설치된 기구물의 한계 밖의 위치 이동값을 입력할 경우 mightyZAP 또는 사용자의 Application 이 파손되거나, Overload 보호 기능이 동작 될 수 있습니다.   
 >자세한 내용은 [[#3. 유의 사항]]을 확안하여 주시기 바랍니다.
 
-### 2.4.6 Start Compliance Margin  
+### 2.4.8 Start Compliance Margin  
   Start Compliance Margin은 mightyZAP이 Goal Position 위치 값으로 이동 하기 위한  최소 위치 편차(마진) 값 입니다.  
   
 | value | Description |
@@ -297,30 +297,27 @@ Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Strok
 - 현재 위치에서 다른 위치로 이동하기 위해 Goal Postion 값을 변경하는 경우
 - 정지 위치에서 외력에 의해 위치가 변화가 생긴 경우  
     (사용자는 Goal Position을 변경하지 않았으나 Present Position이 바뀐 경우입니다.  일반적으로 외력에 의한 밀림이나 내부 유격 등의 의한 현재 위치의 변동이 생길 경우 입니다)  
- 
+ <br>
 **예시 1. Start Compliance Margin 보다 작게  Goal Position을 변경한 경우** 
 - Start Compliance Margin : 20
 - Present Positon  : 1000
 - Goal Position : 1000 -> 1010으로 변경할 경우
-- <font color="#4f81bd">결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다</font>  
-
+- <font color="#4f81bd">결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다</font>  <br>
 **예시 2. Start Compliance Margin 보다 크게  Goal Position을 변경한 경우** 
 - Start Compliance Margin : 20
 - Present Positon  : 1000
 - Goal Position : 1000 -> 950으로 변경할 경우
-- <font color="#4f81bd">결과 : 위치 편차가 Margin보다 커 모터가 동작되어 Present Position 값이 950으로 변경</font>
-
+- <font color="#4f81bd">결과 : 위치 편차가 Margin보다 커 모터가 동작되어 Present Position 값이 950으로 변경</font><br>
 **예시 3. 외부 힘에 의해 위치 편차가 발생한 경우**
 - Start Compliance Margin : 20
 - Goal Position : 1000
 - Present Positon  : 1000 -> 1010으로 변경된 경우
-- **결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다**  
-
+- <font color="#4f81bd">결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다</font>  <br>
 **예시 4. 외부 힘에 의해 위치값이 크게 변경된 경우**
 - Start Compliance Margin : 20
 - Goal Positon  : 1000
 - Present Position : 1000 -> 950으로 변경할 경우
-- <font color="#4f81bd">결과 : 위치 편차가 Margin보다 커 모터가 동작되어 Present Position 값이 1000으로 변경</font>  
+- <font color="#4f81bd">결과 : 위치 편차가 Margin보다 커 모터가 동작되어 Present Position 값이 1000으로 변경</font>  <br>
 
 위의 예와 같이 Start Compliacne  Margin을 크게 설정할 경우, 외부 변화에 둔감하게 동작하여 위치 정밀도는 떨어질 수 있으나, 사용자가 제어하지(의도하지) 않은 모터의 잦은 동작을 막아 동작 안전성 및 내구성에 좋습니다.  
 >[!warning] Warning  
