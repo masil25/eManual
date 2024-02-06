@@ -22,7 +22,7 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 | byte | 0 | 1 | 2 | <center>…</center> | <center>…</center> | n-1 | n |
 |  | mightyZAP ID | Function | Data | <center>…</center> | <center>…</center> | CRC(MSB) | CRC(LSB) |
 
-- 수신 패킷 구조 
+- 수신 패킷 구조  
 	[정상 응담]
 
 |  | Additional Address | Fucntion code | Data | < | < | Error Check | < |
@@ -39,7 +39,7 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 ### 1.1.2 Packet Element 설명
 <font color="#3f93ff"><b>Node ID</b></font>
 - mightyZAP의 IDF로 다중 연결 방식으로 Daisy Chain 연결 지원을  위한 식별자 입니다.  
-- ID가 '0'일 경우 Broadcasting ID로 동작합니다.
+- ID가 '0'일 경우 Broadcasting ID로 동작합니다.  
 <font color="#3f93ff"><b>Function Code</b></font>
 - mightyZAP에서 지원하는 Modbus-RTU  표준 Function code는 다음과 같습니다.
 
