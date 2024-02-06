@@ -20,21 +20,21 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 |  | Additional Address | Fucntion code | Data | < | < | Error Check |  |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | byte | 0 | 1 | 2 | <center>…</center> | <center>…</center> | n-1 | n |
-|  | mightyZAP ID | Function | Data | <center>…</center> | <center>…</center> | CRC(MSB) | CRC(LSB) |
+| 내용 | mightyZAP ID | Function | Data | <center>…</center> | <center>…</center> | CRC(MSB) | CRC(LSB) |
 
 - 수신 패킷 구조  - 정상 응답
 
 |  | Additional Address | Fucntion code | Data | < | < | Error Check | < |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | byte | 0 | 1 | 2 | <center>…</center> | <center>…</center> | n-1 | n |
-|  | mightyZAP ID | Function | Data | <center>…</center> | <center>…</center> | CRC(MSB) | CRC(LSB) |
+| 내용 | mightyZAP ID | Function | Data | <center>…</center> | <center>…</center> | CRC(MSB) | CRC(LSB) |
 
 - 수신 패킷 구조  - 비 정상 응답
 
 |  | Additional Address | Fucntion code | Data | Error Check |  |
 | ---- | ---- | ---- | ---- | ---- | ---- |
 | byte | 0 | 1 | 2 | 3 | 4 |
-|  | mightyZAP ID | Function  <br>+ 0x80 | Exception code | CRC(MSB) | CRC(LSB) |
+| 내용 | mightyZAP ID | Function  <br>+ 0x80 | Exception code | CRC(MSB) | CRC(LSB) |
 ### 2.1.2 Packet Element 설명
 #### 2.1.2.1 Node ID
 - mightyZAP의 IDF로 다중 연결 방식으로 Daisy Chain 연결 지원을  위한 식별자 입니다.  
@@ -73,15 +73,16 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 ## 2.2 프로토콜 Function Code 설명
 ### 2.2.1 Read Holding Register
 단일 레지스터(16bit 데이터) 및 연속된 레지스터 블록(16bit 데이터 단위)의 값을 읽습니다.
-#### 2.2.1.1 Description
-**Request**
+#### 2.2.1.1 Packet Description
+<font color="#4f81bd"><b>Request</b></font>
 
 |  | byte | Data |
 | ---- | ---- | ---- |
 | Function Code | 1 byte | 0x03 |
 | Starting Addresse | 2 byte | 0x0000 to 0xffff |
 | Quatity of Register | 2 bytes | 1 to 125(0x7d) |
-**Request OK**
+
+<font color="#4f81bd"><b>Request OK</b></font>
 
 |  | byte | Data |
 | ---- | ---- | ---- |
@@ -90,7 +91,7 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 | Quatity of Register | N* x 2 bytes |  |
 *N = Quantity of Registers
 
-**Request not OK**
+<font color="#4f81bd"><b>Request not OK</b></font>
 
 |  | byte | Data |
 | ---- | ---- | ---- |
@@ -98,16 +99,18 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 | Exception Code | 1 byte | 0x01 ~ 0x06 |
 #### 2.2.1.2 Example
 
-### Write Sing Register
+### 2.2.2 Write Sing Register
 단일레지스터(16bit 데이터)에 값을 씁니다.  
-- Request
+#### 2.2.2.1 Packet Description
+<font color="#4f81bd"><b>Request</b></font>  
 
 |  | byte | Data |
 | ---- | ---- | ---- |
 | Function Code | 1 byte | 0x06 |
 | Starting Addresse | 2 bytes | 0x0000 to 0xffff |
 | Quatity of Register | 2 bytes | 0x0000 to 0xffff |
-- Request OK
+
+<font color="#4f81bd"><b>Request OK</b></font>  
 
 |  | byte | Data |
 | ---- | ---- | ---- |
@@ -116,16 +119,19 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 | Quatity of Register | 2 bytes | 0x0000 to 0xffff |
 *N = Quantity of Registers
 
-- Request not OK  
+<font color="#4f81bd"><b>Request not OK</b></font>  
 
 |  | byte | Data |
 | ---- | ---- | ---- |
 | Error Code | 1 byte | 0x86 |
 | Exception Code | 1 byte | 0x01 ~ 0x06 |
-- example
-### Write Multi Register(0x10)
+#### 2.2.2.2 Example
+
+
+### 2.2.3 Write Multi Register(0x10)
 연속된 레지스터 블록(16bit 데이터 단위)에 값을 씁니다.  
-- Request
+#### 2.2.3.1 Packet Description
+<font color="#4f81bd"><b>Request</b></font>  
 
 |  | byte | Data |
 | ---- | ---- | ---- |
@@ -134,7 +140,8 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 | Quatity of Register | 2 bytes | 0x0000 to 0xffff |
 | Bytes Count | 1Byte | 2 x N* |
 | Registers Value | N* x 2 Bytes | value |
-- Request OK
+
+<font color="#4f81bd"><b>Request OK</b></font>  
 
 |  | byte | Data |
 | ---- | ---- | ---- |
@@ -143,11 +150,14 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 | Quatity of Register | 2 bytes | 1 to 123(0x7b) |
 *N = Quantity of Registers
 
-- Request not OK  
+<font color="#4f81bd"><b>Request not OK</b></font>  
 
 |  | byte | Data |
 | ---- | ---- | ---- |
 | Error Code | 1 byte | 0x90 |
 | Exception Code | 1 byte | 0x01 ~ 0x06 |
-- example
-# Packet Test
+#### 2.2.3.2 Example
+
+
+# 3. Packet Test
+
