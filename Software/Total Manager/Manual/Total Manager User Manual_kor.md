@@ -118,26 +118,26 @@ mightyZAP Total Manager와 mightyZAP의 통신을 위하여 Serial Convertor 가
   정장적으로 연결되어 있을 경우 이미지에서와 같이 새로운 com port가 추가된것을 확인할 수 있습니다.  
   ![[serialPort_check_win.jpg]]
 ### 2.4.2 Linux[ubuntu/Demian]
-1) CH341 Driver   
-   CH341 driver는 USB-02 Model에서 만 사용됩니다.   
-   CH340, CH341 의 시리얼 드라이버는 Linux 커널 버전 2.6.24부터 내장되어 있으며, 해당 위치는 drivers/usb/serial/ch341.c입니다.  
-   다만 드라이버를 최신 상태로 유지 하기 원하실 경우 아래의 방법을 사용하기 바랍니다.  
-   아래의 사이트에서 Linux용 드라이버를 다운로드 받으시기 바랍니다.  
-   [LINUX용 CH341 Driver Donwload(ZIP)](https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html)  
+#### 2.4.2.1 CH341 Driver   
+CH341 driver는 USB-02 Model에서 만 사용됩니다.   
+CH340, CH341 의 시리얼 드라이버는 Linux 커널 버전 2.6.24부터 내장되어 있으며, 해당 위치는 <font color="#4f81bd">'drivers/usb/serial/ch341.c'</font> 입니다.  
+다만 드라이버를 최신 상태로 유지 하기 원하실 경우 아래의 방법을 사용하기 바랍니다.  
+아래의 사이트에서 Linux용 드라이버를 다운로드 받으시기 바랍니다.  
+[LINUX용 CH341 Driver Donwload(ZIP)](https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html)  
    
-   **Step 1. Driver Install**
-	 - 다운로드한 파일의 압축을 풉니다.
-	 - 터미널 창을 열고 다운로드한 디렉토리로 이동을 합니다.
-	 - 다음의 명령들을 입력합니다
+<font color="#4f81bd"><b>Step 1. Driver Install</b></font>
+다운로드한 파일의 압축을 풉니다.
+터미널 창을 열고 다운로드한 디렉토리로 이동을 합니다.
+다음의 명령들을 입력합니다
 ```bash
 $ make clean  
 $ make  
 $ sudo make load    
 ```
 
-  **Step 2. Driver 확인**
- - 설치된 드라이버를 확인하기 위해 USB-02를 PC와 연결한 후 다음의 명령을 입력합니다.  
- - 정상적으로 설치가 되었다면 "ch34x"로 표시되어야 합니다.
+<font color="#4f81bd"><b>Step 2. Driver 확인</b></font>
+설치된 드라이버를 확인하기 위해 USB-02를 PC와 연결한 후 다음의 명령을 입력합니다.  
+정상적으로 설치가 되었다면 "ch34x"로 표시되어야 합니다.
 ```bash
 $ sudo dmesg | grep ch34    
 [   xxx] usbcore: registered new interface driver ch341  
@@ -146,7 +146,7 @@ $ sudo dmesg | grep ch34
 [   xxx] usb 1-6.4.3: ch341-uart converter now attached to ttyUSB1  
 ```
 
-2) FTDI Driver  
+#### 2.4.2.2 FTDI Driver  
    FTDI Driver는 USB-02를 제외한 모든 모델에서 사용됩니다.  
    FTDI VCP 드라이버는 Linux  커널에 내장되어 있습니다. 모든 FTDI 장치에 VCP 드라이버 지원이 있는지 확인하기 위해 FTDI는 Linux  시스템에 최신 커널 릴리즈를 설치할 것을 권장합니다. Linux 에서는 VCP 드라이버가 "/dev/ttyUSBx" 로 표시됩니다.  
    
