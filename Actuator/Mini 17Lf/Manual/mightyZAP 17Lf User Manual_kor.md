@@ -297,8 +297,8 @@ Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Strok
 - 현재 위치에서 다른 위치로 이동하기 위해 Goal Postion 값을 변경하는 경우
 - 정지 위치에서 외력에 의해 위치가 변화가 생긴 경우  
     (사용자는 Goal Position을 변경하지 않았으나 Present Position이 바뀐 경우입니다.  일반적으로 외력에 의한 밀림이나 내부 유격 등의 의한 현재 위치의 변동이 생길 경우 입니다)   
-<br>
-**예시 1. Start Compliance Margin 보다 작게  Goal Position을 변경한 경우** 
+
+<br>**예시 1. Start Compliance Margin 보다 작게  Goal Position을 변경한 경우** 
 - Start Compliance Margin : 20
 - Present Positon  : 1000
 - Goal Position : 1000 -> 1010으로 변경할 경우
