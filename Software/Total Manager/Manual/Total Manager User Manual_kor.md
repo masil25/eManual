@@ -121,8 +121,8 @@ mightyZAP Total Manager와 mightyZAP의 통신을 위하여 Serial Convertor 가
 #### 2.4.2.1 CH341 Driver   
 CH341 driver는 USB-02 Model에서 만 사용됩니다.   
 CH340, CH341 의 시리얼 드라이버는 Linux 커널 버전 2.6.24부터 내장되어 있으며, 해당 위치는 <font color="#4f81bd">'drivers/usb/serial/ch341.c'</font> 입니다.  
-다만 드라이버를 최신 상태로 유지 하기 원하실 경우 아래의 방법을 사용하기 바랍니다.  
-아래의 사이트에서 Linux용 드라이버를 다운로드 받으시기 바랍니다.  
+
+다만 드라이버를 최신 상태로 유지 하기 원하실 경우 아래의 아래의 사이트에서 Linux용 드라이버를 다운로드 받으신 후 순서에 따라 진행하여 주시기 바랍니다.
 [LINUX용 CH341 Driver Donwload(ZIP)](https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html)  
    
 <font color="#4f81bd"><b>Step 1. Driver Install</b></font>  
