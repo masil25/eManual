@@ -1,4 +1,4 @@
-# 1. 개요
+# 1 개요
 mightyZAP을 제어하기 위해서는 Protocol에 맞추어 통신을 해야하며, mightyZAP에서는 제어를 위한 전용 IR Protocol을 제공하고 있습니다.  
 IR Protocol 을 지원하는 모델은 아래와 같습니다.
 - D7/D12 Series
@@ -105,16 +105,16 @@ Command Packet 을 수신한 액츄에이터가 요청 정보를 포함한 회�
 		  = 합산된 Data 값을 0x100으로 나누어 나머지만 취합니다.
 	- 설명에 대한 공식은 아래와 같습니다.
 		LOWER_BYTE( ID + SIZE + COMMAND + FACTOR#1 + ... + FACTOR#N ) == ( ID + SIZE + COMMAND + FACTOR#1 + ... + FACTOR#N ) % 0x100
-# 2. Instruction 종류
+# 2 Instruction 종류
 # 2.1 Echo
 단순한 Feedback Packet수신하는 명령으로 mightyZAP과의 통신 상태 확인으로 사용됩니다. 
 ### 2.1.1 예제
 ID '0'번인 mightyZAP과의 연결 상태 확인
-#### 2.1.2.1 Command Packet
+#### 2.1.1.1 Command Packet
 | HEADER | ID | Size | Command | Checksum |
 | ---- | ---- | ---- | ---- | ---- |
 | 0xFFFFFF | 0x00 | 0x02 | 0xF1 | 0x0c |
-#### 2.1.2.1 Feedback Packet
+#### 2.1.1.1 Feedback Packet
 | HEADER | ID | Size | Error | Checksum |
 | ---- | ---- | ---- | ---- | ---- |
 | 0xFFFFFF | 0x00 | 0x02 | 0x00 | 0xFD |
@@ -142,11 +142,11 @@ mightyZAP의 시스템을 재 시작 합니다.  Overload Shutdown 해지 등 �
 <font color="#ff0000">Feedback Return Mode 2 에서만 Feedback 을 보냅니다. </font>
 ### 2.3.1 예제
 ID '0'번인 mightyZAP의 시스템 재 시작
-#### 2.3.2.1 Command Packet
+#### 2.3.1.1 Command Packet
 | HEADER | ID | Size | Command | Checksum |
 | ---- | ---- | ---- | ---- | ---- |
 | 0xFFFFFF | 0x00 | 0x02 | 0xF8 | 0x05 |
-#### 2.3.2.1 Feedback Packet
+#### 2.3.1.1 Feedback Packet
 | HEADER | ID | Size | Command | Checksum |
 | ---- | ---- | ---- | ---- | ---- |
 | 0xFFFFFF | 0x00 | 0x02 | 0xF8 | 0x05 |
@@ -267,9 +267,9 @@ mightyZAP의 Address 를 보내고 Data 를 Feedback 받습니다..
 - Factor 2 : 현재 위치 값 상위 byte (ex> 0x07)
 	※ 현재 위치 값 Hex 변환(16 진수à10 진수) : 0x07ff -> 2047
 ### 2.5.2 Present Motor Operating Rate
-#### 2.5.1.1 Description
+#### 2.5.2.1 Description
 12Lf Model의  현재 Operating Rate 값을 읽어 오는 명령 패킷
-#### 2.5.1.2 Command Packet
+#### 2.5.2.2 Command Packet
 | HEADER | ID | Size | Command | Factor #1<br>(Address) | Factor #2<br>(Length) | Checksum |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | 0xFFFFFF | 0x00 | 0x04 | 0xF2 | 0x90 | 0x02 | 0x77 |
@@ -278,7 +278,7 @@ mightyZAP의 Address 를 보내고 Data 를 Feedback 받습니다..
 - Command : 시작 Address 부터 Data 를 차례대로 각각의 address 에 저장 
 - Address : 12Lf Modeldml Data Map 에 명시된 현재 Motor operating rate 값이 저장된 Address
 - Length : Address 로 부터 읽어올 Byte 의 수(mightyZAP Present Motor Operating Rate 값은 2byte 로 이루어져 있습니다.)
-#### 2.5.1.3 Feeback Packet
+#### 2.5.2.3 Feeback Packet
 | HEADER | ID | Size | Error | Factor #1 | Factor #2 | Checksum |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | 0xFFFFFF | 0x00 | 0x04 | 0x00 | 0xFF | 0x03 | 0xF9 |
@@ -289,9 +289,9 @@ mightyZAP의 Address 를 보내고 Data 를 Feedback 받습니다..
 - Factor 2 : 현재 Motor operating rate 값 상위 byte (ex> 0x03)
 	※ 현재 Load 값 Hex 변환(16 진수à10 진수) : 0x03ff -> 1023
 ### 2.5.3 Present Voltage
-#### 2.5.1.1 Description
+#### 2.5.3.1 Description
 12Lf Model의  현재 Voltage값을 읽어 오는 명령 패킷
-#### 2.5.1.2 Command Packet
+#### 2.5.3.2 Command Packet
 | HEADER | ID | Size | Command | Factor #1<br>(Address) | Factor #2<br>(Length) | Checksum |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | 0xFFFFFF | 0x00 | 0x04 | 0xF2 | 0x92 | 0x01 | 0x76 |
@@ -300,7 +300,7 @@ mightyZAP의 Address 를 보내고 Data 를 Feedback 받습니다..
 - Command : 시작 Address 부터 Data 를 차례대로 각각의 address 에 저장 
 - Address : 12Lf Modeldml Data Map 에 명시된 현재 Voltage 값이 저장된 Address
 - Length : Address 로 부터 읽어올 Byte 의 수(mightyZAP Voltage 값은 1byte 로 이루어져 있습니다.)
-#### 2.5.1.3 Feeback Packet
+#### 2.5.3.3 Feeback Packet
 | HEADER | ID | Size | Error | Factor #1 | Checksum |
 | ---- | ---- | ---- | ---- | ---- | ---- |
 | 0xFFFFFF | 0x00 | 0x03 | 0x00 | 0x7B | 0x81 |
@@ -324,24 +324,24 @@ mightyZAP의 Address와 Data를 임시 보관 시킵니다.
 | 0xFFFFFF | 0x01 | 0x02 | 0x00 | 0xFC |
 # 2.7 Excution
 Send Data를 통한 임시 보관 정보를 실행시킴
-### 2.6.1 Example
-#### 2.6.1.1 Description
+### 2.7.1 Example
+#### 2.7.1.1 Description
 임시 보관된 모든 정보를 동시에 실행시키는 명령 패킷
 <font color="#ff0000">Feedback Return Mode 2 에서만 Feedback 을 보냅니다. </font>
-#### 2.6.1.2 Command Packet
+#### 2.7.1.2 Command Packet
 | HEADER | ID | Size | Command | Checksum |
 | ---- | ---- | ---- | ---- | ---- |
 | 0xFFFFFF | 0x01 | 0x02 | 0xF5 | 0x07 |
-#### 2.6.1.3 Feedback Packet
+#### 2.7.1.3 Feedback Packet
 | HEADER | ID | Size | Error | Checksum |
 | ---- | ---- | ---- | ---- | ---- |
 | 0xFFFFFF | 0x01 | 0x02 | 0x00 | 0xFC |
-# 2.7 Symmetric Store
+# 2.8 Symmetric Store
 다수 mightyZAP의 동일한 Address 에 Data 저장
-### 2.7.1 Goal Position
-#### 2.7.1.1 Description
+### 2.8.1 Goal Position
+#### 2.8.1.1 Description
 mightyZAP의 목표 위치 값을 지정하는 명령 패킷
-#### 2.7.1.2 Command Packet
+#### 2.8.1.2 Command Packet
 | HEADER | ID | Size | Command | Factor 1<br>(Address) | Factor 2<br>(Length) |
 | ---- | ---- | ---- | ---- | ---- | ---- |
 | 0xFFFFFF | 0x01 | 0x0A | 0x73 | 0x86 | 0x02 |
