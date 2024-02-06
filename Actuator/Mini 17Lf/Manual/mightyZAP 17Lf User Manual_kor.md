@@ -304,7 +304,7 @@ Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Strok
 - Goal Position : 1000 -> 1010으로 변경할 경우
 - <font color="#4f81bd">결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다</font>  
   
-**예시 2. Start Compliance Margin 보다 크게  Goal Position을 변경한 경우** 
+<p style="margin-top:10px">예시 2. Start Compliance Margin 보다 크게  Goal Position을 변경한 경우</p>
 - Start Compliance Margin : 20
 - Present Positon  : 1000
 - Goal Position : 1000 -> 950으로 변경할 경우
