@@ -194,7 +194,7 @@ Done
 USB Interface Board Driver를 다운로드 합니다.  
 	- https://www.wch.cn/download/CH341SER_ZIP.html  
 다운로드한 파일을 실행하고, 다운로드한 파일 중 <font color="#4f81bd">"CH34X_DRV_INSTRUCTIONS.pdf"</font> 파일의 가이드에 따라 드라이버를 설치합니다.  
-OS X 11.0 이상을 사용하고 OS가 Rosetta를 지원하지 않는 경우 dmg 형식 드라이버를 설치해야 합니다(4단계 수행). 그렇지 않으면 pkg 형식 드라이버를 설치해야 합니다. 기본적으로(3단계를 따르세요).
+OS X 11.0 이상을 사용하고 OS가 Rosetta를 지원하지 않는 경우 dmg 형식 드라이버를 설치해야 합니다(4단계 수행). 그렇지 않으면 pkg 형식 드라이버를 설치해야 합니다. 기본적으로(3단계를 따르세요).  
 **Step 1. Install pkg format Driver**  
 ![[CH34x_install.png|600]]  
 ![[CH34x_Install success.png|600]]  
@@ -207,10 +207,10 @@ OS X 11.0 이상에 pkg 형식 드라이버를 설치할 때 다음을 수행해
 OS X 10.9~OS X 10.15를 사용하는 경우 "다시 시작"을 클릭하여 컴퓨터를 다시 시작해야 합니다.
 다시 시작한 후 <font color="#4f81bd"><b>Step 4</b></font> 단계를 수행하십시오.
 
-**Step 3. OS X 11.0 이상을 사용하고 OS가 Rosetta를 지원하지 않는 경우**
+**Step 3. OS X 11.0 이상을 사용하고 OS가 Rosetta를 지원하지 않는 경우**  
 	dmg 형식 드라이버를 설치할 때 dmg 파일을 클릭하고 Drag해야 합니다.
-OS의 응용 프로그램 폴더에 "CH34xVCPDriver"를 넣은 다음 "LaunchPad"를 열고 찾습니다.
-“CH34xVCPDriver” 애플리케이션을 실행하고 앱을 열고 “설치” 버튼을 클릭하세요.
+	OS의 응용 프로그램 폴더에 "CH34xVCPDriver"를 넣은 다음 "LaunchPad"를 열고 찾습니다.
+	“CH34xVCPDriver” 애플리케이션을 실행하고 앱을 열고 “설치” 버튼을 클릭하세요.
 ![[ch34x_app.png|600]]    
 
 **Step 4. Driver  설치 확인**  
