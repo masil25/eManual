@@ -35,7 +35,7 @@ mightyZAP에 동작을 수행할 수 있는 명령 Packet으로 다음과 같은
 	- ID = 254 (0xFE) 일 때, Broadcasting Mode로 동작하며 Feedback Packet은 동작하지 않음
 3. SIZE (1 Byte)
 	- Packet의 Byte단위로 계산된 길이. 
-	- SIZE데이터 이후에 발송할 데이터의 크기 (COMMAND+FACTOR+CHECKSUM) 
+	- SIZE데이터 이후에 발송할 데이터의 크기 (COMMAND + FACTOR + CHECKSUM) 
 	- 즉, FACTOR의 Byte수에 2를 더한 수
 4. COMMAND (1 Byte)
 	- Packet의 발송 목적을 정의하는 명령 코드
@@ -54,7 +54,7 @@ mightyZAP에 동작을 수행할 수 있는 명령 Packet으로 다음과 같은
 	- COMMAND에 따른 추가 Packet 요소
 6. CHECKSUM
 	Packet의 데이터 누락 및 변조가 생겼는지 확인 하기 위한 검증 데이터이며 다음과 같은 관계식으로 생성됩니다
-	- Checksum = 0xff – ( LOWER_BYTE( ID + SIZE + COMMAND + FACTOR#1 + … + FACTOR#N ) )
+	- Checksum = 0xff – ( LOWER_BYTE( ID + SIZE + COMMAND + FACTOR#1 + … + FACTOR N ) )
 	- LOWER_BYTE = 합산된 Data 값 중 하위 1byte만 취합니다. 
 		  = 합산된 Data 값을 0x100으로 나누어 나머지만 취합니다.
 	- 설명에 대한 공식은 아래와 같습니다.
@@ -72,7 +72,7 @@ Command Packet 을 수신한 액츄에이터가 요청 정보를 포함한 회�
 | 1 | Start Bytes 2 | 시작 바이트 2 (0xFF) |
 | 2 | Start Bytes 3 | 시작 바이트 3 (0xFF) |
 | 3 | ID | Servo ID (범위 0 ~253, Broadcast ID:254) |
-| 4 | SIZE | Packet Size (COMMAND+FACTOR+CHECKSUM) |
+| 4 | SIZE | Packet Size (COMMAND + FACTOR + CHECKSUM) |
 | 5 | ERROR | Error Code |
 | 5+1 | FACTOR  1 | 첫 번째 Parameter |
 | 5+m | FACTOR  M | m 번째 Parameter |
@@ -86,7 +86,7 @@ Command Packet 을 수신한 액츄에이터가 요청 정보를 포함한 회�
 	- MightyZAP의 개별로 저장된 ID (0~253)
 3. SIZE (1 Byte)
 	- Packet의 Byte단위로 계산된 길이. 
-	- SIZE데이터 이후에 발송할 데이터의 크기 (COMMAND+FACTOR+CHECKSUM) 
+	- SIZE데이터 이후에 발송할 데이터의 크기 (COMMAND + FACTOR + CHECKSUM) 
 	- 즉, FACTOR의 Byte수에 2를 더한 수
 4. COMMAND (1 Byte)
 	- bit별로 동작 중에 발생한 오류 상태 표시
@@ -100,7 +100,7 @@ Command Packet 을 수신한 액츄에이터가 요청 정보를 포함한 회�
 	- COMMAND에 따른 추가 Packet 요소
 6. CHECKSUM
 	Packet의 데이터 누락 및 변조가 생겼는지 확인 하기 위한 검증 데이터이며 다음과 같은 관계식으로 생성됩니다
-	- Checksum = 0xff – ( LOWER_BYTE( ID + SIZE + COMMAND + FACTOR#1 + … + FACTOR#N ) )
+	- Checksum = 0xff – ( LOWER_BYTE( ID + SIZE + COMMAND + FACTOR 1 + … + FACTOR N ) )
 	- LOWER_BYTE = 합산된 Data 값 중 하위 1byte만 취합니다. 
 		  = 합산된 Data 값을 0x100으로 나누어 나머지만 취합니다.
 	- 설명에 대한 공식은 아래와 같습니다.
