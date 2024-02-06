@@ -100,29 +100,38 @@ mightyZAP Total Manager와 mightyZAP의 통신을 위하여 Serial Convertor 가
 
 ### 2.4.1 Windows
 당사의 Interface Board 는 2가지 Type으로 되어있으며, 각 버전에 따라 드라이버를 다르게 설치해야 합니다. 아래의 설명을 참조하여 드라이버를 설치 합니다.
+#### 2.4.1.1 IR_USB02 Driver (CH340x)
+아래의 링크에서 IR-USB03의 Driver를 다운로드 합니다.
+[CH341SER_ZIP Driver Download Link](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)   
 
-- **IR-USB02 Driver 설치** (CH340x)  
-	아래의 링크에서 IR-USB03의 Driver를 다운로드 합니다.
-	-  [Driver Link](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)   
-	다운로드 받은 파일을 실행한 후 INSTALL 버튼을 클릭하여 드라이버를 설치합니다
-	![[ch340x_win_install.jpg]]
-- **IR-USB03 Driver 설치**  
-	아래의 링크에서 IR-USB03의 Driver를 다운로드 합니다.  
-	[Driver Link](https://ftdichip.com/wp-content/uploads/2021/08/CDM212364_Setup.zip)    
-	다운로드 받은 파일을 실행하여 드라이버를 설치합니다.  
-	![[ftdi_win_install.png|650]]
+<font color="#4f81bd"><b>Step 1. Driver Install</b></font>  
+다운로드 받은 파일을 실행한 후 INSTALL 버튼을 클릭하여 드라이버를 설치합니다
+![[ch340x_win_install.jpg]]  
 
-- **Interface Board 연결 확인**  
-  USB Interface Board를 PC와 연결합니다.  
-  [시스템]-[장치관리자]-[port]에서 Serial Port가 정상적으로 연결되었는지 확인합니다. 
-  정장적으로 연결되어 있을 경우 이미지에서와 같이 새로운 com port가 추가된것을 확인할 수 있습니다.  
+<font color="#4f81bd"><b>Step 2. Driver 확인</b></font>  
+- USB Interface Board를 PC와 연결합니다.  
+- [시스템]-[장치관리자]-[port]에서 Serial Port가 정상적으로 연결되었는지 확인합니다.  
+- 정상적으로 연결되어 있을 경우 아래의 이미지와 같이 Model명이 표시되는것을 확인할 수 있습니다.
+  ![[serialPort_check_win.jpg|700]]
+#### 2.4.1.1 IR_USB03 Driver (FTDI)
+아래의 링크에서 IR-USB03의 Driver를 다운로드 합니다.   
+[FTDI_ZIP Driver Download(ZIP)](https://ftdichip.com/wp-content/uploads/2021/08/CDM212364_Setup.zip)    
+
+<font color="#4f81bd"><b>Step 1. Driver Install</b></font>  
+- 다운로드 받은 파일을 실행하여 드라이버를 설치합니다.  
+![[ftdi_win_install.png|650]]
+
+<font color="#4f81bd"><b>Step 2. Driver 확인</b></font>  
+- USB Interface Board를 PC와 연결합니다.  
+- [시스템]-[장치관리자]-[port]에서 Serial Port가 정상적으로 연결되었는지 확인합니다.  
+- 정상적으로 연결되어 있을 경우 아래의 이미지와 같이 Model명이 표시되는것을 확인할 수 있습니다.
   ![[serialPort_check_win.jpg]]
 ### 2.4.2 Linux[ubuntu/Demian]
 #### 2.4.2.1 CH341 Driver   
 CH341 driver는 USB-02 Model에서 만 사용됩니다.   
 CH340, CH341 의 시리얼 드라이버는 Linux 커널 버전 2.6.24부터 내장되어 있으며, 해당 위치는 <font color="#4f81bd">'drivers/usb/serial/ch341.c'</font> 입니다.  
 
-다만 드라이버를 최신 상태로 유지 하기 원하실 경우 아래의 아래의 사이트에서 Linux용 드라이버를 다운로드 받으신 후 순서에 따라 진행하여 주시기 바랍니다.
+다만 드라이버를 최신 상태로 유지 하기 원하실 경우 아래의 아래의 사이트에서 Linux용 드라이버를 다운로드 받으신 후 순서에 따라 진행하여 주시기 바랍니다.  
 [LINUX용 CH341 Driver Donwload(ZIP)](https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html)  
    
 <font color="#4f81bd"><b>Step 1. Driver Install</b></font>  
@@ -197,39 +206,42 @@ Done
   그룹에 추가 한 후에는 반드시 로그아웃 후 로그인 해야 변경 사항이 적용 됩니다.
 ### 2.4.3 Mac OS
 #### 2.4.3.1 USB 02(CH34x Driver)
-USB Interface Board Driver를 다운로드 합니다.  
-	- https://www.wch.cn/download/CH341SER_ZIP.html  
+USB Interface Board Driver를 다운로드 합니다.
+[CH341SER_ZIP Driver Download Link](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)
+
 다운로드한 파일을 실행하고, 다운로드한 파일 중 <font color="#4f81bd">"CH34X_DRV_INSTRUCTIONS.pdf"</font> 파일의 가이드에 따라 드라이버를 설치합니다.  
-OS X 11.0 이상을 사용하고 OS가 Rosetta를 지원하지 않는 경우 dmg 형식 드라이버를 설치해야 합니다(4단계 수행). 그렇지 않으면 pkg 형식 드라이버를 설치해야 합니다. 기본적으로(3단계를 따르세요).  
-**Step 1. Install pkg format Driver**  
+OS X 11.0 이상을 사용하고 OS가 Rosetta를 지원하지 않는 경우 dmg 형식 드라이버를 설치해야 합니다(Step 4 수행). 그렇지 않으면 pkg 형식 드라이버를 설치해야 합니다. 기본적으로(Step 3을 따르세요).  
+
+<font color="#4f81bd"><b>Step 1. Install pkg format Driver</b></font>   
+- CH34xVCPDriver.pkg 파일을 click 하여 설치를 진행합니다.  
 ![[CH34x_install.png|600]]  
 ![[CH34x_Install success.png|600]]  
-  
-OS X 11.0 이상에 pkg 형식 드라이버를 설치할 때 다음을 수행해야 합니다. 
 
-**Step 2. Install CH32xVCPDriver Application**  
-"LaunchPad"를 열고 "CH34xVCPDriver" 애플리케이션을 찾아 앱을 열고 "Install" 버튼을 Click 합니다.  
+<font color="#4f81bd"><b>Step 2. Install CH32xVCPDriver Application</b></font>   
+- LaunchPad를 열고 "CH34xVCPDriver" 애플리케이션을 찾아 App을 열고 "Install" 버튼을 Click 합니다.  
 ![[ch34x_app.png|600]]  
 OS X 10.9~OS X 10.15를 사용하는 경우 "다시 시작"을 클릭하여 컴퓨터를 다시 시작해야 합니다.
 다시 시작한 후 <font color="#4f81bd"><b>Step 4</b></font> 단계를 수행하십시오.
 
-**Step 3. OS X 11.0 이상을 사용하고 OS가 Rosetta를 지원하지 않는 경우**  
-dmg 형식 드라이버를 설치할 때 dmg 파일을 클릭하고 Drag해야 합니다.
-OS의 응용 프로그램 폴더에 "CH34xVCPDriver"를 넣은 다음 "LaunchPad"를 열고 찾습니다.
-“CH34xVCPDriver” 애플리케이션을 실행하고 앱을 열고 “설치” 버튼을 클릭하세요.  
+<font color="#4f81bd"><b>Step 3. OS X 11.0 이상을 사용하고 OS가 Rosetta를 지원하지 않는 경우</b></font>  
+- dmg 형식 드라이버를 설치할 때 dmg 파일을 클릭하고 Drag해야 합니다.
+- OS의 응용 프로그램 폴더에 "CH34xVCPDriver"를 넣은 다음 LaunchPad를 열고 찾습니다.
+- “CH34xVCPDriver” 애플리케이션을 실행하고 App을 열고 “Install” 버튼을 클릭하세요.  
 ![[ch34x_app.png|600]]    
 
-**Step 4. Driver  설치 확인**  
-USB-02을 USB 포트에 연결하고 [System Report]->[Hardware]->[USB]을 선택하면, 오른쪽은 “USB Device Tree”에서 연결한 장치를 찾을 수 있습니다.  
-USB 장치가 제대로 작동하는 경우 "Vendor ID"가 [0x1a86]으로 나타납니다.
+<font color="#4f81bd"><b>Step 4. Driver  설치 확인</b></font>  
+- USB-02을 USB 포트에 연결하고 [System Report]->[Hardware]->[USB]을 선택하면, 오른쪽은 “USB Device Tree”에서 연결한 장치를 찾을 수 있습니다.  
+- USB 장치가 제대로 작동하는 경우 "Vendor ID"가 [0x1a86]으로 나타납니다.
 ![[Software/Total Manager/img/ch34x_confirm_Driver.png|600]]  
-**Step 5. Comport 확인**  
-응용 프로그램-유틸리티 폴더에서 "터미널" 프로그램을 열고 다음 명령을 입력하세요.  
+
+<font color="#4f81bd"><b>Step 5. Comport 확인</b></font>  
+- [Application] - [Utility] 폴더에서 "터미널" 프로그램을 열고 다음 명령을 입력하세요.  
 ~~~
 $ ls /dev/tty*
 tty.wchusbserial121311
 ~~~
-  "tty.wchusbserialx"가 표시되어야 합니다. 여기서 "x"는 Windows COM 포트 할당과 유사하게 할당된 장치 번호입니다.
+  - "tty.wchusbserialx"가 표시되어야 합니다. 여기서 "x"는 Windows COM 포트 할당과 유사하게 할당된 장치 번호입니다.  
+  
 >[!note] Note  
 >추가적인 내용은 다운로드한 파일 중 <font color="#4f81bd">"CH34X_DRV_INSTRUCTIONS.pdf"</font> 을 참조하여 주시기 바랍니다.  
 #### 2.4.3.2 USB 03(FTDI Driver)
@@ -238,11 +250,12 @@ tty.wchusbserial121311
 USB Interface Board Driver를 다운로드 합니다.  
 - https://ftdichip.com/drivers/vcp-drivers/  
 
-**Step 1. Application folder에 설치 하기**  
+<font color="#4f81bd"><b>Step 1. Application folder에 설치 하기</b></font>  
 다운로드 받은 "FTDIUSBSerialDextInstaller_x_y_z.app" 파일을 Application 폴더로 옮깁니다.  
 ![[FTDI_driver_file.png|500]]
 
-**Step 2. FTDI USB Serial Dext VCP Install**  
+<font color="#4f81bd"><b>Step 2. FTDI USB Serial Dext VCP Install</b></font>   
+
 FTDIUSBSerialDextInstaller_x_y_z 실행 시킨 후 아래와 같이 Install 버튼을 클릭합니다.  
 ![[FTDI_install.png|600]]    
 만약 아래와 같이, "System Extention blocked" 메세지가 나왔을 경우 "Open System Settings" 버튼을 클릭하여 시스템 창을 엽니다.   
