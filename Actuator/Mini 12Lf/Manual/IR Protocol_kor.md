@@ -54,7 +54,7 @@ mightyZAP에 동작을 수행할 수 있는 명령 Packet으로 다음과 같은
 	- COMMAND에 따른 추가 Packet 요소
 6. CHECKSUM
 	Packet의 데이터 누락 및 변조가 생겼는지 확인 하기 위한 검증 데이터이며 다음과 같은 관계식으로 생성됩니다
-	- Checksum = 0xff – ( LOWER_BYTE( ID + SIZE + COMMAND + FACTOR#1 + … + FACTOR N ) )
+	- Checksum = 0xff – ( LOWER_BYTE( ID + SIZE + COMMAND + FACTOR 1 + … + FACTOR N ) )
 	- LOWER_BYTE = 합산된 Data 값 중 하위 1byte만 취합니다. 
 		  = 합산된 Data 값을 0x100으로 나누어 나머지만 취합니다.
 	- 설명에 대한 공식은 아래와 같습니다.
@@ -106,7 +106,7 @@ Command Packet 을 수신한 액츄에이터가 요청 정보를 포함한 회�
 	- 설명에 대한 공식은 아래와 같습니다.
 		LOWER_BYTE( ID + SIZE + COMMAND + FACTOR 1 + ... + FACTOR N ) == ( ID + SIZE + COMMAND + FACTOR 1 + ... + FACTOR N ) % 0x100
 # 2 Instruction 종류
-# 2.1 Echo
+## 2.1 Echo
 단순한 Feedback Packet수신하는 명령으로 mightyZAP과의 통신 상태 확인으로 사용됩니다. 
 ### 2.1.1 예제
 ID '0'번인 mightyZAP과의 연결 상태 확인
@@ -118,7 +118,7 @@ ID '0'번인 mightyZAP과의 연결 상태 확인
 | HEADER | ID | Size | Error | Checksum |
 | ---- | ---- | ---- | ---- | ---- |
 | 0xFFFFFF | 0x00 | 0x02 | 0x00 | 0xFD |
-# 2.2 Factory Reset
+## 2.2 Factory Reset
 mightyZAP의 파라미터(Memory 및 Parameter)를 기본값(Default)으로 변경하고 Option 에 따라 추가로 리셋여부를 결정하여 초기화 수행합니다.
 mightyZAP을 리셋하기 위해서는 아래의 Option Data를 설정해야 합니다.
  - 해당 bit 가 '1'이면 Reset, '0'이면 Hold
@@ -137,7 +137,7 @@ ID '1'번인 mightyZAP의ID 는 0(ID Default)으로 초기화하고 Baud Rate �
 | HEADER | ID | Size | Error | Checksum |
 | ---- | ---- | ---- | ---- | ---- |
 | 0xFFFFFF | 0x01 | 0x02 | 0x00 | 0xFD |
-# 2.3 Restart
+## 2.3 Restart
 mightyZAP의 시스템을 재 시작 합니다.  Overload Shutdown 해지 등 시스템 재 시작이 필요한 경우 실행합니다.  
 <font color="#ff0000">Feedback Return Mode 2 에서만 Feedback 을 보냅니다. </font>
 ### 2.3.1 예제
@@ -150,7 +150,7 @@ ID '0'번인 mightyZAP의 시스템 재 시작
 | HEADER | ID | Size | Command | Checksum |
 | ---- | ---- | ---- | ---- | ---- |
 | 0xFFFFFF | 0x00 | 0x02 | 0xF8 | 0x05 |
-# 2.4 Store Data
+## 2.4 Store Data
 mightyZAP의 ID변경, 위치이동, Force limit, Stroke limit, Speed, Force On/Off 등 설정을 위해 Address와 Data 를 보내고 저장합니다.
 <font color="#ff0000">Feedback Return Mode 2 에서만 Feedback 을 보냅니다. </font>
 ### 2.4.1 ID  변경
@@ -242,7 +242,7 @@ Address
 | HEADER | ID | Size | Command | Factor #1<br>(Address) | Factor #2<br>(Data) | Checksum |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | 0xFFFFFF | 0x01 | 0x04 | 0xF3 | 0x10 | 0x02 | 0xF5 |
-# 2.5 Load Data
+## 2.5 Load Data
 mightyZAP의 Address 를 보내고 Data 를 Feedback 받습니다..
 ### 2.5.1 Present Position
 #### 2.5.1.1 Description
@@ -309,7 +309,7 @@ mightyZAP의 Address 를 보내고 Data 를 Feedback 받습니다..
 - Error : 동작 중에 발생한 요류 상태 표시
 - Factor 1 : 현재 Voltage 치 값 byte (ex> 0x7B)
 	※ 현재 Load 값 Hex 변환(16 진수 -> 10 진수) : 0x7B -> 123(12.3V)
-# 2.6 Send Data
+## 2.6 Send Data
 mightyZAP의 Address와 Data를 임시 보관 시킵니다.
 ### 2.6.1 Gaol Position
 #### 2.6.1.1 Description
@@ -322,7 +322,7 @@ mightyZAP의 Address와 Data를 임시 보관 시킵니다.
 | HEADER | ID | Size | Error | Checksum |
 | ---- | ---- | ---- | ---- | ---- |
 | 0xFFFFFF | 0x01 | 0x02 | 0x00 | 0xFC |
-# 2.7 Excution
+## 2.7 Excution
 Send Data를 통한 임시 보관 정보를 실행시킴
 ### 2.7.1 Example
 #### 2.7.1.1 Description
@@ -336,7 +336,7 @@ Send Data를 통한 임시 보관 정보를 실행시킴
 | HEADER | ID | Size | Error | Checksum |
 | ---- | ---- | ---- | ---- | ---- |
 | 0xFFFFFF | 0x01 | 0x02 | 0x00 | 0xFC |
-# 2.8 Symmetric Store
+## 2.8 Symmetric Store
 다수 mightyZAP의 동일한 Address 에 Data 저장
 ### 2.8.1 Goal Position
 #### 2.8.1.1 Description
