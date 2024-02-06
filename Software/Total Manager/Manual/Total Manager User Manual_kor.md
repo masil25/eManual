@@ -344,7 +344,7 @@ Parameter 영역은 매니저의 크기를 줄일 경우, 주로 사용되어지
 ![[DynamicSize.png|700]]
   
 **Tooltip 기능**
-각 Paremater 이름의 옆에는 <span style="text-align:center;display:inline-block;background-color:white;border:1px solid  black; color:black;width:20px;height:20px;border-radius:20px;line-height:normal;"> ? </span>를 한 아이콘이 있습니다. 해당 아이콘에  mouse를 가져가 대면 해당 Paremater에 대한 간단한 설명이 표시됩니다.  
+각 Paremater 이름의 옆에는 <span style="text-align:center;display:inline-block;background-color:white;border:1px solid  black; color:black;width:20px;height:20px;border-radius:20px;line-height:initial;"> ? </span> 를 한 아이콘이 있습니다. 해당 아이콘에  mouse를 가져가 대면 해당 Paremater에 대한 간단한 설명이 표시됩니다.  
 ![[tooltip.png|500]]
 ### 3.3.2 Parameter Control
 - **Slide Control** : <font color="#4f81bd">Non-volatile Memory</font>  
