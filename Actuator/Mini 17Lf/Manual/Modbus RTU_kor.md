@@ -22,14 +22,14 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 | byte | 0 | 1 | 2 | <center>…</center> | <center>…</center> | n-1 | n |
 |  | mightyZAP ID | Function | Data | <center>…</center> | <center>…</center> | CRC(MSB) | CRC(LSB) |
 
-- 수신 패킷 구조  
-	[정상 응담]
+- 수신 패킷 구조  - 정상 응답
 
 |  | Additional Address | Fucntion code | Data | < | < | Error Check | < |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | byte | 0 | 1 | 2 | <center>…</center> | <center>…</center> | n-1 | n |
 |  | mightyZAP ID | Function | Data | <center>…</center> | <center>…</center> | CRC(MSB) | CRC(LSB) |
-	[비 정상 응답]
+
+- 수신 패킷 구조  - 비 정상 응답
 
 |  | Additional Address | Fucntion code | Data | Error Check |  |
 | ---- | ---- | ---- | ---- | ---- | ---- |
