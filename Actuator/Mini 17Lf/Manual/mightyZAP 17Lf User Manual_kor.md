@@ -176,7 +176,7 @@ Control Table Data는 'R', 'RW'로 표기됩니다. 'R'은 읽기 전용(Read On
 |            40110 | 109 (0x6D) | Action 4 Stop             | Action 4 정지 형식        | RW     |  0(0x00) |  
 ## 2.3 Volatile Memory(RAM)
 
-| Register Number | Address | Name | Description | Access | Default |
+| <center>Rergister<br>Number</center> | Address | Name | Description | Access | Default |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | 40201 | 200 (0xC8) | Force On/Off | 모터 출력 끄고 켜기 | RW | 1(0x01) |
 | 40202 | 201 (0xC9) | Actuator Pause | 모터 일시 정지 | RW | 0(0x00) |
