@@ -316,7 +316,7 @@ Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Strok
 - Present Positon  : 1000 -> 1010으로 변경된 경우
 - <font color="#4f81bd">결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다</font>  
 
-**예시 4. 외부 힘에 의해 위치값이 크게 변경된 경우**
+예시 4. 외부 힘에 의해 위치 값이 크게 변경된 경우
 - Start Compliance Margin : 20
 - Goal Positon  : 1000
 - Present Position : 1000 -> 950으로 변경할 경우
