@@ -35,11 +35,11 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 | ---- | ---- | ---- | ---- | ---- | ---- |
 | byte | 0 | 1 | 2 | 3 | 4 |
 |  | mightyZAP ID | Function  <br>+ 0x80 | Exception code | CRC(MSB) | CRC(LSB) |
-### 1.1.2 Packet Element 설명
-#### 1.1.2.1 Node ID
+### 2.1.2 Packet Element 설명
+#### 2.1.2.1 Node ID
 - mightyZAP의 IDF로 다중 연결 방식으로 Daisy Chain 연결 지원을  위한 식별자 입니다.  
 - ID가 '0'일 경우 Broadcasting ID로 동작합니다.  
-#### 1.1.2.2 Function Code
+#### 2.1.2.2 Function Code
 - mightyZAP에서 지원하는 Modbus-RTU  표준 Function code는 다음과 같습니다. 
 
 | Function | Code | Description |
@@ -48,7 +48,7 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 | Write Single Register | 0x06 | mightyZAP의 특정 주소에 Data값을 Setting  하기 |
 | Write Multiple Register | 0x10 | mightyZAP의 연속된 주소에 Data값을 Setting  하기 |
 | SP  Function code | 0xxx |  해당 모델 사용자 매뉴얼을 참조하여주시기 바랍니다. |
-#### 1.1.2.3 Data
+#### 2.1.2.3 Data
 **송신**
 - Read Register 명령의 경우 Modbus 주소, 레지스터 개수, Byte 개수 등을 지정하게 되며, Write Register 명령의 경우 Modbus 주소, Byte 개수, 설정 할 값 등을 지정하게 됩니다.  
 **수신**
@@ -56,9 +56,9 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 - Write Single Register 명령의 경우, 송신 때와 동일한 데이터가 수신됩니다. Write Multi  Register 의 경우에는 Write Multi Register 명령으로 데이터를 쓰고자 한 Register 의 시작 주소와 Register 개수가 수신됩니다.
 - 이상응답의 경우에는 Node ID, Error Code, Exception Code 로 구성되며, 이상응답의 패킷 구조는 Function Code 와 관계없이 모두 동일합니다.
 
-#### 1.1.2.4 CRC
+#### 2.1.2.4 CRC
 - 16 비트 CRC 값을 입력합니다. 구성은 MSB/LSB 로 나누어 각각 1Byte 씩 전송합니다.
-#### 1.1.2.4 Exception Code
+#### 2.1.2.4 Exception Code
 - mightyZAP에서 지원하는 모든 Function Code 의 이상 응답에 대한 Exception Code 는 아래와 같이 정의되어 있습니다.
 
 | Exception Code |  | Description |
@@ -70,17 +70,18 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 | 0x05 | Acknowledge | 데이터가 준비되지 않은 상태(ready) |
 | 0x06 | Slave Device Busy | 파라미터 잠금 상태 |
 
-## 프로토콜 Function Code 설명
-### Read Holding Register
+## 2.2 프로토콜 Function Code 설명
+### 2.2.1 Read Holding Register
 단일 레지스터(16bit 데이터) 및 연속된 레지스터 블록(16bit 데이터 단위)의 값을 읽습니다.
-- Request
+#### 2.2.1.1 Description
+**Request**
 
 |  | byte | Data |
 | ---- | ---- | ---- |
 | Function Code | 1 byte | 0x03 |
 | Starting Addresse | 2 byte | 0x0000 to 0xffff |
 | Quatity of Register | 2 bytes | 1 to 125(0x7d) |
-- Request OK
+**Request OK**
 
 |  | byte | Data |
 | ---- | ---- | ---- |
@@ -89,13 +90,14 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 | Quatity of Register | N* x 2 bytes |  |
 *N = Quantity of Registers
 
-- Request not OK  
+**Request not OK**
 
 |  | byte | Data |
 | ---- | ---- | ---- |
 | Error Code | 1 byte | 0x83 |
 | Exception Code | 1 byte | 0x01 ~ 0x06 |
-- example
+#### 2.2.1.2 Example
+
 ### Write Sing Register
 단일레지스터(16bit 데이터)에 값을 씁니다.  
 - Request
