@@ -18,6 +18,7 @@ mightyZAP은 Half Duplex TTL, RS485, CAN 통신을 사용합니다. PC와의 통
 mightyZAP을 위한 USB Interface Board를 당사의 웹사이트에서 판매하고 있습니다. 해당  Interface Board를 사용할 경우 손쉽게 mightyZAP을 PC와 연결할 수 있습니다.  
 시중의 Convertor를 구매하여 사용하실 수 있지만, 안전성을 위하여 가급적 당사의 Interface Board를 사용하여 주시기 바랍니다.
 
+
 > [!warning] 주의 사항  
 > PC와 Interface Board 연결에 충전 전용 Cable을 사용하여 통신이 연결되지 않는 경우가 있습니다. 반드시 Data통신이 가능한 Cable인지 확인하시고 사용하여 주시기 바랍니다.
 

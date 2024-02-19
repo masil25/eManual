@@ -1,8 +1,9 @@
-# 1 Total Manager 시작하기
-mightyZAP Total Manager는 다양한 운영체제에서 mightyZAP을 쉽게  관리 및 제어할 수 있는 Software입니다.
-mightyZAP Total Manager에서는 다양한 OS 환경을 제공하고, 사용자 인터페이스를 개선하고 신규 mightyZAP 모델을 추가로 지원하는 신규 mightyZAP Manager 입니다.
 
-이 가이드에서는 mightyZAP Total Manager의 설치와 각 기능의 사용법에 대한 기본 사항을 다룹니다. 
+# 1 Total Manager 시작하기
+mightyZAP Total Manager는 다양한 운영체제에서 mightyZAP Actuator를 쉽게 관리 및 제어할 수 있는 Software입니다.
+Total Manager에서는 다양한 OS를 제공하고, 사용자 인터페이스를 개선하고 신규 mightyZAP 모델을 추가로 지원하는 신규mightyZAP Manager 입니다.
+
+이 가이드에서는 Total Manager의 설치와 각 기능의 사용법에 대한 기본 사항을 다룹니다. 
 
 ## 1.1 개요
 mightyZAP Total Manager는 다양한 기능을 가진 다목적 Software입니다. mightyZAP의 동작 Test와 Parameter 설정 및 동작 상태 Monitoring과 Firmware Update를 기본적으로 제공합니다.  
@@ -17,23 +18,24 @@ mightyZAP은 Half Duplex TTL, RS485, CAN 통신을 사용합니다. PC와의 통
 mightyZAP을 위한 USB Interface Board를 당사의 웹사이트에서 판매하고 있습니다. 해당  Interface Board를 사용할 경우 손쉽게 mightyZAP을 PC와 연결할 수 있습니다.  
 시중의 Convertor를 구매하여 사용하실 수 있지만, 안전성을 위하여 가급적 당사의 Interface Board를 사용하여 주시기 바랍니다.
 
+
 > [!warning] 주의 사항  
 > PC와 Interface Board 연결에 충전 전용 Cable을 사용하여 통신이 연결되지 않는 경우가 있습니다. 반드시 Data통신이 가능한 Cable인지 확인하시고 사용하여 주시기 바랍니다.
 
 ## 1.3 Feature
 ### 1.3.1 Information
 mightyZAP의 Model 명, Stroke, Rate Load, Firmware Version 등 Actuator와 관련된 기본 정보를 표시합니다. Software를 실행하였을 경우 제일 처음에 나타나는 화면입니다.  
-![[information_tag.png]]
+![[information_tag.png|700]]
 ### 1.3.2 Parameter
 mightyZAP을  제어하거나 Parameter를 변경 및 Monitoring을 할 수 있습니다.   
 연결된 여러 개의 mightyZAP 중 선택하여 하나의 mightyZAP을 제어할 수 있으며, Parameter의 Type에 따라 Non-voltatile Memory와 Volatile Memoty 화면으로 나누어져 있습니다.    
 사용 모델에 따라 Parameter의 구성이 달라지며, 화면의 크기에 따라 화면 구성이 변하게 됩니다.  
-![[control-view.png|700]]
+![[Parameter.png|700]]
 
 ### 1.3.3 update
 mightyZAP의 Firmware를 Update할 때 사용합니다. 당사의 Webpage에서 해당 모델에 맞는 업데이트 파일을 다운로드 받으신 후 업데이트를 진행 하실 수 있습니다.  
 또한, Update Fail 및 사용자의 실수로 인해 서보모터가 검색이 되지 않을 경우 Firmware를 검사 및 복구 하실 수도 있습니다.  
-![[update-view.png|700]]
+![[update-veiw.png|700]]
 # 2 Total Manager 다운로드 및 설치
 Total Manager는 Window , Mac OS, Linux 에서 모두 설치가 가능합니다.
 ## 2.1 요구 사항
@@ -45,9 +47,8 @@ Total Manager는 Window , Mac OS, Linux 에서 모두 설치가 가능합니다.
 
 ## 2.2 Install
 ### 2.2.1 Windows
-Windows 컴퓨터에서 mightyZAP Total Manager를 설치하려면 사용 중인 Windows의 
-OS 버전을 확인하신 후 버전에 맞게 다운로드하여 주시기 바랍니다.   
-- 32bit windows : mightyZAPTotalManagerx.y.z_ia32.exe
+Windows 컴퓨터에서 mightyZAP Total Manager를 설치하려면 사용 중인 Windows의 OS 버전을 확인하신 후 버전에 맞게 다운로드하여 주시기 바랍니다.   
+- 32bit windows : mightyZAPTotalManagerx.y.z_ia32.exe (추후 32bit지원 종료)
 - 64bit windows : mightyZAPTotalManagerx.y.z_x64.exe  
 
 **Windosw Version 확인 방법**
@@ -55,7 +56,6 @@ OS 버전을 확인하신 후 버전에 맞게 다운로드하여 주시기 바�
 - windows 10 이상 : 설정 -> 시스템 -> 정보
 <font color="#4f81bd">OS Version 확인 방법</font>
 ![[windows_version_check.jpg|700]]
-**mightyZAP Total Manager Download Link**
 
 다운로드한 파일을 실행하여, 설치 가이드의 지침에 따라 설치하시면 됩니다.  
 설치에는 몇 분 정도 걸릴 수 있습니다.
@@ -76,16 +76,24 @@ Mac OS 전용 패키지를 다운로드 합니다.
 ## 2.3 화면 구성
 화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Footer로 구성되어있다.  
 ![[mainView-description.png|700]]
-<font color="#548dd4">① Main Toolbar</font>  Actuator의 Reset, Restart, Data Undo/Redo 등을 수행  
-<font color="#548dd4">② SCAN</font> : Software의 통신을 연결하고 mightyZAP 검색  
-<font color="#548dd4">③ Main Menu</font> : Information, control, Update, Manager Setting 등 Manager에서 제공하는 기능 선택 Side bar Menu  
-<font color="#0070c0">④ Actuator List</font> : 검색된 mightyZAP의 이름이 통신 속도와 Protocol에 따라 분류되어 표시  
-<font color="#0070c0">⑤ Main contents</font> : 매니저에 제공하는 Main 기능 표시  
-<font color="#0070c0">⑥ Actuator Information</font> : 선택된 Actuator의 모델명, Firmware Version, 통신 방식 등이 표기    
-<font color="#0070c0">⑦ 통신 상태</font> : 통신 Protocol 및 송수신 Error 등 통신 상태 표시  
-<font color="#0070c0">⑧ Manager Status</font> :  Manager 의 버전 및 Language 등 표시  
+<font color="#4f81bd">1. Main Toolbar  </font>  
+mightyZAP의 Reset, Restart, Data Undo/Redo 등을 수행  
+<font color="#4f81bd">2. SCAN  </font>  
+ Software의 통신을 연결하고 mightyZA P 검색  
+<font color="#4f81bd">3. Main Menu</font>  
+Information, control, Update, Manager Setting 등 Manager에서 제공하는 기능 선택 Side bar Menu  
+<font color="#4f81bd">4. Actuator List</font>  
+검색된 mightyZAP의 이름이 통신 속도와 Protocol에 따라 분류되어 표시  
+<font color="#4f81bd">5. Main contents</font>  
+매니저에 제공하는 Main 기능 표시  
+<font color="#4f81bd">6. Actuator Information</font>  
+선택된 Actuator의 모델명, Firmware Version, 통신 방식 등이 표기    
+<font color="#4f81bd">7. 통신 상태</font>  
+통신 Protocol 및 송수신 Error 등 통신 상태 표시  
+<font color="#4f81bd">8. Manager Status</font>    
+Manager 의 버전 및 Language 등 표시  
 ## 2.4 USB Interface Board 
-Total Manager와 mightyZAP과의 통신을 위하여 Serial Convertor 가 필요합니다.  
+mightyZAP Total Manager와 mightyZAP의 통신을 위하여 Serial Convertor 가 필요합니다.  
 해당 설명은 당사의 USB Interface Board를 기준으로 설명이 되어있습니다.  
 먼저 USB Cable을 이용하여 PC와 연결하여 주시기 바랍니다.   
 > [!warning] 주의사항     
@@ -93,38 +101,54 @@ Total Manager와 mightyZAP과의 통신을 위하여 Serial Convertor 가 필요
 
 ### 2.4.1 Windows
 당사의 Interface Board 는 2가지 Type으로 되어있으며, 각 버전에 따라 드라이버를 다르게 설치해야 합니다. 아래의 설명을 참조하여 드라이버를 설치 합니다.
+#### 2.4.1.1 IR_USB02 Driver (CH340x)
+아래의 링크에서 IR-USB03의 Driver를 다운로드 합니다.  
+[CH341SER_ZIP Driver Download Link](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)   
 
-- **IR-USB02 Driver 설치** (CH340x)
-	아래의 링크에서 IR-USB03의 Driver를 다운로드 합니다.
-	다운로드 받은 파일을 실행한 후 INSTALL 버튼을 클릭하여 드라이버를 설치합니다
-	![[ch340x_win_install.jpg]]
-- **IR-USB03 Driver 설치**  
-	아래의 링크에서 IR-USB03의 Driver를 다운로드 합니다.  
-	-  [USB Interface Board Window Driver]  
-	다운로드 받은 파일을 실행하여 드라이버를 설치합니다.  
-	![[ftdi_win_install.png|650]]
+<font color="#4f81bd"><b>Step 1. Driver Install</b></font>  
+다운로드 받은 파일을 실행한 후 INSTALL 버튼을 클릭하여 드라이버를 설치합니다
+![[ch340x_win_install.jpg]]  
 
-- **Interface Board 연결 확인**
-USB Interface Board를 PC와 연결합니다.
-[시스템]-[장치관리자]-[port]에서 Serial Port가 정상적으로 연결되었는지 확인합니다.  
-정장적으로 연결되어 있을 경우 이미지에서와 같이 새로운 com port가 추가되는것을 확인할 수 있습니다.
-![[serialPort_check_win.jpg]]
+<font color="#4f81bd"><b>Step 2. Driver 확인</b></font>  
+- USB Interface Board를 PC와 연결합니다.  
+- [시스템]-[장치관리자]-[port]에서 Serial Port가 정상적으로 연결되었는지 확인합니다.  
+- 정상적으로 연결되어 있을 경우 아래의 이미지와 같이 Model명이 표시되는것을 확인할 수 있습니다.
+  ![[serialPort_check_win.jpg|700]]
+#### 2.4.1.1 IR_USB03 Driver (FTDI)
+아래의 링크에서 IR-USB03의 Driver를 다운로드 합니다.   
+[FTDI_ZIP Driver Download(ZIP)](https://ftdichip.com/wp-content/uploads/2021/08/CDM212364_Setup.zip)    
+
+<font color="#4f81bd"><b>Step 1. Driver Install</b></font>  
+- 다운로드 받은 파일을 실행하여 드라이버를 설치합니다.  
+![[ftdi_win_install.png|650]]
+
+<font color="#4f81bd"><b>Step 2. Driver 확인</b></font>  
+- USB Interface Board를 PC와 연결합니다.  
+- [시스템]-[장치관리자]-[port]에서 Serial Port가 정상적으로 연결되었는지 확인합니다.  
+- 정상적으로 연결되어 있을 경우 아래의 이미지와 같이 Model명이 표시되는 것을 확인할 수 있습니다.
+	 ![[fd_confirm_driver.png|600]]
+
 ### 2.4.2 Linux[ubuntu/Demian]
-1) CH341 Driver 
-CH341 driver는 USB-02 Model에서 만 사용됩니다. 
-CH340, CH341 의 시리얼 드라이버는 Linux 커널 버전 2.6.24부터 내장되어 있으며, 해당 위치는 drivers/usb/serial/ch341.c입니다. 다만 드라이버를 최신 상태로 유지 하기 원하실 경우 아래의 방법을 사용하기 바랍니다.
- - 아래의 사이트에서 Linux용 드라이버를 다운로드 받으시기 바랍니다.
-   [LINUX용 CH341 Driver Donwload(ZIP)](https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html)  
- - 다운로드한 파일의 압축을 풉니다.
- - 터미널 창을 열고 다운로드한 디렉토리로 이동을 합니다.
- - 다음의 명령들을 입력합니다
+#### 2.4.2.1 CH341 Driver   
+CH341 driver는 USB-02 Model에서 만 사용됩니다.   
+CH340, CH341 의 시리얼 드라이버는 Linux 커널 버전 2.6.24부터 내장되어 있으며, 해당 위치는 <font color="#4f81bd">'drivers/usb/serial/ch341.c'</font> 입니다.  
+
+다만 드라이버를 최신 상태로 유지 하기 원하실 경우 아래의 아래의 사이트에서 Linux용 드라이버를 다운로드 받으신 후 순서에 따라 진행하여 주시기 바랍니다.  
+[LINUX용 CH341 Driver Donwload(ZIP)](https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html)  
+   
+<font color="#4f81bd"><b>Step 1. Driver Install</b></font>  
+- 다운로드한 파일의 압축을 풉니다.
+- 터미널 창을 열어 다운로드한 디렉토리로 이동을 합니다. 
+- 다음의 명령들을 입력합니다.
 ```bash
 $ make clean  
 $ make  
 $ sudo make load    
 ```
- - 설치된 드라이버를 확인하기 위해 USB-02를 PC와 연결한 후 다음의 명령을 입력합니다.  
-   정상적으로 설치가 되었다면 "ch34x"로 표시되어야 합니다.
+
+<font color="#4f81bd"><b>Step 2. Driver 확인</b></font>  
+- 설치된 드라이버를 확인하기 위해 USB-02를 PC와 연결한 후 다음의 명령을 입력합니다. 
+- 정상적으로 설치가 되었다면 "**ch34x**"로 표시되어야 합니다.
 ```bash
 $ sudo dmesg | grep ch34    
 [   xxx] usbcore: registered new interface driver ch341  
@@ -132,11 +156,14 @@ $ sudo dmesg | grep ch34
 [   xxx] ch341 1-6.4.3:1.0: ch341-uart converter detected  
 [   xxx] usb 1-6.4.3: ch341-uart converter now attached to ttyUSB1  
 ```
-2) FTDI Driver
+
+#### 2.4.2.2 FTDI Driver  
 FTDI Driver는 USB-02를 제외한 모든 모델에서 사용됩니다.  
-FTDI VCP 드라이버는 Linux  커널에 내장되어 있습니다. 모든 FTDI 장치에 VCP 드라이버 지원이 있는지 확인하기 위해 FTDI는 Linux  시스템에 최신 커널 릴리즈를 설치할 것을 권장합니다. Linux 에서는 VCP 드라이버가 /dev/ttyUSBx로 표시됩니다.  
-Comport를 확인하는 방법 :  
-- USB Interface board를 PC와 Cable로 연결한다.
+FTDI VCP 드라이버는 Linux  커널에 내장되어 있으며, 만약 Driver가 검색이 안될경우 최신 kernel Release를 설치할 것을 권장합니다.  
+Linux 에서는 VCP 드라이버가 <font color="#4f81bd">"/dev/ttyUSBx"</font> 로 표시됩니다.  
+
+<font color="#4f81bd"><b>Step 1. Comport 확인</b></font>  
+- USB Interface board를 PC와 Cable로 연결 한다.
 - 터미널 창을 열고 다음을 입력하면 다음과 같이 출력이 나타납니다.
 ```bash
 $ dmesg|grep FTDI  
@@ -146,9 +173,9 @@ $ dmesg|grep FTDI
 [   xxx] ftdi_sio: v1.6.0:USB FTDI Serial Converters Driver  
 ```
 
-**Serial Port 권한 얻기**
+<font color="#4f81bd"><b>Step 2. Serial Port 권한 얻기</b></font>  
 우분투는 기본적으로  root 사용자가 아닌 일반 사용자로 로그인하도록 하기 때문에 Serial Port와 같은 시스템 장치를 다루기 위해서는 권한 설정을 해야 합니다.   
-먼저 연결된 Port 명을 확인하기 위해 아래의 명령을 입력합니다.
+- 먼저 연결된 Port 명을 확인하기 위해 아래의 명령을 입력합니다.
 ```
 $ dmesg|grep tty  
 [   xxx] printk: console [tty0] enabled  
@@ -157,20 +184,19 @@ $ dmesg|grep tty
 [   xxx] usb 1-6.1.4: FTDI USB Serial Device converter now attached to ttyUSB0  
 ```
 
-
-"ls -l" 명령을 이용하여 확인된 Serial Port를 이용하여 사용 그룹을 확인합니다.
+- "ls -l" 명령을 이용하여 확인된 Serial Port를 이용하여 사용 그룹을 확인합니다.
 ```bash
 $ ls -l /dev/ttyUSB0  
 crw-rw---- 1 root dialout 188,  0 11월  1 10:49 /dev/ttyUSB0  
 ```
 
-"id Gn" 명령을 통해 현재 로그인 중인 사용자가 속한 그룹을 확인합니다.
+- "id -Gn" 명령을 통해 현재 로그인 중인 사용자가 속한 그룹을 확인합니다.
 ```baSH
 $ id -Gn  
 user adm cdrom sudo dip plugdev  
 ```
 
-현재 로그인한 사용자에서 dialout 그룹이 포함되어 있지 않기 때문에, 현재 사용자에게 dialout 그룹을 추가해 줍니다.
+- 현재 로그인한 사용자에서 dialout 그룹이 포함되어 있지 않기 때문에, 현재 사용자에게 dialout 그룹을 추가해 줍니다.
 ```bash
 $ sudo adduser $USER dialout
 [sudo] password for user.
@@ -179,18 +205,79 @@ Adding user user to group dialout
 Done
 ```
 
-그룹에 추가 한 후에는 반드시 로그아웃 후 로그인 해야 변경 사항이 적용 됩니다.
+  그룹에 추가 한 후에는 반드시 로그아웃 후 로그인 해야 변경 사항이 적용 됩니다.
 ### 2.4.3 Mac OS
 #### 2.4.3.1 USB 02(CH34x Driver)
 USB Interface Board Driver를 다운로드 합니다.  
-	- https://www.wch.cn/download/CH341SER_ZIP.html
-다운로드한 파일을 실행하고 가이드에 따라 드라이버를 설치합니다.  
-	[이미지 ]  
-USB Interface Board를 PC와 연결합니다.  
-[시스템 정보]-[Hardware]-[USB]에서 Serial Port가 정 상적으로 연결되었는지 확인합니다.    
-정장적으로 연결되어 있을 경우 이미지에서와 같이 새로운 com port가 추가되는것을 확인할 수 있습니다.  
-[이미지]  
+[CH341SER_ZIP Driver Download Link](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)
+
+다운로드한 파일을 실행하고, 다운로드한 파일 중 <font color="#4f81bd">"CH34X_DRV_INSTRUCTIONS.pdf"</font> 파일의 가이드에 따라 드라이버를 설치합니다.   
+OS X 11.0 이상을 사용하고 OS가 Rosetta를 지원하지 않는 경우 dmg 형식 드라이버를 설치해야 합니다. 그럴 경우 <font color="#4f81bd">Step 3 </font>을 확인 하시기 바랍니다. 
+
+<font color="#4f81bd"><b>Step 1. Install pkg format Driver</b></font>   
+- CH34xVCPDriver.pkg 파일을 click 하여 설치를 진행합니다.  
+![[CH34x_install.png|600]]  
+![[CH34x_Install success.png|600]]  
+
+<font color="#4f81bd"><b>Step 2. Install CH32xVCPDriver Application</b></font>   
+- LaunchPad를 열고 "CH34xVCPDriver" 애플리케이션을 찾아 App을 열고 "Install" 버튼을 Click 합니다.  
+![[ch34x_app.png|600]]  
+- OS X 10.9~OS X 10.15를 사용하는 경우 "다시 시작"을 클릭하여 컴퓨터를 다시 시작해야 합니다.
+- 다시 시작한 후 <font color="#4f81bd"><b>Step 4</b></font> 단계를 수행하십시오.
+
+<font color="#4f81bd"><b>Step 3. OS X 11.0 이상을 사용하고 OS가 Rosetta를 지원하지 않는 경우</b></font>  
+- dmg 형식 드라이버를 설치할 때 dmg 파일을 클릭하고 Drag해야 합니다.
+- OS의 응용 프로그램 폴더에 "CH34xVCPDriver"를 넣은 다음 LaunchPad를 열고 찾습니다.
+- “CH34xVCPDriver” 애플리케이션을 실행하고 App을 열고 “Install” 버튼을 클릭하세요.  
+![[ch34x_app.png|600]]    
+
+<font color="#4f81bd"><b>Step 4. Driver  설치 확인</b></font>  
+- USB-02을 USB 포트에 연결하고 [System Report]->[Hardware]->[USB]을 선택하면, 오른쪽은 “USB Device Tree”에서 연결한 장치를 찾을 수 있습니다.  
+- USB 장치가 제대로 작동하는 경우 "Vendor ID"가 [0x1a86]으로 나타납니다.  
+![[Software/Total Manager/img/ch34x_confirm_Driver.png|600]]  
+
+<font color="#4f81bd"><b>Step 5. Comport 확인</b></font>   
+- [Application] - [Utility] 폴더에서 "터미널" 프로그램을 열고 다음 명령을 입력하세요.  
+~~~
+$ ls /dev/tty*
+tty.wchusbserial121311
+~~~
+  - "tty.wchusbserialx"가 표시되어야 합니다. 여기서 "x"는 Windows COM 포트 할당과 유사하게 할당된 장치 번호입니다.  
+  
+>[!note] Note  
+>추가적인 내용은 다운로드한 파일 중 <font color="#4f81bd">"CH34X_DRV_INSTRUCTIONS.pdf"</font> 을 참조하여 주시기 바랍니다.  
 #### 2.4.3.2 USB 03(FTDI Driver)
+해당 Driver 설치 설명은 해당 Driver 설치 설명은 Mac OS X10.15 and macOS 11/12을 기준으로 설명을 드립니다.  그 이전 OS X 버전의 경우 FTDI 사의 2016년  "Mac OS X Installation Guide"을 참조하여 주시기 바랍니다.  
+
+USB Interface Board Driver를 다운로드 합니다.  
+- https://ftdichip.com/drivers/vcp-drivers/  
+
+<font color="#4f81bd"><b>Step 1. Application folder에 설치 하기</b></font>  
+다운로드 받은 "FTDIUSBSerialDextInstaller_x_y_z.app" 파일을 Application 폴더로 옮깁니다.  
+![[FTDI_driver_file.png|500]]
+
+<font color="#4f81bd"><b>Step 2. FTDI USB Serial Dext VCP Install</b></font>   
+FTDIUSBSerialDextInstaller_x_y_z 실행 시킨 후 아래와 같이 Install 버튼을 클릭합니다.  
+![[FTDI_install.png|600]]    
+만약 아래와 같이, "System Extention blocked" 메세지가 나왔을 경우 "Open System Settings" 버튼을 클릭하여 시스템 창을 엽니다.   
+[Privacy & Security] 항목에서  "FTDIUSBSerialDextInstall_x_y_z.app"을 허용 버튼을 눌러 설치를 지속합니다.  
+![[Allow_FTDI_Driver.png|700]]
+
+설치가 완료되면 아래와 같이 표시가 됩니다.  
+![[FTDI Succeeded Install.png|500]]  
+
+<font color="#4f81bd"><b>Step 3. Driver  설치 확인</b></font>   
+USB-03을 USB 포트에 연결하고 [System Report]->[Hardware]->[USB]을 선택하면, 오른쪽은 “USB Device Tree”에서 연결한 장치를 찾을 수 있습니다.  
+USB 장치가 제대로 작동하는 경우 아래의 그림과 같이 Model 명이 나타납니다.
+![[ch34x_confirm_Driver.png|700]]
+
+<font color="#4f81bd"><b>Step 4. Comport 확인</b></font>   
+[Application]-[Utility] 폴더에서 "터미널" 프로그램을 열고 다음 명령을 입력하세요.  
+~~~
+$ ls /dev/tty*
+tty.usbserial-x
+~~~
+  "tty.usbserial-x"가 표시되어야 합니다. 여기서 "x"는 Windows COM 포트 할당과 유사하게 할당된 장치 번호입니다.
 # 3 Total Manager Description
 ## 3.1 통신 연결 및 검색
 아래의 이미지와 같이 프로그램을 실행 한 후 상단 매뉴바에서 Scan 버튼을 누르면 Actuator Scan을 위한 팝업 창이 활성화 됩니다.   
@@ -208,9 +295,11 @@ Actuaotor Scan 팝업 창의 화면 구성은 아래와 같습니다.
 **1. Port 선택**  
 위 [[#2.4 USB Interface Board]] 의 설명을 참조하시어 Serial Port 명을 확인 하신 후 진행하시기 바랍니다.  연결된 Serial Port와 동일한 Port를 선택한 후 OPEN 버튼을 클릭하여 Serial Port를 연결합니다.  
 ![[ScanActuator-PortSelect.png|700]]
+
 Serial Port 를 Open하면 Option 항목이 활성화 됩니다.  
 모든 옵션은 중복으로 선택할 수 있으며 검색 시 순차적으로 진행이 됩니다.  
 All 버튼을 누르게 되면 모든 선택하거나 모두 선택 해지를 하게 됩니다.
+
    ![[yrdy-2023-07-25_10.39.gif]]
   
 다음은 모델에 따른 기본 설정 값에 대한 예시 입니다.   
@@ -219,12 +308,11 @@ All 버튼을 누르게 되면 모든 선택하거나 모두 선택 해지를 �
 |:------------------|:----------------------------|:---------------------|
 |   **Mini L12/12Lf**   | Own Protocol                |             57600pbs |
 |   **Mini 17Lf**       | Modbus Protocol             |             57600pbs |  
-
 ### 3.1.3 Actuator 검색
- SCAN 버튼을 누르게 되면 선택한 옵션에 따라 차례로 검색을 시작하여 해당 결과를 표시합니다.
+ SCAN 버튼을 누르게 되면 선택한 옵션에 따라 차례로 검색을 시작하여 해당 결과를 표시합니다.  
  원하는 Actuator 가 모두 검색 되었을 경우, 완료를 기다리지 않고 STOP 버튼을 click하면 검색을 종료하면 됩니다.  
- ![[SCAN_Desc.png|700]]
- 검색이 완료되었으면 Close 버튼을 click하여 Popup 창을 닫습니다.
+ ![[SCAN_Desc.png|700]]  
+ 검색이 완료되었으면 Close 버튼을 Click하여 Pop-Up 창을 닫습니다.
 ## 3.2 Information
 mightyZAP Actuator의 Model명, Rated Load, Stroke, firmware Version등 관련된 정보를 표시하는 페이지 입니다.  
 Manager가 실행이 되면 처음 표시하는 창이  창이며, 아래의 이미지와 같이 사이드 바 메뉴의 첫번째 아이콘을 클릭하여 해당 페이지로 이동합니다. 
@@ -237,8 +325,10 @@ Actuator List는 Baudrate와 Protocol에 따라 분류되어 표시 되며,  Bau
 ### 3.2.2 정보 확인
 Actuator List를 선택하면 해당 Actuator의 모델 명, Stroke 길이, 정격 부하, 통신 Protocol 등의 정보가 표시됩니다. 
 ![[Actuator_Information.png|700]]
+  
 이중 중요한 일부 정보가 Manager의 하단 Footer에 표시됩니다.
 ![[FooterDiscription.png]]
+  
 Footer에 표시된 정보는 information Page가 아닌 다른 Page에서도 볼 수 있습니다. 
 ## 3.3 Parameter
 mightyZAP Actuator를 설정 및 간단한 동작 테스트를 하고, 동작 상태를 Monitoring하는 페이지 입니다.  
@@ -253,9 +343,9 @@ Non-volatile Meomory는 비 휘발성 메모리 영역의 Parameter로 수정 �
 Volatile Memory는 휘발성 메모리 영역으로 내부 Ram에 저장이 되며, 전원이 꺼지기 전까지는 해당 Data를 저장하고 있지만, 전원이 꺼지게 되면 해당 Data는 초기화 됩니다.  
 Parameter 영역은 매니저의 크기를 줄일 경우, 주로 사용되어지는 Volatile-Memeory 영역이 상단으로 이동합니다.   
 ![[DynamicSize.png|700]]
-
+  
 **Tooltip 기능**
-각 Paremater 이름의 옆에는 <span style="aline-text:center;display:inline-block;background-color:black; color:white;width:20px;border-radius:5px;">?</span>를 한 아이콘이 있습니다. 해당 아이콘에  mouse를 가져가 대면 해당 Paremater에 대한 간단한 설명이 표시됩니다.  
+각 Paremater 이름의 옆에는 <span style="text-align:center;display:inline-block;background-color:white;border:1px solid  black; color:black;width:20px;height:20px;border-radius:20px;line-height:initial;"> ? </span> 를 한 아이콘이 있습니다. 해당 아이콘에  mouse를 가져가 대면 해당 Paremater에 대한 간단한 설명이 표시됩니다.  
 ![[tooltip.png|500]]
 ### 3.3.2 Parameter Control
 - **Slide Control** : <font color="#4f81bd">Non-volatile Memory</font>  
@@ -315,7 +405,7 @@ Monitoring 기능은 아래와 같이 구성 되어있습니다.
 [Firmware Download](https://mightyzap.com/en/digitalarchive4/?category1=Firmware&mod=list&pageid=1)
 ### 3.4.1 화면 구성    
 Update Page는 이미지와 같이 펌웨어 업데이트, Actuator Recovery 영역으로 되어있으며, 각각의 실행은 상단 header의 메뉴에서 해당 아이콘을 선택하여 실행할 수 있습니다.  
-![[Software/Total Manager/img/Information_tag.png|700]]
+![[Information_tag.png|700]]
 ### 3.4.2 Firmware Update   
 **Actuator 연결**  
 업데이트를 진행할 서보 모터를 연결하고 SCAN 을 합니다.  
@@ -328,7 +418,7 @@ firmware update를 진행 할 경우 그림과 같이 Select file 버튼을 눌�
 > [!warning] 주의 사항  
 > 이때 다른 모델의 firmware file 을 선택하지 않게 조심해야 합니다. Actuator List에 나와있는 Model 명과 uipdate file의 이름이 동일한지 확인해야 합니다.
 
-**업데이트** 
+**업데이트**   
 모든 사항이 준비가 다 되었으면 상단 메뉴바에서 Update 아이콘을 클릭합니다.   
 ![[Update-Button.png|700]]
 이때 둘 이상의 actuator 가 연결되었을 경우 다음과 같은 경고창이 나타나고 SCAN  작업을 다시 합니다. 
@@ -336,7 +426,7 @@ firmware update를 진행 할 경우 그림과 같이 Select file 버튼을 눌�
  mightyZAP이 업데이트를 위해서 재 시작하는데 정상적으로 통신이 이루어지지 않는 경우 아래의 그림과 같이 커넥터를 다시 연결하라는 메세지가 나타납니다. 이때 mightyZAP에 연결된 커넥터를 빼신 후 다시 연결하시면 정상 적으로 업데이트가 진행 됩니다.  
 ![[Update-Reconnect.png|600]]
 
-**업데이트 완료**
+**업데이트 완료**  
 업데이트가 진행되면 그림과 같이 progress bar가 진행이 됩니다. 100%까지 완료되면 update 완료 메세지가 나타납니다.    
 ![[Update-Complete.png|700]]
 필요에 따라 reset이나 Factory Reset을 추가적으로 진행하시면 됩니다.  
@@ -367,13 +457,13 @@ Recovery 진행 사항은 각 단계마다 이미지 또는  Text로 그 단계�
 
 ### 3.4.4 Reset
 mightyZAP의 Parameter를 초기화하는 명령입니다. 이때 ID, Baudrate, Protocol 및 Calibration Parameter는 초기화 되지 않습니다.  
-![[reset_selcect.png]]  
+![[reset_selcect.png|700]]  
 ![[resetPopup.png|300]]
 Reset 아이콘을 클릭하면 다음과 같은 Popup창이 나타납니다.  OK 버튼을 누르면 Parameter가 리셋이 되며 화면이 깜빡이며 Parameter 창으로 이동하며 Data를 다시 불러옵니다.  
-![[resetAction.gif]]
+![[resetAction.gif|700]]
 ### 3.4.5 Restart  
 mightyZAP의 시스템을 재 시작 할 때 사용합니다. Overload Shutdown 초기화 또는 변경된 Non Volatile Parameter의 Data를 확인하기 위해 사용합니다.  
-![[restartSelect.png]]  
+![[restartSelect.png|700]]  
 해당 버튼을 누르면 화면이 한번 깜빡이고 Parameter창으로 이동하여 Data를 다시 읽어옵니다.
 ### 3.4.6 Factory Reset   
 Actuator의  상태를 공장 출하 시의 초기 상태로 돌리고, 위치 값을 결정하는 Potentiometer의 Calibration을 진행합니다.  

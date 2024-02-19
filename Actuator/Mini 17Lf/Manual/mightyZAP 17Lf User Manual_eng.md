@@ -3,16 +3,16 @@ mightyZAP 17Lf Model은 다양한 기능을 내장한 Actuator로 효율적이�
 
 >[!danger] 위험  
 > 1. 정격 부하 이상의 힘이 지속적으로 가해질 경우 모터가 소손될 수 있습니다.
-> 2. Rod End Tip 장착 시 무리하게 Rod에 비트는 힘을 가하게 되면 내부 부품 파손의 원인이 됩니다.   (동봉된 M3 스패너로 rod를 고정 후 rod end tip류를 부착하십시오.)
+> 2. Rod End Tip 장착 시 무리하게 Rod에 비트는 힘을 가하게 되면 내부 부품 파손의 원인이 됩니다.   (동봉된 M3 스패너로 rod를 고정 후 rod end tip류를 장착하십시오.)
 > 3. 제품의 사용 환경을 준수하세요 (전압 : 8V~13V(정격전압 12V),  동작 온도 : -10도 ~ +60도)
 > 4. 최적의 수명 관리를 위해 Duty Rate 50%를 넘지 않고, 최대 연속 동작 시간 30초를 넘지 말아 주시기 바랍니다.
 > 5. 오배선에 우의 하여 주시기 바랍니다.
 > <font color="#ff0000">(자세한 사항은</font> [[#3.1 사용 주의 사항]] <font color="#ff0000">을 참조 하여 주시기 바랍니다.)</font>
 
 > [!warning] 경고  
-> - 연속동작 직후 mightyZAP의 케이스가 뜨거울 수 있습니다. 화상에 주의하십시오.
+> - 연속 동작 직후 mightyZAP의 케이스가 뜨거울 수 있습니다. 화상에 주의하십시오.
 > - mightyZAP을 물기, 먼지, 기름으로부터 멀리 하십시오.
-> - 본 제품은 실내 용도로 설계된 제품입니다. 실외 사용을 금합니다.
+> - 본 제품은 실내 용도로 설계된 제품입니다. 실 외 사용을 금합니다.
 > - 어린이의 손이 닿지 않는 곳에 제품을 보관하십시오. 성인이 사용 시에도 모터의 동작 시 발생할 수 있는 신체 상해에 유의하십시오.
 >    <font color="#ff0000">(자세한 사항은</font> [[#3.1 사용 주의 사항]] <font color="#ff0000">을 참조 하여 주시기 바랍니다.)</font>
 ## 1.2 사양
@@ -86,7 +86,7 @@ Control Table Data는 'R', 'RW'로 표기됩니다. 'R'은 읽기 전용(Read On
 기본 값은 초기 설정 값(공장 출하 설정 값)입니다. Non-Volatile Memory 영역의 값은 사용자가 수정할 경우 변경한 값으로 적용되며, Volatile Memory 영역은 전원이 인가 되었을 때의 값을 의미합니다.  
 ## 2.2 Non-volatile Memory (ROM)  
 
-| Rergister Number | Address    | Name                      | Description           | Access | Default  |
+| <center>Rergister<br>Number</center> | <center>Address</center>    | <center>Name</center>                      | <center>Description</center>           | Access | <center>Default</center>  |
 |:-----------------|:-----------|:--------------------------|:----------------------|:-------|:---------|
 |            40001 |   0 (0x00) | Serial Number             | Model Serial Nu mber  | R      |          |
 |            40002 |   1 (0x01) | Firmware Version          | 펌웨어 버전 정보             | R      |          |
@@ -176,7 +176,7 @@ Control Table Data는 'R', 'RW'로 표기됩니다. 'R'은 읽기 전용(Read On
 |            40110 | 109 (0x6D) | Action 4 Stop             | Action 4 정지 형식        | RW     |  0(0x00) |  
 ## 2.3 Volatile Memory(RAM)
 
-| Register Number | Address | Name | Description | Access | Default |
+| <center>Rergister<br>Number</center> | Address | Name | Description | Access | Default |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | 40201 | 200 (0xC8) | Force On/Off | 모터 출력 끄고 켜기 | RW | 1(0x01) |
 | 40202 | 201 (0xC9) | Actuator Pause | 모터 일시 정지 | RW | 0(0x00) |
@@ -269,7 +269,7 @@ Shutdown은 Hardware Error가 발생할 경우, 모터를 Force Off 상태 즉, 
 > [!note] NOTE   
 >Hardware Error에 대한 자세한 설명은 [[#2.4.22 Hardware Error]]를 참조하여 주시기 바랍니다.
 
-### 2.4.6 Short/Long Stroke Limt  
+### 2.4.7 Short/Long Stroke Limt  
 | Parameter | Range | Description | Unit |
 | ---- | ---- | ---- | ---- |
 | Short Stroke Limit | 0~10,000 | Goal Position 최소 입력 하한값 |  |
@@ -278,13 +278,13 @@ Shutdown은 Hardware Error가 발생할 경우, 모터를 Force Off 상태 즉, 
 위치 제어에서 목표 위치의 제한 값으로 0 ~ 10,000 범위 내에서 목표 위치 값을 제한합니다.
 따라서 Goal Position값은 Short Stroke Limit(A) 값보다 작을 수 없고, Long Stroke Limit(B) 값보다 커서는 안됩니다.
 Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Stroke Limit 값보다 클 경우 Stroke Limit값으로 치환됩니다.  
-![[Actuator/Mini 17Lf/img/StrokeLImit.png|600]]   
+[[Actuator/Mini 17Lf/img/StrokeLImit.png|600]]   
 >[!warning] WARNING  
 >mightyZAP이 사용자의 Application에 설치 되어 동작하기 전에 , 실제 가동 가능한 범위를 측정하여 Short Stroke Limit/Long Stroke Limit를 설정하신 후 사용하는 것을 추천 드립니다.  
 >설치된 기구물의 한계 밖의 위치 이동값을 입력할 경우 mightyZAP 또는 사용자의 Application 이 파손되거나, Overload 보호 기능이 동작 될 수 있습니다.   
 >자세한 내용은 [[#3. 유의 사항]]을 확안하여 주시기 바랍니다.
 
-### 2.4.6 Start Compliance Margin  
+### 2.4.8 Start Compliance Margin  
   Start Compliance Margin은 mightyZAP이 Goal Position 위치 값으로 이동 하기 위한  최소 위치 편차(마진) 값 입니다.  
   
 | value | Description |
@@ -292,32 +292,35 @@ Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Strok
 | 0 ~ 255 | Goal Position 최소 입력 하한값 |
 
 현재 위치(Present Position)값이 Goal Position 값보다 마진 값 이상 크거나 작을 경우, 위치 오차를 정정하기 위해 모터를 제어합니다.
-  
+    
 **Start Compliance Margin은 다음의 2가지의 경우에 적용이 됩니다.**
 - 현재 위치에서 다른 위치로 이동하기 위해 Goal Postion 값을 변경하는 경우
 - 정지 위치에서 외력에 의해 위치가 변화가 생긴 경우  
-    (사용자는 Goal Position을 변경하지 않았으나 Present Position이 바뀐 경우입니다.  일반적으로 외력에 의한 밀림이나 내부 유격 등의 의한 현재 위치의 변동이 생길 경우 입니다)
- 
-<font color="#4f81bd">예시 1. Start Compliance Margin 보다 작게  Goal Position을 변경한 경우</font>  
+    (사용자는 Goal Position을 변경하지 않았으나 Present Position이 바뀐 경우입니다.  일반적으로 외력에 의한 밀림이나 내부 유격 등의 의한 현재 위치의 변동이 생길 경우 입니다)   
+  
+**예시 1. Start Compliance Margin 보다 작게  Goal Position을 변경한 경우** 
 - Start Compliance Margin : 20
 - Present Positon  : 1000
 - Goal Position : 1000 -> 1010으로 변경할 경우
-- **결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다**
-   <font color="#4f81bd">예시 2. Start Compliance Margin 보다 크게  Goal Position을 변경한 경우</font>  
+- <font color="#4f81bd">결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다</font>  
+  
+**예시 2. Start Compliance Margin 보다 크게  Goal Position을 변경한 경우** 
 - Start Compliance Margin : 20
 - Present Positon  : 1000
 - Goal Position : 1000 -> 950으로 변경할 경우
-- **결과 : 위치 편차가 Margin보다 커 모터가 동작되어 Present Position 값이 950으로 변경**
- <font color="#4f81bd">예시 3. 외부 힘에 의해 위치 편차가 발생한 경우</font>  
+- <font color="#4f81bd">결과 : 위치 편차가 Margin보다 커 모터가 동작되어 Present Position 값이 950으로 변경</font>  
+  
+**예시 3. 외부 힘에 의해 위치 편차가 발생한 경우**
 - Start Compliance Margin : 20
 - Goal Position : 1000
 - Present Positon  : 1000 -> 1010으로 변경된 경우
-- **결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다**
-      <font color="#4f81bd">예시 4. 외부 힘에 의해 위치값이 크게 변경된 경우</font>  
+- <font color="#4f81bd">결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다</font>  
+  
+**예시 4. 외부 힘에 의해 위치 값이 크게 변경된 경우**  
 - Start Compliance Margin : 20
 - Goal Positon  : 1000
 - Present Position : 1000 -> 950으로 변경할 경우
-- **결과 : 위치 편차가 Margin보다 커 모터가 동작되어 Present Position 값이 1000으로 변경
+- <font color="#4f81bd">결과 : 위치 편차가 Margin보다 커 모터가 동작되어 Present Position 값이 1000으로 변경</font>  
 
 위의 예와 같이 Start Compliacne  Margin을 크게 설정할 경우, 외부 변화에 둔감하게 동작하여 위치 정밀도는 떨어질 수 있으나, 사용자가 제어하지(의도하지) 않은 모터의 잦은 동작을 막아 동작 안전성 및 내구성에 좋습니다.  
 >[!warning] Warning  
@@ -506,7 +509,7 @@ Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며
 	IO Port 1 또는 2번을 Jog 기능으로 지정 시 나머지 IO Port도 작동으로 지정됩니다. 해당 기능은 그림과 같이 회로를 구성하며, 각 버튼을 누를 경우 Short stroke Limit/Long Stroke Limit  방향으로 모터가 동작 하다가 버튼을 놓았을 때 정지하게 됩니다.  
 	![[extended_io_switch.png|500]]
 - **Action Enable**    
-	Action Enable 기능 Action 기능을 사용할 때 사용됩니다. 
+	Action Enable 기능 Action 기능을 사용할 때 사용됩니다.  
 	( 자세한 내용은 [[#4.17 Action Control]]을 참조하여 주시기 바랍니다. )  
 	![[extended_io_single_sw.png|500]]
 - **Action Next**    
@@ -548,7 +551,7 @@ Action Setting은 모터가 움직이는 방식을 설정하며 아래와 같습
 Action Setting에서 설정된 내용에 대한 반복 횟수 또는 1회 동작에 대한 동작 시간 등을 설정하는 Parameter 입니다.  
 **Repeat type**  
  - Interval : Repeat Time에 의해 설정된 시간 간격마다 Action을 수행합니다.  일정한 시간마다 반복된 동작이 필요할 경우 사용합니다. 
- - dWellTime : Action 명령에 의해 위치 이동이 완료되어 정지하는 시간을 설정합니다. 동작 완료 후 일정한 시간 동안 위치를 유지해야  할 때 사용합니다.
+ - dWellTime : Action 명령에 의해 위치 이동이 완료되어 정지하는 시간을 설정합니다. 동작 완료 후 일정한 시간 동안 위치를 유지해야  할 때 사용합니다.  
    ![[action_interval.png|600]]  
    ![[action_dwell.png|600]]  
 **Repeat time**  
@@ -652,7 +655,7 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
 >[!note] 전압 측정  
 >migtyZAP에서 측정되는 전압은 약 +/- 0.4V의 오차가 있습니다. 
 ### 2.4.23 Goal Position
-위치 이동 명령으로 migthtyZAP을 이동 시키고자 할 때 사용하는 위치 값입니다. Goal Position은 [[#2.4.5 Short/Long Stroke Limt|Short/Long Stroke Limt]] 설정 제한 값 까지 입력이 가능합니다.  
+위치 이동 명령으로 migthtyZAP을 이동 시키고자 할 때 사용하는 위치 값입니다. Goal Position은 [[#3.1.5 Stroke Limit 설정|Stroke Limit]] 설정 제한 값 까지 입력이 가능합니다.  
 (즉, stroke limit 범위 밖으로는 위치 명령을 내려도 stroke limit위치까지만 움직입니다)
 
 | value | Description |
