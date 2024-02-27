@@ -1,242 +1,246 @@
 # 1. Introduction
-mightyZAP 17Lf Model은 다양한 기능을 내장한 Actuator로 효율적이고 유연한 모션 제어 어플리케이션을 위한 완벽한 솔루션입니다. mightyZAP 17Lf Model은 협소한 공간에서 효율적인 선형 운동이 필요한 어플리케이션에 활용 가능한 제품이며, 산업, 의료, 로봇 연구, UAV 분양 등 다양한 방면에서 활용이 가능한 제품입니다.  
+The mightyZAP micro linear servo actuators have been designed for robust, precise linear motion in tight spaces in a variety of industries with position, current and speed control feature. The 17Lf servo series is the new mightyZAP servo actuators with a 17mm diameter DC motor offering increased durability and faster speed at the similar rated load specification comparing to the 12Lf series.  The overall functionality is almost same as the 12Lf series, but note that user expandability has been improved through expansion I/O ports, enabling easier and more convenient control.  Only RS-485 communication using MODBUS RTU protocol is provided. 
+>[!danger] Caution
+> 1. Use within the rated load spec : Constant load larger than rated load specification may lead a damage of the motor. 
+> 2. Do not twist the rod :  If excessive twisting force is applied to the rod when installing the rod end tip, it may cause damage to internal components. (Fix the rod with the included M3 spanner and then attach the tips on the rod-end.)
+> 3. Comply with the product’s operating environment. (Input voltage : 8V~13V(Rated 12V),  Operating temperature : -10℃ ~ +60℃)
+> 4. For optimal lifespan management, please do not exceed Duty Rate 50% and do not exceed maximum continuous operation time 30 seconds. Otherwise, an overload error alarm and shutdown will occur.
+> 5. Be careful of incorrect wiring.
+> 
+>
+> <font color="#ff0000">For detailed info, please refer to </font> [[#3.1 Precautions for use]] <font color="#ff0000">.</font>
 
->[!danger] 위험  
-> 1. 정격 부하 이상의 힘이 지속적으로 가해질 경우 모터가 소손될 수 있습니다.
-> 2. Rod End Tip 장착 시 무리하게 Rod에 비트는 힘을 가하게 되면 내부 부품 파손의 원인이 됩니다.   (동봉된 M3 스패너로 rod를 고정 후 rod end tip류를 장착하십시오.)
-> 3. 제품의 사용 환경을 준수하세요 (전압 : 8V~13V(정격전압 12V),  동작 온도 : -10도 ~ +60도)
-> 4. 최적의 수명 관리를 위해 Duty Rate 50%를 넘지 않고, 최대 연속 동작 시간 30초를 넘지 말아 주시기 바랍니다.
-> 5. 오배선에 우의 하여 주시기 바랍니다.
-> <font color="#ff0000">(자세한 사항은</font> [[#3.1 사용 주의 사항]] <font color="#ff0000">을 참조 하여 주시기 바랍니다.)</font>
-
-> [!warning] 경고  
-> - 연속 동작 직후 mightyZAP의 케이스가 뜨거울 수 있습니다. 화상에 주의하십시오.
-> - mightyZAP을 물기, 먼지, 기름으로부터 멀리 하십시오.
-> - 본 제품은 실내 용도로 설계된 제품입니다. 실 외 사용을 금합니다.
-> - 어린이의 손이 닿지 않는 곳에 제품을 보관하십시오. 성인이 사용 시에도 모터의 동작 시 발생할 수 있는 신체 상해에 유의하십시오.
->    <font color="#ff0000">(자세한 사항은</font> [[#3.1 사용 주의 사항]] <font color="#ff0000">을 참조 하여 주시기 바랍니다.)</font>
-## 1.2 사양
-### 1.2.1 17Lf 시리즈 주요 사양
-| 정격부하 | Stroke | Model | 최고 속도<br>(무부하) | 전류대비 스톨포스<br>(1.6A/800mA,100mA) | Mechanical  <br>Self Lock  <br>(Z축 사용) |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| 17N | 37mm | 17Lf-17F-37 | 82mm/s | xx/yy/zz | 없음<br>(Z축 적용 주의) |
-| ^ | 50mm | 17Lf-17F-50 | ^ | ^ | ^ |
-| ^ | 87mm | 17Lf-17F-87 | ^ | ^ | ^ |
-| 20N | 27mm | 17L-20F-27 | 117mm/s | xx/yy/zz | ^ |
-| 27N | 37mm | 17Lf-27F-27 | 82mm/s | xx/yy/zz | ^ |
-| ^ | 50mm | 17Lf-27F-50 | ^ | ^ | ^ |
-| ^ | 87mm | 17Lf-27F-87 | ^ | ^ | ^ |
-| 35N | 27mm | 17Lf-35F-27 | 90mm/s | xx/yy/zz | ^ |
-| 50N | 37mm | 17Lf-50F-27 | 28mm/s | xx/yy/zz | 있음<br>(Z축 적용 가능) |
-| ^ | 50mm | 17Lf-50F-50 | ^ | ^ | ^ |
-| ^ | 87mm | 17Lf-50F-87 | ^ | ^ | ^ |
-| 70N | 27mm | 17Lf-70F-27 | 32mm/s | xx/yy/zz | ^ |
-### 1.2.2 공통 사양서
-| Item | &lt; | &lt; | Value |
+> [!warning] Handling and Storage
+> - External case may become hot immediately after continuous operation. Be careful of burns.
+> - Keep mightyZAP away from moisture, dust, and separation.
+> - Designed for indoor use. Outdoor use is prohibited.
+> - Keep the product out of reach of children. Even when used by adults, be aware of the risk of personal injury that may occur when the motor operates.
+> 
+> <font color="#ff0000">For detailed info, please refer to </font> [[#3.1 Precautions for use]] <font color="#ff0000">.</font>
+## 1.2 Specifications
+### 1.2.1 17Lf Series Specifications
+| Rated Load | Stroke | Model | Max Speed<br>(@no load) | Stall Force  <br>at Current<br>(1.6A/800mA/200mA) | Mechanical <br>Self Lock  <br>(Z axis use) | Lead Screw <br>/ Gear Ratio <br>/ Gear Type |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 17N | 37mm | 17Lf-17F-37 | 82mm/s | 90N / 58N / 23N | No  <br>(Pay attention  <br>to application) | Lead Angle 20° / 10:1  <br>/Engineering <br>Plastic Gears |
+| ^ | 50mm | 17Lf-17F-50 | ^ | ^ | ^ | ^ |
+| ^ | 87mm | 17Lf-17F-87 | ^ | ^ | ^ | ^ |
+| 20N | 27mm | 17L-20F-27 | 117mm/s | ^ | ^ | Lead Angle 22.2° / 9.3:1 <br>/Engineering Plastic Gears |
+| 27N | 37mm | 17Lf-27F-37 | 82mm/s | 96N / 68N / 27N | ^ | Lead Angle 15° / 10:1  <br>/Engineering <br>Plastic Gears |
+| ^ | 50mm | 17Lf-27F-50 | ^ | ^ | ^ | ^ |
+| ^ | 87mm | 17Lf-27F-87 | ^ | ^ | ^ | ^ |
+| 35N | 27mm | 17Lf-35F-27 | 90mm/s | ^ | ^ | Lead Angle 17° / 9.3:1 /  <br>Engineering Plastic Gears |
+| 50N | 37mm | 17Lf-50F-27 | 28mm/s | 182N / 129N / 50N | Yes  <br>(Applicable) | Lead Angle 5° / 10:1  <br>/Engineering <br>Plastic Gears |
+| ^ | 50mm | 17Lf-50F-50 | ^ | ^ | ^ | ^ |
+| ^ | 87mm | 17Lf-50F-87 | ^ | ^ | ^ | ^ |
+| 70N | 27mm | 17Lf-70F-27 | 32mm/s | ^ | ^ | ^ |
+### 1.2.2 Common Specifications
+| Item | Stroke | &lt; | Unidirectional |
 | :--- | :--- | :--- | :--- |
-| **위치정밀도  <br>(반복정밀도)** | 27mm / 40mm | &lt; | 30μm (0.03mm) |
+| **Repeatability** | 27mm / 40mm | &lt; | 30μm (0.03mm) |
 | ^ | 53mm | &lt; | 40μm (0.04mm |
 | ^ | 90mm | &lt; | 50μm (0.05mm)) |
-| **기구 백래쉬** | &lt; | &lt; | 0.03mm (30μm) |
-| **Rod 타입** | &lt; | &lt; | Metal Alloy Rod |
-| **모터타입** | &lt; | &lt; | Coreless Motor |
-| **전압** | &lt; | &lt; | 12V |
-| **Watt** | &lt; | &lt; | xxW [수정] |
-| **권장 Duty Cycle** | < | &lt; | 최대 50% |
-| **전류값 오차** | &lt; | &lt; | ±15% at Over 50mA |
-| **위치인식센서** | &lt; | &lt; | 10KΩ linear Potentiometer |
-| **인가 전압범위** | &lt; | &lt; | 8~13V |
-| **소모전류** | Idle | &lt; | 20mA |
+| **Mechanical Backlash** | &lt; | &lt; | 0.03mm (30μm) |
+| **Rod Type** | &lt; | &lt; | Metal Alloy Rod |
+| **Motor Type** | &lt; | &lt; | Coreless DC  |
+| **Input Voltage** | &lt; | &lt; | 12V (Rated) |
+| **Watt** | &lt; | &lt; | 3.8W  |
+| **Recommended Duty Cycle** | < | &lt; | Max 50% |
+| **Current Accuracy** | &lt; | &lt; | ±15% at Over 50mA |
+| **Position Sensor** | &lt; | &lt; | 10KΩ linear Potentiometer |
+| **Input Voltage Range** | &lt; | &lt; | 8~13V (Rated 12V) |
+| **Current Consumption** | Idle | &lt; | 20mA |
 | ^ | Rated | &lt; | 400mA |
 | ^ | Stall | Default | 800mA |
-| ^ | ^ | MAX | 1.6A  |
-| **가청 소음** | &lt; | &lt; | 약 50db at 1m |
-| **LED 표시** | &lt; | &lt; | 2가지 에러표시 (Input voltage, Overload) |
-| **펄스방식 / 펄스범위** | &lt; | &lt; | PWM (PT version, RC모형 송수신용 신호) / 900μs(수축)-1500 μs(센터)-2100μs (확장) |
-| **데이타 통신방식 / 프로토콜** | &lt; | &lt; | RS-485(Modbus-RTU) |
+| ^ | ^ | MAX | 1.6A |
+| **Audible Noise** | &lt; | &lt; | Approx. 50db at 1m |
+| **LED Indication** | &lt; | &lt; | Two Errors Indications (Input voltage, Overload) |
+| **Pulse Signal / Pulse Range** | &lt; | &lt; | PWM mode to be added later by I/O Port (900μs(Retracted)-1500 μs(center)-2100μs (extended)) |
+| **Communication Method / Protocol** | &lt; | &lt; | RS-485 / Modbus-RTU |
 | **Ingress Protection** | &lt; | &lt; | IP-54 (Dust &amp; Water Tight) |
-| **스크로크별 크기/무게**               <br>(크기는 로드엔드 / 힌지 제외)<br> | **27mm** | &lt; | xx.x(L)xx.x(W)xxx(H)mm / xx~xxg |
-| ^ | **40mm** | &lt; | xx.x(L)xx.x(W)xxx(H)mm / xx~xxg[수정] |
-| ^ | **53mm** | &lt; | xx.x(L)xx.x(W)xxx(H)mm / xx~xxg[수정] |
-| ^ | **90mm** | &lt; | xx.x(L)xx.x(W)xxx(H)mm / xx~xxg[수정] |
-| **동작온도 조건** | &lt; | &lt; | -10℃ ~ 60℃ |
-| **와이어 하네스** | &lt; | &lt; |  Molex to Molex Type (Molex 0510650400, 4pins) / 200mm length, 0.08×60(22AWG)  <br>[수정]-extended i/o |
-### 1.2.3 Motor 성능 곡선
+| **Dimension(LxHxW)  <br>/ Wight**    <br>(Dimension  <br>excluding the rod-end tip  <br>and hinge)<br> | **27mm** | &lt; | 57.5x40.6x23mm / 65.5g |
+| ^ | **37mm** | &lt; | 86.8x57.9x23mm / 113.5g |
+| ^ | **50mm** | &lt; | 111.5x57.9x23mm / 140g |
+| ^ | **87mm** | &lt; | 151.5x57.9x23mm / 188g |
+| **Operating Temperature** | &lt; | &lt; | -10℃ ~ 60℃ |
+| **Wire Harness** | &lt; | &lt; | **Comm./Power** : Molex to Molex Type (Molex 0510650400, 4pins) / 200mm length, 0.08×60(22AWG)  <br>**I/O Port Wire harness** : Molex 510210500, 5pins / 200mm length, 0.16 x 7 (26AWG) |
+### 1.2.3 Motor Performance Curve
 ![[MotorSpecification.png]]  
 # 2. Control Table
-Control Table은 mightyZAP을 구동 및 제어하기 위한 Parameter와 현재 상태를 나타내는 Parameter로 이루어져 있습니다.   
-사용자는 통신 Packet을 이용하여 특정 Parameter의 Data를  읽어 mightyZAP의 상태를 확인하거나, Data를 변경하여 mightyZAP을 제어할 수 있습니다.  
+The Control Table consists of two types of Parameters for driving and controlling mightyZAP and for indicating the current status.
+Using the communication packet, user is able to check the status of mightyZAP by reading feedback data of a specific parameter, or control mightyZAP by changing the data value.
 >[!note] Note 
->Mini 17Lf Model은 Modbus-RTU 통신 만을 제공합니다.  
->통신 Packet에 대한 자세한 내용은 [[Modbus RTU Manual-kor|Modbus RTU]]를 참고하여 주시기 바랍니다.
+> 17Lf series only provides MODBUS RTU protocol. (IR Open protocol is no supported). For detailed infor for the communication packet, please refer to the [[MODBUS RTU_eng|MODBUS RTU]] section.
 >
 ## 2.1 Description  
 ### 2.1.1 Memory Type
-Control Table은 2개의 영역으로 구분됩니다. Data를 변경한 후 전원을 꺼도 Data가 유지가 되는  Non-Volatile Memory(ROM)와 전원이 꺼지면 Data가 초기화 되는 Volatile Memory(RAM)가 있습니다.    
-- **Non-Volatile Memory (ROM)** : 데이터 수정 시 약 250ms의 시간이 걸릴 수 있습니다. 또한 메모리를 저장 중에는 통신이 제한 될 수 있습니다.  일반적으로 동작 전 설정 사항을 정할 때에만 사용합니다. 
-- **Volatile Memeory(RAM)** :  실시간으로 데이터를 변경할 때 사용합니다. 일반적인 동작 제어 파라메터들로 구성 되어있습니다. 전원이 재인가 되면 초기화 됩니다.  
+The Control Table is divided into two areas. The one is Non-Volatile Memory (ROM), which retains the data even if the power is turned off after changing the data, and Volatile Memory (RAM) which initialize the data when the power is turned off/on.
+- **Non-Volatile Memory (ROM)** :  Data modification may take approx. 250ms. Additionally, communication may be restricted while saving the memory. Generally, it is only used to set settings before operation. Saved data are not initialized even after power is re-applied.
+- **Volatile Memory(RAM)** :  Used when changing data in real time and it consists of general motion control parameters. The data will be initialized when the power is re-applied.
 ### 2.1.2 Address  
-본 문서에서 Address는 Control Table에서 Data Adress를 의미합니다.
+In this manual, Address refers to the "Data Address" in the Control Table.
 ### 2.1.3 Size  
-mightyZAP 17Lf Model의 모든 Parameter의 Data Size 2byte 로 되어있습니다.
-### 2.1.4 Access  (접근 권한)
-Control Table Data는 'R', 'RW'로 표기됩니다. 'R'은 읽기 전용(Read Only) 의미하고, 'RW'는  읽기와 쓰기가 모두 가능합니다.  
-읽기 전용 권한은 주로 서보 모터의 기본 정보 또는 모니터링 용으로 사용됩니다. 읽기 쓰기 권한은 mightyZAP 제어 용도로 사용됩니다.  
+The data size of all parameters of mightyZAP 17Lf series is 2 bytes.
+### 2.1.4 Access  (Access Rights)
+Control Table Data is indicated as ‘R’ or ‘RW’. 'R' stands for Read Only, and 'RW' means both Reading and Writing are allowed.
+Read-only parameters are mainly used for basic information or monitoring of servo actuators.  Read-Write parameters are used for mightyZAP control purposes.
 ### 2.1.5 Default  
-기본 값은 초기 설정 값(공장 출하 설정 값)입니다. Non-Volatile Memory 영역의 값은 사용자가 수정할 경우 변경한 값으로 적용되며, Volatile Memory 영역은 전원이 인가 되었을 때의 값을 의미합니다.  
+Default value is the initial setting value from the factory. When the value in the Non-Volatile Memory area is modified by the user, the changed value is applied to the default value, and the Volatile Memory area displays the default value as the current state value when power is applied.
 ## 2.2 Non-volatile Memory (ROM)  
 
-| <center>Rergister<br>Number</center> | <center>Address</center>    | <center>Name</center>                      | <center>Description</center>           | Access | <center>Default</center>  |
-|:-----------------|:-----------|:--------------------------|:----------------------|:-------|:---------|
-|            40001 |   0 (0x00) | Serial Number             | Model Serial Nu mber  | R      |          |
-|            40002 |   1 (0x01) | Firmware Version          | 펌웨어 버전 정보             | R      |          |
-|            40005 |   4 (0x04) | mightyZAP ID               | mightyZAP ID           | RW     |  1(0x01) |
-|            40006 |   5 (0x05) | mightyZAP Baudrate         | 통신 속도                 | RW     | 32(0x20) |
-|            40010 |   9 (0x09) | Alarm Led                 | 하드웨어 에러 알랍 LED 표시     | RW     | 33(0x21) |
-|            40011 |  10 (0x0A) | Alarm Shutdown            | 하드웨어 에러 셧다운 기능        | RW     | 33(0x21) |
-|            40012 |  11 (0x0B) | Short Stroke Limit        | 수축 방향 한계 위치 값         | RW     |  0(0x00) |
-|            40013 |  12 (0x0C) | Long Stroke Limit         | 확장 방향 한계 위치값          | RW     | 개별 Spec  |
-|            40014 |  13 (0x0D) | Start Compliance Margin   | 시작 Compliance Margin  | RW     | 20(0x14) |
-|            40015 |  14 (0x0E) | End Compliance Margin     | 종료 Compliance Margin  | RW     |  8(0x08) |
-|            40016 |  15 (0x0F) | Acceleration              | 가속도                   | RW     | 개별 Spec  |
-|            40017 |  16 (0x10) | Deceleration              | 감속도                   | RW     | 개별 Spec  |
-|            40018 |  17 (0x11) | Min Position Calibration  | Min Position Trim     | RW     | 개별 Spec  |
-|            40019 |  18 (0x12) | Max Position Calibration  | Max Position Trim     | RW     | 개별 Spec  |
-|            40020 |  19 (0x13) | Motor Operating Rate Limt | 모터 가동률 한계값(PWM)       | RW     |     1000 |
-|            40021 |  20 (0x14) | Speed Limit               | 속도 상한 값               | RW     |     1000 |
-|            40022 |  21 (0x15) | Current Limit             | 전류 상한 값               | RW     |      800 |
-|            40023 |  22 (0x16) | Current I Gain            | 전류 I Gain             | RW     | 개별 Spec  |
-|            40024 |  23 (0x17) | Current P Gain            | 전류 P Gain             | RW     | 개별 Spec  |
-|            40025 |  24 (0x18) | Speed D Gain              | 속도 D Gain             | RW     | 개별 Spec  |
-|            40026 |  25 (0x19) | Speed I Gain              | 속도 I Gain             | RW     | 개별 Spec  |
-|            40027 |  26 (0x1A) | Speed P Gain              | 속도 P Gain             | RW     | 개별 Spec  |
-|            40041 |  40 (0x28) | Internal Addess 0         | 간접 주소 0               | RW     |  0(0x00) |
-|            40042 |  41 (0x29) | Internal Addess 1         | 간접 주소 1               | RW     |  0(0x00) |
-|            40043 |  42 (0x2A) | Internal Addess 2         | 간접 주소 2               | RW     |  0(0x00) |
-|            40044 |  43 (0x2B) | Internal Addess 3         | 간접 주소 3               | RW     |  0(0x00) |
-|            40045 |  44 (0x2C) | Internal Addess 4         | 간접 주소 4               | RW     |  0(0x00) |
-|            40046 |  45 (0x2D) | Internal Addess 5         | 간접 주소 5               | RW     |  0(0x00) |
-|            40047 |  46 (0x2E) | Internal Addess 6         | 간접 주소 6               | RW     |  0(0x00) |
-|            40048 |  47 (0x2F) | Internal Addess 7         | 간접 주소 7               | RW     |  0(0x00) |
-|            40049 |  48 (0x30) | Internal Addess 8         | 간접 주소 8               | RW     |  0(0x00) |
-|            40050 |  49 (0x31) | Internal Addess 9         | 간접 주소 9               | RW     |  0(0x00) |
-|            40051 |  50 (0x32) | Extened Port Setting 0    | 확장 Port 0 기능 설정       | RW     |  0(0x00) |
-|            40052 |  51 (0x33) | Extened Port Setting 1    | 확장 Port 1 기능 설정       | RW     |  0(0x00) |
-|            40053 |  52 (0x34) | Extened Port Setting 2    | 확장 Port 2 기능 설정       | RW     |  0(0x00) |
-|            40054 |  53 (0x35) | Extened Port Setting 3    | 확장 Port 3 기능 설정       | RW     |  0(0x00) |
-|            40061 |  60 (0x3C) | Action 0 type             | Action 0 동작 형식        | RW     |  0(0x00) |
-|            40062 |  61 (0x3D) | Action 0 distance         | Action 0 이동 거리        | RW     |  0(0x00) |
-|            40063 |  62 (0x3E) | Action 0 Repeat Type      | Action 0 반복 형식        | RW     |  0(0x00) |
-|            40064 |  63 (0x3F) | Action 0 Repeat Count     | Action 0 반복 횟수        | RW     |  0(0x00) |
-|            40065 |  64 (0x40) | Action 0 Repeat Time      | Action 0 1회 동작 시간     | RW     |  0(0x00) |
-|            40066 |  65 (0x41) | Action 0 Goal Speed       | Action 0 Gaol Speed   | RW     |  0(0x00) |
-|            40067 |  66 (0x42) | Action 0 Gal Current      | Action 0 Goal Current | RW     |  0(0x00) |
-|            40068 |  67 (0x43) | Action 0 Accleration      | Action 0 Acceleration | RW     |  0(0x00) |
-|            40069 |  68 (0x44) | Action 0 Delceration      | Action 0 Deceleration | RW     |  0(0x00) |
-|            40070 |  69 (0x45) | Action 0 Stop             | Action 0 정지 형식        | RW     |  0(0x00) |
-|            40071 |  70 (0x46) | Action 1 type             | Action 1 동작 형식        | RW     |  0(0x00) |
-|            40072 |  71 (0x47) | Action 1 distance         | Action 1 이동 거리        | RW     |  0(0x00) |
-|            40073 |  72 (0x48) | Action 1 Repeat Type      | Action 1 반복 형식        | RW     |  0(0x00) |
-|            40074 |  73 (0x49) | Action 1 Repeat Count     | Action 1 반복 횟수        | RW     |  0(0x00) |
-|            40075 |  74 (0x4A) | Action 1 Repeat Time      | Action 1 1회 동작 시간     | RW     |  0(0x00) |
-|            40076 |  75 (0x4B) | Action 1 Goal Speed       | Action 1 Gaol Speed   | RW     |  0(0x00) |
-|            40077 |  76 (0x4C) | Action 1 Gal Current      | Action 1 Goal Current | RW     |  0(0x00) |
-|            40078 |  77 (0x4D) | Action 1 Accleration      | Action 1 Acceleration | RW     |  0(0x00) |
-|            40079 |  78 (0x4E) | Action 1 Delceration      | Action 1 Deceleration | RW     |  0(0x00) |
-|            40080 |  79 (0x4F) | Action 1 Stop             | Action 1 정지 형식        | RW     |  0(0x00) |
-|            40081 |  80 (0x50) | Action 2 type             | Action 2 동작 형식        | RW     |  0(0x00) |
-|            40082 |  81 (0x51) | Action 2 distance         | Action 2 이동 거리        | RW     |  0(0x00) |
-|            40083 |  82 (0x52) | Action 2 Repeat Type      | Action 2 반복 형식        | RW     |  0(0x00) |
-|            40084 |  83 (0x53) | Action 2 Repeat Count     | Action 2 반복 횟수        | RW     |  0(0x00) |
-|            40085 |  84 (0x54) | Action 2 Repeat Time      | Action 2 1회 동작 시간     | RW     |  0(0x00) |
-|            40086 |  85 (0x55) | Action 2 Goal Speed       | Action 2 Gaol Speed   | RW     |  0(0x00) |
-|            40087 |  86 (0x56) | Action 2 Gal Current      | Action 2 Goal Current | RW     |  0(0x00) |
-|            40088 |  87 (0x57) | Action 2 Accleration      | Action 2 Acceleration | RW     |  0(0x00) |
-|            40089 |  88 (0x58) | Action 2 Delceration      | Action 2 Deceleration | RW     |  0(0x00) |
-|            40090 |  89 (0x59) | Action 2 Stop             | Action 2 정지 형식        | RW     |  0(0x00) |
-|            40091 |  90 (0x5A) | Action 3 type             | Action 3 동작 형식        | RW     |  0(0x00) |
-|            40092 |  91 (0x5B) | Action 3 distance         | Action 3 이동 거리        | RW     |  0(0x00) |
-|            40093 |  92 (0x5C) | Action 3 Repeat Type      | Action 3 반복 형식        | RW     |  0(0x00) |
-|            40094 |  93 (0x5D) | Action 3 Repeat Count     | Action 3 반복 횟수        | RW     |  0(0x00) |
-|            40095 |  94 (0x5E) | Action 3 Repeat Time      | Action 3 1회 동작 시간     | RW     |  0(0x00) |
-|            40096 |  95 (0x5F) | Action 3 Goal Speed       | Action 3 Gaol Speed   | RW     |  0(0x00) |
-|            40097 |  96 (0x60) | Action 3 Gal Current      | Action 3 Goal Current | RW     |  0(0x00) |
-|            40098 |  97 (0x61) | Action 3 Accleration      | Action 3 Acceleration | RW     |  0(0x00) |
-|            40099 |  98 (0x62) | Action 3 Delceration      | Action 3 Deceleration | RW     |  0(0x00) |
-|            40100 |  99 (0x63) | Action 3 Stop             | Action 3 정지 형식        | RW     |  0(0x00) |
-|            40101 | 100 (0x64) | Action 4 type             | Action 4 동작 형식        | RW     |  0(0x00) |
-|            40102 | 101 (0x65) | Action 4 distance         | Action 4 이동 거리        | RW     |  0(0x00) |
-|            40103 | 102 (0x66) | Action 4 Repeat Type      | Action 4 반복 형식        | RW     |  0(0x00) |
-|            40104 | 103 (0x67) | Action 4 Repeat Count     | Action 4 반복 횟수        | RW     |  0(0x00) |
-|            40105 | 104 (0x68) | Action 4 Repeat Time      | Action 4 1회 동작 시간     | RW     |  0(0x00) |
-|            40106 | 105 (0x69) | Action 4 Goal Speed       | Action 4 Gaol Speed   | RW     |  0(0x00) |
-|            40107 | 106 (0x6A) | Action 4 Gal Current      | Action 4 Goal Current | RW     |  0(0x00) |
-|            40108 | 107 (0x6B) | Action 4 Accleration      | Action 4 Acceleration | RW     |  0(0x00) |
-|            40109 | 108 (0x6C) | Action 4 Delceration      | Action 4 Deceleration | RW     |  0(0x00) |
-|            40110 | 109 (0x6D) | Action 4 Stop             | Action 4 정지 형식        | RW     |  0(0x00) |  
+| Rergister Number | Address | Name | Description | Access | Default |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 40001 | 0 (0x00) | Serial Number | Model Serial Nu mber | R |  |
+| 40002 | 1 (0x01) | Firmware Version | Firmware version | R |  |
+| 40005 | 4 (0x04) | mightyZAP ID | mightyZAP ID | RW | 1(0x01) |
+| 40006 | 5 (0x05) | mightyZAP Baudrate | Communication Speed | RW | 32(0x20) |
+| 40010 | 9 (0x09) | Alarm Led | Hardware Error Alarm LED Indication | RW | 33(0x21) |
+| 40011 | 10 (0x0A) | Alarm Shutdown | Hardware Error Alarm Function | RW | 33(0x21) |
+| 40012 | 11 (0x0B) | Short Stroke Limit | Retraction direction limit position value | RW | 0(0x00) |
+| 40013 | 12 (0x0C) | Long Stroke Limit | Extension direction limit position value | RW | Each Spec |
+| 40014 | 13 (0x0D) | Start Compliance Margin | Start Compliance Margin | RW | 20(0x14) |
+| 40015 | 14 (0x0E) | End Compliance Margin | End Compliance Margin | RW | 8(0x08) |
+| 40016 | 15 (0x0F) | Acceleration | Acceleration | RW | Individual Spec |
+| 40017 | 16 (0x10) | Deceleration | Deceleration | RW | Individual Spec |
+| 40018 | 17 (0x11) | Min Position Calibration | Min Position Trim | RW | Individual Spec |
+| 40019 | 18 (0x12) | Max Position Calibration | Max Position Trim | RW | Individual Spec |
+| 40020 | 19 (0x13) | Motor Operating Rate Limt | Motor Operating Rate Limit (Motor PWM) | RW | 1000 |
+| 40021 | 20 (0x14) | Speed Limit | Speed Upper Limit | RW | 1000 |
+| 40022 | 21 (0x15) | Current Limit | Current Upper Limit | RW | 800 |
+| 40023 | 22 (0x16) | Current I Gain | Current I Gain | RW | Individual Spec |
+| 40024 | 23 (0x17) | Current P Gain | Current P Gain | RW | Individual Spec |
+| 40025 | 24 (0x18) | Speed D Gain | Speed D Gain | RW | Individual Spec |
+| 40026 | 25 (0x19) | Speed I Gain | Speed I Gain | RW | Individual Spec |
+| 40027 | 26 (0x1A) | Speed P Gain | Speed P Gain | RW | Individual Spec |
+| 40041 | 40 (0x28) | Indirect Addess 0 | Indirect Addess 0 | RW | 0(0x00) |
+| 40042 | 41 (0x29) | Indirect Addess 1 | Indirect Addess 1 | RW | 0(0x00) |
+| 40043 | 42 (0x2A) | Indirect  Addess 2 | Indirect  Addess 2 | RW | 0(0x00) |
+| 40044 | 43 (0x2B) | Indirect  Addess 3 | Indirect  Addess 3 | RW | 0(0x00) |
+| 40045 | 44 (0x2C) | Indirect Addess 4 | Indirect Addess 4 | RW | 0(0x00) |
+| 40046 | 45 (0x2D) | Indirect  Addess 5 | Indirect  Addess 5 | RW | 0(0x00) |
+| 40047 | 46 (0x2E) | Indirect Addess 6 | Indirect Addess 6 | RW | 0(0x00) |
+| 40048 | 47 (0x2F) | Indirect  Addess 7 | Indirect  Addess 7 | RW | 0(0x00) |
+| 40049 | 48 (0x30) | Indirect  Addess 8 | Indirect  Addess 8 | RW | 0(0x00) |
+| 40050 | 49 (0x31) | Indirect Addess 9 | Indirect Addess 9 | RW | 0(0x00) |
+| 40051 | 50 (0x32) | Extened Port Setting 0 | Setting for extended Port 0 | RW | 0(0x00) |
+| 40052 | 51 (0x33) | Extened Port Setting 1 | Setting for extended Port 1 | RW | 0(0x00) |
+| 40053 | 52 (0x34) | Extened Port Setting 2 | Setting for extended Port 2 | RW | 0(0x00) |
+| 40054 | 53 (0x35) | Extened Port Setting 3 | Setting for extended Port 3 | RW | 0(0x00) |
+| 40061 | 60 (0x3C) | Action 0 type | Action 0 Action type | RW | 0(0x00) |
+| 40062 | 61 (0x3D) | Action 0 distance | Action 0 Moving Distance | RW | 0(0x00) |
+| 40063 | 62 (0x3E) | Action 0 Repeat Type | Action 0 Repeat type | RW | 0(0x00) |
+| 40064 | 63 (0x3F) | Action 0 Repeat Count | Action 0 number of repetitions | RW | 0(0x00) |
+| 40065 | 64 (0x40) | Action 0 Repeat Time | Action 0   1operation time | RW | 0(0x00) |
+| 40066 | 65 (0x41) | Action 0 Goal Speed | Action 0 Goal Speed | RW | 0(0x00) |
+| 40067 | 66 (0x42) | Action 0 Gal Current | Action 0 Goal Current | RW | 0(0x00) |
+| 40068 | 67 (0x43) | Action 0 Accleration | Action 0 Acceleration | RW | 0(0x00) |
+| 40069 | 68 (0x44) | Action 0 Delceration | Action 0 Deceleration | RW | 0(0x00) |
+| 40070 | 69 (0x45) | Action 0 Stop | Action 0 정지 형식 | RW | 0(0x00) |
+| 40071 | 70 (0x46) | Action 1 type | Action 1 동작 형식 | RW | 0(0x00) |
+| 40072 | 71 (0x47) | Action 1 distance | Action 1 이동 거리 | RW | 0(0x00) |
+| 40073 | 72 (0x48) | Action 1 Repeat Type | Action 1 반복 형식 | RW | 0(0x00) |
+| 40074 | 73 (0x49) | Action 1 Repeat Count | Action 1 반복 횟수 | RW | 0(0x00) |
+| 40075 | 74 (0x4A) | Action 1 Repeat Time | Action 1 1회 동작 시간 | RW | 0(0x00) |
+| 40076 | 75 (0x4B) | Action 1 Goal Speed | Action 1 Goal Speed | RW | 0(0x00) |
+| 40077 | 76 (0x4C) | Action 1 Goal Current | Action 1 Goal Current | RW | 0(0x00) |
+| 40078 | 77 (0x4D) | Action 1 Accleration | Action 1 Acceleration | RW | 0(0x00) |
+| 40079 | 78 (0x4E) | Action 1 Delceration | Action 1 Deceleration | RW | 0(0x00) |
+| 40080 | 79 (0x4F) | Action 1 Stop | Action 1 정지 형식 | RW | 0(0x00) |
+| 40081 | 80 (0x50) | Action 2 type | Action 2 동작 형식 | RW | 0(0x00) |
+| 40082 | 81 (0x51) | Action 2 distance | Action 2 이동 거리 | RW | 0(0x00) |
+| 40083 | 82 (0x52) | Action 2 Repeat Type | Action 2 반복 형식 | RW | 0(0x00) |
+| 40084 | 83 (0x53) | Action 2 Repeat Count | Action 2 반복 횟수 | RW | 0(0x00) |
+| 40085 | 84 (0x54) | Action 2 Repeat Time | Action 2 1회 동작 시간 | RW | 0(0x00) |
+| 40086 | 85 (0x55) | Action 2 Goal Speed | Action 2 Goal Speed | RW | 0(0x00) |
+| 40087 | 86 (0x56) | Action 2 Goal Current | Action 2 Goal Current | RW | 0(0x00) |
+| 40088 | 87 (0x57) | Action 2 Accleration | Action 2 Acceleration | RW | 0(0x00) |
+| 40089 | 88 (0x58) | Action 2 Delceration | Action 2 Deceleration | RW | 0(0x00) |
+| 40090 | 89 (0x59) | Action 2 Stop | Action 2 정지 형식 | RW | 0(0x00) |
+| 40091 | 90 (0x5A) | Action 3 type | Action 3 동작 형식 | RW | 0(0x00) |
+| 40092 | 91 (0x5B) | Action 3 distance | Action 3 이동 거리 | RW | 0(0x00) |
+| 40093 | 92 (0x5C) | Action 3 Repeat Type | Action 3 반복 형식 | RW | 0(0x00) |
+| 40094 | 93 (0x5D) | Action 3 Repeat Count | Action 3 반복 횟수 | RW | 0(0x00) |
+| 40095 | 94 (0x5E) | Action 3 Repeat Time | Action 3 1회 동작 시간 | RW | 0(0x00) |
+| 40096 | 95 (0x5F) | Action 3 Goal Speed | Action 3 Goal Speed | RW | 0(0x00) |
+| 40097 | 96 (0x60) | Action 3 Goal Current | Action 3 Goal Current | RW | 0(0x00) |
+| 40098 | 97 (0x61) | Action 3 Accleration | Action 3 Acceleration | RW | 0(0x00) |
+| 40099 | 98 (0x62) | Action 3 Delceration | Action 3 Deceleration | RW | 0(0x00) |
+| 40100 | 99 (0x63) | Action 3 Stop | Action 3 정지 형식 | RW | 0(0x00) |
+| 40101 | 100 (0x64) | Action 4 type | Action 4 동작 형식 | RW | 0(0x00) |
+| 40102 | 101 (0x65) | Action 4 distance | Action 4 이동 거리 | RW | 0(0x00) |
+| 40103 | 102 (0x66) | Action 4 Repeat Type | Action 4 반복 형식 | RW | 0(0x00) |
+| 40104 | 103 (0x67) | Action 4 Repeat Count | Action 4 반복 횟수 | RW | 0(0x00) |
+| 40105 | 104 (0x68) | Action 4 Repeat Time | Action 4 1회 동작 시간 | RW | 0(0x00) |
+| 40106 | 105 (0x69) | Action 4 Goal Speed | Action 4 Goal Speed | RW | 0(0x00) |
+| 40107 | 106 (0x6A) | Action 4 Goal Current | Action 4 Goal Current | RW | 0(0x00) |
+| 40108 | 107 (0x6B) | Action 4 Accleration | Action 4 Acceleration | RW | 0(0x00) |
+| 40109 | 108 (0x6C) | Action 4 Delceration | Action 4 Deceleration | RW | 0(0x00) |
+| 40110 | 109 (0x6D) | Action 4 Stop | Action 4 정지 형식 | RW | 0(0x00) |
 ## 2.3 Volatile Memory(RAM)
 
-| <center>Rergister<br>Number</center> | Address | Name | Description | Access | Default |
+| Register Number | Address | Name | Description | Access | Default |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 40201 | 200 (0xC8) | Force On/Off | 모터 출력 끄고 켜기 | RW | 1(0x01) |
-| 40202 | 201 (0xC9) | Actuator Pause | 모터 일시 정지 | RW | 0(0x00) |
+| 40201 | 200 (0xC8) | Force On/Off | Motor Power On/Off | RW | 1(0x01) |
+| 40202 | 201 (0xC9) | Actuator Pause | Motor pause | RW | 0(0x00) |
 | 40203 | 202 (0xCA) | Actuator Stop | 모터 일시 정지 | RW | 0(0x00) |
 | 40204 | 203 (0xCB) | LED Color | LED On/Off | RW | 0(0x00) |
 | 40205 | 204 (0xCC) | Hardware Error | Hardware Error | R | 0(0x00) |
-| 40206 | 205 (0xCD) | Goal Position | 목표 위치 값 | RW |  |
-| 40209 | 208 (0xD0) | Goal Speed | 목표 속도 값 | RW | Speed Limit |
-| 40210 | 209 (0xD1) | Goal Current | 최대 전류 값 | RW | Current Limit |
-| 40211 | 210 (0xD2) | Present Position | 현재 위치 값 | R |  |
-| 40212 | 211 (0xD3) | Present Current | 현재 소비 전류 값 | R |  |
-| 40214 | 213 (0xD5) | Present Motor PWM | 모터 입력 PWM | R |  |
-| 40215 | 214 (0xD6) | Present Voltage | 현재 전압 값 | R |  |
-| 40216 | 215 (0xD7) | Moving | 모터 동작 유무 | R |  |
+| 40206 | 205 (0xCD) | Goal Position | Goal Position Value | RW |  |
+| 40209 | 208 (0xD0) | Goal Speed | Goal Speed Value | RW | Speed Limit |
+| 40210 | 209 (0xD1) | Goal Current | Max Current Value | RW | Current Limit |
+| 40211 | 210 (0xD2) | Present Position | Present Position Value | R |  |
+| 40212 | 211 (0xD3) | Present Current | Present Current Value | R |  |
+| 40214 | 213 (0xD5) | Present Motor PWM | Motor Input PWM | R |  |
+| 40215 | 214 (0xD6) | Present Voltage | Present Voltage Value | R |  |
+| 40216 | 215 (0xD7) | Moving | Motor Operating Status | R |  |
 | 40218 | 217 (0xD9) | Present Overload Value |  | R |  |
-| 40221 | 220 (0xDC) | Action Enable | Action 기능 켜기/끄기 | RW |  |
+| 40221 | 220 (0xDC) | Action Enable | Action Feature On/Off | RW |  |
 | 40231 | 230 (0xE6) | Reset | Parameter Reset | W |  |
 | 40232 | 231 (0xE7) | Restart | System Restart | W |  |
-| 40241 | 240 (0xF0) | Internal Data 0 | 간접 주소 0 데이터 값 |  |  |
-| 40242 | 241 (0xF1) | Internal Data 1 | 간접 주소 1 데이터 값 |  |  |
-| 40243 | 242 (0xF2) | Internal Data 2 | 간접 주소 2 데이터 값 |  |  |
-| 40244 | 243 (0xF3) | Internal Data 3 | 간접 주소 3 데이터 값 |  |  |
-| 40245 | 244 (0xF4) | Internal Data 4 | 간접 주소 4 데이터 값 |  |  |
-| 40246 | 245 (0xF5) | Internal Data 5 | 간접 주소 5 데이터 값 |  |  |
-| 40247 | 246 (0xF6) | Internal Data 6 | 간접 주소 6 데이터 값 |  |  |
-| 40248 | 247 (0xF7) | Internal Data 7 | 간접 주소 7 데이터 값 |  |  |
-| 40249 | 248 (0xF8) | Internal Data 8 | 간접 주소 8 데이터 값 |  |  |
-| 40250 | 249 (0xF9) | Internal Data 9 | 간접 주소 9 데이터 값 |  |  |
+| 40241 | 240 (0xF0) | Indirect Data 0 | Indirect address data 0 value |  |  |
+| 40242 | 241 (0xF1) | Indirect  Data 1 | Indirect address 1 데이터 값 |  |  |
+| 40243 | 242 (0xF2) | Indirect Data 2 | Indirect address 2 데이터 값 |  |  |
+| 40244 | 243 (0xF3) | Indirect  Data 3 | Indirect address 3 데이터 값 |  |  |
+| 40245 | 244 (0xF4) | Indirect Data 4 | Indirect address 4 데이터 값 |  |  |
+| 40246 | 245 (0xF5) | Indirect  Data 5 | Indirect address 5 데이터 값 |  |  |
+| 40247 | 246 (0xF6) | Indirect  Data 6 | Indirect address 6 데이터 값 |  |  |
+| 40248 | 247 (0xF7) | Indirect Data 7 | Indirect address 7 데이터 값 |  |  |
+| 40249 | 248 (0xF8) | Indirect Data 8 | Indirect address 8 데이터 값 |  |  |
+| 40250 | 249 (0xF9) | Indirect Data 9 | Indirect address data 9 value |  |  |
 ## 2.4 Control Table Discription
 ### 2.4.1  Model Serial Number
-mightyZAP Model을 식별하기 위한 번호입니다.
+Production lot number to identify the mightyZAP Model.
 ### 2.4.2 Firmware Version  
-해당 제품의 펌웨어 버전이 표기되며, Semantic Versioning 방식으로 표기합니다. 
+The firmware version of the product using semantic versioning.
 **Semantic Versioning**
 	<font color="#12bc20">major</font>.<font color="#e36c09">minor</font>.<font color="#096cec">patch</font>
-	- major : 전반적인 펌웨어 개편 또는 주요 기능 수정 및 추가
-	- minor : 기능 수정 및 기능이 추가된 경우
-	- patch :  버그 및 코드 보완이 추가된 경우
+	- major : Overall firmware reorganization or modification and addition of major functions
+	- minor : In case that features are modified or added
+	- patch :  In case that Bug fixes and code complemented
 
    ![[versioning.png|200]]
+
 ### 2.4.3 mightyZAP ID
-통신 상에서 mightyZAP을 식별 하기 위한 고유 번호, Daisy-chain 방식으로 연결된 mightyZAP들은 서로 다른 ID가 할당되어야 합니다.  
+A unique number to identify respective mightyZAP on the communication line. mightyZAPs connected in a serial daisy-chain must be assigned different IDs.
 
 | value | Description |
 | ---- | ---- |
-| 0 | Broadcaste ID (Feedback  없이 쓰기 만 가능하고 읽기는 불가능 합니다.) |
+| 0 | Broadcast ID (Only writing is possible without feedback and reading.) |
 | 1~243 | mightyZAP ID (default ID 1) |
 > [!NOTE] Daisy-cahin Connection  
-> ID 번호가 N번인 mightyZAP 서보에 Command Packet 을 전송할 경우 여러 개의 mightyZAP 중 ID가 N번에 해당하는 서보만이 Feedback Packet을 return하고, 그 Command를 수행합니다.  
+> After receiving Command Packet at multiple qty of mightZAPs, the servo actuator whose ID is N will be operated only. (Only N ID servo will send Feedback packet and execute Command.)
 > 
 > ![[Daisy-chain.png|600]]
 
 > [!warning]  Unique ID  
->연결된 mightyZAP의 ID가 중복되지 않도록 주의해야 합니다. 중복된 ID가 있을 경우 통신 오류가 발생하여 정상적인 통신이 이루어지지 않습니다.   
->최대 243개의 ID 설정이 가능하지만 표준 규정상 하나의 노드에 연결 가능한 mightyZAP은 이론적으로 최대 32개입니다.
-### 2.4.4 Baudrate  
-mightyZAP과 통신을 하기 위한 통신 속도 입니다.
-설정된 값을 적용하기 위해서는 mightyZAP을 재 시작 해야 합니다.
+>- Each mightZAP servo actuator must have an individual unique ID to prevent interference between same IDs. Therefore, make sure to set individual IDs for each servo in the network node.
+>- User may assign 243 different IDs, but the number of connectable actuators are 32 due to the limit of nods of RS-485 standard regulation.
+>- As factory default ID is 1, please assign different, individual IDs for each servo. It will be easier if you assign each ID when you connect each servo in Daisy-chain network one by one.
 
-| 설정값       | 통신 속도 (bps)      |
+### 2.4.4 Baudrate  
+Communication speed between mightyZAP and user's controller.
+To apply the set value, mightyZAP must be restarted.
+
+| Value       | Speed (bps)      |
 |:----------|:-----------|
 |   8(0x08) | 115200  |
 |  16(0x10) |  57600 (default) |
@@ -244,47 +248,44 @@ mightyZAP과 통신을 하기 위한 통신 속도 입니다.
 |  64(0x40) |  19200  |
 | 128(0x80) |   9600 bps |  
 ### 2.4.5 Alarm LED
-Hardware Error 가 발생 했을 때, 해당 Alarm LED  bit 가 세팅 되어 있는 경우 LED표시를 실행합니다. (1 = 활성 / 0 = 비활성)
+When a Hardware Error occurs, the LED is activated if the corresponding Alarm LED bit is set. (1 = active / 0 = inactive)
 
 | Bit | Name | LED Indicate | Description |
 | ---- | ---- | ---- | ---- |
-| Bit 6 | Overload Error | RED 점멸 | 일정 시간 이상 동안 부하가 발생한 경우 |
-| Bit 0 | Input Voltage Error | RED 지속 점등 | 인가된 전압이 동작 범위를 벗어난 경우 |
-
-모든 Alarm은 시스템을 재 시작해야 사라지게 됩니다.  
-하지만 저전압 Input Volatage LED Alarm의 경우 원인이 해결 되면 LED가 꺼지게 됩니다.
+| Bit 6 | Overload Error | RED Blinking | When load occurs for more than a certain period of time (more than duty rate 50%) |
+| Bit 0 | Input Voltage Error | RED Light steady | When the applied voltage is outside the operating voltage range (7~13V) |
+All alarms will disappear when system is restarted.
+However, in the case of a low Input Voltage LED Alarm, the LED turns off when the cause is resolved.
 > [!note] NOTE   
->Hardware Error에 대한 자세한 설명은 [[#2.4.22 Hardware Error]]를 참조하여 주시기 바랍니다. 
+>For more detailed info, please refer to  [[#2.4.22 Hardware Error]]. 
 
 ### 2.4.6 Alarm Shutdown
-Hardware Error 가 발생 했을 때, 해당 Alarm Shutdown bit 가 세팅 되어 있는 경우 모터를 Shutdown 합니다. (1 = 활성 / 0 = 비활성)
+When a Hardware Error occurs, the motor is shut down if the corresponding Alarm Shutdown bit is set. (1 = active / 0 = inactive)
 
 | Bit | Name | Description |
 | ---- | ---- | ---- |
-| Bit 6 | Overload Error | 일정 시간 이상 동안 부하가 발생한 경우 |
-| Bit 0 | Input Voltage Error | 인가된 전압이 동작 범위를 벗어난 경우 |
-
-Shutdown은 Hardware Error가 발생할 경우, 모터를 Force Off 상태 즉, 모터에 전원 공급을 중단합니다. Shutdown애 의해 설정된 Force Off는 시스템 재 시작으로만 해지가 되며, [[#2.4.18 Force On/Off|Force ON]] 명령 또는 [[#2.4.23 Goal Position|Goal Position]] 명령에도 Force Off 명령을 수행합니다.
-하지만 저전압 Input Volatage의 경우 정상 전압으로 될 경우 Force On 됩니다.
+| Bit 6 | Overload Error | When load occurs for more than a certain period of time (more than duty rate 50%) |
+| Bit 0 | Input Voltage Error | When the applied voltage is outside the operating voltage range (7~13V) |
+Shutdown은 Hardware Error가 발생할 경우, 모터를 Force Off 상태 즉, 모터에 전원 공급을 중단합니다. Shutdown애 의해 설정된 Force Off는 시스템 재시작으로만 해지가 되며, [[#2.4.18 Force On/Off|Force ON]] 명령 또는 [[#2.4.23 Goal Position|Goal Position]] 명령에도 Force Off 명령을 수행합니다.
+하지만 저전압 Input Voltage의 경우 정상 전압으로 될 경우 Force On 됩니다.
 > [!note] NOTE   
 >Hardware Error에 대한 자세한 설명은 [[#2.4.22 Hardware Error]]를 참조하여 주시기 바랍니다.
 
-### 2.4.7 Short/Long Stroke Limt  
+### 2.4.6 Short/Long Stroke Limit  
 | Parameter | Range | Description | Unit |
 | ---- | ---- | ---- | ---- |
-| Short Stroke Limit | 0~10,000 | Goal Position 최소 입력 하한값 |  |
-| Long Stroke Limit | 0~10,000 | Goal Position 최대 입력 상한값 |  |
-
-위치 제어에서 목표 위치의 제한 값으로 0 ~ 10,000 범위 내에서 목표 위치 값을 제한합니다.
-따라서 Goal Position값은 Short Stroke Limit(A) 값보다 작을 수 없고, Long Stroke Limit(B) 값보다 커서는 안됩니다.
-Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Stroke Limit 값보다 클 경우 Stroke Limit값으로 치환됩니다.  
-[[Actuator/Mini 17Lf/img/StrokeLImit.png|600]]   
->[!warning] WARNING  
+| Short Stroke Limit | 0~10,000 | Goal Position Lower Limit |  |
+| Long Stroke Limit | 0~10,000 | Goal Position Upper Limit |  |
+The Short/Long Stroke Limit is to limit the upper (long) and lower (short) limits of the Goal Position range between 0 and 10,000, respectively.  
+Therefore, the Goal Position value cannot be smaller than the Short Stroke Limit(A) value and cannot be larger than the Long Stroke Limit(B) value.
+If the Goal Position value is smaller than the Short Stroke Limit value or larger than the Long Stroke Limit value, it is replaced with each Stroke Limit value.
+![[Actuator/Mini 17Lf/img/StrokeLImit.png|600]]   
+> [!note] NOTE   
 >mightyZAP이 사용자의 Application에 설치 되어 동작하기 전에 , 실제 가동 가능한 범위를 측정하여 Short Stroke Limit/Long Stroke Limit를 설정하신 후 사용하는 것을 추천 드립니다.  
 >설치된 기구물의 한계 밖의 위치 이동값을 입력할 경우 mightyZAP 또는 사용자의 Application 이 파손되거나, Overload 보호 기능이 동작 될 수 있습니다.   
 >자세한 내용은 [[#3. 유의 사항]]을 확안하여 주시기 바랍니다.
 
-### 2.4.8 Start Compliance Margin  
+### 2.4.6 Start Compliance Margin  
   Start Compliance Margin은 mightyZAP이 Goal Position 위치 값으로 이동 하기 위한  최소 위치 편차(마진) 값 입니다.  
   
 | value | Description |
@@ -292,35 +293,32 @@ Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Strok
 | 0 ~ 255 | Goal Position 최소 입력 하한값 |
 
 현재 위치(Present Position)값이 Goal Position 값보다 마진 값 이상 크거나 작을 경우, 위치 오차를 정정하기 위해 모터를 제어합니다.
-    
+  
 **Start Compliance Margin은 다음의 2가지의 경우에 적용이 됩니다.**
 - 현재 위치에서 다른 위치로 이동하기 위해 Goal Postion 값을 변경하는 경우
 - 정지 위치에서 외력에 의해 위치가 변화가 생긴 경우  
-    (사용자는 Goal Position을 변경하지 않았으나 Present Position이 바뀐 경우입니다.  일반적으로 외력에 의한 밀림이나 내부 유격 등의 의한 현재 위치의 변동이 생길 경우 입니다)   
-  
-**예시 1. Start Compliance Margin 보다 작게  Goal Position을 변경한 경우** 
+    (사용자는 Goal Position을 변경하지 않았으나 Present Position이 바뀐 경우입니다.  일반적으로 외력에 의한 밀림이나 내부 유격 등의 의한 현재 위치의 변동이 생길 경우 입니다)
+ 
+<font color="#4f81bd">예시 1. Start Compliance Margin 보다 작게  Goal Position을 변경한 경우</font>  
 - Start Compliance Margin : 20
 - Present Positon  : 1000
 - Goal Position : 1000 -> 1010으로 변경할 경우
-- <font color="#4f81bd">결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다</font>  
-  
-**예시 2. Start Compliance Margin 보다 크게  Goal Position을 변경한 경우** 
+- **결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다**
+   <font color="#4f81bd">예시 2. Start Compliance Margin 보다 크게  Goal Position을 변경한 경우</font>  
 - Start Compliance Margin : 20
 - Present Positon  : 1000
 - Goal Position : 1000 -> 950으로 변경할 경우
-- <font color="#4f81bd">결과 : 위치 편차가 Margin보다 커 모터가 동작되어 Present Position 값이 950으로 변경</font>  
-  
-**예시 3. 외부 힘에 의해 위치 편차가 발생한 경우**
+- **결과 : 위치 편차가 Margin보다 커 모터가 동작되어 Present Position 값이 950으로 변경**
+ <font color="#4f81bd">예시 3. 외부 힘에 의해 위치 편차가 발생한 경우</font>  
 - Start Compliance Margin : 20
 - Goal Position : 1000
 - Present Positon  : 1000 -> 1010으로 변경된 경우
-- <font color="#4f81bd">결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다</font>  
-  
-**예시 4. 외부 힘에 의해 위치 값이 크게 변경된 경우**  
+- **결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다**
+      <font color="#4f81bd">예시 4. 외부 힘에 의해 위치값이 크게 변경된 경우</font>  
 - Start Compliance Margin : 20
 - Goal Positon  : 1000
 - Present Position : 1000 -> 950으로 변경할 경우
-- <font color="#4f81bd">결과 : 위치 편차가 Margin보다 커 모터가 동작되어 Present Position 값이 1000으로 변경</font>  
+- **결과 : 위치 편차가 Margin보다 커 모터가 동작되어 Present Position 값이 1000으로 변경
 
 위의 예와 같이 Start Compliacne  Margin을 크게 설정할 경우, 외부 변화에 둔감하게 동작하여 위치 정밀도는 떨어질 수 있으나, 사용자가 제어하지(의도하지) 않은 모터의 잦은 동작을 막아 동작 안전성 및 내구성에 좋습니다.  
 >[!warning] Warning  
@@ -509,7 +507,7 @@ Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며
 	IO Port 1 또는 2번을 Jog 기능으로 지정 시 나머지 IO Port도 작동으로 지정됩니다. 해당 기능은 그림과 같이 회로를 구성하며, 각 버튼을 누를 경우 Short stroke Limit/Long Stroke Limit  방향으로 모터가 동작 하다가 버튼을 놓았을 때 정지하게 됩니다.  
 	![[extended_io_switch.png|500]]
 - **Action Enable**    
-	Action Enable 기능 Action 기능을 사용할 때 사용됩니다.  
+	Action Enable 기능 Action 기능을 사용할 때 사용됩니다. 
 	( 자세한 내용은 [[#4.17 Action Control]]을 참조하여 주시기 바랍니다. )  
 	![[extended_io_single_sw.png|500]]
 - **Action Next**    
@@ -551,7 +549,7 @@ Action Setting은 모터가 움직이는 방식을 설정하며 아래와 같습
 Action Setting에서 설정된 내용에 대한 반복 횟수 또는 1회 동작에 대한 동작 시간 등을 설정하는 Parameter 입니다.  
 **Repeat type**  
  - Interval : Repeat Time에 의해 설정된 시간 간격마다 Action을 수행합니다.  일정한 시간마다 반복된 동작이 필요할 경우 사용합니다. 
- - dWellTime : Action 명령에 의해 위치 이동이 완료되어 정지하는 시간을 설정합니다. 동작 완료 후 일정한 시간 동안 위치를 유지해야  할 때 사용합니다.  
+ - dWellTime : Action 명령에 의해 위치 이동이 완료되어 정지하는 시간을 설정합니다. 동작 완료 후 일정한 시간 동안 위치를 유지해야  할 때 사용합니다.
    ![[action_interval.png|600]]  
    ![[action_dwell.png|600]]  
 **Repeat time**  
@@ -655,7 +653,7 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
 >[!note] 전압 측정  
 >migtyZAP에서 측정되는 전압은 약 +/- 0.4V의 오차가 있습니다. 
 ### 2.4.23 Goal Position
-위치 이동 명령으로 migthtyZAP을 이동 시키고자 할 때 사용하는 위치 값입니다. Goal Position은 [[#3.1.5 Stroke Limit 설정|Stroke Limit]] 설정 제한 값 까지 입력이 가능합니다.  
+위치 이동 명령으로 migthtyZAP을 이동 시키고자 할 때 사용하는 위치 값입니다. Goal Position은 [[#2.4.5 Short/Long Stroke Limt|Short/Long Stroke Limt]] 설정 제한 값 까지 입력이 가능합니다.  
 (즉, stroke limit 범위 밖으로는 위치 명령을 내려도 stroke limit위치까지만 움직입니다)
 
 | value | Description |
@@ -770,7 +768,7 @@ Reset이 완료되면 mightyZAP의 시스템이 재 시작 되어 LED가 2번 �
 Baudrate, Protocol 변경 후 적용을 위해  또는 Hardware Error 인해 Suthdown이 발생하여 시스템을 재 시작 해야 하는경우 Restart Parameter 에 '1'으로 세팅하여 진행할 수 있습니다.
 
 # 3. 유의 사항  
-## 3.1 사용 주의 사항   
+## 3.1 Precautions for use   
 아래 주의 사항은 사용시 각별히 주의를 요하는 사항이므로, 반드시 숙지를 하여 주십시오. 아래 사항을 준수하지 못해 발생한 문제에 대해서는 보증 서비스를 받을 수 없음을 알려드립니다.
 ### 3.1.1 Rod 관리
 - 제품 동작 시 로드(Rod)를 무리한 힘으로 누르지 마십시오. 정격 부하 이상의 힘이 지속적으로 가해질 경우 모터가 소손될 수 있습니다.
@@ -898,7 +896,6 @@ Rod-End Grip Tip은 mightyZAP의 rod end에 연질의 패드가 부착된 팁을
 ## 4.2 커넥터 자료
 - Pin 배열
 - 통신 회로
-
 
 
 
