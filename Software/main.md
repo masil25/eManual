@@ -1,3 +1,5 @@
+mightyZAP Actuator를 테스트 및 파라메터 설정을 위한 OS별 Software를 제공하고 있습니다.
+---
 # total manager
 ![12lf](https://github.com/mightyZap1/eManual/blob/main/Actuator/12Lf.png?raw=true)
  - Coreless DC 12pi
