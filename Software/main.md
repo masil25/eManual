@@ -1,5 +1,4 @@
-mightyZAP Actuator를 테스트 및 파라메터 설정을 위한 Manager 및 여러 Sample software를 \n
-OS별 Software를 제공하고 있습니다.
+mightyZAP Actuator를 제어하기 위한 여러 프로그램 언어를 지원하고있습니다.
 ---
 # total manager
 ![Total Manager](https://github.com/mightyZap1/eManual/blob/main/Software/totaManager.png?raw=true)
