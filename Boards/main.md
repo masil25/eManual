@@ -1,5 +1,5 @@
 mightyZAP Actuator를 쉽게 사요하기 위한 악세사리 Board를 준비하고 있습니다.
-토신을 위한 Interface Board 및 Arduino 기반의 제어 보드를 판매하고 있습니다.
+통신을 위한 Interface Board 및 Arduino 기반의 제어 보드를 판매하고 있습니다.
 ---
 # CT01
 ![Total Manager](https://github.com/mightyZap1/eManual/blob/main/Software/totaManager.png?raw=true)
