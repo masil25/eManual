@@ -1,4 +1,5 @@
 # 12Lf Series
+![12lf](https://github.com/mightyZap1/eManual/blob/main/Actuator/12Lf.png?raw=true)
  - Coreless DC 12pi
  - 12V DC
  - 27(30)/40/53/90mm stroke
@@ -8,6 +9,7 @@
  - IR Protocol/Modbus RTU
 
 # 17Lf Series
+![17lf](https://github.com/mightyZap1/eManual/blob/main/Actuator/17Lf.png?raw=true)
  - Coreless DC 12pi
  - 12V DC
  - 27(30)/40/53/90mm stroke
