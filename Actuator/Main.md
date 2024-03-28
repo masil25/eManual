@@ -1,4 +1,17 @@
-간단한 소개 글 및 링크
-[[Mini L12 User Manual_kor]]
-[[Actuator/Mini 12Lf/Mini 12Lf User Manual_kor]]
-[[Mini 17Lf User Manual_kor]]
+# 12Lf Series
+ - Coreless DC 12pi
+ - 12V DC
+ - 27(30)/40/53/90mm stroke
+ - 30/40/50um 단방향 반복 정밀도
+ - Position, Current, Voltage, Motor operating Rate
+ - RS 485/ TTL(반이중)
+ - IR Protocol/Modbus RTU
+
+# 17Lf Series
+ - Coreless DC 12pi
+ - 12V DC
+ - 27(30)/40/53/90mm stroke
+ - 30/40/50um 단방향 반복 정밀도
+ - Position, Current, Voltage, Motor operating Rate
+ - RS 485/ TTL(반이중)
+ - IR Protocol/Modbus RTU
