@@ -8,7 +8,7 @@ mightyZAP 마이크로 선형 서보 액추에이터는 다양한 산업 분야�
 > 5. 오배선에 유의 하여 주시기 바랍니다.
 > <font color="#ff0000">자세한 사항은</font> [[#3.1 사용 주의 사항]] <font color="#ff0000">을 참조 하여 주시기 바랍니다.</font>
 
-> [!warning] 취급 및 보관 
+> [!warning] 취급 및 보관  
 > - 연속 동작 직후 mightyZAP의 케이스가 뜨거울 수 있습니다. 화상에 주의하십시오.
 > - mightyZAP을 물기, 먼지, 기름으로부터 멀리 하십시오.
 > - 본 제품은 실내 용도로 설계된 제품입니다. 실외 사용을 금합니다.
@@ -65,7 +65,7 @@ mightyZAP 마이크로 선형 서보 액추에이터는 다양한 산업 분야�
 # 2. Control Table
 Control Table은 mightyZAP을 구동 및 제어하기 위한 Parameter와 현재 상태를 나타내는 Parameter로 이루어져 있습니다.   
 사용자는 통신 Packet을 이용하여 특정 Parameter의 Data를  읽어 mightyZAP의 상태를 확인하거나, Data를 변경하여 mightyZAP을 제어할 수 있습니다.  
->[!note] Note 
+>[!note] Note  
 >17Lf 시리즈는 MODBUS-RTU 프로토콜 만을 제공합니다.  (IR Open프로토콜 미지원)
 >통신 Packet에 대한 자세한 내용은 [[Modbus RTU Manual-kor|MODBUS RTU]]를 참고하여 주시기 바랍니다.
 >
@@ -288,7 +288,7 @@ Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Strok
 ### 2.4.8 Start Compliance Margin  
   Start Compliance Margin은 mightyZAP이 Goal Position 위치 값으로 이동 하기 위한  최소 위치 편차(마진) 값 입니다.  
 
->[!TIP] Compliance Margin이란?
+>[!TIP] Compliance Margin이란?  
 Compliance Margin이란 이동 명령을 통해 Actuator를 구동 시작 시키거나 혹은 명령 수행을 완료 시키기 위한 최소 값의 크기입니다. 일반적인 경우 한 가지의 Compliance Margin 값을 통해, 구동 시작이나 구동 완료를 시키는 것이 보통이지만 당사 mightyZAP은 시작 시와 완료 시의 Compliance Margin을 각각 개별로 설정해서, 우수한 반복 위치 정밀도를 가지면서도, 안정적인 동작이 가능하게 설계가 되었습니다. 
 
 | value | Description |
@@ -333,8 +333,8 @@ Compliance Margin이란 이동 명령을 통해 Actuator를 구동 시작 시키
 >- Present Position : 1000 -> 950으로 변경할 경우
 >- <font color="#4f81bd">결과 : 위치 편차가 Margin보다 커 모터가 동작되어 Present Position 값이 1000으로 변경</font>
    
->[!tip] TIP
->Start Compliacne  Margin을 크게 설정할 경우, 외부 변화에 둔감하게 동작하여 위치 정밀도는 떨어질 수 있으나, 사용자가 제어하지(의도하지) 않은 모터의 잦은 동작을 막아 동작 안전성 및 내구성에 좋습니다.    
+>[!tip] TIP  
+>Start Compliacne Margin을 크게 설정할 경우, 외부 변화에 둔감하게 동작하여 위치 정밀도는 떨어질 수 있으나, 사용자가 제어하지(의도하지) 않은 모터의 잦은 동작을 막아 동작 안전성 및 내구성에 좋습니다.    
 
 >[!Caution] 주의  
 > Start compliance margin은 End Compliance Margin 보다 반드시 커야 합니다. 낮게 설정이 될 경우 오동작이 일어나게 됩니다.
@@ -345,7 +345,7 @@ Compliance Margin이란 이동 명령을 통해 Actuator를 구동 시작 시키
 ### 2.4.7 End Compliance Margin  
 End Compliance Margin은 mightyZAP이 정지하기 위한 최대 위치 편차 값입니다.  
 
->[!TIP] Compliance Margin이란?
+>[!TIP] Compliance Margin이란?  
 Compliance Margin이란 이동 명령을 통해 Actuator를 구동 시작 시키거나 혹은 명령 수행을 완료 시키기 위한 최소 값의 크기입니다. 일반적인 경우 한 가지의 Compliance Margin 값을 통해, 구동 시작이나 구동 완료를 시키는 것이 보통이지만 당사 mightyZAP은 시작 시와 완료 시의 Compliance Margin을 각각 개별로 설정해서, 우수한 반복 위치 정밀도를 가지면서도, 안정적인 동작이 가능하게 설계가 되었습니다. 
 
 | value | 동작 상태 |
@@ -821,7 +821,7 @@ Baudrate, Protocol 변경 후 적용을 위해  또는 Hardware Error 인해 Sut
 mightyZAP에 DC 정전압 장치를 사용하여 정격 전압에 맞게 전원인 가를 하여 주십시오. 전원 입력은  8.0 ~ 13V를 인가 해 주셔야 합니다.  13V이상의 과전압이 들어가면 제품 파손 의 원인이 됩니다.
 또한, 하나의 전원 Source에 여러 개의 mightyZAP을 연결 하였을 경우 최대 허용 전류를 계산하여 사용하여 주시기 바랍니다. 기본 설정에서 하나의 mightyZAP에서 사용하는 최대 전류는 800mA로 아래와 같이 계산하여 주시면 됩니다.
 >[!tip] TIP  
->- 예를 들어 3개의 mightyZAP을 연결하여 사용하는 경우
+> - 예를 들어 3개의 mightyZAP을 연결하여 사용하는 경우
    800mA x 3EA = 2.4A
   안전성을 고려하여 500mA 이상 높은 3A 이상의 Power Source를 사용하시기 바랍니다.
 
