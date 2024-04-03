@@ -289,7 +289,7 @@ Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Strok
 ### 2.4.8 Start Compliance Margin  
   Start Compliance Margin은 mightyZAP이 Goal Position 위치 값으로 이동 하기 위한  최소 위치 편차(마진) 값 입니다.  
 
->[!TIP] Compliance Margin이란?  
+>[!tip] Compliance Margin이란?  
 Compliance Margin이란 이동 명령을 통해 Actuator를 구동 시작 시키거나 혹은 명령 수행을 완료 시키기 위한 최소 값의 크기입니다. 일반적인 경우 한 가지의 Compliance Margin 값을 통해, 구동 시작이나 구동 완료를 시키는 것이 보통이지만 당사 mightyZAP은 시작 시와 완료 시의 Compliance Margin을 각각 개별로 설정해서, 우수한 반복 위치 정밀도를 가지면서도, 안정적인 동작이 가능하게 설계가 되었습니다. 
 
 | value | Description |
@@ -346,7 +346,7 @@ Compliance Margin이란 이동 명령을 통해 Actuator를 구동 시작 시키
 ### 2.4.7 End Compliance Margin  
 End Compliance Margin은 mightyZAP이 정지하기 위한 최대 위치 편차 값입니다.  
 
->[!TIP] Compliance Margin이란?  
+>[!tip] Compliance Margin이란?  
 Compliance Margin이란 이동 명령을 통해 Actuator를 구동 시작 시키거나 혹은 명령 수행을 완료 시키기 위한 최소 값의 크기입니다. 일반적인 경우 한 가지의 Compliance Margin 값을 통해, 구동 시작이나 구동 완료를 시키는 것이 보통이지만 당사 mightyZAP은 시작 시와 완료 시의 Compliance Margin을 각각 개별로 설정해서, 우수한 반복 위치 정밀도를 가지면서도, 안정적인 동작이 가능하게 설계가 되었습니다. 
 
 | value | 동작 상태 |
