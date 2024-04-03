@@ -224,7 +224,7 @@ mightyZAP Model을 식별하기 위한 생산로트 번호입니다.
 | ---- | ---- |
 | 0 | Broadcast ID (Feedback  없이 쓰기만 가능하고 읽기는 불가능 합니다.) |
 | 1~243 | mightyZAP ID (default ID 1) |
-> [!NOTE] Daisy-cahin Connection  
+> [!note] Daisy-cahin Connection  
 > ID 번호가 N번인 mightyZAP 서보에 Command Packet 을 전송할 경우 여러 개의 mightyZAP 중 ID가 N번에 해당하는 서보만이 Feedback Packet을 return하고, 그 Command를 수행합니다.  
 > 
 > ![[Daisy-chain.png|600]]
