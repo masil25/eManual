@@ -252,6 +252,7 @@ Hardware Error 가 발생 했을 때, 해당 Alarm LED  bit 가 세팅 되어 �
 | ---- | ---- | ---- | ---- |
 | Bit 6 | Overload Error | RED 점멸 | 일정 시간 이상 동안 부하가 발생한 경우 <font color="#ffc000">(duty rate 50%이상일 경우)</font> |
 | Bit 0 | Input Voltage Error | RED 지속 점등 | 인가된 전압이 동작 범위를 벗어난 경우 (<font color="#ffc000">동작범위 : 7~13V)</font> |
+
 모든 Alarm은 시스템을 재 시작해야 사라지게 됩니다.  
 하지만 저전압 Input Voltage LED Alarm의 경우 원인이 해결 되면 LED가 꺼지게 됩니다.
 > [!note] NOTE   
