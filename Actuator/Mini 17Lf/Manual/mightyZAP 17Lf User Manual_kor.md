@@ -493,7 +493,7 @@ PID 값을 수정하실 때는 기본 값에서 작은 값을 가 감하여 테�
 
 >[!tip] [ 일반적인 PID값 제어 방법 ]  
 >![[PID_Compensation_Animated.gif]]
- [참고 문헌]  [https://commons.wikimedia.org/wiki/File:PID_Compensation_Animated.gif](https://commons.wikimedia.org/wiki/File:PID_Compensation_Animated.gif) 
+ [참고 문헌]  [wiki](https://commons.wikimedia.org/wiki/File:PID_Compensation_Animated.gif) 
 
 ### 2.4.15 Indirect Address
 사용자는 해당 기능을 이용하여, 서로 떨어져 있는 여러 Parameter를 모아서 이용할 수 있습니다.   
