@@ -72,7 +72,7 @@ Mac OS 전용 패키지를 다운로드 합니다.
 
 ## 2.3 화면 구성
 화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Footer로 구성되어 있습니다.  
-![[mainView-description 1.png]]
+![[mainView-description 1.png|700]]
 <font color="#0070c0"><font color="#548dd4">① Main Toolbar</font></font> : Actuator의 Reset, Restart, Data Undo/Redo 등을 수행  
 <font color="#548dd4">② SCAN</font> : Software의 통신(COM Port)을 연결하고 연결된 mightyZAP을 검색  
 <font color="#548dd4">③ Main Menu</font> : 항상 사이드 바에 위치하며 사용자는 Information, Control, Update, Manager setting 등 Manager software의 주요 기능을 선택할 수 있습니다.
@@ -124,13 +124,14 @@ USB Interface Board를 PC와 연결합니다.
 	 - 다운로드한 파일의 압축을 풉니다.
 	 - 터미널 창을 열고 다운로드한 디렉토리로 이동을 합니다.
 	 - 다음의 명령들을 입력합니다
-	   ```bash
+	 
+```bash
 $ make clean  
 $ make  
 $ sudo make load    
 ```
 	 - 설치된 드라이버를 확인하기 위해 USB-02를 PC와 연결한 후 다음의 명령을 입력합니다.  
-	   ```bash
+```bash
 $ sudo dmesg | grep ch34    
 [   xxx] usbcore: registered new interface driver ch341  
 [   xxx] usbserial: USB Serial support registered for ch341-uart  
@@ -143,13 +144,13 @@ $ sudo dmesg | grep ch34
    CP210x 드라이버는 v2.6.12 부터 Linux  커널의 일부로 배포되었습니다. Linux 에서는 CP210x 드라이버가 /dev/ttyUSBx로 표시됩니다.  
    Com port를 확인하는 방법 :  
 	- USB Interface board를 PC와 적절한 USB Cable로 연결합니다.
-	- 터미널 창을 열고 다음을 입력하면 다음과 같이 출력이 나타납니다.
+	- 터미널 창을 열고 다음을 입력하면 다음과 같은 출력이 나타납니다.
 ```bash - 수정 필요요
-$ dmesg|grep FTDI  
-[   xxx] USB Serial support registered for FTDI USB Serial Device  
-[   xxx] ftdi_sio 9-1:1.0: FTDI USB Serial Device converter detected  
-[   xxx] usb 9-1: FTDI USB Serial Device converter now attached to ttyUSB0  
-[   xxx] ftdi_sio: v1.6.0:USB FTDI Serial Converters Driver  
+$ dmesg|grep cp21x  
+[   xxx] USB Serial support registered for cp210x
+[   xxx] cp210x 2-2.1:1.0: cp210x converter detected
+[   xxx] cp210x 2-2.1: cp210x converter now attached to ttyUSB0
+
 ```
 
 3) Serial Port 권한 얻기
@@ -158,9 +159,7 @@ $ dmesg|grep FTDI
  ```
 $ dmesg|grep tty  
 [   xxx] printk: console [tty0] enabled  
-[   xxx] usb 1-6.1.4: FTDI USB Serial Device converter now attached to ttyUSB0  
-[   xxx] ftdi_sio ttyUSB0: FTDI USB Serial Device converter now disconnected from ttyUSB0  
-[   xxx] usb 1-6.1.4: FTDI USB Serial Device converter now attached to ttyUSB0  
+[   xxx] cp210x 2-2.1: cp210x converter now attached to ttyUSB0  
 ```
  
    "ls -l" 명령을 통해 확인된 Serial Port를 이용하여 사용 그룹을 확인합니다.
@@ -334,7 +333,8 @@ Monitoring 기능은 아래와 같이 구성 되어있습니다.
 펌웨어 파일은 당사의 homepage에서 다운로드 받으시기 바랍니다.  
 [Firmware Download](https://mightyzap.com/en/digitalarchive4/?category1=Firmware&mod=list&pageid=1)
 ### 3.4.1 화면 구성    
-Update Page는 이미지와 같이 펌웨어 업데이트, Actuator Recovery 영역으로 되어있으며, 각각의 실행은 상단 header의 메뉴에서 해당 아이콘을 선택하여 실행할 수 있습니다.  ![[Pasted image 20240717142616.png|700]]
+Update Page는 이미지와 같이 펌웨어 업데이트, Actuator Recovery 영역으로 되어있으며, 각각의 실행은 상단 header의 메뉴에서 해당 아이콘을 선택하여 실행할 수 있습니다.
+![[Pasted image 20240717142616.png|700]]
 
 ### 3.4.2 Firmware Update   
 **Actuator 연결**  

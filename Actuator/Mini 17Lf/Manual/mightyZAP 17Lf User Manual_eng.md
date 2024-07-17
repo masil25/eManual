@@ -594,7 +594,7 @@ There are two ways to execute and terminate the Action function.
 - Setting available at [[#2.4.18 Extended I/O Control]] using Action Enable feature. 
 
 Single Action has a total of 10 parameter properties and can be broadly divided into three sections - Action Setting, Repeat Setting, and Moving Setting.  
-![[action_editor.png|700]]
+![[Pasted image 20240717143312.png|700]]
 
 <font color="#4f81bd" size='5'><b>Action Setting</b></font>  
 Action Setting sets Action Type and Action Data.  Action types are classified as follows.

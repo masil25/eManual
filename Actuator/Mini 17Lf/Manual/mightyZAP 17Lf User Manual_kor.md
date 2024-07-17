@@ -592,7 +592,7 @@ Action 기능을 실행 및 종료 시키는 방법은 2가지가 있습니다.
 - [[#2.4.18 Extended I/O Control]]에서 Action Enable 기능을 이용하여 실행 및 정지 할 수 있습니다.
 
 하나의 Action은 총 10개의 Parameter 속성을 가지고 있으며, 크게 Action Setting, Repeat Setting, and Moving Setting으로 나뉠 수 있습니다.  
-![[Actuator/Mini 17Lf/img/action_editor.png|700]]
+![[Pasted image 20240717143312.png|700]]
 
 <font color="#4f81bd" size='5'><b>Action Setting</b></font>  
 Action Setting은 모터가 움직이는 방식, 즉, Action Type과 그에 대한 Action Data를 설정합니다.  Action type 은 아래와 같이 구분됩니다.
