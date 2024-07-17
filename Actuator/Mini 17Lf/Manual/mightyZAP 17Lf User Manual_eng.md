@@ -1,9 +1,13 @@
+### **<font color="#ff0000">Check your product series!  </font>
+<font color="#ff0000">Does your model number start with 17Lf-?  </font>
+> This manual is dedicated for the 17Lf series actuators which only supports MODBUS RTU protocol.  For the users with 12Lf, L12, D12/7 series, please refer to separated manuals. 
+
 # 1. Introduction
 The mightyZAP micro linear servo actuators have been designed for robust, precise linear motion in tight spaces in a variety of industries with position, current and speed control feature. The 17Lf servo series is the new mightyZAP servo actuators with a 17mm diameter DC motor offering increased durability and faster speed at the similar rated load specification comparing to the 12Lf series.  The overall functionality is almost same as the 12Lf series, but note that user expandability has been improved through expansion I/O ports, enabling easier and more convenient control.  Only RS-485 communication using MODBUS RTU protocol is provided. 
->[!danger] Caution
+>[!danger] Caution
 > 1. Use within the rated load spec : Constant load larger than rated load specification may lead a damage of the motor. 
 > 2. Do not twist the rod :  If excessive twisting force is applied to the rod when installing the rod end tip, it may cause damage to internal components. (Fix the rod with the included M3 spanner and then attach the tips on the rod-end.)
-> 3. Comply with the product’s operating environment. (Input voltage : 8V~13V(Rated 12V),  Operating temperature : -10℃ ~ +60℃)
+> 3. Comply with the product’s operating environment. (Input voltage : 8V~13V(Rated 12V),  Operating temperature : -10℃ ~ +60℃)
 > 4. For optimal lifespan management, please do not exceed Duty Rate 50% and do not exceed maximum continuous operation time 30 seconds. Otherwise, an overload error alarm and shutdown will occur.
 > 5. Be careful of incorrect wiring.
 > 
@@ -19,21 +23,21 @@ The mightyZAP micro linear servo actuators have been designed for robust, precis
 > <font color="#ff0000">For detailed info, please refer to </font> [[#3.1 Precautions for use]] <font color="#ff0000">.</font>
 ## 1.2 Specifications
 ### 1.2.1 17Lf Series Specifications
-| Rated Load | Stroke | Model | Max Speed<br>(@no load) | Stall Force  <br>at Current<br>(1.6A/800mA/200mA) | Mechanical <br>Self Lock  <br>(Z axis use) | Lead Screw <br>/ Gear Ratio <br>/ Gear Type |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 17N | 37mm | 17Lf-17F-37 | 82mm/s | 90N / 58N / 23N | No  <br>(Pay attention  <br>to application) | Lead Angle 20° / 10:1  <br>/Engineering <br>Plastic Gears |
-| ^ | 50mm | 17Lf-17F-50 | ^ | ^ | ^ | ^ |
-| ^ | 87mm | 17Lf-17F-87 | ^ | ^ | ^ | ^ |
-| 20N | 27mm | 17L-20F-27 | 117mm/s | ^ | ^ | Lead Angle 22.2° / 9.3:1 <br>/Engineering Plastic Gears |
-| 27N | 37mm | 17Lf-27F-37 | 82mm/s | 96N / 68N / 27N | ^ | Lead Angle 15° / 10:1  <br>/Engineering <br>Plastic Gears |
-| ^ | 50mm | 17Lf-27F-50 | ^ | ^ | ^ | ^ |
-| ^ | 87mm | 17Lf-27F-87 | ^ | ^ | ^ | ^ |
-| 35N | 27mm | 17Lf-35F-27 | 90mm/s | ^ | ^ | Lead Angle 17° / 9.3:1 /  <br>Engineering Plastic Gears |
-| 50N | 37mm | 17Lf-50F-27 | 28mm/s | 182N / 129N / 50N | Yes  <br>(Applicable) | Lead Angle 5° / 10:1  <br>/Engineering <br>Plastic Gears |
-| ^ | 50mm | 17Lf-50F-50 | ^ | ^ | ^ | ^ |
-| ^ | 87mm | 17Lf-50F-87 | ^ | ^ | ^ | ^ |
-| 70N | 27mm | 17Lf-70F-27 | 32mm/s | ^ | ^ | ^ |
-### 1.2.2 Common Specifications
+| Rated Load | Stroke | Model       | Max Speed<br>(@no load) | Stall Force  <br>at Current<br>(1.6A/800mA/200mA) | Mechanical <br>Self Lock  <br>(Z axis use)  | Lead Screw <br>/ Gear Ratio <br>/ Gear Type               |
+| :--------- | :----- | :---------- | :---------------------- | :------------------------------------------------ | :------------------------------------------ | :-------------------------------------------------------- |
+| 17N        | 37mm   | 17Lf-17F-37 | 82mm/s                  | 90N / 58N / 23N                                   | No  <br>(Pay attention  <br>to application) | Lead Angle 20° / 10:1  <br>/Engineering <br>Plastic Gears |
+| ^          | 50mm   | 17Lf-17F-50 | ^                       | ^                                                 | ^                                           | ^                                                         |
+| ^          | 87mm   | 17Lf-17F-87 | ^                       | ^                                                 | ^                                           | ^                                                         |
+| 20N        | 27mm   | 17L-20F-27  | 117mm/s                 | ^                                                 | ^                                           | Lead Angle 22.2° / 9.3:1 <br>/Engineering Plastic Gears   |
+| 27N        | 37mm   | 17Lf-27F-37 | 82mm/s                  | 96N / 68N / 27N                                   | ^                                           | Lead Angle 15° / 10:1  <br>/Engineering <br>Plastic Gears |
+| ^          | 50mm   | 17Lf-27F-50 | ^                       | ^                                                 | ^                                           | ^                                                         |
+| ^          | 87mm   | 17Lf-27F-87 | ^                       | ^                                                 | ^                                           | ^                                                         |
+| 35N        | 27mm   | 17Lf-35F-27 | 90mm/s                  | ^                                                 | ^                                           | Lead Angle 17° / 9.3:1 /  <br>Engineering Plastic Gears   |
+| 50N        | 37mm   | 17Lf-50F-27 | 28mm/s                  | 182N / 129N / 50N                                 | Yes  <br>(Applicable)                       | Lead Angle 5° / 10:1  <br>/Engineering <br>Plastic Gears  |
+| ^          | 50mm   | 17Lf-50F-50 | ^                       | ^                                                 | ^                                           | ^                                                         |
+| ^          | 87mm   | 17Lf-50F-87 | ^                       | ^                                                 | ^                                           | ^                                                         |
+| 70N        | 27mm   | 17Lf-70F-27 | 32mm/s                  | ^                                                 | ^                                           | ^                                                         |
+### 1.2.2 Common Specifications
 | Item | Stroke | &lt; | Unidirectional |
 | :--- | :--- | :--- | :--- |
 | **Repeatability** | 27mm / 40mm | &lt; | 30μm (0.03mm) |
@@ -69,12 +73,12 @@ The mightyZAP micro linear servo actuators have been designed for robust, precis
 The Control Table consists of two types of Parameters for driving and controlling mightyZAP and for indicating the current status.
 Using the communication packet, user is able to check the status of mightyZAP by reading feedback data of a specific parameter, or control mightyZAP by changing the data value.
 >[!note] Note 
-> 17Lf series only provides MODBUS RTU protocol. (IR Open protocol is no supported). For detailed infor for the communication packet, please refer to the [[MODBUS RTU_eng|MODBUS RTU]] section.
+> 17Lf series only provides MODBUS RTU protocol. (IR Open protocol is no supported). For detailed infor for the communication packet, please refer to the [[17Lf Modbus RTU_eng|MODBUS RTU]] section.
 >
 ## 2.1 Description  
 ### 2.1.1 Memory Type
 The Control Table is divided into two areas. The one is Non-Volatile Memory (ROM), which retains the data even if the power is turned off after changing the data, and Volatile Memory (RAM) which initialize the data when the power is turned off/on.
-- **Non-Volatile Memory (ROM)** :  Data modification may take approx. 250ms. Additionally, communication may be restricted while saving the memory. Generally, it is only used to set settings before operation. Saved data are not initialized even after power is re-applied.
+- **Non-Volatile Memory (ROM)** :  Data modification may take approx. 250ms. Additionally, communication may be restricted while saving the memory. Generally, it is only used to set settings before operation. Saved data are not initialized even after power is re-applied.
 - **Volatile Memory(RAM)** :  Used when changing data in real time and it consists of general motion control parameters. The data will be initialized when the power is re-applied.
 ### 2.1.2 Address  
 In this manual, Address refers to the "Data Address" in the Control Table.
@@ -85,130 +89,131 @@ Control Table Data is indicated as ‘R’ or ‘RW’. 'R' stands for Read Only
 Read-only parameters are mainly used for basic information or monitoring of servo actuators.  Read-Write parameters are used for mightyZAP control purposes.
 ### 2.1.5 Default  
 Default value is the initial setting value from the factory. When the value in the Non-Volatile Memory area is modified by the user, the changed value is applied to the default value, and the Volatile Memory area displays the default value as the current state value when power is applied.
+
 ## 2.2 Non-volatile Memory (ROM)  
 
-| Rergister Number | Address | Name | Description | Access | Default |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| 40001 | 0 (0x00) | Serial Number | Model Serial Nu mber | R |  |
-| 40002 | 1 (0x01) | Firmware Version | Firmware version | R |  |
-| 40005 | 4 (0x04) | mightyZAP ID | mightyZAP ID | RW | 1(0x01) |
-| 40006 | 5 (0x05) | mightyZAP Baudrate | Communication Speed | RW | 32(0x20) |
-| 40010 | 9 (0x09) | Alarm Led | Hardware Error Alarm LED Indication | RW | 33(0x21) |
-| 40011 | 10 (0x0A) | Alarm Shutdown | Hardware Error Alarm Function | RW | 33(0x21) |
-| 40012 | 11 (0x0B) | Short Stroke Limit | Retraction direction limit position value | RW | 0(0x00) |
-| 40013 | 12 (0x0C) | Long Stroke Limit | Extension direction limit position value | RW | Each Spec |
-| 40014 | 13 (0x0D) | Start Compliance Margin | Start Compliance Margin | RW | 20(0x14) |
-| 40015 | 14 (0x0E) | End Compliance Margin | End Compliance Margin | RW | 8(0x08) |
-| 40016 | 15 (0x0F) | Acceleration | Acceleration | RW | Individual Spec |
-| 40017 | 16 (0x10) | Deceleration | Deceleration | RW | Individual Spec |
-| 40018 | 17 (0x11) | Min Position Calibration | Min Position Trim | RW | Individual Spec |
-| 40019 | 18 (0x12) | Max Position Calibration | Max Position Trim | RW | Individual Spec |
-| 40020 | 19 (0x13) | Motor Operating Rate Limt | Motor Operating Rate Limit (Motor PWM) | RW | 1000 |
-| 40021 | 20 (0x14) | Speed Limit | Speed Upper Limit | RW | 1000 |
-| 40022 | 21 (0x15) | Current Limit | Current Upper Limit | RW | 800 |
-| 40023 | 22 (0x16) | Current I Gain | Current I Gain | RW | Individual Spec |
-| 40024 | 23 (0x17) | Current P Gain | Current P Gain | RW | Individual Spec |
-| 40025 | 24 (0x18) | Speed D Gain | Speed D Gain | RW | Individual Spec |
-| 40026 | 25 (0x19) | Speed I Gain | Speed I Gain | RW | Individual Spec |
-| 40027 | 26 (0x1A) | Speed P Gain | Speed P Gain | RW | Individual Spec |
-| 40041 | 40 (0x28) | Indirect Addess 0 | Indirect Addess 0 | RW | 0(0x00) |
-| 40042 | 41 (0x29) | Indirect Addess 1 | Indirect Addess 1 | RW | 0(0x00) |
-| 40043 | 42 (0x2A) | Indirect  Addess 2 | Indirect  Addess 2 | RW | 0(0x00) |
-| 40044 | 43 (0x2B) | Indirect  Addess 3 | Indirect  Addess 3 | RW | 0(0x00) |
-| 40045 | 44 (0x2C) | Indirect Addess 4 | Indirect Addess 4 | RW | 0(0x00) |
-| 40046 | 45 (0x2D) | Indirect  Addess 5 | Indirect  Addess 5 | RW | 0(0x00) |
-| 40047 | 46 (0x2E) | Indirect Addess 6 | Indirect Addess 6 | RW | 0(0x00) |
-| 40048 | 47 (0x2F) | Indirect  Addess 7 | Indirect  Addess 7 | RW | 0(0x00) |
-| 40049 | 48 (0x30) | Indirect  Addess 8 | Indirect  Addess 8 | RW | 0(0x00) |
-| 40050 | 49 (0x31) | Indirect Addess 9 | Indirect Addess 9 | RW | 0(0x00) |
-| 40051 | 50 (0x32) | Extened Port Setting 0 | Setting for extended Port 0 | RW | 0(0x00) |
-| 40052 | 51 (0x33) | Extened Port Setting 1 | Setting for extended Port 1 | RW | 0(0x00) |
-| 40053 | 52 (0x34) | Extened Port Setting 2 | Setting for extended Port 2 | RW | 0(0x00) |
-| 40054 | 53 (0x35) | Extened Port Setting 3 | Setting for extended Port 3 | RW | 0(0x00) |
-| 40061 | 60 (0x3C) | Action 0 type | Action 0 Action type | RW | 0(0x00) |
-| 40062 | 61 (0x3D) | Action 0 distance | Action 0 Moving Distance | RW | 0(0x00) |
-| 40063 | 62 (0x3E) | Action 0 Repeat Type | Action 0 Repeat type | RW | 0(0x00) |
-| 40064 | 63 (0x3F) | Action 0 Repeat Count | Action 0 number of repetitions | RW | 0(0x00) |
-| 40065 | 64 (0x40) | Action 0 Repeat Time | Action 0   1operation time | RW | 0(0x00) |
-| 40066 | 65 (0x41) | Action 0 Goal Speed | Action 0 Goal Speed | RW | 0(0x00) |
-| 40067 | 66 (0x42) | Action 0 Gal Current | Action 0 Goal Current | RW | 0(0x00) |
-| 40068 | 67 (0x43) | Action 0 Accleration | Action 0 Acceleration | RW | 0(0x00) |
-| 40069 | 68 (0x44) | Action 0 Delceration | Action 0 Deceleration | RW | 0(0x00) |
-| 40070 | 69 (0x45) | Action 0 Stop | Action 0 정지 형식 | RW | 0(0x00) |
-| 40071 | 70 (0x46) | Action 1 type | Action 1 동작 형식 | RW | 0(0x00) |
-| 40072 | 71 (0x47) | Action 1 distance | Action 1 이동 거리 | RW | 0(0x00) |
-| 40073 | 72 (0x48) | Action 1 Repeat Type | Action 1 반복 형식 | RW | 0(0x00) |
-| 40074 | 73 (0x49) | Action 1 Repeat Count | Action 1 반복 횟수 | RW | 0(0x00) |
-| 40075 | 74 (0x4A) | Action 1 Repeat Time | Action 1 1회 동작 시간 | RW | 0(0x00) |
-| 40076 | 75 (0x4B) | Action 1 Goal Speed | Action 1 Goal Speed | RW | 0(0x00) |
-| 40077 | 76 (0x4C) | Action 1 Goal Current | Action 1 Goal Current | RW | 0(0x00) |
-| 40078 | 77 (0x4D) | Action 1 Accleration | Action 1 Acceleration | RW | 0(0x00) |
-| 40079 | 78 (0x4E) | Action 1 Delceration | Action 1 Deceleration | RW | 0(0x00) |
-| 40080 | 79 (0x4F) | Action 1 Stop | Action 1 정지 형식 | RW | 0(0x00) |
-| 40081 | 80 (0x50) | Action 2 type | Action 2 동작 형식 | RW | 0(0x00) |
-| 40082 | 81 (0x51) | Action 2 distance | Action 2 이동 거리 | RW | 0(0x00) |
-| 40083 | 82 (0x52) | Action 2 Repeat Type | Action 2 반복 형식 | RW | 0(0x00) |
-| 40084 | 83 (0x53) | Action 2 Repeat Count | Action 2 반복 횟수 | RW | 0(0x00) |
-| 40085 | 84 (0x54) | Action 2 Repeat Time | Action 2 1회 동작 시간 | RW | 0(0x00) |
-| 40086 | 85 (0x55) | Action 2 Goal Speed | Action 2 Goal Speed | RW | 0(0x00) |
-| 40087 | 86 (0x56) | Action 2 Goal Current | Action 2 Goal Current | RW | 0(0x00) |
-| 40088 | 87 (0x57) | Action 2 Accleration | Action 2 Acceleration | RW | 0(0x00) |
-| 40089 | 88 (0x58) | Action 2 Delceration | Action 2 Deceleration | RW | 0(0x00) |
-| 40090 | 89 (0x59) | Action 2 Stop | Action 2 정지 형식 | RW | 0(0x00) |
-| 40091 | 90 (0x5A) | Action 3 type | Action 3 동작 형식 | RW | 0(0x00) |
-| 40092 | 91 (0x5B) | Action 3 distance | Action 3 이동 거리 | RW | 0(0x00) |
-| 40093 | 92 (0x5C) | Action 3 Repeat Type | Action 3 반복 형식 | RW | 0(0x00) |
-| 40094 | 93 (0x5D) | Action 3 Repeat Count | Action 3 반복 횟수 | RW | 0(0x00) |
-| 40095 | 94 (0x5E) | Action 3 Repeat Time | Action 3 1회 동작 시간 | RW | 0(0x00) |
-| 40096 | 95 (0x5F) | Action 3 Goal Speed | Action 3 Goal Speed | RW | 0(0x00) |
-| 40097 | 96 (0x60) | Action 3 Goal Current | Action 3 Goal Current | RW | 0(0x00) |
-| 40098 | 97 (0x61) | Action 3 Accleration | Action 3 Acceleration | RW | 0(0x00) |
-| 40099 | 98 (0x62) | Action 3 Delceration | Action 3 Deceleration | RW | 0(0x00) |
-| 40100 | 99 (0x63) | Action 3 Stop | Action 3 정지 형식 | RW | 0(0x00) |
-| 40101 | 100 (0x64) | Action 4 type | Action 4 동작 형식 | RW | 0(0x00) |
-| 40102 | 101 (0x65) | Action 4 distance | Action 4 이동 거리 | RW | 0(0x00) |
-| 40103 | 102 (0x66) | Action 4 Repeat Type | Action 4 반복 형식 | RW | 0(0x00) |
-| 40104 | 103 (0x67) | Action 4 Repeat Count | Action 4 반복 횟수 | RW | 0(0x00) |
-| 40105 | 104 (0x68) | Action 4 Repeat Time | Action 4 1회 동작 시간 | RW | 0(0x00) |
-| 40106 | 105 (0x69) | Action 4 Goal Speed | Action 4 Goal Speed | RW | 0(0x00) |
-| 40107 | 106 (0x6A) | Action 4 Goal Current | Action 4 Goal Current | RW | 0(0x00) |
-| 40108 | 107 (0x6B) | Action 4 Accleration | Action 4 Acceleration | RW | 0(0x00) |
-| 40109 | 108 (0x6C) | Action 4 Delceration | Action 4 Deceleration | RW | 0(0x00) |
-| 40110 | 109 (0x6D) | Action 4 Stop | Action 4 정지 형식 | RW | 0(0x00) |
+| Rergister Number | Address    | Name                      | Description                               | Access | Default         |
+| :--------------- | :--------- | :------------------------ | :---------------------------------------- | :----- | :-------------- |
+| 40001            | 0 (0x00)   | Serial Number             | Model Serial Number                       | R      |                 |
+| 40002            | 1 (0x01)   | Firmware Version          | Firmware version                          | R      |                 |
+| 40005            | 4 (0x04)   | mightyZAP ID              | mightyZAP ID                              | RW     | 1(0x01)         |
+| 40006            | 5 (0x05)   | mightyZAP Baudrate        | Communication Speed                       | RW     | 32(0x20)        |
+| 40010            | 9 (0x09)   | Alarm Led                 | Hardware Error Alarm LED Indication       | RW     | 33(0x21)        |
+| 40011            | 10 (0x0A)  | Alarm Shutdown            | Hardware Error Alarm Function             | RW     | 33(0x21)        |
+| 40012            | 11 (0x0B)  | Short Stroke Limit        | Retraction direction limit position value | RW     | 0(0x00)         |
+| 40013            | 12 (0x0C)  | Long Stroke Limit         | Extension direction limit position value  | RW     | Each Spec       |
+| 40014            | 13 (0x0D)  | Start Compliance Margin   | Start Compliance Margin                   | RW     | 20(0x14)        |
+| 40015            | 14 (0x0E)  | End Compliance Margin     | End Compliance Margin                     | RW     | 8(0x08)         |
+| 40016            | 15 (0x0F)  | Acceleration              | Acceleration                              | RW     | Individual Spec |
+| 40017            | 16 (0x10)  | Deceleration              | Deceleration                              | RW     | Individual Spec |
+| 40018            | 17 (0x11)  | Min Position Calibration  | Min Position Trim                         | RW     | Individual Spec |
+| 40019            | 18 (0x12)  | Max Position Calibration  | Max Position Trim                         | RW     | Individual Spec |
+| 40020            | 19 (0x13)  | Motor Operating Rate Limt | Motor Operating Rate Limit (Motor PWM)    | RW     | 1000            |
+| 40021            | 20 (0x14)  | Speed Limit               | Speed Upper Limit                         | RW     | 1000            |
+| 40022            | 21 (0x15)  | Current Limit             | Current Upper Limit                       | RW     | 800             |
+| 40023            | 22 (0x16)  | Current I Gain            | Current I Gain                            | RW     | Individual Spec |
+| 40024            | 23 (0x17)  | Current P Gain            | Current P Gain                            | RW     | Individual Spec |
+| 40025            | 24 (0x18)  | Speed D Gain              | Speed D Gain                              | RW     | Individual Spec |
+| 40026            | 25 (0x19)  | Speed I Gain              | Speed I Gain                              | RW     | Individual Spec |
+| 40027            | 26 (0x1A)  | Speed P Gain              | Speed P Gain                              | RW     | Individual Spec |
+| 40041            | 40 (0x28)  | Indirect Addess 0         | Indirect Addess 0                         | RW     | 0(0x00)         |
+| 40042            | 41 (0x29)  | Indirect Addess 1         | Indirect Addess 1                         | RW     | 0(0x00)         |
+| 40043            | 42 (0x2A)  | Indirect  Addess 2        | Indirect  Addess 2                        | RW     | 0(0x00)         |
+| 40044            | 43 (0x2B)  | Indirect  Addess 3        | Indirect  Addess 3                        | RW     | 0(0x00)         |
+| 40045            | 44 (0x2C)  | Indirect Addess 4         | Indirect Addess 4                         | RW     | 0(0x00)         |
+| 40046            | 45 (0x2D)  | Indirect  Addess 5        | Indirect  Addess 5                        | RW     | 0(0x00)         |
+| 40047            | 46 (0x2E)  | Indirect Addess 6         | Indirect Addess 6                         | RW     | 0(0x00)         |
+| 40048            | 47 (0x2F)  | Indirect  Addess 7        | Indirect  Addess 7                        | RW     | 0(0x00)         |
+| 40049            | 48 (0x30)  | Indirect  Addess 8        | Indirect  Addess 8                        | RW     | 0(0x00)         |
+| 40050            | 49 (0x31)  | Indirect Addess 9         | Indirect Addess 9                         | RW     | 0(0x00)         |
+| 40051            | 50 (0x32)  | Extened Port Setting 0    | Setting for extended Port 0               | RW     | 0(0x00)         |
+| 40052            | 51 (0x33)  | Extened Port Setting 1    | Setting for extended Port 1               | RW     | 0(0x00)         |
+| 40053            | 52 (0x34)  | Extened Port Setting 2    | Setting for extended Port 2               | RW     | 0(0x00)         |
+| 40054            | 53 (0x35)  | Extened Port Setting 3    | Setting for extended Port 3               | RW     | 0(0x00)         |
+| 40061            | 60 (0x3C)  | Action 0 type             | Action 0 Action type                      | RW     | 0(0x00)         |
+| 40062            | 61 (0x3D)  | Action 0 distance         | Action 0 Moving Distance                  | RW     | 0(0x00)         |
+| 40063            | 62 (0x3E)  | Action 0 Repeat Type      | Action 0 Repeat type                      | RW     | 0(0x00)         |
+| 40064            | 63 (0x3F)  | Action 0 Repeat Count     | Action 0 Number of repetitions            | RW     | 0(0x00)         |
+| 40065            | 64 (0x40)  | Action 0 Repeat Time      | Action 0   1 operation time               | RW     | 0(0x00)         |
+| 40066            | 65 (0x41)  | Action 0 Goal Speed       | Action 0 Goal Speed                       | RW     | 0(0x00)         |
+| 40067            | 66 (0x42)  | Action 0 Goal Current     | Action 0 Goal Current                     | RW     | 0(0x00)         |
+| 40068            | 67 (0x43)  | Action 0 Accleration      | Action 0 Acceleration                     | RW     | 0(0x00)         |
+| 40069            | 68 (0x44)  | Action 0 Delceration      | Action 0 Deceleration                     | RW     | 0(0x00)         |
+| 40070            | 69 (0x45)  | Action 0 Stop             | Action 0 Stop type                        | RW     | 0(0x00)         |
+| 40071            | 70 (0x46)  | Action 1 type             | Action 1 Action type                      | RW     | 0(0x00)         |
+| 40072            | 71 (0x47)  | Action 1 distance         | Action 1 Moving Distance                  | RW     | 0(0x00)         |
+| 40073            | 72 (0x48)  | Action 1 Repeat Type      | Action 1 Repeat type                      | RW     | 0(0x00)         |
+| 40074            | 73 (0x49)  | Action 1 Repeat Count     | Action 1 Number of repetitions            | RW     | 0(0x00)         |
+| 40075            | 74 (0x4A)  | Action 1 Repeat Time      | Action 1, 1 operation time                | RW     | 0(0x00)         |
+| 40076            | 75 (0x4B)  | Action 1 Goal Speed       | Action 1 Goal Speed                       | RW     | 0(0x00)         |
+| 40077            | 76 (0x4C)  | Action 1 Goal Current     | Action 1 Goal Current                     | RW     | 0(0x00)         |
+| 40078            | 77 (0x4D)  | Action 1 Accleration      | Action 1 Acceleration                     | RW     | 0(0x00)         |
+| 40079            | 78 (0x4E)  | Action 1 Delceration      | Action 1 Deceleration                     | RW     | 0(0x00)         |
+| 40080            | 79 (0x4F)  | Action 1 Stop             | Action 1 Stop type                        | RW     | 0(0x00)         |
+| 40081            | 80 (0x50)  | Action 2 type             | Action 2 Action type                      | RW     | 0(0x00)         |
+| 40082            | 81 (0x51)  | Action 2 distance         | Action 2 Moving Distance                  | RW     | 0(0x00)         |
+| 40083            | 82 (0x52)  | Action 2 Repeat Type      | Action 2 Repeat type                      | RW     | 0(0x00)         |
+| 40084            | 83 (0x53)  | Action 2 Repeat Count     | Action 2 Number of repetitions            | RW     | 0(0x00)         |
+| 40085            | 84 (0x54)  | Action 2 Repeat Time      | Action 2, 1 operation time                | RW     | 0(0x00)         |
+| 40086            | 85 (0x55)  | Action 2 Goal Speed       | Action 2 Goal Speed                       | RW     | 0(0x00)         |
+| 40087            | 86 (0x56)  | Action 2 Goal Current     | Action 2 Goal Current                     | RW     | 0(0x00)         |
+| 40088            | 87 (0x57)  | Action 2 Accleration      | Action 2 Acceleration                     | RW     | 0(0x00)         |
+| 40089            | 88 (0x58)  | Action 2 Delceration      | Action 2 Deceleration                     | RW     | 0(0x00)         |
+| 40090            | 89 (0x59)  | Action 2 Stop             | Action 2 Stop type                        | RW     | 0(0x00)         |
+| 40091            | 90 (0x5A)  | Action 3 type             | Action 3 Action type                      | RW     | 0(0x00)         |
+| 40092            | 91 (0x5B)  | Action 3 distance         | Action 3 Moving Distance                  | RW     | 0(0x00)         |
+| 40093            | 92 (0x5C)  | Action 3 Repeat Type      | Action 3 Repeat type                      | RW     | 0(0x00)         |
+| 40094            | 93 (0x5D)  | Action 3 Repeat Count     | Action 3,  Number of repetitions          | RW     | 0(0x00)         |
+| 40095            | 94 (0x5E)  | Action 3 Repeat Time      | Action 3, <br>1 operation time            | RW     | 0(0x00)         |
+| 40096            | 95 (0x5F)  | Action 3 Goal Speed       | Action 3 Goal Speed                       | RW     | 0(0x00)         |
+| 40097            | 96 (0x60)  | Action 3 Goal Current     | Action 3 Goal Current                     | RW     | 0(0x00)         |
+| 40098            | 97 (0x61)  | Action 3 Accleration      | Action 3 Acceleration                     | RW     | 0(0x00)         |
+| 40099            | 98 (0x62)  | Action 3 Delceration      | Action 3 Deceleration                     | RW     | 0(0x00)         |
+| 40100            | 99 (0x63)  | Action 3 Stop             | Action 3 Stop type                        | RW     | 0(0x00)         |
+| 40101            | 100 (0x64) | Action 4 type             | Action 4 Action type                      | RW     | 0(0x00)         |
+| 40102            | 101 (0x65) | Action 4 distance         | Action 4 Moving Distance                  | RW     | 0(0x00)         |
+| 40103            | 102 (0x66) | Action 4 Repeat Type      | Action 4 Repeat type                      | RW     | 0(0x00)         |
+| 40104            | 103 (0x67) | Action 4 Repeat Count     | Action 4, Number of repetitions           | RW     | 0(0x00)         |
+| 40105            | 104 (0x68) | Action 4 Repeat Time      | Action 4, <br>1 operation time            | RW     | 0(0x00)         |
+| 40106            | 105 (0x69) | Action 4 Goal Speed       | Action 4 Goal Speed                       | RW     | 0(0x00)         |
+| 40107            | 106 (0x6A) | Action 4 Goal Current     | Action 4 Goal Current                     | RW     | 0(0x00)         |
+| 40108            | 107 (0x6B) | Action 4 Accleration      | Action 4 Acceleration                     | RW     | 0(0x00)         |
+| 40109            | 108 (0x6C) | Action 4 Delceration      | Action 4 Deceleration                     | RW     | 0(0x00)         |
+| 40110            | 109 (0x6D) | Action 4 Stop             | Action 4 Stop type                        | RW     | 0(0x00)         |
 ## 2.3 Volatile Memory(RAM)
 
-| Register Number | Address | Name | Description | Access | Default |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| 40201 | 200 (0xC8) | Force On/Off | Motor Power On/Off | RW | 1(0x01) |
-| 40202 | 201 (0xC9) | Actuator Pause | Motor pause | RW | 0(0x00) |
-| 40203 | 202 (0xCA) | Actuator Stop | 모터 일시 정지 | RW | 0(0x00) |
-| 40204 | 203 (0xCB) | LED Color | LED On/Off | RW | 0(0x00) |
-| 40205 | 204 (0xCC) | Hardware Error | Hardware Error | R | 0(0x00) |
-| 40206 | 205 (0xCD) | Goal Position | Goal Position Value | RW |  |
-| 40209 | 208 (0xD0) | Goal Speed | Goal Speed Value | RW | Speed Limit |
-| 40210 | 209 (0xD1) | Goal Current | Max Current Value | RW | Current Limit |
-| 40211 | 210 (0xD2) | Present Position | Present Position Value | R |  |
-| 40212 | 211 (0xD3) | Present Current | Present Current Value | R |  |
-| 40214 | 213 (0xD5) | Present Motor PWM | Motor Input PWM | R |  |
-| 40215 | 214 (0xD6) | Present Voltage | Present Voltage Value | R |  |
-| 40216 | 215 (0xD7) | Moving | Motor Operating Status | R |  |
-| 40218 | 217 (0xD9) | Present Overload Value |  | R |  |
-| 40221 | 220 (0xDC) | Action Enable | Action Feature On/Off | RW |  |
-| 40231 | 230 (0xE6) | Reset | Parameter Reset | W |  |
-| 40232 | 231 (0xE7) | Restart | System Restart | W |  |
-| 40241 | 240 (0xF0) | Indirect Data 0 | Indirect address data 0 value |  |  |
-| 40242 | 241 (0xF1) | Indirect  Data 1 | Indirect address 1 데이터 값 |  |  |
-| 40243 | 242 (0xF2) | Indirect Data 2 | Indirect address 2 데이터 값 |  |  |
-| 40244 | 243 (0xF3) | Indirect  Data 3 | Indirect address 3 데이터 값 |  |  |
-| 40245 | 244 (0xF4) | Indirect Data 4 | Indirect address 4 데이터 값 |  |  |
-| 40246 | 245 (0xF5) | Indirect  Data 5 | Indirect address 5 데이터 값 |  |  |
-| 40247 | 246 (0xF6) | Indirect  Data 6 | Indirect address 6 데이터 값 |  |  |
-| 40248 | 247 (0xF7) | Indirect Data 7 | Indirect address 7 데이터 값 |  |  |
-| 40249 | 248 (0xF8) | Indirect Data 8 | Indirect address 8 데이터 값 |  |  |
-| 40250 | 249 (0xF9) | Indirect Data 9 | Indirect address data 9 value |  |  |
+| Register Number | Address    | Name                   | Description                  | Access | Default       |     |
+| :-------------- | :--------- | :--------------------- | :--------------------------- | :----- | :------------ | --- |
+| 40201           | 200 (0xC8) | Force On/Off           | Motor Power On/Off           | RW     | 1(0x01)       |     |
+| 40202           | 201 (0xC9) | Actuator Pause         | Motor Pause                  | RW     | 0(0x00)       |     |
+| 40203           | 202 (0xCA) | Actuator Stop          | Motor Stop                   | RW     | 0(0x00)       |     |
+| 40204           | 203 (0xCB) | LED Color              | LED On/Off                   | RW     | 0(0x00)       |     |
+| 40205           | 204 (0xCC) | Hardware Error         | Hardware Error               | R      | 0(0x00)       |     |
+| 40206           | 205 (0xCD) | Goal Position          | Goal Position Value          | RW     |               |     |
+| 40209           | 208 (0xD0) | Goal Speed             | Goal Speed Value             | RW     | Speed Limit   |     |
+| 40210           | 209 (0xD1) | Goal Current           | Max Current Value            | RW     | Current Limit |     |
+| 40211           | 210 (0xD2) | Present Position       | Present Position Value       | R      |               |     |
+| 40212           | 211 (0xD3) | Present Current        | Present Current Value        | R      |               |     |
+| 40214           | 213 (0xD5) | Present Motor PWM      | Motor Input PWM              | R      |               |     |
+| 40215           | 214 (0xD6) | Present Voltage        | Present Voltage Value        | R      |               |     |
+| 40216           | 215 (0xD7) | Moving                 | Motor Operating Status       | R      |               |     |
+| 40218           | 217 (0xD9) | Present Overload Value | Present Overload Value       | R      |               |     |
+| 40221           | 220 (0xDC) | Action Enable          | Action Feature On/Off        | RW     |               |     |
+| 40231           | 230 (0xE6) | Reset                  | Parameter Reset              | W      |               |     |
+| 40232           | 231 (0xE7) | Restart                | System Restart               | W      |               |     |
+| 40241           | 240 (0xF0) | Indirect Data 0        | Data for Indirect address  0 |        |               |     |
+| 40242           | 241 (0xF1) | Indirect  Data 1       | Data for Indirect address  1 |        |               |     |
+| 40243           | 242 (0xF2) | Indirect Data 2        | Data for Indirect address  2 |        |               |     |
+| 40244           | 243 (0xF3) | Indirect  Data 3       | Data for Indirect address  3 |        |               |     |
+| 40245           | 244 (0xF4) | Indirect Data 4        | Data for Indirect address  4 |        |               |     |
+| 40246           | 245 (0xF5) | Indirect  Data 5       | Data for Indirect address  5 |        |               |     |
+| 40247           | 246 (0xF6) | Indirect  Data 6       | Data for Indirect address  6 |        |               |     |
+| 40248           | 247 (0xF7) | Indirect Data 7        | Data for Indirect address  7 |        |               |     |
+| 40249           | 248 (0xF8) | Indirect Data 8        | Data for Indirect address  8 |        |               |     |
+| 40250           | 249 (0xF9) | Indirect Data 9        | Data for Indirect address  9 |        |               |     |
 ## 2.4 Control Table Discription
 ### 2.4.1  Model Serial Number
-Production lot number to identify the mightyZAP Model.
+Production lot number to identify the mightyZAP Model.
 ### 2.4.2 Firmware Version  
 The firmware version of the product using semantic versioning.
 **Semantic Versioning**
@@ -240,258 +245,304 @@ A unique number to identify respective mightyZAP on the communication line. migh
 Communication speed between mightyZAP and user's controller.
 To apply the set value, mightyZAP must be restarted.
 
-| Value       | Speed (bps)      |
-|:----------|:-----------|
-|   8(0x08) | 115200  |
-|  16(0x10) |  57600 (default) |
-|  32(0x20) |  38400  |
-|  64(0x40) |  19200  |
-| 128(0x80) |   9600 bps |  
+| Value     | Speed (bps)     |
+| :-------- | :-------------- |
+| 8(0x08)   | 115200          |
+| 16(0x10)  | 57600 (default) |
+| 32(0x20)  | 38400           |
+| 64(0x40)  | 19200           |
+| 128(0x80) | 9600 bps        |
 ### 2.4.5 Alarm LED
 When a Hardware Error occurs, the LED is activated if the corresponding Alarm LED bit is set. (1 = active / 0 = inactive)
 
-| Bit | Name | LED Indicate | Description |
-| ---- | ---- | ---- | ---- |
-| Bit 6 | Overload Error | RED Blinking | When load occurs for more than a certain period of time (more than duty rate 50%) |
-| Bit 0 | Input Voltage Error | RED Light steady | When the applied voltage is outside the operating voltage range (7~13V) |
+| Bit   | Name                | LED Indicate     | Description                                                                       |
+| ----- | ------------------- | ---------------- | --------------------------------------------------------------------------------- |
+| Bit 6 | Overload Error      | RED Blinking     | When load occurs for more than a certain period of time (more than duty rate 50%) |
+| Bit 0 | Input Voltage Error | RED Light steady | When the applied voltage is outside the operating voltage range (8~13V)           |
 All alarms will disappear when system is restarted.
 However, in the case of a low Input Voltage LED Alarm, the LED turns off when the cause is resolved.
 > [!note] NOTE   
->For more detailed info, please refer to  [[#2.4.22 Hardware Error]]. 
+>For more detailed info, please refer to  [[#2.4.24 Hardware Error]]. 
 
 ### 2.4.6 Alarm Shutdown
 When a Hardware Error occurs, the motor is shut down if the corresponding Alarm Shutdown bit is set. (1 = active / 0 = inactive)
 
-| Bit | Name | Description |
-| ---- | ---- | ---- |
-| Bit 6 | Overload Error | When load occurs for more than a certain period of time (more than duty rate 50%) |
-| Bit 0 | Input Voltage Error | When the applied voltage is outside the operating voltage range (7~13V) |
-Shutdown은 Hardware Error가 발생할 경우, 모터를 Force Off 상태 즉, 모터에 전원 공급을 중단합니다. Shutdown애 의해 설정된 Force Off는 시스템 재시작으로만 해지가 되며, [[#2.4.18 Force On/Off|Force ON]] 명령 또는 [[#2.4.23 Goal Position|Goal Position]] 명령에도 Force Off 명령을 수행합니다.
-하지만 저전압 Input Voltage의 경우 정상 전압으로 될 경우 Force On 됩니다.
+| Bit   | Name                | Description                                                                       |
+| ----- | ------------------- | --------------------------------------------------------------------------------- |
+| Bit 6 | Overload Error      | When load occurs for more than a certain period of time (more than duty rate 50%) |
+| Bit 0 | Input Voltage Error | When the applied voltage is outside the operating voltage range (8~13V)           |
+Shutdown puts the motor in Force-Off state, that is, stops supplying power to the motor, when a hardware error occurs.  The Force Off set by Shutdown can only be canceled by system restart.
+However, in case of Shutdown due to the Low input voltage, Force On will occur again when the voltage returns to normal. All mightyZAP actuators are delivered with the enabled Shutdown feature. It can be disabled by the user, however, for safety reasons, disabling is not recommended.
 > [!note] NOTE   
->Hardware Error에 대한 자세한 설명은 [[#2.4.22 Hardware Error]]를 참조하여 주시기 바랍니다.
+>
+>For detailed info for the Hardware Error, please refer to  [[#2.4.24 Hardware Error]]
 
-### 2.4.6 Short/Long Stroke Limit  
-| Parameter | Range | Description | Unit |
-| ---- | ---- | ---- | ---- |
-| Short Stroke Limit | 0~10,000 | Goal Position Lower Limit |  |
-| Long Stroke Limit | 0~10,000 | Goal Position Upper Limit |  |
+### 2.4.7 Short / Long Stroke Limit  
+
+| Parameter          | Range    | Description               | Unit |
+| ------------------ | -------- | ------------------------- | ---- |
+| Short Stroke Limit | 0~10,000 | Goal Position Lower Limit |      |
+| Long Stroke Limit  | 0~10,000 | Goal Position Upper Limit |      |
 The Short/Long Stroke Limit is to limit the upper (long) and lower (short) limits of the Goal Position range between 0 and 10,000, respectively.  
 Therefore, the Goal Position value cannot be smaller than the Short Stroke Limit(A) value and cannot be larger than the Long Stroke Limit(B) value.
 If the Goal Position value is smaller than the Short Stroke Limit value or larger than the Long Stroke Limit value, it is replaced with each Stroke Limit value.
+Although it is not a parameter that must be used, but users are able to prevent unexpected accident due to user's mistakes by setting the stroke limit. 
 ![[Actuator/Mini 17Lf/img/StrokeLImit.png|600]]   
 > [!note] NOTE   
->mightyZAP이 사용자의 Application에 설치 되어 동작하기 전에 , 실제 가동 가능한 범위를 측정하여 Short Stroke Limit/Long Stroke Limit를 설정하신 후 사용하는 것을 추천 드립니다.  
->설치된 기구물의 한계 밖의 위치 이동값을 입력할 경우 mightyZAP 또는 사용자의 Application 이 파손되거나, Overload 보호 기능이 동작 될 수 있습니다.   
->자세한 내용은 [[#3. 유의 사항]]을 확안하여 주시기 바랍니다.
+>Before installing mightyZAP in user's application, it is recommended to measure the actual mechanical operating range, then set the Short Stroke Limit or Long Stroke Limit accordingly for added safety.
+If actuator operates beyond application's mechanical operable limit, mightyZAP or the user's application may be damaged, or the overload protection feature may be triggered. Please check [[#3. Precautions]] for more details.
 
-### 2.4.6 Start Compliance Margin  
-  Start Compliance Margin은 mightyZAP이 Goal Position 위치 값으로 이동 하기 위한  최소 위치 편차(마진) 값 입니다.  
+### 2.4.8 Start Compliance Margin  
   
-| value | Description |
-| ---- | ---- |
-| 0 ~ 255 | Goal Position 최소 입력 하한값 |
+  >[!TIP] Compliance Margin?
+Compliance Margin is the minimum value required to start or complete the actuation through a Goal Position command. In general, it is common to start or complete a motion using a single Compliance Margin value, but we designed mightyZAP to set both Start and End Compliance Margin respectively at the start and completion of motion, ensuring stable operation while maintaining better positional repeatability. 
+In general, when adjusting the Compliance Margin, it is usually made larger than the default value to ensure stable operation even in unstable environments where external pressure or noise occurs, even if some precision is sacrificed. Conversely, if the Compliance Margin is used with a smaller value than the default value, precision may improve but operation stability may be impaired, so special caution is required.
 
-현재 위치(Present Position)값이 Goal Position 값보다 마진 값 이상 크거나 작을 경우, 위치 오차를 정정하기 위해 모터를 제어합니다.
-  
-**Start Compliance Margin은 다음의 2가지의 경우에 적용이 됩니다.**
-- 현재 위치에서 다른 위치로 이동하기 위해 Goal Postion 값을 변경하는 경우
-- 정지 위치에서 외력에 의해 위치가 변화가 생긴 경우  
-    (사용자는 Goal Position을 변경하지 않았으나 Present Position이 바뀐 경우입니다.  일반적으로 외력에 의한 밀림이나 내부 유격 등의 의한 현재 위치의 변동이 생길 경우 입니다)
- 
-<font color="#4f81bd">예시 1. Start Compliance Margin 보다 작게  Goal Position을 변경한 경우</font>  
-- Start Compliance Margin : 20
-- Present Positon  : 1000
-- Goal Position : 1000 -> 1010으로 변경할 경우
-- **결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다**
-   <font color="#4f81bd">예시 2. Start Compliance Margin 보다 크게  Goal Position을 변경한 경우</font>  
-- Start Compliance Margin : 20
-- Present Positon  : 1000
-- Goal Position : 1000 -> 950으로 변경할 경우
-- **결과 : 위치 편차가 Margin보다 커 모터가 동작되어 Present Position 값이 950으로 변경**
- <font color="#4f81bd">예시 3. 외부 힘에 의해 위치 편차가 발생한 경우</font>  
-- Start Compliance Margin : 20
-- Goal Position : 1000
-- Present Positon  : 1000 -> 1010으로 변경된 경우
-- **결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다**
-      <font color="#4f81bd">예시 4. 외부 힘에 의해 위치값이 크게 변경된 경우</font>  
-- Start Compliance Margin : 20
-- Goal Positon  : 1000
-- Present Position : 1000 -> 950으로 변경할 경우
-- **결과 : 위치 편차가 Margin보다 커 모터가 동작되어 Present Position 값이 1000으로 변경
+Start Compliance Margin is the minimum position deviation (margin) value for mightyZAP to move to the Goal Position position value.
 
-위의 예와 같이 Start Compliacne  Margin을 크게 설정할 경우, 외부 변화에 둔감하게 동작하여 위치 정밀도는 떨어질 수 있으나, 사용자가 제어하지(의도하지) 않은 모터의 잦은 동작을 막아 동작 안전성 및 내구성에 좋습니다.  
->[!warning] Warning  
->default로 설정된 값은 최소한의 안전성을 위해 선정된 값으로 default 값 아래로 낮추는 것은 추천 드리지 않습니다.  
+| value   | Description                                       |
+| ------- | ------------------------------------------------- |
+| 0 ~ 255 | Minimum position deviation (margin) value to move |
 
-### 2.4.7 End Compliance Margin  
-End Compliance Margin은 mightyZAP이 정지하기 위한 최대 위치 편차 값입니다.  
+<font size="5" color="#4f81bd"><b>Start Compliance Margin applies in the following two cases :</b></font>
+1. When changing the Goal Position value to move from the present position to another position.  
+    The minimum margin value for mightyZAP to start position movement. The actuator starts operating only when the difference between the present position value and the Goal Position value is greater than the (+) Margin value or smaller than the (-) Margin value.
+>[!exam] Ex. 1  
+>**When Goal Position is changed to be smaller than Start Compliance Margin**
+>- Start Compliance Margin : 20
+>- Present Positon  : 1000
+>- Goal Position : 1000 -> When changing to 1010
+>- <font color="#4f81bd">Result : The position deviation is smaller than the Margin value, so no position change occurs.</font>  
 
-| value | 동작 상태 |
-| ---- | ---- |
-| 0 ~ 255 | 정지하기 위한 최대 위치 편차 값 |
+>[!exam] Ex. 2 
+>**When the Goal Position is changed to be greater than the Start Compliance Margin** 
+>- Start Compliance Margin : 20
+>- Present Positon  : 1000
+>- Goal Position : 1000 -> When changing to 950
+>- <font color="#4f81bd">Result : Since the position deviation is greater than Margin value, the motor operates and the Present Position value changes to 950.</font>
 
-mightyZAP이 위치 편차를 줄이기 위해 동작 중일 때 적용이 되며, Present Position과 Gaol Position의 편차가 End Compliance Margin 보다 작을 경우 mightyZAP이 정지 합니다.
-End Compliance Margin은 작을 수록 위치 정밀도가 높아지나, 일정 값 이하로 줄일 경우 그 효과가 미미해 집니다.  
+2. When the position changes due to external force from the static position  
+    If the difference (absolute value) between the final Goal Position value and the present position value changes greater than the Margin value due to physical external pressure or electrical noise, mightyZAP operates to correct the position.
+    
+    Therefore, the larger the Start Compliance Margin value, the more stable operation will be made even in an environment where external pressure, electrical noise, or mechanical clearance increases, but the sensitivity to accurately drive to the desired position will be lower.
 
-**기본 개념**
-End Compliance Margin에 대한 기본적인 개념은 다음과 같습니다.
-진행 방향에서의 End Complilance Marign 위치에서 mightyZAP은 전기적 브레이크 명령을 내립니다. 이때 mightyZAP은 전기적 인 브레이크와 내부적인 마찰과 관성등에 의해 일정 거리를 이동한 후 정지하게 됩니다.  이때 이동한 정지 거리가 End Compliance Margin의 값과 동일하게 하는것이 가장 좋습니다.  
+>[!exam] Ex. 1  
+>**When position deviation occurs due to external force**
+>- Start Compliance Margin : 20
+>- Goal Position : 1000
+>- Present Positon  : 1000 -> when changing to 1010
+>- <font color="#4f81bd">Result : The position deviation is smaller than the Margin value, so no position change occurs.</font> 
+
+>[!exam] Ex. 2 
+>**When the position value changes significantly due to external force** 
+>- Start Compliance Margin : 20
+>- Goal Positon  : 1000
+>- Present Position : 1000 -> when changing to 950
+>- <font color="#4f81bd">Result : Since the position deviation is greater than Margin value, the motor operates and the Present Position value changes to 1000 </font>
+
+>[!tip] TIP
+>If the Start Compliance Margin is set larger than default value, it operates insensitive to external factors, which is good for operation safety and durability, but positioning accuracy may decrease. Conversely, if set to less than the default value, precision increases, but the sensitivity of the motor increases, which is not good for durability and stability.  
+
+>[!Caution] Caution
+> - Start Compliance Margin must be greater than End Compliance Margin all the time. If the setting is low, malfunction may occur.
+>- The default value is selected for minimum stability, so it is NOT recommended to lower it below the default value.
+
+### 2.4.9 End Compliance Margin  
+End Compliance Margin is the maximum position deviation value for mightyZAP to stop at a specific position.  
+ >[!TIP] Compliance Margin?
+Compliance Margin is the minimum value required to start or complete the actuation through a Goal Position command. In general, it is common to start or complete a motion using a single Compliance Margin value, but we designed mightyZAP to set both Start and End Compliance Margin respectively at the start and completion of motion, ensuring stable operation while maintaining better positional repeatability. 
+In general, when adjusting the Compliance Margin, it is usually made larger than the default value to ensure stable operation even in unstable environments where external pressure or noise occurs, even if some precision is sacrificed. Conversely, if the Compliance Margin is used with a smaller value than the default value, precision may improve but operation stability may be impaired, so special caution is required.
+
+| value   | Description                                       |
+| ------- | ------------------------------------------------- |
+| 0 ~ 255 | Maximum position deviation (margin) value to stop |
+
+To be applied when mightyZAP is operating to reduce position deviation. If the deviation between Present Position and Goal Position is less than End Compliance Margin, mightyZAP stops.
+
+For example, if the Goal position command is given to mightyZAP to move to the position value 1000, assuming that it cannot physically stop at the exact position value 1000 due to mechanical errors, circuit errors, acceleration, etc., mighyZAP stops within a certain error range(End Compliance Margin) acknowledging that the command has been executed. 
+
+>[!exam] Ex. 1  
+>**In case that Goal Position is 1000,**
+>- End Compliance Margin : 8
+>- Goal Position : 1000
+>- Present Positon  : let's say 992 
+>- <font color="#4f81bd">Result : Consider this as the end of the position and apply an electrical break to the motor. However, it may move additionally due to inertia depending on the load.</font> 
+>-  Present Position after electrical break : 998
+
+**Basic Concepts**
+The basic concept of End Compliance Margin is as follows.
+At the End Compliance Margin position in the direction of travel, mightyZAP automatically issues a set electrical brake command. At this time, mightyZAP stops after moving a certain distance due to electric brakes, internal friction, and inertia. 
+If the distance traveled after the electric brake is equal to the value of End Compliance Margin, it will be closest to the given Goal position.
 ![[EndMarginBasic.gif|700]]  
-**End Compliance 줄이기**    
-부하가 적은 환경에서는 반복 정밀도를 높이기 위해 End compliance Margin을 줄이는 것이 효과적일 수 있습니다. 그렇지만 관성에 의해 밀리는 거리가 End Compliance Margin보다 길 경우 목표 위치를 벗어나 정지하게 되거나 그 이상의 거리를 이동한 후 정지 할 수 있습니다.
+**Reducing End Compliance Margin**    
+Under low-load condition, it may be effective to reduce the End compliance Margin to increase repeatability. However, if the sliding distance due to inertia is longer than the End Compliance Margin, it may stop beyond the Goal position or may stop after moving a longer distance.
   ![[EnmMarginDec.gif|700]]
-**Start Compliance Margin과 End Compliance Margin과의 관계**   
-Start Compliance Margin과 End Compliance Margin과의 거리가 가깝거나 같을 경우 문제가 발생할 수 있습니다.   
-<font color="#4f81bd">상황 1.  Start Margin이 End Margin이 모두 작은 경우</font>
-아래의 이미지와 같이 Start Margin이 End Margin이 모두 작은 경우 부하가 크거나 관성이 있는 환경에서는 반대편  Start Margin까지 벗어나게 되는 경우가 발생하여 Over shoot 가 발생하게 됩니다.  
+**Correlation between Start Compliance Margin and End Compliance Margin**   
+Problems may occur if the distance between Start Compliance Margin and End Compliance Margin is close or the same.  
+<font color="#4f81bd">Ex. 1.  When both Start Margin and End Margin are small</font>
+As shown in the image below, if both the Start Margin and End Margin are small, in an environment with a large load or large inertia, overshoot may occur beyond the Start Margin on the other side.
 ![[StartEndMargin.gif|700]]  
-<font color="#4f81bd">상황 2.  Start Margin 과 End Margin이 같은 경우</font>
-Start Margin 과 End Margin 거의 같고 부하가 적고 관성이 적은 제품을 제어할 경우 위치 오차와 노이즈로 아래와 같이 정상적이 정지를 못하고 진동할 수 있습니다.  
+<font color="#4f81bd">Ex 2.  When Start Margin equals to End Margin</font>
+When controlling an object with a small load and low inertia with the Start Margin and End Margin being almost the same, actuator may not stop normally and vibrate due to the position error and noise as shown below.
 ![[StartEndMargin2.gif|700]]
+>[!tip] TIP  
+>The smaller the End Compliance Margin, the higher the positioning accuracy, but if it is reduced below a certain value, the effect becomes insignificant.
 
-### 2.4.8 Acceleration/Deceration  
-| Parameter | Description | range | Unit |
-| ---- | ---- | ---- | ---- |
-| Acceleration | 모터 가속 시간 | 0~1000 | msec |
-| Deceleration | 모터 감속 시간 | 0~1000 | msec |
+>[!Caution] CAUTION  
+> Start Compliance Margin must be greater than End Compliance Margin all the time. Otherwise, malfunction may occur.
 
-각각은 mightyZAP의 가속과 감속을 제어하는 Parameter 입니다.  
-가감속 제어는 모터의 진동, 소음 부하 등을 줄이기 위한 제어 방법입니다.  Parameter에 입력된 값은 가감속 제어를 하는 기간을 의미하며 부하에 따라 제어 시간이 늘어날 수 있으며 절대적인 값은 아닙니다.  
-너무 긴 시간 동안 가감속을 할 경우 제어 값이 충분하지 않아 정지한 것처럼 보일 수도 있습니다. 반대로 가속 시간이 짧을 경우 초기 동작 시 모터 또 제어 대상에 충격을 줄 수 있으며, 모터 내구성에 좋지 않습니다.  감속 시간이 짧을 경우 감속 시간이 거의 없이 최대 속도에서 정지하여 관성에 의해 이동하는 거리가 늘어나게 됩니다.  
-일반적으로 감속 시간이 지나치게 짧을 경우 Overshoot가 잘 발생할 수 있습니다.   
+>[!Caution] CAUTION  
+>The default compliance margin value is selected for minimum safety, so it is not recommended to lower it below the default value.
+
+### 2.4.10 Acceleration/Deceration  
+| Parameter    | Description             | range  | Unit |
+| ------------ | ----------------------- | ------ | ---- |
+| Acceleration | Motor acceleration time | 0~1000 | msec |
+| Deceleration | Motor deceleration time | 0~1000 | msec |
+Each parameter controls the acceleration and deceleration of mightyZAP. 
+This is to reduce motor vibration by controlling the acceleration and deceleration at the start and end of operation to adjust the smoothness of the movement. The value entered in the parameter refers to the acceleration/deceleration control time. The control time may increase depending on the load and is not an absolute value.
+If you accelerate or decelerate for too long, the control value may not be sufficient and it may appear to have stopped. Conversely, if the acceleration time is short, it may shock the motor or control object during initial operation and is not good for motor durability. If the deceleration time is short, actuator stops at maximum speed with almost no deceleration time, which increases the distance traveled due to inertia and may cause overshoot.
 
 ![[AccDecGraph.png]]
 
-### 2.4.9 Min/Max Position Calibration  
-| Parameter | Description | Range | Unit |
-| ---- | ---- | ---- | ---- |
-| Min Position Calibration | Goal Position 최소 위치 조정 | 0~1000 |  |
-| Max Position Calibration | Goal Position 최대 위치 조정 | 0~1000 |  |
+### 2.4.11 Min/Max Position Calibration  
+| Parameter                | Description                                  | Range  | Unit |
+| ------------------------ | -------------------------------------------- | ------ | ---- |
+| Min Position Calibration | Minimum position adjustment of Goal Position | 0~1000 |      |
+| Max Position Calibration | Maximum position adjustment of Goal Position | 0~1000 |      |
+Min/Max Position Calibration Parameter is to adjust the position value of the rod at the minimum/maximum value of Goal Position.
 
-Min/Max Position Calibration Parameter는 mightyZAP의 Goal Position이 최소/최대 값일 때의 Rod의 위치 값을 조절하는 Parameter이다.  
-
-이해를 위해 아래의 이미지를 참조하여 주시기 바랍니다.  
+Please refer to the below for more info. 
 ![[minmaxPostion.png]]
 - Min Poisition Calibration
-	  Min Position Calibration 값을 늘릴 경우 Goal Position '0'일 때의 Min Position 위치가  늘어나게 되며 전체 동작 Stroke가 줄어들게 됩니다.
-	  Min Position Calibration 값을 줄일 경우 Goal Position '0'일 때의 Min Position 위치가 줄어들게 되며 전체 동작 stroke가 늘어나게 됩니다. 하지만 비선형 구간이 늘어나게 됩니다.
+	 Min Position Calibration is a parameter that adjusts the starting position value of the rod. If the Min Position Calibration value is increased, the Min Position at Goal Position value '0' will also increase (extract) and the overall motion stroke will also be shortened.
+	 If the Min Position Calibration value is decreased, the Min Position at Goal Position value '0' will also decrease (retract) and the overall motion stroke will be lengthened. But, in this case, the motion linearity of the extended motion section is not good.
 - Max Position Calibration
-	  Max Position Calibration 값을 늘릴 경우 Goal Position 최대 값일 때의 Max Position 위치가 줄어들게 되며 전체 동작 Stroke가 줄어들게 됩니다.   
-	  Max Position Calibration 값을 줄일 경우 Goal Position 최대 값일 때의 Max Position 위치가 줄어들게 되며 전체 동작 stroke가 늘어나게 됩니다. 하지만 비선형 구간이 늘어나게 됩니다.
+	 Max Position Calibration is a parameter that adjusts the end position value of the rod.  If the Max Position Calibration value is increased, the Max Position at Goal Position value '10000' will decrease (retract) and the overall motion stroke will be shortened.
+	  If the Max Position Calibration value is decreased, the Max Position position at the maximum Goal Position value will increase and the overall motion stroke will also increase. However, the nonlinear section at both ends increases.
+
   ![[minmaxCalibration.gif]]
-  
-### 2.4.10 Motor Operating Rate Limit  
-mightyZAP의 모터를 제어하기 위해 사용되는 PWM의 최대 값 설정 Parameter 입니다.
-설정 값을 200 이하로 설정한 경우, 모터가 동작하지 않을 수도 있습니다. Motor Operaing Rate를 변경하면 Stall Foce 와 Speed가 변경 됩니다.
-
-| value | Description |
-| ---- | ---- |
-| -1000 ~ 1000 | 모터에 공급하는 PWM 의 최대 값 설정 |
 >[!tip] TIP  
->본 가이드에서는 위치 제어 신호용 PWM과 구분하여 사용하기 위해 Motor Operating Rate 란 용어를 사용합니다.  
+>Normally, it is not necessory to adjust Min / Max position calibration parameters. It can be used if user wants to accurately match the starting / ending positions of multiple actuators of the same model. 
+
+
+### 2.4.12 Motor Operating Rate Limit  
+This parameter sets the maximum value of the motor PWM (operating rate) used to control mightyZAP's motor. If the setting value is set to 200 or less, the motor may not operate. When you change the Motor Operating Rate, Stall Force and Speed ​​also change.
+
+| value        | Description                                                  |
+| ------------ | ------------------------------------------------------------ |
+| -1000 ~ 1000 | Setting the maximum value of motor PWM supplied to the motor |
+>[!tip] TIP  
+> The term “Motor PWM” in Motor Operating Rate is a different concept from the PWM for position control signals in our products.
  
-### 2.4.11 Speed Limit  
-mightyZAP의 최대 이동 속도 제한 값입니다.
+### 2.4.13 Speed Limit  
+The maximum speed limit value for mightyZAP.  As a non-volatile parameter, it is saved in memory of actuator even when the power is turned off.  The Goal Speed, a volatile parameter, has the same function, but is not stored in memory.  Since there is a limit to the number of saves, please use the Goal Speed ​​parameter for frequent speed control.
 
-| value | Description | Note |
-| ---- | ---- | ---- |
-| 0 ~ 1000 | mightyZAP 최대 속도 제한 설정 |  |
-
-Speed Limit를 낮게 설정하여도 최대 Force에는 영향을 주지 않지만, 최대 전류까지 도달하는 시간은 다를 수 있습니다. 속도의 값이 낮을 수록 최대 전류까지 도달하는 시간이 길어집니다.  
-Speed Limit를 변경할 경우, Goal Speed도 같이 변경됩니다. 또한 전원 인가 시 Speed Limit의 값을 Goal Speed에 적용합니다.  
->[!tip] TIP -  부하에 따른 Speed Setting   
->부하에 따라 최대 속도가 변경 될 수 있습니다. 이때  Speed Limit/Goal Speed 값도 같이 변경해주면 더욱 안정적으로 제어가 됩니다.
+| value    | Description              | Note         |
+| -------- | ------------------------ | ------------ |
+| 0 ~ 1000 | Max speed limit setting  | Non-volatile |
+Setting the Speed ​​Limit low does not affect the maximum force, but the time to reach the maximum current may vary. The lower the speed value, the longer it takes to reach maximum current.
+If the Speed ​​Limit (non-volatile) is changed, the Goal Speed (volatile) ​​also changes.  Additionally, when power is turned on, the Speed ​​Limit value is applied to Goal Speed.  
+>[!tip] TIP -  Speed ​​setting according to the load 
+>Maximum speed may change depending on load. At this time, the control can be more stable if user also changes the Speed ​​Limit/Goal Speed ​​values.
 
 >[!tip] TIP   
->Goal Speed를 변경하여도 Speed Limit는 변하지 않습니다.  
-### 2.4.12 Current Limit  
-모터 가동 중 최대 전류 값을 제한 합니다. 해당 기능을 이용하여 mightyZAP의 최대 Force를 제한 할 수 있습니다.    
+>Even if the Goal Speed is changed, the Speed ​​Limit does not change.
 
-| value | Description | Unit | Note |
-| ---- | ---- | ---- | ---- |
-| 0 ~1600 | mightyZAP 최대 속도 제한 설정 | mA | default : 800  <br>오차 범위 +/- 15% |
+### 2.4.14 Current Limit  
+Limits the maximum Current value during motor operation. User is able to use this function to limit the maximum force of mightyZAP. (Default : 800mA). The Goal Current, a volatile parameter, has the same function, but is not stored in memory.  Since there is a limit to the number of saves, please use the Goal Current ​​parameter for frequent Current control.
 
-Current Limit는 비 휘발성 Parameter로 전원이 끊어져도 변경된 Data 를 유지합니다. Current Limit 값이 변경되면 Goal Current 값도 같이 변경됩니다.   
-Current Limit를 높게 설정할수록 과부하 상황에서 모터가 낼 수 있는 최대 force도 올라가지만, 모터 수명 단축의 원인이 될 수도 있습니다.  
-<font color="#4f81bd">제품마다 내부 기구 저항 편차에 따라 저전류(200mA 이하) 설정에서는 mightyZAP의 동작이 불규칙하거나 움직이지 않을 수도 있습니다. 충분한 테스트 후 전류 설정을 하여 주시기 바랍니다.</font>
->[!tip] TIP - Speed 오차 누적으로 인한 떠는 현상  
->Current Limit 값을 낮출 경우  Force 뿐만 아니라 Speed도 줄어 들게 됩니다. 이때 Speed Limit/Goal Speed 값을 같이 낮춰 주지 않을 경우 속도 오차 값 누적으로 최종 위치에서 바운딩 현상이 나타날 수 있습니다.  
->바운딩 또는 떠는 현상이 나타날 경우 Speed Limit/Goal Speed를 줄여 주시면 됩니다.
+| value   | Description               | Unit | Note                                   |
+| ------- | ------------------------- | ---- | -------------------------------------- |
+| 0 ~1600 | Set maximum current limit | mA   | default : 800  <br>Error range +/- 15% |
+Current Limit is a non-volatile parameter that maintains changed data even when the power is turned off. When the Current Limit value changes, the Goal Current value also changes.
+The higher the Current Limit is set, the higher the maximum force that the motor can produce in an overload situation, but it may also cause a shortening of the motor's lifespan. 
+<font color="#4f81bd">Depending on the variation in internal mechanical resistance of each actuator, mightyZAP may operate irregularly or may not move at too-low current settings (200 mA or less). Therefore, please set the current after sufficient testing.</font>
+>[!tip] TIP - Tremors due to accumulation of speed errors
+>If the Current Limit value is lowered, not only Force but also Speed ​​will also decrease. At this time, if the Speed ​​Limit/Goal Speed ​​values ​​are not lowered at the same time, a tremor or vibration phenomenon may appear at the final position due to the accumulation of speed error values.
+>If this phenomenon occurs, reduce Speed ​​Limit/Goal Speed.
 
->[!tip] TIP - Current Limit/Goal Current 에 따른 Force와 무 부하 Speed  
->Current Limit/Goal current 값에 대한 동작 특성은  모터 성능 곡선 및 Datasheet를 참조하여 주시기 바랍니다.
+>[!tip] TIP - Force and no-load speed according to Current Limit/Goal Current
+>Please refer to the motor performance curve and datasheet for operating characteristics regarding Current Limit/Goal current values.
 
-### 2.4.13 Current PI Control  
-| Parameter | Description | Range | Unit |
-| ---- | ---- | ---- | ---- |
-| Current P Gain |  Current PID 비례 제어 | 0 ~ 255 |  |
-| Current I Gain | Current PID 적분 제어 | 0 ~ 255 |  |
+>[!tip] TIP   
+>Even if the Goal Current is changed, the Current ​​Limit does not change.
 
-모터의 전류 제어를 위한 PID Gain값입니다. 
-정해진 값이 보다 큰 PI값을 적용할 경우 Goal Current 오차에 대해 거칠게 동작할 수 있습니다.   
-정해진 값보다 작은 PI값을 적용할 경우 Goal Current 오차에 부드럽게 동작하나 Goal Current 값 과의 오차가 크게 나타날 수 있습니다.
-> [!warning] WARNING   
->PID값을 변경하기 전에 [[#2.4.8 Acceleration/Deceration]]을 먼저 적용하고 테스트하여 주시기 바랍니다.  
->PID값을 수정하시기 전에 PID에 대한 충분히 숙지하신 후에 해당 값을 변경하여 주시기 바랍니다.  
+### 2.4.15 Current PI Control  
+| Parameter      | Description                     | Range   | Unit |
+| -------------- | ------------------------------- | ------- | ---- |
+| Current P Gain | Current PI Proportional control | 0 ~ 255 |      |
+| Current I Gain | Current PI Integral control     | 0 ~ 255 |      |
+This is the PI gain value for motor current control. Please note that PI control is a sensitive control area, so special caution is required.
+If a PI gain value is larger than the default value, rough operation may occur due to Goal Current error.
+If a PI gain value smaller than the specified value is applied, it operates smoothly against the Goal Current error, but the error with the Goal Current value may appear large.
+> [!warning] Warning  
+>Before changing the PID value, please apply and test [[#2.4.10 Acceleration/Deceration]] first.
+Before modifying the PID value, please familiarize yourself with the PID.
+When modifying the PID value, please test by adding or subtracting a small value from the default value.
 
-### 2.4.14 Speed PID Control  
-| Parameter | Description | Range | Unit |
-| ---- | ---- | ---- | ---- |
-| Speed P Gain | Speed PID 비례 제어 | 0 ~ 255 |  |
-| Speed I Gain | Speed PID 적분 제어 | 0 ~ 255 |  |
-| Speed D Gain | Speed PID 미분 제어 | 0 ~ 255 |  |
+### 2.4.16 Speed PID Control  
+| Parameter    | Description                    | Range   | Unit |
+| ------------ | ------------------------------ | ------- | ---- |
+| Speed P Gain | Speed PID Proportional control | 0 ~ 255 |      |
+| Speed I Gain | Speed PID Integral control     | 0 ~ 255 |      |
+| Speed D Gain | Speed PID Differential Control | 0 ~ 255 |      |
+This is the gain value of speed PID control.  The PID control is a sensitive area, so please study it in advance through other sources. If user enters a value larger than default Gain, it will react quickly to speed and position errors, reducing the time it takes to reach the target position and stop.
+However, if a gain value is too large, the motor may not be able to stop at the goal position due to rough operation against the errors, resulting in overshoot or excessive response, and the motor may vibrate.  Additionally, it reacts sensitively to external disturbances (such as external vibration), resulting in poor feedback response.
 
-속도 PID 제어의 Gain 값입니다.  PID 제어에 대한 자세한 설명은 다른 문서를 참조하여 주시기 바랍니다. Gain보다 큰 값을 넣을 경우 속도 및 위치 오차에 대해 빠르게 반응하여 목표한 위치에 도달하여 정지하는 데 가지의 시간이 줄어 들게 됩니다. 
-하지만, 너무 큰 Gain값을 적용할 경우  오차에 대해 거칠게 동작하여 Overshoot 도는 과도 응답 상태로 정해진 위치 값을 정지하지 못하고 모터가 진동할 수 있습니다.
-또한 외란에 민감하게 반응하여 목표 값 응답이 나빠지게 됩니다.
+Conversely, if the lower gain value than default value is applied, the time to reach the goal position may increase, but the motor operation may become smoother. However, if a gain value is too low, actuator may not be reached to the goal position.
+Therefore, when modifying the PID value, please test by adding or subtracting a small value from the default value.
 
-반대로 Gain값을 적게 적용할 경우 목표 위치까지 도달하는 시간이 증가 할 수 있지만, 모터의 동작이 부드러워 질 수 있습니다. 하지만 과도하게 적은 Gain 값은 목표 위치에 도달하지 못하게 할 수도 있습니다.
-PID 값을 수정하실 때는 기본 값에서 작은 값을 가 감하여 테스트 하시기 바랍니다.
+> [!warning] Warning  
+>Before changing the PID value, please apply and test [[#2.4.10 Acceleration/Deceration]] first.
+Before modifying the PID value, please familiarize yourself with the PID. 
+When modifying the PID value, please test by adding or subtracting a small value from the default value.
 
->[!warning] Warning  
-> PID값을 변경하기 전에 [[#2.4.8 Acceleration/Deceration]]을 먼저 적용하고 테스트하여 주시기 바랍니다.  
-> PID값을 수정하시기 전에 PID에 대한 충분히 숙지하신 후에 해당 값을 변경하여 주시기 바랍니다.  
 
->[!tip] [ 일반적인 PID값 제어 방법 ]  
+>[!tip] [ General PID value control method ]  
 >![[PID_Compensation_Animated.gif]]
- [참고 문헌]  [https://commons.wikimedia.org/wiki/File:PID_Compensation_Animated.gif](https://commons.wikimedia.org/wiki/File:PID_Compensation_Animated.gif) 
+ [Reference]  [https://commons.wikimedia.org/wiki/File:PID_Compensation_Animated.gif](https://commons.wikimedia.org/wiki/File:PID_Compensation_Animated.gif) 
 
-### 2.4.15 Indirect Address
-사용자는 해당 기능을 이용하여, 서로 떨어져 있는 여러 Parameter를 모아서 이용할 수 있습니다.   
+### 2.4.17 Indirect Address
+Using this function, users can collect and use multiple parameters that are separated from each other.  
 
-| Parameter | Description | Range | Unit |
-| ---- | ---- | ---- | ---- |
-| Indirect Address N | 사용자 간접 주소 지정 | 0 ~ 65535 |  |
+| Parameter          | Description              | Range     | Unit |
+| ------------------ | ------------------------ | --------- | ---- |
+| Indirect Address N | User indirect addressing | 0 ~ 65535 |      |
+Normally, when changing the data of parameters in separated addresses, each parameter must be communicated respectively and  in this case, communication time becomes longer.
+On the other hand, consecutive addresses improves communication efficiency allowing data to be applied in one communication packet. 
 
-통신으로 서로 떨어져 있는 Parameter를 각각 읽어 올 경우 통신 시간이 증가하게 됩니다. 이때 사용자에게 필요한 Parameter를 Indirect Address에 지정하면 해당 Indirect Address는 특정 주소와 동일한 기능을 가지게 됩니다.  
-예를 들어 Indirect Address 0에 '205'(Goal Position)을 쓰고, Indirect Data 0에 '5000'을 쓰면, mightyZAP이 '5000'의 값으로 이동을 합니다. 또한 Goal Position 값 또한 '5000'으로 변경된 것을 확인 할 수 있습니다.   
-Indirect Address에 특정 주소를 세팅하면, Indirect Data에 해당 주소와 동일한 Parameter 가 됩니다.    
+Therefore, Indirect Address and Indirect Data can be used to set parameters that are separated from each other as consecutive addresses to improve speed of communication. 
+- Consecutively set the parameters  in the Indirect address to be set to consecutive addresses.
+- Set a specific parameter address in the Indirect address and read or write data from the Indirect data.
+
+[Example]
+- Set the parameter which wants to use in the Indirect address by referring to the data map.  At this time, it is recommended to set the writing and reading parameters separately by grouping them. (See the picture below. Red line: for writing, blue line: for reading)
+- Once the Indirect Address setting is complete, in actual use, if user writes and reads the data in the Indirect Data parameter, user is able to obtain the same results as reading and writing the value of the Original Parameter Data.
 >[!tip] TIP  
->Total Manager를 통해 Indricet Address 설정을 쉽게 사용할 수 있습니다.   
->사용 빈도가 높은 Parameter는 Select Box에 Option으로 추가 하였으며, 등록되지 않은 주소의 경우 'User Input' Option을 선택 하신 Select Box 옆 Test Box에 직접 작성하여 저장하여 주시면 됩니다.   
+>Indirect Address setting can be done easily in Total Manager software. 
+>Frequently used parameters are added as options in the Select Box. For unregistered addresses, please write and save them directly in the Test Box next to the Select Box where you selected the 'User Input' Option.
 >![[indirectAddrss.gif]]
 
-### 2.4.16 Extended I/O Control  
-Extended I/O는 RS485 통신으로 제공하지 못하는 추가적인 기능을 제공하는 Port 입니다.  4개의 I/O Port를 제공하며 아래와 같은 기능을 제공합니다.   
+### 2.4.18 Extended I/O Control  
+The Extended I/O is the ports that provides additional functions that cannot be provided in RS485 communication. The 17Lf series actuator provides 4 x I/O ports with the following functions. 
 
-| IO PORT | Function |
-| ---- | ---- |
+| IO PORT   | Function                                                                            |
+| --------- | ----------------------------------------------------------------------------------- |
 | IO Port 1 | Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
 | IO Port 2 | Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
-| IO Port 3 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
-| IO Port 4 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
+| IO Port 3 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart                           |
+| IO Port 4 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart                           |
+The Extended I/O Control allows users to control it without programming using switches or the internal [[#2.4.19 Action Control|Action control]] function.
+Also, in case of using the output function among the extended I/O functions, the status of mightyZAP can be sent as a digital signal.
+The circuit configuration of Extended I/O is configured differently depending on each function and does not require external power.  To avoid problems with mightyZAP, user must connect wiring properly according to the circuit configuration specified in each function description.
 
-Extended I/O Control은 스위치 또는 내부 [[#4.17 Action Control|Action control]] 기능을 이용하여 사용자가 Programming 없이 제어가 가능합니다.
-또는 반이중 통신으로 불가능한  mightyZAP에서 control Board 에 먼저 데이터를 전송 할 수 있습니다.
-
-Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며 외부 전원이 필요하지 않습니다.  각 기능 설명에 명시된 회로 구성대로 연결해야 mightyZAP 에 문제가 발생하지 않습니다.  
 >[!note] NOTE  
-> 연결 Connector는 동봉된 Extenxded Wire를 사용하여 주시기 바랍니다.
+> Please use the enclosed Extended Wire for connection.
 
-> [!warning] Extended I/O 수정 방법  
-> 해당 값을 설정하기 위해서는 당사의 Manager Program을 사용하여 주시기 바랍니다.  
-> 변경된 사항을 적용하기 위해서는 시스템을 재 시작해야 합니다.
+> [!warning] How to modify Extended I/O  
+> Please use our Manager software to modify/set the value.
+Restart the system for the changes to take effect.
 > ![[extendio.gif]]  
 >
 
@@ -500,402 +551,394 @@ Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며
 ![[extende_io_pinmap.png|500]]
 
 <font size="5"> Function Description</font>
-- **Funtion Switch**   
-	IO Port 1 또는 2번을 Switch 기능으로 지정 시 나머지 IO Port도 자동으로 지정 됩니다.  해당 기능은 그림과 같이 회로를 구성하며, 각 버튼에 따라 Short stroke Limit/Long Stroke Limit 값으로 이동을 합니다.
+- **Switch**   
+	IO Ports 1 and 2 can be used as a Switch function.  The IO port#1 is for short stroke (retract) direction and the port#2 is for long stroke (extension) direction. When one port(between port# 1 and 2) is designated in the program, the remaining IO Ports are automatically designated. This function configures the circuit as shown in the picture below, and by pressing each button once, it moves all the way to the Short stroke Limit (IO Port1) / Long Stroke Limit (IO port2) values. If user presses the switch of the opposite direction before reaching the end of one direction, it immediately changes direction and operates until the end.
 	![[extended_io_switch.png|500]]
-- **Function JOG**  
-	IO Port 1 또는 2번을 Jog 기능으로 지정 시 나머지 IO Port도 작동으로 지정됩니다. 해당 기능은 그림과 같이 회로를 구성하며, 각 버튼을 누를 경우 Short stroke Limit/Long Stroke Limit  방향으로 모터가 동작 하다가 버튼을 놓았을 때 정지하게 됩니다.  
+- **JOG**  
+	IO Ports 1 and 2 can be used as a JOG function.  The IO port#1 is for short stroke (retract) direction and the port#2 is for long stroke (extension) direction. When one port(between port# 1 and 2) is designated in the program, the remaining IO Ports are automatically designated. This function configures the circuit as shown in the picture below and it operates in the direction of Short stroke Limit (IO Port1) or Long Stroke Limit (IO port2) only when each button is pressed, and stops when the button is released.
 	![[extended_io_switch.png|500]]
 - **Action Enable**    
-	Action Enable 기능 Action 기능을 사용할 때 사용됩니다. 
-	( 자세한 내용은 [[#4.17 Action Control]]을 참조하여 주시기 바랍니다. )  
+	Action Enable is for Action function.  The functions indicated by IO port N below can be specified in IO port#1~4.
+	( For detailed info for Action function, refer to  [[#2.4.19 Action Control]]. )  
 	![[extended_io_single_sw.png|500]]
 - **Action Next**    
-	Action Next 기능 Action 기능을 사용할 때 사용됩니다. 해당 I/O Pin에 스위치 입력이 들어와야 다음 Action 기능을 진행합니다.   
-	( 자세한 내용은 [[#4.17 Action Control]]을 참조하여 주시기 바랍니다. )  
+	Action Next is also for Action function. The next action function will proceed only when a switch input is received at the corresponding I/O Pin.   
+	( For detailed info for Action Next, refer to  [[#2.4.19 Action Control]]. )  
 	![[extended_io_single_sw.png|500]]
 - **Force Off**  
-	해당 기능은 입력 기능으로 force off 기능을 해당 I/O Port에 적용합니다. 선택한 I/O port에 스위치 회로를 연결하여 버튼을 누르면 Force On/Off toggle 기능을 수행합니다.   
+	Force Off is an input function that cuts off the power to the motor by applying the Force off function to the corresponding I/O port. Connect the switch circuit to the selected I/O port and press the button to perform the Force On/Off Toggle function. When executing the Force Off function, some mightyZAPs, which does not have a "mechanical self-lock" feature, may not be able to maintain its position depending on the installation direction and applied load.
 	![[extended_io_single_sw.png|500]]
-- **Function Stop**    
-	해당 기능은 입력 기능으로 Stop 기능을 해당 I/O Port에 적용합니다. 선택한 i/o port에 스위치 회로를 연결하여 버튼을 누르면 mightyZAP가 정지 됩니다.   
+- **Stop**   
+	This input function applies the Stop function to the corresponding I/O port, and the motor power is not cut off.  When users connects the switch circuit to the selected I/O Port and press the button, mightyZAP stops. This is a complete stop command, and the Goal Position is also to be changed to the current stopped position. After stopping, the Stop Parameter is to be automatically reset.
+		![[extended_io_single_sw.png|500]]
+- **Pause**   
+	This input function applies the Pause function to the corresponding I/O Port. Connect a switch circuit to the selected I/O Port and press the button to perform the Pause Toggle function.
+    This is a Pause command. If the Pause command is issued while moving, it stops at the current position and maintains the position. When the Pause command is canceled, it moves to the Goal Position value again. 
 	![[extended_io_single_sw.png|500]]
-- **Function Pause**   
-	해당 기능은 입력 기능으로 Pause 기능을 해당 I/O Port에 적용합니다. 선택한 i/o port에 스위치 회로를 연결하여 버튼을 누르면 Pause toggle 기능을 수행합니다.  
-	![[extended_io_single_sw.png|500]]
-- **Function Alarm Out**      
-	해당 기능은 출력 기능으로 Hardware Error 가 발생 시 'High' 신호를 내보냅니다.  
+- **Alarm Out**      
+	This output function sends out a 'High' signal when a hardware error occurs. 
 	![[extened_io_led.png|500]]  
 	![[extended_io_userboard.png|600]]
 - **Restart**    
-	해당 기능은 입력 기능으로 Restart 기능을 담당합니다.  Hardware Error 등의 문제로 mightyZAP이 정지한 경우 또는 시스템을 재 시작이 필요한 경우 해당 기능을 이용하여 외부에서 restart 기능을 사용할 수 있습니다.  
+	Input function for Restart. If mightyZAP stops due to a problem such as a hardware error or if the system needs to be restarted, user can use the restart function externally using this function.
 	![[extended_io_single_sw.png|500]]
-### 4.17 Action Control  
-Action 기능은 통신 및 외부 제어기 없이 mightyZAP을 제어하기 위한 방법으로 총 5개의 Action을 작성 할 수 있습니다.  
 
-<font color="#4f81bd" size='5'><b>Action 실행과 종료</b></font>
-Action 기능을 실행 및 종료 시키는 방법은 2가지가 있습니다.  
-- [[#2.4.32 Action Enable]]에 '0',또는 '1'의 값으로 실행 및 정지 할 수 있습니다.
-- [[#2.4.16 Extended I/O Control]]에서 Action Enable 기능을 이용하여 실행 및 정지 할 수 있습니다.
 
-하나의 Action에는 총 10개의 Parameter 속성을 가지고 있으며, 크게 Action Type, Repeat Data, Moving Setting으로 나뉠 수 있습니다.  
+### 2.4.19 Action Control  
+The Action function is a way to control mightyZAP without coding, communication or an external controller.  Total 5 Actions can be created.
+Users can create specific motions in the Total Manager software and save it in the actuator. Then, activate it using I/O ports ([[#2.4.18 Extended I/O Control]]). 
+
+<font color="#4f81bd" size='5'><b>Execution and Termination of Action</b></font>
+There are two ways to execute and terminate the Action function.
+- Setting available at [[#2.4.34 Action Enable]] with 0 (Stop) or 1 (Run).
+- Setting available at [[#2.4.18 Extended I/O Control]] using Action Enable feature. 
+
+Single Action has a total of 10 parameter properties and can be broadly divided into three sections - Action Setting, Repeat Setting, and Moving Setting.  
 ![[action_editor.png|700]]
 
 <font color="#4f81bd" size='5'><b>Action Setting</b></font>  
-Action Setting은 모터가 움직이는 방식을 설정하며 아래와 같습니다.
- -  Goal Position : Action Data에 값을 Goal Position에 입력하여 한번에 해당 위치까지 이동합니다.
- - Goal Distance : 현재 위치에서 Action Data값을 가감하여 위치 이동을 합니다. Goal Position 과 다르게 절대 위치 값이 아닌 상대적인 값으로 동작합니다.  
+Action Setting sets Action Type and Action Data.  Action types are classified as follows.
+ - Goal Position: After setting Action Type as Goal Position, enter absolute position value for the Goal Position in Action Data and move to that position at once.
+ - Goal Distance : After setting Action Type as Goal Distance, enter a differential value for the Goal Distance in Action Data to move the position by adding or subtracting the Action Data value from the present position. 
+ 
 <font color="#4f81bd" size='5'><b>Repeat Setting</b></font>  
-Action Setting에서 설정된 내용에 대한 반복 횟수 또는 1회 동작에 대한 동작 시간 등을 설정하는 Parameter 입니다.  
+Repeat Setting parameter sets the number of repetitions for the content set in Action Setting or the action time for single action.   
 **Repeat type**  
- - Interval : Repeat Time에 의해 설정된 시간 간격마다 Action을 수행합니다.  일정한 시간마다 반복된 동작이 필요할 경우 사용합니다. 
- - dWellTime : Action 명령에 의해 위치 이동이 완료되어 정지하는 시간을 설정합니다. 동작 완료 후 일정한 시간 동안 위치를 유지해야  할 때 사용합니다.
+ - **Interval** : Action is to be performed at every time interval set by Repeat Time.  Use when repeated actions are required at regular intervals.  
+ - **dWellTime** : Set the time to stop after the position movement is completed by the Action command. Use in order to maintain the position for a certain period of time after completing the movement. 
    ![[action_interval.png|600]]  
    ![[action_dwell.png|600]]  
 **Repeat time**  
-Interval 또는 dWell Time으로 설정할 시간 값을 입력합니다.  
+Time value setting for Interval or dWell Time. 
 
-| value | Description |
-| ---- | ---- |
-| 0 ~ 65535 | Interval 또는 dWell Time 시간  |
+| value (msec) | Description                            |
+| ------------ | -------------------------------------- |
+| 0 ~ 65535    | Time value for Interval or dWell Time  |
+
 **Repeat Count**  
-하나의 Action을 반복할 횟수를 지정합니다.
+Specifies the number of times to repeat single Action.
 
-| value | Description |
-| ---- | ---- |
-| 1 ~ 1000 | 반복횟수 |
-| 0 | '0'을 입력해도 1회는 실행합니다. |
+| value    | Description                                       |
+| -------- | ------------------------------------------------- |
+| 1 ~ 1000 | The number of repetation                          |
+| 0        | Even if '0' is enterred, mightyZAP operates once. |
 
-<font color="#4f81bd" size='5'><b>Moving Data</b></font>  
-Moving data는 각 Action 마다 Goal Speed, Goal Current, Acceleartion Deceleration 등 동작 특성을 설정합니다.  
-**Stop Action**   
-Stop Action은 한 Action 종료 후 상태를 설정합니다.  
+<font color="#4f81bd" size='5'><b>Moving Setting</b></font>  
+Moving Setting sets operation characteristics for each Action such as Goal Speed, Goal Current, Acceleration, and Deceleration .    
 
-| value | Description |
-| ---- | ---- |
-| Stop | 모든 Action을 종료합니다. 다음 Action Enable 신호가 오기 전까지 대기합니다. |
-| Next | 다음 Index를 실행합니다. |
-| Repeat | Index 0부터 다시 시작하여 Action 정지 명령이 있을 때 까지 모든 Action을 무한 반복 실행합니다.  |
+<font color="#4f81bd" size='5'><b>Index Setting</b></font>  
+Index Action sets the state after completing one Action.
 
-### 2.4.18 Force On/Off  
-| value | Description |
-| ---- | ---- |
-| 0 | 모터의 전원을 차단하여 기동력이 발생 되지 않도록 합니다. |
-| 1 | 모터의 전원을 인가하여 기동력이 발생하도록 합니다. |
+| value  | Description                                                                                     |
+| ------ | ----------------------------------------------------------------------------------------------- |
+| Stop   | Terminates all Actions. It waits until the next Action Enable signal comes.                     |
+| Next   | Run the next Index.                                                                             |
+| Repeat | ==Index 0부터 다시 시작하여 Action 정지 명령이 있을 때 까지 모든 Action을 무한 반복 실행합니다. (Index 0부터 Repeat가 입력된 Index까지)== |
 
-Force ON/OFF를 실행 합니다. 전원이 인가 되면 자동으로 Force ON으로 설정됩니다.   
-Force Off 명령 시 즉시 모터의 전원을 차단하여 모터의 동작을 중지합니다. Self Lock을 지원하지 않는 제품의 경우 외부의 힘에 의해 위치 값이 변경될 수 있습니다.   
-Force Off 후 별도의 명령(Force ON) 명령이 없이 Goal Position 명령 시 자동으로 Force ON되어 집니다.     
+### 2.4.20 Force On/Off  
+| value | Description                                 |
+| ----- | ------------------------------------------- |
+| 0     | Cut off the power to the motor. (Force Off) |
+| 1     | Supply the power to the motor. (Force On)   |
+Execute Force ON/OFF. 
+When power is applied to the actuator, it is automatically set to Force ON state.
+When the Force Off command is made, the power to the motor is immediately turned off to stop the motor operation. For products that do not support Mechanical Self Lock, the position value may change due to external forces.
+After Force Off,  when certain Goal Position command is given without a separate Force ON command, actuator will be "Force ON" automatically . 
 >[!tip] TIP  
->Self Lock이 지원 되는 제품의 경우, 위치 이동 완료 후 진동 및 외력에 의한 빈번한 위치 변동으로 모터에 스트레스를 주는 경우를 막기 위해 Force Off 명령을 사용하면 좋습니다.  
->모터가 쉬지 못하고 지속적으로 동작하게 될 경우 모터의 수명에 영향을 주거나 Overload 발생의 원인이 될 수 있습니다.
-### 2.4.19 Actuator Pause
-| value | Description |
-| ---- | ---- |
-| 0 | 모터의 위치 이동을 일시 정지를 해지 합니다. |
-| 1 | 모터의 위치 이동을 일시 정지 합니다. |
+>For products that support Mechanical Self Lock, it can be considered to use the Force Off command to prevent stress on the motor due to frequent position changes from external factors such as vibration or external force after the position movement is completed. If the motor is forced to operate without rest, it may affect the lifespan of the motor or cause overload.
 
-mightyZAP의 일시 정지 명령으로 이동 중 Pause 명령이 내려지면, 현재 위치에서 정지하고, 현재 위치를 유지합니다. Pause 명령이 해지 되면 Goal Position 위치로 다시 이동합니다.  
+### 2.4.21 Actuator Pause
+| value | Description                                                                                      |
+| ----- | ------------------------------------------------------------------------------------------------ |
+| 0     | Release the temporary stop of the position movement.                                             |
+| 1     | Temporarily stops the position movement. At this time, the power to the motor is still supplied. |
+If the Pause command is issued while moving, actuator stops / maintains present position. When the Pause command is released, actuator moves back to the originally designated Goal Position. Under Pause state, motor power is still supplied.  
 
-### 2.4.20 Actuator Stop
-| value | Description |
-| ---- | ---- |
-| 1 | 위치 이동을 정지하고 Goal Position 값을 현재 위치 값으로 변경합니다.. |
+### 2.4.22 Actuator Stop
+| value | Description                                                                                |
+| ----- | ------------------------------------------------------------------------------------------ |
+| 1     | Stop moving the position and change the Goal Position value to the present position value. |
+Actuator completely stops, and the Goal Position value changes to the current stopped position(Present position).  After actuator stops, the Stop Parameter is automatically reset. Under Stop state, motor power is still supplied. 
 
-mightyZap이 완전 정지하고, Goal Position 위치가 정지한 현재 위치로 변경됩니다. 
-mightyZap이 정지 한 후에는 자동으로 Stop Paremeter가 리셋 됩니다.  
-
-### 2.4.21 LED
-Error가 표시 되지 않을 때 사용자가 임의로 LED를 제어하여 디스플레이 효과를 낼 수 있습니다.  (Error 표시가 우선)  
+### 2.4.23LED
+The LED display during the time when the error status is not displayed can be controlled according to the user's preference to create a display effect. (Error indication takes priority)
 
 |bit|Description |
 |---|---|
 |0|RED LED |
 |1|GREEN LED|
-### 2.4.22 Hardware Error
-mightyZap이 동작 중 발생하는 위험 상황 중 아래의 상황에 대하여 스스로 감지하고, 다양한 방법으로 스스로를 보호할 수 있습니다.  
-각  Bit들은 중복되어 설정이 되며, Alarm Shutdown, Alarm LED,  Extend IO 기능을 이용하여 Error 발생 시에 대한 조치를 할 수 있습니다.  
-일반적으로 추천하는 방법은 [[#2.4.6 Alarm Shutdown|Alarm Shutdown]] 기능을 이용하여 해당 Error가 발생 할 경우, Force Off를 활성화하여,  mightyZap과  사용자의 System을 보호하는 것이 좋습니다.  
-ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 이상 모터가 동작하지 않습니다.  
+### 2.4.24 Hardware Error
+Among the dangerous situations that occur during operation, mightyZAP has protection functions that detect the following error status and protect itself in various ways.
+Each bit is set in duplicate, and protection can be made when an error occurs using the Alarm Shutdown, Alarm LED, and Extend IO functions.
+The generally recommended method is to use the [[#2.4.6 Alarm Shutdown|Alarm Shutdown]] function and activate Force Off when the error occurs to protect actuator and the user's system.
+If the ShutDown function is set, the motor will not operate unless the Restart command is made.  For the two errors below, the LED alarm and shutdown functions are set as default from the factory.
 
-| Bit | Name | Description |
-| ---- | ---- | ---- |
-| Bit 6 | Overload Error | 일정 시간 이상 동안 부하가 발생한 경우 |
-| Bit 0 | Input Voltage Error | 인가된 전압이 동작 범위를 벗어난 경우 |
+| Bit   | Name                | Description                                                                           |
+| ----- | ------------------- | ------------------------------------------------------------------------------------- |
+| Bit 6 | Overload Error      | When overload occurs for more than a certain period of time (more than duty rate 50%) |
+| Bit 0 | Input Voltage Error | When the applied voltage is outside the operating voltage range (8~13V)               |
 
 <font color="#4f81bd"><b>Overload  Error</b></font>  
-  17Lf Model의 Overload 측정 방식은 연속 누적 동작 시간 측정과, 전류 누적 계산 2가지가 있습니다.  
-  - 동작 시간 누적  
-    누적된 동작 시간이 30초가 넘으면 Overload 에 걸리게 됩니다.  
-    예 1 > 아래의 이미지를 보면 동작 중에는 누적량이 증가하고 하고 쉬는 동안에는 감소하는 것을 확인 할 수 있습니다. 그러다 누적량이 30 초를 넘게 되면 Overload가 발생하게 됩니다.
-    ![[overload_time.png|700]]
+  There are two overload measurement methods for the 17Lf series : Continuous cumulative operation time measurement and accumulated current calculation.  Overload error will be triggered when at least one of the two conditions is met.
+  - **Accumulated operating time**  
+    If the accumulated operation time exceeds 30 seconds, it is recognized as overload state.
+    On the below image, accumulated amount of time increases during movement and decreases during rest. Then, if the accumulated amount exceeds 30 seconds, overload occurs.  (Overload does not occur when used under the duty rate of 50% or less.)
+        ![[overload_time.png|700]]
 		
-  - 동작 전류 누적   
-    동작 전류 누적 방식은 동작 중 발생하는 전류의 양을 누적하는 방식으로 아래의 식과 같이 누적됩니다.  
+  - **Operating current accumulation**   
+    The cumulative operating current measurement method measures the amount of accumulated current generated during operation, and the accumulated current is calculated according to the equation below. It is related to the current consumption according to the actual load applied to the actuator.
     $$ i^2t = i^2_{peak}t-i^2_{norm}t=(I^2_{peak}-i^2_{norm})t$$
 
-      I<sup>2</sup>T 보호는 모터의 열 모델링을 기반으로 한 모터 과부하 보호 방법으로, 일종의 Sensorless 모터 과열 보호 장치 입니다.  
-      아래의 그림은 전류 누적과 Overload 발생에 대한 예 입니다.  
-    ![[overload_i2t.png|600]]  
-     (mightyZAP의 I<sub>norm</sub> 는 60mA 이하의 적은 전류량으로 설정 되어있습니다.)  
-	  동작 중에는 전류를 누적하고 정지 시에는 정격 전류량 만큼 감소합니다.   
-      누적량이 한계 값을 넘게 되면 Overload에 걸리게 되며 정격 부하로 30초 동안 동작한 경우의 I<sup>2</sup>T 양이 Overload에 걸리게 됩니다.   
-      즉, 정격 부하로 30초 동안 연속 동작이 가능합니다.    
+      I<sup>2</sup>T protection is a motor overload protection method based on thermal modeling of the motor, and is a kind of sensorless motor overheating protection method.  The image below is an example of current accumulation and overload occurrence.
+          ![[overload_i2t.png|600]]  (Actuator's I<sub>norm</sub> is set to a low current amount of 60mA or less.)
+      The current accumulates during operation and decreases by the rated current amount when stopped. If the accumulated amount exceeds the limit value, overload occurs, and the  I<sup>2</sup>T  amount when operating for 30 seconds under the rated load becomes the condition for overload.  That is, continuous operation without any short rest is possible for 30 seconds with the rated load. 
       
 >[!tip] TIP  
-  I<sup>2</sup>t 의 값은 [[#2.4.31 Present Overload Value]]에서 백분율 값으로 확인이 가능합니다.
+  The value of I<sup>2</sup>t can be checked as a percentage value in  [[#2.4.33 Present Overload Value]].
 
   <font color="#4f81bd"><b>Input Voltage  Error</b></font>  
 - Low Input Voltage  
-	  입력 전압이 8V 이하일 경우 Error가 발생합니다. 입력 전압이 8V 이상으로 올라가면 Error가 해지 됩니다.
+	  An error occurs if the input voltage is less than 8V. If the input voltage rises above 8V, the error is canceled.
 - High Input Voltage  
-	  입력 전압이 13V 이상일 경우 Error가 발생합니다. High Input Voltage Error는 시스템을 재 시작해야 해지가 됩니다. 
->[!note] 전압 측정  
->migtyZAP에서 측정되는 전압은 약 +/- 0.4V의 오차가 있습니다. 
-### 2.4.23 Goal Position
-위치 이동 명령으로 migthtyZAP을 이동 시키고자 할 때 사용하는 위치 값입니다. Goal Position은 [[#2.4.5 Short/Long Stroke Limt|Short/Long Stroke Limt]] 설정 제한 값 까지 입력이 가능합니다.  
-(즉, stroke limit 범위 밖으로는 위치 명령을 내려도 stroke limit위치까지만 움직입니다)
+	  An error occurs if the input voltage is over 13V.  High Input Voltage Error can be cleared by restarting the system.
+>[!note] Voltage measurement  
+>The voltage measured by migtyZAP has an error of approximately +/- 0.4V.
 
-| value | Description |
-| ---- | ---- |
-| 0 ~ 10000 | mightyZap의 이동 목표 위치값을 설정합니다.<br>(각 모델의 Stroke 길이와 상관없이 위치 해상도는 모두 10000입니다.) |
+### 2.4.25 Goal Position
+The Goal Position is the command for position movement.  Goal Position can be entered up to the [[#2.4.7 Short / Long Stroke Limit]] setting limit value.
+(In other words, even if a Goal Position command is given out of the stroke limit range, it only moves up to the stroke limit position)
+
+| value     | Description                                                                                                                        |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| 0 ~ 10000 | Set the Goal position value of actuator.<br>(Regardless of the stroke length of each model, the position resolution is all 10000.) |
 >[!tip] TIP  
->사용하고 계신 Stoke 의 최대 길이를 참조하시여 위치 값을 계산하시기 바랍니다.   
+>To calculate position value, pease refer to the maximum length of the Stoke of your actuator.  
 $$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$
-### 2.4.24 Goal Speed
-mightyZAP의 동작 속도를 변경할 때 사용합니다.  
-초기 전원 인가 시 비휘발성 Speed Limit에서 값을 불러와 Goal Speed에 저장합니다.
 
-| value | Description | 비고 |
-| ---- | ---- | ---- |
-| 0 ~ 1000 | mightyZap의 최대 속도 값 | +/- 10% |
+### 2.4.26 Goal Speed
+The Goal Speed command changes the operation speed of mightyZAP. (Default speed : Max speed)
+When the power is initially turned on, the value is retrieved from the non-volatile parameter "[[#2.4.13 Speed Limit]] " and stored in the volatile parameter "Goal Speed". For frequent speed changes during operation, use the volatile parameter "Goal Speed".
 
-( 0일 때 기동력 OFF 상태이고 1023일 때 최대 속도를 냅니다. )
-Goal Speed값을 이용하여 실제 예상되는 속도 계산값은 아래와 같습니다. 
+| value    | Description            | Remark  |
+| -------- | ---------------------- | ------- |
+| 0 ~ 1000 | Max speed of mightyZAP | +/- 10% |
+(The mobility is OFF at 0 and maximum speed is achieved at 1000.)
+The actual expected speed calculation value using the Goal Speed ​​value is as follows.
 $$ TargetSpeed = MaxSpeed\times\frac{GoalSpeed}{1000}$$
-[[#2.4.11 Speed Limit|Speed Limit]] 명령은 초기 설정 값으로 사용하며, 실시간 속도 변경이 필요한 경우 Goal Speed 를  사용합니다.  
+[[#2.4.13 Speed Limit]] command is used as the initial setting value, and if frequent real-time speed change is required, Goal Speed ​​should be used.
 
-Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
-다만, 너무 낮은 값을 설정 시 모터의 반응이 늦어지거나 움직이지 못할 수 있습니다.
-### 2.4.25 Goal Current  
-모터의 최대 전류를 제한합니다. 전류 값을 제한하여 mightyZAP의 최대 Force를 제한 할 수 있습니다. 각 Goal Current 값에 대한 Stall Force는 Datasheet를 참조하여 주시기 바랍니다.  
+Changing Goal Speed ​​does not affect the Force.
+However, if user sets a value too low, the motor's response may be delayed or it may not be able to operate.
 
-| value | Description |
-| ---- | ---- |
-| 0 ~ 1600 | mightyZap의 최대 전류 설정 값 |
+### 2.4.27 Goal Current  
+Limits the maximum current of the motor. That is, user can limit mightyZAP's maximum stall force by limiting the current value. Please refer to the datasheet for Stall force VS Goal Current graph .
 
-초기 전원 인가 시 비 휘발성 [[#2.4.12 Current Limit|Current Limit]]의 값을 Goal Current의 초기 값으로 적용합니다.  
-> [!note] Note - Goal Current를 이용한 Force 제한  
-> Goal Current를 조절하면 모터가 낼 수 있는 최대 힘을 조절할 수 있습니다. 제어 대상 및 사용자의 어플리케이션에 따라 특정 Force를 이상 넘어가는 것을 제한하고 자 할 때 사용하시면 됩니다.   
-> 지나치게 낮은 Goal Current는 모터의 부하를 이기지 못해 동작하지 않을 수 있습니다. 
-> Datasheet의 Goal Current Vs Force 표를 참조하신 후 적절한 값을 적용하시기 바랍니다. 또한 해당 값은 약 15%의 오차를 포함합니다.  
+| value    | Description                    | Remark  |
+| -------- | ------------------------------ | ------- |
+| 0 ~ 1600 | Max Current value of mightyZap | +/- 15% |
+When the initial power is turned on, the value is retrieved from the non-volatile parameter [[#2.4.14 Current Limit]] and stored in the volatile parameter "Goal Current". For frequent current changes during operation, use the volatile parameter "Goal Current.
+> [!note] Note - Force limitation using Goal Current command 
+> By adjusting the Goal Current, user can adjust the maximum stall force that the motor can produce. It can be used when user wants to limit the force from exceeding a certain force level depending on the control object and the user's application.
+> An excessively low Goal Current may not be able to overcome actuator's mechanical load and may not operate. (200mA or more recommended)
+> Please refer to the Goal Current Vs Stall Force graph in the datasheet and apply the appropriate value. The values ​​contain an error of approximately +/-15%.
 
 >[!warning] Warning - Over Current  
->Goal Current 800  이상 또는 1600- 설정일 경우 모터에 무리가 발생한다. 지속적으로 사용하는 구간이 아닌 특정상황 잠시 사용하는 구간이다.  지속 적으로 사용할 경우 overload Error가 발생하거나 모터의 수명이 짧아지게 됩니다.
-### 2.4.26 Present Postion
-현재 mightyZAP의 위치 값을 나타냅니다.   
+>Goal Current 800 이상 또는 1600- 설정으로 지속적인 사용시 모터에 무리가 발생합니다. 지속적으로 사용하는 구간이 아닌 특정상황에서 잠시 사용하는 구간입니다. 지속 적으로 사용할 경우 overload Error가 발생하거나 모터의 수명이 짧아지게 됩니다.
 
-| value | Description | Unit |
-| ---- | ---- | ---- |
-| 0~10000 | 현재 위치 값 |  |
+### 2.4.28 Present Postion
+Indicates the present position value of mightyZAP.  ==Load data명령을 통해 현재 위치값을 피드백 받을 수 있습니다.== 
 
-사용하고 계신 mightyZAP 의 최대 길이를 참조하시여 위치 값을 계산하시기 바랍니다.      
+| value   | Description            | Unit |
+| ------- | ---------------------- | ---- |
+| 0~10000 | Present position value |      |
+
+User is able to calculate the position value by referring to the maximum stroke length of mightyZAP user is using.     
 $$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$  
-정지한 이후에도 미세한 위치 변동은 나타날 수 있으며 이는 정상 동작입니다.   
-### 2.4.27 Present Current
-모터의 현재 전류 사용 값입니다.  
+Even after reaching a Goal Position, minute vibration may occur, but this is normal operation. 
 
-| value | Description | Unit |
-| ---- | ---- | ---- |
-| 0~1600 | 현재 전류 값 | mA |
+### 2.4.29 Present Current
+Indicates the present Current value of mightyZAP.   ==Load data명령을 통해 현재 전류값을 피드백 받을 수 있습니다.== 
 
-Present Current는 오차를 포함하고 있음으로 참고 용으로 사용하여 주시기 바랍니다.
-### 2.4.28 Present Motor Operating Rate
-모터에 공급되는 PWM값을 나타냅니다. (통신용 PWM과의 오해를 방지하기 위해 Motor Operating Rate(모터 가동율)이라는 용어를 사용합니다. )   
+| value  | Description           | Unit | Remark |
+| ------ | --------------------- | ---- | ------ |
+| 0~1600 | Present current value | mA   | +/-15% |
+Present Current contains errors, so please use it for reference.
 
-| value | Description |
-| ---- | ---- |
-| -10000~1000 | Motor에 공급되는 PWM 값 |
-| 0 | Motor 정지 사태 |
+### 2.4.30 Present Motor Operating Rate
+Indicates the motor PWM value supplied to the motor. (To prevent confusion with PWM for communication, the term Motor Operating Rate is used.)
 
-Motor Operating Rate는 Goal Speed, Goal Current 등에 따라 값이 달라집니다.   
-### 2.4.29 Present Voltage  
-입력 전압 값을 나타내며 단위는 0.1[V] 입니다.
+| value       | Description                           |
+| ----------- | ------------------------------------- |
+| -10000~1000 | Motor PWM value supplied to the Motor |
+| 0           | Motor stop state                      |
+Motor Operating Rate varies depending on Goal Speed, Goal Current setting, etc.
 
-|value|Description |Unit |
-|---|---|---|
-|0~130| 현재 입력 전압 |[v]|
-### 2.4.30 Moving
-모터의 동작 유무를 나타냅니다. 정확히는 모터의 목표 도달 유무를 나타냅니다.  
+### 2.4.31 Present Voltage  
+Indicates the supplied input voltage value and the unit is 0.1[V].
+
+| value | Description                 | Unit |
+| ----- | --------------------------- | ---- |
+| 0~130 | Present input voltage value | [v]  |
+
+### 2.4.32 Moving
+Indicates whether the motor is operating or not. ==More precisely, it indicates whether or not the motor has reached its goal position.== 
 <table>
 </table>
 
-| value  | Description |
-| ---- | ---- |
-| 0 | mightyZAP 정지 상태 |
-| 1 | mightyZAP 동작 중 |
-### 2.4.31 Present Overload Value
-Overload의 기준이 되는 전류 누적량을 백분율로 표시합니다. 
+| value | Description |
+| ----- | ----------- |
+| 0     | Not moving  |
+| 1     | Moving      |
 
-| value | Description | Unit |
-| ---- | ---- | ---- |
-| 0~100 | Overload 전류 누적량 백분율 | % |
+### 2.4.33 Present Overload Value
+The accumulated current amount, which is the basis for overload, is displayed as a percentage.
 
-모터가 동작 할 경우 전류값이 누적되어 값이 상승하고 모터가 정지 할 때 값이 감소됩니다. 누적되는 값이 부하 정도에 따라 다르며, 감소 되는 값은 모터 정지 시 정격 전류 기준값이 감소됩니다.   
-Overload에 관한 자세한 사항은 [[#2.4.22 Hardware Error|Hardware Error]] Overload에서 확인하여 주시기 바랍니다.   
-최대 값을 100으로 표시하며, 해당 값이 100이 될 경우 Overload Error  이 발생하게 됩니다.  
-Overload Error 발생하지 않도록 Overload value 값이 90 이하로 관리하여 주시기 바랍니다.  
+| value | Description                                 | Unit |
+| ----- | ------------------------------------------- | ---- |
+| 0~100 | Accumulated current percentage for overload | %    |
+When the motor operates, the current value accumulates and increases, and when the motor stops, the value decreases. The accumulated value varies depending on the applied load amount, and the reduced value is reduced by the standard rated current value when the motor stops.
+For more information about overload, please check [[#2.4.24 Hardware Error]].
+The maximum value is displayed as 100, and if the value becomes 100, an Overload Error will occur.
+Please manage <u>Overload value below 90</u> to prevent Overload Error.
 > [!tip] TIP  
-> 동작 Dutyrate를 50%이하로 관리하여 주시며, 최대 연속 동작 시간이 30초가 넘지 않아야 합니다. 자세한 사항은 [[#2.4.22 Hardware Error]]와 [[#3.1.3 Duty Rate]]를 참조하여 주시기 바랍니다.
-### 2.4.32 Action Enable
-Action Parameter로 작성된 Action을 실행할 때 사용합니다. Action Parameter 를 작성하였어도 Action Enable을 활성화 하지 않으면 Action은 동작하지 않습니다. 
+> Please manage the operati duty rate below 50%, and the maximum continuous operation time should not exceed 30 seconds. For further details, please refer to [[#2.4.24 Hardware Error]] and [[#3.1.3 Duty Rate]].
+
+### 2.4.34 Action Enable
+Use "Action Enable" when executing actions created with an [[#2.4.19 Action Control]] parameter. Even if user writes an Action Parameter, <u>the Action will not work unless Action Enable is activated.</u>
 
 | value | Description |
 | ---- | ---- |
 | 0 | Action Disable |
 | 1 | Action Enable |
 > [!tip] TIP  
->Action에 대한 자세한 사항은 [[#4.17 Action Control]]을 참조하여 주시기 바랍니다.
-### 2.4.31 Indirect Data
-indirect Address로 설정된 Paramter들의 Data를 읽고 쓸 수 있는 Parameter입니다.
-자세한 사항은 [[#2.4.15 Indirect Address]]를 참조하여 주시기 바랍니다.
-### 2.4.32 Reset
-ID, Baudrate, Protocol, Min/Max Position Calibration을 제외한 모든 Parameter가 초기화 됩니다.  
-Reset이 완료되면 mightyZAP의 시스템이 재 시작 되어 LED가 2번 깜빡입니다.  
->[!tip] TIP  
->  모든 데이터를 초기화하기 위해서는  당사의 Manager 프로그램을 이용하여 Factory Reset을 진행하여 주시기 바랍니다.
-### 2.4.33 Restart  
-Baudrate, Protocol 변경 후 적용을 위해  또는 Hardware Error 인해 Suthdown이 발생하여 시스템을 재 시작 해야 하는경우 Restart Parameter 에 '1'으로 세팅하여 진행할 수 있습니다.
+>For more detailed info for Action, refer to [[#2.4.19 Action Control]].
 
-# 3. 유의 사항  
+### 2.4.35 Indirect Data
+Read and write data from parameters set by indirect addresses.
+For more detailed info, refer to [[#2.4.17 Indirect Address]].
+
+### 2.4.36 Reset
+All parameters are initialized <u>except for</u> ID, Baudrate, Protocol, and Min/Max Position Calibration data.   When the reset is complete, mightyZAP's system restarts and the LED quickly blinks twice. 
+>[!tip] TIP  
+>  To initialize whole data, please execute "<u>Factory Reset</u>" using our Manager software. (All data including ID, Baudrate, Protocol type, Position calibration data to be reset.)
+
+### 2.4.37 Restart  
+Set Restart parameter to "1" to restart the system to apply it after changing the Baudrate or Protocol,  or to restore due to a Shutdown due to a Hardware Error.
+
+# 3. Precautions
 ## 3.1 Precautions for use   
-아래 주의 사항은 사용시 각별히 주의를 요하는 사항이므로, 반드시 숙지를 하여 주십시오. 아래 사항을 준수하지 못해 발생한 문제에 대해서는 보증 서비스를 받을 수 없음을 알려드립니다.
-### 3.1.1 Rod 관리
-- 제품 동작 시 로드(Rod)를 무리한 힘으로 누르지 마십시오. 정격 부하 이상의 힘이 지속적으로 가해질 경우 모터가 소손될 수 있습니다.
-- Rod End Tip 체결 시 무리하게 Rod를 비틀어 돌리지 마십시오.(주의) Rod End Tip 장착 시 본체가 고정된 상태에서 무리하게 Rod에 비트는 힘을 가하게 되면 내부 부품(EngineeringPlastic Rod-Insert) 파손의 원인이 됩니다.   
-![[RodBroken.png]]
-   파손 방지를 위해 아래를 참고하십시오.
-	**체결 방법 – M3스패너 사용**
-	1) 동봉 된 end(⑥)를 M3 스패너(⑤)로 고정합니다.M3 Rod 너트(②)를 조이면서 Rod(①)가 심하게 돌아가며 내부 부품이 파손되는 것을 방지하기 위함입니다.
-	2) 필요에 따라 무두 볼트(③) 또는 Rod End Tip ④)을 완전히 조이기 전 적정 위치까지 돌려 장착합니다.
-	3) Rod End Tip (④)의 각도를 원하는 각도로 맞춘 후 롱 노우즈 또는 여분의 M3 스패너가 있을 경우 스패너를 사용하여 M3 너트(②)를 조여서 위치를 고정합니다(아래 그림과 같이 Rod End는 M3 스패너로 고정된 상태에서 진행).
-### 3.1.2 전원 관리
-mightyZAP에 DC 정전압 장치를 사용하여 정격 전압에 맞게 전원인 가를 하여 주십시오. 전원 입력은  8.0 ~ 13V를 인가 해 주셔야 합니다.  13V이상의 과전압이 들어가면 제품 파손 의 원인이 됩니다.
-또한, 하나의 전원 Source에 여러 개의 mightyZAP을 연결 하였을 경우 최대 허용 전류를 계산하여 사용하여 주시기 바랍니다. 기본 설정에서 하나의 mightyZAP에서 사용하는 최대 전류는 800mA로 아래와 같이 계산하여 주시면 됩니다.
->[!tip] TIP  
->- 예를 들어 3개의 mightyZAP을 연결하여 사용하는 경우
-   800mA x 3EA = 2.4A
-  안전성을 고려하여 500mA 이상 높은 3A 이상의 Power Source를 사용하시기 바랍니다.
+Here is essential information to use mightyZAP properly. To prevent product damage by unintended result and to get proper warranty service, please peruse below before use.
 
-*정격 부하에 최대 속도로 동작 할 경우 약 600mA 가 소모 됩니다. (기동 토크 제외)*
+### 3.1.1 How to mount rod end accessory – Do not twist the rod
+- Do not press the rod with excessive force during operation. If a force exceeding the rated load is continuously applied,  it affects the lifespan of the motor and may cause damage to the product.
+- <u>Do not TWIST the rod with excessive force when tightening the rod end tip</u>.  If you apply excessive twisting force to the rod when tightening the rod and tip (while the body is fixed), it may cause damage to internal part (Engineering Plastic rod-insert).
+![[RodBroken.png]]
+Follow below instruction to avoid damage.
+**How to assemble – Use M3 spanner** - D12, D7 series do not include spanner.
+1) Fix the Rod-end with the included M3 spanner (⑤).
+   This is to prevent the rod (①) from turning badly and damage while tightening the M3 nut (②).
+2) According to preference, install the socket set screw (③) or rod end tip (④) to the proper positioning before hard tightening.
+3) Adjust the angle of the rod end tip (④) to the desired angle. By using included M3 spanner(⑦), adjust the position by tightening the M3 nut (②) while rod end is FIXED with another M3 spanner(see below image.).
+   This is “double nuts” concept which fixes mechanical position by friction.
+
+**<u>Caution</u>** : The rod-end tip (④) or Socket set screw (③), which are basic accessories, can be fastened through the M3 standard tapping hole of the rod-end (6), and other customized rod-end tip can be installed according to the customer’s desire.  However, when fastening the object to the rod-end, make sure to fix the rod-end (⑥) with an M3 spanner. If you excessively apply the force to the rod (①) without fixing the rod-end (⑥) with an M3 spanner, it may cause damage to the internal parts.
+![[Pasted image 20240711103729.png|300]]
+   
+### 3.1.2 Power Management
+Use a DC constant voltage device to apply power to mightyZAP according to the rated voltage. The power input must be between 8.0 and 13V (the rated voltage of the actuator is 12V). Over-voltage exceeding 13V may cause product damage.
+Also, when multiple mightyZAPs are connected to one power source, please calculate the maximum allowable current before use. In the default settings, the maximum current used by one mightyZAP is 800mA, which can be calculated as follows. (However, if the user changes the current limit, the maximum current value also changes.)
+>[!tip] TIP  
+>- For example, when using 3 x mightyZAPs connected
+ 800mA x 3EA = 2.4A
+ For safety reasons, please use a power source of 3A or more to ensure a spare current of 500mA or more.
+
+*When operating at maximum speed with rated load, approximately 600mA is consumed. (excluding starting torque)*
+
 ### 3.1.3 Duty Rate
- mightyZAP의 수명은 모터에 가해지는 부하(load)의 정도, 연속 반복 동작 횟수 및 각 mightyZAP동작 사이의 cooling time(Duty Cycle) 등의 요인에 의해 달라질 수 있습니다.
-- 반드시 정격 부하 이하 조건에서 사용하여 주십시오.   
-  예를 들어 12Lf-20PT-27 제품의 경우 정격 부하는 20N(약 2kg)입니다. 즉, 12Lf-20PT-27 제품의 경우 20N 이하의 부하로 사용하셔야 제품의 수명을 극대화할 수 있습니다. 정격 부하 대비 작은 부하를 가할 수록 mightyZAP의 수명은 향상됩니다.
-- Duty Cycle은 50% 이하로 설정하여 주십시오. DC 모터 특성 상, 쉬지 않고 지속적으로 움직이는 작업을 수행할 경우, 모터는 과부하에 걸리고, 모터를 보호하기 위해 Overload 보호 기능이 작동되어 모터 전원이 꺼지게 됩니다.  
-  그러므로 모터 동작 시간 대비 일정 시간 쉴 수 있도록 Duty Cycle을 설정해 주어야 합니다.  
-  Duty Cycle이란 DC모터가 동작하는 시간 대비 쉬어주는 시간의 주기입니다.  즉, Duty Cycle 50%는 mightyZAP가 50%의 시간을 동작하면 50%의 시간은 쉬는 것을 의미하며,  Duty Cycle이 50%일 때 mightyZAP의 효율적인 수명 관리가 가능합니다.  
-  최적의 수명 관리를 위해, 적용 시 최대 Duty Cycle은 50%를 넘지 않도록 해주십시오. Duty Cycle이 적어질수록 mightyZAP의 수명은 연장됩니다.  
-- 설비 운용 중, mightyZAP을 사용하지 않는 상황 에서는, mightyZAP에 [[#2.4.18 Force On/Off|Force Off]] 명령을 내려mightyZAP의 수명을 늘릴 수 있습니다.
-### 3.1.4 배선
-오배 선에 유의하십시오.당사가 제공하는 커넥터가 장착된 wire harness를 사용하여 배선할 경우 오배 선의 확률은 거의 없습니다.  
-다만, 사용자의 필요에 따라 당사 제공 커넥터가 아닌 납땜, 혹은 제 3의 커넥터를 활용하게 될 경우, 통신/전원 라인 사이의 오배 선에 유의하여 주십시오. 오배선을 하게 될 경우, PCB Board 또는 특정 전장 부품이 소손되어 치명적인 손상을 가져올 수 있습니다. Pin Map을 참고하여 오배 선을 방지하십시오. 사용자 <font color="#ff0000">메뉴얼 “4.1 서보회로 연결” 페이지의 배선 Pin map을 참고하여 오배선이 되지 않도록 유의하여 주십시오. </font>
-### 3.1.5 Stroke Limit 설정
-기구적인 limit설정과 위치 이동 명령 범위를 일치해 주세요. mightyZAP의 설치 시, mightyZAP이 움직일 수 있는 기구적인 한계 치를 설정하게 됩니다. 기구적인 limit 설정 후, mightyZAP의 위치 명령은 반드시 이 한계 내에서 이루어져야 하며, 그렇지 않을 경우 mightyZAP에 큰 부하를 주어서 Overload 보호 기능이 작동되고, 이것이 지속적으로 반복될 경우 mightyZAP의 수명에 영향을 주게 됩니다.
-사용자가 Overload 보호 기능을 사용자가 해제한 경우 mightyZAP이 소손 될 수도 있습니다. 정밀한 위치 제어 특성 상 기구적인 리미트 내에서 위치 명령을 주도록 설계가 되었는지 반드시 재 점검 및 주의를 하여 주시기 바랍니다.
-### 3.1.6 동기 제어
-두 개의 mightyZAP을 하나의 대상에 동기 제어하지 마십시오. 동일 모델 이더라도 두 개의 mightyZAP 사이에는 미세한 속도 차이가 존재하며, 동일한 대상에 대해 모션 동기화를 시켰을 때 도달하는 위치 값은 동일하더라도 속도 및 가감속 차이로 인한 위치 차이로 인해 한쪽 mightyZAP이 과부하될 수 있습니다.
-### 3.2 기타 주의 사항
-- 작동 직후 mightyZAP의 케이스가 뜨거울 수 있습니다. 화상에 주의하십시오.
-- mightyZAP을 물기, 먼지, 기름으로부터 멀리 하십시오.
-- 본 제품은 실내 용도로 설계된 제품입니다. 실 외 사용을 금합니다.
-- 어린이의 손이 닿지 않는 곳에 제품을 보관하십시오. 성인이 사용 시에도 모터의 동작 시 발생할 수 있는 신체 상해에 유의하십시오.
-## 3.2 제품 보관
-아래 극심한 환경에서 제품을 사용하거나 보관하지 마십시오. 오작동이나 제품의 파손을 불러올 수 있습니다.
-- 섭씨 70도 이상의 고온 환경 또는 섭씨 영하 20도의 저온 환경
-- 직사광선 또는 화기 근처 / 고온 다습하고 먼지가 많은 장소 / 진동이 심한 장소 / 정전기를 유발할 수 있는 장소
-## 3.3 보증 및 수리
-mightyZAP의 보증 기간은 구매 일부터 1년입니다. 보증 수리를 받기 위해서는 제품 구매 일을 증명할 수 있는 영수증 등을 지참 하시어 구매처 또는 본사 고객 만족실로 문의를 하여 주시기 바랍니다. 단, 정상적인 기어의 마모, 와이어 피복의 벗겨짐, 모터의 소손 등 사용자의 오용과 과실에 따르는 문제는 보증에서 제외됩니다. 또한, 임의 분해 및 임의 수리에 따르는 고장 또한 보증 대상에서 제외되오니, 모든 수리는 지정된 업체에 의해 진행되어야 함을 이해하여 주시기 바랍니다.
-# 4. 참고 자료
-## 4.1 악세사리
-### 4.1.1 기본 악세사리
+ The lifespan of mightyZAP may vary depending on factors such as the load amount applied to the actuator, the number of consecutive repetitive operations, and the cooling time (Duty Cycle or Duty Rate) between each operation.
+ - Be sure to use mightyZAP under conditions below the rated load of each actuator.
+   For example, for the model 17Lf-20F-27, the rated load is 20N (approximately 2kg). In other words, 17Lf-20F-27 actuator must be used with a load of 20N or less to maximize the lifespan. The lifespan of mightyZAP improves as you apply a smaller load compared to the rated load.
+- Please set Duty Cycle to 50% or less. Due to the nature of DC motors, if continuous operation is performed without a break time, the motor is overloaded, and the overload protection feature is activated to protect the motor, cutting off the motor power.
+  Therefore, the duty cycle must be set so that the motor can rest(cooling) for a certain period of time compared to the operating time.
+  Duty cycle is the period of rest time compared to the operating time of the DC motor. In other words, Duty Cycle 50% means that if mightyZAP operates 50% of the time, it rests 50% of the time. When the Duty Cycle is 50%, efficient lifespan management of mightyZAP will be ensured.
+  For optimal lifespan management, make sure that the maximum duty cycle does not exceed 50% when applied as the shorter the duty cycle, the longer the lifespan of mightyZAP.
+- During operation, in situations where mightyZAP is not used, the lifespan of mightyZAP can be extended by [[#2.4.22 Force On/Off]] command.
+  
+### 3.1.4 Proper Wiring
+There is little chance of incorrect wiring when using genuine wire harness with connector provided with the actuator.
+However, if users use soldering or a third-party connector according to user’s desire, please pay attention to mis-wiring between the communication and power lines. Incorrect wiring results in fatal damage to the PC board or certain electrical components. In addition, do not forget the common GND between the actuator & the customer's communication device to prevent malfunctions and product damage due to electrical noise.
+Please refer to the wiring pin map [[#4.1.2 Pinmap / Circuit Connection]] on the user manual to prevent incorrect wiring.
+
+### 3.1.5 Stroke Limit 
+Please be sure to match the mechanical limit setting and position movement command range. When installing mightyZAP, user sets the mechanical limits to which mightyZAP can move. After setting the mechanical limit, the position command of mightyZAP must be performed within this limit. Otherwise, it will place a large load on mightyZAP and the overload protection feature will be triggered. If this is repeated continuously, it will affect the lifespan of mightyZAP.
+mightyZAP may be damaged(burnt out) if the user disables the Overload protection feature. Due to the nature of precise position control, please make sure to re-check and pay attention to whether it is designed to give position commands within mechanical limits.
+
+### 3.1.6 Synchronous Control for Single Object
+It is strongly recommended not to synchronously control multiple mightyZAPs on the same single object. Even if they are the same model, there is a slight speed difference between each mightyZAPs, and even if the position values is same, each mightyZAPs may be overloaded due to the slight position difference made from differences in speed and acceleration/deceleration.
+
+### 3.2 Other Precautions
+- mightyZAP's case may feel hot right after operation. Be careful of burns.
+- Keep mightyZAP away from moisture, dust, and oil.
+- mightyZAP is designed for indoor use. Outdoor use is prohibited.
+- Keep the product out of reach of children. Even when used by adults, be aware of the risk of personal injury that may occur when the motor operates.
+
+## 3.2 Storage
+Do not use or store the actuator in the extreme environments below. It may cause malfunction or damage to the product.
+- High temperature environment of over 70 degrees Celsius or low temperature environment below -20 degrees Celsius
+- Direct sunlight or near fire / High temperature, high humidity and dusty places / Places with severe vibration / Places that may cause static electricity
+
+## 3.3 Warranty / Repair
+mightyZAP's warranty period is one year from the date of purchase. For warranty repairs, please prepare a receipt to prove the date of purchase and contact the place of purchase or our Customer Satisfaction Center (cs@mightyzap.com).  However, problems resulting from user misuse or negligence, such as normal wear of gears, peeling of wire coating, and burnout of the motor, are excluded from the warranty. Additionally, please understand that any damage resulting from arbitrary disassembly or repair is also excluded from warranty, so all repairs must be performed by a designated company.
+
+# 4. Reference
+## 4.1 Accessory
+### 4.1.1 Standard Accessories
+Standard basic accessories that is included in the actuator package.
 ![[17Lf Accessories.png|700]]
 >[!warning] Warning
->3번 M3 너트는 Hinge Shaft  고정과 더불어, Rod End Tip과 Rod End Nut 사이에 스토퍼로 체결하여 사용하시기 바랍니다.  
+>In addition to fixing the Hinge Shaft, please use the M3 nut(#3) should be used as a stopper between the Rod End Tip and Rod End Nut.
 >![[ASB_RodendTip.png|300]]
 
-### 4.1.2 커넥터 자료
-mightyZAP 17Lf Model을 제어하기 위해 RS-485 통신을 사용합니다.   
-RS-485 Connecter의 Pin Map은 아래와 같습니다.  
+### 4.1.2  Pinmap / Circuit Connection
+RS-485 communication is used to control the mightyZAP 17Lf Model.
+The Pin Map of the RS-485 connector is as follows.
 
 | PIN NUMBER(COLOR) | PIN NAME | FUNCTION(RS485) |
-| ---- | ---- | ---- |
-| 1(황색) | D- | RS485 - |
-| 2(백색) | D+ | RS485 + |
-| 3(적색) | VCC | 전원 + |
-| 4(흑색) | GND | 전원 - |
-사용자 개인 보드를 사용할 경우 아래와 같이 통신 회로를 구현하시면 됩니다.  
+| ----------------- | -------- | --------------- |
+| 1(Yellow)         | D-       | RS485 -         |
+| 2(White)          | D+       | RS485 +         |
+| 3(Red)            | VCC      | Power +         |
+| 4(Black)          | GND      | Power -         |
+Here is the circuit connection for RS-485 communication between mightyZAP and user's controller.  
 
 ![[rs485_circuit.png|700]]  
+In the circuit diagram above, user is able to switch between TX and RX modes of RS485 by controlling the Direction Port pin.
+- When the signal level of Direction Port is Low:  Data signal is input to RX.
+- When the signal level of Direction Port is High: TX signal is output as Data.
 위의 회로도에서 Direction Port 핀을 제어하여 RS485의 Tx 및 Rx 모드를 변환할 수 있습니다.
-- Direction Port의 신호  Level이 Low인 경우 : Data 의 신호가 Rx 로 입력
-- Direction Port의 신호  Level이 High인 경우 : Tx 의 신호가 Data로 출력
->[!warning] 주의   
->그림과 같이 통신 제어기와 mightyZAP의 GND는 서로 연결이 되어야 합니다.
-### 4.1.3 별매 악세사리
-**메탈 브라켓**
-IR-MB05 는 세로 고정 브라켓입니다.  
-17Lf Model 모든 Stroke에서 사용 가능한 제품입니다.  
-![[verticval_braket.png|300]]
+- Direction Port의 신호  Level이 Low인 경우 : RS 485의 Data 신호를 사용자 보드의 U ART Rx에 수신 하게 설정 <span style="background:#ff4d4f">-수정됨</span>
+- Direction Port의 신호  Level이 High인 경우 : RS 485의 Data 신호에 사용자 보드의 UART Tx의 데이터를 보내도록 설정 <span style="background:#ff4d4f">-수정됨</span>
+
+>[!warning] CAUTION   
+>As shown in the picture, user's controller and mightyZAP's GND must be connected each other.
+
+### 4.1.3 Optional Accessories
 
 **PC USB Interface** 
-IR-USB02 을 사용하면 PC 를 통하여 아래와 같은 제어를 할 수 있습니다.
-전용 PC 소프트웨어 mightyZAP Manager 가 제공됩니다.  
-- 운용 파라메터 및 저장 메모리 셋팅
-- 모션 테스트
-- 전압, 온도, 현재 위치, 전류, 전압, 모터 가동률 모니터링
-- 시스템 초기화 및 펌웨어 업데이트
+USB to RS-485 converter for customers who use our PC software or a PC as a controller. Using IR-USB02, user can control the following through a PC, and it is an essential accessory that most customers purchase when initially purchasing an actuator for motion test, parameter setting/monitoring, and future firmware updates.
+
+Dedicated PC software called mightyZAP Total Manager is provided.
+- Operating parameters and storage memory settings
+- Motion test
+- Monitoring voltage, temperature, present position, present current, present voltage, and motor operating rate
+- System initialization and firmware update
 ![[usbInterfaceboard.png|250]]
 
-**엔드베어링 (IR-EB01)**
-브라켓을 통한 고정이 아닌, 로드엔드와힌지부에 베어링을 장착하여 최적의 설치 및 운용이 가능하도록 합니다. M2.5와 M3규격의 엔드베 어링 1셋트를 구성합니다.  
-![[end_ball.png|500]]
+Connect an actuator with user's PC to perform various parameter settings, motion tests, monitoring, etc. through our Total Manager software. 
+![[mainView-description.png|700]]
 
-**아두이노 기반 EZ Controller (IR-CT01)**  
-- 제어기가 없는 고객사를 위한 mightyZAP전용 컨트롤러/테스터  
-- 간단한 조작의 아두이노 기반 컨트롤러  
-- 기본 제어 프로그램 내장, 사용자 프로그래밍 가능 (아두이노 예제 제공)  
-- 위치 지정 다이얼, 위치명령 버튼스위치, 위치명령 슬라이드 내장  
-- 외부 스위치 또는 전압레벨 신호를 통한 제어 가능  
-- 아날로그/디지털 센서 연결을 위한 별도 3개씩의 I/O 핀 제공  
-- 블루투스 또는 지그비(Zigbee) 통신을 위한 외부통신 단자  
-![[ezController.png|300]]
-
-**라즈베리파이 HAT (IR-STS02)**  
-Raspberry Pi B3 또는 Raspberry Pi Zero에 호환되는 HAT(Hardware Attached on Top) 보드입니다.  
-mightyZAP Raspberry Pi HAT 제품은 40 GPIO 핀을 통해서 Raspberry Pi 위에 바로 결합할 수 있는 제품입니다.  
-TTL, RS-485, PWM 통신 인터페이스와 GPIO핀을 내장하고 있어 Raspberry Pi를 통한 mightyZAP 제어가 가능합니다.  
-![[raspHAT.png|300]]
-
-**별매 익스텐션 와이어 (IR-EW01~10)**
-산업현장에서 필요에 따라 사용할 수 있는 확장된 길이의 익스텐션 와이어입니다.  
-IR-EW01 :Extension wire - 3pin TTL 1000mm  
-IR-EW02 :Extension wire - 3pin TTL 2000mm  
-IR-EW03 :Extension wire - 4pin RS-485 2000mm  
-IR-EW04 :Extension wire - 4pin RS-485 4000mm  
-IR-EW08 :Extension wire - 3pin TTL 500mm  
-IR-EW09 :Extension wire - 4pin RS-485 500mm  
-IR-EW10 :Extension wire - 4pin RS-485 1000mm  
->[!tip] Tip   
->쉴드 처리가 되어 있지 않으므로 노이즈 환경이 많은 설비에서는, 별도의 쉴드 와이어를 사용하시기 바랍니다. 배선 을 위한 커넥터와 커넥터 터미널은 당사에서 별도로 구매가 가능합니다.
-
-**로드앤드 팁 (IR-GT01)**
-Rod-End Grip Tip은 mightyZAP의 rod end에 연질의 패드가 부착된 팁을 장착하여, 어플리케이션 대상체에 물리적인 손상을 주지 않도록 하는 제품입니다.  
-예를 들어, Flat grip tip에 고무/실리콘 패드를 부착하여, 상처나기 쉬운 물체를 밀거나 접촉하여 제어할 때, 또는 실리콘의 마찰력을 이용해서 물체를 잡거나 들어올릴 때 사용할 수 있습니다.   
-![[endtip.png]]
-## 4.2 커넥터 자료
-- Pin 배열
-- 통신 회로
+**Other Optional Accessories** 
+Other various optional accessories such as control boards, mounting brackets, and extension wire harnesses, several rod-end tips are also available. Link to the [Optional Accessories Page](https://mightyzap.com/en/linear_actuator_acc_board/) on our website.
 
 
 

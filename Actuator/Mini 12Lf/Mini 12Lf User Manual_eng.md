@@ -2,6 +2,7 @@
 ### **<font color="#ff0000">Check your product series!  </font>
 <font color="#ff0000">Does your model number start with 12Lf-?  </font>**
 
+
 > This manual is the dedicated manual for **12Lf FORCE control version actuator** which support force/speed control as well as position control. 
 > This manual is for the 12Lf Force control version user who has the model number which starts with **“12Lf”** with our <font color="#ff0000">own IR protocol. </font>
 > For the users with 12Lf series who uses MODBUS RTU protocol, please refer separated “Force control/MODBUS RTU” manual and for the users who have the actuator which starts with D or L, please refer to the separate “Position control” actuator manual. 

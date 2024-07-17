@@ -75,7 +75,7 @@ Mac OS 전용 패키지를 다운로드 합니다.
 ![[Actuator/Mini 17Lf/img/macOS_install.png|500]]
 ## 2.3 화면 구성
 화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Footer로 구성되어있다.  
-![[mainView-description.png|700]]
+![[Software/Total Manager/img/mainView-description.png|700]]
 <font color="#4f81bd">1. Main Toolbar  </font>  
 mightyZAP의 Reset, Restart, Data Undo/Redo 등을 수행  
 <font color="#4f81bd">2. SCAN  </font>  

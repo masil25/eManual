@@ -1,150 +1,144 @@
 
-# 1 Total Manager 시작하기
-mightyZAP Total Manager는 다양한 운영체제에서 다양한 mightyZAP Actuator를 쉽게 관리 및 제어할 수 있는 새롭게 개선된 Software입니다. Total Manager는 윈도우즈, 리눅스, iOS등의 다양한 OS를 지원하고, 사용자 인터페이스를 개선하였습니다.  기존의 L12/D12/D7/12Lf시리즈 뿐만이 아니라, 신모델인 17Lf시리즈의 파라메터도 제어할 수 있습니다.  
+# 1 Getting Started - Total Manager 
+The Total Manager is the new generation of dedicated software that allows users to easily manage and control mightyZAP Actuators.  The Total Manager supports various OSs such as Windows, Linux, and iOS, and has an improved user interface. In addition to the existing L12/D12/D7/12Lf series actuators, user is also able to manage the parameters of new 17Lf series. 
+This manual covers the basics of installing Total Manager and using each function.
 
-본 매뉴얼에서는 Total Manager의 설치 및 각 기능의 사용법에 대한 기본 사항을 다룹니다.
+## 1.1 Introduction
+mightyZAP Total Manager is a multi-purpose software with various functions like motion test, parameter settings, parameter monitoring, and firmware updates. User is also able to set up and test special features depending on their actuator model.
 
-## 1.1 개요
-mightyZAP Total Manager는 다양한 기능을 가진 다목적 Software입니다. mightyZAP의 동작 Test,  Parameter 설정 및 동작 상태 Monitoring과 Firmware Update를 기본적으로 제공합니다.  또한 시리즈별 모델에 따른 특수 기능을 설정 및 테스트 할 수도 있습니다. 
->특수 기능 설정 및 테스트 내용은 각 모델의 매뉴얼을 참조하시기 바랍니다.
+>Please refer to the manual of each model for special function settings and test details.
 
 ![[total_image.png|500]]
 
-## 1.2 사용 환경
-mightyZAP은 통신 버전에 따라, Half Duplex TTL, RS485, CAN 통신을 사용합니다. PC와의 통신을 위한 Converter를 사용해야 mightyZAP과의 통신이 가능합니다.  
-mightyZAP을 위한 USB Interface Board(IR-USB XX series)를 당사의 웹사이트에서 판매하고 있습니다. 당사의 전용  Interface Board를 사용할 경우 손쉽게 mightyZAP을 PC와 연결할 수 있습니다.  시중의 3rd party converter를 구매하여 사용하실 수 있지만, 편의성 및 안전성을 위하여 가급적 당사의 Interface Board를 사용하여 주시기 바랍니다.
+## 1.2 Environment
+mightyZAP uses Half Duplex TTL, RS485, and CAN communications depending on the communication version. Users need to use some sort of signal converter for communication between PC and mightyZAP.
+The USB Interface Board for mightyZAP (IR-USBXX) can be purchased from our e-shop for easier PC connection. 
+User is also able to use the 3rd party converter, but for convenience & safety reasons, it is recommended to use our Interface Board .
 
 > <font color="#ff0000">⚠️ 주의 사항</font><br
-> - PC와 Interface Board 연결에 충전 전용 USB Cable을 사용하여 통신이 연결되지 않는 경우가 있습니다. 반드시 Data통신이 가능한 Cable인지 확인하시고 사용하여 주시기 바랍니다. 
-> - 3rd party 컨버터 사용시, 제품 파손 방지를 위해 배선에 유의하시기 바랍니다. 
+>  - Make sure to use "data transferable" USB cable between PC and USB converter.    
+>     Charging only cable does not support data communication.  
+> -  Make sure proper wiring when using 3rd party converter. 
 
 ## 1.3 Feature
 ### 1.3.1 Information
-연결된 mightyZAP의 Model 명, Stroke, Rate Load, Firmware Version 등 Actuator와 관련된 기본 정보를 표시합니다. Software를 실행하였을 경우 제일 처음에 나타나는 화면입니다.
-![[Pasted image 20240717142157.png|700]]
+Displays basic information related to the connected actuator, such as model name, stroke length, rate load, and firmware version. This is the first screen that appears when user runs the software.  ==(아래 그림이 깨짐)==
+![[Software/Total Manager/img/Information.png|700]]
+
 ### 1.3.2 Parameter
-mightyZAP을  제어하거나 Parameter 변경 및 Parameter Monitoring을 할 수 있습니다.   
-연결된 여러 개의 mightyZAP 중 하나의 mightyZAP을 선택하여 제어할 수 있으며, Parameter의 Type에 따라 비휘발성(Non-voltatile Memory)와 휘발성(Volatile Memoty) 화면으로 나누어져 있습니다.  각 파라메터에 대한 구체적인 설명은 각 액츄에이터 시리즈의 사용자매뉴얼 - 17Lf시리즈의 경우 [[mightyZAP 17Lf User Manual_kor#2. Control Table]] - 을 참고하시기 바랍니다. 연결된 액츄에이터 시리즈 및 모델에 따라 Parameter의 구성이 달라지며, 화면의 크기에 따라 화면 구성이 변하게 됩니다.  
+In the Parameter section, user is able to do aMotion test, changing parameters, and monitoring parameter.
+User can select and control only single mightyZAP even if multiple actuators are connected, and the screen is divided into Non-voltatile Memory and Volatile Memoty screens depending on the type of parameter. For detailed explanations of each parameter, please refer to the user manual of each actuator series,  - [[Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_eng#2. Control Table]] - for the 17Lf series. The parameter configuration varies depending on the connected actuator series and model, and the screen configuration changes depending on the screen size. 
 ![[control-view.png|700]]
 
 ### 1.3.3 Update
-mightyZAP의 Firmware를 업데이트할 때 사용합니다. 기본적으로 공장출하시에는 최신 펌웨어가 적용됩니다만 아주 드물게, 유통업체에서 보관하던 제품의 경우 펌웨어 업데이트가 필요할 수도 있습니다. 당사의 Website 에서 해당 모델에 맞는 업데이트 파일을 다운로드 받으신 후 업데이트를 진행 하실 수 있습니다.  
-또한, Update Fail 및 사용자의 실수로 인해 서보모터가 검색이 되지 않을 경우 Firmware를 검사 및 복구 하실 수도 있습니다. 
-![[update-veiw.png|700]]
-# 2 Total Manager 다운로드 및 설치
-Total Manager는 Window , Mac OS, Linux 에서 모두 설치가 가능합니다.
-## 2.1 요구 사항
-- Windows : windows 7(32bit) / windows 10 64bit 이상
-- Mac OS : Big Sur 이상 64bit
-- Linux : Ubuntu LTD 20.04 64bit
->[mightyZAP Total Manager Download](https://github.com/mightyZap1/totalmanager/releases) 페이지에서 각 OS에 맞게 다운로드 하실 수 있습니다.
+It is for the future firmware update. Generally, the latest firmware is applied from the factory, but in very rare cases, a firmware update may be required for products stored by the resellers. If necessory, user can proceed with the update after downloading the update file for user's model from our website.
+Additionally, in this update menu, if the servo motor is not searched due to update failure or user error, user is able to restore the firmware.  ==(아래 그림이 깨짐)==
+![[update-view.png|700]]
 
-## 2.2 설치
+# 2 Total Manager Download & Installation
+Total Manager is compatible with Windows, Mac OS, and Linux.
+## 2.1 OS Requirement
+- Windows : ==Windows 7==(32bit) / Windows 10 64bit ==이상==
+- Mac OS : Big Sur ==이상== 64bit
+- Linux : Ubuntu LTD 20.04 ==64bit==          
+>Please download proper installation file for each OS at [mightyZAP Total Manager Download](https://github.com/mightyZap1/totalmanager/releases) 
+
+## 2.2 Installation
 ### 2.2.1 Windows
-Windows 컴퓨터에서 mightyZAP Total Manager를 설치하려면 사용 중인 Windows의 
-OS 버전을 확인하신 후 버전에 맞게 다운로드하여 주시기 바랍니다.   
-- 32bit windows : mightyZAPTotalManagerx.y.z_ia32.exe
-- 64bit windows : mightyZAPTotalManagerx.y.z_x64.exe  
+To install Total Manager software on a Windows PC, please check the OS version of Windows and download the appropriate version. 
+- ==32bit Windows : mightyZAPTotalManagerx.y.z_ia32.exe==
+- ==64bit Windows : mightyZAPTotalManagerx.y.z_x64.exe==  
 
-**Windosw Version 확인 방법**
-- windows  7 : 제어판 -> 시스템 확인
-- windows 10 이상 : 설정 -> 시스템 -> 정보
-<font color="#4f81bd">OS Version 확인 방법</font>
+**How to check Windows Version 
+- Windows  7 : Control Panel -> System ==확인==
+- Windows 10 or newer : ==설정 -> 시스템 -> 정보==   (==About->System Type??==)
+<font color="#4f81bd">How to check OS Version </font>
 ![[windows_version_check.jpg]]
 **mightyZAP Total Manager Download Link**
 
-다운로드한 파일을 실행하여, 설치 가이드의 지침에 따라 설치하시면 됩니다.  
-설치에는 몇 분 정도 걸릴 수 있습니다.
+Run the downloaded file and install it according to the instructions of the installation guide. Installation may take several minutes.
 ![[window_install.jpg]]
-이제 Window에서 mightyZAP Total Manager를 사용하실 수 있습니다.  
+Now, user can use mightyZAP Total Manager software on Windows.
 
 ### 2.2.2 Linux
-Linux 전용 파일 패키지를 다운로드 합니다.
-Debian/Ubuntu 기반의 배포용 Total Manager를 설치하기 위해서는 다음과 같은 Command Line을 통해 .deb 패키지(64bit)를 다운로드하고 설치합니다.
+Download the file package dedicated for Linux OS.  
+To install Total Manager for Debian/Ubuntu-based Total Manager, download and install the .deb package (64bit) through the following command line.
 ```
 $ sudo dpkg -i [file].deb
 ```
 
 ### 2.2.3 Mac OS
-Mac OS 전용 패키지를 다운로드 합니다.
-다운로드 파일을 더블 클릭하면 아래와 같이 설치 화면이 나타납니다. mightyZAP Total Manager 아이콘을 드래그 하여 Applications에 옮겨 놓으면 설치가 완료됩니다. 
+Download the file package dedicated for Mac OS. 
+Double-click the downloaded file, then installation window appears as shown below. Drag the mightyZAP Total Manager icon and place it to the Application.  Installation is completed.  
 ![[Software/Total Manager/img/macOS_install.png|500]]
 
-## 2.3 화면 구성
-화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Footer로 구성되어 있습니다.  
-![[mainView-description 1.png]]
-<font color="#0070c0"><font color="#548dd4">① Main Toolbar</font></font> : Actuator의 Reset, Restart, Data Undo/Redo 등을 수행  
-<font color="#548dd4">② SCAN</font> : Software의 통신(COM Port)을 연결하고 연결된 mightyZAP을 검색  
-<font color="#548dd4">③ Main Menu</font> : 항상 사이드 바에 위치하며 사용자는 Information, Control, Update, Manager setting 등 Manager software의 주요 기능을 선택할 수 있습니다.
-<font color="#0070c0">④ Actuator List</font> : 검색된 mightyZAP의 모델명이 통신 속도와 Protocol에 따라 분류되어 표시  
+## 2.3 Screen Layout
+The screen layout is divided into four parts: Header, Side bar, Contents, and Footer in general. 
+![[Software/Total Manager/img/mainView-description.png|700]]
+<font color="#0070c0"><font color="#548dd4">① Main Toolbar</font></font> : Perform actuator reset, restart, data undo/redo, etc. 
+<font color="#548dd4">② SCAN</font> : Connect Software's communication(COM port) and search connected mightyZAP  
+<font color="#548dd4">③ Main Menu</font> : Always located on the side bar and user can select the main functions of the manager software such as Information, Control, Update, and Setting. 
+<font color="#0070c0">④ Actuator List</font> : Searched mightyZAP model name to be shown along with the communication speed (baudrate) and protocol type.  
 <font color="#0070c0">⑤ Main contents</font> : 매니저에 제공하는 Main 기능 표시  
-<font color="#0070c0">⑥ Actuator Information</font> : 선택된 Actuator의 모델명, Firmware Version, 통신 방식 등이 표기    
-<font color="#0070c0">⑦ 통신 상태</font> : 통신 Protocol 및 송수신 Error 등 통신 상태 표시  
-<font color="#0070c0">⑧ Manager Status</font> :  Manager 의 버전 및 Language 등 표시  
+<font color="#0070c0">⑥ Actuator Information</font> : Selected mightyZAP's model name, firmware version, and communication method are displayed.
+<font color="#0070c0">⑦ Communication Status</font> : Displays Communication status such as protocol type and transmission/reception errors.
+<font color="#0070c0">⑧ Manager Status</font> :  Displays Manager software's version and Language (English/Korean)
 
 ## 2.4 USB Interface Board 
-Total Manager와 mightyZAP과의 통신을 위하여 Serial Convertor 가 필요합니다.  
-해당 설명은 당사의 USB Interface Board를 기준으로 설명이 되어있습니다.  
-먼저 USB Cable을 이용하여 PC와 IR-USB02 (또는 USB03)을 연결하여 주시기 바랍니다.   
-(IR-USB02는 Micro 5 pin USB커넥터가, IR-USB03은 신형 C type USB 커넥터가 장착되어 있습니다.)
-> <font color="#ff0000">⚠️ 주의사항 </font>     
-> <font color="#ff0000">충전 전용 케이블이 아닌 통신이 가능한 케이블을 사용하여 주셔야합니다.</font>
+A USB-TTL or RS-485 serial converter is required for Total Manager to communicate with mightyZAP.  Below explanation is based on our genuine USB Interface Board - IR-USB02 or 03.
+First, connect to the PC using a USB cable with IR-USB02 or 03. 
+(IR-USB02 is equipped with a Micro 5 pin USB connector, and IR-USB03 is equipped with a new C type USB connector.)
+> <font color="#ff0000">⚠️ CAUTION </font>     
+> <font color="#ff0000">Be sure to use data transferrable cable, not a "charging only" cable.</font>
 
-### 2.4.1 Windows
-당사의 Interface Board 는 출시 시점에 따라 2가지 Type이 있으며, 각 type에 따라 드라이버를 설치하는 방식이 다릅니다. 아래의 설명을 참조하여 드라이버를 설치 합니다.
+### 2.4.1 For Windows
+당사의 Interface Board 는 출시시점에 따라 2가지 Type이 있으며, 각 type에 따라 드라이버를 설치하는 방식이 다릅니다. 아래의 설명을 참조하여 드라이버를 설치 합니다.
 
-- **IR-USB02 Driver 설치** (CH340x)
-	아래의 링크에서 IR-USB02의 Driver를 다운로드 합니다.
-	[Download link](https://www.wch.cn/downloads/file/65.html?time=2024-07-17%2010:07:13&code=DwmHVUI3gI6XcgRteBdx84KFdjUXkRx3daZBPF6P)
-	다운로드 받은 파일을 실행한 후 INSTALL 버튼을 클릭하여 드라이버를 설치합니다
+- **IR-USB02 Driver installation** (CH340x)
+	Download the driver for IR-USB02 from the link below. ==(링크 없음.  )==
+    After running the downloaded file, click the INSTALL button to install the driver. 
 	![[ch340x_win_install.jpg]]
-- **IR-USB03 Driver 설치 (CP210x)**
-	USB03 Dirver는 Windows Update에 의해 자동으로 설치 됩니다.  
-	만약 자동으로 설치가 되지 않을 경우 아래의 링크를 통해 드라이버를 다운로드 받으시기 바랍니다.
-	 [Download Link](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip) 
-	압축이 해제된 폴더에서 silabser.inf 파일을 마우스 오른쪽 버튼으로 클릭하고 설치를 선택합니다.
-	![[Pasted image 20240717024258.png|400]]  
-	Install 버튼을 클릭하면 다음과 같이 경고 메세지가 나타납니다. 이때 OPEN 버튼을 누르고 설치를 진행합니다.  
-	![[Pasted image 20240717024330.png|400]]  
-	설치가 완료되면 아래와 같은 팝업창이 나타납니다. 
-	![[Screenshot 2024-07-17 024534.png]]
+- **IR-USB03 Driver installation**  
+	Download the driver for IR-USB03 from the link below. ==(링크 연결안됨.)
+	-  [USB Interface Board Window Driver]  
+	Run the downloaded file to install the driver. 
+	![[ftdi_win_install.png|650]]
 
-- **Interface Board 연결 확인**
-USB Interface Board를 PC와 연결합니다.
-[시스템]-[장치관리자]-[port]에서 Serial Port가 정상적으로 연결되었는지 확인합니다.  
-정상적으로 연결되어 있을 경우 아래 이미지에서와 같이 새로운 com port가 추가되는것을 확인할 수 있습니다.
-![[Pasted image 20240717024827.png|700]]
-### 2.4.2 Linux[ubuntu/Demian]
-<font size="5"> Driver 설치</font>
-1) IR-USB02 Driver 설치 (CH341 Driver)
-	CH341 driver는 USB-02 Model에서 만 사용됩니다. 
-	CH340, CH341 의 시리얼 드라이버는 Linux 커널 버전 2.6.24부터 내장되어 있으며, 해당 위치는 "drivers/usb/serial/ch341.c"입니다. 다만 드라이버를 최신 상태로 유지 하기 원하실 경우 아래의 방법을 사용하기 바랍니다.
-	 - 아래의 사이트에서 Linux용 드라이버를 다운로드 받으시기 바랍니다.  
-	   [LINUX용 CH341 Driver Donwload(ZIP)](https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html)  
-	 - 다운로드한 파일의 압축을 풉니다.
-	 - 터미널 창을 열고 다운로드한 디렉토리로 이동을 합니다.
-	 - 다음의 명령들을 입력합니다
-	   ```bash
+- **Connection check**
+Connect the USB Interface Board to the PC.   ==(링크연결안됨)==
+Check if the serial port is connected properly at [System]-[Device Manager]-[Port]. 
+If connected properly, user can see that a new COM port is added as shown in the image below.
+![[serialPort_check_win.jpg]]
+
+### 2.4.2 Linux[ubuntu/Demian]. (==링크없음==)
+<font size="5"> Driver Installation</font>
+##### 1) CH341 Driver 
+CH341 driver is only used for IR-USB-02.
+The serial drivers for CH340 and CH341 are built-in starting from Linux kernel version 2.6.24, and its location is drivers/usb/serial/ch341.c. However, if user wishs to keep the driver up-to-date, please see below.
+ - Please download the driver for Linux from the website below.
+   [LINUX_CH341 Driver Donwload(ZIP)](https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html)  
+ - Unzip the downloaded file.
+ - Open a terminal window and move to the downloaded directory.
+ - Enter the following commands
+```bash
 $ make clean  
 $ make  
 $ sudo make load    
 ```
-	 - 설치된 드라이버를 확인하기 위해 USB-02를 PC와 연결한 후 다음의 명령을 입력합니다.  
-	   ```bash
+ - To check the installed driver, connect IR-USB02 to the PC and enter the following command.  If installed properly, it should be displayed as "ch34x".
+```bash
 $ sudo dmesg | grep ch34    
 [   xxx] usbcore: registered new interface driver ch341  
 [   xxx] usbserial: USB Serial support registered for ch341-uart  
 [   xxx] ch341 1-6.4.3:1.0: ch341-uart converter detected  
 [   xxx] usb 1-6.4.3: ch341-uart converter now attached to ttyUSB1  
 ```
-	 -  정상적으로 설치가 되었다면 "ch34x"로 표시되어야 합니다.
-
-2) IR-USB03 Driver 설치 (CP210x)
-   CP210x 드라이버는 v2.6.12 부터 Linux  커널의 일부로 배포되었습니다. Linux 에서는 CP210x 드라이버가 /dev/ttyUSBx로 표시됩니다.  
-   Com port를 확인하는 방법 :  
-	- USB Interface board를 PC와 적절한 USB Cable로 연결합니다.
-	- 터미널 창을 열고 다음을 입력하면 다음과 같이 출력이 나타납니다.
-```bash - 수정 필요요
+##### 2) FTDI Driver
+The FTDI Driver is used in all models except USB-02 (such as old IR-USB01, new IR-USB03, etc.). The FTDI VCP driver is built into the Linux kernel. To ensure that all FTDI devices have VCP driver support, FTDI recommends installing the latest kernel release on user's Linux system.  On Linux, the VCP driver appears as /dev/ttyUSBx.
+How to Check Com port:
+- Connect the USB Interface board to the PC with a proper USB cable.
+- Open a terminal window and type the following, the output will appear as follows:
+```bash
 $ dmesg|grep FTDI  
 [   xxx] USB Serial support registered for FTDI USB Serial Device  
 [   xxx] ftdi_sio 9-1:1.0: FTDI USB Serial Device converter detected  
@@ -152,28 +146,31 @@ $ dmesg|grep FTDI
 [   xxx] ftdi_sio: v1.6.0:USB FTDI Serial Converters Driver  
 ```
 
-3) Serial Port 권한 얻기
-   ubuntu는 기본적으로  root 사용자가 아닌 일반 사용자로 로그인하도록 하기 때문에 Serial Port와 같은 시스템 장치를 다루기 위해서는 권한 설정을 해야 합니다.   
-   먼저 연결된 Port 명을 확인하기 위해 아래의 명령을 입력합니다.
- ```
+#### Obtaining Serial Port Permissions
+Ubuntu basically requires users to log in as a regular user, not as a root user, so user needs to set permissions to handle system devices such as the Serial Port.
+First, enter the command below to check the connected port name.
+```
 $ dmesg|grep tty  
 [   xxx] printk: console [tty0] enabled  
 [   xxx] usb 1-6.1.4: FTDI USB Serial Device converter now attached to ttyUSB0  
 [   xxx] ftdi_sio ttyUSB0: FTDI USB Serial Device converter now disconnected from ttyUSB0  
 [   xxx] usb 1-6.1.4: FTDI USB Serial Device converter now attached to ttyUSB0  
 ```
- 
-   "ls -l" 명령을 통해 확인된 Serial Port를 이용하여 사용 그룹을 확인합니다.
+
+
+Check the usage group using the serial port identified through the “ls -l” command.
 ```bash
 $ ls -l /dev/ttyUSB0  
 crw-rw---- 1 root dialout 188,  0 11월  1 10:49 /dev/ttyUSB0  
 ```
-   "id Gn" 명령을 통해 현재 로그인 중인 사용자가 속한 그룹을 확인합니다.
+
+Use the “id Gn” command to check which group the currently logged in user belongs to.
 ```baSH
 $ id -Gn  
 user adm cdrom sudo dip plugdev  
 ```
-   현재 로그인한 사용자가 dialout 그룹에 포함되어 있지 않기 때문에, 현재 사용자에게 dialout 그룹을 추가해 줍니다.
+
+Since the currently logged-in user is not included in the dialout group, add the dialout group to the current user.
 ```bash
 $ sudo adduser $USER dialout
 [sudo] password for user.
@@ -182,36 +179,21 @@ Adding user user to group dialout
 Done
 ```
 
-그룹에 추가 한 후에는 반드시 로그아웃 후 로그인 해야 변경 사항이 적용 됩니다.
+After adding to a group, user must log out and log in again for the changes to take effect.
+
 ### 2.4.3 Mac OS
-1) IR-USB02 Driver 설치 (CH341 Driver)
-   USB Interface Board Driver를 다운로드 합니다.  
-   [Download link](https://www.wch.cn/downloads/file/178.html?time=2022-11-16%2017:17:24&code=0azREtkUexJAgAQPAAErK83gMdBzoeHN8b65MM6l?time=2024-07-17%2012:42:05&code=OOg1KsakbZkEsluK9l4rwCpC267fds0NjEXwyXDN)
-   다운로드 받은 파일을 압축 해제하고 "CH34x_VCPDriver.pkg" 파일을 실행 시킵니다.
-   ![[Screenshot 2024-07-17 at 1.50.46 PM.png|600]]
-   설치 프로그램을 따라 설치를 진행합니다.
-   ![[Pasted image 20240717135912.png]]
-   다음과 같이 보안 경고 창이 나타나면 "Open System Setting"을 누르고 오른쪽 그림과 같이 "Allow" 또는 "허용" 버튼을 눌러 "ch34xVCPDriver"의 설치를 완료합니다.
-   ![[Pasted image 20240717140217.png]]
-2) IR-USB03 Driver 설치 (CP210x Driver)
-   USB Interface Board Driver를 다운로드 합니다.  
-    [Download link](https://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip)
-   다운로드 받은 파일을 압축 해제하고, "silabsUSBDriverDisk.dmg" 파일을 실행하고 가이드에 따라 드라이버를 설치합니다.  
- ![[Screenshot 2024-07-17 at 1.05.53 PM.png|600]]
-	 해당 파일을 실행 하면 다음과 같은 파일이 나타납니다.
-	 ![[Screenshot 2024-07-17 at 1.06.45 PM.png]]
-	 "Install CP210x VCP Driver" 파일 실행합니다.
-	 다음과 같은 경고 창이 나타나면 Open 버튼을 눌러 설치를 진행합니다.
-	 ![[Screenshot 2024-07-17 at 1.06.50 PM.png|400]]
-	 설치 프로그램의 가이드에 따라 절차대로 진행합니다.
-	 ![[Pasted image 20240717132801.png|700]]
-	다음과 같이 보안 경고 창이 나타나면 "Open System Setting"을 누르고 오른쪽 그림과 같이 "Allow" 또는 "허용" 버튼을 눌러 "CP210xVCPDriver"의 설치를 완료합니다.
-	 ![[Pasted image 20240717133431.png|700]]
-	 ![[Screenshot 2024-07-17 at 1.08.27 PM.png|500]]
+Download the USB Interface Board Driver.  (==링크없음==)
+	-  [USB Interface Board Window Driver]  
+Run the downloaded file and install the driver according to the guide.  ==(이미지 없음)==
+	[이미지 ]  
+Connect the USB Interface Board to the PC.  (==링크없음==)
+Check if the serial port is connected properly at [System information]-[Hardware]-[USB]. 
+[이미지]  ==(이미지 없음)==
+
 # 3 Total Manager Description
 ## 3.1 통신 연결 및 검색
 아래의 이미지와 같이 프로그램을 실행 한 후 상단 매뉴바에서 Scan 버튼을 누르면 Actuator Scan을 위한 팝업 창이 활성화 됩니다.   
-![[Pasted image 20240717142300.png|700]]
+![[ConnectAndSCAN.png|700]]
 
 ### 3.1.1 SCAN 화면 구성
 Actuaotor Scan 팝업 창의 화면 구성은 아래와 같습니다.  
@@ -232,31 +214,28 @@ All 버튼을 누르게 되면 모든 선택하거나 모두 선택 해지를 �
   
 다음은 모델에 따른 기본 설정 값에 대한 예시 입니다.   
 
-| 예시 모델             | Protocol(dafault) | Baudrate (dafault) |
-| :---------------- | :---------------- | :----------------- |
-| **Mini L12/12Lf** | Own Protocol      | 57600pbs           |
-| **Mini 17Lf**     | Modbus Protocol   | 57600pbs           |
+|   예시 모델         |   Protocol(dafault)                 |   Baudrate (dafault)          |
+|:------------------|:----------------------------|:---------------------|
+|   **Mini L12/12Lf**   | Own Protocol                |             57600pbs |
+|   **Mini 17Lf**       | Modbus Protocol             |             57600pbs |  
 
 ### 3.1.3 Actuator 검색
  SCAN 버튼을 누르게 되면 선택한 옵션에 따라 차례로 검색을 시작하여 해당 결과를 표시합니다.
  원하는 Actuator 가 모두 검색 되었을 경우, 완료를 기다리지 않고 STOP 버튼을 click하면 검색을 종료하면 됩니다.  
-![[Pasted image 20240717142326.png|700]]
- 
+ ![[SCAN_Desc.png|700]]
  검색이 완료되었으면 Close 버튼을 click하여 Popup 창을 닫습니다.
 ## 3.2 Information
 mightyZAP Actuator의 Model명, Rated Load, Stroke, firmware Version등 관련된 정보를 표시하는 페이지 입니다.  
 Manager가 실행이 되면 처음 표시하는 창이  창이며, 아래의 이미지와 같이 사이드 바 메뉴의 첫번째 아이콘을 클릭하여 해당 페이지로 이동합니다. 
-![[Pasted image 20240717142343.png|700]]
-![[Pasted image 20240717141351.png|700]]
+![[Software/Total Manager/img/InformationMenu.png|700]]
 ### 3.2.1 서보모터 List 확인
 아래의 그림과 같이 매니저에 왼쪽에는 검색된 서보모터가 Display 됩니다.  
 Actuator List는 Baudrate와 Protocol에 따라 분류되어 표시 되며,  Baudrate 별로 접거나 펼 수 습니다
-![[Pasted image 20240717142433.png|700]]
+![[ActuatorList.png|700]]
 
 ### 3.2.2 정보 확인
 Actuator List를 선택하면 해당 Actuator의 모델 명, Stroke 길이, 정격 부하, 통신 Protocol 등의 정보가 표시됩니다. 
-![[Pasted image 20240717142523.png|700]]
-
+![[Actuator_Information.png]]
 이중 중요한 일부 정보가 Manager의 하단 Footer에 표시됩니다.
 ![[FooterDiscription.png]]
 Footer에 표시된 정보는 information Page가 아닌 다른 Page에서도 볼 수 있습니다. 
@@ -334,8 +313,8 @@ Monitoring 기능은 아래와 같이 구성 되어있습니다.
 펌웨어 파일은 당사의 homepage에서 다운로드 받으시기 바랍니다.  
 [Firmware Download](https://mightyzap.com/en/digitalarchive4/?category1=Firmware&mod=list&pageid=1)
 ### 3.4.1 화면 구성    
-Update Page는 이미지와 같이 펌웨어 업데이트, Actuator Recovery 영역으로 되어있으며, 각각의 실행은 상단 header의 메뉴에서 해당 아이콘을 선택하여 실행할 수 있습니다.  ![[Pasted image 20240717142616.png|700]]
-
+Update Page는 이미지와 같이 펌웨어 업데이트, Actuator Recovery 영역으로 되어있으며, 각각의 실행은 상단 header의 메뉴에서 해당 아이콘을 선택하여 실행할 수 있습니다.  
+![[Software/Total Manager/img/Information_tag.png|700]]
 ### 3.4.2 Firmware Update   
 **Actuator 연결**  
 업데이트를 진행할 서보 모터를 연결하고 SCAN 을 합니다.  
