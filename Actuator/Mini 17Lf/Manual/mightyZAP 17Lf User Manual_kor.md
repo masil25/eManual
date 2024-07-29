@@ -85,6 +85,10 @@ mightyZAP 17Lf 시리즈의 모든 Parameter의 Data Size는 2byte 로 되어있
 ### 2.1.4 Access  (접근 권한)
 Control Table Data는 'R', 또는 'RW'로 표기됩니다. 'R'은 읽기 전용(Read Only)을 의미하고, 'RW'는  읽기와 쓰기가 모두 가능합니다.  
 읽기 전용 권한은 주로 서보 액츄에이터의 기본 정보 또는 모니터링 용으로 사용되고, 읽기 쓰기 권한은 mightyZAP 제어 용도로 사용됩니다.  
+
+**Modbus RTU에서는 각 권한에 따라 아래의 명령을 사용하여 통신을 하실 수 있습니다. **
+- Read 권한 : Modbus RTU 에서 Read Holding Register 명령을 이용하여 데이터를 읽어옵니다.
+- Wirte 권한 : Write Single Register 명령을 이용하여 원하는 데이터를 쓰고, Read Holding Register를 이용하여 입력되어 있는 데이터를 확인할 수 있습니다.
 ### 2.1.5 Default  
 <font color="#0070c0">Default 값은 초기 설정 값(공장 출하 설정 값)입니다. Non-Volatile Memory 영역의 값은 사용자가 수정할 경우 변경한 값으로 default값에 적용되며, Volatile Memory 영역은 전원이 인가 되었을 때의 현재 상태 값으로 default 값을 표시합니다.  </font>
 
@@ -256,6 +260,7 @@ Hardware Error 가 발생 했을 때, 해당 Alarm LED  bit 가 세팅 되어 �
 | ----- | ------------------- | ------------ | -------------------------------------------- |
 | Bit 6 | Overload Error      | RED 점멸       | 일정 시간 이상 동안 부하가 발생한 경우 (duty rate 50%이상일 경우) |
 | Bit 0 | Input Voltage Error | RED 지속 점등    | 인가된 전압이 동작 범위를 벗어난 경우 (동작범위 : 8~13V)         |
+
 모든 Alarm은 시스템을 재 시작해야 사라지게 됩니다.  
 하지만 저전압 Input Voltage LED Alarm의 경우 원인이 해결 되면 LED가 꺼지게 됩니다.
 > [!note] NOTE   
@@ -274,19 +279,18 @@ Shutdown은 Hardware Error가 발생할 경우, 모터를 Force Off 상태 즉, 
 >Hardware Error에 대한 자세한 설명은 [[#2.4.24 Hardware Error]]를 참조하여 주시기 바랍니다.
 
 ### 2.4.7 Short/Long Stroke Limit  
-| Parameter | Range | Description | Unit |
-| ---- | ---- | ---- | ---- |
-| Short Stroke Limit | 0~10,000 | Goal Position 최소 입력 하한값 |  |
-| Long Stroke Limit | 0~10,000 | Goal Position 최대 입력 상한값 |  |
+| Parameter          | Range      | Description             |
+| ------------------ | ---------- | ----------------------- |
+| Short Stroke Limit | 0 ⁓ 10,000 | Goal Position 최소 입력 하한값 |
+| Long Stroke Limit  | 0 ⁓ 10,000 | Goal Position 최대 입력 상한값 |
 <font color="#00b0f0">Short/Long Stroke Limit은 Goal Position 범위의 상한(long)/하한(short)을 각각 0~10,000으로 제한합니다.</font>
 따라서 Goal Position값은 Short Stroke Limit(A) 값보다 작을 수 없고, Long Stroke Limit(B) 값보다 커서는 안됩니다.
 Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Stroke Limit 값보다 클 경우 Stroke Limit값으로 치환됩니다.  
-<font color="#ffc000">반드시 사용해야 하는 파라메터는 아니지만, 사용자의 어플리케이션에 따라 스트로크 리미트를 설정함으로써 실수로 인한 미연의 사고를 방지할 수 있는 파라메터입니다.</font>
+반드시 사용해야 하는 파라메터는 아니지만, 사용자의 어플리케이션에 따라 스트로크 리미트를 설정함으로써 실수로 인한 미연의 사고를 방지할 수 있는 파라메터입니다.
 ![[Actuator/Mini 17Lf/img/StrokeLImit.png|600]]
 > [!note] NOTE   
 >mightyZAP이 사용자의 Application에 설치 되어 동작하기 전에 , 실제 가동 가능한 범위를 측정하여 Short Stroke Limit/Long Stroke Limit를 설정하신 후 사용하는 것을 추천 드립니다.  
->~~설치된 기구물의 한계 밖의 위치 이동값을 입력할 경우 mightyZAP 또는 사용자의 Application 이 파손되거나, Overload 보호 기능이 동작 될 수 있습니다.~~   
-><font color="#ffc000">설치된 사용자 기구물의 기구 한계 밖의 위치 이동값을 입력할 경우 생길 수 있는 사용자 어플리케이션의 파손이나 액츄에이터의 오버로드 또는 파손을 방지할 수 있습니다.</font>
+>설치된 사용자 기구물의 기구 한계 밖의 위치 이동값을 입력할 경우 생길 수 있는 사용자 어플리케이션의 파손이나 액츄에이터의 오버로드 또는 파손을 방지할 수 있습니다.
 >자세한 내용은 [[#3. 유의 사항]]을 확안하여 주시기 바랍니다.
 
 ### 2.4.8 Start Compliance Margin  
@@ -297,9 +301,9 @@ Compliance Margin이란 이동 명령을 통해 Actuator를 구동 시작 시키
 
 Start Compliance Margin은 mightyZAP이 Goal Position 위치 값으로 이동 하기 위한  최소 위치 편차(마진) 값 입니다. 
 
-| value   | Description              |
+| Range   | Description              |
 | ------- | ------------------------ |
-| 0 ~ 255 | 이동 하기 위한  최소 위치 편차(마진) 값 |
+| 0 ⁓ 255 | 이동 하기 위한  최소 위치 편차(마진) 값 |
     
 <font size="5" color="#4f81bd"><b>Start Compliance Margin은 다음의 2가지의 경우에 적용이 됩니다.</b></font>
 1. 현재 위치에서 다른 위치로 이동하기 위해 Goal Position 값을 변경하는 경우
@@ -321,7 +325,7 @@ Start Compliance Margin은 mightyZAP이 Goal Position 위치 값으로 이동 �
    
 2. 정지 위치에서 외력에 의해 위치가 변화가 생긴 경우  
     물리적인 외압이나 노이즈 등에 의해서 최종 명령받은 Goal Position 값과 현재 위치 값의 차이가(절대값) Margin 값보다 크게 위치 변화가 일어나면 위치 보정을 위해 mightyZAP이 동작합니다.
-    그러므로 Start Compliance Margin 값이 클수록 외압이나 노이즈의 발생 혹은 유격이 늘어나는 환경에서도 안정적인 동작을 하게 되지만, 원하는 위치로 정확한 구동을 하기 위한 민감도는 떨어집니다.
+    그러므로 Start Compliance Margin 값이 클수록 외압이나 노이즈의 발생 혹은 유격이 늘어나는 환경에서도 안정적인 동작을 하게 되지만, 원하는 위치로 정확한 구동을 하기 위한 민감도는 떨어집니다.
 
 >[!exam] 예시 1  
 >**외부 힘에 의해 위치 편차가 발생한 경우**
@@ -353,9 +357,9 @@ End Compliance Margin은 mightyZAP이 정지하기 위한 최대 위치 편차 �
 Compliance Margin이란 이동 명령을 통해 Actuator를 구동 시작 시키거나 혹은 명령 수행을 완료 시키기 위한 최소 값의 크기입니다. 일반적인 경우 한 가지의 Compliance Margin 값을 통해, 구동 시작이나 구동 완료를 시키는 것이 보통이지만 당사 mightyZAP은 시작 시와 완료 시의 Compliance Margin을 각각 개별로 설정해서, 우수한 반복 위치 정밀도를 가지면서도, 안정적인 동작이 가능하게 설계가 되었습니다.
 일반적으로 Compliance Margin을 조정하는 경우는 디폴트 값보다 크게 해서 정밀도를 일부 희생하더라도 외압이나 노이즈 등이 발생하는 불안정된 환경에서도 안정적으로 동작이 될 수 있도록 하는 경우가 대부분입니다.   반대로 Compliance Margin을 디폴트 값 보다 더 줄여서 사용하는 경우는 정밀도는 좋아지는 대신에 동작 안정성을 해칠 수 있으므로 특별한 주의를 요합니다. 
 
-| value   | 동작 상태                  |
+| Range   | 동작 상태                  |
 | ------- | ---------------------- |
-| 0 ~ 255 | 정지하기 위한 최대 위치 편차(마진) 값 |
+| 0 ⁓ 255 | 정지하기 위한 최대 위치 편차(마진) 값 |
 
 mightyZAP이 위치 편차를 줄이기 위해 동작 중일 때 적용이 되며, Present Position과 Goal Position의 편차가 End Compliance Margin 보다 작을 경우 mightyZAP이 정지 합니다.  
 
@@ -371,16 +375,16 @@ mightyZAP이 위치 편차를 줄이기 위해 동작 중일 때 적용이 되�
 
 **기본 개념**
 End Compliance Margin에 대한 기본적인 개념은 다음과 같습니다.
-진행 방향에서의 End Complilance Margin 위치에서 mightyZAP은 내부적으로 정해진 전기적 브레이크 명령을 내립니다. 이때 mightyZAP은 전기적인 브레이크, 내부적인 마찰과 관성등에 의해 일정 거리를 이동한 후 정지하게 됩니다.  전기적 브레이크 후 이동한 거리가 End Compliance Margin의 값과 동일하게 하게 되면,  명령을 내린 목표위치에 가장 가깝게 됩니다.  <span style="background:#ff4d4f"> (아래 stop command는 Stop command(Electrical brake)로 수정)</span>
-![[EndMarginBasic.gif|700]]  
+진행 방향에서의 End Complilance Margin 위치에서 mightyZAP은 내부적으로 정해진 전기적 브레이크 명령을 내립니다. 이때 mightyZAP은 전기적인 브레이크, 내부적인 마찰과 관성등에 의해 일정 거리를 이동한 후 정지하게 됩니다.  전기적 브레이크 후 이동한 거리가 End Compliance Margin의 값과 동일하게 하게 면,  명령을 내린 목표위치에 가장 가깝게 됩니다. 
+![[EndMarginBasic.gif]]  
 **End Compliance 줄이기**    
-부하가 적은 환경에서는 반복 정밀도를 높이기 위해 End compliance Margin을 줄이는 것이 효과적일 수 있습니다. 그렇지만 관성에 의해 밀리는 거리가 End Compliance Margin보다 길 경우 목표 위치를 벗어나 정지하게 되거나 그 이상의 거리를 이동한 후 정지 할 수 있습니다. <span style="background:#ff4d4f"> (아래 stop command는 Stop command(Electrical brake)로 수정), 아래 End compliance Margin 오타 수정</span>
-  ![[EnmMarginDec.gif|700]]
+부하가 적은 환경에서는 반복 정밀도를 높이기 위해 End compliance Margin을 줄이는 것이 효과적일 수 있습니다. 그렇지만 관성에 의해 밀리는 거리가 End Compliance Margin보다 길 경우 목표 위치를 벗어나 정지하게 되거나 그 이상의 거리를 이동한 후 정지 할 수 있습니다.
+  ![[EndMarginDec.gif|700]]
 **Start Compliance Margin과 End Compliance Margin과의 관계**   
 Start Compliance Margin과 End Compliance Margin과의 거리가 가깝거나 같을 경우 문제가 발생할 수 있습니다.   
 <font color="#4f81bd">상황 1.  Start Margin과 End Margin이 모두 작은 경우</font>
 아래의 이미지와 같이 Start Margin과 End Margin이 모두 작은 경우, 부하가 크거나 관성이 있는 환경에서는 반대편 Start Margin까지 벗어나게 되어 Overshoot 가 발생할 수 있습니다.  
-![[StartEndMargin.gif|700]]  
+![[StartEndMargin2.gif|700]]  
 <font color="#4f81bd">상황 2.  Start Margin 과 End Margin이 같은 경우</font>
 Start Margin 과 End Margin 거의 같고 부하가 적고 관성이 적은 제품을 제어할 경우 위치 오차와 노이즈로 아래와 같이 정상적으로 정지를 못하고 진동할 수 있습니다.  
 ![[StartEndMargin2.gif|700]]
@@ -395,10 +399,10 @@ Start Margin 과 End Margin 거의 같고 부하가 적고 관성이 적은 제�
 >default로 설정된 값은 최소한의 안전성을 위해 선정된 값으로 default 값 아래로 낮추는 것은 추천 드리지 않습니다.  
 
 ### 2.4.10 Acceleration/Deceration  
-| Parameter | Description | range | Unit |
-| ---- | ---- | ---- | ---- |
-| Acceleration | 모터 가속 시간 | 0~1000 | msec |
-| Deceleration | 모터 감속 시간 | 0~1000 | msec |
+| Parameter    | Description | range    | Unit |
+| ------------ | ----------- | -------- | ---- |
+| Acceleration | 모터 가속 시간    | 0 ⁓ 1000 | msec |
+| Deceleration | 모터 감속 시간    | 0 ⁓ 1000 | msec |
 
 각각은 mightyZAP의 가속과 감속을 제어하는 Parameter 입니다.  
 동작 시작시와 종료시의 가감속을 제어하여 동작의 부드러움을 조정함으로써  모터의 진동 등을 줄이기 위한 제어 방법입니다.  Parameter에 입력된 값은 가감속 제어를 하는 시간을 의미하며 부하에 따라 제어 시간이 늘어날 수 있으며 절대적인 값은 아닙니다.  
@@ -407,12 +411,12 @@ Start Margin 과 End Margin 거의 같고 부하가 적고 관성이 적은 제�
 ![[AccDecGraph.png]]
 
 ### 2.4.11 Min/Max Position Calibration  
-| Parameter                | Description            | Range  | Unit |
-| ------------------------ | ---------------------- | ------ | ---- |
-| Min Position Calibration | Goal Position 최소 위치 조정 | 0~1000 |      |
-| Max Position Calibration | Goal Position 최대 위치 조정 | 0~1000 |      |
+| Parameter                | Description            | Range    |
+| ------------------------ | ---------------------- | -------- |
+| Min Position Calibration | Goal Position 최소 위치 조정 | 0 ⁓ 1000 |
+| Max Position Calibration | Goal Position 최대 위치 조정 | 0 ⁓ 1000 |
 
-Min/Max Position Calibration Parameter는 mightyZAP의 Goal Position이 최소/최대 값일 때의 Rod의 위치 값을 조절하는 Parameter이다.  (==<span style="background:#ff4d4f">사용자입장에서 어느 경우에 min/max cali를 하면 되는것인지. 여러대의 동일 액츄에이터의 시작, 끝점을 동일하게 맞출때??)</span>==
+Min/Max Position Calibration Parameter는 mightyZAP의 Goal Position이 최소/최대 값일 때의 Rod의 위치 값을 조절하는 Parameter이다. 
 
 이해를 위해 아래의 이미지를 참조하여 주시기 바랍니다.  
 ![[minmaxPostion.png]]
@@ -424,7 +428,7 @@ Min/Max Position Calibration Parameter는 mightyZAP의 Goal Position이 최소/�
 	  Max Position Calibration 값을 줄일 경우 Goal Position 최대 값일 때의 Max Position 위치가 늘어나게 되며 전체 동작 stroke도 늘어나게 됩니다. 하지만 양 끝단의 비선형 구간이 늘어나게 됩니다.
   ![[minmaxCalibration.gif]]
 >[!tip] TIP  
->Min / Max position calibration 파라메터는 보통 별도 조정을 하지 않아도 됩니다. 다만, 여러개의 동일모델 액츄에이터의 시작 및 끝 위치를 정확하게 일치시키기를 원하는 경우, 필요에 따라 사용을 하시면 됩니다. 
+>Min / Max position calibration 파라메터는 보통 별도 조정을 하지 않아도 됩니다. 다만, 여러개의 동일모델 액츄에이터의 시작 및 끝 위치를 정확하게 일치시키기를 원하는 경우, 필요에 따라 사용을 하시면 됩니다. 
 
 
 ### 2.4.12 Motor Operating Rate Limit  
@@ -432,16 +436,16 @@ mightyZAP의 모터를 제어하기 위해 사용되는 모터 PWM (가동률)�
 
 | value        | Description            |
 | ------------ | ---------------------- |
-| -1000 ~ 1000 | 모터에 공급하는 PWM 의 최대 값 설정 |
+| -1000 ⁓ 1000 | 모터에 공급하는 PWM 의 최대 값 설정 |
 >[!tip] TIP  
 > Motor Operating Rate의 "모터 PWM"은 당사 제품의 위치 제어 신호용 PWM과 다른 개념입니다.
  
 ### 2.4.13 Speed Limit  
 mightyZAP의 최대 이동 속도 제한 값입니다. 비휘발성 파라메터로서, 전원이 꺼져도 메모리에 저장이 됩니다. 휘발성 파라메터인 Goal Speed도 동일한 기능을 하지만, 메모리에 저장이 되지는 않습니다.  저장횟수에 제한이 있으므로, 빈번한 속도 제어를 위해서는 Goal Speed 파라메터를 사용하시기 바랍니다. 
 
-| value | Description | Note |
-| ---- | ---- | ---- |
-| 0 ~ 1000 | mightyZAP 최대 속도 제한 설정 |  |
+| value    | Description           |
+| -------- | --------------------- |
+| 0 ⁓ 1000 | mightyZAP 최대 속도 제한 설정 |
 
 Speed Limit를 낮게 설정하여도 최대 Force에는 영향을 주지 않지만, 최대 전류까지 도달하는 시간은 다를 수 있습니다. 속도의 값이 낮을 수록 최대 전류까지 도달하는 시간이 길어집니다.  
 Speed Limit를 변경할 경우, Goal Speed도 같이 변경됩니다. 또한 전원 인가 시 Speed Limit의 값을 Goal Speed에 적용합니다.  
@@ -456,7 +460,7 @@ Speed Limit를 변경할 경우, Goal Speed도 같이 변경됩니다. 또한 �
 
 | value   | Description           | Unit | Note                             |
 | ------- | --------------------- | ---- | -------------------------------- |
-| 0 ~1600 | mightyZAP 최대 전류 제한 설정 | mA   | default : 800  <br>오차 범위 +/- 15% |
+| 0 ⁓1600 | mightyZAP 최대 전류 제한 설정 | mA   | default : 800  <br>오차 범위 +/- 15% |
 
 Current Limit는 비 휘발성 Parameter로 전원이 끊어져도 변경된 Data 를 유지합니다. Current Limit 값이 변경되면 Goal Current 값도 같이 변경됩니다.   
 Current Limit를 높게 설정할수록 과부하 상황에서 모터가 낼 수 있는 최대 force도 올라가지만, 모터 수명 단축의 원인이 될 수도 있습니다.  
@@ -469,21 +473,21 @@ Current Limit를 높게 설정할수록 과부하 상황에서 모터가 낼 수
 >Current Limit/Goal current 값에 대한 동작 특성은  모터 성능 곡선 및 Datasheet를 참조하여 주시기 바랍니다.
 
 ### 2.4.15 Current PI Control  
-| Parameter      | Description      | Range   | Unit |
-| -------------- | ---------------- | ------- | ---- |
-| Current P Gain | Current PI 비례 제어 | 0 ~ 255 |      |
-| Current I Gain | Current PI 적분 제어 | 0 ~ 255 |      |
+| Parameter      | Description      | Range   |
+| -------------- | ---------------- | ------- |
+| Current P Gain | Current PI 비례 제어 | 0 ⁓ 255 |
+| Current I Gain | Current PI 적분 제어 | 0 ⁓ 255 |
 모터의 전류 제어를 위한 PI Gain값입니다.  PI제어는 민감한 제어의 영역이므로 제어에 주의가 요구됩니다. 기본 값보다 큰 PI Gain 값을 적용할 경우 Goal Current 오차에 대해 거칠게 동작할 수 있습니다.  정해진 값보다 작은 PI Gain 값을 적용할 경우 Goal Current 오차에 부드럽게 동작하나 Goal Current 값 과의 오차가 크게 나타날 수 있습니다.
 > [!warning] WARNING   
 >PI값을 변경하기 전에 [[#2.4.10 Acceleration/Deceration]]을 먼저 적용하고 테스트하여 주시기 바랍니다.  
 >PI값을 수정하시기 전에 PID에 대한 충분히 숙지하신 후에 해당 값을 변경하여 주시기 바랍니다.
 
 ### 2.4.16 Speed PID Control  
-| Parameter | Description | Range | Unit |
-| ---- | ---- | ---- | ---- |
-| Speed P Gain | Speed PID 비례 제어 | 0 ~ 255 |  |
-| Speed I Gain | Speed PID 적분 제어 | 0 ~ 255 |  |
-| Speed D Gain | Speed PID 미분 제어 | 0 ~ 255 |  |
+| Parameter    | Description     | Range   |
+| ------------ | --------------- | ------- |
+| Speed P Gain | Speed PID 비례 제어 | 0 ⁓ 255 |
+| Speed I Gain | Speed PID 적분 제어 | 0 ⁓ 255 |
+| Speed D Gain | Speed PID 미분 제어 | 0 ⁓ 255 |
 
 속도 PID 제어의 Gain 값입니다.  PID 제어는 민감한 영역으로, 다른 자료를 통해 미리 스터디하여 주시기 바랍니다. Gain보다 큰 값을 넣을 경우 속도 및 위치 오차에 대해 빠르게 반응하여 목표한 위치에 도달하여 정지하는 데 가지의 시간이 줄어 들게 됩니다. 
 하지만, 너무 큰 Gain값을 적용할 경우  오차에 대해 거칠게 동작하여 Overshoot 도는 과도 응답 상태로 정해진 위치 값을 정지하지 못하고 모터가 진동할 수 있습니다.
@@ -503,21 +507,21 @@ PID 값을 수정하실 때는 기본 값에서 작은 값을 가 감하여 테�
 ### 2.4.17 Indirect Address
 사용자는 해당 기능을 이용하여, 서로 떨어져 있는 여러 Parameter를 모아서 이용할 수 있습니다.   
 
-| Parameter | Description | Range | Unit |
-| ---- | ---- | ---- | ---- |
-| Indirect Address N | 사용자 간접 주소 지정 | 0 ~ 65535 |  |
+| Parameter          | Description  | Range     |
+| ------------------ | ------------ | --------- |
+| Indirect Address N | 사용자 간접 주소 지정 | 0 ⁓ 65535 |
 
-보통은 서로 떨어져 있는 address의 Parameter들의 데이터를 변경할 경우 각 Parameter 개별로 통신을 해야합니다. 하지만 이러할 경우 통신시간이 길어지게 됩니다.
-연속된 Address는 한번의 통신 패킷으로 데이터를 적용할 수있어 통신 효율성이 좋습니다.
+보통은 서로 떨어져 있는 address의 Parameter들의 데이터를 변경할 경우 각 Parameter 개별로 통신을 해야 합니다. 하지만 이러할 경우 통신 시간이 길어지게 됩니다.
+연속된 Address는 한번의 통신 패킷으로 데이터를 적용할 수 있어 통신 효율성이 좋습니다.
 
-그러므로, 서로 떨어져있는 Parameter를 연속된 Address 로 설정하기 위해 Indirect Address와 Indirect Data를 사용합니다.
+그러므로, 서로 떨어져 있는 Parameter를 연속된 Address 로 설정하기 위해 Indirect Address와 Indirect Data를 사용합니다.
 -  연속된 Address로 설정할 Parameter들을 Indirect Adress에 연속되게 설정합니다.
 -  Indirect Address 에 특정 Parameter Address를 설정하고 Indirect Data에서 데이터를 읽거나 쓰면 됩니다.
 
 [Example]
-- 사용하려고하는 Parameter를 Data Map을 참조하여 Indirect Address 에 세팅합니다.
-  이때 쓰기용과 읽기용 파라메터들은을 그룹핑을 하여 나누어 설정하는 것이 좋습니다. (빨간선 : 쓰기용, 파란선 : 읽기용)
-- Indirect Address 설정이 완료되면, 실사용시에는 Indirect Data 파라메터에 데이터를 쓰고 읽으면,  Original Parameter Data의 값을 읽고 쓰는것과 동일한 결과를 얻을 수 있습니다.
+- 사용하려고 하는 Parameter를 Data Map을 참조하여 Indirect Address 에 세팅합니다.
+  이때 쓰기용과 읽기용 파라메터들은 그룹핑을 하여 나누어 설정하는 것이 좋습니다. (빨간선 : 쓰기용, 파란선 : 읽기용)
+- Indirect Address 설정이 완료되면, 실사용 시에는 Indirect Data 파라메터에 데이터를 쓰고 읽으면,  Original Parameter Data의 값을 읽고 쓰는 것과 동일한 결과를 얻을 수 있습니다.
 >[!tip] TIP  
 >Total Manager를 통해 Indricet Address 설정을 쉽게 사용할 수 있습니다.   
 >사용 빈도가 높은 Parameter는 Select Box에 Option으로 추가 하였으며, 등록되지 않은 주소의 경우 'User Input' Option을 선택 하신 Select Box 옆 Test Box에 직접 작성하여 저장하여 주시면 됩니다.   
@@ -608,9 +612,9 @@ Action Setting에서 설정된 내용에 대한 반복 횟수 또는 1회 동작
 **Repeat time**  
 Interval 또는 dWell Time으로 설정할 시간 값을 입력합니다.  
 
-| value (msec) | Description               |
+| Range (msec) | Description               |
 | ------------ | ------------------------- |
-| 0 ~ 65535    | Interval 또는 dWell Time 시간 |
+| 0 ⁓ 65535    | Interval 또는 dWell Time 시간 |
 **Repeat Count**  
 하나의 Action을 반복할 횟수를 지정합니다.
 
@@ -625,12 +629,11 @@ Moving Setting은 각 Action의 Goal Speed, Goal Current, Acceleration, Decelera
 <font color="#4f81bd" size='5'><b>Index Setting</b></font>  
 Index Action은 한 Action 종료 후 상태를 설정합니다.  
 
-| value  | Description                                                                                     |
-| ------ | ----------------------------------------------------------------------------------------------- |
-| Stop   | 모든 Action을 종료합니다. 다음 Action Enable 신호가 오기 전까지 대기합니다.                                            |
-| Next   | 다음 Index를 실행합니다.                                                                                |
-| Repeat | ==Index 0부터 다시 시작하여 Action 정지 명령이 있을 때 까지 모든 Action을 무한 반복 실행합니다. (Index 0부터 Repeat가 입력된 Index까지)== |
-
+| value  | Description                                                                                           |
+| ------ | ----------------------------------------------------------------------------------------------------- |
+| Stop   | 모든 Action을 종료합니다. 다음 Action Enable 신호가 오기 전까지 대기합니다.                                                  |
+| Next   | 다음 Index를 실행합니다.                                                                                      |
+| Repeat | Index 0부터 다시 시작하여 Action 정지 명령이 있을 때 까지 모든 Action을 무한 반복 실행합니다. (Index 0부터 Repeat가 입력된 Index까지 반복 수행) |
 ### 2.4.20 Force On/Off  
 | value | Description |
 | ---- | ---- |
@@ -709,9 +712,9 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
 위치 이동 명령으로 migthtyZAP을 이동 시키고자 할 때 사용하는 목표 위치 값입니다. Goal Position은 [[#3.1.5 Stroke Limit 설정|Stroke Limit]] 설정 제한 값 까지 입력이 가능합니다.  
 (즉, stroke limit 범위 밖으로는 위치 명령을 내려도 stroke limit위치까지만 움직입니다)
 
-| value | Description |
-| ---- | ---- |
-| 0 ~ 10000 | mightyZap의 이동 목표 위치값을 설정합니다.<br>(각 모델의 Stroke 길이와 상관없이 위치 해상도는 모두 10000입니다.) |
+| Range     | Description                                                                  |
+| --------- | ---------------------------------------------------------------------------- |
+| 0 ⁓ 10000 | mightyZap의 이동 목표 위치값을 설정합니다.<br>(각 모델의 Stroke 길이와 상관없이 위치 해상도는 모두 10000입니다.) |
 >[!tip] TIP  
 >사용하고 계신 Stoke 의 최대 길이를 참조하시여 위치 값을 계산하시기 바랍니다.   
 $$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$
@@ -719,9 +722,9 @@ $$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$
 mightyZAP의 동작 속도를 변경할 때 사용합니다.  
 초기 전원 인가 시 비휘발성 파라메터인 Speed Limit에서 값을 불러와 휘발성 파라메터인 Goal Speed에 저장합니다. 동작중 빈번한 속도 변경은 휘발성 파라메터인 Goal Speed를 사용하여 주십시오.  
 
-| value | Description | 비고 |
-| ---- | ---- | ---- |
-| 0 ~ 1000 | mightyZap의 최대 속도 값 | +/- 10% |
+| Range    | Description        | 비고      |
+| -------- | ------------------ | ------- |
+| 0 ⁓ 1000 | mightyZap의 최대 속도 값 | +/- 10% |
 
 ( 0일 때 기동력 OFF 상태이고 1000일 때 최대 속도를 냅니다. )
 Goal Speed값을 이용하여 실제 예상되는 속도 계산값은 아래와 같습니다. 
@@ -734,9 +737,9 @@ Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
 ### 2.4.27 Goal Current  
 모터의 최대 전류를 제한합니다. 전류 값을 제한하여 mightyZAP의 최대 Stall Force를 제한 할 수 있습니다. 각 Goal Current 값에 대한 Stall Force는 Datasheet를 참조하여 주시기 바랍니다.  
 
-| value | Description |
-| ---- | ---- |
-| 0 ~ 1600 | mightyZap의 최대 전류 설정 값 |
+| Range    | Description           |
+| -------- | --------------------- |
+| 0 ⁓ 1600 | mightyZap의 최대 전류 설정 값 |
 
 초기 전원 인가 시 비휘발성 파라메터인 [[#2.4.14 Current Limit|Current LImit]]에서 값을 불러와 휘발성 파라메터인 Goal Current에 저장합니다. 동작중 빈번한 전류 변경은 휘발성 파라메터인 Goal Current를 사용하여 주십시오.  
 > [!note] Note - Goal Current를 이용한 Force 제한  
@@ -748,55 +751,55 @@ Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
 >Goal Current 800  이상 또는 1600- 설정으로 지속적인 사용시 모터에 무리가 발생합니다. 지속적으로 사용하는 구간이 아닌 특정상황에서 잠시 사용하는 구간입니다.  지속 적으로 사용할 경우 overload Error가 발생하거나 모터의 수명이 짧아지게 됩니다.
 
 ### 2.4.28 Present Postion
-mightyZAP의 현재 위치 값을 나타냅니다.   ==Load data명령을 통해 현재 위치값을 피드백 받을 수 있습니다.== 
+mightyZAP의 현재 위치 값을 나타냅니다.  
 
-| value | Description | Unit |
-| ---- | ---- | ---- |
-| 0~10000 | 현재 위치 값 |  |
+| Range     | Description |
+| --------- | ----------- |
+| 0 ⁓ 10000 | 현재 위치 값     |
 
 사용중인 mightyZAP 의 최대 stroke 길이를 참조하여 위치 값을 계산하시기 바랍니다.      
 $$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$  
 정지한 이후에도 미세한 위치 변동은 나타날 수 있으며 이는 정상 동작입니다.   
 
 ### 2.4.29 Present Current
-모터의 현재 전류 사용 값입니다.  ==Load data명령을 통해 현재 전류값을 피드백 받을 수 있습니다.== 
+모터의 현재 전류 사용 값입니다. 
 
-| value  | Description | Unit | 오차     |
-| ------ | ----------- | ---- | ------ |
-| 0~1600 | 현재 전류 값     | mA   | +/-15% |
+| Range    | Description | Unit | 오차     |
+| -------- | ----------- | ---- | ------ |
+| 0 ⁓ 1600 | 현재 전류 값     | mA   | +/-15% |
 Present Current는 오차를 포함하고 있음으로 참고 용으로 사용하여 주시기 바랍니다.
 
 ### 2.4.30 Present Motor Operating Rate
 모터에 공급되는 모터 PWM값을 나타냅니다. (통신용 PWM과의 오해를 방지하기 위해 Motor Operating Rate(모터 가동율)이라는 용어를 사용합니다. )   
 
-| value       | Description       |
-| ----------- | ----------------- |
-| -10000~1000 | Motor에 공급되는 PWM 값 |
-| 0           | Motor 정지 상태       |
+| Range         | Description       |
+| ------------- | ----------------- |
+| -10000 ⁓ 1000 | Motor에 공급되는 PWM 값 |
+| 0             | Motor 정지 상태       |
 Motor Operating Rate는 Goal Speed, Goal Current 셋팅 등에 따라 값이 달라집니다.   
 
 ### 2.4.31 Present Voltage  
 입력 전압 값을 나타내며 단위는 0.1[V] 입니다.
 
-|value|Description |Unit |
-|---|---|---|
-|0~130| 현재 입력 전압 |[v]|
+| Range   | Description | Unit |
+| ------- | ----------- | ---- |
+| 0 ⁓ 130 | 현재 입력 전압    | [v]  |
 ### 2.4.32 Moving
-모터의 동작 유무를 나타냅니다. ==정확히는 모터의 목표 도달 유무를 나타냅니다.==  
+모터의 동작 유무를 나타냅니다.  모터가 동작하면 ON되고 목표 위치에 도달할 경우 OFF 됩니다.
 <table>
 </table>
 
-| value  | Description |
-| ---- | ---- |
-| 0 | mightyZAP 정지 상태 |
-| 1 | mightyZAP 동작 중 |
+| value | Description     |
+| ----- | --------------- |
+| 0     | mightyZAP 정지 상태 |
+| 1     | mightyZAP 동작 중  |
 
 ### 2.4.33 Present Overload Value
 Overload의 기준이 되는 전류 누적량을 백분율로 표시합니다. 
 
-| value | Description | Unit |
-| ---- | ---- | ---- |
-| 0~100 | Overload 전류 누적량 백분율 | % |
+| Range   | Description         | Unit |
+| ------- | ------------------- | ---- |
+| 0 ⁓ 100 | Overload 전류 누적량 백분율 | %    |
 모터가 동작 할 경우 전류값이 누적되어 값이 상승하고 모터가 정지 할 때 값이 감소됩니다. 누적되는 값은 부하 정도에 따라 다르며, 감소 되는 값은 모터 정지 시 정격 전류 기준값으로 감소됩니다.   
 Overload에 관한 자세한 사항은 [[#2.4.24 Hardware Error]] 에서 확인하여 주시기 바랍니다.   
 최대 값은 100으로 표시하며, 해당 값이 100이 될 경우 Overload Error 가 발생하게 됩니다.  
@@ -807,10 +810,10 @@ Overload Error가 발생하지 않도록 <u>Overload value 값을 90 이하</u>�
 ### 2.4.34 Action Enable
 [[#2.4.19 Action Control]]로 작성된 Action을 실행할 때 사용합니다. Action Parameter 를 작성하였어도 <u>Action Enable을 활성화 하지 않으면 Action은 동작하지 않습니다</u>. 
 
-| value | Description |
-| ---- | ---- |
-| 0 | Action Disable |
-| 1 | Action Enable |
+| value | Description    |
+| ----- | -------------- |
+| 0     | Action Disable |
+| 1     | Action Enable  |
 > [!tip] TIP  
 >Action에 대한 자세한 사항은 [[#2.4.19 Action Control]]을 참조하여 주시기 바랍니다.
 

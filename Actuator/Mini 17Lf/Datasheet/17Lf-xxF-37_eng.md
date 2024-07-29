@@ -1,43 +1,46 @@
 # 1 Features / 주요 특장점
 - Micro size / 마이크로 사이즈  
--  Precise position control / 정밀 위치 제어
--  Force control by current feedback / 전류 피드백 통한 포스 제어
--  Speed control (1000 resolution) / 속도 제어( 1000 해상도)
--  Strong force comparing to the size / 체적 대비 강한 힘
--  Built-in Drive Circuitry / 드라이브 회로 내장
--  RS-485 communication / RS-485 통신 지원
--  Parameter programmable on the Manager software / 매니저 소프트웨어를 통한 Parameter 셋팅 가능 
+- Precise position control & feedback / 정밀 위치 제어 및 위치피드백
+- Stall Force control by current feedback / 전류 피드백 통한 스톨 포스 제어
+- Speed control (1000 resolution) / 속도 제어( 1000 해상도)
+- Strong force comparing to the size / 체적 대비 강한 힘
+- Built-in Drive Circuitry / 드라이브 회로 내장
+- RS-485 communication / RS-485 통신 지원
+- MODBUS RTU Protocol / MODBUS RTU 프로토콜
+- Expansion I/O Port /  확장 I/O Port 제공 
+- Action function (No coding) / Action 기능 (코딩 불필요)
+- Parameter programmable on the Manager software / 매니저 소프트웨어를 통한 Parameter 셋팅 가능 
 
 # 2 Specification
 ## 2.1 Common Specifications / 공통 사양
-| **Property** | Value |
-| ---- | ---- |
-| **Stroke / 스트로크** | 37mm |
-| **Rated Load / 정격 부하** | 17N~50N according to gear ratio/ 기어비에 따라 17N~50N |
-| **Recommended duty cycle at rated load** | under 50%(50% 이하) |
-| **Micro controller** | 32bit Arm Cortex |
-| **Position Resolution** | 10000 Resolution (A/D Converter) |
-| **Input Voltage / 입력 전압** | 12.0V(Rated/정격), 8V ~ 13 V(Operating) |
-| **Motor Type / Watt** | Coreless DC Motor / 3.8 Watt |
-| **Current consumption / 소모전류** | 30mA(Idle), 400mA(Rated), 1.6A(Stall) |
-| **Position repeatability** | Unidirectional less than 0.03mm(30um) |
-| ^ | Bydirectional less than +/0.06mm(60um) |
-| **전류 값 오차 / Current Tolerance** | ±15% at Over 50mA |
-| **Position sensor / 위치센서** | 10kΩ linearity potentiometer |
-| **Size, Weight /크기,무게** | 86.8(L)x 57.9(W)x 23(H)mm / 113.5g [+/-5%] (to be varied according to gear ratio) |
-| **Communication/ 통신** | RS485 |
-| **Protocol** | Modbus RTU |
-| **Operating Temperatures / 동작온도** | -10℃ ~ 60℃ |
-| **Ingress protection / 방수방진** | IP54 |
-| **Mechanical Backlash / 기구백래쉬** | 0.03mm(30um) |
-| **Audible Noise / 가청소음** | Max. 50db at 1m |
-| **Gear ratio / 기어비** | 9.6 : 1 |
-| **Gear type / 기어 타입** | Engineering Plastic |
-| **Rod type / Rod 타입** | Staniless Steel Rod / 스테인레스 스틸 |
-| **Standard Accessory / 표준 악세서리** | 1xHinge base  <br>1x Hinge  <br>1xHinge shaft  <br>1xRod end tip  <br>2x M3 NUT  <br>3 x M2.5x6 screws  <br>1x RS485 Molex wire harness (200mm)   <br>Extended I/O 1x Molex wire harness (200mm)  <br>1 x M3 spanner  <br>1 x Socket set screw |
-| **Connector Type (Male) in the Actuator** | MOLEX 53253-0470 |
-| **Wire Harness** | Molex(51065-0400) to Molex(51065-0400)/ 200mm / 0.08x60(22AWG) |
-| **Extended Wire Harness**  | Molex 510210500, 5pins / 200mm length, 0.16 x 7 (26AWG) |
+| **Property**                              | Value                                                                                                                                                                                                                                          |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Stroke / 스트로크**                         | 37mm                                                                                                                                                                                                                                           |
+| **Rated Load / 정격 부하**                    | 17N⁓50N according to gear ratio/ 기어비에 따라 17N~50N                                                                                                                                                                                               |
+| **Recommended duty cycle at rated load**  | under 50%(50% 이하)                                                                                                                                                                                                                              |
+| **Micro controller**                      | 32bit Arm Cortex                                                                                                                                                                                                                               |
+| **Position Resolution**                   | 10000 Resolution (A/D Converter)                                                                                                                                                                                                               |
+| **Input Voltage / 입력 전압**                 | 12.0V(Rated/정격), 8V ⁓ 13 V(Operating)                                                                                                                                                                                                          |
+| **Motor Type / Watt**                     | Coreless DC Motor / 3.8 Watt                                                                                                                                                                                                                   |
+| **Current consumption / 소모전류**            | 30mA(Idle), 400mA(Rated), 1.6A(Stall)                                                                                                                                                                                                          |
+| **Position repeatability**                | Unidirectional less than 0.03mm(30um)                                                                                                                                                                                                          |
+| ^                                         | Bydirectional less than +/0.06mm(60um)                                                                                                                                                                                                         |
+| **전류 값 오차 / Current Tolerance**           | ±15% at Over 50mA                                                                                                                                                                                                                              |
+| **Position sensor / 위치센서**                | 10kΩ linearity potentiometer                                                                                                                                                                                                                   |
+| **Size, Weight /크기,무게**                   | 86.8(L)x 57.9(W)x 23(H)mm / 113.5g [+/-5%] (to be varied according to gear ratio)                                                                                                                                                              |
+| **Communication/ 통신**                     | RS485                                                                                                                                                                                                                                          |
+| **Protocol**                              | Modbus RTU                                                                                                                                                                                                                                     |
+| **Operating Temperatures / 동작온도**         | -10℃ ~ 60℃                                                                                                                                                                                                                                     |
+| **Ingress protection / 방수방진**             | IP54                                                                                                                                                                                                                                           |
+| **Mechanical Backlash / 기구백래쉬**           | 0.03mm(30um)                                                                                                                                                                                                                                   |
+| **Audible Noise / 가청소음**                  | Max. 50db at 1m                                                                                                                                                                                                                                |
+| **Gear ratio / 기어비**                      | 9.6 : 1                                                                                                                                                                                                                                        |
+| **Gear type / 기어 타입**                     | Engineering Plastic                                                                                                                                                                                                                            |
+| **Rod type / Rod 타입**                     | Staniless Steel Rod / 스테인레스 스틸                                                                                                                                                                                                                 |
+| **Standard Accessory / 표준 악세서리**          | 1xHinge base  <br>1x Hinge  <br>1xHinge shaft  <br>1xRod end tip  <br>2x M3 NUT  <br>3 x M2.5x6 screws  <br>1x RS485 Molex wire harness (200mm)   <br>Extended I/O 1x Molex wire harness (200mm)  <br>1 x M3 spanner  <br>1 x Socket set screw |
+| **Connector Type (Male) in the Actuator** | MOLEX 53253-0470                                                                                                                                                                                                                               |
+| **Wire Harness**                          | Molex(51065-0400) to Molex(51065-0400)/ 200mm / 0.08x60(22AWG)                                                                                                                                                                                 |
+| **Extended Wire Harness**                 | Molex 510210500, 5pins / 200mm length, 0.16 x 7 (26AWG)                                                                                                                                                                                        |
 
 ## 2.2 Volatges / 전압  
 |    Parameter                                     |        Min                      |        Norm          |        Max           |      Unit           |    Note    |
@@ -151,11 +154,56 @@ Stall Force 측정 방식은 속도 값을 최소한으로 하여 순수 전류 
 >붉은색으로 표기된 부분은 해당 Goal Current 값에서의 Stall Force와 정격부하가 비슷한 구간으로 mightyZAP이 움직이지 않을 수 있습니다.  참고용으로만 사용하여 주시기 바랍니다.
  
 ## 3.6 PIN Map
+#### 3.6.1 RS485 PIN Map
+#### 3.6.1.1 PIM MAP Table
 
 | PIN NUMBER(COLOR) | PIN NAME&nbsp; | <div>FUNCTION</div> |
-|:------------------:|:---------------:|:--------------------:|
-|         1(YELLOW) | D-&       | RS-485-             |
-|          2(WHITE) | D+             | RS-485+  |
-|      3(RED) | VCC      | Power +             |
-|    4(BLACK) | GND            | Power -             |  
-![[rs485circuit.png]]
+| :---------------: | :------------: | :-----------------: |
+|     1(YELLOW)     |      D-&       |       RS-485-       |
+|     2(WHITE)      |       D+       |       RS-485+       |
+|      3(RED)       |      VCC       |       Power +       |
+|     4(BLACK)      |      GND       |       Power -       |
+
+사용자 개인 보드를 사용할 경우 아래와 같이 통신 회로를 구현하시면 됩니다.
+![[rs485_circuit 2.png|700]]
+### 3.6.2 Extended IO 
+#### 3.6.2.1 PIN Map Table
+>[!warning] Warning
+>Extended IO는 Isolated  되어 있지 않음으로 별도의 Photo Coupler나 Relay를 이용하여 Isolated 회로를 구현하시거나 사용에 유의하여 주시기 바랍니다.
+
+| PIN NUMBER(COLOR) |   PIN NAME    | FUNCTION                                                                            |
+| :---------------: | :-----------: | :---------------------------------------------------------------------------------- |
+|    GND (BLACK)    |      GND      | GND                                                                                 |
+|     1 (WHITE)     | Extended IO 1 | Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
+|     2 (WHITE)     | Extended IO 2 | Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
+|     3 (WHITE)     | Extended IO 3 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart                           |
+|     4 (WHITE)     | Extended IO 4 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart                           |
+>[!note] 
+>각 기능에 대한 설명은 17Lf 사용자 설명서  [[mightyZAP 17Lf User Manual_kor#2.4.18 Extended I/O Control|17Lf 사용자 설명서 2.4.18 Extended I/O Control]] 을 참조사여주시기 바랍니다.
+
+**Extended IO 위치 및 Pin Map**
+![[extende_io_pinmap.png|500]]
+**Extended IO Wire**
+![[Pasted image 20240726162107.png]]
+#### 3.6.2.2 기능에 따른 회로 연결
+- **Switch/ JOG**  
+	- Switch : SW1(Short Stroke Limit), SW2(Long Stroke LImit) 를 누르면 각 위치로 모터가 이동합니다.
+	- JOG : SW1(Short Stroke Limit), SW2(Long Stroke LImit) 를 누르면 각 방향으로 누르는 동안 모터가 이동합니다.
+![[extended_io_switch.png|500]]
+- **Action Enable / Force Off / Stop / Pause / Restart**
+	- Action Enable : 내부 Action 동작을 Start/Stop 할 수 있습니다.
+	- Force Off : 모터의 기동력을 On/Off로 변경 할 수 있습니다.
+	- Stop : 모터가 정지하고 정지된 위치를 목표 위치로 설정합니다.
+	- Pause : 일시 정지로 Switch를 다시 누르면 원래의 목표 위치로 이동합니다.
+	- Restart : 모터의 시스템을 재 시작 합니다
+  ![[extended_io_single_sw.png|500]]
+- **Alarm Out**
+	- Hardware Error 가 발생할 경우 ON 됩니다.
+  ![[extened_io_led.png|500]]
+  ![[extended_io_userboard.png|600]]
+  ### 3.6.6.3 Isolated 회로
+  - **Switch/ JOG / Action Enable / Force Off / Stop / Pause / Restart**
+  ![[image_20240729_103617.png]]
+  - **Alarm Out**
+  ![[image_20240729_103633.png]]
+  

@@ -87,6 +87,10 @@ The data size of all parameters of mightyZAP 17Lf series is 2 bytes.
 ### 2.1.4 Access  (Access Rights)
 Control Table Data is indicated as ‘R’ or ‘RW’. 'R' stands for Read Only, and 'RW' means both Reading and Writing are allowed.
 Read-only parameters are mainly used for basic information or monitoring of servo actuators.  Read-Write parameters are used for mightyZAP control purposes.
+
+**Modbus RTU에서는 각 권한에 따라 아래의 명령을 사용하여 통신을 하실 수 있습니다. **
+- Read 권한 : Modbus RTU 에서 Read Holding Register 명령을 이용하여 데이터를 읽어옵니다.
+- Wirte 권한 : Write Single Register 명령을 이용하여 원하는 데이터를 쓰고, Read Holding Register를 이용하여 입력되어 있는 데이터를 확인할 수 있습니다.
 ### 2.1.5 Default  
 Default value is the initial setting value from the factory. When the value in the Non-Volatile Memory area is modified by the user, the changed value is applied to the default value, and the Volatile Memory area displays the default value as the current state value when power is applied.
 
@@ -279,10 +283,10 @@ However, in case of Shutdown due to the Low input voltage, Force On will occur a
 
 ### 2.4.7 Short / Long Stroke Limit  
 
-| Parameter          | Range    | Description               | Unit |
-| ------------------ | -------- | ------------------------- | ---- |
-| Short Stroke Limit | 0~10,000 | Goal Position Lower Limit |      |
-| Long Stroke Limit  | 0~10,000 | Goal Position Upper Limit |      |
+| Parameter          | Range      | Description               |
+| ------------------ | ---------- | ------------------------- |
+| Short Stroke Limit | 0 ⁓ 10,000 | Goal Position Lower Limit |
+| Long Stroke Limit  | 0 ⁓ 10,000 | Goal Position Upper Limit |
 The Short/Long Stroke Limit is to limit the upper (long) and lower (short) limits of the Goal Position range between 0 and 10,000, respectively.  
 Therefore, the Goal Position value cannot be smaller than the Short Stroke Limit(A) value and cannot be larger than the Long Stroke Limit(B) value.
 If the Goal Position value is smaller than the Short Stroke Limit value or larger than the Long Stroke Limit value, it is replaced with each Stroke Limit value.
@@ -300,9 +304,9 @@ In general, when adjusting the Compliance Margin, it is usually made larger than
 
 Start Compliance Margin is the minimum position deviation (margin) value for mightyZAP to move to the Goal Position position value.
 
-| value   | Description                                       |
+| Range   | Description                                       |
 | ------- | ------------------------------------------------- |
-| 0 ~ 255 | Minimum position deviation (margin) value to move |
+| 0 ⁓ 255 | Minimum position deviation (margin) value to move |
 
 <font size="5" color="#4f81bd"><b>Start Compliance Margin applies in the following two cases :</b></font>
 1. When changing the Goal Position value to move from the present position to another position.  
@@ -353,9 +357,9 @@ End Compliance Margin is the maximum position deviation value for mightyZAP to s
 Compliance Margin is the minimum value required to start or complete the actuation through a Goal Position command. In general, it is common to start or complete a motion using a single Compliance Margin value, but we designed mightyZAP to set both Start and End Compliance Margin respectively at the start and completion of motion, ensuring stable operation while maintaining better positional repeatability. 
 In general, when adjusting the Compliance Margin, it is usually made larger than the default value to ensure stable operation even in unstable environments where external pressure or noise occurs, even if some precision is sacrificed. Conversely, if the Compliance Margin is used with a smaller value than the default value, precision may improve but operation stability may be impaired, so special caution is required.
 
-| value   | Description                                       |
+| Range   | Description                                       |
 | ------- | ------------------------------------------------- |
-| 0 ~ 255 | Maximum position deviation (margin) value to stop |
+| 0 ⁓ 255 | Maximum position deviation (margin) value to stop |
 
 To be applied when mightyZAP is operating to reduce position deviation. If the deviation between Present Position and Goal Position is less than End Compliance Margin, mightyZAP stops.
 
@@ -376,7 +380,7 @@ If the distance traveled after the electric brake is equal to the value of End C
 ![[EndMarginBasic.gif|700]]  
 **Reducing End Compliance Margin**    
 Under low-load condition, it may be effective to reduce the End compliance Margin to increase repeatability. However, if the sliding distance due to inertia is longer than the End Compliance Margin, it may stop beyond the Goal position or may stop after moving a longer distance.
-  ![[EnmMarginDec.gif|700]]
+  ![[EndMarginDec.gif|700]]
 **Correlation between Start Compliance Margin and End Compliance Margin**   
 Problems may occur if the distance between Start Compliance Margin and End Compliance Margin is close or the same.  
 <font color="#4f81bd">Ex. 1.  When both Start Margin and End Margin are small</font>
@@ -395,10 +399,10 @@ When controlling an object with a small load and low inertia with the Start Marg
 >The default compliance margin value is selected for minimum safety, so it is not recommended to lower it below the default value.
 
 ### 2.4.10 Acceleration/Deceration  
-| Parameter    | Description             | range  | Unit |
-| ------------ | ----------------------- | ------ | ---- |
-| Acceleration | Motor acceleration time | 0~1000 | msec |
-| Deceleration | Motor deceleration time | 0~1000 | msec |
+| Parameter    | Description             | range    | Unit |
+| ------------ | ----------------------- | -------- | ---- |
+| Acceleration | Motor acceleration time | 0 ⁓ 1000 | msec |
+| Deceleration | Motor deceleration time | 0 ⁓ 1000 | msec |
 Each parameter controls the acceleration and deceleration of mightyZAP. 
 This is to reduce motor vibration by controlling the acceleration and deceleration at the start and end of operation to adjust the smoothness of the movement. The value entered in the parameter refers to the acceleration/deceleration control time. The control time may increase depending on the load and is not an absolute value.
 If you accelerate or decelerate for too long, the control value may not be sufficient and it may appear to have stopped. Conversely, if the acceleration time is short, it may shock the motor or control object during initial operation and is not good for motor durability. If the deceleration time is short, actuator stops at maximum speed with almost no deceleration time, which increases the distance traveled due to inertia and may cause overshoot.
@@ -406,10 +410,10 @@ If you accelerate or decelerate for too long, the control value may not be suffi
 ![[AccDecGraph.png]]
 
 ### 2.4.11 Min/Max Position Calibration  
-| Parameter                | Description                                  | Range  | Unit |
-| ------------------------ | -------------------------------------------- | ------ | ---- |
-| Min Position Calibration | Minimum position adjustment of Goal Position | 0~1000 |      |
-| Max Position Calibration | Maximum position adjustment of Goal Position | 0~1000 |      |
+| Parameter                | Description                                  | Range    |
+| ------------------------ | -------------------------------------------- | -------- |
+| Min Position Calibration | Minimum position adjustment of Goal Position | 0 ⁓ 1000 |
+| Max Position Calibration | Maximum position adjustment of Goal Position | 0 ⁓ 1000 |
 Min/Max Position Calibration Parameter is to adjust the position value of the rod at the minimum/maximum value of Goal Position.
 
 Please refer to the below for more info. 
@@ -431,16 +435,16 @@ This parameter sets the maximum value of the motor PWM (operating rate) used to 
 
 | value        | Description                                                  |
 | ------------ | ------------------------------------------------------------ |
-| -1000 ~ 1000 | Setting the maximum value of motor PWM supplied to the motor |
+| -1000 ⁓ 1000 | Setting the maximum value of motor PWM supplied to the motor |
 >[!tip] TIP  
 > The term “Motor PWM” in Motor Operating Rate is a different concept from the PWM for position control signals in our products.
  
 ### 2.4.13 Speed Limit  
 The maximum speed limit value for mightyZAP.  As a non-volatile parameter, it is saved in memory of actuator even when the power is turned off.  The Goal Speed, a volatile parameter, has the same function, but is not stored in memory.  Since there is a limit to the number of saves, please use the Goal Speed ​​parameter for frequent speed control.
 
-| value    | Description              | Note         |
-| -------- | ------------------------ | ------------ |
-| 0 ~ 1000 | Max speed limit setting  | Non-volatile |
+| value    | Description             | Note         |
+| -------- | ----------------------- | ------------ |
+| 0 ⁓ 1000 | Max speed limit setting | Non-volatile |
 Setting the Speed ​​Limit low does not affect the maximum force, but the time to reach the maximum current may vary. The lower the speed value, the longer it takes to reach maximum current.
 If the Speed ​​Limit (non-volatile) is changed, the Goal Speed (volatile) ​​also changes.  Additionally, when power is turned on, the Speed ​​Limit value is applied to Goal Speed.  
 >[!tip] TIP -  Speed ​​setting according to the load 
@@ -454,7 +458,7 @@ Limits the maximum Current value during motor operation. User is able to use thi
 
 | value   | Description               | Unit | Note                                   |
 | ------- | ------------------------- | ---- | -------------------------------------- |
-| 0 ~1600 | Set maximum current limit | mA   | default : 800  <br>Error range +/- 15% |
+| 0 ⁓1600 | Set maximum current limit | mA   | default : 800  <br>Error range +/- 15% |
 Current Limit is a non-volatile parameter that maintains changed data even when the power is turned off. When the Current Limit value changes, the Goal Current value also changes.
 The higher the Current Limit is set, the higher the maximum force that the motor can produce in an overload situation, but it may also cause a shortening of the motor's lifespan. 
 <font color="#4f81bd">Depending on the variation in internal mechanical resistance of each actuator, mightyZAP may operate irregularly or may not move at too-low current settings (200 mA or less). Therefore, please set the current after sufficient testing.</font>
@@ -469,10 +473,10 @@ The higher the Current Limit is set, the higher the maximum force that the motor
 >Even if the Goal Current is changed, the Current ​​Limit does not change.
 
 ### 2.4.15 Current PI Control  
-| Parameter      | Description                     | Range   | Unit |
-| -------------- | ------------------------------- | ------- | ---- |
-| Current P Gain | Current PI Proportional control | 0 ~ 255 |      |
-| Current I Gain | Current PI Integral control     | 0 ~ 255 |      |
+| Parameter      | Description                     | Range   |
+| -------------- | ------------------------------- | ------- |
+| Current P Gain | Current PI Proportional control | 0 ⁓ 255 |
+| Current I Gain | Current PI Integral control     | 0 ⁓ 255 |
 This is the PI gain value for motor current control. Please note that PI control is a sensitive control area, so special caution is required.
 If a PI gain value is larger than the default value, rough operation may occur due to Goal Current error.
 If a PI gain value smaller than the specified value is applied, it operates smoothly against the Goal Current error, but the error with the Goal Current value may appear large.
@@ -482,11 +486,11 @@ Before modifying the PID value, please familiarize yourself with the PID.
 When modifying the PID value, please test by adding or subtracting a small value from the default value.
 
 ### 2.4.16 Speed PID Control  
-| Parameter    | Description                    | Range   | Unit |
-| ------------ | ------------------------------ | ------- | ---- |
-| Speed P Gain | Speed PID Proportional control | 0 ~ 255 |      |
-| Speed I Gain | Speed PID Integral control     | 0 ~ 255 |      |
-| Speed D Gain | Speed PID Differential Control | 0 ~ 255 |      |
+| Parameter    | Description                    | Range   |
+| ------------ | ------------------------------ | ------- |
+| Speed P Gain | Speed PID Proportional control | 0 ⁓ 255 |
+| Speed I Gain | Speed PID Integral control     | 0 ⁓ 255 |
+| Speed D Gain | Speed PID Differential Control | 0 ⁓ 255 |
 This is the gain value of speed PID control.  The PID control is a sensitive area, so please study it in advance through other sources. If user enters a value larger than default Gain, it will react quickly to speed and position errors, reducing the time it takes to reach the target position and stop.
 However, if a gain value is too large, the motor may not be able to stop at the goal position due to rough operation against the errors, resulting in overshoot or excessive response, and the motor may vibrate.  Additionally, it reacts sensitively to external disturbances (such as external vibration), resulting in poor feedback response.
 
@@ -506,9 +510,9 @@ When modifying the PID value, please test by adding or subtracting a small value
 ### 2.4.17 Indirect Address
 Using this function, users can collect and use multiple parameters that are separated from each other.  
 
-| Parameter          | Description              | Range     | Unit |
-| ------------------ | ------------------------ | --------- | ---- |
-| Indirect Address N | User indirect addressing | 0 ~ 65535 |      |
+| Parameter          | Description              | Range     |
+| ------------------ | ------------------------ | --------- |
+| Indirect Address N | User indirect addressing | 0 ⁓ 65535 |
 Normally, when changing the data of parameters in separated addresses, each parameter must be communicated respectively and  in this case, communication time becomes longer.
 On the other hand, consecutive addresses improves communication efficiency allowing data to be applied in one communication packet. 
 
@@ -611,9 +615,9 @@ Repeat Setting parameter sets the number of repetitions for the content set in A
 **Repeat time**  
 Time value setting for Interval or dWell Time. 
 
-| value (msec) | Description                            |
-| ------------ | -------------------------------------- |
-| 0 ~ 65535    | Time value for Interval or dWell Time  |
+| Range (msec) | Description                           |
+| ------------ | ------------------------------------- |
+| 0 ⁓ 65535    | Time value for Interval or dWell Time |
 
 **Repeat Count**  
 Specifies the number of times to repeat single Action.
@@ -629,11 +633,11 @@ Moving Setting sets operation characteristics for each Action such as Goal Speed
 <font color="#4f81bd" size='5'><b>Index Setting</b></font>  
 Index Action sets the state after completing one Action.
 
-| value  | Description                                                                                     |
-| ------ | ----------------------------------------------------------------------------------------------- |
-| Stop   | Terminates all Actions. It waits until the next Action Enable signal comes.                     |
-| Next   | Run the next Index.                                                                             |
-| Repeat | ==Index 0부터 다시 시작하여 Action 정지 명령이 있을 때 까지 모든 Action을 무한 반복 실행합니다. (Index 0부터 Repeat가 입력된 Index까지)== |
+| value  | Description                                                                                                |
+| ------ | ---------------------------------------------------------------------------------------------------------- |
+| Stop   | Terminates all Actions. It waits until the next Action Enable signal comes.                                |
+| Next   | Run the next Index.                                                                                        |
+| Repeat | ==Index 0부터 다시 시작하여 Action 정지 명령이 있을 때 까지 모든 Action을 무한 반복 실행합니다. (Index 0부터 Repeat가 입력된 Index까지 반복 수행))== |
 
 ### 2.4.20 Force On/Off  
 | value | Description                                 |
@@ -710,7 +714,7 @@ The Goal Position is the command for position movement.  Goal Position can be en
 
 | value     | Description                                                                                                                        |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| 0 ~ 10000 | Set the Goal position value of actuator.<br>(Regardless of the stroke length of each model, the position resolution is all 10000.) |
+| 0 ⁓ 10000 | Set the Goal position value of actuator.<br>(Regardless of the stroke length of each model, the position resolution is all 10000.) |
 >[!tip] TIP  
 >To calculate position value, pease refer to the maximum length of the Stoke of your actuator.  
 $$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$
@@ -721,7 +725,7 @@ When the power is initially turned on, the value is retrieved from the non-volat
 
 | value    | Description            | Remark  |
 | -------- | ---------------------- | ------- |
-| 0 ~ 1000 | Max speed of mightyZAP | +/- 10% |
+| 0 ⁓ 1000 | Max speed of mightyZAP | +/- 10% |
 (The mobility is OFF at 0 and maximum speed is achieved at 1000.)
 The actual expected speed calculation value using the Goal Speed ​​value is as follows.
 $$ TargetSpeed = MaxSpeed\times\frac{GoalSpeed}{1000}$$
@@ -735,7 +739,7 @@ Limits the maximum current of the motor. That is, user can limit mightyZAP's max
 
 | value    | Description                    | Remark  |
 | -------- | ------------------------------ | ------- |
-| 0 ~ 1600 | Max Current value of mightyZap | +/- 15% |
+| 0 ⁓ 1600 | Max Current value of mightyZap | +/- 15% |
 When the initial power is turned on, the value is retrieved from the non-volatile parameter [[#2.4.14 Current Limit]] and stored in the volatile parameter "Goal Current". For frequent current changes during operation, use the volatile parameter "Goal Current.
 > [!note] Note - Force limitation using Goal Current command 
 > By adjusting the Goal Current, user can adjust the maximum stall force that the motor can produce. It can be used when user wants to limit the force from exceeding a certain force level depending on the control object and the user's application.
@@ -746,44 +750,43 @@ When the initial power is turned on, the value is retrieved from the non-volatil
 >Goal Current 800 이상 또는 1600- 설정으로 지속적인 사용시 모터에 무리가 발생합니다. 지속적으로 사용하는 구간이 아닌 특정상황에서 잠시 사용하는 구간입니다. 지속 적으로 사용할 경우 overload Error가 발생하거나 모터의 수명이 짧아지게 됩니다.
 
 ### 2.4.28 Present Postion
-Indicates the present position value of mightyZAP.  ==Load data명령을 통해 현재 위치값을 피드백 받을 수 있습니다.== 
+Indicates the present position value of mightyZAP.  
 
-| value   | Description            | Unit |
-| ------- | ---------------------- | ---- |
-| 0~10000 | Present position value |      |
+| Range     | Description            |
+| --------- | ---------------------- |
+| 0 ⁓ 10000 | Present position value |
+
 
 User is able to calculate the position value by referring to the maximum stroke length of mightyZAP user is using.     
 $$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$  
 Even after reaching a Goal Position, minute vibration may occur, but this is normal operation. 
 
 ### 2.4.29 Present Current
-Indicates the present Current value of mightyZAP.   ==Load data명령을 통해 현재 전류값을 피드백 받을 수 있습니다.== 
+Indicates the present Current value of mightyZAP.  
 
-| value  | Description           | Unit | Remark |
-| ------ | --------------------- | ---- | ------ |
-| 0~1600 | Present current value | mA   | +/-15% |
+| Range    | Description           | Unit | Remark |
+| -------- | --------------------- | ---- | ------ |
+| 0 ⁓ 1600 | Present current value | mA   | +/-15% |
 Present Current contains errors, so please use it for reference.
 
 ### 2.4.30 Present Motor Operating Rate
 Indicates the motor PWM value supplied to the motor. (To prevent confusion with PWM for communication, the term Motor Operating Rate is used.)
 
-| value       | Description                           |
-| ----------- | ------------------------------------- |
-| -10000~1000 | Motor PWM value supplied to the Motor |
-| 0           | Motor stop state                      |
+| Range         | Description                           |
+| ------------- | ------------------------------------- |
+| -10000 ⁓ 1000 | Motor PWM value supplied to the Motor |
+| 0             | Motor stop state                      |
 Motor Operating Rate varies depending on Goal Speed, Goal Current setting, etc.
 
 ### 2.4.31 Present Voltage  
 Indicates the supplied input voltage value and the unit is 0.1[V].
 
-| value | Description                 | Unit |
-| ----- | --------------------------- | ---- |
-| 0~130 | Present input voltage value | [v]  |
+| Range   | Description                 | Unit |
+| ------- | --------------------------- | ---- |
+| 0 ⁓ 130 | Present input voltage value | [v]  |
 
 ### 2.4.32 Moving
-Indicates whether the motor is operating or not. ==More precisely, it indicates whether or not the motor has reached its goal position.== 
-<table>
-</table>
+Indicates whether the motor is operating or not. ==모터가 동작하면 ON되고 목표 위치에 도달할 경우 OFF 됩니다..== 
 
 | value | Description |
 | ----- | ----------- |
@@ -793,9 +796,9 @@ Indicates whether the motor is operating or not. ==More precisely, it indicates 
 ### 2.4.33 Present Overload Value
 The accumulated current amount, which is the basis for overload, is displayed as a percentage.
 
-| value | Description                                 | Unit |
-| ----- | ------------------------------------------- | ---- |
-| 0~100 | Accumulated current percentage for overload | %    |
+| Range   | Description                                 | Unit |
+| ------- | ------------------------------------------- | ---- |
+| 0 ⁓ 100 | Accumulated current percentage for overload | %    |
 When the motor operates, the current value accumulates and increases, and when the motor stops, the value decreases. The accumulated value varies depending on the applied load amount, and the reduced value is reduced by the standard rated current value when the motor stops.
 For more information about overload, please check [[#2.4.24 Hardware Error]].
 The maximum value is displayed as 100, and if the value becomes 100, an Overload Error will occur.
