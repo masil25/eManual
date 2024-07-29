@@ -526,12 +526,12 @@ PID 값을 수정하실 때는 기본 값에서 작은 값을 가 감하여 테�
 ### 2.4.18 Extended I/O Control  
 Extended I/O는 RS485 통신으로 제공하지 못하는 추가적인 기능을 제공하는 Port 입니다.  4개의 I/O Port를 제공하며 아래와 같은 기능을 제공합니다.   
 
-| IO PORT | Function |
-| ---- | ---- |
+| IO PORT   | Function                                                                            |
+| --------- | ----------------------------------------------------------------------------------- |
 | IO Port 1 | Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
 | IO Port 2 | Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
-| IO Port 3 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
-| IO Port 4 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
+| IO Port 3 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart                           |
+| IO Port 4 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart                           |
 
 Extended I/O Control은 스위치 또는 내부 [[#2.4.19 Action Control|Action control]] 기능을 이용하여 사용자가 Programming 없이 제어가 가능합니다.
 또한, Extended I/O 기능 중 Output으로 사용되는 기능을 사용할 경우 mightyZAP의 상태를 Digital Signal로 출력 합니다.

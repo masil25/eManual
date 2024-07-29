@@ -911,7 +911,7 @@ The Pin Map of the RS-485 connector is as follows.
 | 4(Black)          | GND      | Power -         |
 Here is the circuit connection for RS-485 communication between mightyZAP and user's controller.  
 
-![[rs485_circuit.png|700]]  
+![[rs485_circuit 2.png|700]]  
 In the circuit diagram above, user is able to switch between TX and RX modes of RS485 by controlling the Direction Port pin.
 - When the signal level of Direction Port is Low:  Data signal is input to RX.
 - When the signal level of Direction Port is High: TX signal is output as Data.

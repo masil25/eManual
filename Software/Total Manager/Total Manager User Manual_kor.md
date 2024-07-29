@@ -4,6 +4,7 @@ mightyZAP Total Manager는 다양한 운영체제에서 다양한 mightyZAP Actu
 
 본 매뉴얼에서는 Total Manager의 설치 및 각 기능의 사용법에 대한 기본 사항을 다룹니다.
 
+
 ## 1.1 개요
 mightyZAP Total Manager는 다양한 기능을 가진 다목적 Software입니다. mightyZAP의 동작 Test,  Parameter 설정 및 동작 상태 Monitoring과 Firmware Update를 기본적으로 제공합니다.  또한 시리즈별 모델에 따른 특수 기능을 설정 및 테스트 할 수도 있습니다. 
 >특수 기능 설정 및 테스트 내용은 각 모델의 매뉴얼을 참조하시기 바랍니다.
