@@ -138,7 +138,7 @@ Default value is the initial setting value from the factory. When the value in t
 | 40062            | 61 (0x3D)  | Action 0 distance         | Action 0 Moving Distance                  | RW     | 0(0x00)         |
 | 40063            | 62 (0x3E)  | Action 0 Repeat Type      | Action 0 Repeat type                      | RW     | 0(0x00)         |
 | 40064            | 63 (0x3F)  | Action 0 Repeat Count     | Action 0 Number of repetitions            | RW     | 0(0x00)         |
-| 40065            | 64 (0x40)  | Action 0 Repeat Time      | Action 0   1 operation time               | RW     | 0(0x00)         |
+| 40065            | 64 (0x40)  | Action 0 Repeat Time      | Action 0  0 Operation time                | RW     | 0(0x00)         |
 | 40066            | 65 (0x41)  | Action 0 Goal Speed       | Action 0 Goal Speed                       | RW     | 0(0x00)         |
 | 40067            | 66 (0x42)  | Action 0 Goal Current     | Action 0 Goal Current                     | RW     | 0(0x00)         |
 | 40068            | 67 (0x43)  | Action 0 Accleration      | Action 0 Acceleration                     | RW     | 0(0x00)         |
@@ -529,7 +529,7 @@ Therefore, Indirect Address and Indirect Data can be used to set parameters that
 >![[indirectAddrss.gif]]
 
 ### 2.4.18 Extended I/O Control  
-The Extended I/O is the ports that provides additional functions that cannot be provided in RS485 communication. The 17Lf series actuator provides 4 x I/O ports with the following functions. 
+The Extended I/O is the ports that provides additional functions that cannot be provided in RS-485 communication. The 17Lf series actuator provides 4 x I/O ports with the following functions. 
 
 | IO PORT   | Function                                                                            |
 | --------- | ----------------------------------------------------------------------------------- |
@@ -747,7 +747,7 @@ When the initial power is turned on, the value is retrieved from the non-volatil
 > Please refer to the Goal Current Vs Stall Force graph in the datasheet and apply the appropriate value. The values ​​contain an error of approximately +/-15%.
 
 >[!warning] Warning - Over Current  
->Goal Current 800 이상 또는 1600- 설정으로 지속적인 사용시 모터에 무리가 발생합니다. 지속적으로 사용하는 구간이 아닌 특정상황에서 잠시 사용하는 구간입니다. 지속 적으로 사용할 경우 overload Error가 발생하거나 모터의 수명이 짧아지게 됩니다.
+>Goal Current 800 이상 또는 1600 설정으로 지속적인 사용시 모터에 무리가 발생합니다. 지속적으로 사용하는 구간이 아닌 특정상황에서 잠시 사용하는 구간입니다. 지속 적으로 사용할 경우 overload Error가 발생하거나 모터의 수명이 짧아지게 됩니다.
 
 ### 2.4.28 Present Postion
 Indicates the present position value of mightyZAP.  
