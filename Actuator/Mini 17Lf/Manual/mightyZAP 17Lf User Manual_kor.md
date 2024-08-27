@@ -530,12 +530,12 @@ PID 값을 수정하실 때는 기본 값에서 작은 값을 가 감하여 테�
 ### 2.4.18 Extended I/O Control  
 Extended I/O는 RS485 통신으로 제공하지 못하는 추가적인 기능을 제공하는 Port 입니다.  4개의 I/O Port를 제공하며 아래와 같은 기능을 제공합니다.   
 
-| IO PORT   | Function                                                                            |
-| --------- | ----------------------------------------------------------------------------------- |
-| IO Port 1 | Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
-| IO Port 2 | Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
-| IO Port 3 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart                           |
-| IO Port 4 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart                           |
+| IO PORT   | Function                                                                 |
+| --------- | ------------------------------------------------------------------------ |
+| IO Port 1 | Switch, JOG, , Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
+| IO Port 2 | Switch, JOG,  Action Enable, Force Off, Stop, Pause, Alarm Out, Restart  |
+| IO Port 3 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart                |
+| IO Port 4 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart                |
 
 Extended I/O Control은 스위치 또는 내부 [[#2.4.19 Action Control|Action control]] 기능을 이용하여 사용자가 Programming 없이 제어가 가능합니다.
 또한, Extended I/O 기능 중 Output으로 사용되는 기능을 사용할 경우 mightyZAP의 상태를 Digital Signal로 출력 합니다.
@@ -563,10 +563,6 @@ Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며
 	![[extended_io_switch.png|500]]
 - **Action Enable**    
 	Action 기능을 사용하기 위한 입력기능입니다.  아래 IO port N으로 표시된 기능들은 IO port#1~4에서 지정이 가능합니다. 
-	( 자세한 내용은 [[#2.4.19 Action Control]]을 참조하여 주시기 바랍니다. )  
-	![[extended_io_single_sw.png|500]]
-- **Action Next**    
-	Action Next 기능 역시 Action 기능을 위한 입력기능입니다. 해당 I/O Pin에 스위치 입력이 들어와야 다음 Action 기능을 진행합니다.   
 	( 자세한 내용은 [[#2.4.19 Action Control]]을 참조하여 주시기 바랍니다. )  
 	![[extended_io_single_sw.png|500]]
 - **Force Off**  

@@ -1,87 +1,91 @@
-**MODBUS RTU Manual**
 # 1 Introduction
 
 The MODBUS is an industrial protocol and is a standard protocol mainly used for PLC communication.
 MODBUS has several different types - RTU, ASCII, and recently TCP method, and we have applied MODBUS RTU for our actuators. 
 
-The industry's de facto serial standard since 1979, MODBUS has enabled millions of automation devices to communicate stably.
+The industry's de facto serial standard since 1979, MODBUS has enabled millions of automation devices to communicate stably & safely.
 MODBUS is a request/response protocol and provides services specified by function code. The frame consists of ADU, which is an Application Data Unit, and PDU, which stands for Protocol Data Unit.
 
-# 2 프레임 구조
-## 2.1 Packet Discription
-mightyZAP은 MODBUS-RTU 프로토콜 내용을 준수합니다.  
-본 매뉴얼에 나오지 않은 사항들은 아래의 관련 표준 문서를 참조하여 주시기 바랍니다.  
+The mightyZAP 17Lf series only provides MODBUS RTU protocol based on RS-485 communication. (For old 12Lf series, IR open protocol is the default protocol, and the user can switch to MODBUS RTU.)
+
+# 2 Frame Structure
+## 2.1 Packet Description
+The mightyZAP complies with the standard MODBUS-RTU protocol.
+For the detailed MODBUS RTU specification not covered in this manual, please refer to the MODBUS official website. [https://www.modbus.org/specs.php]. 
+
 ### 2.1.1 Packet Structure
-MODBUS-RTU 프로토콜의 최대 송수신 패킷 길이는 256 Byte 입니다. 따라서 송수신 패킷의 총 길이가 256Byte 를 넘기지 않도록 주의하여 주십시오.  
-MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 같이 시작과 끝 사이에 최소 3.5 Char 이상의 이 필요합니다.  
+The maximum transmit/receive packet length of the MODBUS-RTU protocol is 256 Bytes. Therefore, please be careful that the total length of the TX/RX packets does not exceed 256 bytes.
+MODBUS-RTU communication mode requires an empty space of at least 3.5 Char between the Start and End to distinguish packets as shown in the figure below .
 
 ![[packet Description.png|700]]   
 
-- 송신 패킷 구조
+
+- **Transmit Packet Structure
 
 |      | Address      | Fucntion code | Data | <                  | <                  | Error Check | <        |
 | ---- | ------------ | ------------- | ---- | ------------------ | ------------------ | ----------- | -------- |
 | byte | 0            | 1             | 2    | <center>…</center> | <center>…</center> | n-1         | n        |
-| 내용   | mightyZAP ID | Function      | Data | <center>…</center> | <center>…</center> | CRC(MSB)    | CRC(LSB) |
+| Data | mightyZAP ID | Function      | Data | <center>…</center> | <center>…</center> | CRC(MSB)    | CRC(LSB) |
 
-- 수신 패킷 구조  - 정상 응답
+- **Receive Packet Structure - Normal Response
 
 |      | Address      | Fucntion code | Data | <                  | <                  | Error Check | <        |
 | ---- | ------------ | ------------- | ---- | ------------------ | ------------------ | ----------- | -------- |
 | byte | 0            | 1             | 2    | <center>…</center> | <center>…</center> | n-1         | n        |
-| 내용   | mightyZAP ID | Function      | Data | <center>…</center> | <center>…</center> | CRC(MSB)    | CRC(LSB) |
+| Data | mightyZAP ID | Function      | Data | <center>…</center> | <center>…</center> | CRC(MSB)    | CRC(LSB) |
 
-- 수신 패킷 구조  - 비 정상 응답
+- **Receive Packet Structure - Abnormal Response
 
-|      | Address      | Fucntion code        | Data           | Error Check | <        |
-| ---- | ------------ | -------------------- | -------------- | ----------- | -------- |
-| byte | 0            | 1                    | 2              | 3           | 4        |
-| 내용   | mightyZAP ID | Function  <br>+ 0x80 | Exception code | CRC(MSB)    | CRC(LSB) |
-### 2.1.2 Packet Element 설명
+|      | Address      | Fucntion code   | Data           | Error Check | <        |
+| ---- | ------------ | --------------- | -------------- | ----------- | -------- |
+| byte | 0            | 1               | 2              | 3           | 4        |
+| Data | mightyZAP ID | Function + 0x80 | Exception code | CRC(MSB)    | CRC(LSB) |
+### 2.1.2 Packet Element Description
 #### 2.1.2.1 Start
--  서로 다른 Frame 간의 구별을 위한 최소한의 시간을 의미합니다.
-- 통신 속도 57600bps에서 1bit의 전송 시간은 0.017msec이고, Start time이  3.5 character time(1 character = 8bit)임으로 최소 start time은 0.486msec 입니다.
-- Start time 이내의 다른 frame 이 전송되면, 이전  frame 의 연속된 데이터로 인식 합니다.
+- This refers to the minimum time to distinguish between different frames.
+- At a communication speed of 57600bps, the transmission time for 1 bit is 0.017msec, and since the start time is 3.5 character time (1 character = 8bit), the minimum start time is 0.486msec.
+- If a frame shorter than the minimum start time is transmitted, it is recognized as continuous data from the previous frame.
 #### 2.1.2.2 Address
-- mightyZAP의 ID로 다중 연결 방식으로 Daisy Chain 연결 지원을  위한 식별자 입니다.  
-- ID가 '0'일 경우 Broadcasting ID로 동작합니다.  
+- mightyZAP's ID.  An identifier to support Serial daisy chain connection in a multi-connection method. 
+- With the ID '0', it operates as Broadcasting ID.
 #### 2.1.2.3 Function Code
-- mightyZAP에서 지원하는 Modbus-RTU  표준 Function code는 다음과 같습니다. 
+- The MODBUS-RTU standard function code supported by mightyZAP is as follows.
 
-| Function                | Code | Description                           |
-| ----------------------- | ---- | ------------------------------------- |
-| Read Holding Register   | 0x03 | mightyZAP의 Data를 읽어오기                 |
-| Write Single Register   | 0x06 | mightyZAP의 특정 주소에 Data값을 Setting  하기  |
-| Write Multiple Register | 0x10 | mightyZAP의 연속된 주소에 Data값을 Setting  하기 |
+| Function                | Code | Description                                                 |
+| ----------------------- | ---- | ----------------------------------------------------------- |
+| Read Holding Register   | 0x03 | Reading data from mightyZAP                                 |
+| Write Single Register   | 0x06 | Setting data value in a specific address of mightyZAP       |
+| Write Multiple Register | 0x10 | Setting data values ​​in consecutive addresses of mightyZAP |
 
 #### 2.1.2.4 Data
-<b>송신</b>
-- Read Register 명령의 경우 Modbus 주소, 레지스터 개수, Byte 개수 등을 지정하게 되며, Write Register 명령의 경우 Modbus 주소, Byte 개수, 설정 할 값 등을 지정하게 됩니다.   
-<b>수신</b>
-- Read Register 명령의 경우, 정상 응답은 Node ID 와 Function Code 가 송신 때와 동일한 값으로 수신 되며, Data 는 송신 때 보낸 Register 순서에 따라 각 Register 의 값이 수신 됩니다.
-- Write Single Register 명령의 경우, 송신 때와 동일한 데이터가 수신됩니다. Write Multi  Register 의 경우에는 Write Multi Register 명령으로 데이터를 쓰고자 한 Register 의 시작 주소와 Register 개수가 수신됩니다.
-- 이상응답의 경우에는 Node ID, Error Code, Exception Code 로 구성되며, 이상응답의 패킷 구조는 Function Code 와 관계없이 모두 동일합니다.
+<b>Transmission</b>
+- In the case of the Read Register command, the MODBUS address, number of registers, number of bytes, etc. are specified, and in the case of the Write Register command, the MODBUS address, number of bytes, value to be set, etc. are specified.
 
+<b>Reception</b>
+- In the case of the Read Register command, the normal response is that the Node ID and Function Code are received with the same values ​​as when transmitted, and the data is received as the value of each register according to the order of the registers sent during transmission.
+- In the case of the Write Single Register command, the same data as transmitted is received. In the case of Write Multi Register, the starting address and number of registers for which data is to be written are received with the Write Multi Register command.
+- In the case of an abnormal response, it consists of Node ID, Error Code, and Exception Code, and the packet structure of the abnormal response is the same regardless of the function code.
+- In the case of an abnormal response, it consists of Node ID, Error Code, and Exception Code, and the packet structure of the abnormal response is the same regardless of the function code.
 #### 2.1.2.5 CRC
-- 16 비트 CRC 값을 입력하며 2 byte로 구성됩니다.
-- 전송 순서는 하위 1byte, 상위 1byte순 입니다.
-- CRC Check Method 는 CRC-16(X^16 + X^15+X^2+1) 입니다
-  인터넷에서 CRC-16 Modbus 계산기를 검색하시어 사용하시면 쉽게 계산 값을 얻을 수 있습니다.
+- Enter a 16-bit CRC value and it consists of 2 bytes.
+- The transmission order is lower 1 byte, upper 1 byte.
+- CRC Check Method is CRC-16(X^16 + X^15+X^2+1).
+  For easier calculation, get CRC-16 MODBUS calculator on the Internet. 
 #### 2.1.2.6 Exception Code
-- mightyZAP에서 지원하는 모든 Function Code 의 이상 응답에 대한 Exception Code 는 아래와 같이 정의되어 있습니다.
+- Exception codes for abnormal responses to all function codes supported by mightyZAP are defined as follows.
 
-| Exception Code |  | Description |
-| ---- | ---- | ---- |
-| 0x01 | Illegal Function | 지원하지 않는 Function Code |
-| 0x02 | Illegal Data Address | 잘못된 레지스터 주소 |
-| 0x03 | Illegal Data Value | 잘못된 데이터 값 |
-| 0x04 | Slave Device Failure | 장치 고장, 파라미터 설정값 이상(ready) |
-| 0x05 | Acknowledge | 데이터가 준비되지 않은 상태(ready) |
-| 0x06 | Slave Device Busy | 파라미터 잠금 상태 |
+| Exception Code |                      | Description                                           |
+| -------------- | -------------------- | ----------------------------------------------------- |
+| 0x01           | Illegal Function     | Function code which are not supported                 |
+| 0x02           | Illegal Data Address | Invalid register address                              |
+| 0x03           | Illegal Data Value   | Invalid data value                                    |
+| 0x04           | Slave Device Failure | Device failure, parameter setting value error (ready) |
+| 0x05           | Acknowledge          | Data is not ready (ready)                             |
+| 0x06           | Slave Device Busy    | Parameter lock status                                 |
 
-## 2.2 프로토콜 Function Code 설명
+## 2.2 Protocol Function Code Description
 ### 2.2.1 Read Holding Register (0x03)
-단일 레지스터(16bit 데이터) 및 연속된 레지스터 블록(16bit 데이터 단위)의 값을 읽습니다.
+Reads the values ​​of a single register (16-bit data) and consecutive register blocks (16-bit data units).
 #### 2.2.1.1 Packet Description
 <font color="#4f81bd"><b>Request Frame</b></font>
 
@@ -90,14 +94,12 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 | Size(byte) | 1 byte  |    1 byte     |      2 byte      |        2 byte        | 2 byte |
 | Data       |         |     0x03      | 0x0000 to 0xffff |    1 to 125(0x7d)    |        |
 
-
 <font color="#4f81bd"><b>Request OK</b></font>
 
 |            | Address | Fucntion code | Byte Count | Register Value |  CRC   |
 | ---------- | :-----: | :-----------: | :--------: | :------------: | :----: |
 | Size(byte) | 1 byte  |    1 byte     |   1 byte   |  N* x 2 bytes  | 2 byte |
 | Data       |         |     0x03      |   2 x N*   |                |        |
-
 *N = Quantity of Registers
 
 <font color="#4f81bd"><b>Request not OK</b></font>
@@ -106,25 +108,25 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 | ---------- | :-----: | :--------: | :------------: | :----: |
 | Size(byte) | 1 byte  |   1 byte   |     1 byte     | 2 byte |
 | Data       |         |    0x83    |  0x01 to 0x06  |        |
-#### 2.2.1.2 frame detail
+#### 2.2.1.2 Frame Detail
 - **Address**  
-  데이터를 읽고 자 하는  mightyZAP의 ID를 의미 합니다.
+  Unique ID of mightyZAP from which user wants to read data.
 - **Function Code** 
-  Read Holding Register 명령의 의미하는 code 0x03
+  Code 0x03, meaning Read Holding Register command
 - **Starting Address** 
-  읽고자 하는 데이터의 시작 주소를 의미하며 2 byte로 구성됩니다.
+  Starting address of the data which user wants to read and it consists of 2 bytes.
 - **Quantity of Register** 
-  읽고자 하는 데이터의 크기를 의미하며 2 byte로 구성됩니다.
+  Size of the data to be read and it consists of 2 bytes.
 - **CRC** 
-  CRC 에러 체크 방법을 이용하며 2 byte로 구성됩니다.
+  It uses the CRC error check method and consists of 2 bytes.
 - **Byte Count** 
-  응답하는 데이터의 수를 의미 합니다.
+  Number of responding data.
 - **Register Value** 
-  요청 프레임의 Address를 시작 주소로 하여 바이트 단위로 데이터를 송신합니다. 이때 데이터는 워드 타입이므로 바이트 수에 2배를 해준 크기와 동일합니다.
-- **Error code** 
-  Error code는  Function Code 에 80(Hex)값을 더하여 표현되며 Read Holding register의 경우 83(Hex)으로 전송됩니다.
+  Data is transmitted in byte units using the address of the request frame as the starting address. Since the data is a WORD type, the size is the same as doubling the number of bytes.
+ - **Error code** 
+   The error code is expressed by adding the value 80 (Hex) to the function code. In the case of the Read Holding register, it is transmitted as 83 (Hex).
 - **Exception code** 
-  상세 에러 내역을 의미하며 1바이트로 구성됩니다.
+  Detailed error details and it consists of 1 byte.
 #### 2.2.1.3 Example
 <font color="#4f81bd"><b>Example</b></font> #1 - Read Present Position (0xD2)
 - Request 
@@ -160,7 +162,7 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 | :-----: | :------------: | :----------------: | :--------: | :--------: |
 |  0x01   |      0x83      |        0x04        |    0x40    |    0xF3    |
 ### 2.2.2 Write Single Register
-단일레지스터(16bit 데이터)에 값을 씁니다.  
+Writes a value to a single register (16-bit data).
 #### 2.2.2.1 Packet Description
 <font color="#4f81bd"><b>Request</b></font>  
 
@@ -184,21 +186,21 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 | ---------- | :-----: | :--------: | :------------: | :----: |
 | Size(byte) | 1 byte  |   1 byte   |     1 byte     | 2 byte |
 | Data       |         |    0x86    |  0x01 to 0x06  |        |
-#### 2.2.1.2 frame detail
+#### 2.2.2.2 Frame Detail
 - **Address** 
-  데이터를 쓰려고하는  mightyZAP의 ID를 의미 합니다.
+  Unique ID of mightyZAP where the user wants to write data.
 - **Function Code** 
-  Write Single Register 명령의 의미하는 code 0x06
-- **Register Addresse** 
-  쓰기 원하는 데이터의 주소를 의미하며 2 byte로 구성됩니다.
+  Code 0x06, meaning Write Single Register command.     
+- **Register Address**
+  Address of the data user wants to write and it consists of 2 bytes.
 - **Register Value** 
-  쓰기 원하는 데이터의 값으로 2 byte로 구성됩니다.
+  Data value user wants to write and it consists of 2 bytes.
 - **CRC** 
-  CRC 에러 체크 방법을 이용하며 2 byte로 구성됩니다.
+  It uses the CRC error check method and consists of 2 bytes.
 - **Error code** 
-  Error code는  Function Code 에 80(Hex)값을 더하여 표현되며 Read Holding register의 경우 83(Hex)으로 전송됩니다.
+  The error code is expressed by adding the value 80 (Hex) to the function code, and in the case of the Read Holding register, it is transmitted as 83 (Hex).
 - **Exception code** 
-  상세 에러 내역을 의미하며 1바이트로 구성됩니다.
+  Detailed error details and it consists of 1 byte.
 #### 2.2.2.2 Example
 <font color="#4f81bd"><b>Example</b></font> #1 - Write Goal Position (0xCD)
 - Request - Goal Position Data : 1000
@@ -234,7 +236,7 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 | :-----: | :------------: | :----------------: | :--------: | :--------: |
 |  0x01   |      0x86      |        0x04        |    0x40    |    0xF3    |
 ### 2.2.3 Write Multi Register(0x10)
-연속된 레지스터 블록(16bit 데이터 단위)에 값을 씁니다.  
+Writes values ​​to consecutive register blocks (16-bit data units).
 #### 2.2.3.1 Packet Description
 <font color="#4f81bd"><b>Request</b></font>  
 
@@ -258,25 +260,25 @@ MODBUS-RTU 통신 Mode 는 Packet 을 구분하기 위해서 아래 그림과 �
 | ---------- | :-----: | :--------: | :------------: | :----: |
 | Size(byte) | 1 byte  |   1 byte   |     1 byte     | 2 byte |
 | Data       |         |    0x90    |  0x01 to 0x06  |        |
-#### 2.2.3.2 frame detail
+#### 2.2.3.2 Frame Detail
 - **Address** 
-  데이터를 쓰려고하는  mightyZAP의 ID를 의미 합니다.
+  The unique ID of mightyZAP which user wants to write data.
 - **Function Code** 
-  Write Multi Register 명령의 의미하는 code 0x10
+  Code 0x10, meaning Write Multi Register command
 - **Start Addresse** 
-  연속해서 쓰기 원하는 데이터의 시작 주소를 의미하며 2 byte로 구성됩니다.
+  Starting address of the data user wants to write in succession and it consists of 2 bytes.
 - **Quantity of Register** 
-  쓰기  원하는 데이터의 크기를 의미하며 2 byte로 구성됩니다.
+  Size of data user wants to write and it consists of 2 bytes.
 - **Byte Count** 
-  연속해서 쓰기 원하는 데이터의 수를 의미 합니다.
+  Number of data user wants to write in succession.
 - **Registers Value** 
-  쓰기 원하는 데이터의 값으로 2 byte를 한 세트로 구성됩니다. Byte Count에 입력 한 수 만큼의 데이터 세트를 추가해야 합니다
+  A set of 2 bytes as the value of the data user wants to write. Must add as many data sets as user entered in Byte Count.
 - **CRC** 
-  CRC 에러 체크 방법을 이용하며 2 byte로 구성됩니다.
+  It uses the CRC error check method and consists of 2 bytes.
 - **Error code** 
-  Error code는  Function Code 에 80(Hex)값을 더하여 표현되며 Read Holding register의 경우 0x90으로 전송됩니다.
+  The error code is expressed by adding 80 (Hex) to the function code, and in the case of the read holding register, it is transmitted as 0x90.
 - **Exception code** 
-  상세 에러 내역을 의미하며 1바이트로 구성됩니다.
+  Detailed error details and it consists of 1 byte.
 #### 2.2.3.3 Example
 <font color="#4f81bd"><b>Example</b></font> #1 - Multi Write Goal Speed(0xD0) & Goal Current (0xD1)
 - Request - Goal Speed Data : 1000, Goal Current Data : 800

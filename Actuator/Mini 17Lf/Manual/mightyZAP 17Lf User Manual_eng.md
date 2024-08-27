@@ -531,12 +531,12 @@ Therefore, Indirect Address and Indirect Data can be used to set parameters that
 ### 2.4.18 Extended I/O Control  
 The Extended I/O is the ports that provides additional functions that cannot be provided in RS-485 communication. The 17Lf series actuator provides 4 x I/O ports with the following functions. 
 
-| IO PORT   | Function                                                                            |
-| --------- | ----------------------------------------------------------------------------------- |
-| IO Port 1 | Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
-| IO Port 2 | Switch, JOG, Action Next, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
-| IO Port 3 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart                           |
-| IO Port 4 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart                           |
+| IO PORT   | Function                                                               |
+| --------- | ---------------------------------------------------------------------- |
+| IO Port 1 | Switch, JOG, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
+| IO Port 2 | Switch, JOG, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
+| IO Port 3 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart              |
+| IO Port 4 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart              |
 The Extended I/O Control allows users to control it without programming using switches or the internal [[#2.4.19 Action Control|Action control]] function.
 Also, in case of using the output function among the extended I/O functions, the status of mightyZAP can be sent as a digital signal.
 The circuit configuration of Extended I/O is configured differently depending on each function and does not require external power.  To avoid problems with mightyZAP, user must connect wiring properly according to the circuit configuration specified in each function description.
@@ -564,10 +564,6 @@ Restart the system for the changes to take effect.
 - **Action Enable**    
 	Action Enable is for Action function.  The functions indicated by IO port N below can be specified in IO port#1~4.
 	( For detailed info for Action function, refer to  [[#2.4.19 Action Control]]. )  
-	![[extended_io_single_sw.png|500]]
-- **Action Next**    
-	Action Next is also for Action function. The next action function will proceed only when a switch input is received at the corresponding I/O Pin.   
-	( For detailed info for Action Next, refer to  [[#2.4.19 Action Control]]. )  
 	![[extended_io_single_sw.png|500]]
 - **Force Off**  
 	Force Off is an input function that cuts off the power to the motor by applying the Force off function to the corresponding I/O port. Connect the switch circuit to the selected I/O port and press the button to perform the Force On/Off Toggle function. When executing the Force Off function, some mightyZAPs, which does not have a "mechanical self-lock" feature, may not be able to maintain its position depending on the installation direction and applied load.

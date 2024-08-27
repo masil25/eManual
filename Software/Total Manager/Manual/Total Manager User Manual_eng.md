@@ -1,154 +1,139 @@
 
-# 1 Total Manager 시작하기
-mightyZAP Total Manager는 다양한 운영체제에서 mightyZAP Actuator를 쉽게 관리 및 제어할 수 있는 Software입니다.
-Total Manager에서는 다양한 OS를 제공하고, 사용자 인터페이스를 개선하고 신규 mightyZAP 모델을 추가로 지원하는 신규mightyZAP Manager 입니다.
+# 1 Getting Started - Total Manager 
+The Total Manager is the new generation of dedicated software that allows users to easily manage and control mightyZAP Actuators.  The Total Manager supports various OSs such as Windows, Linux, and iOS, and has an improved user interface. In addition to the existing L12/D12/D7/12Lf series actuators, user is also able to manage the parameters of new 17Lf series. 
+This manual covers the basics of installing Total Manager and using each function.
 
-이 가이드에서는 Total Manager의 설치와 각 기능의 사용법에 대한 기본 사항을 다룹니다. 
+## 1.1 Introduction
+mightyZAP Total Manager is a multi-purpose software with various functions like motion test, parameter settings, parameter monitoring, and firmware updates. User is also able to set up and test special features depending on their actuator model.
 
-## 1.1 개요
-mightyZAP Total Manager는 다양한 기능을 가진 다목적 Software입니다. mightyZAP의 동작 Test와 Parameter 설정 및 동작 상태 Monitoring과 Firmware Update를 기본적으로 제공합니다.  
-또한 모델에 따른 특수 기능을 설정 및 테스트 할 수도 있습니다. 
-> [!tip] TIP  
-> 특수 기능 설정 및 테스트 내용은 각 모델의 매뉴얼을 참조하시기 바랍니다.
+>Please refer to the manual of each model for special function settings and test details.
 
 ![[total_image.png|500]]
 
-## 1.2 사용 환경
-mightyZAP은 Half Duplex TTL, RS485, CAN 통신을 사용합니다. PC와의 통신을 위한 Converter를 사용해야 mightyZAP과의 통신이 가능합니다.  
-mightyZAP을 위한 USB Interface Board를 당사의 웹사이트에서 판매하고 있습니다. 해당  Interface Board를 사용할 경우 손쉽게 mightyZAP을 PC와 연결할 수 있습니다.  
-시중의 Convertor를 구매하여 사용하실 수 있지만, 안전성을 위하여 가급적 당사의 Interface Board를 사용하여 주시기 바랍니다.
+## 1.2 Environment
+mightyZAP uses Half Duplex TTL, RS485, and CAN communications depending on the communication version. Users need to use some sort of signal converter for communication between PC and mightyZAP.
+The USB Interface Board for mightyZAP (IR-USBXX) can be purchased from our e-shop for easier PC connection. 
+User is also able to use the 3rd party converter, but for convenience & safety reasons, it is recommended to use our Interface Board .
 
-
-> [!warning] 주의 사항  
-> PC와 Interface Board 연결에 충전 전용 Cable을 사용하여 통신이 연결되지 않는 경우가 있습니다. 반드시 Data통신이 가능한 Cable인지 확인하시고 사용하여 주시기 바랍니다.
+>[!Caution] Caution
+>  - Make sure to use "data transferable" USB cable between PC and USB converter.    
+>     Charging only cable does not support data communication.  
+> -  Make sure proper wiring when using 3rd party converter. 
+> -  Appropriate DC power matching the rated input voltage of each actuator should be supplied to the actuator so as to utilize the Manager software. When using our USB Interface Board (IR-USBXX), just supply the power through the board.
 
 ## 1.3 Feature
 ### 1.3.1 Information
-mightyZAP의 Model 명, Stroke, Rate Load, Firmware Version 등 Actuator와 관련된 기본 정보를 표시합니다. Software를 실행하였을 경우 제일 처음에 나타나는 화면입니다.  
-![[information_tag.png|700]]
+Displays basic information related to the connected actuator, such as model name, stroke length, rate load, and firmware version. This is the first screen that appears when user runs the software.  ![[Pasted image 20240717142157.png|700]]
+
 ### 1.3.2 Parameter
-mightyZAP을  제어하거나 Parameter를 변경 및 Monitoring을 할 수 있습니다.   
-연결된 여러 개의 mightyZAP 중 선택하여 하나의 mightyZAP을 제어할 수 있으며, Parameter의 Type에 따라 Non-voltatile Memory와 Volatile Memoty 화면으로 나누어져 있습니다.    
-사용 모델에 따라 Parameter의 구성이 달라지며, 화면의 크기에 따라 화면 구성이 변하게 됩니다.  
-![[Parameter.png|700]]
+In the Parameter section, user is able to do a Motion test, changing parameters, and monitoring parameter.
+User can select and control only single mightyZAP even if multiple actuators are connected, and the screen is divided into Non-voltatile Memory and Volatile Memoty screens depending on the type of parameter. For detailed explanations of each parameter, please refer to the user manual of each actuator series,  - [[Actuator/Mini 17Lf/Manual/mightyZAP 17Lf User Manual_eng#2. Control Table]] - for the 17Lf series. The parameter configuration varies depending on the connected actuator series and model, and the screen configuration changes depending on the screen size. 
+![[control-view.png|700]]
 
-### 1.3.3 update
-mightyZAP의 Firmware를 Update할 때 사용합니다. 당사의 Webpage에서 해당 모델에 맞는 업데이트 파일을 다운로드 받으신 후 업데이트를 진행 하실 수 있습니다.  
-또한, Update Fail 및 사용자의 실수로 인해 서보모터가 검색이 되지 않을 경우 Firmware를 검사 및 복구 하실 수도 있습니다.  
-![[update-veiw.png|700]]
-# 2 Total Manager 다운로드 및 설치
-Total Manager는 Window , Mac OS, Linux 에서 모두 설치가 가능합니다.
-## 2.1 요구 사항
-- Windows : windows 7(32bit) / windows 10 64bit 이상
-- Mac OS : Big Sur 이상 64bit
-- Linux : Ubuntu LTD 20.04 64bit
-> [!tip] TIP  
-> [mightyZAP Total Manager Download](https://github.com/mightyZap1/totalmanager/releases) 페이지에서 각 OS에 맞게 다운로드 하실 수 있습니다.
+### 1.3.3 Update
+It is for the future firmware update. Generally, the latest firmware is applied from the factory, but in very rare cases, a firmware update may be required for products stored by the resellers. If necessory, user can proceed with the update after downloading the update file for user's model from our website.
+Additionally, in this update menu, if the servo motor is not searched due to update failure or user error, user is able to restore the firmware. 
+![[control-view.png|700]]
+# 2 Total Manager Download & Installation
+Total Manager is compatible with Windows, Mac OS, and Linux.
+## 2.1 OS Requirement
+- Windows : Windows 7(32bit) / Windows 10 64bit or higher
+- Mac OS : Big Sur or higher
+- Linux : Ubuntu LTD 20.04 64bit or higher        
+>Please download proper installation file for each OS at [mightyZAP Total Manager Download](https://github.com/mightyZap1/totalmanager/releases) 
 
-## 2.2 Install
+## 2.2 Installation
 ### 2.2.1 Windows
-Windows 컴퓨터에서 mightyZAP Total Manager를 설치하려면 사용 중인 Windows의 OS 버전을 확인하신 후 버전에 맞게 다운로드하여 주시기 바랍니다.   
-- 32bit windows : mightyZAPTotalManagerx.y.z_ia32.exe (추후 32bit지원 종료)
-- 64bit windows : mightyZAPTotalManagerx.y.z_x64.exe  
+To install Total Manager software on a Windows PC, please check the OS version of Windows and download the appropriate version. 
+- 32bit Windows : mightyZAPTotalManagerx.y.z_ia32.exe
+- 64bit Windows : mightyZAPTotalManagerx.y.z_x64.exe  
 
-**Windosw Version 확인 방법**
-- windows  7 : 제어판 -> 시스템 확인
-- windows 10 이상 : 설정 -> 시스템 -> 정보
-<font color="#4f81bd">OS Version 확인 방법</font>
-![[windows_version_check.jpg|700]]
+**How to check Windows Version 
+- Windows  7 : Control Panel -> System and Security -> System -> System Type
+- Windows 10 or higher : Setting -> System -> About -> System Type
+<font color="#4f81bd">How to check OS Version </font>
+<Win 7>                                                                              <Win 10 or higher>    
+![[windows_version_check.jpg]]
 
-다운로드한 파일을 실행하여, 설치 가이드의 지침에 따라 설치하시면 됩니다.  
-설치에는 몇 분 정도 걸릴 수 있습니다.
-![[window_install.jpg|700]]
-이제 Window에서 mightyZAP Total Manager를 사용하실 수 있습니다.  
+Run the downloaded file and install it according to the instructions of the installation guide. Installation may take several minutes.
+![[window_install.jpg]]
+Now, mightyZAP Total Manager software on Windows is ready to use.
 
 ### 2.2.2 Linux
-Linux 전용 패키지를 다운로드 합니다.
-Debian/Ubuntu 기반 배포용 Total Manager를 설치하기 위해서는 다음과 같은 Command Line을 통해 .deb 패키지(64bit)를 다운로드하고 설치하는 것입니다.
+Download the file package dedicated for Linux OS.  
+To install Total Manager for Debian/Ubuntu-based Total Manager, download and install the .deb package (64bit) through the following command line.
 ```
 $ sudo dpkg -i [file].deb
 ```
+
 ### 2.2.3 Mac OS
-Mac OS 전용 패키지를 다운로드 합니다.
-다운로드 파일을 더블 클릭하면 아래와 같이 설치 화면이 나타납니다. mightyZAP Total Manager 아이콘을 드래그 하여 Applications에 놓으면 설치가 완료됩니다. 
+Download the file package dedicated for Mac OS. 
+Double-click the downloaded file, then installation window appears as shown below. Drag the mightyZAP Total Manager icon and place it to the Application.  Installation is completed.  
+![[Software/Total Manager/img/macOS_install.png|500]]
 
-![[Actuator/Mini 17Lf/img/macOS_install.png|500]]
-## 2.3 화면 구성
-화면 구성은 크게 4가지로  Header 부분과 Side bar, Contents, Footer로 구성되어있다.  
-![[Software/Total Manager/img/mainView-description.png|700]]
-<font color="#4f81bd">1. Main Toolbar  </font>  
-mightyZAP의 Reset, Restart, Data Undo/Redo 등을 수행  
-<font color="#4f81bd">2. SCAN  </font>  
- Software의 통신을 연결하고 mightyZA P 검색  
-<font color="#4f81bd">3. Main Menu</font>  
-Information, control, Update, Manager Setting 등 Manager에서 제공하는 기능 선택 Side bar Menu  
-<font color="#4f81bd">4. Actuator List</font>  
-검색된 mightyZAP의 이름이 통신 속도와 Protocol에 따라 분류되어 표시  
-<font color="#4f81bd">5. Main contents</font>  
-매니저에 제공하는 Main 기능 표시  
-<font color="#4f81bd">6. Actuator Information</font>  
-선택된 Actuator의 모델명, Firmware Version, 통신 방식 등이 표기    
-<font color="#4f81bd">7. 통신 상태</font>  
-통신 Protocol 및 송수신 Error 등 통신 상태 표시  
-<font color="#4f81bd">8. Manager Status</font>    
-Manager 의 버전 및 Language 등 표시  
+## 2.3 Screen Layout
+The screen layout is divided into four parts: Header, Side bar, Contents, and Footer in general. 
+![[mainView-description 1.png|700]]
+<font color="#0070c0"><font color="#548dd4">① Main Toolbar</font></font> : Perform actuator reset, restart, data undo/redo, etc. 
+<font color="#548dd4">② SCAN</font> : Connect Software's communication(COM port) and search connected mightyZAP  
+<font color="#548dd4">③ Main Menu</font> : Always located on the side bar and user can select the main functions of the manager software such as Information, Control, Update, and Setting. 
+<font color="#0070c0">④ Actuator List</font> : Searched mightyZAP model name to be shown along with the communication speed (baudrate) and protocol type.  
+<font color="#0070c0">⑤ Main contents</font> : Shows various parameters.
+<font color="#0070c0">⑥ Actuator Information</font> : Selected mightyZAP's model name, firmware version, and communication method are displayed.
+<font color="#0070c0">⑦ Communication Status</font> : Displays Communication status such as protocol type and transmission/reception errors.
+<font color="#0070c0">⑧ Manager Status</font> :  Displays Manager software's version and Language (English/Korean)
+
 ## 2.4 USB Interface Board 
-mightyZAP Total Manager와 mightyZAP의 통신을 위하여 Serial Convertor 가 필요합니다.  
-해당 설명은 당사의 USB Interface Board를 기준으로 설명이 되어있습니다.  
-먼저 USB Cable을 이용하여 PC와 연결하여 주시기 바랍니다.   
-> [!warning] 주의사항     
-> 충전 전용 케이블이 아닌 통신이 가능한 케이블을 사용하여 주셔야합니다.
+A USB-TTL or RS-485 serial converter is required for Total Manager to communicate with mightyZAP.  Below explanation is based on our genuine USB Interface Board - IR-USB02 or 03.
+First, connect to the PC using a USB cable with IR-USB02 or 03. 
+(IR-USB02 is equipped with a Micro 5 pin USB connector, and IR-USB03 is equipped with a new C type USB connector.)
+>[!caution] CAUTION </font>     
+>  - Make sure to use "data transferable" USB cable between PC and USB converter.    
+>     Charging only cable does not support data communication.  
+>  -  Make sure proper wiring when using 3rd party converter. 
+>  -  Appropriate DC power matching the rated input voltage of each actuator should be supplied to the actuator so as to utilize the Manager software. When using our USB Interface Board (IR-USBXX), just supply the power through the board.
 
-### 2.4.1 Windows
-당사의 Interface Board 는 2가지 Type으로 되어있으며, 각 버전에 따라 드라이버를 다르게 설치해야 합니다. 아래의 설명을 참조하여 드라이버를 설치 합니다.
-#### 2.4.1.1 IR_USB02 Driver (CH340x)
-아래의 링크에서 IR-USB03의 Driver를 다운로드 합니다.  
-[CH341SER_ZIP Driver Download Link](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)   
+### 2.4.1 For Windows
+We have two types of USB Interface Board depending on the time of release, and the method of installing the driver is different for each type. Install the driver by referring to the instructions below.
+1)  **IR-USB02 Driver installation** (CH340x)
+	Download the driver for IR-USB02 from the link below. 
+	[Download link](https://www.wch.cn/downloads/file/65.html?time=2024-07-17%2010:07:13&code=DwmHVUI3gI6XcgRteBdx84KFdjUXkRx3daZBPF6P)
+    After running the downloaded file, click the INSTALL button to install the driver. 
+	![[ch340x_win_install.jpg]]
+2) **IR-USB03 Driver installation**  
+	The IR-USB03 driver is automatically installed by Windows Update.
+    If it does not install automatically, please download the driver through the link below.
+	[Download Link](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip) 
+	In the unzipped folder, right-click the silabser.inf file and select Install.
+	![[Pasted image 20240717024258.png|400]]  
+	When the Install button is selected, a warning message appears as follows. At this time, click the OPEN button to proceed with installation.
+	![[Pasted image 20240717024330.png|400]]  
+	When installation is complete, a pop-up message will appear as below.
+	![[Screenshot 2024-07-17 024534.png]]
 
-<font color="#4f81bd"><b>Step 1. Driver Install</b></font>  
-다운로드 받은 파일을 실행한 후 INSTALL 버튼을 클릭하여 드라이버를 설치합니다
-![[ch340x_win_install.jpg]]  
-
-<font color="#4f81bd"><b>Step 2. Driver 확인</b></font>  
-- USB Interface Board를 PC와 연결합니다.  
-- [시스템]-[장치관리자]-[port]에서 Serial Port가 정상적으로 연결되었는지 확인합니다.  
-- 정상적으로 연결되어 있을 경우 아래의 이미지와 같이 Model명이 표시되는것을 확인할 수 있습니다.
-  ![[serialPort_check_win.jpg|700]]
-#### 2.4.1.1 IR_USB03 Driver (FTDI)
-아래의 링크에서 IR-USB03의 Driver를 다운로드 합니다.   
-[FTDI_ZIP Driver Download(ZIP)](https://ftdichip.com/wp-content/uploads/2021/08/CDM212364_Setup.zip)    
-
-<font color="#4f81bd"><b>Step 1. Driver Install</b></font>  
-- 다운로드 받은 파일을 실행하여 드라이버를 설치합니다.  
-![[ftdi_win_install.png|650]]
-
-<font color="#4f81bd"><b>Step 2. Driver 확인</b></font>  
-- USB Interface Board를 PC와 연결합니다.  
-- [시스템]-[장치관리자]-[port]에서 Serial Port가 정상적으로 연결되었는지 확인합니다.  
-- 정상적으로 연결되어 있을 경우 아래의 이미지와 같이 Model명이 표시되는 것을 확인할 수 있습니다.
-	 ![[fd_confirm_driver.png|600]]
-
+3) **Interface Board Connection Check**
+	Connect the USB Interface Board to the PC.
+	Check whether the Serial Port is properly connected in [System]-[Device manager]-[Ports].
+	If connected properly, user can see that a new COM port is added as shown in the image below.
+![[Pasted image 20240717024827.png|700]]
 ### 2.4.2 Linux[ubuntu/Demian]
-#### 2.4.2.1 CH341 Driver   
-CH341 driver는 USB-02 Model에서 만 사용됩니다.   
-CH340, CH341 의 시리얼 드라이버는 Linux 커널 버전 2.6.24부터 내장되어 있으며, 해당 위치는 <font color="#4f81bd">'drivers/usb/serial/ch341.c'</font> 입니다.  
-
-다만 드라이버를 최신 상태로 유지 하기 원하실 경우 아래의 아래의 사이트에서 Linux용 드라이버를 다운로드 받으신 후 순서에 따라 진행하여 주시기 바랍니다.  
-[LINUX용 CH341 Driver Donwload(ZIP)](https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html)  
-   
-<font color="#4f81bd"><b>Step 1. Driver Install</b></font>  
-- 다운로드한 파일의 압축을 풉니다.
-- 터미널 창을 열어 다운로드한 디렉토리로 이동을 합니다. 
-- 다음의 명령들을 입력합니다.
-```bash
+<font size="5"> Driver Installation</font>
+1) IR-USB02 Driver Installation (CH341 Driver) 
+	The CH341 driver can be used only for IR-USB-02.
+	The serial drivers for CH340 and CH341 are built-in starting from Linux kernel version 2.6.24, and its location is drivers/usb/serial/ch341.c.  However, if user wishes to keep the driver up-to-date, please see below.
+	 - Please download the driver for Linux from the website below.
+	    [LINUX CH341 Driver Donwload(ZIP)](https://www.wch.cn/downloads/CH341SER_LINUX_ZIP.html)  
+	 - Unzip the downloaded file.
+	 - Open a terminal window and move to the downloaded directory.
+	 - Enter the following commands
+```
 $ make clean  
 $ make  
 $ sudo make load    
 ```
-
-<font color="#4f81bd"><b>Step 2. Driver 확인</b></font>  
-- 설치된 드라이버를 확인하기 위해 USB-02를 PC와 연결한 후 다음의 명령을 입력합니다. 
-- 정상적으로 설치가 되었다면 "**ch34x**"로 표시되어야 합니다.
+	
+ - To check the installed driver, connect IR-USB02 to the PC and enter the  following command.  If installed properly, it should be displayed as "ch34x".
+	   
 ```bash
 $ sudo dmesg | grep ch34    
 [   xxx] usbcore: registered new interface driver ch341  
@@ -157,46 +142,41 @@ $ sudo dmesg | grep ch34
 [   xxx] usb 1-6.4.3: ch341-uart converter now attached to ttyUSB1  
 ```
 
-#### 2.4.2.2 FTDI Driver  
-FTDI Driver는 USB-02를 제외한 모든 모델에서 사용됩니다.  
-FTDI VCP 드라이버는 Linux  커널에 내장되어 있으며, 만약 Driver가 검색이 안될경우 최신 kernel Release를 설치할 것을 권장합니다.  
-Linux 에서는 VCP 드라이버가 <font color="#4f81bd">"/dev/ttyUSBx"</font> 로 표시됩니다.  
-
-<font color="#4f81bd"><b>Step 1. Comport 확인</b></font>  
-- USB Interface board를 PC와 Cable로 연결 한다.
-- 터미널 창을 열고 다음을 입력하면 다음과 같이 출력이 나타납니다.
-```bash
-$ dmesg|grep FTDI  
-[   xxx] USB Serial support registered for FTDI USB Serial Device  
-[   xxx] ftdi_sio 9-1:1.0: FTDI USB Serial Device converter detected  
-[   xxx] usb 9-1: FTDI USB Serial Device converter now attached to ttyUSB0  
-[   xxx] ftdi_sio: v1.6.0:USB FTDI Serial Converters Driver  
+ 2) IR-USB03 Driver Installation (CP210x)
+	The CP210x driver has been distributed as part of the Linux kernel since v2.6.12. On Linux, the CP210x driver appears as /dev/ttyUSBx.
+       How to check COM port:
+       - Connect the USB Interface board to the PC with an appropriate USB cable. (Not charging only cable)
+       - Open terminal window and type below, then will see below output 
+```
+$ dmesg|grep cp21x  
+[   xxx] USB Serial support registered for cp210x
+[   xxx] cp210x 2-2.1:1.0: cp210x converter detected
+[   xxx] cp210x 2-2.1: cp210x converter now attached to ttyUSB0
 ```
 
-<font color="#4f81bd"><b>Step 2. Serial Port 권한 얻기</b></font>  
-우분투는 기본적으로  root 사용자가 아닌 일반 사용자로 로그인하도록 하기 때문에 Serial Port와 같은 시스템 장치를 다루기 위해서는 권한 설정을 해야 합니다.   
-- 먼저 연결된 Port 명을 확인하기 위해 아래의 명령을 입력합니다.
+3) Obtaining Serial Port Permissions
+	Ubuntu basically requires users to log in as a regular user, not as a root user, so user needs to set permissions to handle system devices such as the Serial Port.
+	First, enter the command below to check the connected port name.
 ```
 $ dmesg|grep tty  
 [   xxx] printk: console [tty0] enabled  
-[   xxx] usb 1-6.1.4: FTDI USB Serial Device converter now attached to ttyUSB0  
-[   xxx] ftdi_sio ttyUSB0: FTDI USB Serial Device converter now disconnected from ttyUSB0  
-[   xxx] usb 1-6.1.4: FTDI USB Serial Device converter now attached to ttyUSB0  
-```
+[   xxx] cp210x 2-2.1: cp210x converter now attached to ttyUSB0  
+```   
+   
+   Check the usage group using the serial port identified through the “ls -l” command.
 
-- "ls -l" 명령을 이용하여 확인된 Serial Port를 이용하여 사용 그룹을 확인합니다.
 ```bash
 $ ls -l /dev/ttyUSB0  
 crw-rw---- 1 root dialout 188,  0 11월  1 10:49 /dev/ttyUSB0  
 ```
 
-- "id -Gn" 명령을 통해 현재 로그인 중인 사용자가 속한 그룹을 확인합니다.
+Use the “id Gn” command to check which group the currently logged in user belongs to.
 ```baSH
 $ id -Gn  
 user adm cdrom sudo dip plugdev  
 ```
 
-- 현재 로그인한 사용자에서 dialout 그룹이 포함되어 있지 않기 때문에, 현재 사용자에게 dialout 그룹을 추가해 줍니다.
+Since the currently logged-in user is not included in the dialout group, add the dialout group to the current user.
 ```bash
 $ sudo adduser $USER dialout
 [sudo] password for user.
@@ -204,288 +184,256 @@ Adding user 'user' to group 'dialout' ...
 Adding user user to group dialout
 Done
 ```
+After adding to a group, user must log out and log in again for the changes to take effect.
 
-  그룹에 추가 한 후에는 반드시 로그아웃 후 로그인 해야 변경 사항이 적용 됩니다.
 ### 2.4.3 Mac OS
-#### 2.4.3.1 USB 02(CH34x Driver)
-USB Interface Board Driver를 다운로드 합니다.  
-[CH341SER_ZIP Driver Download Link](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)
-
-다운로드한 파일을 실행하고, 다운로드한 파일 중 <font color="#4f81bd">"CH34X_DRV_INSTRUCTIONS.pdf"</font> 파일의 가이드에 따라 드라이버를 설치합니다.   
-OS X 11.0 이상을 사용하고 OS가 Rosetta를 지원하지 않는 경우 dmg 형식 드라이버를 설치해야 합니다. 그럴 경우 <font color="#4f81bd">Step 3 </font>을 확인 하시기 바랍니다. 
-
-<font color="#4f81bd"><b>Step 1. Install pkg format Driver</b></font>   
-- CH34xVCPDriver.pkg 파일을 click 하여 설치를 진행합니다.  
-![[CH34x_install.png|600]]  
-![[CH34x_Install success.png|600]]  
-
-<font color="#4f81bd"><b>Step 2. Install CH32xVCPDriver Application</b></font>   
-- LaunchPad를 열고 "CH34xVCPDriver" 애플리케이션을 찾아 App을 열고 "Install" 버튼을 Click 합니다.  
-![[ch34x_app.png|600]]  
-- OS X 10.9~OS X 10.15를 사용하는 경우 "다시 시작"을 클릭하여 컴퓨터를 다시 시작해야 합니다.
-- 다시 시작한 후 <font color="#4f81bd"><b>Step 4</b></font> 단계를 수행하십시오.
-
-<font color="#4f81bd"><b>Step 3. OS X 11.0 이상을 사용하고 OS가 Rosetta를 지원하지 않는 경우</b></font>  
-- dmg 형식 드라이버를 설치할 때 dmg 파일을 클릭하고 Drag해야 합니다.
-- OS의 응용 프로그램 폴더에 "CH34xVCPDriver"를 넣은 다음 LaunchPad를 열고 찾습니다.
-- “CH34xVCPDriver” 애플리케이션을 실행하고 App을 열고 “Install” 버튼을 클릭하세요.  
-![[ch34x_app.png|600]]    
-
-<font color="#4f81bd"><b>Step 4. Driver  설치 확인</b></font>  
-- USB-02을 USB 포트에 연결하고 [System Report]->[Hardware]->[USB]을 선택하면, 오른쪽은 “USB Device Tree”에서 연결한 장치를 찾을 수 있습니다.  
-- USB 장치가 제대로 작동하는 경우 "Vendor ID"가 [0x1a86]으로 나타납니다.  
-![[Software/Total Manager/img/ch34x_confirm_Driver.png|600]]  
-
-<font color="#4f81bd"><b>Step 5. Comport 확인</b></font>   
-- [Application] - [Utility] 폴더에서 "터미널" 프로그램을 열고 다음 명령을 입력하세요.  
-~~~
-$ ls /dev/tty*
-tty.wchusbserial121311
-~~~
-  - "tty.wchusbserialx"가 표시되어야 합니다. 여기서 "x"는 Windows COM 포트 할당과 유사하게 할당된 장치 번호입니다.  
-  
->[!note] Note  
->추가적인 내용은 다운로드한 파일 중 <font color="#4f81bd">"CH34X_DRV_INSTRUCTIONS.pdf"</font> 을 참조하여 주시기 바랍니다.  
-#### 2.4.3.2 USB 03(FTDI Driver)
-해당 Driver 설치 설명은 해당 Driver 설치 설명은 Mac OS X10.15 and macOS 11/12을 기준으로 설명을 드립니다.  그 이전 OS X 버전의 경우 FTDI 사의 2016년  "Mac OS X Installation Guide"을 참조하여 주시기 바랍니다.  
-
-USB Interface Board Driver를 다운로드 합니다.  
-- https://ftdichip.com/drivers/vcp-drivers/  
-
-<font color="#4f81bd"><b>Step 1. Application folder에 설치 하기</b></font>  
-다운로드 받은 "FTDIUSBSerialDextInstaller_x_y_z.app" 파일을 Application 폴더로 옮깁니다.  
-![[FTDI_driver_file.png|500]]
-
-<font color="#4f81bd"><b>Step 2. FTDI USB Serial Dext VCP Install</b></font>   
-FTDIUSBSerialDextInstaller_x_y_z 실행 시킨 후 아래와 같이 Install 버튼을 클릭합니다.  
-![[FTDI_install.png|600]]    
-만약 아래와 같이, "System Extention blocked" 메세지가 나왔을 경우 "Open System Settings" 버튼을 클릭하여 시스템 창을 엽니다.   
-[Privacy & Security] 항목에서  "FTDIUSBSerialDextInstall_x_y_z.app"을 허용 버튼을 눌러 설치를 지속합니다.  
-![[Allow_FTDI_Driver.png|700]]
-
-설치가 완료되면 아래와 같이 표시가 됩니다.  
-![[FTDI Succeeded Install.png|500]]  
-
-<font color="#4f81bd"><b>Step 3. Driver  설치 확인</b></font>   
-USB-03을 USB 포트에 연결하고 [System Report]->[Hardware]->[USB]을 선택하면, 오른쪽은 “USB Device Tree”에서 연결한 장치를 찾을 수 있습니다.  
-USB 장치가 제대로 작동하는 경우 아래의 그림과 같이 Model 명이 나타납니다.
-![[ch34x_confirm_Driver.png|700]]
-
-<font color="#4f81bd"><b>Step 4. Comport 확인</b></font>   
-[Application]-[Utility] 폴더에서 "터미널" 프로그램을 열고 다음 명령을 입력하세요.  
-~~~
-$ ls /dev/tty*
-tty.usbserial-x
-~~~
-  "tty.usbserial-x"가 표시되어야 합니다. 여기서 "x"는 Windows COM 포트 할당과 유사하게 할당된 장치 번호입니다.
+1) IR-USB02 Driver Installation (CH341 Driver)
+   Download USB Interface Board Driver.  
+   [Download link](https://www.wch.cn/downloads/file/178.html?time=2022-11-16%2017:17:24&code=0azREtkUexJAgAQPAAErK83gMdBzoeHN8b65MM6l?time=2024-07-17%2012:42:05&code=OOg1KsakbZkEsluK9l4rwCpC267fds0NjEXwyXDN)
+   Unzip the downloaded file and run the “CH34x_VCPDriver.pkg” file.
+   ![[Screenshot 2024-07-17 at 1.50.46 PM.png|600]]
+    Proceed with the installation by following the installation guide.
+   ![[CH34x_install.png|400]]  
+   ![[CH34x_Install success.png|400]]
+   When the security warning window appears as follows, click "Open System Setting" and click the "Allow" button as shown on the right to complete the installation of "ch34xVCPDriver".
+   ![[Pasted image 20240717140217.png]]
+2) IR-USB03 Driver Installation (CP210x Driver)
+   Download USB Interface Board Driver.  
+    [Download link](https://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip)
+   Unzip the downloaded file, run the “silabsUSBDriverDisk.dmg” file, and install the driver according to the guide.
+ ![[Screenshot 2024-07-17 at 1.05.53 PM.png|400]]
+	 When user runs concerned file, below will be shown :
+	 ![[Screenshot 2024-07-17 at 1.06.45 PM.png|500]]
+	 Run the “Install CP210x VCP Driver” file.  When the following warning window appears, click the Open button to proceed with installation.
+	 ![[Screenshot 2024-07-17 at 1.06.50 PM.png|400]]
+	 Follow the instructions in the installer and proceed with the procedure. 	 ![[Pasted image 20240717132801.png|700]]
+	When the security warning window appears as follows, click "Open System Setting" and click the "Allow" button as shown on the right to complete the installation of "CP210xVCPDriver".
+	  ![[Pasted image 20240717133431.png|700]]
+	 ![[Screenshot 2024-07-17 at 1.08.27 PM.png|500]]
 # 3 Total Manager Description
-## 3.1 통신 연결 및 검색
-아래의 이미지와 같이 프로그램을 실행 한 후 상단 매뉴바에서 Scan 버튼을 누르면 Actuator Scan을 위한 팝업 창이 활성화 됩니다.   
-![[ConnectAndSCAN.png|700]]
+## 3.1 Communication connection & Search
+Run the program, and click the SCAN button on the right side of the top menu bar to activate a pop-up window for Actuator Scan.
+![[Pasted image 20240717142300.png|700]]
 
-### 3.1.1 SCAN 화면 구성
-Actuaotor Scan 팝업 창의 화면 구성은 아래와 같습니다.  
-![[ScanActuator-Desc.png|600]]
-- **Serial Port**  : USB Interface Board의 Serial Port
-- **Protocol** : 통신 프로토콜 설정, Actutator Model에 따라 다르며 Scan시 중복 선택 가능
-- **Baudrate Select** :  통신 속도 설정 (default 57600bps) Scan시 중복 선택 가능
-- **Scan 결과 창** : SCAN 진행 상황과 결과를 출력한다.
-- **SCAN, CLOSE** : SCAN 실행 및 창 닫기 버튼
-### 3.1.2 통신 설정
-**1. Port 선택**  
-위 [[#2.4 USB Interface Board]] 의 설명을 참조하시어 Serial Port 명을 확인 하신 후 진행하시기 바랍니다.  연결된 Serial Port와 동일한 Port를 선택한 후 OPEN 버튼을 클릭하여 Serial Port를 연결합니다.  
+### 3.1.1 Basic information
+Actuator Scan pop-up window is as follows. 
+![[Pasted image 20240802093730.png|500]]
+- **COM Port**  : Serial Port for connected USB Interface Board
+- **Protocol** : Communication protocol selection.  Default protocol varies depending on the actuator series, so can be selected both protocols for scanning.
+- **Baudrate** :  Communication speed selection (default 57600bps).  Duplicate selection available for scanning
+- **Scan Result** : SCAN progress and result.
+- **SCAN, CLOSE** : SCAN and Close window button
+
+### 3.1.2 Communication Setting
+##### 1. Serial COM Port Selection
+Please refer to  [[#2.4 USB Interface Board]] above and check the Serial Port name before proceeding.  Select the same port as the connected serial port and click the OPEN button to connect the serial port.
 ![[ScanActuator-PortSelect.png|700]]
-
-Serial Port 를 Open하면 Option 항목이 활성화 됩니다.  
-모든 옵션은 중복으로 선택할 수 있으며 검색 시 순차적으로 진행이 됩니다.  
-All 버튼을 누르게 되면 모든 선택하거나 모두 선택 해지를 하게 됩니다.
-
+The option items(protocol and baudarate) becomes active when the user opens the serial port.
+Each item can be selected individually or in duplicate and progress sequentially during the search. Click the "All" button to select or deselect all.
    ![[yrdy-2023-07-25_10.39.gif]]
   
-다음은 모델에 따른 기본 설정 값에 대한 예시 입니다.   
+Here are default setting information for protocol type and baudrate.   
 
-|   예시 모델         |   Protocol(dafault)                 |   Baudrate (dafault)          |
-|:------------------|:----------------------------|:---------------------|
-|   **Mini L12/12Lf**   | Own Protocol                |             57600pbs |
-|   **Mini 17Lf**       | Modbus Protocol             |             57600pbs |  
-### 3.1.3 Actuator 검색
- SCAN 버튼을 누르게 되면 선택한 옵션에 따라 차례로 검색을 시작하여 해당 결과를 표시합니다.  
- 원하는 Actuator 가 모두 검색 되었을 경우, 완료를 기다리지 않고 STOP 버튼을 click하면 검색을 종료하면 됩니다.  
- ![[SCAN_Desc.png|700]]  
- 검색이 완료되었으면 Close 버튼을 Click하여 Pop-Up 창을 닫습니다.
-## 3.2 Information
-mightyZAP Actuator의 Model명, Rated Load, Stroke, firmware Version등 관련된 정보를 표시하는 페이지 입니다.  
-Manager가 실행이 되면 처음 표시하는 창이  창이며, 아래의 이미지와 같이 사이드 바 메뉴의 첫번째 아이콘을 클릭하여 해당 페이지로 이동합니다. 
-![[InformationMenu.png|700]]
-### 3.2.1 서보모터 List 확인
-아래의 그림과 같이 매니저에 왼쪽에는 검색된 서보모터가 Display 됩니다.  
-Actuator List는 Baudrate와 Protocol에 따라 분류되어 표시 되며,  Baudrate 별로 접거나 펼 수 습니다
-![[ActuatorList.png|700]]
+| Actuator Series | Default Protocol                     | Default Baudrate |
+| :-------------- | :----------------------------------- | :--------------- |
+| **L12/12Lf**    | IR Open Protocol (MODBUS Switchable) | 57600pbs         |
+| **17Lf**        | MODBUS RTU Protocol only             | 57600pbs         |
+>[!note] NOTE
+>- If user searches actuator with ​​different value from the protocol type and baudrate previously set by the user, the actuator cannot be searched.
+>- If user does not remember the protocol type and baudrate they previously set, set it to All and search.
+>- However, when set to All, the search time will naturally increase.
 
-### 3.2.2 정보 확인
-Actuator List를 선택하면 해당 Actuator의 모델 명, Stroke 길이, 정격 부하, 통신 Protocol 등의 정보가 표시됩니다. 
-![[Actuator_Information.png|700]]
-  
-이중 중요한 일부 정보가 Manager의 하단 Footer에 표시됩니다.
+### 3.1.3 Scan Actuator
+ - When clicking the SCAN button, the search begins sequentially according to the selected option and the corresponding results are to be displayed.
+ - When desired actuators are scanned, user can stop scan process by clicking the STOP button to end the search without waiting for completion.
+![[Pasted image 20240717142326.png|700]]
+ 
+ When the scan is complete, click the Close button to close the Pop-up window.
+
+## 3.2 First page after scan
+- The "information" page displays general information of the connected actuator such as the model name, rated Load, stroke, and firmware version.
+- This is the first screen when the Manager is launched after completing the scan. User can go back to the page anytime by clicking the first icon in the sidebar menu as shown in the image below.
+![[Pasted image 20240717142343.png|700]]
+
+### 3.2.1 Actuator List
+As shown in the picture below, the scanned actuator is displayed on the left side of the Manager software. 
+Scanned actuators are classified / displayed according to Baudrate and Protocol, and can be fold/unfold by Baudrate.
+![[Pasted image 20240717142433.png|700]]
+>[!Note] NOTE
+>When scanning multiple actuators through a serial daisy chain connection, <u>the IDs of each actuator must be different</u> to prevent communication conflicts. If the IDs are different, all connected actuators can be scanned, but each must be set individually.
+
+### 3.2.2 Information
+Select a scanned actuator in the Actuator List, then general information such as the model name, stroke length, rated load, and communication protocol of the actuator are displayed.
+![[Pasted image 20240717142523.png|700]]
+
+Please note that some important information is displayed in the bottom footer of the Manager as below. The information in the footer is also displayed on other pages.
 ![[FooterDiscription.png]]
-  
-Footer에 표시된 정보는 information Page가 아닌 다른 Page에서도 볼 수 있습니다. 
-## 3.3 Parameter
-mightyZAP Actuator를 설정 및 간단한 동작 테스트를 하고, 동작 상태를 Monitoring하는 페이지 입니다.  
-Menu 선택 창에서 아래의 그림과 같은 아이콘을 클릭하면 해당 페이지로 이동합니다.  
-![[Parameter.png|700]]
-사용자 환경에 맞게 Stroke, ID, Baudrate 등을 설정하고 간단한 동작 테스트를 진행할 수 있습니다.  
-각 Parameter에 대한 설명은 해당 모델의 사용자 매뉴얼에서 Parameter 설명을 참조하시기 바랍니다.  
 
-### 3.3.1 화면 구성
-Parameter 페이지의 구성은 Non-Volatile Memory 영역과 Volatile Memory 영역으로 나뉩니다.
-Non-volatile Meomory는 비 휘발성 메모리 영역의 Parameter로 수정 및 저장된 Data가 내부 Falsh Memeory에 저장이 되며, 모터의 전원이 꺼지게 되어도 지워지지 않고 저장되어있습니다.  
-Volatile Memory는 휘발성 메모리 영역으로 내부 Ram에 저장이 되며, 전원이 꺼지기 전까지는 해당 Data를 저장하고 있지만, 전원이 꺼지게 되면 해당 Data는 초기화 됩니다.  
-Parameter 영역은 매니저의 크기를 줄일 경우, 주로 사용되어지는 Volatile-Memeory 영역이 상단으로 이동합니다.   
+## 3.3 Parameter
+In Parameter page, user is able to set up various parameters of the mightyZAP Actuator, perform a motion test, and monitor the operation status.
+Click the icon shown below in the Menu selection window to go to this page.
+![[Parameter.png|700]]
+User can set various parameters such as Stroke, ID, Baudrate, etc. to suit user's requirement and perform a simple motion test.
+For a description of each parameter, please refer to the parameter description in each actuator user manual. 
+
+### 3.3.1 Screen Layout
+- The configuration of the Parameter page is divided into Non-Volatile Memory and Volatile Memory areas.
+- The Non-volatile parameters are in the non-volatile memory area, and modified / saved data is stored in the internal flash memory, thus, they will not be erased even when the motor power is turned off.
+- The Volatile parameters is a volatile memory area and modified / saved data is stored in the RAM until the power is turned off.  But the data will be erased/ initialized when the power is turned off. 
+- When user reduces the size of the Manager window, the mainly used Volatile-Memory area moves to the top.
 ![[DynamicSize.png|700]]
-  
-**Tooltip 기능**
-각 Paremater 이름의 옆에는 <span style="text-align:center;display:inline-block;background-color:white;border:1px solid  black; color:black;width:20px;height:20px;border-radius:20px;line-height:initial;"> ? </span> 를 한 아이콘이 있습니다. 해당 아이콘에  mouse를 가져가 대면 해당 Paremater에 대한 간단한 설명이 표시됩니다.  
-![[tooltip.png|500]]
+
+**Tooltip function**
+There are question mark icons(<span style="display:inline-block;background-color:black; color:white;width:18px;border-radius:25px;padding:0 6px;font-size:12px">?</span>) next to each Parameter name. Hover the mouse over the icon, a brief description of the parameter will be displayed. The language of the tooltip also changes depending on the language setting.  
+![[Pasted image 20240802094055.png|450]]
+
 ### 3.3.2 Parameter Control
 - **Slide Control** : <font color="#4f81bd">Non-volatile Memory</font>  
-  Non-Volatile Memeory의 가장 일반적인 Data 변경 방식으로 Slide bar의 Drag 또는 TextBox에 직접 Data를 입력하는 방법으로 Data를 변경 합니다.   
-  ![[SlidebarVolatile.png|500]]
-  값을 변경할 경우 오른쪽의 TextBox의 값이 푸른색으로 변경되며, 변경한 data를 저장하기 위해서는 S  버튼을 클릭해야 합니다.   
+  The most common method of changing data for Non-Volatile Memory parameters.  Drag the slide bar or directly enter the data into the TextBox.
+    ![[SlidebarVolatile.png|500]]
+  The color of value in the TextBox on the right changes to blue when user changes the value. Click the "S" button to save the changed data.
   ![[SlidebarActive.png|600]]
-  S 버튼을 클릭하지 않고 다른 Parameter를 변경하려 할 경우 Data는 원래 상태로 복구 되며 TextBox의 font가 다시 흰색으로 변경됩니다.  
-  
+  If user tries to change another parameter without clicking the S button, the data will be restored to its original state and the color of TextBox value will change back to white.
+    
 - **Slide Control** : <font color="#4f81bd">Volatile Memory</font>  
-  Volatile Memory에서의 Slide Control 방식은 Non-Volatile Memory 방식과 유사하지만, S 버튼이 없으며, Slide bar를 Drag할 경우 변경된 Data가 즉시 적용됩니다.  
+  The Slide control for Volatile Memory parameter is similar to one of the Non-Volatile Memory, but there is no "S (Save)" button. Changed data is applied immediately once dragging the slide bar.
   ![[Slide_volatile_desc.png|400]]  
-  또한 TextBox를 통해 Data를 입력할 경우 Data를 변경한 후 Enter key를 입력하면 변경된 Data가 즉시 적용됩니다.
-  또한 Data가 변경되도 TextBoxd의 Font는 푸른색으로 변경되지 않습니다.
+  Also, when entering data through a TextBox, if user changes the data and then presses the Enter key, the changed data will be applied immediately. Also, even if the data changes, the color of TextBox does not change to blue.
   ![[SlideVolatile_active.png|400]]  
-  > [!tip] Tip  
-  > Goal Position TextBox를 클릭한 후 다음과 같이 키보드 키로 제어가 가능합니다.  
-  > 	'a' : 최소 stroke로 이동  
-  > 	's' : stroke 중간 위치로 이동  
-  > 	'd' : 최대 Stroke로 이동    
+  >[!Tip]  
+  >After clicking the Goal Position TextBox, user can control the value with keyboard keys as below.
+ > 'a': Move to minimum stroke
+ > 's': Move to the center position of the stroke
+ > 'd': Move to maximum stroke
+  
 - **Check Control Box** : <font color="#4f81bd">Non-volatile Memory</font>   
-  Check Control은 check 기능을 이용하여 Data를 변경 가능하며, 이때 Textbox는 Read Only 상태로 Data값과 상태만을 확인할 수 있습니다.  
+  Check Control allows user to change data using the Check box function. Please note that the value in a Textbox is in a "Read Only" state, so only the data value and status can be read.
   ![[checkbox-Volatile.png|600]]
-  checkbox는 모두 선택, 모두 해제, 부분 선택 모두 가능하며,선택 값이 변경되었을 경우 TestBox의 font가 푸른색으로 변경됩니다.  
-  수정한 값을 적용하기 위해서는 S 버튼을 눌러 수정된 값을 저장해야 합니다.  
-  버튼을 클릭하지 않고 다른 Parameter를 변경하려 할 경우 Data는 원래 상태로 복구 되며 TextBox의 font가 다시 흰색으로 변경됩니다.   
+  The check box supports "Select All", "Clear All", and "Partial selection" as well. The color of value in the TextBox on the right changes to blue when user changes the value. Click the "S" button to save the changed data. 
+  If user tries to change another parameter without clicking the S button, the data will be restored to its original state and the color of TextBox value will change back to white.
+   
 - **Select Control box** : <font color="#4f81bd">Non-volatile Memory</font>   
-   Select Control box는 Select 기능을 이용하여 Data를 변경 가능하며, 이때 Textbox는 Read Only 상태로 Data값과 상태만을 확인할 수 있습니다.
-  select 값이 변경되었을 경우 TestBox의 font가 푸른색으로 변경되며, 
-  수정한 값을 적용하기 위해서는 S 버튼을 눌러 수정된 값을 저장해야 합니다.
+   Select Control Box allows user to change data using the Select button function. Please note that the value in a Textbox is in a "Read Only" state, so only the data value and status can be read.
+   The color of value in the Text Box on the right changes to blue when user changes the select value. Click the "S" button to save the changed data. 
+   If user tries to change another parameter without clicking the S button, the data will be restored to its original state and the color of TextBox value will change back to white.
   ![[SelectBox-NonVolatile-Disc.png|700]]  
-  버튼을 클릭하지 않고 다른 Parameter를 변경하려 할 경우 Data는 원래 상태로 복구 되며 TextBox의 font가 다시 흰색으로 변경됩니다.  
+  
 - **Select Control box** : <font color="#4f81bd">Volatile Memory</font>   
-  Volatile Memory 의 Select Control Box에는 TextBox가 존재하지 않습니다.
-  Select 기능을 이용하여 선택된 Data를 즉시 적용합니다.  
-  ![[Selectbox-Volatile.png]] 
+  There is no TextBox in the Select Control Box for Volatile Memory. Selected data using the Select function to be applied Immediately.  
+  ![[Selectbox-Volatile.png|700]] 
 - **Button Control Box** : <font color="#4f81bd">Volatile Memory</font>   
-   Button control Box 기능은 Volatilte Memory에 만 있는 기능으로 Motor의 동작을 정지하기 위해 사용됩니다.
+   Button control Box 기능은 Volatile Memory에 만 있는 기능으로 Motor의 동작을 정지하기 위해 사용됩니다.
    아래의 그림과 같이 Button은 활성화 비활성화에 따라 2가지의 이미지를 가지고 있으며, 해당 Parameter에 대한 자세한 설명은 해당 제품의 사용자 메뉴얼을 참조하여 주시기 바랍니다.
-   ![[Button-Volatile.png|700]]
+   ![[Button-Volatile.png|500]]
 ### 3.3.3 Monitoring
-Monitoring 기능은 mightyZAP Actuator의 현재 위치, 모터 입력 값, 전류 등을 실시간으로 확인하는 기능을 가지고 있습니다.  
-Parameter 항목은 Model에 따라 다르게 표시되며, Check box를 통해 하나의 Parameter만 선택하실 수 있습니다.  
+User is able to to check and get feedback for several key parameters such as present position, present current, present motor operating value, etc in real time basis on the Manager software.
+Parameter items vary depending on the actuator series, and only one parameter can be selected through the check box.
 ![[Monitoring-Data.png|600]]
-Monitoring 기능은 아래와 같이 구성 되어있습니다.
-- **Data 범위**  
-  Data 표현 범위는 선택된 Parameter의 표현 범위에 맞게 변경이 됩니다.
-- **Sample 표현 갯 수**  
-  최대 Display되는 Sample 갯 수는 200개이며 이전 Data는 확인할 수 없습니다. Sample Counter의 최대 표현 수는 899이며 이보다 클 경우 0으로 리셋이 됩니다.
-- **Interval**    
-  Interval은 Data Sample 당 읽어오는 시간 간격을 의미하며 약 50ms 간격으로 동작 합니다.     
-- **Hover 기능**  
-  마우스를 그래프 위에 놓으면 해당 위치의 데이터 값과 Sample Counter 값을 표기합니다.
+Monitoring function is composed as follows.
+- **Data Range**
+  The data range changes automatically to match the range of the selected parameter.
+- **Number of sample expressions**
+  The maximum number of samples of data displayed is 200, and previous data that has passed over time cannot be checked. The maximum number of Sample Counter is 899, and if it becomes larger than 899, it is reset to 0.
+- **Interval**
+  Interval refers to the reading time interval per data sample and operates at approximately 50ms intervals.
+- **Hover function**
+  When user places the mouse over the graph, the data value and Sample Counter value at that location are displayed.
 ## 3.4 Update    
-펌웨어를 업데이트 하는 페이지 입니다.  Firmware의 버전은 최신 버전을 유지하는 것을 추천 드립니다. 다만 수정된 펌웨어를 적용하기 전에  변경 사항이 사용자의 Apllication과 적합한지 테스트 하신 후에 적용하시기 바랍니다.   
-펌웨어 파일은 당사의 homepage에서 다운로드 받으시기 바랍니다.  
+All actuators are applied with the latest firmware when shipped from the factory.  If the firmware is updated over time after purchase, user can update to the latest firmware. To improve product performance and functionality, we recommend users to maintain the latest firmware version. However, before applying the updated firmware, it is necessory to test whether the changes are suitable for the user's environment before applying.  Please download the latest firmware file from our website Digital archives.
 [Firmware Download](https://mightyzap.com/en/digitalarchive4/?category1=Firmware&mod=list&pageid=1)
-### 3.4.1 화면 구성    
-Update Page는 이미지와 같이 펌웨어 업데이트, Actuator Recovery 영역으로 되어있으며, 각각의 실행은 상단 header의 메뉴에서 해당 아이콘을 선택하여 실행할 수 있습니다.  
-![[Information_tag.png|700]]
+### 3.4.1 Screen Layout    
+As shown in the image, the Update Page consists of firmware update and actuator recovery areas, and each can be executed by selecting the corresponding icon from the menu in the top header.
+![[Pasted image 20240717142616.png|700]]
+
 ### 3.4.2 Firmware Update   
-**Actuator 연결**  
-업데이트를 진행할 서보 모터를 연결하고 SCAN 을 합니다.  
-> [!warning] 주의 사항  
-> 펌웨어 업데이트 시에는 업데이트를 진행할 actuator 하나만 연결하고 SCAN 작업을 진행하여 Actuator List에 하나의 actuator만 남아 있어야 합니다.  하나 이상의 actuator 가 연결 된 상태에서 업데이트를 진행하면 업데이트가 비정상적으로 진행되어 실패하게 되고 해당  actuator 는 동작이 되지 않게 됩니다.  
+**Actuator Connection**  
+Connect the servo actuator to be updated and run SCAN.
+
+>[!CAUTION] CAUTION  
+>For the firmware update, connect only single actuator and only single actuator should remain in the actuator list after scan. If multiple actuators are connected, the update will proceed abnormally and fail eventually so that the concerned actuator will become inoperable. 
+
   
-**업데이트 파일 선택**  
-firmware update를 진행 할 경우 그림과 같이 Select file 버튼을 눌러 다운로드 받은 업데이트 파일을 선택해야 합니다.    
+**Update File Select**  
+As shown in the picture, click the "Select file" button to select the downloaded update file.
 ![[UpdateSelect-Button.png|700]]
-> [!warning] 주의 사항  
-> 이때 다른 모델의 firmware file 을 선택하지 않게 조심해야 합니다. Actuator List에 나와있는 Model 명과 uipdate file의 이름이 동일한지 확인해야 합니다.
+>[!CAUTION] CAUTION
+>Make sure not to select the firmware file of another model. Check thoroughly if the model name in the Actuator List and the model name in the update file are the same.
 
-**업데이트**   
-모든 사항이 준비가 다 되었으면 상단 메뉴바에서 Update 아이콘을 클릭합니다.   
+**Update** 
+When everything is ready, click the Update icon in the top menu bar.
 ![[Update-Button.png|700]]
-이때 둘 이상의 actuator 가 연결되었을 경우 다음과 같은 경고창이 나타나고 SCAN  작업을 다시 합니다. 
-![[OneServo-kor.png]]
- mightyZAP이 업데이트를 위해서 재 시작하는데 정상적으로 통신이 이루어지지 않는 경우 아래의 그림과 같이 커넥터를 다시 연결하라는 메세지가 나타납니다. 이때 mightyZAP에 연결된 커넥터를 빼신 후 다시 연결하시면 정상 적으로 업데이트가 진행 됩니다.  
-![[Update-Reconnect.png|600]]
+If two or more actuators are connected, the following warning message appears and the SCAN operation is performed again. 
+![[Pasted image 20240802094808.png|300]]
+ When mightyZAP restarts for an update, if communication does not occur normally, a message (Reconnect Actuator) appears asking user to reconnect the connector as shown below. At this time, simply disconnect / reconnect the connector connected to the actuator, the update will proceed normally.
+ ![[Update-Reconnect.png|600]]
 
-**업데이트 완료**  
-업데이트가 진행되면 그림과 같이 progress bar가 진행이 됩니다. 100%까지 완료되면 update 완료 메세지가 나타납니다.    
-![[Update-Complete.png|700]]
-필요에 따라 reset이나 Factory Reset을 추가적으로 진행하시면 됩니다.  
+**Update completed**
+As the update progresses, the progress bar appears as shown in the picture. When complete to 100%, an update completion message will appear. 
+![[Pasted image 20240802095653.png|700]]
+If necessary, user can additionally perform a reset or factory reset.
   
-**펌웨어 업데이트 실패**  
-업데이트가 실패 되었을 경우 아래의 이미지와 같이 Fail 문구가 나타납니다. 그럴 경우 먼저 업데이트를 다시 실행하여 주시기 바랍니다. 이 때 업데이트 파일이 업데이트 모델의 업데이트 파일인지 확인하신 후 실행하여 주시기 바랍니다.   
-추가적인 업데이트 시도에도 업데이트 실패 시 아래의 Recovery를 실행하여 주시고 그래도 실패할 경우 당사에 문의를 주시기 바랍니다.  
+**Update failure**  
+If the update fails, the Fail message appears as shown in the image below.  In that case, please try the update again first.  Once again, please make sure whether the update file is for the update model before the update.
+![[Pasted image 20240802095856.png|400]]
+If the update fails again despite additional update attempts, please run Recovery below and if it still fails, please contact us at cs@mightyzap.com.
+
 ### 3.4.3 Recovery  
-Firmware 가 업데이트 실패 또는 SCAN을 통해 서보 모터를 검색하지 못할 경우 Recovery를 진행합니다. 문제가 발생한 Actuator 만을 연결한 후 상단 메뉴의 Recovery 아이콘을 클릭합니다.  
+If the firmware update fails or the actuator cannot be searched through SCAN, proceed with recovery.  After connecting only single problematic actuator, click the Recovery icon in the top menu.
 ![[Recovery-Button.png|700]]
-Recovery 진행 사항은 각 단계마다 이미지 또는  Text로 그 단계를 표시합니다.
+Recovery progress is displayed with images or text for each stage.
 ![[Recovery-StateWindow.png|500]]
+ 
  - **Actuator Search**  
-   검색 단계에서는 각 모든 Baudrate와 Protocol로 mightyZAP을 검색합니다. 이때 mightyZAP이 검색이 될 경우 Recovery를 완료하고 mightyZAP을 Servo List에 자동으로 추가합니다.  
+   During the search phase for recovery, searching is made for all Baudrates and Protocols types. If actuator is discovered, recovery will be completed and actuator will be automatically added to the Servo List.
    ![[REcovery-Complete.png|700]]
 
 - **Restart**   
-   검색이 되지 않았을 경우 아래의 팝업 창이 나타나면서 커넥터를 다시 연결하라는 문구가 나타납니다. Close 버튼을 누르면 업데이트 창에 "Reconnect Actuator" 문구가 나타납니다. 이때 서보모터의 연결된 커넥터를 제거 한 후 다시 연결하여 주시기 바랍니다.
-  ![[Update-Reconnect2.png|700]]
-- **Check Bootloader &Update Firmware**  
-  커넥터를 다시 연결하면 Bootloader를 확인 한 후 복구할 Actuator의 Update 파일을 선택하라는 팝업 창이 나타납니다. Select 버튼을 누른 후 Update때와 같이 업데이트 파일을 선택하시면  업데이트가 진행이 됩니다.
-  ![[Recovery-FileSelect.png|700]]
+   If an actuator is not discovered for recovery process,  a pop-up window will appear asking user to reconnect the connector. Click the Close button and the message "Reconnect Actuator" will be shown on the Update window.   Reconnect the connector on the actuator, then actuator automatically attempts Restart process.
+  ![[Pasted image 20240802101411.png|400]]
+- **Check Bootloader & Update Firmware**  
+  After reconnecting connector to the actuator, system checks the bootloader and a pop-up window will appear asking user to select the actuator's update file to be recovered. Click the Select File button, then select the update file as like Update process. 
+  ![[Pasted image 20240802102048.png|700]]
 - **Calibration**  
-  Recovery는 Update와는 다르게 Update 후 Calibration 작업을 진행합니다. Calibration 단계에서는 서보모터의 Stroke가 수축 및 확장 작업을 진행하며 완료 될 때 까지 기다리시면 됩니다.  
+  Unlike Update process, Recovery performs calibration for safety.  In the calibration stage, the actuator's stroke extend/retract several times. Just wait until it is completed.
+  
 - **Done**
-  완료가 되면 업데이트 완료 팝업이 나타나고, SCAN 창이 활성화 됩니다. 
-  ![[UpdateComplete-SCAN.png]]
+  An update completion pop-up window will appear, then the SCAN window will be activated.
+  ![[Pasted image 20240802102244.png|600]]
 
 ### 3.4.4 Reset
-mightyZAP의 Parameter를 초기화하는 명령입니다. 이때 ID, Baudrate, Protocol 및 Calibration Parameter는 초기화 되지 않습니다.  
-![[reset_selcect.png|700]]  
-![[resetPopup.png|300]]
-Reset 아이콘을 클릭하면 다음과 같은 Popup창이 나타납니다.  OK 버튼을 누르면 Parameter가 리셋이 되며 화면이 깜빡이며 Parameter 창으로 이동하며 Data를 다시 불러옵니다.  
-![[resetAction.gif|700]]
-### 3.4.5 Restart  
-mightyZAP의 시스템을 재 시작 할 때 사용합니다. Overload Shutdown 초기화 또는 변경된 Non Volatile Parameter의 Data를 확인하기 위해 사용합니다.  
-![[restartSelect.png|700]]  
-해당 버튼을 누르면 화면이 한번 깜빡이고 Parameter창으로 이동하여 Data를 다시 읽어옵니다.
-### 3.4.6 Factory Reset   
-Actuator의  상태를 공장 출하 시의 초기 상태로 돌리고, 위치 값을 결정하는 Potentiometer의 Calibration을 진행합니다.  
-> [!warning] 주의 사항   
-> Factroy Reset 중에 Actuator가 Calibration을 위해 최대/최소로 위치이동을 합니다. 정상적인 Calibration을 위해 장치에 연결하지 않고 무부하에 최대 동작거리를 유지할 수 있는 공간에서 진행해 주시기 바랍니다.
+A command to reset(initialize) the parameters of mightyZAP <u>except</u> ID, Baudrate, Protocol, and Calibration Parameters. 
+![[reset_selcect.png]]  
+![[Pasted image 20240802102345.png|300]]
+Click the Reset icon on the top menu, a popup window will appear as above. Click OK button for parameters reset. Then, the screen blinks and moves to the parameter window, and the reset data is loaded again.
+![[resetAction.gif]]
 
-Factory Reset은 Update Page에 들어오면 상단 메뉴바에 추가 되어있는 것을 확인할 수 있습니다.   
-해당 아이콘을 클릭하면 Factory Reset 을 하기 위한 팝업 창이 활성화 됩니다.
+### 3.4.5 Restart  
+Can be used to restart mightyZAP's system. Usually, to initialize the servo system after Overload error shutdown or to check changes in data of changed Non-Volatile Parameters.
+![[restartSelect.png]]  
+Click the Restart button at the top menu, then the screen blinks once and moves to the Parameter window to read the data again.
+
+### 3.4.6 Factory Reset   
+Return the actuator to the factory default setting including ID, Baudrate, Protocol, and Calibration Parameters. Calibration process will be made. 
+>[!Caution] CAUTION 
+>During Factroy Reset, the actuator moves back and forth to the maximum/minimum position for calibration. For proper calibration, secure a no-load state without connecting the actuator to the user's application, and perform the calibration in a space where the maximum operating stroke can be maintained.
+
+Click Factory Reset button on the top menu, the pop-up window will appear. 
 ![[FactoryReset-Button.png|700]]
-**1. 화면 구성**  
-Factory Reset을 선택하면 팝업 창이 나타납니다. 팝업창에는 Factory Reset 관련 Option 선택창과 Text Area가 나타나고 하단에 Factory Reset 을 위한 버튼이 존재합니다.  
-![[FactoryReset-Disc..png|500]]
-**2. Options**  
-Factory Reset에 대한 Option은 2가지로 ID Remind와 Baudrate Remind 입니다. 그 외의 다른 Parameter들은 모두 초기화 됩니다.  
-일반적인 Reset 에서는 초기화 되지 않는 Protocol, Min/Max Position Calibration이 초기화 되고, Potentiometer의 Calibration을 실행하면서 해당 내부 Parameter도 수정이 됩니다.  
-Factopry Reset 후에도 유지하고 싶은 Option을 선택하시면 됩니다.  
-**3. Factory Reset**  
-하단의 Factory Reset 버튼을 클릭하면, Factory Reset을 실행합니다. 실행 중 진행되는 사항을 Option 선택 아래의 Text Area 창에 표시합니다.   
+##### 1. Screen Layout
+See the pop-up window.  In the pop-up window, there are two "remind(maintain)" options, progress state text box and Factory reset button. 
+![[Pasted image 20240802102544.png|400]]
+##### 2. Options
+There are two remind options for Factory Reset - ID Remind and Baudrate Remind. When checking the Remind checkbox, the parameter will NOT be reset, and all other parameters will be initialized. Options user wants to maintain even after Factory Reset can be selected in the Remind options. Protocol type and Min/Max Position Calibration, which are not initialized in a general Reset, are initialized, and the internal parameters are also modified while performing calibration of the potentiometer.
+
+##### 3. Factory Reset 
+Click the Factory Reset button at the bottom for Factory Reset.  Reset progress states are displayed in the Text Area window. 
 ![[FactoryReset-Popup.png]]
-Factory Reset 진행이 되면서 Actuator가 몇 번의 시스템 재 시작을 하면서 LED가 깜빡입니다. 또한 Potenmtiometer Calibration 시에는 Actuator가 최대로 확장 및 수축 행동을 하면서 Calibration 을 진행합니다.  
-최종적으로 Factory Reset이 완료되면 하단의 Close 버튼이 활성화 되면서 Parameter 창으로 이동하여 reset된 Data를 보여줍니다.  
+For Factory Reset, the actuator restarts the system several times with the LED blinkings. 
+Also, during calibration, the actuator extend/retract to its maximum position during calibration. 
+When Factory Reset is completed, the Close button at the bottom is activated and moves to the Parameter window to show completely reset data.
+
 ![[FActoryRest-Complete.png]]
 
-> [!warning] 주의 사항   
-> Calibration 을 하기 앞서, 정확한 Calibration 작업을 위해 Actuator 에 연결되어있는 모든 기구물을 제거하여, 무 부하 상태에서 Full Stroke 구간에 걸쳐 기구 간섭이 없도록 합니다.
+>[!Caution] CAUTION 
+>During Factroy Reset, the actuator moves back and forth to the maximum/minimum position for calibration. For proper calibration, secure a no-load state without connecting the actuator to the user's application, and perform the calibration in a space where the maximum operating stroke can be guaranteed.
+

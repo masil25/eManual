@@ -240,7 +240,7 @@ In case of user board, user can implement the communication circuit as follows. 
   ![[extended_io_userboard.png|600]]
 #### 3.6.2.3 Isolated Circuit /  Isolated 회로
   - **Switch/ JOG / Action Enable / Force Off / Stop / Pause / Restart**
-  ![[image_20240729_103617.png]]
+  ![[Actuator/Mini 17Lf/img/image_20240729_103617.png]]
   - **Alarm Out**
-  ![[image_20240729_103633.png]]
+  ![[Actuator/Mini 17Lf/img/image_20240729_103633.png]]
   
