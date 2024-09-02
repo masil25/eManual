@@ -231,10 +231,10 @@ The firmware version of the product using semantic versioning.
 ### 2.4.3 mightyZAP ID
 A unique number to identify respective mightyZAP on the communication line. mightyZAPs connected in a serial daisy-chain must be assigned different IDs.
 
-| value | Description |
-| ---- | ---- |
-| 0 | Broadcast ID (Only writing is possible without feedback and reading.) |
-| 1~243 | mightyZAP ID (default ID 1) |
+| value | Description                                                           |
+| ----- | --------------------------------------------------------------------- |
+| 0     | Broadcast ID (Only writing is possible without feedback and reading.) |
+| 1~247 | mightyZAP ID (default ID 1)                                           |
 > [!NOTE] Daisy-cahin Connection  
 > After receiving Command Packet at multiple qty of mightZAPs, the servo actuator whose ID is N will be operated only. (Only N ID servo will send Feedback packet and execute Command.)
 > 
@@ -242,7 +242,7 @@ A unique number to identify respective mightyZAP on the communication line. migh
 
 > [!warning]  Unique ID  
 >- Each mightZAP servo actuator must have an individual unique ID to prevent interference between same IDs. Therefore, make sure to set individual IDs for each servo in the network node.
->- User may assign 243 different IDs, but the number of connectable actuators are 32 due to the limit of nods of RS-485 standard regulation.
+>- User may assign 247 different IDs, but the number of connectable actuators are 32 due to the limit of nods of RS-485 standard regulation.
 >- As factory default ID is 1, please assign different, individual IDs for each servo. It will be easier if you assign each ID when you connect each servo in Daisy-chain network one by one.
 
 ### 2.4.4 Baudrate  
